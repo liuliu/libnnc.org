@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NNC: The Manifesto"
+title: "NNC: Neural Network Collection"
 categories: manifesto
 ---
 
