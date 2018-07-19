@@ -26,6 +26,8 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="NNC Common Neural Network Primitives" href="nnc-cnnp.html" />
     <link rel="prev" title="The NNC Tensor Allocation Algorithm" href="nnc-alloc.html" /> 
 
@@ -85,7 +87,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="nnc.html">NNC: Neural Network Collection</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nnc.html#what-s-nnc">What&#8217;s NNC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnc.html#what-s-nnc">What’s NNC?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nnc.html#tensors-commands-and-streams">1. Tensors, Commands and Streams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nnc.html#computation-graph">2. Computation Graph</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nnc.html#symbolic-graph">3. Symbolic Graph</a></li>
@@ -94,8 +96,8 @@
 <li class="toctree-l2"><a class="reference internal" href="nnc.html#supplementary-materials">Supplementary Materials</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="nnc.html#toll-free-bridging">Toll-Free Bridging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nnc.html#automatic-differentiation">Automatic Differentiation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nnc.html#while-type-sub-graph"><code class="docutils literal"><span class="pre">while</span></code> Type Sub-Graph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nnc.html#case-of-type-sub-graph"><code class="docutils literal"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nnc.html#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nnc.html#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nnc.html#limits-and-constraints">Limits and Constraints</a></li>
 </ul>
 </li>
@@ -117,7 +119,7 @@
 <li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#conclusion">Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">NNC Dynamic Graph Execution</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">NNC Dynamic Graph Execution</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#naming-the-variable">Naming The Variable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tracing-the-operation">Tracing The Operation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#optimizations-part-1">Optimizations Part 1</a></li>
@@ -189,7 +191,7 @@
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/docs/nnc-dy.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/docs/nnc-dy.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -212,20 +214,20 @@
 <li>Unbounded memory usage. Since a <strong>dynamic graph execution</strong> engine needs to be able to differentiate arbitrary variables within the framework, a Wengert list (a tape) has to be kept. In many situations, to trim that list requires user attention otherwise the memory usage will continue to grow.</li>
 </ol>
 <p>To work-around 1., mixing <strong>static graph execution</strong> with <strong>dynamic graph execution</strong> is desirable. However, that imposes its own set of problems: when a <strong>static graph</strong> contains a <strong>dynamic graph</strong>, and if the <strong>static graph</strong> contains a loop structure, the tape for the <strong>static graph</strong> need to cross into the <strong>dynamic graph</strong> to continue work. When a <strong>dynamic graph</strong> contains a <strong>static graph</strong>, the Wengert list (the tape) of the <strong>dynamic graph</strong> need to not only store the tensors, but also the <strong>static graph</strong> as a whole.</p>
-<p>NNC&#8217;s <strong>dynamic graph execution</strong> design will attempt to address above problems with reasonable compromises. It borrows some good ideas from 10 years ago when I first started to implement ccv.</p>
+<p>NNC’s <strong>dynamic graph execution</strong> design will attempt to address above problems with reasonable compromises. It borrows some good ideas from 10 years ago when I first started to implement ccv.</p>
 <div class="section" id="naming-the-variable">
 <h2>Naming The Variable<a class="headerlink" href="#naming-the-variable" title="Permalink to this headline">¶</a></h2>
-<p>Like in most frameworks, <strong>dynamic graph execution</strong> in NNC operates at variables. <strong>Dynamic graph</strong> executes command on a set of input variables, writes the result to a set of output variables. Variables can be inspected anytime with <code class="docutils literal"><span class="pre">ccv_nnc_tensor_from_variable</span></code>. The underlying tensor may not be allocated when the variable is created. <code class="docutils literal"><span class="pre">ccv_nnc_tensor_variable_t</span></code> is an opaque structure and its inner work shouldn&#8217;t be of an interest to users.</p>
+<p>Like in most frameworks, <strong>dynamic graph execution</strong> in NNC operates at variables. <strong>Dynamic graph</strong> executes command on a set of input variables, writes the result to a set of output variables. Variables can be inspected anytime with <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_from_variable</span></code>. The underlying tensor may not be allocated when the variable is created. <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_variable_t</span></code> is an opaque structure and its inner work shouldn’t be of an interest to users.</p>
 </div>
 <div class="section" id="tracing-the-operation">
 <h2>Tracing The Operation<a class="headerlink" href="#tracing-the-operation" title="Permalink to this headline">¶</a></h2>
 <p>Frameworks such as <strong>PyTorch</strong> or <strong>TensorFlow Eager</strong> use the tape to record which operations are executed, and record the inputs / outputs along the way. <em>automatic differentiation</em> was implemented (its reverse mode) by walking back on the tape. This is simple to implement, and easier to support higher order gradients (by record another tape while walking back on the existing tape). This also makes optimizations on the <em>automatic differentiation</em> pass difficult because no data dependencies are specified. It is definitely possible to infer the data dependencies from the tape, and then employ optimizations or automatic parallelization. For mature framework such as <strong>TensorFlow</strong>, that kind of work is to reimplement some of the fundamental pieces of the software.</p>
-<p>NNC uses its <strong>symbolic graph</strong> (Level-3 APIs) to trace the operation. When a command executed on a <strong>dynamic graph</strong>, we can figure out data dependencies with input variables (each input variable has a unique tensor symbol assigned). Even though the variables in the <strong>dynamic graph</strong> don&#8217;t follow the <em>static single assignment</em> (SSA) rule, the underlying tensors and tensor symbols do. Thus, through the normal execution of the <strong>dynamic graph</strong>, we have formed a full <strong>symbolic graph</strong> for later computation.</p>
+<p>NNC uses its <strong>symbolic graph</strong> (Level-3 APIs) to trace the operation. When a command executed on a <strong>dynamic graph</strong>, we can figure out data dependencies with input variables (each input variable has a unique tensor symbol assigned). Even though the variables in the <strong>dynamic graph</strong> don’t follow the <em>static single assignment</em> (SSA) rule, the underlying tensors and tensor symbols do. Thus, through the normal execution of the <strong>dynamic graph</strong>, we have formed a full <strong>symbolic graph</strong> for later computation.</p>
 <p>Upon <em>automatic differentiation</em>, no tape is used (or, the <strong>symbolic graph</strong> serves as an advanced tape). We simply leverage the ahead of time <em>automatic differentiation</em> system implemented in <strong>symbolic graph</strong> to optimize, compile and schedule the actual computation. That means any optimization techniques we implemented on Level-2 or Level-3 APIs will be available to <strong>dynamic graph</strong> as well.</p>
 </div>
 <div class="section" id="optimizations-part-1">
 <h2>Optimizations Part 1<a class="headerlink" href="#optimizations-part-1" title="Permalink to this headline">¶</a></h2>
-<p>In <strong>PyTorch</strong>, there is a need to <code class="docutils literal"><span class="pre">requires_grad</span></code> such that the framework knows which variable should be discarded to save memory. If it is not done carefully, the memory usage can grow unbounded. <strong>Dynamic graph</strong> here provides <code class="docutils literal"><span class="pre">ccv_nnc_tensor_variable_free</span></code> where when a tensor variable is freed, we will release its memory when it is safe. This method meant to hook up with object finalization methods in host languages (C++&#8217;s destructor, Objective-C&#8217;s <code class="docutils literal"><span class="pre">dealloc</span></code>, <code class="docutils literal"><span class="pre">deinit</span></code> in Swift, <code class="docutils literal"><span class="pre">finalize</span></code> in Java, <code class="docutils literal"><span class="pre">tp_dealloc</span></code> in Python).</p>
+<p>In <strong>PyTorch</strong>, there is a need to <code class="docutils literal notranslate"><span class="pre">requires_grad</span></code> such that the framework knows which variable should be discarded to save memory. If it is not done carefully, the memory usage can grow unbounded. <strong>Dynamic graph</strong> here provides <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_variable_free</span></code> where when a tensor variable is freed, we will release its memory when it is safe. This method meant to hook up with object finalization methods in host languages (C++’s destructor, Objective-C’s <code class="docutils literal notranslate"><span class="pre">dealloc</span></code>, <code class="docutils literal notranslate"><span class="pre">deinit</span></code> in Swift, <code class="docutils literal notranslate"><span class="pre">finalize</span></code> in Java, <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code> in Python).</p>
 </div>
 <div class="section" id="optimizations-part-2-not-ready">
 <h2>Optimizations Part 2 (Not Ready)<a class="headerlink" href="#optimizations-part-2-not-ready" title="Permalink to this headline">¶</a></h2>
@@ -234,7 +236,7 @@
 </div>
 <div class="section" id="interoperability-not-ready">
 <h2>Interoperability (Not Ready)<a class="headerlink" href="#interoperability-not-ready" title="Permalink to this headline">¶</a></h2>
-<p>There are some sticky issues with interoperability between <strong>static graph</strong> (the <strong>symbolic graph</strong> we formed by hand) with <strong>dynamic graph</strong>. The way they interoperate is through <code class="docutils literal"><span class="pre">CCV_NNC_CUSTOM_FORWARD</span></code> / <code class="docutils literal"><span class="pre">CCV_NNC_CUSTOM_BACKWARD</span></code> functions. When a <strong>static graph</strong> includes a <strong>dynamic graph</strong>, its tape needs to book-keeping for the <strong>dynamic graph</strong>. When a <strong>dynamic graph</strong> includes a <strong>static graph</strong>, it also needs to create a tape at that point for the execution. All these implies significant changes for the <code class="docutils literal"><span class="pre">ccv_nnc_tensor_tape_t</span></code> implementation to accommodate these new requirements.</p>
+<p>There are some sticky issues with interoperability between <strong>static graph</strong> (the <strong>symbolic graph</strong> we formed by hand) with <strong>dynamic graph</strong>. The way they interoperate is through <code class="docutils literal notranslate"><span class="pre">CCV_NNC_CUSTOM_FORWARD</span></code> / <code class="docutils literal notranslate"><span class="pre">CCV_NNC_CUSTOM_BACKWARD</span></code> functions. When a <strong>static graph</strong> includes a <strong>dynamic graph</strong>, its tape needs to book-keeping for the <strong>dynamic graph</strong>. When a <strong>dynamic graph</strong> includes a <strong>static graph</strong>, it also needs to create a tape at that point for the execution. All these implies significant changes for the <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_tape_t</span></code> implementation to accommodate these new requirements.</p>
 </div>
 <div class="section" id="some-maybes">
 <h2>Some Maybes<a class="headerlink" href="#some-maybes" title="Permalink to this headline">¶</a></h2>
@@ -294,13 +296,13 @@
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: ''
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
       <script type="text/javascript" src="../_static/underscore.js"></script>
       <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
