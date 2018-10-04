@@ -11,6 +11,7 @@ NNC: Neural Network Collection
 
    docs/nnc.rst
    docs/nnc-alloc.rst
+   docs/nnc-schd.rst
    docs/nnc-dy.rst
    docs/nnc-cnnp.rst
 
