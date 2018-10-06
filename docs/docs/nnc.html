@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The NNC Tensor Allocation Algorithm" href="nnc-alloc.html" />
+    <link rel="next" title="Technicals" href="../tech/index.html" />
     <link rel="prev" title="NNC: Neural Network Collection" href="../index.html" /> 
 
   
@@ -96,46 +96,94 @@
 <li class="toctree-l2"><a class="reference internal" href="#supplementary-materials">Supplementary Materials</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#toll-free-bridging">Toll-Free Bridging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#automatic-differentiation">Automatic Differentiation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#while-type-sub-graph"><code class="docutils literal"><span class="pre">while</span></code> Type Sub-Graph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#case-of-type-sub-graph"><code class="docutils literal"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#limits-and-constraints">Limits and Constraints</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nnc-alloc.html">The NNC Tensor Allocation Algorithm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#tensor-representation">Tensor Representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#loop-representation">Loop Representation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#the-problem-definition">The Problem Definition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#the-core-algorithm">The Core Algorithm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#basic-structure">Basic Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#candidate-selection">Candidate Selection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#insertion">Insertion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#intuition">Intuition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#loop">Loop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#multi-view-tensor">Multi-view Tensor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#loop-with-efficient-tensor-allocation">Loop with Efficient Tensor Allocation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#sub-computation-graph">Sub-Computation Graph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-alloc.html#conclusion">Conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/index.html">Technicals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-alloc.html">The NNC Tensor Allocation Algorithm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#tensor-representation">Tensor Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop-representation">Loop Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#the-problem-definition">The Problem Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#the-core-algorithm">The Core Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#basic-structure">Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#candidate-selection">Candidate Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#insertion">Insertion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop">Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#multi-view-tensor">Multi-view Tensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop-with-efficient-tensor-allocation">Loop with Efficient Tensor Allocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#sub-computation-graph">Sub-Computation Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#conclusion">Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nnc-schd.html">NNC Static Schedule A Graph</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nnc-schd.html#stream">Stream</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-schd.html#static-schedule">Static Schedule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-schd.html#while-and-case-of"><code class="docutils literal"><span class="pre">while</span></code> and <code class="docutils literal"><span class="pre">case..of</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-schd.html">NNC Static Schedule A Graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#stream">Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#static-schedule">Static Schedule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#while-and-case-of"><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nnc-dy.html">NNC Dynamic Graph Execution</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nnc-dy.html#naming-the-variable">Naming The Variable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-dy.html#tracing-the-operation">Tracing The Operation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-dy.html#optimizations">Optimizations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-dy.html#interoperability-not-ready">Interoperability (Not Ready)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-dy.html#future-optimizations">Future Optimizations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-dy.html#some-maybes">Some Maybes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-dy.html">NNC Dynamic Graph Execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#naming-the-variable">Naming The Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#tracing-the-operation">Tracing The Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#optimizations">Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#interoperability-not-ready">Interoperability (Not Ready)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#future-optimizations">Future Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#some-maybes">Some Maybes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="nnc-cnnp.html">NNC Common Neural Network Primitives</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="nnc-cnnp.html#model">Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-cnnp.html">NNC Common Neural Network Primitives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-cnnp.html#model">Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-0.html">Level 0 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-0.html#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-1.html">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-1.html#tensors">Tensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-1.html#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-1.html#streams">Streams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-2.html">Level 2 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-2.html#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-2.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-3.html">Level 3 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.html#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-3.5.html">Level 3.5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level_3_5/group__level__3__5__case__of_symbolic_switch.html">Construct “switch” control structure in symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level_3_5/group__level__3__5__simplify_symbolic_simplify.html">Symbolic graph simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level_3_5/group__level__3__5__while_symbolic_while.html">Construct a “while” loop in a symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#while-loop-essentials">While Loop Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#branching">Branching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#gradient-based-optimization">Gradient-based Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#graph-simplification">Graph Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#while-loop-others">While Loop Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-4.html">Level 4 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-4.html#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-5.html">Level 5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level_5/group__level__5_dataframe.html">Dataframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level_5/group__level__5_model.html">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-5.html#essentials">Essentials</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -214,7 +262,7 @@
 <h1>NNC: Neural Network Collection<a class="headerlink" href="#nnc-neural-network-collection" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-s-nnc">
 <h2>What’s NNC?<a class="headerlink" href="#what-s-nnc" title="Permalink to this headline">¶</a></h2>
-<p>NNC is the natural progression against <code class="docutils literal"><span class="pre">ccv_convnet</span></code>, which is a couple of years old now. <code class="docutils literal"><span class="pre">ccv_convnet</span></code>’s monolithic, single path neural layer design didn’t really feel right with more advanced network architectures.</p>
+<p>NNC is the natural progression against <code class="docutils literal notranslate"><span class="pre">ccv_convnet</span></code>, which is a couple of years old now. <code class="docutils literal notranslate"><span class="pre">ccv_convnet</span></code>’s monolithic, single path neural layer design didn’t really feel right with more advanced network architectures.</p>
 <p>NNC took some good ideas from more recent neural network frameworks and did a long re-think on how to achieve both efficiency and expressiveness. The design itself is layered. At the highest layer, you have ordinary neural network primitives that reflect real-world usage such as Inception module, LSTM, RNN et al. At the lowest layer, depending on the infrastructure, it maps to allocated tensors on GPU, computations backed by CuDNN, and computation graphs driven with CUDA streams (or you can exchange that with CPU, Metal, and libdispatch). For the abstractions in between, there are trade-offs and constraints to accommodating both the library design and usage.</p>
 <p>In a few sentences, here is how the layered design works.</p>
 <p>NNC starts with tensors, commands and streams, which closely map to low level computation primitives. On top of that, a concrete computation graph can be constructed and executed directly. Above that, a symbolic graph can express everything about the concrete computation graph, without actual tensor and stream allocations. A dynamic graph can contain both symbolic graph representation and the concrete computation graph, thus, carries out the computation immediately while retain the ability to do series of processes on top of the symbolic graph representation. Familiar primitives such as LSTM or RNN then were built on top of either the symbolic graph or the dynamic graph constructs.</p>
@@ -225,9 +273,9 @@
 <p>Tensors are multi-dimensional arrays at its basic level.</p>
 <p>Commands are ops (operations) in other framework’s terminology.</p>
 <p>Streams are the synchronization mechanism. Each command instance executed serially on a given stream. Different command instances on different streams will be scheduled in parallel if the underlying infrastructure permits.</p>
-<p>A command is identified by its <code class="docutils literal"><span class="pre">cmd</span></code> identifier. It processes a set of input tensors, and write output to a set of output tensors. There is no limits on how many input tensors it can accept or how many output tensors it can write to.</p>
+<p>A command is identified by its <code class="docutils literal notranslate"><span class="pre">cmd</span></code> identifier. It processes a set of input tensors, and write output to a set of output tensors. There is no limits on how many input tensors it can accept or how many output tensors it can write to.</p>
 <p>A command can only have one set of attributes (recognized by NNC) specified. These attributes (such as whether this can be an <em>inplace</em> operation) help on symbolic processes. If you find that you need to implement the same command but these attributes cannot be hold, you need to rename the command to avoid invalid symbolic processes.</p>
-<p>One command, however, can be backed by several <strong>backend</strong> implementations. Command backend implementors, besides the ones who implement <code class="docutils literal"><span class="pre">*_REF</span></code> free to only support specific cases of the input tensors (for example, a particular tensor layout, or a specific tensor size (3x3?), or half precision numbers). But once a backend accepts the input, it follows exactly the command attributes specified above (for example, any backend that implements a <em>inplace</em> command, will allow any parts of its input to be overwritten by this command at time while this command is executing without affecting the correctness of the output).</p>
+<p>One command, however, can be backed by several <strong>backend</strong> implementations. Command backend implementors, besides the ones who implement <code class="docutils literal notranslate"><span class="pre">*_REF</span></code> free to only support specific cases of the input tensors (for example, a particular tensor layout, or a specific tensor size (3x3?), or half precision numbers). But once a backend accepts the input, it follows exactly the command attributes specified above (for example, any backend that implements a <em>inplace</em> command, will allow any parts of its input to be overwritten by this command at time while this command is executing without affecting the correctness of the output).</p>
 <p>At runtime, a command will select the appropriate backend based on the input type and execution time.</p>
 </div>
 <div class="section" id="computation-graph">
@@ -251,7 +299,7 @@
 <p>Processes can be carried out on the <strong>symbolic graph</strong> ranging from <em>automatic differentiation</em>, to <em>common sub-expression elimination</em> (CSE), or <em>operator fusion</em> (finer-grained set of commands be replaced by a combined command implementation).</p>
 <p>When the actual computation is needed. A <strong>symbolic graph</strong> can be compiled to a <strong>computation graph</strong>. The compilation process can involve optimizations that previously already possible on the given <strong>computation graph</strong> (such as CSE). More importantly, this step performs additional optimization passes that will violate the <em>SSA</em> rule above. Currently, it will perform following processes that are not available as pure optimization passes:</p>
 <ol class="arabic simple">
-<li>In-place safe command instance will operate on the same tensor symbol inputs / outputs whenever possible (for example, <code class="docutils literal"><span class="pre">1.23</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">y</span></code> will be re-written to <code class="docutils literal"><span class="pre">1.23</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">x</span></code> if no other places use <code class="docutils literal"><span class="pre">x</span></code>);</li>
+<li>In-place safe command instance will operate on the same tensor symbol inputs / outputs whenever possible (for example, <code class="docutils literal notranslate"><span class="pre">1.23</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">y</span></code> will be re-written to <code class="docutils literal notranslate"><span class="pre">1.23</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">x</span></code> if no other places use <code class="docutils literal notranslate"><span class="pre">x</span></code>);</li>
 <li>Tensor allocation based on the liveness analysis for the tensor symbols. This step will generate the many to 1 mapping between tensor symbols with the actual tensors;</li>
 <li>Emit implicit commands for tensor initialization. Certain tensor symbols need to be initialized before use (zero init for now), which is impossible to know when until tensor allocation was taken place. This is one reason why there is no 1:1 mapping between <strong>symbolic graph</strong> and <strong>computation graph</strong>.</li>
 </ol>
@@ -271,7 +319,7 @@
 <h2>Supplementary Materials<a class="headerlink" href="#supplementary-materials" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="toll-free-bridging">
 <h3>Toll-Free Bridging<a class="headerlink" href="#toll-free-bridging" title="Permalink to this headline">¶</a></h3>
-<p><em>Toll-free bridging</em> here means that a <code class="docutils literal"><span class="pre">ccv_dense_matrix_t</span></code> struct, without any conversions at all, can be cast to a <code class="docutils literal"><span class="pre">ccv_nnc_tensor_t</span></code> struct and then used with nnc directly. The byte pattern is specifically arranged such that a 3 dimensional <code class="docutils literal"><span class="pre">ccv_nnc_tensor_t</span></code> can be cast back to <code class="docutils literal"><span class="pre">ccv_dense_matrix_t</span></code> vice versa. This allows seamless integration with the rest of image process primitives provided by ccv.</p>
+<p><em>Toll-free bridging</em> here means that a <code class="docutils literal notranslate"><span class="pre">ccv_dense_matrix_t</span></code> struct, without any conversions at all, can be cast to a <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_t</span></code> struct and then used with nnc directly. The byte pattern is specifically arranged such that a 3 dimensional <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_t</span></code> can be cast back to <code class="docutils literal notranslate"><span class="pre">ccv_dense_matrix_t</span></code> vice versa. This allows seamless integration with the rest of image process primitives provided by ccv.</p>
 </div>
 <div class="section" id="automatic-differentiation">
 <h3>Automatic Differentiation<a class="headerlink" href="#automatic-differentiation" title="Permalink to this headline">¶</a></h3>
@@ -282,7 +330,7 @@
 <p>The specific implementation also means taking second order derivative isn’t possible with nnc at this point. It will be possible however in the future once the backward function can be specified by a set of forward functions and then we can do command substitution on the <strong>symbolic graph</strong>.</p>
 </div>
 <div class="section" id="while-type-sub-graph">
-<h3><code class="docutils literal"><span class="pre">while</span></code> Type Sub-Graph<a class="headerlink" href="#while-type-sub-graph" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph<a class="headerlink" href="#while-type-sub-graph" title="Permalink to this headline">¶</a></h3>
 <p>The <em>``while`` type sub-graph</em> is a special type of a <strong>symbolic graph</strong> or a <strong>computation graph</strong>. This is because it expresses a generic loop structure with custom evaluation function supplied.</p>
 <p>The loop execution within a <em>``while`` type sub-graph</em> looks like this:</p>
 <ol class="arabic simple">
@@ -291,11 +339,11 @@
 <li>The evaluation function is called, and depends on the result, the execution within the sub-graph will either abort (break), or continue, until all the destination command instances executed and reached;</li>
 <li>Once all destination command instances executed and reached, we will start from step 1. again.</li>
 </ol>
-<p>For <em>``while`` type symbolic sub-graph</em>, the obvious question would be how <em>SSA</em> rule plays out in the loop structure. We allow in the sub-graph to specify certain output tensor symbols carry over to the input tensor symbols in the next round, practically made these input tensor symbols parameters. The <em>compilation</em> step will handle this properly and allocate the input tensors at the same memory locations as the output tensors (there are <code class="docutils literal"><span class="pre">ccv_nnc_tensor_multiview_t</span></code> workaround if the condition cannot be satisfied).</p>
-<p>When doing <em>automatic differentiation</em>, a <code class="docutils literal"><span class="pre">ccv_nnc_tensor_tape_t</span></code> need to be provided for the <em>``while`` type sub-graph</em> to record the outputs properly.</p>
+<p>For <em>``while`` type symbolic sub-graph</em>, the obvious question would be how <em>SSA</em> rule plays out in the loop structure. We allow in the sub-graph to specify certain output tensor symbols carry over to the input tensor symbols in the next round, practically made these input tensor symbols parameters. The <em>compilation</em> step will handle this properly and allocate the input tensors at the same memory locations as the output tensors (there are <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_multiview_t</span></code> workaround if the condition cannot be satisfied).</p>
+<p>When doing <em>automatic differentiation</em>, a <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_tape_t</span></code> need to be provided for the <em>``while`` type sub-graph</em> to record the outputs properly.</p>
 </div>
 <div class="section" id="case-of-type-sub-graph">
-<h3><code class="docutils literal"><span class="pre">case..of</span></code> Type Sub-Graph<a class="headerlink" href="#case-of-type-sub-graph" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph<a class="headerlink" href="#case-of-type-sub-graph" title="Permalink to this headline">¶</a></h3>
 <p>The <em>``case..of`` type sub-graph</em> is another special type of a <strong>symbolic graph</strong> or a <strong>computation graph</strong>. It expresses a generic branch structure with custom evaluation function supplied.</p>
 <p>The <em>``case..of`` type sub-graph</em> contains several separate sub-graphs identified by indexes from 0 to n:</p>
 <ol class="arabic simple">
@@ -303,19 +351,19 @@
 <li>The selected sub-graph executed from beginning to end;</li>
 <li>If the result is &lt; 0, no sub-graph executed.</li>
 </ol>
-<p>For <em>``case..of`` type symbolic sub-graph</em>, if a tensor symbol is <em>written-once</em>, how to proceed if all sub-graphs skipped (in typical case, if a sub-graph executed, presumably, the tensor you want will be written by a command in that sub-graph)? We allow you to specify for these output tensor symbols, which symbol from the input can be supplied as <em>replacement</em>. The <em>compilation</em> step will ensure a <code class="docutils literal"><span class="pre">ccv_nnc_tensor_multiview_t</span></code> is created to handle these cases.</p>
-<p>When doing <em>automatic differentiation</em>, a <code class="docutils literal"><span class="pre">ccv_nnc_tensor_tape_t</span></code> need to be provided for the <em>``case..of`` type sub-graph</em> to record the outputs properly.</p>
+<p>For <em>``case..of`` type symbolic sub-graph</em>, if a tensor symbol is <em>written-once</em>, how to proceed if all sub-graphs skipped (in typical case, if a sub-graph executed, presumably, the tensor you want will be written by a command in that sub-graph)? We allow you to specify for these output tensor symbols, which symbol from the input can be supplied as <em>replacement</em>. The <em>compilation</em> step will ensure a <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_multiview_t</span></code> is created to handle these cases.</p>
+<p>When doing <em>automatic differentiation</em>, a <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_tape_t</span></code> need to be provided for the <em>``case..of`` type sub-graph</em> to record the outputs properly.</p>
 </div>
 <div class="section" id="limits-and-constraints">
 <h3>Limits and Constraints<a class="headerlink" href="#limits-and-constraints" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Tensor itself supports up to 8 dimensions. This is defined in <code class="docutils literal"><span class="pre">CCV_NNC_MAX_DIM_ALLOC</span></code>.</li>
-<li>Tensor’s dimension can only reach to up <code class="docutils literal"><span class="pre">INT_MAX</span></code>. That may be a limiting factor for some of the tensors if they need more than 8GiB (32-bit floating point assumed) on one dimension.</li>
-<li>The limit on number of inputs and output tensors is <code class="docutils literal"><span class="pre">INT_MAX</span></code>. To perform <em>automatic differentiation</em> properly, this number drops to <code class="docutils literal"><span class="pre">floor(INT_MAX</span> <span class="pre">/</span> <span class="pre">3)</span></code>. However, for more than 64 parameters, there are internal heap allocation required, which makes previously deterministic execution none-deterministic (it may take arbitrarily long depending on the <code class="docutils literal"><span class="pre">malloc</span></code> you use).</li>
-<li>The allocated tensor size can go up to <code class="docutils literal"><span class="pre">min(UINT64_MAX,</span> <span class="pre">SIZE_MAX)</span></code>.</li>
-<li>A computation can only depend on no more than <code class="docutils literal"><span class="pre">2^16</span></code> other computations. This is determined by a core macro <code class="docutils literal"><span class="pre">CCV_NNC_GRAPH_VISIT</span></code>.</li>
-<li>The sub-graph can go as deep as <code class="docutils literal"><span class="pre">2^(31</span> <span class="pre">-</span> <span class="pre">4)</span></code>, otherwise the outer-most while count tensor cannot be referenced by the inner-most sub-graph.</li>
-<li>The maximum number of GPU devices per machine or NUMA nodes per machine is 4095. This is defined in <code class="docutils literal"><span class="pre">CCV_COMPUTE_DEVICE_ANY</span></code>.</li>
+<li>Tensor itself supports up to 8 dimensions. This is defined in <code class="docutils literal notranslate"><span class="pre">CCV_NNC_MAX_DIM_ALLOC</span></code>.</li>
+<li>Tensor’s dimension can only reach to up <code class="docutils literal notranslate"><span class="pre">INT_MAX</span></code>. That may be a limiting factor for some of the tensors if they need more than 8GiB (32-bit floating point assumed) on one dimension.</li>
+<li>The limit on number of inputs and output tensors is <code class="docutils literal notranslate"><span class="pre">INT_MAX</span></code>. To perform <em>automatic differentiation</em> properly, this number drops to <code class="docutils literal notranslate"><span class="pre">floor(INT_MAX</span> <span class="pre">/</span> <span class="pre">3)</span></code>. However, for more than 64 parameters, there are internal heap allocation required, which makes previously deterministic execution none-deterministic (it may take arbitrarily long depending on the <code class="docutils literal notranslate"><span class="pre">malloc</span></code> you use).</li>
+<li>The allocated tensor size can go up to <code class="docutils literal notranslate"><span class="pre">min(UINT64_MAX,</span> <span class="pre">SIZE_MAX)</span></code>.</li>
+<li>A computation can only depend on no more than <code class="docutils literal notranslate"><span class="pre">2^16</span></code> other computations. This is determined by a core macro <code class="docutils literal notranslate"><span class="pre">CCV_NNC_GRAPH_VISIT</span></code>.</li>
+<li>The sub-graph can go as deep as <code class="docutils literal notranslate"><span class="pre">2^(31</span> <span class="pre">-</span> <span class="pre">4)</span></code>, otherwise the outer-most while count tensor cannot be referenced by the inner-most sub-graph.</li>
+<li>The maximum number of GPU devices per machine or NUMA nodes per machine is 4095. This is defined in <code class="docutils literal notranslate"><span class="pre">CCV_COMPUTE_DEVICE_ANY</span></code>.</li>
 </ol>
 </div>
 </div>
@@ -329,7 +377,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="nnc-alloc.html" class="btn btn-neutral float-right" title="The NNC Tensor Allocation Algorithm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../tech/index.html" class="btn btn-neutral float-right" title="Technicals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral" title="NNC: Neural Network Collection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

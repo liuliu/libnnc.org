@@ -96,8 +96,8 @@
 <li class="toctree-l2"><a class="reference internal" href="nnc.html#supplementary-materials">Supplementary Materials</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="nnc.html#toll-free-bridging">Toll-Free Bridging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nnc.html#automatic-differentiation">Automatic Differentiation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nnc.html#while-type-sub-graph"><code class="docutils literal"><span class="pre">while</span></code> Type Sub-Graph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nnc.html#case-of-type-sub-graph"><code class="docutils literal"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nnc.html#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nnc.html#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nnc.html#limits-and-constraints">Limits and Constraints</a></li>
 </ul>
 </li>
@@ -122,7 +122,7 @@
 <li class="toctree-l1"><a class="reference internal" href="nnc-schd.html">NNC Static Schedule A Graph</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="nnc-schd.html#stream">Stream</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nnc-schd.html#static-schedule">Static Schedule</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nnc-schd.html#while-and-case-of"><code class="docutils literal"><span class="pre">while</span></code> and <code class="docutils literal"><span class="pre">case..of</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="nnc-schd.html#while-and-case-of"><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nnc-dy.html">NNC Dynamic Graph Execution</a><ul>
@@ -136,6 +136,43 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nnc-cnnp.html">NNC Common Neural Network Primitives</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="nnc-cnnp.html#model">Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-0.html">Level 0 API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-1.html">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-1.html#tensors">Tensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-1.html#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-1.html#streams">Streams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-2.html">Level 2 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-2.html#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-2.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-3.html">Level 3 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.html#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-3.5.html">Level 3.5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#while-loop-essentials">While Loop Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#branching">Branching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#gradient-based-optimization">Gradient-based Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#graph-simplification">Graph Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5.html#while-loop-others">While Loop Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-4.html">Level 4 API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/level-5.html">Level 5 API</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -230,7 +267,7 @@
 </div>
 <div class="section" id="the-problem-definition">
 <h2>The Problem Definition<a class="headerlink" href="#the-problem-definition" title="Permalink to this headline">¶</a></h2>
-<p>Before we get into details of the NNC tensor allocation algorithm, let’s get the problem definition straight. Given a graph with above tensors and loops, the problem asks to assign <code class="docutils literal"><span class="pre">n</span></code> tensors to one memory region buffer such that for each node operation, the input tensors and the output tensors have non-overlap memory regions assigned. each of the <code class="docutils literal"><span class="pre">n</span></code> tensors also have an offset and size associated to denote from where within the buffer is the tensor memory region. We want to find an arrangement so that the size of the buffer is smallest.</p>
+<p>Before we get into details of the NNC tensor allocation algorithm, let’s get the problem definition straight. Given a graph with above tensors and loops, the problem asks to assign <code class="docutils literal notranslate"><span class="pre">n</span></code> tensors to one memory region buffer such that for each node operation, the input tensors and the output tensors have non-overlap memory regions assigned. each of the <code class="docutils literal notranslate"><span class="pre">n</span></code> tensors also have an offset and size associated to denote from where within the buffer is the tensor memory region. We want to find an arrangement so that the size of the buffer is smallest.</p>
 <p>It is easy to see this problem is NP-Complete. Therefore, the challenge is to find a good enough approximation to the optimal solution.</p>
 </div>
 <div class="section" id="the-core-algorithm">
@@ -247,7 +284,7 @@
 <h2>Basic Structure<a class="headerlink" href="#basic-structure" title="Permalink to this headline">¶</a></h2>
 <p>The algorithm consider the above problem as the so-called interference graph, which is widely known for register allocations. In this graph, a node represents a tensor. If there is an edge between two tensors, that means these two tensors has to be allocated to non-overlap memory region.</p>
 <p>The interference graph captured the non-overlap nature, however, the partial reuse of tensors is under specified with the interference graph. Thus, we have our first structure to represent the constraints, and now we need our second structure to represent the solution.</p>
-<p>The second structure is an acyclic graph with edge weights for our solution. The acyclic graph with edge weights (the allocation graph) has one source node to represent the memory region buffer, a directional edge associated itself with a weight, that represent an allocation of <code class="docutils literal"><span class="pre">x</span></code> bytes from the edge’s source node to the its destination node. There is one dummy sink node that represents the buffer when its allocation is reclaimed. In this structure, two tensors could be connected only if they don’t interfere with each other, thus, the destination tensor can reuse part of the memory region from the source tensor.</p>
+<p>The second structure is an acyclic graph with edge weights for our solution. The acyclic graph with edge weights (the allocation graph) has one source node to represent the memory region buffer, a directional edge associated itself with a weight, that represent an allocation of <code class="docutils literal notranslate"><span class="pre">x</span></code> bytes from the edge’s source node to the its destination node. There is one dummy sink node that represents the buffer when its allocation is reclaimed. In this structure, two tensors could be connected only if they don’t interfere with each other, thus, the destination tensor can reuse part of the memory region from the source tensor.</p>
 <p>Based on the second structure, an iterative construction of the solution would be to insert tensor nodes into acyclic graph with infinite reservoir of outflow from source node to the sink node until all tensor nodes are inserted. At that point, the size of the buffer would be all weights of the source node’s outgoing edges. Our algorithm now reduced to the candidate tensor selection when forming this graph structure.</p>
 </div>
 <div class="section" id="candidate-selection">
@@ -286,16 +323,16 @@
 <p>Tensor allocation with loop has to have a very specific definition of what a loop is. More broadly speaking, the types of control structure in a computation graph to support directly relevant to the allocation algorithm. The loop we specifically concerned are the ones with one conditional statement to exit the loop (traditional while-loop). For NNC tensor allocation algorithm to work, a new construct, called multi-view tensor, need to be introduced. Alternatively, the algorithm introduced here will be applicable to a specific loop that contains multiple conditional exits and phi function.</p>
 <p>If you accept that certain data transfer is required for loop to work, the loop handling for tensor allocation algorithm is trivial. <strong>A loop can be considered as a sub-computation graph</strong>, and the same allocation algorithm can be applied to the sub-computation graph. When reached the end of the graph and we need to loop over again, data can then be transferred to the parameters.</p>
 <p>For example, if you have:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">while</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">c</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">loop</span> <span class="n">counter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="k">while</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span> <span class="o">//</span> <span class="n">c</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">loop</span> <span class="n">counter</span>
   <span class="n">y</span> <span class="o">=</span> <span class="n">Convolution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 <span class="p">})(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="p">)</span> <span class="o">//</span> <span class="n">This</span> <span class="n">syntax</span> <span class="n">means</span> <span class="ow">in</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">loop</span><span class="p">,</span> <span class="n">x</span> <span class="n">will</span> <span class="n">contain</span> <span class="n">the</span> <span class="n">content</span> <span class="n">of</span> <span class="n">y</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">think</span> <span class="n">of</span> <span class="n">this</span> <span class="k">as</span> <span class="n">x</span> <span class="o">=</span> <span class="n">Convolution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">but</span> <span class="n">such</span> <span class="n">representation</span> <span class="ow">is</span> <span class="n">forbidden</span> <span class="ow">in</span> <span class="n">static</span> <span class="n">single</span> <span class="n">assignment</span> <span class="n">form</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>The tensor allocation algorithm is trivial is we accept that we need to transfer data from <code class="docutils literal"><span class="pre">y</span></code> to <code class="docutils literal"><span class="pre">x</span></code> every time. This section however, we will discuss how to completely eliminate such data transfer with a novel and generic tensor allocation scheme.</p>
+<p>The tensor allocation algorithm is trivial is we accept that we need to transfer data from <code class="docutils literal notranslate"><span class="pre">y</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code> every time. This section however, we will discuss how to completely eliminate such data transfer with a novel and generic tensor allocation scheme.</p>
 </div>
 <div class="section" id="multi-view-tensor">
 <h2>Multi-view Tensor<a class="headerlink" href="#multi-view-tensor" title="Permalink to this headline">¶</a></h2>
-<p>This is a special tensor that with nested structure. For a leaf multi-view tensor, it can point to multiple memory regions based on the loop counter. Particularly, a multi-view tensor can be configured with a repeat length. Its pointer will be updated prior to the actual computation each round the the correct memory region: <code class="docutils literal"><span class="pre">ptr</span> <span class="pre">=</span> <span class="pre">ptrs[loop_counter</span> <span class="pre">%</span> <span class="pre">repeat_length]</span></code>. There are some complications such as the support for two types of multi-view tensors. Type I will be the one described above. Type II will have a special memory region that only used when <code class="docutils literal"><span class="pre">loop_counter</span> <span class="pre">==</span> <span class="pre">0</span></code>.</p>
+<p>This is a special tensor that with nested structure. For a leaf multi-view tensor, it can point to multiple memory regions based on the loop counter. Particularly, a multi-view tensor can be configured with a repeat length. Its pointer will be updated prior to the actual computation each round the the correct memory region: <code class="docutils literal notranslate"><span class="pre">ptr</span> <span class="pre">=</span> <span class="pre">ptrs[loop_counter</span> <span class="pre">%</span> <span class="pre">repeat_length]</span></code>. There are some complications such as the support for two types of multi-view tensors. Type I will be the one described above. Type II will have a special memory region that only used when <code class="docutils literal notranslate"><span class="pre">loop_counter</span> <span class="pre">==</span> <span class="pre">0</span></code>.</p>
 <p>A multi-view tensor can not only points to memory regions, but to a set of other multi-view tensors, following the same semantics, thus, the nested structure.</p>
 </div>
 <div class="section" id="loop-with-efficient-tensor-allocation">
@@ -304,7 +341,7 @@
 <p>For each parameter, we first identify whether co-allocating them to the same memory region is sufficient. In some cases, they are, thus, we can simply do that and then apply our tensor allocation algorithm to the sub-computation graph.</p>
 <p>However, in some cases (like the superficial case we made above), it is not possible. For these, we need to <em>unroll</em> the loop.</p>
 <p>For example, unrolled above loop will be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">z</span> <span class="o">=</span> <span class="n">Convolution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
   <span class="n">b</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="n">exit</span>
@@ -314,8 +351,8 @@
 </pre></div>
 </div>
 <p>One extra conditional exit added to make the loop syntactically equivalent to the one we had before.</p>
-<p>When a loop unrolled as above, for the particular case, we can see that now <code class="docutils literal"><span class="pre">y</span></code> can be co-allocated with <code class="docutils literal"><span class="pre">x</span></code> (They are not interfere with each other).</p>
-<p>It can be proved that any loop can be unrolled into a form that the parameters can be co-allocated. The exercise will be left to readers on how to use this to tackle something like <code class="docutils literal"><span class="pre">x[c]</span> <span class="pre">=</span> <span class="pre">Convolution(x[c</span> <span class="pre">-</span> <span class="pre">4],</span> <span class="pre">w,</span> <span class="pre">b)</span></code> which requires to access variable from several loops before.</p>
+<p>When a loop unrolled as above, for the particular case, we can see that now <code class="docutils literal notranslate"><span class="pre">y</span></code> can be co-allocated with <code class="docutils literal notranslate"><span class="pre">x</span></code> (They are not interfere with each other).</p>
+<p>It can be proved that any loop can be unrolled into a form that the parameters can be co-allocated. The exercise will be left to readers on how to use this to tackle something like <code class="docutils literal notranslate"><span class="pre">x[c]</span> <span class="pre">=</span> <span class="pre">Convolution(x[c</span> <span class="pre">-</span> <span class="pre">4],</span> <span class="pre">w,</span> <span class="pre">b)</span></code> which requires to access variable from several loops before.</p>
 <p>Once a loop can co-allocate all its parameters after unrolling, we can apply the tensor allocation algorithm on the unrolled computation graph.</p>
 <p>The allocation on the unrolled computation graph then can be used to create the multi-view tensors. Now, the repeat length on the multi-view tensors correspond to how many times we unrolled the loop. Each memory region will be pointing to corresponding tensor on the unrolled computation graph as well.</p>
 </div>

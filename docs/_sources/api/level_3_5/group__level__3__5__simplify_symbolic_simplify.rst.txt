@@ -1,0 +1,10 @@
+Symbolic graph simplification
+=============================
+
+We make a distinction between graph simplifications and optimizations (autotune).
+
+Simplification: rewrite the graph and the resulting graph will have less nodes. This is done on the symbolic graph only. Passes that is "simplification" include pruning, common sub-expression eliminations, constant folding etc.
+
+Optimization (autotune): graph optimization can have more objectives. The most obvious objective is to reduce computation time. For symbolic graph, passes that reduces computation time include data layout optimizations, auto parallel etc (in normal optimization implementations, they have a cost model to guide the optimization. NNC's implementation uses a cost database that profiles the time cost on the device to guide the optimization. We call it autotune to distinguish with the normal optimization passes because we need device profile data). There could be other objectives, for example, in many deep learning applications, reducing memory footprint can be desirable. However, as always in computer science, memory and time is a typical trade-off. Memory optimization almost always results longer computation time, and the objective is to trade between these two with a bias term (in other frameworks such as TensorFlow, the memory optimizer uses a list of "cheap ops" to bias between the time and memory footprint).
+
+For graph optimizations, it can happen on both the symbolic graph level as well as the concrete graph level. For NNC, symbolic graph is already very explicit (data layout, device allocation and data transfer between devices / nodes, even the command backend can all be specified on the symbolic graph), however, some information is unknown until it is compiled down to concrete graph (tensor addresses, tensor initialization etc.), and since graph optimizations need all the information to optimize. Keeping the flexibility to do optimization on both symbolic and concrete graph level seems reasonable.

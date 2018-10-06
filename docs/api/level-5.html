@@ -1,0 +1,693 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Level 5 API &mdash; nnc, a deep learning framework from ccv</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dataframe" href="level_5/group__level__5_dataframe.html" />
+    <link rel="prev" title="Level 4 API" href="level-4.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/nnc-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a deep learning framework from ccv
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../docs/nnc.html">NNC: Neural Network Collection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#what-s-nnc">What’s NNC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#tensors-commands-and-streams">1. Tensors, Commands and Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#computation-graph">2. Computation Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#symbolic-graph">3. Symbolic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#dynamic-graph">4. Dynamic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#common-neural-network-primitives">5. Common Neural Network Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#supplementary-materials">Supplementary Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#toll-free-bridging">Toll-Free Bridging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#limits-and-constraints">Limits and Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/index.html">Technicals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-alloc.html">The NNC Tensor Allocation Algorithm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#tensor-representation">Tensor Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop-representation">Loop Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#the-problem-definition">The Problem Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#the-core-algorithm">The Core Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#basic-structure">Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#candidate-selection">Candidate Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#insertion">Insertion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop">Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#multi-view-tensor">Multi-view Tensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop-with-efficient-tensor-allocation">Loop with Efficient Tensor Allocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#sub-computation-graph">Sub-Computation Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-schd.html">NNC Static Schedule A Graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#stream">Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#static-schedule">Static Schedule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#while-and-case-of"><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-dy.html">NNC Dynamic Graph Execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#naming-the-variable">Naming The Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#tracing-the-operation">Tracing The Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#optimizations">Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#interoperability-not-ready">Interoperability (Not Ready)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#future-optimizations">Future Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#some-maybes">Some Maybes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-cnnp.html">NNC Common Neural Network Primitives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-cnnp.html#model">Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="level-0.html">Level 0 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-0.html#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-1.html">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-1.html#tensors">Tensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-1.html#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-1.html#streams">Streams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-2.html">Level 2 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-2.html#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-2.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-3.html">Level 3 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-3.html#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-3.5.html">Level 3.5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level_3_5/group__level__3__5__case__of_symbolic_switch.html">Construct “switch” control structure in symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level_3_5/group__level__3__5__simplify_symbolic_simplify.html">Symbolic graph simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level_3_5/group__level__3__5__while_symbolic_while.html">Construct a “while” loop in a symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#while-loop-essentials">While Loop Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#branching">Branching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#gradient-based-optimization">Gradient-based Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#graph-simplification">Graph Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#while-loop-others">While Loop Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-4.html">Level 4 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-4.html#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Level 5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level_5/group__level__5_dataframe.html">Dataframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level_5/group__level__5_model.html">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#essentials">Essentials</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/nnc-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Level 5 API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/level-5.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="level-5-api">
+<h1>Level 5 API<a class="headerlink" href="#level-5-api" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Technical Articles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="level_5/group__level__5_dataframe.html">Dataframe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="level_5/group__level__5_model.html">Model</a></li>
+</ul>
+</div>
+<div class="section" id="essentials">
+<h2>Essentials<a class="headerlink" href="#essentials" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv3N7level_513__anonymous82E">
+<span id="_CPPv2N7level_513__anonymous82E"></span><span id="level_5::__anonymous82"></span><span class="target" id="group__level__5_1ga3babbf89cae9b856a12864a41506efbd"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous82</code><a class="headerlink" href="#_CPPv3N7level_513__anonymous82E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv3N7level_524CCV_CNNP_ACTIVATION_NONEE">
+<span id="_CPPv2N7level_524CCV_CNNP_ACTIVATION_NONEE"></span><span class="target" id="group__level__5_1gga3babbf89cae9b856a12864a41506efbda1fe52204d0800b627cef036d66c09cec"></span><code class="descname">CCV_CNNP_ACTIVATION_NONE</code><a class="headerlink" href="#_CPPv3N7level_524CCV_CNNP_ACTIVATION_NONEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N7level_524CCV_CNNP_ACTIVATION_RELUE">
+<span id="_CPPv2N7level_524CCV_CNNP_ACTIVATION_RELUE"></span><span class="target" id="group__level__5_1gga3babbf89cae9b856a12864a41506efbda451e5fcc445723ecc649829ca05e7e0f"></span><code class="descname">CCV_CNNP_ACTIVATION_RELU</code><a class="headerlink" href="#_CPPv3N7level_524CCV_CNNP_ACTIVATION_RELUE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N7level_527CCV_CNNP_ACTIVATION_SOFTMAXE">
+<span id="_CPPv2N7level_527CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span class="target" id="group__level__5_1gga3babbf89cae9b856a12864a41506efbda2b4f5ea39f62ee5d074da78585cfabcd"></span><code class="descname">CCV_CNNP_ACTIVATION_SOFTMAX</code><a class="headerlink" href="#_CPPv3N7level_527CCV_CNNP_ACTIVATION_SOFTMAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv3N7level_513__anonymous83E">
+<span id="_CPPv2N7level_513__anonymous83E"></span><span id="level_5::__anonymous83"></span><span class="target" id="group__level__5_1gaa57e16cd48de3b9a989056ff8df26f84"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous83</code><a class="headerlink" href="#_CPPv3N7level_513__anonymous83E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv3N7level_516CCV_CNNP_NO_NORME">
+<span id="_CPPv2N7level_516CCV_CNNP_NO_NORME"></span><span class="target" id="group__level__5_1ggaa57e16cd48de3b9a989056ff8df26f84abc2e0712dbc28f04a21765334227b257"></span><code class="descname">CCV_CNNP_NO_NORM</code><a class="headerlink" href="#_CPPv3N7level_516CCV_CNNP_NO_NORME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N7level_519CCV_CNNP_BATCH_NORME">
+<span id="_CPPv2N7level_519CCV_CNNP_BATCH_NORME"></span><span class="target" id="group__level__5_1ggaa57e16cd48de3b9a989056ff8df26f84ada7885abc6e2b1a10be88c4877d88190"></span><code class="descname">CCV_CNNP_BATCH_NORM</code><a class="headerlink" href="#_CPPv3N7level_519CCV_CNNP_BATCH_NORME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv320ccv_cnnp_dataframe_t">
+<span id="_CPPv220ccv_cnnp_dataframe_t"></span><span id="ccv_cnnp_dataframe_t"></span><span class="target" id="group__level__5_1gaf1e90b2ba6eec6269c20e454d35819d9"></span><em class="property">typedef </em><em class="property">struct</em> ccv_cnnp_dataframe_s <code class="descname">ccv_cnnp_dataframe_t</code><a class="headerlink" href="#_CPPv320ccv_cnnp_dataframe_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv316ccv_cnnp_model_t">
+<span id="_CPPv216ccv_cnnp_model_t"></span><span id="ccv_cnnp_model_t"></span><span class="target" id="group__level__5_1ga0d6f8d1be5cf6bd28eb2f199a6c61a79"></span><em class="property">typedef </em><em class="property">struct</em> ccv_cnnp_model_s <code class="descname">ccv_cnnp_model_t</code><a class="headerlink" href="#_CPPv316ccv_cnnp_model_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>model type is an abstract type, you won’t interact with a naked model ever. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv319ccv_cnnp_model_io_t">
+<span id="_CPPv219ccv_cnnp_model_io_t"></span><span id="ccv_cnnp_model_io_t"></span><span class="target" id="group__level__5_1ga19aec7e9e754628b06c64ec22e06cd1c"></span><em class="property">typedef </em><em class="property">struct</em> ccv_cnnp_model_io_s *<code class="descname">ccv_cnnp_model_io_t</code><a class="headerlink" href="#_CPPv319ccv_cnnp_model_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>With this type, now in NNC, we have 4 types that represents a “tensor”: ccv_nnc_tensor_t / ccv_nnc_tensor_view_t / ccv_nnc_tensor_multiview_t: a concrete tensor with memory allocated. ccv_nnc_tensor_symbol_t: a symbol representation of a tensor, with its data layout, device affinity, and type specified. ccv_nnc_tensor_variable_t: in dynamic graph, this represents a concrete tensor with memory allocated, but also associated with a recorded execution. ccv_cnnp_model_io_t: this is the most flexible one. No data layout, device affinity or type specified, the format has to be c / h / w, no batch size needed. This is a handle used by model API to associates model inputs / outputs. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv322ccv_cnnp_dataframe_newv">
+<span id="_CPPv222ccv_cnnp_dataframe_newv"></span><span id="ccv_cnnp_dataframe_new__void"></span><span class="target" id="group__level__5_1ga037665ce98aeae100146837e2cec27fb"></span><code class="descname">ccv_cnnp_dataframe_new</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_newv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv323ccv_cnnp_dataframe_freePC20ccv_cnnp_dataframe_t">
+<span id="_CPPv223ccv_cnnp_dataframe_freePC20ccv_cnnp_dataframe_t"></span><span id="ccv_cnnp_dataframe_free__ccv_cnnp_dataframe_tPC"></span><span class="target" id="group__level__5_1gaeaf3fb19930d5a999282c575fcf04153"></span>void <code class="descname">ccv_cnnp_dataframe_free</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv323ccv_cnnp_dataframe_freePC20ccv_cnnp_dataframe_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv314ccv_cnnp_inputv">
+<span id="_CPPv214ccv_cnnp_inputv"></span><span id="ccv_cnnp_input__void"></span><span class="target" id="group__level__5_1ga4bc4fb92bf62272e9d59984c3deed14c"></span><code class="descname">ccv_cnnp_input</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv314ccv_cnnp_inputv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a naked input. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A ccv_cnnp_model_io_t represents an input. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv320ccv_cnnp_model_applyPC16ccv_cnnp_model_tPCK19ccv_cnnp_model_io_tKi">
+<span id="_CPPv220ccv_cnnp_model_applyPC16ccv_cnnp_model_tPCK19ccv_cnnp_model_io_tKi"></span><span id="ccv_cnnp_model_apply__ccv_cnnp_model_tPC.ccv_cnnp_model_io_tCPC.iC"></span><span class="target" id="group__level__5_1gab78090347a5a790f5ba5e088a5dd2b43"></span><code class="descname">ccv_cnnp_model_apply</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv316ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv319ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ccv_cnnp_model_applyPC16ccv_cnnp_model_tPCK19ccv_cnnp_model_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This method mimics Keras callable for model (thus, override __call__ method in Python class). <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A ccv_cnnp_model_io_t that represents the output of the given model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: A model that we can apply a set of inputs to get one output. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The set of inputs. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of inputs array. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv318ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKi">
+<span id="_CPPv218ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKi"></span><span id="ccv_cnnp_model_new__ccv_cnnp_model_io_tCPC.iC.ccv_cnnp_model_io_tCPC.iC"></span><span class="target" id="group__level__5_1gaa26ebdd94259487693eeea9f4bda6101"></span><code class="descname">ccv_cnnp_model_new</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv319ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv319ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv318ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This method name is deceiving. It return a composed model, not a naked model. This composed model takes set of inputs, and run through various other models to arrive at the set of outputs. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A composed model that takes inputs, and generate the outputs. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The set of inputs. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of inputs array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The set of outputs. </li>
+<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of outputs array. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv323ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKi">
+<span id="_CPPv223ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKi"></span><span id="ccv_cnnp_sequential_new__ccv_cnnp_model_tPCPC.iC"></span><span class="target" id="group__level__5_1ga48fdcbc974b0988228e15933010ac394"></span><code class="descname">ccv_cnnp_sequential_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv316ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> *<em class="property">const</em> <em>models</em>, <em class="property">const</em> int <em>model_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv323ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This method returns a sequential model, which composed from a sequence of models. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A composed model that applies these models one by one in sequence. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">models</span></code>: The list of models, that takes one input, and emit one output, feeding into the subsequent one. </li>
+<li><code class="docutils literal notranslate"><span class="pre">model_size</span></code>: The size of the list. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv322ccv_cnnp_model_compilePC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKiK13ccv_nnc_cmd_tK13ccv_nnc_cmd_t">
+<span id="_CPPv222ccv_cnnp_model_compilePC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKiK13ccv_nnc_cmd_tK13ccv_nnc_cmd_t"></span><span id="ccv_cnnp_model_compile__ccv_cnnp_model_tPC.ccv_nnc_tensor_param_tCPC.iC.ccv_nnc_cmd_tC.ccv_nnc_cmd_tC"></span><span class="target" id="group__level__5_1ga82d3c85f2b5bde3c469c80e2ea0919f3"></span>void <code class="descname">ccv_cnnp_model_compile</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv316ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> ccv_nnc_tensor_param_t *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> <a class="reference internal" href="level-1.html#_CPPv313ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="level-1.html#_CPPv313ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>loss</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_model_compilePC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKiK13ccv_nnc_cmd_tK13ccv_nnc_cmd_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Prepare the model to be trained, the input specifies the batch size etc. Input size technically is not needed, here is a safety check. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The model to be compiled. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The tensor parameters for the model’s inputs, that can be used to derive all tensor shapes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the inputs array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">minimizer</span></code>: The wrapped command that represents a particular optimization strategy. </li>
+<li><code class="docutils literal notranslate"><span class="pre">loss</span></code>: The wrapped command that computes the loss function. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv318ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiP4FILE">
+<span id="_CPPv218ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiP4FILE"></span><span id="ccv_cnnp_model_dot__ccv_cnnp_model_tCPC.iC.FILEP"></span><span class="target" id="group__level__5_1gaf436a84fec13b46ed73a49f621db798d"></span>void <code class="descname">ccv_cnnp_model_dot</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv316ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>flags</em>, FILE *<em>out</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv318ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiP4FILE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generate output that can be parsed by GraphViz (DOT language). <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: Either CCV_NNC_SHORT_DOT_GRAPH or CCV_NNC_LONG_DOT_GRAPH </li>
+<li><code class="docutils literal notranslate"><span class="pre">out</span></code>: The output file stream. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv318ccv_cnnp_model_fitPC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t">
+<span id="_CPPv218ccv_cnnp_model_fitPC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_model_fit__ccv_cnnp_model_tPC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5_1ga52875649af8f66ae2ec0e9c33905111b"></span>void <code class="descname">ccv_cnnp_model_fit</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv316ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>fits</em>, <em class="property">const</em> int <em>fit_size</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <a class="reference internal" href="level-1.html#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv318ccv_cnnp_model_fitPC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Fit a model to a given input / output. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The input tensors. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the input tensors array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">fits</span></code>: The target tensors. </li>
+<li><code class="docutils literal notranslate"><span class="pre">fit_size</span></code>: The size of the target tensors array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The actual outputs from the model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the outputs array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream where the fit can be executed upon. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv323ccv_cnnp_model_evaluatePC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t">
+<span id="_CPPv223ccv_cnnp_model_evaluatePC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_model_evaluate__ccv_cnnp_model_tPC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5_1ga3b318d710a1ebaf762b6e01c96cf17b4"></span>void <code class="descname">ccv_cnnp_model_evaluate</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv316ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <a class="reference internal" href="level-1.html#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv323ccv_cnnp_model_evaluatePC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Evaluate model with output. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The input tensors. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the input tensors array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The actual outputs from the model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the outputs array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream where the fit can be executed upon. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv319ccv_cnnp_model_freePC16ccv_cnnp_model_t">
+<span id="_CPPv219ccv_cnnp_model_freePC16ccv_cnnp_model_t"></span><span id="ccv_cnnp_model_free__ccv_cnnp_model_tPC"></span><span class="target" id="group__level__5_1ga16114830168b3090e34d46d53c489ee2"></span>void <code class="descname">ccv_cnnp_model_free</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv316ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv319ccv_cnnp_model_freePC16ccv_cnnp_model_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Free a given model. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv312ccv_cnnp_addv">
+<span id="_CPPv212ccv_cnnp_addv"></span><span id="ccv_cnnp_add__void"></span><span class="target" id="group__level__5_1ga6d8fdd36fca28ad3ab5615e64cfafe97"></span><code class="descname">ccv_cnnp_add</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv312ccv_cnnp_addv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add multiple input tensors together. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model that can be applied with multiple inputs, and generate output that is a sum of the inputs. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv315ccv_cnnp_concatv">
+<span id="_CPPv215ccv_cnnp_concatv"></span><span id="ccv_cnnp_concat__void"></span><span class="target" id="group__level__5_1gaf549cbe214fd98d2b75efb7adf618111"></span><code class="descname">ccv_cnnp_concat</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv315ccv_cnnp_concatv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Concatenate input tensors together. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model that can be applied with multiple inputs, and generate output that is a concatenation of the inputs. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv320ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t">
+<span id="_CPPv220ccv_cnnp_convolutionKiKiACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_convolution__iC.iC.iCA.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5_1gacc3bca08460f5cbe5a6f46b088816624"></span><code class="descname">ccv_cnnp_convolution</code><span class="sig-paren">(</span><em class="property">const</em> int <em>groups</em>, <em class="property">const</em> int <em>filters</em>, <em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv316ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A convolution model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A convolution model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">groups</span></code>: The number of kernel groups in the model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">filters</span></code>: The total number of filters in the model (filters = groups * per group filters). </li>
+<li><code class="docutils literal notranslate"><span class="pre">kdim</span></code>: The dimensions of the kernel. </li>
+<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Other parameters (such as hint and activation or norm). </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv314ccv_cnnp_denseKiK16ccv_cnnp_param_t">
+<span id="_CPPv214ccv_cnnp_denseKiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_dense__iC.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5_1gafeb954309e7ce374402c1792277f3997"></span><code class="descname">ccv_cnnp_dense</code><span class="sig-paren">(</span><em class="property">const</em> int <em>count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv316ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv314ccv_cnnp_denseKiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A dense layer model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A dense layer model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">count</span></code>: The output dimension. </li>
+<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Other parameters (such as hint and activation or norm). </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv317ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t">
+<span id="_CPPv217ccv_cnnp_max_poolACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_max_pool__iCA.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5_1ga1c1195fb9f3204e09a80a1e0220e0244"></span><code class="descname">ccv_cnnp_max_pool</code><span class="sig-paren">(</span><em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv316ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A max pool model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A max pool model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">kdim</span></code>: The pooling window dimension. </li>
+<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Other parameters (such as hint and activation or norm). </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv321ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t">
+<span id="_CPPv221ccv_cnnp_average_poolACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_average_pool__iCA.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5_1ga6ac212e3ab0d77e8e1323ab450651586"></span><code class="descname">ccv_cnnp_average_pool</code><span class="sig-paren">(</span><em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv316ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv321ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An average pool model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>An average pool model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">kdim</span></code>: The pooling window dimension. </li>
+<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Other parameters (such as hint and activation or norm). </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv316ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_Ki">
+<span id="_CPPv216ccv_cnnp_reshapeACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_cnnp_reshape__iCA"></span><span class="target" id="group__level__5_1ga84c701c916004fd9875493838ed47599"></span><code class="descname">ccv_cnnp_reshape</code><span class="sig-paren">(</span><em class="property">const</em> int <em>dim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv316ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reshape an input into a different dimension. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A reshape layer model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dim</span></code>: The new dimension for the input. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv316ccv_cnnp_flattenv">
+<span id="_CPPv216ccv_cnnp_flattenv"></span><span id="ccv_cnnp_flatten__void"></span><span class="target" id="group__level__5_1ga598b099e1855292f7a9a08aef000e0c4"></span><code class="descname">ccv_cnnp_flatten</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv316ccv_cnnp_flattenv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Flatten an input tensor into a one dimensional array. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A flatten layer model. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv316ccv_cnnp_param_t">
+<span id="_CPPv216ccv_cnnp_param_t"></span><span id="ccv_cnnp_param_t"></span><span class="target" id="structccv__cnnp__param__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_param_t</code><a class="headerlink" href="#_CPPv316ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N16ccv_cnnp_param_t4normE">
+<span id="_CPPv2N16ccv_cnnp_param_t4normE"></span><span id="ccv_cnnp_param_t::norm__i"></span><span class="target" id="structccv__cnnp__param__t_1a805d61d5b268725af70c2e463e1f087d"></span>int <code class="descname">norm</code><a class="headerlink" href="#_CPPv3N16ccv_cnnp_param_t4normE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The normalizations can be applied after activation such as CCV_CNNP_BATCH_NORM. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N16ccv_cnnp_param_t10activationE">
+<span id="_CPPv2N16ccv_cnnp_param_t10activationE"></span><span id="ccv_cnnp_param_t::activation__i"></span><span class="target" id="structccv__cnnp__param__t_1a769e3c6e2a30d952a74e93abaa33e1b5"></span>int <code class="descname">activation</code><a class="headerlink" href="#_CPPv3N16ccv_cnnp_param_t10activationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The activations can be applied for the output, such as CCV_CNNP_ACTIVATION_RELU or CCV_CNNP_ACTIVATION_SOFTMAX. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N16ccv_cnnp_param_t4hintE">
+<span id="_CPPv2N16ccv_cnnp_param_t4hintE"></span><span id="ccv_cnnp_param_t::hint__ccv_nnc_hint_t"></span><span class="target" id="structccv__cnnp__param__t_1a5f44542ea50e46d8868aa684e35f7993"></span><a class="reference internal" href="level-1.html#_CPPv314ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <code class="descname">hint</code><a class="headerlink" href="#_CPPv3N16ccv_cnnp_param_t4hintE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The hint for a particular operation </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="level_5/group__level__5_dataframe.html" class="btn btn-neutral float-right" title="Dataframe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="level-4.html" class="btn btn-neutral" title="Level 4 API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, libnnc.org.
+      
+        <span class="build">
+          <a href="https://github.com/liuliu/ccv">View the project on GitHub</a>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'a deep learning framework from ccv',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
