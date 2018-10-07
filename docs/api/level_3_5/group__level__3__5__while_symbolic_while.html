@@ -185,7 +185,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../convenience.html">Convenience API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commands.html">Available Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commands.html">Available Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../commands.html#backends">Backends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands.html#commands">Commands</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -266,6 +270,7 @@
             
   <div class="section" id="construct-a-while-loop-in-a-symbolic-graph">
 <h1>Construct a “while” loop in a symbolic graph<a class="headerlink" href="#construct-a-while-loop-in-a-symbolic-graph" title="Permalink to this headline">¶</a></h1>
+<p>(This document was written in 2016, since then, Caffe2 added support for While loop (as sub-graph), similar implementation added for ONNX as well.)</p>
 <p>In NNC, a computation graph cannot allow cycles. Thus, there is no flexible way to express loops.</p>
 <p>A little survey on this problem:</p>
 <ul class="simple">

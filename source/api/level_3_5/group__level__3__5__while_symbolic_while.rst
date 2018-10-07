@@ -1,6 +1,8 @@
 Construct a "while" loop in a symbolic graph
 ============================================
 
+(This document was written in 2016, since then, Caffe2 added support for While loop (as sub-graph), similar implementation added for ONNX as well.)
+
 In NNC, a computation graph cannot allow cycles. Thus, there is no flexible way to express loops.
 
 A little survey on this problem:

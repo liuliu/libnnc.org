@@ -185,7 +185,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../convenience.html">Convenience API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commands.html">Available Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commands.html">Available Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../commands.html#backends">Backends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands.html#commands">Commands</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -271,7 +275,10 @@
 <p>Comparing to Python, Swift is a stronger typed language. Though all being high-level, they all have pretty good string support (of course!), operator overloading, and polymorphism. String support makes column naming natural, Operator overloading makes conditioning and filtering easier, and ploymorphism makes column type representation straight-forward. These, unfortunately, are the challenges I need to face when implementing in C with the eye towards that later the similar ideas can be implemented on top on a high-level language based on this one.</p>
 <p>It seems I haven’t answered the most crucial question yet: what’s special about these data process APIs? It is easier to answer this to first see what Pandas or MLDataTable does.</p>
 <ul class="simple">
-<li>They both represent data as tables. Each column represents different type of the data (time, nd-array, scalar or string). As such, they both have API to add / remove / rename columns, and load tabular data from disk. * They both provide API to filter (remove / add) rows, and derive new column from existing columns. * Pandas provides more API for data alignment (merge columns from different tables into one table), and compute statistics (group rows by some criteria, and compute min / max / std / mean within that group). * MLDataTable provides API to batching data (random split) which covered in TensorFlow / PyTorch’s Dataset API as well.</li>
+<li>They both represent data as tables. Each column represents different type of the data (time, nd-array, scalar or string). As such, they both have API to add / remove / rename columns, and load tabular data from disk.</li>
+<li>They both provide API to filter (remove / add) rows, and derive new column from existing columns.</li>
+<li>Pandas provides more API for data alignment (merge columns from different tables into one table), and compute statistics (group rows by some criteria, and compute min / max / std / mean within that group).</li>
+<li>MLDataTable provides API to batching data (random split) which covered in TensorFlow / PyTorch’s Dataset API as well.</li>
 </ul>
 <p>It turns out when you have a noisy dataset, these functionalities are useful to remove unwanted data quickly. If you have a relatively clean dataset, it also allows you to prepare data in a more elegant way. For NNC, the interesting requirements are:</p>
 <ol class="arabic simple">

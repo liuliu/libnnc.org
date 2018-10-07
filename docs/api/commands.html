@@ -184,7 +184,12 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="convenience.html">Convenience API</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Available Commands</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Available Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#backends">Backends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-identifiers">Command Identifiers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -263,6 +268,52 @@
             
   <div class="section" id="available-commands">
 <h1>Available Commands<a class="headerlink" href="#available-commands" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="backends">
+<h2>Backends<a class="headerlink" href="#backends" title="Permalink to this headline">¶</a></h2>
+<dl class="type">
+<dt id="_CPPv3N18available_backends14__anonymous108E">
+<span id="_CPPv2N18available_backends14__anonymous108E"></span><span id="available_backends::__anonymous108"></span><span class="target" id="group__available__backends_1ga7646ae03981912f97626c39dfe9318da"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous108</code><a class="headerlink" href="#_CPPv3N18available_backends14__anonymous108E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv3N18available_backends18CCV_NNC_NO_BACKENDE">
+<span id="_CPPv2N18available_backends18CCV_NNC_NO_BACKENDE"></span><span class="target" id="group__available__backends_1gga7646ae03981912f97626c39dfe9318daac8ffc6ec64801027caeecaac14e2e56b"></span><code class="descname">CCV_NNC_NO_BACKEND</code> = 0<a class="headerlink" href="#_CPPv3N18available_backends18CCV_NNC_NO_BACKENDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N18available_backends23CCV_NNC_BACKEND_CPU_REFE">
+<span id="_CPPv2N18available_backends23CCV_NNC_BACKEND_CPU_REFE"></span><span class="target" id="group__available__backends_1gga7646ae03981912f97626c39dfe9318daa3e236ac24bff3020086658800cd6bbb5"></span><code class="descname">CCV_NNC_BACKEND_CPU_REF</code> = 0x3d9883e5<a class="headerlink" href="#_CPPv3N18available_backends23CCV_NNC_BACKEND_CPU_REFE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N18available_backends25CCV_NNC_BACKEND_GPU_CUDNNE">
+<span id="_CPPv2N18available_backends25CCV_NNC_BACKEND_GPU_CUDNNE"></span><span class="target" id="group__available__backends_1gga7646ae03981912f97626c39dfe9318daa488e108d3b9048184d0aa77133496f46"></span><code class="descname">CCV_NNC_BACKEND_GPU_CUDNN</code> = 0x854b679a<a class="headerlink" href="#_CPPv3N18available_backends25CCV_NNC_BACKEND_GPU_CUDNNE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N18available_backends23CCV_NNC_BACKEND_CPU_OPTE">
+<span id="_CPPv2N18available_backends23CCV_NNC_BACKEND_CPU_OPTE"></span><span class="target" id="group__available__backends_1gga7646ae03981912f97626c39dfe9318daa76a211cf7010c0af09a89ed4b6633e57"></span><code class="descname">CCV_NNC_BACKEND_CPU_OPT</code> = 0x46deb194<a class="headerlink" href="#_CPPv3N18available_backends23CCV_NNC_BACKEND_CPU_OPTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N18available_backends23CCV_NNC_BACKEND_GPU_REFE">
+<span id="_CPPv2N18available_backends23CCV_NNC_BACKEND_GPU_REFE"></span><span class="target" id="group__available__backends_1gga7646ae03981912f97626c39dfe9318daa63e185de5eaf8724c81d373626784ce5"></span><code class="descname">CCV_NNC_BACKEND_GPU_REF</code> = 0x5f19790a<a class="headerlink" href="#_CPPv3N18available_backends23CCV_NNC_BACKEND_GPU_REFE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N18available_backends26CCV_NNC_BACKEND_GPU_CUBLASE">
+<span id="_CPPv2N18available_backends26CCV_NNC_BACKEND_GPU_CUBLASE"></span><span class="target" id="group__available__backends_1gga7646ae03981912f97626c39dfe9318daa53395dd07f52cb70f9600a51e36f009b"></span><code class="descname">CCV_NNC_BACKEND_GPU_CUBLAS</code> = 0x9b8cfed<a class="headerlink" href="#_CPPv3N18available_backends26CCV_NNC_BACKEND_GPU_CUBLASE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N18available_backends21CCV_NNC_BACKEND_COUNTE">
+<span id="_CPPv2N18available_backends21CCV_NNC_BACKEND_COUNTE"></span><span class="target" id="group__available__backends_1gga7646ae03981912f97626c39dfe9318daaec87f0018670aa28892fa0efe3a050a0"></span><code class="descname">CCV_NNC_BACKEND_COUNT</code> = 5<a class="headerlink" href="#_CPPv3N18available_backends21CCV_NNC_BACKEND_COUNTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <p>The list is available once you included <code class="docutils literal notranslate"><span class="pre">&lt;nnc/ccv_nnc_easy.h&gt;</span></code>. To do it the <strong>hard</strong> way, you should check the underlying implementation. These APIs can be called in places that requires <code class="docutils literal notranslate"><span class="pre">ccv_nnc_cmd_t</span></code> data structure.</p>
 <dl class="macro">
 <dt id="c.CMD_NOOP">
@@ -529,6 +580,10 @@
 <span class="target" id="group__available__commands_1ga84cb3bb61fcec738bdc8cae4ba4e7468"></span><code class="descname">CMD_FORMAT_TRANSFORM_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_FORMAT_TRANSFORM_BACKWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+</div>
+<div class="section" id="command-identifiers">
+<h2>Command Identifiers<a class="headerlink" href="#command-identifiers" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 

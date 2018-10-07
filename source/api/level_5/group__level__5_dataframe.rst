@@ -9,7 +9,13 @@ Comparing to Python, Swift is a stronger typed language. Though all being high-l
 
 It seems I haven't answered the most crucial question yet: what's special about these data process APIs? It is easier to answer this to first see what Pandas or MLDataTable does.
 
--  They both represent data as tables. Each column represents different type of the data (time, nd-array, scalar or string). As such, they both have API to add / remove / rename columns, and load tabular data from disk. \* They both provide API to filter (remove / add) rows, and derive new column from existing columns. \* Pandas provides more API for data alignment (merge columns from different tables into one table), and compute statistics (group rows by some criteria, and compute min / max / std / mean within that group). \* MLDataTable provides API to batching data (random split) which covered in TensorFlow / PyTorch's Dataset API as well.
+-  They both represent data as tables. Each column represents different type of the data (time, nd-array, scalar or string). As such, they both have API to add / remove / rename columns, and load tabular data from disk.
+
+-  They both provide API to filter (remove / add) rows, and derive new column from existing columns.
+
+-  Pandas provides more API for data alignment (merge columns from different tables into one table), and compute statistics (group rows by some criteria, and compute min / max / std / mean within that group).
+
+-  MLDataTable provides API to batching data (random split) which covered in TensorFlow / PyTorch's Dataset API as well.
 
 It turns out when you have a noisy dataset, these functionalities are useful to remove unwanted data quickly. If you have a relatively clean dataset, it also allows you to prepare data in a more elegant way. For NNC, the interesting requirements are:
 
