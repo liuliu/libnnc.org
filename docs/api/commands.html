@@ -1,0 +1,603 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Available Commands &mdash; nnc, a deep learning framework from ccv</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Convenience API" href="convenience.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/nnc-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a deep learning framework from ccv
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../docs/nnc.html">NNC: Neural Network Collection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#what-s-nnc">What’s NNC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#tensors-commands-and-streams">1. Tensors, Commands and Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#computation-graph">2. Computation Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#symbolic-graph">3. Symbolic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#dynamic-graph">4. Dynamic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#common-neural-network-primitives">5. Common Neural Network Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#supplementary-materials">Supplementary Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#toll-free-bridging">Toll-Free Bridging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#limits-and-constraints">Limits and Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tech/index.html">Technicals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-alloc.html">The NNC Tensor Allocation Algorithm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#tensor-representation">Tensor Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop-representation">Loop Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#the-problem-definition">The Problem Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#the-core-algorithm">The Core Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#basic-structure">Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#candidate-selection">Candidate Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#insertion">Insertion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop">Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#multi-view-tensor">Multi-view Tensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#loop-with-efficient-tensor-allocation">Loop with Efficient Tensor Allocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#sub-computation-graph">Sub-Computation Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-alloc.html#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-schd.html">NNC Static Schedule A Graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#stream">Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#static-schedule">Static Schedule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-schd.html#while-and-case-of"><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-dy.html">NNC Dynamic Graph Execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#naming-the-variable">Naming The Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#tracing-the-operation">Tracing The Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#optimizations">Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#interoperability-not-ready">Interoperability (Not Ready)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#future-optimizations">Future Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy.html#some-maybes">Some Maybes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/nnc-cnnp.html">NNC Common Neural Network Primitives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-cnnp.html#model">Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="level-0.html">Level 0 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-0.html#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-1.html">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-1.html#tensors">Tensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-1.html#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-1.html#streams">Streams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-2.html">Level 2 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-2.html#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-2.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-3.html">Level 3 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-3.html#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-3.5.html">Level 3.5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level_3_5/group__level__3__5__case__of_symbolic_switch.html">Construct “switch” control structure in symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level_3_5/group__level__3__5__simplify_symbolic_simplify.html">Symbolic graph simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level_3_5/group__level__3__5__while_symbolic_while.html">Construct a “while” loop in a symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#while-loop-essentials">While Loop Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#branching">Branching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#gradient-based-optimization">Gradient-based Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#graph-simplification">Graph Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-3.5.html#while-loop-others">While Loop Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-4.html">Level 4 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level-4.html#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="level-5.html">Level 5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="level_5/group__level__5_dataframe.html">Dataframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level_5/group__level__5_model.html">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="level-5.html#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="convenience.html">Convenience API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Available Commands</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/nnc-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+        
+      <li>Available Commands</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/commands.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="available-commands">
+<h1>Available Commands<a class="headerlink" href="#available-commands" title="Permalink to this headline">¶</a></h1>
+<p>The list is available once you included <code class="docutils literal notranslate"><span class="pre">&lt;nnc/ccv_nnc_easy.h&gt;</span></code>. To do it the <strong>hard</strong> way, you should check the underlying implementation. These APIs can be called in places that requires <code class="docutils literal notranslate"><span class="pre">ccv_nnc_cmd_t</span></code> data structure.</p>
+<dl class="macro">
+<dt id="c.CMD_NOOP">
+<span class="target" id="group__cmd__list_1gade86ae2ddbcc311bb53e6373c0f3bbaa"></span><code class="descname">CMD_NOOP</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_NOOP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_CUSTOM_FORWARD">
+<span class="target" id="group__cmd__list_1ga54a60ae0ef93534e13fc264b244f326a"></span><code class="descname">CMD_CUSTOM_FORWARD</code><span class="sig-paren">(</span>f<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_CUSTOM_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWSUM_FORWARD">
+<span class="target" id="group__cmd__list_1gaac3ba5f06fa25c3e24a441f1bbcb20fa"></span><code class="descname">CMD_EWSUM_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWSUM_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWSUM_BACKWARD">
+<span class="target" id="group__cmd__list_1gaeebc2437258ff1ae16e63da1724b1e2e"></span><code class="descname">CMD_EWSUM_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWSUM_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWPROD_FORWARD">
+<span class="target" id="group__cmd__list_1gac4dfc5d05560a0d8e70b702e238196fb"></span><code class="descname">CMD_EWPROD_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWPROD_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWPROD_BACKWARD">
+<span class="target" id="group__cmd__list_1ga016e0b1f122bc001c708af5948704e65"></span><code class="descname">CMD_EWPROD_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWPROD_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWDIV_FORWARD">
+<span class="target" id="group__cmd__list_1gaba26b1ec2fc6ed3ab1b7677e2132ce5f"></span><code class="descname">CMD_EWDIV_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWDIV_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWDIV_BACKWARD">
+<span class="target" id="group__cmd__list_1ga6f96360b00d4cb6b0d9741189536a42c"></span><code class="descname">CMD_EWDIV_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWDIV_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWEXP_FORWARD">
+<span class="target" id="group__cmd__list_1ga9f412d99f494b7d1a9909ace720ea0b5"></span><code class="descname">CMD_EWEXP_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWEXP_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWEXP_BACKWARD">
+<span class="target" id="group__cmd__list_1gadcdbbacc00f91acf69fd3492e775598f"></span><code class="descname">CMD_EWEXP_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWEXP_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWLOG_FORWARD">
+<span class="target" id="group__cmd__list_1ga1a1148d5032ef6a9823ca259c2870b10"></span><code class="descname">CMD_EWLOG_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWLOG_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWLOG_BACKWARD">
+<span class="target" id="group__cmd__list_1gabc922a29ed433f28a5008ad72d7aed71"></span><code class="descname">CMD_EWLOG_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWLOG_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWSQRT_FORWARD">
+<span class="target" id="group__cmd__list_1ga4ea33bb8de8e5214ccc4ee8dae81e89c"></span><code class="descname">CMD_EWSQRT_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWSQRT_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_EWSQRT_BACKWARD">
+<span class="target" id="group__cmd__list_1ga29e7bddea20e17359a9fd027735396e0"></span><code class="descname">CMD_EWSQRT_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_EWSQRT_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_MAX_POOL_FORWARD">
+<span class="target" id="group__cmd__list_1ga2c3c4823493197e6c0a7de7cd308debb"></span><code class="descname">CMD_MAX_POOL_FORWARD</code><span class="sig-paren">(</span>rows, cols<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_MAX_POOL_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_MAX_POOL_BACKWARD">
+<span class="target" id="group__cmd__list_1ga5f46dbc4c1e336bd99850e179a333318"></span><code class="descname">CMD_MAX_POOL_BACKWARD</code><span class="sig-paren">(</span>rows, cols<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_MAX_POOL_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_AVERAGE_POOL_FORWARD">
+<span class="target" id="group__cmd__list_1ga897890744dfc3decaa1f5be4c8a5a0e3"></span><code class="descname">CMD_AVERAGE_POOL_FORWARD</code><span class="sig-paren">(</span>rows, cols<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_AVERAGE_POOL_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_AVERAGE_POOL_BACKWARD">
+<span class="target" id="group__cmd__list_1ga57c30ec4c0c51cdffb0e4708807e8f90"></span><code class="descname">CMD_AVERAGE_POOL_BACKWARD</code><span class="sig-paren">(</span>rows, cols<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_AVERAGE_POOL_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_CONVOLUTION_FORWARD">
+<span class="target" id="group__cmd__list_1gabeebc62bc6cc02f5ebf26c73a8901191"></span><code class="descname">CMD_CONVOLUTION_FORWARD</code><span class="sig-paren">(</span>_groups, _count, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_CONVOLUTION_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_CONVOLUTION_BACKWARD">
+<span class="target" id="group__cmd__list_1ga58d78e2e6006d0c458e7fb6e805b18b3"></span><code class="descname">CMD_CONVOLUTION_BACKWARD</code><span class="sig-paren">(</span>_groups, _count, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_CONVOLUTION_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SGD_FORWARD">
+<span class="target" id="group__cmd__list_1ga75bcdacf8c9cddf199621d3e45882a5c"></span><code class="descname">CMD_SGD_FORWARD</code><span class="sig-paren">(</span>_rate, _decay, _momentum, _dampening<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SGD_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SOFTMAX_FORWARD">
+<span class="target" id="group__cmd__list_1ga54ef56a15c7e2a9c4d37821a778afe88"></span><code class="descname">CMD_SOFTMAX_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SOFTMAX_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SOFTMAX_BACKWARD">
+<span class="target" id="group__cmd__list_1ga4f1ebf4a551475c3cfac57cc8d7f8406"></span><code class="descname">CMD_SOFTMAX_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SOFTMAX_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_RANDOM_UNIFORM_FORWARD">
+<span class="target" id="group__cmd__list_1ga5d20d1595520000afb93223883454da1"></span><code class="descname">CMD_RANDOM_UNIFORM_FORWARD</code><span class="sig-paren">(</span>_lb, _ub<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_RANDOM_UNIFORM_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_RANDOM_UNIFORM_BACKWARD">
+<span class="target" id="group__cmd__list_1gaf55f22bb97e894f2ca280d7c3a14b137"></span><code class="descname">CMD_RANDOM_UNIFORM_BACKWARD</code><span class="sig-paren">(</span>_lb, _ub<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_RANDOM_UNIFORM_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_CATEGORICAL_CROSSENTROPY_FORWARD">
+<span class="target" id="group__cmd__list_1gab32a21120d2a21ddc03ea252b5cf6140"></span><code class="descname">CMD_CATEGORICAL_CROSSENTROPY_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_CATEGORICAL_CROSSENTROPY_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_CATEGORICAL_CROSSENTROPY_BACKWARD">
+<span class="target" id="group__cmd__list_1ga835d77500e0b4f4a9686844f9fd78204"></span><code class="descname">CMD_CATEGORICAL_CROSSENTROPY_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_CATEGORICAL_CROSSENTROPY_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_RELU_FORWARD">
+<span class="target" id="group__cmd__list_1ga7a861491c450517de22bd9641c2e0b3f"></span><code class="descname">CMD_RELU_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_RELU_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_RELU_BACKWARD">
+<span class="target" id="group__cmd__list_1ga4e93e6956d677befbced50ede770267a"></span><code class="descname">CMD_RELU_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_RELU_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_DROPOUT_FORWARD">
+<span class="target" id="group__cmd__list_1gaf587a30a17652c222c2a9a489b60f20e"></span><code class="descname">CMD_DROPOUT_FORWARD</code><span class="sig-paren">(</span>_p<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_DROPOUT_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_DROPOUT_BACKWARD">
+<span class="target" id="group__cmd__list_1ga28a221ecf198ed47adab3111ebf5ee04"></span><code class="descname">CMD_DROPOUT_BACKWARD</code><span class="sig-paren">(</span>_p<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_DROPOUT_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SOFTMAX_CROSSENTROPY_FORWARD">
+<span class="target" id="group__cmd__list_1ga5ef6808cbc338113e9da9239658a7764"></span><code class="descname">CMD_SOFTMAX_CROSSENTROPY_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SOFTMAX_CROSSENTROPY_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SOFTMAX_CROSSENTROPY_BACKWARD">
+<span class="target" id="group__cmd__list_1gaccaf76f3a3795911e9c013cee092c174"></span><code class="descname">CMD_SOFTMAX_CROSSENTROPY_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SOFTMAX_CROSSENTROPY_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_REDUCE_SUM_FORWARD">
+<span class="target" id="group__cmd__list_1gab97509dc7f98a1f5be64b0af0732069a"></span><code class="descname">CMD_REDUCE_SUM_FORWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_REDUCE_SUM_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_REDUCE_SUM_BACKWARD">
+<span class="target" id="group__cmd__list_1ga433e53ff82d4d5c2260a9bc208fa354a"></span><code class="descname">CMD_REDUCE_SUM_BACKWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_REDUCE_SUM_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_REDUCE_MAX_FORWARD">
+<span class="target" id="group__cmd__list_1ga2d018081f1d54a0dffe95b2490e58981"></span><code class="descname">CMD_REDUCE_MAX_FORWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_REDUCE_MAX_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_REDUCE_MAX_BACKWARD">
+<span class="target" id="group__cmd__list_1ga5425e89aa4a85fc55da6baa9ca31c24e"></span><code class="descname">CMD_REDUCE_MAX_BACKWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_REDUCE_MAX_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_BATCH_NORM_FORWARD">
+<span class="target" id="group__cmd__list_1ga3a29322aa7005f48c36c6813beaa7006"></span><code class="descname">CMD_BATCH_NORM_FORWARD</code><span class="sig-paren">(</span>_epsilon, _is_test, _momentum, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_BATCH_NORM_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_BATCH_NORM_BACKWARD">
+<span class="target" id="group__cmd__list_1ga1f2173116177dc801867af368f7cabf4"></span><code class="descname">CMD_BATCH_NORM_BACKWARD</code><span class="sig-paren">(</span>_epsilon, _is_test, _momentum, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_BATCH_NORM_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_GEMM_FORWARD">
+<span class="target" id="group__cmd__list_1ga6a1233006539d91b34ae979aaf98aca9"></span><code class="descname">CMD_GEMM_FORWARD</code><span class="sig-paren">(</span>_count<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_GEMM_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_GEMM_BACKWARD">
+<span class="target" id="group__cmd__list_1gaa4d35229fb02f80df5008dc093b0caf0"></span><code class="descname">CMD_GEMM_BACKWARD</code><span class="sig-paren">(</span>_count<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_GEMM_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_ADD_FORWARD">
+<span class="target" id="group__cmd__list_1ga84ddaf1500913c24efd47e1eb7b312a8"></span><code class="descname">CMD_ADD_FORWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_ADD_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_ADD_BACKWARD">
+<span class="target" id="group__cmd__list_1ga0bb42de37753ec470fe3ce3d0a474a66"></span><code class="descname">CMD_ADD_BACKWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_ADD_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_MUL_FORWARD">
+<span class="target" id="group__cmd__list_1gad3cdf54467f0178106c8f45d94891317"></span><code class="descname">CMD_MUL_FORWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_MUL_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_MUL_BACKWARD">
+<span class="target" id="group__cmd__list_1ga2d1a640cdf2fca99911451bbcb5ceaef"></span><code class="descname">CMD_MUL_BACKWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_MUL_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SCALAR_MUL_FORWARD">
+<span class="target" id="group__cmd__list_1ga59d5648656319eea70f281278d5d6a18"></span><code class="descname">CMD_SCALAR_MUL_FORWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SCALAR_MUL_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SCALAR_MUL_BACKWARD">
+<span class="target" id="group__cmd__list_1gafebb9088c2fcc7acda2c891a610b3c29"></span><code class="descname">CMD_SCALAR_MUL_BACKWARD</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SCALAR_MUL_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SET_FORWARD">
+<span class="target" id="group__cmd__list_1gaf0f080f17973fbf02eb58e15a67c072c"></span><code class="descname">CMD_SET_FORWARD</code><span class="sig-paren">(</span>_val<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SET_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_SET_BACKWARD">
+<span class="target" id="group__cmd__list_1gab43f2f4043b14d82887fad9d326d12bf"></span><code class="descname">CMD_SET_BACKWARD</code><span class="sig-paren">(</span>_val<span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SET_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_DATA_TRANSFER_FORWARD">
+<span class="target" id="group__cmd__list_1gad9f5b811b525cbc2ad430142c52db1f1"></span><code class="descname">CMD_DATA_TRANSFER_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_DATA_TRANSFER_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_DATA_TRANSFER_BACKWARD">
+<span class="target" id="group__cmd__list_1ga5db7331101cc0e4b5e94c60ac690cb5e"></span><code class="descname">CMD_DATA_TRANSFER_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_DATA_TRANSFER_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_FORMAT_TRANSFORM_FORWARD">
+<span class="target" id="group__cmd__list_1ga0b4ad05eb00a4b44e562dc5bb9151efa"></span><code class="descname">CMD_FORMAT_TRANSFORM_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_FORMAT_TRANSFORM_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_FORMAT_TRANSFORM_BACKWARD">
+<span class="target" id="group__cmd__list_1ga84cb3bb61fcec738bdc8cae4ba4e7468"></span><code class="descname">CMD_FORMAT_TRANSFORM_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_FORMAT_TRANSFORM_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="convenience.html" class="btn btn-neutral" title="Convenience API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, libnnc.org.
+      
+        <span class="build">
+          <a href="https://github.com/liuliu/ccv">View the project on GitHub</a>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'a deep learning framework from ccv',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

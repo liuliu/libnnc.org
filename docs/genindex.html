@@ -183,6 +183,8 @@
 <li class="toctree-l3"><a class="reference internal" href="api/level-5.html#essentials">Essentials</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="api/convenience.html">Convenience API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/commands.html">Available Commands</a></li>
 </ul>
 </li>
 </ul>
@@ -260,7 +262,14 @@
 
 <div class="genindex-jumpbox">
  <a href="#C"><strong>C</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
  | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
  
 </div>
 <h2 id="C">C</h2>
@@ -323,6 +332,8 @@
       <li><a href="api/level-1.html#_CPPv325ccv_nnc_cmd_allow_inplaceK13ccv_nnc_cmd_tKiKi">ccv_nnc_cmd_allow_inplace (C++ function)</a>
 </li>
       <li><a href="api/level-1.html#_CPPv316ccv_nnc_cmd_attrK13ccv_nnc_cmd_tKi">ccv_nnc_cmd_attr (C++ function)</a>
+</li>
+      <li><a href="api/convenience.html#_CPPv316ccv_nnc_cmd_auto">ccv_nnc_cmd_auto (C++ member)</a>
 </li>
       <li><a href="api/level-1.html#_CPPv320ccv_nnc_cmd_autotuneK13ccv_nnc_cmd_tK6size_tK14ccv_nnc_hint_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t">ccv_nnc_cmd_autotune (C++ function)</a>
 </li>
@@ -508,8 +519,6 @@
 </li>
       <li><a href="api/level-3.5.html#_CPPv325ccv_nnc_graph_set_case_ofPC15ccv_nnc_graph_tK20ccv_nnc_graph_exec_tPC15ccv_nnc_graph_tKi">ccv_nnc_graph_set_case_of (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/level-3.5.html#_CPPv330ccv_nnc_graph_set_case_of_exprPC15ccv_nnc_graph_tK20ccv_nnc_graph_exec_t23ccv_nnc_graph_case_of_fPKvKi">ccv_nnc_graph_set_case_of_expr (C++ function)</a>
 </li>
       <li><a href="api/level-2.html#_CPPv330ccv_nnc_graph_set_destinationsPC15ccv_nnc_graph_tPCK20ccv_nnc_graph_exec_tKi">ccv_nnc_graph_set_destinations (C++ function)</a>
@@ -558,6 +567,8 @@
 </li>
       <li><a href="api/level-3.5.html#c.CCV_NNC_MULTIVIEW_PHI">CCV_NNC_MULTIVIEW_PHI (C macro)</a>
 </li>
+      <li><a href="api/convenience.html#_CPPv315ccv_nnc_no_hint">ccv_nnc_no_hint (C++ member)</a>
+</li>
       <li><a href="api/level-1.html#_CPPv328ccv_nnc_stream_context_drainPC24ccv_nnc_stream_context_t">ccv_nnc_stream_context_drain (C++ function)</a>
 </li>
       <li><a href="api/level-1.html#_CPPv334ccv_nnc_stream_context_emit_signalPCK24ccv_nnc_stream_context_tPCK23ccv_nnc_stream_signal_t">ccv_nnc_stream_context_emit_signal (C++ function)</a>
@@ -568,6 +579,8 @@
 </li>
       <li><a href="api/level-1.html#_CPPv326ccv_nnc_stream_context_newKi">ccv_nnc_stream_context_new (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/level-1.html#_CPPv324ccv_nnc_stream_context_t">ccv_nnc_stream_context_t (C++ type)</a>
 </li>
       <li><a href="api/level-1.html#_CPPv327ccv_nnc_stream_context_waitPCK24ccv_nnc_stream_context_t">ccv_nnc_stream_context_wait (C++ function)</a>
@@ -635,6 +648,8 @@
       <li><a href="api/level-3.html#_CPPv325ccv_nnc_tensor_arena_freePC22ccv_nnc_tensor_arena_t">ccv_nnc_tensor_arena_free (C++ function)</a>
 </li>
       <li><a href="api/level-3.html#_CPPv322ccv_nnc_tensor_arena_t">ccv_nnc_tensor_arena_t (C++ type)</a>
+</li>
+      <li><a href="api/convenience.html#_CPPv319ccv_nnc_tensor_auto">ccv_nnc_tensor_auto (C++ member)</a>
 </li>
       <li><a href="api/level-3.html#_CPPv326ccv_nnc_tensor_bind_symbolPCK22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t">ccv_nnc_tensor_bind_symbol (C++ function)</a>
 </li>
@@ -752,6 +767,152 @@
 </li>
       <li><a href="api/level-1.html#c.CCV_STREAM_GET_DEVICE_ID">CCV_STREAM_GET_DEVICE_ID (C macro)</a>
 </li>
+      <li><a href="api/commands.html#c.CMD_ADD_BACKWARD">CMD_ADD_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_ADD_FORWARD">CMD_ADD_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_AVERAGE_POOL_BACKWARD">CMD_AVERAGE_POOL_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_AVERAGE_POOL_FORWARD">CMD_AVERAGE_POOL_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_BATCH_NORM_BACKWARD">CMD_BATCH_NORM_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_BATCH_NORM_FORWARD">CMD_BATCH_NORM_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_CATEGORICAL_CROSSENTROPY_BACKWARD">CMD_CATEGORICAL_CROSSENTROPY_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_CATEGORICAL_CROSSENTROPY_FORWARD">CMD_CATEGORICAL_CROSSENTROPY_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_CONVOLUTION_BACKWARD">CMD_CONVOLUTION_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_CONVOLUTION_FORWARD">CMD_CONVOLUTION_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_CUSTOM_FORWARD">CMD_CUSTOM_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_DATA_TRANSFER_BACKWARD">CMD_DATA_TRANSFER_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_DATA_TRANSFER_FORWARD">CMD_DATA_TRANSFER_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_DROPOUT_BACKWARD">CMD_DROPOUT_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_DROPOUT_FORWARD">CMD_DROPOUT_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWDIV_BACKWARD">CMD_EWDIV_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWDIV_FORWARD">CMD_EWDIV_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWEXP_BACKWARD">CMD_EWEXP_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWEXP_FORWARD">CMD_EWEXP_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWLOG_BACKWARD">CMD_EWLOG_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWLOG_FORWARD">CMD_EWLOG_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWPROD_BACKWARD">CMD_EWPROD_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWPROD_FORWARD">CMD_EWPROD_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWSQRT_BACKWARD">CMD_EWSQRT_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWSQRT_FORWARD">CMD_EWSQRT_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWSUM_BACKWARD">CMD_EWSUM_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_EWSUM_FORWARD">CMD_EWSUM_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_FORMAT_TRANSFORM_BACKWARD">CMD_FORMAT_TRANSFORM_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_FORMAT_TRANSFORM_FORWARD">CMD_FORMAT_TRANSFORM_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_GEMM_BACKWARD">CMD_GEMM_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_GEMM_FORWARD">CMD_GEMM_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_MAX_POOL_BACKWARD">CMD_MAX_POOL_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_MAX_POOL_FORWARD">CMD_MAX_POOL_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_MUL_BACKWARD">CMD_MUL_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_MUL_FORWARD">CMD_MUL_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_NOOP">CMD_NOOP (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_RANDOM_UNIFORM_BACKWARD">CMD_RANDOM_UNIFORM_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_RANDOM_UNIFORM_FORWARD">CMD_RANDOM_UNIFORM_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_REDUCE_MAX_BACKWARD">CMD_REDUCE_MAX_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_REDUCE_MAX_FORWARD">CMD_REDUCE_MAX_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_REDUCE_SUM_BACKWARD">CMD_REDUCE_SUM_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_REDUCE_SUM_FORWARD">CMD_REDUCE_SUM_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_RELU_BACKWARD">CMD_RELU_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_RELU_FORWARD">CMD_RELU_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SCALAR_MUL_BACKWARD">CMD_SCALAR_MUL_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SCALAR_MUL_FORWARD">CMD_SCALAR_MUL_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SET_BACKWARD">CMD_SET_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SET_FORWARD">CMD_SET_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SGD_FORWARD">CMD_SGD_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SOFTMAX_BACKWARD">CMD_SOFTMAX_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SOFTMAX_CROSSENTROPY_BACKWARD">CMD_SOFTMAX_CROSSENTROPY_BACKWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SOFTMAX_CROSSENTROPY_FORWARD">CMD_SOFTMAX_CROSSENTROPY_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/commands.html#c.CMD_SOFTMAX_FORWARD">CMD_SOFTMAX_FORWARD (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.CPU_NUMA_TENSOR_CHWN">CPU_NUMA_TENSOR_CHWN (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.CPU_NUMA_TENSOR_NCHW">CPU_NUMA_TENSOR_NCHW (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.CPU_NUMA_TENSOR_NHWC">CPU_NUMA_TENSOR_NHWC (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.CPU_TENSOR_CHWN">CPU_TENSOR_CHWN (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.CPU_TENSOR_LABEL">CPU_TENSOR_LABEL (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.CPU_TENSOR_NCHW">CPU_TENSOR_NCHW (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.CPU_TENSOR_NHWC">CPU_TENSOR_NHWC (C macro)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.GPU_TENSOR_CHWN">GPU_TENSOR_CHWN (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.GPU_TENSOR_NCHW">GPU_TENSOR_NCHW (C macro)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.GPU_TENSOR_NHWC">GPU_TENSOR_NHWC (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.GRAPH_EXEC_LIST">GRAPH_EXEC_LIST (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.GRAPH_EXEC_SYMBOL_LIST">GRAPH_EXEC_SYMBOL_LIST (C macro)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.HINT">HINT (C macro)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -851,6 +1012,74 @@
       <li><a href="api/level-5.html#_CPPv3N7level_519CCV_CNNP_BATCH_NORME">level_5::CCV_CNNP_BATCH_NORM (C++ enumerator)</a>
 </li>
       <li><a href="api/level-5.html#_CPPv3N7level_516CCV_CNNP_NO_NORME">level_5::CCV_CNNP_NO_NORM (C++ enumerator)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.MODEL_IO_LIST">MODEL_IO_LIST (C macro)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.MODEL_LIST">MODEL_LIST (C macro)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.NO_TENSOR_SYMBOL">NO_TENSOR_SYMBOL (C macro)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.ONE_CPU_NUMA_TENSOR">ONE_CPU_NUMA_TENSOR (C macro)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.ONE_CPU_TENSOR">ONE_CPU_TENSOR (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.ONE_GPU_TENSOR">ONE_GPU_TENSOR (C macro)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.SYMBOLIC_GRAPH_DESTINATIONS">SYMBOLIC_GRAPH_DESTINATIONS (C macro)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.SYMBOLIC_GRAPH_PASSES">SYMBOLIC_GRAPH_PASSES (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.SYMBOLIC_GRAPH_SOURCES">SYMBOLIC_GRAPH_SOURCES (C macro)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.TENSOR_BIND_MAP">TENSOR_BIND_MAP (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.TENSOR_LIST">TENSOR_LIST (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.TENSOR_PARAM_LIST">TENSOR_PARAM_LIST (C macro)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/convenience.html#c.TENSOR_SYMBOL_LIST">TENSOR_SYMBOL_LIST (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.TENSOR_SYMBOL_MAP">TENSOR_SYMBOL_MAP (C macro)</a>
+</li>
+      <li><a href="api/convenience.html#c.TENSOR_VARIABLE_LIST">TENSOR_VARIABLE_LIST (C macro)</a>
 </li>
   </ul></td>
 </tr></table>

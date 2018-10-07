@@ -11,3 +11,5 @@ API Reference
    level-3.5.rst
    level-4.rst
    level-5.rst
+   convenience.rst
+   commands.rst
