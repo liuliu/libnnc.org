@@ -1,6 +1,10 @@
 API Reference
 =============
 
+As stated in the :doc:`/overview`, the API designs of NNC is layered. The API reference here breaks down to different levels corresponding to the :doc:`previous doc </overview>`.
+
+API reference may contain **design comments**, which are short-pages extracted from the source code that give high-level overviews of the design motivations.
+
 .. toctree::
    :maxdepth: 2
 

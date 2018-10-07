@@ -1,6 +1,8 @@
 Technicals
 ==========
 
+These are articles that explain internal implementations of NNC. These will focus on 'why' and 'how to implement' rather than 'how to use' questions.
+
 .. toctree::
    :maxdepth: 2
 
