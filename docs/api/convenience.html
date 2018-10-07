@@ -266,80 +266,86 @@
 <h1>Convenience API<a class="headerlink" href="#convenience-api" title="Permalink to this headline">¶</a></h1>
 <p>NNC provides convenience APIs for its usage. You can use it by simply <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;nnc/ccv_nnc_easy.h&gt;</span></code>. But being convenience API, it is optimized for shorthand coding, and may collide the naming space with others.</p>
 <dl class="member">
+<dt id="_CPPv314ccv_nnc_no_ofs">
+<span id="_CPPv214ccv_nnc_no_ofs"></span><span id="ccv_nnc_no_ofs__iCA"></span><span class="target" id="group__convenience__api_1ga49ac72773b934e1df987e6108d411f0c"></span><em class="property">const</em> int <code class="descname">ccv_nnc_no_ofs</code>[<code class="descname">CCV_NNC_MAX_DIM_ALLOC</code>]<a class="headerlink" href="#_CPPv314ccv_nnc_no_ofs" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Offsets all zero. </p>
+</dd></dl>
+
+<dl class="member">
 <dt id="_CPPv315ccv_nnc_no_hint">
-<span id="_CPPv215ccv_nnc_no_hint"></span><span id="ccv_nnc_no_hint__ccv_nnc_hint_tC"></span><span class="target" id="group__easy__methods_1ga26f36bb4b3dabdcb0329127d24d2e859"></span><em class="property">const</em> <a class="reference internal" href="level-1.html#_CPPv314ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <code class="descname">ccv_nnc_no_hint</code><a class="headerlink" href="#_CPPv315ccv_nnc_no_hint" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv215ccv_nnc_no_hint"></span><span id="ccv_nnc_no_hint__ccv_nnc_hint_tC"></span><span class="target" id="group__convenience__api_1ga26f36bb4b3dabdcb0329127d24d2e859"></span><em class="property">const</em> <a class="reference internal" href="level-1.html#_CPPv314ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <code class="descname">ccv_nnc_no_hint</code><a class="headerlink" href="#_CPPv315ccv_nnc_no_hint" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>No hint available. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv316ccv_nnc_cmd_auto">
-<span id="_CPPv216ccv_nnc_cmd_auto"></span><span id="ccv_nnc_cmd_auto__ccv_nnc_cmd_param_tC"></span><span class="target" id="group__easy__methods_1ga5ac39dc28a9dce9eac38e566fb7bc23a"></span><em class="property">const</em> <a class="reference internal" href="level-1.html#_CPPv319ccv_nnc_cmd_param_t" title="ccv_nnc_cmd_param_t">ccv_nnc_cmd_param_t</a> <code class="descname">ccv_nnc_cmd_auto</code><a class="headerlink" href="#_CPPv316ccv_nnc_cmd_auto" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv216ccv_nnc_cmd_auto"></span><span id="ccv_nnc_cmd_auto__ccv_nnc_cmd_param_tC"></span><span class="target" id="group__convenience__api_1ga5ac39dc28a9dce9eac38e566fb7bc23a"></span><em class="property">const</em> <a class="reference internal" href="level-1.html#_CPPv319ccv_nnc_cmd_param_t" title="ccv_nnc_cmd_param_t">ccv_nnc_cmd_param_t</a> <code class="descname">ccv_nnc_cmd_auto</code><a class="headerlink" href="#_CPPv316ccv_nnc_cmd_auto" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Derive the command parameters automatically if possible. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv319ccv_nnc_tensor_auto">
-<span id="_CPPv219ccv_nnc_tensor_auto"></span><span id="ccv_nnc_tensor_auto__ccv_nnc_tensor_param_tC"></span><span class="target" id="group__easy__methods_1ga82f06cb009d782e6501e81cad04095ec"></span><em class="property">const</em> ccv_nnc_tensor_param_t <code class="descname">ccv_nnc_tensor_auto</code><a class="headerlink" href="#_CPPv319ccv_nnc_tensor_auto" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv219ccv_nnc_tensor_auto"></span><span id="ccv_nnc_tensor_auto__ccv_nnc_tensor_param_tC"></span><span class="target" id="group__convenience__api_1ga82f06cb009d782e6501e81cad04095ec"></span><em class="property">const</em> ccv_nnc_tensor_param_t <code class="descname">ccv_nnc_tensor_auto</code><a class="headerlink" href="#_CPPv319ccv_nnc_tensor_auto" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Derive the tensor parameters automatically if possible. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_LIST">
-<span class="target" id="group__easy__methods_1gab527f4ea3c43a7ccd033bc7c997ff251"></span><code class="descname">TENSOR_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_LIST" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gab527f4ea3c43a7ccd033bc7c997ff251"></span><code class="descname">TENSOR_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_LIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of tensors to NNC functions that accepts (tensor array, tensor array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_PARAM_LIST">
-<span class="target" id="group__easy__methods_1gadcb47824ccaf5ed6fba043a367dffda4"></span><code class="descname">TENSOR_PARAM_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_PARAM_LIST" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gadcb47824ccaf5ed6fba043a367dffda4"></span><code class="descname">TENSOR_PARAM_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_PARAM_LIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of tensor parameters to NNC functions that accepts (parameter array, parameter array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.NO_TENSOR_SYMBOL">
-<span class="target" id="group__easy__methods_1gae4f9a9cbabb541ae6848fa625e8cafbe"></span><code class="descname">NO_TENSOR_SYMBOL</code><a class="headerlink" href="#c.NO_TENSOR_SYMBOL" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gae4f9a9cbabb541ae6848fa625e8cafbe"></span><code class="descname">NO_TENSOR_SYMBOL</code><a class="headerlink" href="#c.NO_TENSOR_SYMBOL" title="Permalink to this definition">¶</a></dt>
 <dd><p>This represents a tensor symbol that is empty (tensor = nil) </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_SYMBOL_LIST">
-<span class="target" id="group__easy__methods_1gadfa87c57085dbb5e92e85b36d6604fe1"></span><code class="descname">TENSOR_SYMBOL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_SYMBOL_LIST" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gadfa87c57085dbb5e92e85b36d6604fe1"></span><code class="descname">TENSOR_SYMBOL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_SYMBOL_LIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of tensor symbols to NNC functions that accepts (tensor symbol array, tensor symbol array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_VARIABLE_LIST">
-<span class="target" id="group__easy__methods_1ga08ced0db227d44c55cb899dd6042e692"></span><code class="descname">TENSOR_VARIABLE_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_VARIABLE_LIST" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga08ced0db227d44c55cb899dd6042e692"></span><code class="descname">TENSOR_VARIABLE_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_VARIABLE_LIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of tensor variables to NNC functions that accepts (tensor variable array, tensor variable array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_BIND_MAP">
-<span class="target" id="group__easy__methods_1gaf8791291825c117bac3bdcc6df8de707"></span><code class="descname">TENSOR_BIND_MAP</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_BIND_MAP" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gaf8791291825c117bac3bdcc6df8de707"></span><code class="descname">TENSOR_BIND_MAP</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_BIND_MAP" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of tensor bindings to NNC functions that accepts (tensor binding array, tensor binding array size). This method effective gives two parameters as one. Since tensor binding requires two: symbol and a tensor, you should use this like: TENSOR_BIND_MAP(KV(symbol1, tensor1), KV(symbol2, tensor2)). </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_SYMBOL_MAP">
-<span class="target" id="group__easy__methods_1ga80fb960b0020b8279788917bba87ce7d"></span><code class="descname">TENSOR_SYMBOL_MAP</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_SYMBOL_MAP" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga80fb960b0020b8279788917bba87ce7d"></span><code class="descname">TENSOR_SYMBOL_MAP</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_SYMBOL_MAP" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of tensor symbol pairs to NNC functions that accepts (tensor symbol pair array, tensor symbol pair array size). This method effective gives two parameters as one. Since tensor symbol pair requires two: source symbol and destination symbol, you should use this like: TENSOR_SYMBOL_MAP(KV(symbol1, symbol2), KV(symbol3, symbol4)). </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.GRAPH_EXEC_LIST">
-<span class="target" id="group__easy__methods_1ga5dbc9d75fdce23e590064cfce218df7a"></span><code class="descname">GRAPH_EXEC_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.GRAPH_EXEC_LIST" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga5dbc9d75fdce23e590064cfce218df7a"></span><code class="descname">GRAPH_EXEC_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.GRAPH_EXEC_LIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of execution nodes to NNC functions that accepts (execution node array, execution node array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.GRAPH_EXEC_SYMBOL_LIST">
-<span class="target" id="group__easy__methods_1ga77d4dade173b32c1755beb1b0a0f7517"></span><code class="descname">GRAPH_EXEC_SYMBOL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.GRAPH_EXEC_SYMBOL_LIST" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga77d4dade173b32c1755beb1b0a0f7517"></span><code class="descname">GRAPH_EXEC_SYMBOL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.GRAPH_EXEC_SYMBOL_LIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of execution node symbols to NNC functions that accepts (execution node symbol array, execution node symbol array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.SYMBOLIC_GRAPH_SOURCES">
-<span class="target" id="group__easy__methods_1ga4f059edd5cda1aab1edf79927af5851c"></span><code class="descname">SYMBOLIC_GRAPH_SOURCES</code><span class="sig-paren">(</span>x<span class="sig-paren">)</span><a class="headerlink" href="#c.SYMBOLIC_GRAPH_SOURCES" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga4f059edd5cda1aab1edf79927af5851c"></span><code class="descname">SYMBOLIC_GRAPH_SOURCES</code><span class="sig-paren">(</span>x<span class="sig-paren">)</span><a class="headerlink" href="#c.SYMBOLIC_GRAPH_SOURCES" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass both default sources and default sources size to function that accepts (sources, source size) <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
@@ -352,7 +358,7 @@
 
 <dl class="macro">
 <dt id="c.SYMBOLIC_GRAPH_DESTINATIONS">
-<span class="target" id="group__easy__methods_1ga7751e21ed203c5c74a3341f2de8a514c"></span><code class="descname">SYMBOLIC_GRAPH_DESTINATIONS</code><span class="sig-paren">(</span>x<span class="sig-paren">)</span><a class="headerlink" href="#c.SYMBOLIC_GRAPH_DESTINATIONS" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga7751e21ed203c5c74a3341f2de8a514c"></span><code class="descname">SYMBOLIC_GRAPH_DESTINATIONS</code><span class="sig-paren">(</span>x<span class="sig-paren">)</span><a class="headerlink" href="#c.SYMBOLIC_GRAPH_DESTINATIONS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass both default destinations and default destinations size to function that accepts (destinations, destination size) <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
@@ -365,90 +371,95 @@
 
 <dl class="macro">
 <dt id="c.SYMBOLIC_GRAPH_PASSES">
-<span class="target" id="group__easy__methods_1gaeb03861f31dbfa406db4d2976f4e64b9"></span><code class="descname">SYMBOLIC_GRAPH_PASSES</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.SYMBOLIC_GRAPH_PASSES" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gaeb03861f31dbfa406db4d2976f4e64b9"></span><code class="descname">SYMBOLIC_GRAPH_PASSES</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.SYMBOLIC_GRAPH_PASSES" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of simplification passes to NNC functions that accepts (pass array, pass array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.MODEL_LIST">
-<span class="target" id="group__easy__methods_1ga2ef8280464eb1bcb716926f1f35e9c28"></span><code class="descname">MODEL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.MODEL_LIST" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga2ef8280464eb1bcb716926f1f35e9c28"></span><code class="descname">MODEL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.MODEL_LIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of CNNP models to NNC functions that accepts (model array, model array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.MODEL_IO_LIST">
-<span class="target" id="group__easy__methods_1ga12e7c6b54641ab06612acb00c91f5bc8"></span><code class="descname">MODEL_IO_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.MODEL_IO_LIST" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga12e7c6b54641ab06612acb00c91f5bc8"></span><code class="descname">MODEL_IO_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.MODEL_IO_LIST" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pass a list of CNNP model IOs to NNC functions that accepts (model IO array, model IO array size). This method effective gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
+<dt id="c.TRAVERSE_FULL">
+<span class="target" id="group__convenience__api_1gab3dcb26024cde7d1a4a75d07a053f3b9"></span><code class="descname">TRAVERSE_FULL</code><a class="headerlink" href="#c.TRAVERSE_FULL" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
 <dt id="c.CPU_NUMA_TENSOR_NHWC">
-<span class="target" id="group__easy__methods_1ga654d94aa9b44bacfae93140b18ccff76"></span><code class="descname">CPU_NUMA_TENSOR_NHWC</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_NUMA_TENSOR_NHWC" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga654d94aa9b44bacfae93140b18ccff76"></span><code class="descname">CPU_NUMA_TENSOR_NHWC</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_NUMA_TENSOR_NHWC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.CPU_NUMA_TENSOR_NCHW">
-<span class="target" id="group__easy__methods_1ga35deee82643c94b944bb8c28506283be"></span><code class="descname">CPU_NUMA_TENSOR_NCHW</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_NUMA_TENSOR_NCHW" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga35deee82643c94b944bb8c28506283be"></span><code class="descname">CPU_NUMA_TENSOR_NCHW</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_NUMA_TENSOR_NCHW" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.CPU_NUMA_TENSOR_CHWN">
-<span class="target" id="group__easy__methods_1gab0549b11ba6dde5bd5471906f647148d"></span><code class="descname">CPU_NUMA_TENSOR_CHWN</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_NUMA_TENSOR_CHWN" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gab0549b11ba6dde5bd5471906f647148d"></span><code class="descname">CPU_NUMA_TENSOR_CHWN</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_NUMA_TENSOR_CHWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.ONE_CPU_NUMA_TENSOR">
-<span class="target" id="group__easy__methods_1ga32e3f540ca3538e6947a23114375b57e"></span><code class="descname">ONE_CPU_NUMA_TENSOR</code><a class="headerlink" href="#c.ONE_CPU_NUMA_TENSOR" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga32e3f540ca3538e6947a23114375b57e"></span><code class="descname">ONE_CPU_NUMA_TENSOR</code><a class="headerlink" href="#c.ONE_CPU_NUMA_TENSOR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.CPU_TENSOR_NHWC">
-<span class="target" id="group__easy__methods_1gafdc8df93081f560bfbab2fc766968d90"></span><code class="descname">CPU_TENSOR_NHWC</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_TENSOR_NHWC" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gafdc8df93081f560bfbab2fc766968d90"></span><code class="descname">CPU_TENSOR_NHWC</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_TENSOR_NHWC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.CPU_TENSOR_NCHW">
-<span class="target" id="group__easy__methods_1gad0cf5efbbe00357296a14d8632d31533"></span><code class="descname">CPU_TENSOR_NCHW</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_TENSOR_NCHW" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gad0cf5efbbe00357296a14d8632d31533"></span><code class="descname">CPU_TENSOR_NCHW</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_TENSOR_NCHW" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.CPU_TENSOR_CHWN">
-<span class="target" id="group__easy__methods_1ga2ce584943280d80c7f8876b95b193591"></span><code class="descname">CPU_TENSOR_CHWN</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_TENSOR_CHWN" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga2ce584943280d80c7f8876b95b193591"></span><code class="descname">CPU_TENSOR_CHWN</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_TENSOR_CHWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.ONE_CPU_TENSOR">
-<span class="target" id="group__easy__methods_1ga2d2915173015ea1f45f5ec941773c6a1"></span><code class="descname">ONE_CPU_TENSOR</code><a class="headerlink" href="#c.ONE_CPU_TENSOR" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga2d2915173015ea1f45f5ec941773c6a1"></span><code class="descname">ONE_CPU_TENSOR</code><a class="headerlink" href="#c.ONE_CPU_TENSOR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.CPU_TENSOR_LABEL">
-<span class="target" id="group__easy__methods_1gaa3c2bf13699eeec7a3ff60f6d222f015"></span><code class="descname">CPU_TENSOR_LABEL</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_TENSOR_LABEL" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gaa3c2bf13699eeec7a3ff60f6d222f015"></span><code class="descname">CPU_TENSOR_LABEL</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.CPU_TENSOR_LABEL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.GPU_TENSOR_NHWC">
-<span class="target" id="group__easy__methods_1gaa9b248ec0ce60043c5c4c67818cd9615"></span><code class="descname">GPU_TENSOR_NHWC</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.GPU_TENSOR_NHWC" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gaa9b248ec0ce60043c5c4c67818cd9615"></span><code class="descname">GPU_TENSOR_NHWC</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.GPU_TENSOR_NHWC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.GPU_TENSOR_NCHW">
-<span class="target" id="group__easy__methods_1gaa1a6085853b2319835cb0b5a751bdc86"></span><code class="descname">GPU_TENSOR_NCHW</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.GPU_TENSOR_NCHW" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gaa1a6085853b2319835cb0b5a751bdc86"></span><code class="descname">GPU_TENSOR_NCHW</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.GPU_TENSOR_NCHW" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.GPU_TENSOR_CHWN">
-<span class="target" id="group__easy__methods_1ga140972143ac8c2084a321749df39add2"></span><code class="descname">GPU_TENSOR_CHWN</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.GPU_TENSOR_CHWN" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga140972143ac8c2084a321749df39add2"></span><code class="descname">GPU_TENSOR_CHWN</code><span class="sig-paren">(</span>device_id, ...<span class="sig-paren">)</span><a class="headerlink" href="#c.GPU_TENSOR_CHWN" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.ONE_GPU_TENSOR">
-<span class="target" id="group__easy__methods_1ga7ed8cff5da25bbe013cb8918d88de407"></span><code class="descname">ONE_GPU_TENSOR</code><a class="headerlink" href="#c.ONE_GPU_TENSOR" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1ga7ed8cff5da25bbe013cb8918d88de407"></span><code class="descname">ONE_GPU_TENSOR</code><a class="headerlink" href="#c.ONE_GPU_TENSOR" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
 <dt id="c.HINT">
-<span class="target" id="group__easy__methods_1gafae211632d625e934d381d792f203bd1"></span><code class="descname">HINT</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.HINT" title="Permalink to this definition">¶</a></dt>
+<span class="target" id="group__convenience__api_1gafae211632d625e934d381d792f203bd1"></span><code class="descname">HINT</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.HINT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simpler method to create hint. HINT(stride), HINT(stride, border), HINT(stride, border begin, border end) </p>
 </dd></dl>
 
