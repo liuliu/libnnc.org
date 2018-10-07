@@ -283,10 +283,9 @@
 <dl class="function">
 <dt id="_CPPv325ccv_nnc_dynamic_graph_newv">
 <span id="_CPPv225ccv_nnc_dynamic_graph_newv"></span><span id="ccv_nnc_dynamic_graph_new__void"></span><span class="target" id="group__level__4_1gaedfe59471f1a8cf4732b3718613698ef"></span><code class="descname">ccv_nnc_dynamic_graph_new</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv325ccv_nnc_dynamic_graph_newv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Create a dynamic graph. <p>Level-4 API </p>
-<dl class="docutils">
+<dd><p>Create a dynamic graph. <dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>A newly created dynamic graph.</dd>
+<dd>A newly created dynamic graph. </dd>
 </dl>
 </p>
 </dd></dl>
@@ -364,8 +363,7 @@
 <dl class="function">
 <dt id="_CPPv330ccv_nnc_dynamic_graph_backwardPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tK25ccv_nnc_tensor_variable_tPCK25ccv_nnc_tensor_variable_tKiPC25ccv_nnc_tensor_variable_tKi">
 <span id="_CPPv230ccv_nnc_dynamic_graph_backwardPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tK25ccv_nnc_tensor_variable_tPCK25ccv_nnc_tensor_variable_tKiPC25ccv_nnc_tensor_variable_tKi"></span><span id="ccv_nnc_dynamic_graph_backward__ccv_nnc_dynamic_graph_tPC.ccv_nnc_tensor_variable_tC.ccv_nnc_tensor_variable_tC.ccv_nnc_tensor_variable_tCPC.iC.ccv_nnc_tensor_variable_tPC.iC"></span><span class="target" id="group__level__4_1ga45360095300de4d3e652c09cde1f40db"></span>void <code class="descname">ccv_nnc_dynamic_graph_backward</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv323ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>dynamic_graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv325ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> <em>f_variable</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv325ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> <em>df_optional</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv325ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <a class="reference internal" href="#_CPPv325ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv330ccv_nnc_dynamic_graph_backwardPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tK25ccv_nnc_tensor_variable_tPCK25ccv_nnc_tensor_variable_tKiPC25ccv_nnc_tensor_variable_tKi" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Compute the gradient of given tensor, with respect to the f. Thus, df / dt. <p>Level-4.5 API </p>
-<dl class="docutils">
+<dd><p>Compute the gradient of given tensor, with respect to the f. Thus, df / dt. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">dynamic_graph</span></code>: The dynamic graph. </li>
@@ -374,7 +372,7 @@
 <li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The input variables. </li>
 <li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the input variables array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The gradients with respect to the inputs. </li>
-<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the outputs array. Should be equal to the input_size.</li>
+<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the outputs array. Should be equal to the input_size. </li>
 </ul>
 </dd>
 </dl>
@@ -384,8 +382,7 @@
 <dl class="function">
 <dt id="_CPPv330ccv_nnc_dynamic_graph_minimizePC23ccv_nnc_dynamic_graph_tK13ccv_nnc_cmd_tPCK25ccv_nnc_tensor_variable_tKiPCK25ccv_nnc_tensor_variable_tPC25ccv_nnc_tensor_variable_tKiPC25ccv_nnc_tensor_variable_t">
 <span id="_CPPv230ccv_nnc_dynamic_graph_minimizePC23ccv_nnc_dynamic_graph_tK13ccv_nnc_cmd_tPCK25ccv_nnc_tensor_variable_tKiPCK25ccv_nnc_tensor_variable_tPC25ccv_nnc_tensor_variable_tKiPC25ccv_nnc_tensor_variable_t"></span><span id="ccv_nnc_dynamic_graph_minimize__ccv_nnc_dynamic_graph_tPC.ccv_nnc_cmd_tC.ccv_nnc_tensor_variable_tCPC.iC.ccv_nnc_tensor_variable_tCPC.ccv_nnc_tensor_variable_tPC.iC.ccv_nnc_tensor_variable_tPC"></span><span class="target" id="group__level__4_1ga41bc63b77b8cfb60ab21189b6a76decd"></span>void <code class="descname">ccv_nnc_dynamic_graph_minimize</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv323ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>dynamic_graph</em>, <em class="property">const</em> <a class="reference internal" href="level-1.html#_CPPv313ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv325ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> *<em class="property">const</em> <em>losses</em>, <em class="property">const</em> int <em>loss_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv325ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> *<em class="property">const</em> <em>dlosses_optional</em>, <a class="reference internal" href="#_CPPv325ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> *<em class="property">const</em> <em>parameters</em>, <em class="property">const</em> int <em>parameter_size</em>, <a class="reference internal" href="#_CPPv325ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> *<em class="property">const</em> <em>saved_aux</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv330ccv_nnc_dynamic_graph_minimizePC23ccv_nnc_dynamic_graph_tK13ccv_nnc_cmd_tPCK25ccv_nnc_tensor_variable_tKiPCK25ccv_nnc_tensor_variable_tPC25ccv_nnc_tensor_variable_tKiPC25ccv_nnc_tensor_variable_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Apply one step of minimization (most likely, a gradient descent) to the parameters with a given loss (or losses). <p>Level-4.5 API </p>
-<dl class="docutils">
+<dd><p>Apply one step of minimization (most likely, a gradient descent) to the parameters with a given loss (or losses). <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">dynamic_graph</span></code>: The dynamic graph. </li>
@@ -395,7 +392,7 @@
 <li><code class="docutils literal notranslate"><span class="pre">dlosses_optional</span></code>: The custom gradient for losses. If not provided, will default to 1. </li>
 <li><code class="docutils literal notranslate"><span class="pre">parameters</span></code>: The parameters to update. </li>
 <li><code class="docutils literal notranslate"><span class="pre">parameter_size</span></code>: The size of parameters array. </li>
-<li><code class="docutils literal notranslate"><span class="pre">saved_aux</span></code>: The aux variables to faciliate the minimizer. See ccv_nnc_minimizer_saved_aux_size.</li>
+<li><code class="docutils literal notranslate"><span class="pre">saved_aux</span></code>: The aux variables to faciliate the minimizer. See ccv_nnc_minimizer_saved_aux_size. </li>
 </ul>
 </dd>
 </dl>
