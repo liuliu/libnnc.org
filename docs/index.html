@@ -268,24 +268,29 @@
 <h1>NNC: Neural Network Collection<a class="headerlink" href="#nnc-neural-network-collection" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="a-proof-of-concept">
-<h2>A Proof Of Concept<a class="headerlink" href="#a-proof-of-concept" title="Permalink to this headline">¶</a></h2>
-<p>NNC is a tiny deep learning framework I was working on for the past three years. Before you close the page on <em>yet another deep learning framework</em>. let me quickly summarize why: starting from scratch enables me to toy with some new ideas on the implementation, and some of these ideas, after implemented, has some interesting properties.</p>
-<p>After three years, and given the fresh new takes on both APIs and the implementation, I am increasingly convinced this will also be a good foundation to implement high-level deep learning APIs in any host languages (Ruby, Python, Java, Kotlin, Swift etc.).</p>
-<p>What are these fresh new takes? Well, before we jump into that, let’s start with some not-so-new ideas inside NNC: Like every other deep learning framework, NNC operates dataflow graphs. Data dependencies on the graph are explicitly specified. NNC also keeps the separation of symbolic dataflow graphs v.s. concrete dataflow graphs. Again, like every other deep learning framework, NNC supports dynamic execution, which is called dynamic graph in NNC.</p>
-<p>With all that get out of the way, the interesting bits:</p>
+<p>At the end of 2014, when I was looking at these new computer vision models with complex neural network architectures, it became apparently clear what <a class="reference external" href="http://libccv.org">ccv</a> has implemented as one of many computer vision algorithms will be the only algorithm matters in the future. More importantly, what I have in <a class="reference external" href="http://libccv.org">ccv</a> is a early attempt, but ill-equipped to support these advanced architectures. These is no multi-way networks, no customizable losses, and no automatic differentiation.</p>
+<p>Then, NNC started exactly as <em>yet another deep learning framework</em>. By starting from scratch enables me to toy with some new ideas on the implementation, and some of these ideas, after implemented, has some interesting properties. After 4 years, and given the fresh new takes on both APIs and the implementation, I am increasingly convinced this will be a good foundation to implement high-level deep learning APIs in any host languages (Ruby, Python, Java, Kotlin, Swift etc.).</p>
+<p>Like every other deep learning framework, NNC operates dataflow graphs. Data dependencies on the graph are explicitly specified. NNC also keeps the separation of symbolic dataflow graphs versus concrete dataflow graphs. Again, like every other deep learning framework, NNC supports dynamic execution, which is called dynamic graph in NNC.</p>
+<p>There are some unique interesting bits:</p>
 <blockquote>
 <div><ul class="simple">
 <li>NNC supports control flows, with a very specific while loop construct and multi-way branch construct;</li>
 <li>NNC implements a sophisticated <a class="reference internal" href="tech/nnc-alloc.html"><span class="doc">tensor allocation algorithm</span></a> that treats tensors as a region of memory, which enables tensor partial reuse;</li>
 <li>The above allocation algorithm handles control flows, eliminates data transfers for while loop, and minimizes data transfers for branching;</li>
 <li><a class="reference internal" href="tech/nnc-dy.html"><span class="doc">Dynamic execution</span></a> in NNC is implemented on top of its static graph counterpart, thus, all optimization passes available for static graph can be applied when doing automatic differentiation in the dynamic execution mode;</li>
-<li>Tensors used during the dynamic execution can be reclaimed, there is no explicit tape session or <code class="docutils literal notranslate"><span class="pre">requires_grad</span></code> flag;</li>
+<li>Because the dataflow graph is fully specified, it can be <a class="reference internal" href="tech/nnc-schd.html"><span class="doc">statically scheduled</span></a> to execute in parallel on the hardware trivially, with all the control flows in place;</li>
+<li>A <a class="reference external" href="https://keras.io">Keras</a>-like interface is implemented, making high-level deep learning concepts accessible through C;</li>
+<li>Clear and concise <a class="reference internal" href="api/index.html"><span class="doc">C interface</span></a> enables integrations beyond Python for full-range of deep learning framework functionalities.</li>
 </ul>
 </div></blockquote>
 <p>Over the next a few months, I will write more about this. There are still tremendous amount of work ahead for me to get to a point of release.</p>
-<p><a class="reference internal" href="api/index.html"><span class="doc">API Reference</span></a>.</p>
-</div>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference internal" href="overview.html"><span class="doc">Overview</span></a></li>
+<li><a class="reference internal" href="tech/index.html"><span class="doc">Technicals</span></a></li>
+<li><a class="reference internal" href="api/index.html"><span class="doc">API Reference</span></a></li>
+</ul>
+</div></blockquote>
 </div>
 
 
