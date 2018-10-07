@@ -86,19 +86,19 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../docs/nnc.html">NNC: Neural Network Collection</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#what-s-nnc">What’s NNC?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#tensors-commands-and-streams">1. Tensors, Commands and Streams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#computation-graph">2. Computation Graph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#symbolic-graph">3. Symbolic Graph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#dynamic-graph">4. Dynamic Graph</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#common-neural-network-primitives">5. Common Neural Network Primitives</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../docs/nnc.html#supplementary-materials">Supplementary Materials</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#toll-free-bridging">Toll-Free Bridging</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#automatic-differentiation">Automatic Differentiation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../docs/nnc.html#limits-and-constraints">Limits and Constraints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#what-s-nnc">What’s NNC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#tensors-commands-and-streams">1. Tensors, Commands and Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#computation-graph">2. Computation Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#symbolic-graph">3. Symbolic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#dynamic-graph">4. Dynamic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#common-neural-network-primitives">5. Common Neural Network Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#supplementary-materials">Supplementary Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#toll-free-bridging">Toll-Free Bridging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview.html#limits-and-constraints">Limits and Constraints</a></li>
 </ul>
 </li>
 </ul>
@@ -297,13 +297,13 @@
 <dl class="macro">
 <dt id="c.TENSOR_LIST">
 <span class="target" id="group__convenience__api_1gab527f4ea3c43a7ccd033bc7c997ff251"></span><code class="descname">TENSOR_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_LIST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of tensors to NNC functions that accepts (tensor array, tensor array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of tensors to NNC functions that accepts (tensor array, tensor array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_PARAM_LIST">
 <span class="target" id="group__convenience__api_1gadcb47824ccaf5ed6fba043a367dffda4"></span><code class="descname">TENSOR_PARAM_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_PARAM_LIST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of tensor parameters to NNC functions that accepts (parameter array, parameter array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of tensor parameters to NNC functions that accepts (parameter array, parameter array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
@@ -315,37 +315,37 @@
 <dl class="macro">
 <dt id="c.TENSOR_SYMBOL_LIST">
 <span class="target" id="group__convenience__api_1gadfa87c57085dbb5e92e85b36d6604fe1"></span><code class="descname">TENSOR_SYMBOL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_SYMBOL_LIST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of tensor symbols to NNC functions that accepts (tensor symbol array, tensor symbol array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of tensor symbols to NNC functions that accepts (tensor symbol array, tensor symbol array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_VARIABLE_LIST">
 <span class="target" id="group__convenience__api_1ga08ced0db227d44c55cb899dd6042e692"></span><code class="descname">TENSOR_VARIABLE_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_VARIABLE_LIST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of tensor variables to NNC functions that accepts (tensor variable array, tensor variable array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of tensor variables to NNC functions that accepts (tensor variable array, tensor variable array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_BIND_MAP">
 <span class="target" id="group__convenience__api_1gaf8791291825c117bac3bdcc6df8de707"></span><code class="descname">TENSOR_BIND_MAP</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_BIND_MAP" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of tensor bindings to NNC functions that accepts (tensor binding array, tensor binding array size). This method effective gives two parameters as one. Since tensor binding requires two: symbol and a tensor, you should use this like: TENSOR_BIND_MAP(KV(symbol1, tensor1), KV(symbol2, tensor2)). </p>
+<dd><p>Pass a list of tensor bindings to NNC functions that accepts (tensor binding array, tensor binding array size). This method effectively gives two parameters as one. Since tensor binding requires two: symbol and a tensor, you should use this like: TENSOR_BIND_MAP(KV(symbol1, tensor1), KV(symbol2, tensor2)). </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.TENSOR_SYMBOL_MAP">
 <span class="target" id="group__convenience__api_1ga80fb960b0020b8279788917bba87ce7d"></span><code class="descname">TENSOR_SYMBOL_MAP</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.TENSOR_SYMBOL_MAP" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of tensor symbol pairs to NNC functions that accepts (tensor symbol pair array, tensor symbol pair array size). This method effective gives two parameters as one. Since tensor symbol pair requires two: source symbol and destination symbol, you should use this like: TENSOR_SYMBOL_MAP(KV(symbol1, symbol2), KV(symbol3, symbol4)). </p>
+<dd><p>Pass a list of tensor symbol pairs to NNC functions that accepts (tensor symbol pair array, tensor symbol pair array size). This method effectively gives two parameters as one. Since tensor symbol pair requires two: source symbol and destination symbol, you should use this like: TENSOR_SYMBOL_MAP(KV(symbol1, symbol2), KV(symbol3, symbol4)). </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.GRAPH_EXEC_LIST">
 <span class="target" id="group__convenience__api_1ga5dbc9d75fdce23e590064cfce218df7a"></span><code class="descname">GRAPH_EXEC_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.GRAPH_EXEC_LIST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of execution nodes to NNC functions that accepts (execution node array, execution node array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of execution nodes to NNC functions that accepts (execution node array, execution node array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.GRAPH_EXEC_SYMBOL_LIST">
 <span class="target" id="group__convenience__api_1ga77d4dade173b32c1755beb1b0a0f7517"></span><code class="descname">GRAPH_EXEC_SYMBOL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.GRAPH_EXEC_SYMBOL_LIST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of execution node symbols to NNC functions that accepts (execution node symbol array, execution node symbol array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of execution node symbols to NNC functions that accepts (execution node symbol array, execution node symbol array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
@@ -377,19 +377,19 @@
 <dl class="macro">
 <dt id="c.SYMBOLIC_GRAPH_PASSES">
 <span class="target" id="group__convenience__api_1gaeb03861f31dbfa406db4d2976f4e64b9"></span><code class="descname">SYMBOLIC_GRAPH_PASSES</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.SYMBOLIC_GRAPH_PASSES" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of simplification passes to NNC functions that accepts (pass array, pass array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of simplification passes to NNC functions that accepts (pass array, pass array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.MODEL_LIST">
 <span class="target" id="group__convenience__api_1ga2ef8280464eb1bcb716926f1f35e9c28"></span><code class="descname">MODEL_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.MODEL_LIST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of CNNP models to NNC functions that accepts (model array, model array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of CNNP models to NNC functions that accepts (model array, model array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">
 <dt id="c.MODEL_IO_LIST">
 <span class="target" id="group__convenience__api_1ga12e7c6b54641ab06612acb00c91f5bc8"></span><code class="descname">MODEL_IO_LIST</code><span class="sig-paren">(</span>...<span class="sig-paren">)</span><a class="headerlink" href="#c.MODEL_IO_LIST" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pass a list of CNNP model IOs to NNC functions that accepts (model IO array, model IO array size). This method effective gives two parameters as one. </p>
+<dd><p>Pass a list of CNNP model IOs to NNC functions that accepts (model IO array, model IO array size). This method effectively gives two parameters as one. </p>
 </dd></dl>
 
 <dl class="macro">

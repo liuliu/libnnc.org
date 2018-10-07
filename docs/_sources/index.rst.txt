@@ -9,7 +9,7 @@ NNC: Neural Network Collection
 .. toctree::
    :maxdepth: 3
 
-   docs/nnc.rst
+   overview.rst
    tech/index.rst
    api/index.rst
 

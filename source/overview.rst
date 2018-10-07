@@ -1,5 +1,5 @@
-NNC: Neural Network Collection
-==============================
+Overview
+========
 
 What's NNC?
 -----------
