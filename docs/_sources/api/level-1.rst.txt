@@ -3,7 +3,7 @@ Level 1 API
 .. toctree::
    :maxdepth: 2
    :glob:
-   :caption: Technical Articles
+   :caption: Design Comments
 
    level_1/*
 
