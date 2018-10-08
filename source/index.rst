@@ -14,7 +14,7 @@ NNC: Neural Network Collection
    tech/index.rst
    api/index.rst
 
-At the end of 2014, when I was looking at these new computer vision models with complex neural network architectures, it became apparently clear what `ccv <http://libccv.org>`_ has implemented as one of many computer vision algorithms will be the only algorithm matters in the future. More importantly, what I have in `ccv <http://libccv.org>`_ is a early attempt, but ill-equipped to support these advanced architectures. These is no multi-way networks, no customizable losses, and no automatic differentiation.
+At the end of 2014, when I was looking at these new computer vision models with complex neural network architectures, it became apparently clear what `ccv <http://libccv.org>`_ has implemented (the neural network) as one of many computer vision algorithms will be the only algorithm matters in the future. More importantly, what I have in `ccv <http://libccv.org>`_ is a early attempt, but ill-equipped to support these advanced architectures. There is no multi-way networks, no customizable losses, and no automatic differentiation.
 
 Then, NNC started exactly as *yet another deep learning framework*. By starting from scratch enables me to toy with some new ideas on the implementation, and some of these ideas, after implemented, has some interesting properties. After 4 years, and given the fresh new takes on both APIs and the implementation, I am increasingly convinced this will be a good foundation to implement high-level deep learning APIs in any host languages (Ruby, Python, Java, Kotlin, Swift etc.).
 
