@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Construct “switch” control structure in symbolic graph &mdash; nnc, a deep learning framework from ccv</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex/" />
+    <link rel="search" title="Search" href="../../../search/" />
+    <link rel="next" title="Symbolic graph simplification" href="../group__level__3__5__simplify_symbolic_simplify/" />
+    <link rel="prev" title="Level 3.5 API" href="../../level-3.5/" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../">
+          
+
+          
+            
+            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a deep learning framework from ccv
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/#what-s-nnc">What’s NNC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/#tensors-commands-and-streams">1. Tensors, Commands and Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/#computation-graph">2. Computation Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/#symbolic-graph">3. Symbolic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/#dynamic-graph">4. Dynamic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/#common-neural-network-primitives">5. Common Neural Network Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../overview/#supplementary-materials">Supplementary Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../overview/#toll-free-bridging">Toll-Free Bridging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../overview/#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../overview/#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../overview/#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../overview/#limits-and-constraints">Limits and Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tech/">Technicals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../tech/nnc-alloc/">The NNC Tensor Allocation Algorithm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#tensor-representation">Tensor Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#loop-representation">Loop Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#the-problem-definition">The Problem Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#the-core-algorithm">The Core Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#basic-structure">Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#candidate-selection">Candidate Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#insertion">Insertion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#loop">Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#multi-view-tensor">Multi-view Tensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#loop-with-efficient-tensor-allocation">Loop with Efficient Tensor Allocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#sub-computation-graph">Sub-Computation Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-alloc/#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tech/nnc-schd/">NNC Static Schedule A Graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-schd/#stream">Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-schd/#static-schedule">Static Schedule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-schd/#while-and-case-of"><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tech/nnc-dy/">NNC Dynamic Graph Execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#naming-the-variable">Naming The Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#tracing-the-operation">Tracing The Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#optimizations">Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#interoperability-not-ready">Interoperability (Not Ready)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#future-optimizations">Future Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#some-maybes">Some Maybes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../tech/nnc-cnnp/">NNC Common Neural Network Primitives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-cnnp/#model">Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../level-0/">Level 0 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../level-0/#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../level-1/">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../level-1/#tensors">Tensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-1/#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-1/#streams">Streams</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../level-2/">Level 2 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../level-2/#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-2/#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../level-3/">Level 3 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3/#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3/#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../level-3.5/">Level 3.5 API</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Construct “switch” control structure in symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../group__level__3__5__simplify_symbolic_simplify/">Symbolic graph simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../group__level__3__5__while_symbolic_while/">Construct a “while” loop in a symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#while-loop-essentials">While Loop Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#branching">Branching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#gradient-based-optimization">Gradient-based Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#graph-simplification">Graph Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#while-loop-others">While Loop Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../level-4/">Level 4 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../level-4/#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../level-5/">Level 5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../level_5/group__level__5_dataframe/">Dataframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level_5/group__level__5_model/">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-5/#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../convenience/">Convenience API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/">Available Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../commands/#backends">Backends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../commands/#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../commands/#command-identifiers">Command Identifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          
+            <a href="../../../">
+          
+
+          
+            
+            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../">Docs</a> &raquo;</li>
+        
+          <li><a href="../../">API Reference</a> &raquo;</li>
+        
+          <li><a href="../../level-3.5/">Level 3.5 API</a> &raquo;</li>
+        
+      <li>Construct “switch” control structure in symbolic graph</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/api/level_3_5/group__level__3__5__case__of_symbolic_switch.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="construct-switch-control-structure-in-symbolic-graph">
+<h1>Construct “switch” control structure in symbolic graph<a class="headerlink" href="#construct-switch-control-structure-in-symbolic-graph" title="Permalink to this headline">¶</a></h1>
+<p>Here I use the keyword case_of. To provide a “switch” control structure within NNC has some nice properties even though you can simulate this with a while loop technically.</p>
+<ol class="arabic simple">
+<li>More optimal memory allocation: with “switch” control structure, memory can be multiplexed for each code path because they are mutually exclusive.</li>
+<li>No tape should be used within each branch: if we simulate with a “while” loop, any results from within the “switch” statement has to be kept on the tape, which is inefficient because you don’t need any tape for the “switch” statement other than record which path it is taken.</li>
+</ol>
+<p>The particular “switch” control structure provided here is a multi-way structured “switch”. Each branch is a sub-graph, so it is well-scoped. A node branch out based on the case_of condition return value to either of the branch (numbering from 0 to n, -1 means no path taken). If no path taken, the output tensors will be assigned with the default tensors and continue. Otherwise the computation within the sub-graph will be carried out and the output tensors will be assigned with the tensors specified within that sub-graph and continue.</p>
+<p>If we want to consider speculative execution in the future, we need to revisit our memory allocation scheme.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../group__level__3__5__simplify_symbolic_simplify/" class="btn btn-neutral float-right" title="Symbolic graph simplification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../level-3.5/" class="btn btn-neutral" title="Level 3.5 API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, libnnc.org.
+      
+        <span class="build">
+          <a href="https://github.com/liuliu/ccv">View the project on GitHub</a>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'a deep learning framework from ccv',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
