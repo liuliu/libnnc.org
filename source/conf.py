@@ -128,6 +128,7 @@ html_context = {
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
+    'analytics_id': 'UA-303081-9',
     'collapse_navigation': False,
     'logo_only': True
 }
