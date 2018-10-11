@@ -477,6 +477,37 @@
 </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv327ccv_nnc_tensor_constant_newPC23ccv_nnc_dynamic_graph_t">
+<span id="_CPPv227ccv_nnc_tensor_constant_newPC23ccv_nnc_dynamic_graph_t"></span><span id="ccv_nnc_tensor_constant_new__ccv_nnc_dynamic_graph_tPC"></span><span class="target" id="group__level__4_1gac0c08d1d52a860ae7303af02661ce599"></span><code class="descname">ccv_nnc_tensor_constant_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv323ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv327ccv_nnc_tensor_constant_newPC23ccv_nnc_dynamic_graph_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a new tensor constant without specified dimensions. This may be used with ccv_nnc_tensor_variable_set. A constant cannot be an output with some inputs. It can be a output with no input (such as CCV_NNC_SET_FORWARD command). This is used so that we don’t need to keep memory of this constant because later we want to compute gradient of this constant. It is not legal to run ccv_nnc_dynamic_backward against a constant. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A newly created tensor constant reference. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The dynamic graph. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv327ccv_nnc_tensor_constant_newPC23ccv_nnc_dynamic_graph_tK22ccv_nnc_tensor_param_t">
+<span id="_CPPv227ccv_nnc_tensor_constant_newPC23ccv_nnc_dynamic_graph_tK22ccv_nnc_tensor_param_t"></span><span id="ccv_nnc_tensor_constant_new__ccv_nnc_dynamic_graph_tPC.ccv_nnc_tensor_param_tC"></span><span class="target" id="group__level__4_1ga3f3a184b6cc76f748aa97b7d91658be1"></span><code class="descname">ccv_nnc_tensor_constant_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv323ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv327ccv_nnc_tensor_constant_newPC23ccv_nnc_dynamic_graph_tK22ccv_nnc_tensor_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a new tensor constant with tensor parameters. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A newly created tensor constant reference. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The dynamic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">info</span></code>: Tensor parameters. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
 </div>
 </div>
 
