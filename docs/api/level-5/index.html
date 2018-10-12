@@ -507,6 +507,21 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv317ccv_cnnp_identityK16ccv_cnnp_param_t">
+<span id="_CPPv217ccv_cnnp_identityK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_identity__ccv_cnnp_param_tC"></span><span class="target" id="group__level__5_1ga8065ded1c11654d1f574083e58b4d425"></span><code class="descname">ccv_cnnp_identity</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv316ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv317ccv_cnnp_identityK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An identity layer that takes input and do nothing pass it as the output. Realistically, we use this because we want to apply some normalization / activation function on top of the input. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model that takes input and pass it as output. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Parameters (such as hint and activation or norm). </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv320ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t">
 <span id="_CPPv220ccv_cnnp_convolutionKiKiACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_convolution__iC.iC.iCA.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5_1gacc3bca08460f5cbe5a6f46b088816624"></span><code class="descname">ccv_cnnp_convolution</code><span class="sig-paren">(</span><em class="property">const</em> int <em>groups</em>, <em class="property">const</em> int <em>filters</em>, <em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv316ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A convolution model. <dl class="docutils">
@@ -602,6 +617,12 @@
 <span id="_CPPv216ccv_cnnp_param_t"></span><span id="ccv_cnnp_param_t"></span><span class="target" id="structccv__cnnp__param__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_param_t</code><a class="headerlink" href="#_CPPv316ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N16ccv_cnnp_param_t7no_biasE">
+<span id="_CPPv2N16ccv_cnnp_param_t7no_biasE"></span><span id="ccv_cnnp_param_t::no_bias__i"></span><span class="target" id="structccv__cnnp__param__t_1a4531ac7b6c18891995aa27d63d37724e"></span>int <code class="descname">no_bias</code><a class="headerlink" href="#_CPPv3N16ccv_cnnp_param_t7no_biasE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>No bias term. </p>
+</dd></dl>
+
 <dl class="member">
 <dt id="_CPPv3N16ccv_cnnp_param_t4normE">
 <span id="_CPPv2N16ccv_cnnp_param_t4normE"></span><span id="ccv_cnnp_param_t::norm__i"></span><span class="target" id="structccv__cnnp__param__t_1a805d61d5b268725af70c2e463e1f087d"></span>int <code class="descname">norm</code><a class="headerlink" href="#_CPPv3N16ccv_cnnp_param_t4normE" title="Permalink to this definition">¶</a><br /></dt>
