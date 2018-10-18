@@ -45,6 +45,10 @@ This function will replace the nodes that it affects to one sub-graph node. Thus
 
 There are no connection between its nodes and the outside graph nodes other than the three sets:
 
-1). Incoming nodes, the set of nodes that contains the incoming edges from outside, they cannot have edges points by inside nodes. The sub-graph computation starts from these incoming nodes; 2). Condition false output nodes, when condition is false, we will break out of this while loop, these nodes pointing to the outside nodes, but no inside nodes; 3). End nodes, the set of nodes that marks the end of the while body, and after these nodes are executed, we will return to the incoming nodes. These end nodes shouldn't have any edges pointing to inside nodes (OK if end nodes are condition true output nodes as well);
+1. Incoming nodes, the set of nodes that contains the incoming edges from outside, they cannot have edges points by inside nodes. The sub-graph computation starts from these incoming nodes;
+
+2. Condition false output nodes, when condition is false, we will break out of this while loop, these nodes pointing to the outside nodes, but no inside nodes;
+
+3. End nodes, the set of nodes that marks the end of the while body, and after these nodes are executed, we will return to the incoming nodes. These end nodes shouldn't have any edges pointing to inside nodes (OK if end nodes are condition true output nodes as well);
 
 Since these will become a sub-graph (which, to its owner graph, just simple "node"), it will have inputs and outputs. Besides that, the loop body needs to be parameterized to be SSA compliant (see: https://www.cs.cmu.edu/~fp/courses/15411-f13/lectures/06-ssa.pdf). Thus, a list of body parameters need to be provided.

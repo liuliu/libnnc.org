@@ -5,7 +5,7 @@ A large part of machine learning consists of go through data, process them to a 
 
 Another interesting observation comes from recent (2018) release of Create ML framework from Apple. It provides a very close to Pandas style data process API (MLDataTable) but in Swift. This implementation is important because it provides a survey point other than Python.
 
-Comparing to Python, Swift is a stronger typed language. Though all being high-level, they all have pretty good string support (of course!), operator overloading, and polymorphism. String support makes column naming natural, Operator overloading makes conditioning and filtering easier, and ploymorphism makes column type representation straight-forward. These, unfortunately, are the challenges I need to face when implementing in C with the eye towards that later the similar ideas can be implemented on top on a high-level language based on this one.
+Comparing to Python, Swift is a stronger typed language. Though all being high-level, they all have pretty good string support (of course!), operator overloading, and polymorphism. String support makes column naming natural, Operator overloading makes conditioning and filtering easier, and polymorphism makes column type representation straight-forward. These, unfortunately, are the challenges I need to face when implementing in C with the eye towards that later the similar ideas can be implemented on top on a high-level language based on this one.
 
 It seems I haven't answered the most crucial question yet: what's special about these data process APIs? It is easier to answer this to first see what Pandas or MLDataTable does.
 
