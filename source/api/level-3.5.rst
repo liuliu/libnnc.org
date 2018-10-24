@@ -42,6 +42,13 @@ Graph Simplification
    :content-only:
    :members:
 
+Automatic Graph Parallelization
+-------------------------------
+.. doxygengroup:: level_3_5_parallel
+   :project: libnnc
+   :content-only:
+   :members:
+
 While Loop Others
 -----------------
 .. doxygengroup:: level_3_5_while_others

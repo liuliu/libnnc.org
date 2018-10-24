@@ -171,6 +171,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#branching">Branching</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gradient-based-optimization">Gradient-based Optimization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#graph-simplification">Graph Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-graph-parallelization">Automatic Graph Parallelization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#while-loop-others">While Loop Others</a></li>
 </ul>
 </li>
@@ -718,6 +719,31 @@
 <li><code class="docutils literal notranslate"><span class="pre">pass_size</span></code>: The size of the passes array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The output tensor symbols we want to retain (we are going to prune any execution nodes that is not related to these outputs). </li>
 <li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the output array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">sources</span></code>: The source execution node symbols array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">source_size</span></code>: The size of source node symbols array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">destinations</span></code>: The destinations execution node symbols array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">destination_size</span></code>: The size of destination node symbols array. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="section" id="automatic-graph-parallelization">
+<h2>Automatic Graph Parallelization<a class="headerlink" href="#automatic-graph-parallelization" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="_CPPv336ccv_nnc_symbolic_graph_data_parallelPC24ccv_nnc_symbolic_graph_tKiPCK23ccv_nnc_tensor_symbol_tKiPCK23ccv_nnc_tensor_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi">
+<span id="_CPPv236ccv_nnc_symbolic_graph_data_parallelPC24ccv_nnc_symbolic_graph_tKiPCK23ccv_nnc_tensor_symbol_tKiPCK23ccv_nnc_tensor_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="ccv_nnc_symbolic_graph_data_parallel__ccv_nnc_symbolic_graph_tPC.iC.ccv_nnc_tensor_symbol_tCPC.iC.ccv_nnc_tensor_symbol_tCPC.iC.ccv_nnc_graph_exec_symbol_tCPC.iC.ccv_nnc_graph_exec_symbol_tCPC.iC"></span><span class="target" id="group__level__3__5__parallel_1ga6646c38215f017f2e062eac3cf0c78b5"></span>void <code class="descname">ccv_nnc_symbolic_graph_data_parallel</code><span class="sig-paren">(</span><a class="reference internal" href="../level-3/#_CPPv324ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> int <em>parallel</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv323ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>scatters</em>, <em class="property">const</em> int <em>scatter_size</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv323ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>gathers</em>, <em class="property">const</em> int <em>gather_size</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv327ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>sources</em>, <em class="property">const</em> int <em>source_size</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv327ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>destinations</em>, <em class="property">const</em> int <em>destination_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv336ccv_nnc_symbolic_graph_data_parallelPC24ccv_nnc_symbolic_graph_tKiPCK23ccv_nnc_tensor_symbol_tKiPCK23ccv_nnc_tensor_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Turn the existing graph to be capable to run on several devices with different data inputs at parallel. With this method, additional tensor symbols will be created that runs on different devices. That has been said, there are concepts of “scatter” and “gather”. “scatter” tensor symbols will be copied to different devices, while “gather” tensors will be summed from different devices to the default device. Right now, the way to gather tensors only supports “sum”. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">parallel</span></code>: Number of devices we want to run on. 0 will use all devices available. 1 will skip. </li>
+<li><code class="docutils literal notranslate"><span class="pre">scatters</span></code>: The tensor symbols to be scattered. </li>
+<li><code class="docutils literal notranslate"><span class="pre">scatter_size</span></code>: The size of the scatter tensor symbols array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">gathers</span></code>: The tensor symbols to be gathered. </li>
+<li><code class="docutils literal notranslate"><span class="pre">gather_size</span></code>: The size of the gather tensor symbols array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">sources</span></code>: The source execution node symbols array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">source_size</span></code>: The size of source node symbols array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">destinations</span></code>: The destinations execution node symbols array. </li>
