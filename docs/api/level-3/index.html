@@ -1148,6 +1148,21 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv325ccv_nnc_tensor_arena_sizePCK22ccv_nnc_tensor_arena_t">
+<span id="_CPPv225ccv_nnc_tensor_arena_sizePCK22ccv_nnc_tensor_arena_t"></span><span id="ccv_nnc_tensor_arena_size__ccv_nnc_tensor_arena_tCPC"></span><span class="target" id="group__level__3__others_1gad42061ae14abb82d1a70211c01198f9d"></span><code class="descname">ccv_nnc_tensor_arena_size</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv322ccv_nnc_tensor_arena_t" title="ccv_nnc_tensor_arena_t">ccv_nnc_tensor_arena_t</a> *<em class="property">const</em> <em>tensor_arena</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv325ccv_nnc_tensor_arena_sizePCK22ccv_nnc_tensor_arena_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Find the size allocated on the opaque tensor arena structure. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The total allocated size in bytes. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">tensor_arena</span></code>: The tensor arena object generated through compilation. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv330ccv_nnc_tensor_symbol_new_hookPC24ccv_nnc_symbolic_graph_t32ccv_nnc_tensor_symbol_new_hook_fPv">
 <span id="_CPPv230ccv_nnc_tensor_symbol_new_hookPC24ccv_nnc_symbolic_graph_t32ccv_nnc_tensor_symbol_new_hook_fPv"></span><span id="ccv_nnc_tensor_symbol_new_hook__ccv_nnc_symbolic_graph_tPC.ccv_nnc_tensor_symbol_new_hook_f.voidP"></span><span class="target" id="group__level__3__others_1ga1baa4b55f5c68e2334662009e809d696"></span>void *<code class="descname">ccv_nnc_tensor_symbol_new_hook</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv324ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <a class="reference internal" href="#_CPPv332ccv_nnc_tensor_symbol_new_hook_f" title="ccv_nnc_tensor_symbol_new_hook_f">ccv_nnc_tensor_symbol_new_hook_f</a> <em>hook</em>, void *<em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv330ccv_nnc_tensor_symbol_new_hookPC24ccv_nnc_symbolic_graph_t32ccv_nnc_tensor_symbol_new_hook_fPv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Hook into the call to ccv_nnc_tensor_symbol_new, return previous provided context if call into this method. <dl class="docutils">
