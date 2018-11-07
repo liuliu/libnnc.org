@@ -1,5 +1,5 @@
-Dataframe
-=========
+What is "dataframe" in ML?
+==========================
 
 A large part of machine learning consists of go through data, process them to a shape / form that makes sense, and pass that into the model to train. Deep learning frameworks such as TensorFlow or PyTorch provides some dataset APIs for this purpose. It is convenient for these frameworks because by being Python, people can use Pandas to process the data. In Pandas, this is called Dataframe, which again, imitates R language.
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Model &mdash; nnc, a deep learning framework from ccv</title>
+  <title>Models, layers, and Keras &mdash; nnc, a deep learning framework from ccv</title>
   
 
   
@@ -29,7 +29,7 @@
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
     <link rel="next" title="Convenience API" href="../../convenience/" />
-    <link rel="prev" title="Dataframe" href="../group__level__5_dataframe/" /> 
+    <link rel="prev" title="What is “dataframe” in ML?" href="../group__level__5_dataframe/" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -181,8 +181,8 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../level-5/">Level 5 API</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../group__level__5_dataframe/">Dataframe</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../group__level__5_dataframe/">What is “dataframe” in ML?</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Models, layers, and Keras</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#dataframe-api">Dataframe API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#model-api">Model API</a></li>
 </ul>
@@ -253,7 +253,7 @@
         
           <li><a href="../../level-5/">Level 5 API</a> &raquo;</li>
         
-      <li>Model</li>
+      <li>Models, layers, and Keras</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -272,8 +272,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="model">
-<h1>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="models-layers-and-keras">
+<h1>Models, layers, and Keras<a class="headerlink" href="#models-layers-and-keras" title="Permalink to this headline">¶</a></h1>
 <p>With Keras API in mind, this model implementation essentially is a light-weight way to group neural network layers together. This is a rare case in NNC (or ccv in general) where Object-Oriented programming makes sense. I borrowed heavily from Objective-C / C++ to implement this Object-Oriented interface.</p>
 <p>Now back to elaboration of the Model interface. It is specifically designed with Keras in mind, asking question: If we are going to build Keras high-level API in any languages (Ruby, Python, Swift, Julia), what’s the underlying C interface would look like? Here is your answer (hint: it looks very much like just Python Keras API).</p>
 <p>A model consists of a set of inputs and outputs. This sounds very much like what “Command” is in Level-1 APIs, however, they are different: a model is stateful. For example, a convolution command takes 3 inputs: image, kernel weight and bias, has 1 output: image. A convolution model takes 1 input: image, and 1 output: image. kernel weight and bias are internal states to the model (in Keras, it is called “layer” for convolution, and model means a set of layers. In NNC, that kind of differentiation feels superficial, therefore, a layer is a model).</p>
@@ -292,7 +292,7 @@
         <a href="../../convenience/" class="btn btn-neutral float-right" title="Convenience API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../group__level__5_dataframe/" class="btn btn-neutral" title="Dataframe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../group__level__5_dataframe/" class="btn btn-neutral" title="What is “dataframe” in ML?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

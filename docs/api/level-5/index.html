@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="Dataframe" href="../level_5/group__level__5_dataframe/" />
+    <link rel="next" title="What is “dataframe” in ML?" href="../level_5/group__level__5_dataframe/" />
     <link rel="prev" title="Level 4 API" href="../level-4/" /> 
 
   
@@ -181,8 +181,8 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Level 5 API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../level_5/group__level__5_dataframe/">Dataframe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../level_5/group__level__5_model/">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../level_5/group__level__5_dataframe/">What is “dataframe” in ML?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../level_5/group__level__5_model/">Models, layers, and Keras</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#dataframe-api">Dataframe API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#model-api">Model API</a></li>
 </ul>
@@ -275,15 +275,15 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Design Comments</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../level_5/group__level__5_dataframe/">Dataframe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../level_5/group__level__5_model/">Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level_5/group__level__5_dataframe/">What is “dataframe” in ML?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../level_5/group__level__5_model/">Models, layers, and Keras</a></li>
 </ul>
 </div>
 <div class="section" id="dataframe-api">
 <h2>Dataframe API<a class="headerlink" href="#dataframe-api" title="Permalink to this headline">¶</a></h2>
 <dl class="type">
 <dt id="_CPPv327ccv_cnnp_column_data_enum_f">
-<span id="_CPPv227ccv_cnnp_column_data_enum_f"></span><span id="ccv_cnnp_column_data_enum_f"></span><span class="target" id="group__level__5__dataframe_1ga59f707dba42b2ddca32a525c59b460e0"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_column_data_enum_f</code>)<span class="sig-paren">(</span><em class="property">const</em> int row_idx, <em class="property">const</em> int row_size, void **<em class="property">const</em> data, <em class="property">const</em> int column_idx, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv327ccv_cnnp_column_data_enum_f" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv227ccv_cnnp_column_data_enum_f"></span><span id="ccv_cnnp_column_data_enum_f"></span><span class="target" id="group__level__5__dataframe_1ga6bbb795394391d4d92c79e7c6f840ce4"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_column_data_enum_f</code>)<span class="sig-paren">(</span><em class="property">const</em> int column_idx, <em class="property">const</em> int row_idx, <em class="property">const</em> int row_size, void **<em class="property">const</em> data, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv327ccv_cnnp_column_data_enum_f" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A data enumeration function to supply data for a given row index (and length). </p>
 </dd></dl>
 
@@ -291,6 +291,12 @@
 <dt id="_CPPv320ccv_cnnp_dataframe_t">
 <span id="_CPPv220ccv_cnnp_dataframe_t"></span><span id="ccv_cnnp_dataframe_t"></span><span class="target" id="group__level__5__dataframe_1gaf1e90b2ba6eec6269c20e454d35819d9"></span><em class="property">typedef </em><em class="property">struct</em> ccv_cnnp_dataframe_s <code class="descname">ccv_cnnp_dataframe_t</code><a class="headerlink" href="#_CPPv320ccv_cnnp_dataframe_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>An opaque structure point to the dataframe object. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv326ccv_cnnp_column_data_map_f">
+<span id="_CPPv226ccv_cnnp_column_data_map_f"></span><span id="ccv_cnnp_column_data_map_f"></span><span class="target" id="group__level__5__dataframe_1gadccf1639e2a3bac3846dfded70bd6b1f"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_column_data_map_f</code>)<span class="sig-paren">(</span>void **<em class="property">const</em> column_data, <em class="property">const</em> int column_size, void **<em class="property">const</em> data, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv326ccv_cnnp_column_data_map_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A map function that takes the data from multiple columns and derive new data out of it. </p>
 </dd></dl>
 
 <dl class="function">
@@ -308,8 +314,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_tPCKiKiPCv">
-<span id="_CPPv222ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_tPCKiKiPCv"></span><span id="ccv_cnnp_dataframe_map__ccv_cnnp_dataframe_tPC.iCPC.iC.voidPC"></span><span class="target" id="group__level__5__dataframe_1gada8393d17a27db5d55a82ac86b12729d"></span><code class="descname">ccv_cnnp_dataframe_map</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_tPCKiKiPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fPCKiKiPCv">
+<span id="_CPPv222ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fPCKiKiPCv"></span><span id="ccv_cnnp_dataframe_map__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_map_f.iCPC.iC.voidPC"></span><span class="target" id="group__level__5__dataframe_1ga50292764d4ce0859652b6056094a7ecb"></span><code class="descname">ccv_cnnp_dataframe_map</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv326ccv_cnnp_column_data_map_f" title="ccv_cnnp_column_data_map_f">ccv_cnnp_column_data_map_f</a> <em>map</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fPCKiKiPCv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Derive a new column out of existing columns in the dataframe. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
@@ -793,7 +799,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../level_5/group__level__5_dataframe/" class="btn btn-neutral float-right" title="Dataframe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../level_5/group__level__5_dataframe/" class="btn btn-neutral float-right" title="What is “dataframe” in ML?" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../level-4/" class="btn btn-neutral" title="Level 4 API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Dataframe &mdash; nnc, a deep learning framework from ccv</title>
+  <title>What is “dataframe” in ML? &mdash; nnc, a deep learning framework from ccv</title>
   
 
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
-    <link rel="next" title="Model" href="../group__level__5_model/" />
+    <link rel="next" title="Models, layers, and Keras" href="../group__level__5_model/" />
     <link rel="prev" title="Level 5 API" href="../../level-5/" /> 
 
   
@@ -181,8 +181,8 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="../../level-5/">Level 5 API</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Dataframe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../group__level__5_model/">Model</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">What is “dataframe” in ML?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../group__level__5_model/">Models, layers, and Keras</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#dataframe-api">Dataframe API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#model-api">Model API</a></li>
 </ul>
@@ -253,7 +253,7 @@
         
           <li><a href="../../level-5/">Level 5 API</a> &raquo;</li>
         
-      <li>Dataframe</li>
+      <li>What is “dataframe” in ML?</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -272,8 +272,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="dataframe">
-<h1>Dataframe<a class="headerlink" href="#dataframe" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="what-is-dataframe-in-ml">
+<h1>What is “dataframe” in ML?<a class="headerlink" href="#what-is-dataframe-in-ml" title="Permalink to this headline">¶</a></h1>
 <p>A large part of machine learning consists of go through data, process them to a shape / form that makes sense, and pass that into the model to train. Deep learning frameworks such as TensorFlow or PyTorch provides some dataset APIs for this purpose. It is convenient for these frameworks because by being Python, people can use Pandas to process the data. In Pandas, this is called Dataframe, which again, imitates R language.</p>
 <p>Another interesting observation comes from recent (2018) release of Create ML framework from Apple. It provides a very close to Pandas style data process API (MLDataTable) but in Swift. This implementation is important because it provides a survey point other than Python.</p>
 <p>Comparing to Python, Swift is a stronger typed language. Though all being high-level, they all have pretty good string support (of course!), operator overloading, and polymorphism. String support makes column naming natural, Operator overloading makes conditioning and filtering easier, and polymorphism makes column type representation straight-forward. These, unfortunately, are the challenges I need to face when implementing in C with the eye towards that later the similar ideas can be implemented on top on a high-level language based on this one.</p>
@@ -302,7 +302,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../group__level__5_model/" class="btn btn-neutral float-right" title="Model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../group__level__5_model/" class="btn btn-neutral float-right" title="Models, layers, and Keras" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../../level-5/" class="btn btn-neutral" title="Level 5 API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

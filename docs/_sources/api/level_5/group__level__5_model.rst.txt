@@ -1,5 +1,5 @@
-Model
-=====
+Models, layers, and Keras
+=========================
 
 With Keras API in mind, this model implementation essentially is a light-weight way to group neural network layers together. This is a rare case in NNC (or ccv in general) where Object-Oriented programming makes sense. I borrowed heavily from Objective-C / C++ to implement this Object-Oriented interface.
 
