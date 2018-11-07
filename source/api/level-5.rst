@@ -7,9 +7,16 @@ Level 5 API
 
    level_5/*
 
-Essentials
-----------
-.. doxygengroup:: level_5
+Dataframe API
+-------------
+.. doxygengroup:: level_5_dataframe
+   :project: libnnc
+   :content-only:
+   :members:
+
+Model API
+---------
+.. doxygengroup:: level_5_model
    :project: libnnc
    :content-only:
    :members:
