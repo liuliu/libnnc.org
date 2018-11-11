@@ -334,9 +334,43 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that contains existing columns. </li>
+<li><code class="docutils literal notranslate"><span class="pre">map</span></code>: The map function used to derive new column from existing columns. </li>
+<li><code class="docutils literal notranslate"><span class="pre">deinit</span></code>: The deinit function will be used to destroy the derived data. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idxs</span></code>: The columns that will be used to derive new column. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idx_size</span></code>: The size of existing columns array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context that can be used to generate new column. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv326ccv_cnnp_dataframe_shufflePC20ccv_cnnp_dataframe_t">
+<span id="_CPPv226ccv_cnnp_dataframe_shufflePC20ccv_cnnp_dataframe_t"></span><span id="ccv_cnnp_dataframe_shuffle__ccv_cnnp_dataframe_tPC"></span><span class="target" id="group__level__5__dataframe_1ga176b3a22d9dbb736541ea69f71ab2736"></span>void <code class="descname">ccv_cnnp_dataframe_shuffle</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv326ccv_cnnp_dataframe_shufflePC20ccv_cnnp_dataframe_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Shuffle an existing dataframe. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe that is about to be shuffled. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv329ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_deinit_fKiKi">
+<span id="_CPPv229ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_deinit_fKiKi"></span><span id="ccv_cnnp_dataframe_reduce_new__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_deinit_f.iC.iC"></span><span class="target" id="group__level__5__dataframe_1ga9b26f76c0971c3bcac46498ccca13048"></span><code class="descname">ccv_cnnp_dataframe_reduce_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv329ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>deinit</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>batch_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_deinit_fKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reduce a dataframe by batch size. Thus, n rows are reduced to 1 row per reduce function on one specific column. This will also reduce the multi-column dataframe down to 1 column by selecting the one column to reduce. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The reduced dataframe. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe that is about to be reduced. </li>
+<li><code class="docutils literal notranslate"><span class="pre">reduce</span></code>: The reduce function used to reduce n rows into 1. </li>
+<li><code class="docutils literal notranslate"><span class="pre">deinit</span></code>: The deinit function will be used to destroy the derived data. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column we selected to reduce. </li>
+<li><code class="docutils literal notranslate"><span class="pre">batch_size</span></code>: How many rows will be reduced to 1 row from the original data. </li>
 </ul>
 </dd>
 </dl>
@@ -379,15 +413,32 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv332ccv_cnnp_dataframe_iter_prefetchPC25ccv_cnnp_dataframe_iter_tPC24ccv_nnc_stream_context_t">
-<span id="_CPPv232ccv_cnnp_dataframe_iter_prefetchPC25ccv_cnnp_dataframe_iter_tPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_dataframe_iter_prefetch__ccv_cnnp_dataframe_iter_tPC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5__dataframe_1gad060b9eff1402326e7a04ef51631d550"></span>int <code class="descname">ccv_cnnp_dataframe_iter_prefetch</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv325ccv_cnnp_dataframe_iter_t" title="ccv_cnnp_dataframe_iter_t">ccv_cnnp_dataframe_iter_t</a> *<em class="property">const</em> <em>iter</em>, <a class="reference internal" href="../level-1/#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv332ccv_cnnp_dataframe_iter_prefetchPC25ccv_cnnp_dataframe_iter_tPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv332ccv_cnnp_dataframe_iter_prefetchPC25ccv_cnnp_dataframe_iter_tKiPC24ccv_nnc_stream_context_t">
+<span id="_CPPv232ccv_cnnp_dataframe_iter_prefetchPC25ccv_cnnp_dataframe_iter_tKiPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_dataframe_iter_prefetch__ccv_cnnp_dataframe_iter_tPC.iC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5__dataframe_1gafe029d3b35c72fa9b3b0b34b5a05c41b"></span>int <code class="descname">ccv_cnnp_dataframe_iter_prefetch</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv325ccv_cnnp_dataframe_iter_t" title="ccv_cnnp_dataframe_iter_t">ccv_cnnp_dataframe_iter_t</a> *<em class="property">const</em> <em>iter</em>, <em class="property">const</em> int <em>prefetch_count</em>, <a class="reference internal" href="../level-1/#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv332ccv_cnnp_dataframe_iter_prefetchPC25ccv_cnnp_dataframe_iter_tKiPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Prefetch next item on the iterator with the given stream context. You can call this method multiple times to prefetch multiple items ahead of time. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>0 if the prefetch is successful, -1 if it is ended. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">iter</span></code>: The iterator to go through. </li>
+<li><code class="docutils literal notranslate"><span class="pre">prefetch_count</span></code>: How much ahead we should advance for. </li>
 <li><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream context to extract data asynchronously. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv334ccv_cnnp_dataframe_iter_set_cursorPC25ccv_cnnp_dataframe_iter_tKi">
+<span id="_CPPv234ccv_cnnp_dataframe_iter_set_cursorPC25ccv_cnnp_dataframe_iter_tKi"></span><span id="ccv_cnnp_dataframe_iter_set_cursor__ccv_cnnp_dataframe_iter_tPC.iC"></span><span class="target" id="group__level__5__dataframe_1gafdb1b9206de11619a50a6d5a162c980b"></span>int <code class="descname">ccv_cnnp_dataframe_iter_set_cursor</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv325ccv_cnnp_dataframe_iter_t" title="ccv_cnnp_dataframe_iter_t">ccv_cnnp_dataframe_iter_t</a> *<em class="property">const</em> <em>iter</em>, <em class="property">const</em> int <em>idx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv334ccv_cnnp_dataframe_iter_set_cursorPC25ccv_cnnp_dataframe_iter_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the cursor of the iterator. When set to 0, the iterator effectively restarts. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if it is successful, -1 if it is not (exceed the range). </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">iter</span></code>: The iterator to go through. </li>
+<li><code class="docutils literal notranslate"><span class="pre">idx</span></code>: The index of the cursor. </li>
 </ul>
 </dd>
 </dl>
