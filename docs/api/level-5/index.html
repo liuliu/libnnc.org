@@ -283,8 +283,8 @@
 <h2>Dataframe API<a class="headerlink" href="#dataframe-api" title="Permalink to this headline">¶</a></h2>
 <dl class="type">
 <dt id="_CPPv327ccv_cnnp_column_data_enum_f">
-<span id="_CPPv227ccv_cnnp_column_data_enum_f"></span><span id="ccv_cnnp_column_data_enum_f"></span><span class="target" id="group__level__5__dataframe_1ga43fec6431bc40b49f1e2d0d0664c4460"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_column_data_enum_f</code>)<span class="sig-paren">(</span><em class="property">const</em> int column_idx, <em class="property">const</em> int row_idx, <em class="property">const</em> int row_size, void **<em class="property">const</em> data, void *<em class="property">const</em> context, <a class="reference internal" href="../level-1/#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> stream_context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv327ccv_cnnp_column_data_enum_f" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A data enumeration function to supply data for a given row index (and length). </p>
+<span id="_CPPv227ccv_cnnp_column_data_enum_f"></span><span id="ccv_cnnp_column_data_enum_f"></span><span class="target" id="group__level__5__dataframe_1ga85ac578782a34d9ad0e21566571b3685"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_column_data_enum_f</code>)<span class="sig-paren">(</span><em class="property">const</em> int column_idx, <em class="property">const</em> int *<em class="property">const</em> row_idxs, <em class="property">const</em> int row_size, void **<em class="property">const</em> data, void *<em class="property">const</em> context, <a class="reference internal" href="../level-1/#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> stream_context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv327ccv_cnnp_column_data_enum_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A data enumeration function to supply data for given row indexes. </p>
 </dd></dl>
 
 <dl class="type">
@@ -301,8 +301,14 @@
 
 <dl class="type">
 <dt id="_CPPv326ccv_cnnp_column_data_map_f">
-<span id="_CPPv226ccv_cnnp_column_data_map_f"></span><span id="ccv_cnnp_column_data_map_f"></span><span class="target" id="group__level__5__dataframe_1ga080c4ab3db2ceea8d8cd774d20241fcd"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_column_data_map_f</code>)<span class="sig-paren">(</span>void **<em class="property">const</em> column_data, <em class="property">const</em> int column_size, void **<em class="property">const</em> data, void *<em class="property">const</em> context, <a class="reference internal" href="../level-1/#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> stream_context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv326ccv_cnnp_column_data_map_f" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv226ccv_cnnp_column_data_map_f"></span><span id="ccv_cnnp_column_data_map_f"></span><span class="target" id="group__level__5__dataframe_1ga4428f3559e32e7fb528b5e7211079498"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_column_data_map_f</code>)<span class="sig-paren">(</span>void ***<em class="property">const</em> column_data, <em class="property">const</em> int column_size, <em class="property">const</em> int batch_size, void **<em class="property">const</em> data, void *<em class="property">const</em> context, <a class="reference internal" href="../level-1/#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> stream_context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv326ccv_cnnp_column_data_map_f" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A map function that takes the data from multiple columns and derive new data out of it. </p>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv329ccv_cnnp_column_data_reduce_f">
+<span id="_CPPv229ccv_cnnp_column_data_reduce_f"></span><span id="ccv_cnnp_column_data_reduce_f"></span><span class="target" id="group__level__5__dataframe_1ga3869b40cc1d67c0b3f255724f027f8e2"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_column_data_reduce_f</code>)<span class="sig-paren">(</span>void **<em class="property">const</em> input_data, <em class="property">const</em> int batch_size, void **<em class="property">const</em> output_data, void *<em class="property">const</em> context, <a class="reference internal" href="../level-1/#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> stream_context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_column_data_reduce_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A reduce function that takes multiple rows of one column, and reduce to one row. </p>
 </dd></dl>
 
 <dl class="type">
@@ -313,12 +319,13 @@
 
 <dl class="function">
 <dt id="_CPPv322ccv_cnnp_dataframe_newPCK22ccv_cnnp_column_data_tKiKi">
-<span id="_CPPv222ccv_cnnp_dataframe_newPCK22ccv_cnnp_column_data_tKiKi"></span><span id="ccv_cnnp_dataframe_new__ccv_cnnp_column_data_tCPC.iC.iC"></span><span class="target" id="group__level__5__dataframe_1ga457cd38109b45343cea7f1fa1bd21530"></span><code class="descname">ccv_cnnp_dataframe_new</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv322ccv_cnnp_column_data_t" title="ccv_cnnp_column_data_t">ccv_cnnp_column_data_t</a> *<em class="property">const</em> <em>column_data</em>, <em class="property">const</em> int <em>column_size</em>, <em class="property">const</em> int <em>row_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_newPCK22ccv_cnnp_column_data_tKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv222ccv_cnnp_dataframe_newPCK22ccv_cnnp_column_data_tKiKi"></span><span id="ccv_cnnp_dataframe_new__ccv_cnnp_column_data_tCPC.iC.iC"></span><span class="target" id="group__level__5__dataframe_1ga7946a5384746d41de3caadabd43c90bc"></span><code class="descname">ccv_cnnp_dataframe_new</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv322ccv_cnnp_column_data_t" title="ccv_cnnp_column_data_t">ccv_cnnp_column_data_t</a> *<em class="property">const</em> <em>column_data</em>, <em class="property">const</em> int <em>column_size</em>, <em class="property">const</em> int <em>row_count</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_newPCK22ccv_cnnp_column_data_tKiKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a dataframe object with given column data. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">column_data</span></code>: The column data that can be loaded. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_size</span></code>: The size of column data array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">row_count</span></code>: The number of rows in this dataframe. </li>
 </ul>
 </dd>
 </dl>
@@ -326,8 +333,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_f29ccv_cnnp_column_data_deinit_fPCKiKiPCv">
-<span id="_CPPv222ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_f29ccv_cnnp_column_data_deinit_fPCKiKiPCv"></span><span id="ccv_cnnp_dataframe_map__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_map_f.ccv_cnnp_column_data_deinit_f.iCPC.iC.voidPC"></span><span class="target" id="group__level__5__dataframe_1ga4461fd5e7b3c01bf20a0a3d2b87f2059"></span><code class="descname">ccv_cnnp_dataframe_map</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv326ccv_cnnp_column_data_map_f" title="ccv_cnnp_column_data_map_f">ccv_cnnp_column_data_map_f</a> <em>map</em>, <a class="reference internal" href="#_CPPv329ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>deinit</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_f29ccv_cnnp_column_data_deinit_fPCKiKiPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv">
+<span id="_CPPv222ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv"></span><span id="ccv_cnnp_dataframe_map__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_map_f.iC.ccv_cnnp_column_data_deinit_f.iCPC.iC.voidPC"></span><span class="target" id="group__level__5__dataframe_1ga72d5738b5ddc3516d94e787681d13dac"></span><code class="descname">ccv_cnnp_dataframe_map</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv326ccv_cnnp_column_data_map_f" title="ccv_cnnp_column_data_map_f">ccv_cnnp_column_data_map_f</a> <em>map</em>, <em class="property">const</em> int <em>stream_type</em>, <a class="reference internal" href="#_CPPv329ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>deinit</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Derive a new column out of existing columns in the dataframe. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The new column index. </dd>
@@ -335,6 +342,7 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that contains existing columns. </li>
 <li><code class="docutils literal notranslate"><span class="pre">map</span></code>: The map function used to derive new column from existing columns. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream_type</span></code>: The type of stream context for this derived column. </li>
 <li><code class="docutils literal notranslate"><span class="pre">deinit</span></code>: The deinit function will be used to destroy the derived data. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idxs</span></code>: The columns that will be used to derive new column. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idx_size</span></code>: The size of existing columns array. </li>
@@ -359,8 +367,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv329ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_deinit_fKiKi">
-<span id="_CPPv229ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_deinit_fKiKi"></span><span id="ccv_cnnp_dataframe_reduce_new__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_deinit_f.iC.iC"></span><span class="target" id="group__level__5__dataframe_1ga9b26f76c0971c3bcac46498ccca13048"></span><code class="descname">ccv_cnnp_dataframe_reduce_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv329ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>deinit</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>batch_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_deinit_fKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv329ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_reduce_f29ccv_cnnp_column_data_deinit_fKiKiPCv">
+<span id="_CPPv229ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_reduce_f29ccv_cnnp_column_data_deinit_fKiKiPCv"></span><span id="ccv_cnnp_dataframe_reduce_new__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_reduce_f.ccv_cnnp_column_data_deinit_f.iC.iC.voidPC"></span><span class="target" id="group__level__5__dataframe_1gaaa1dca4da41abe2bb19514d58e5c4c14"></span><code class="descname">ccv_cnnp_dataframe_reduce_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv329ccv_cnnp_column_data_reduce_f" title="ccv_cnnp_column_data_reduce_f">ccv_cnnp_column_data_reduce_f</a> <em>reduce</em>, <a class="reference internal" href="#_CPPv329ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>deinit</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>batch_size</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_reduce_f29ccv_cnnp_column_data_deinit_fKiKiPCv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reduce a dataframe by batch size. Thus, n rows are reduced to 1 row per reduce function on one specific column. This will also reduce the multi-column dataframe down to 1 column by selecting the one column to reduce. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The reduced dataframe. </dd>
@@ -371,6 +379,7 @@
 <li><code class="docutils literal notranslate"><span class="pre">deinit</span></code>: The deinit function will be used to destroy the derived data. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column we selected to reduce. </li>
 <li><code class="docutils literal notranslate"><span class="pre">batch_size</span></code>: How many rows will be reduced to 1 row from the original data. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context that can be used in reduce function. </li>
 </ul>
 </dd>
 </dl>
@@ -692,6 +701,7 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
 <li><code class="docutils literal notranslate"><span class="pre">fn</span></code>: The file name. </li>
+<li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: Whether we perform read / write on this checkpoint, or read only / write only. </li>
 </ul>
 </dd>
 </dl>
