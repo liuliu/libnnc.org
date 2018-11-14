@@ -333,6 +333,25 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv322ccv_cnnp_dataframe_addPC20ccv_cnnp_dataframe_t27ccv_cnnp_column_data_enum_fKi29ccv_cnnp_column_data_deinit_fPCv">
+<span id="_CPPv222ccv_cnnp_dataframe_addPC20ccv_cnnp_dataframe_t27ccv_cnnp_column_data_enum_fKi29ccv_cnnp_column_data_deinit_fPCv"></span><span id="ccv_cnnp_dataframe_add__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_enum_f.iC.ccv_cnnp_column_data_deinit_f.voidPC"></span><span class="target" id="group__level__5__dataframe_1ga4eec64db0ec07b4d5284d20dc026fd00"></span><code class="descname">ccv_cnnp_dataframe_add</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv327ccv_cnnp_column_data_enum_f" title="ccv_cnnp_column_data_enum_f">ccv_cnnp_column_data_enum_f</a> <em>data_enum</em>, <em class="property">const</em> int <em>stream_type</em>, <a class="reference internal" href="#_CPPv329ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>deinit</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_addPC20ccv_cnnp_dataframe_t27ccv_cnnp_column_data_enum_fKi29ccv_cnnp_column_data_deinit_fPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a new column to the dataframe. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The new column index. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object to add column to. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data_enum</span></code>: The data provider function for the new column. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream_type</span></code>: The type of stream context for this derived column. </li>
+<li><code class="docutils literal notranslate"><span class="pre">deinit</span></code>: The deinit function will be used to destroy the derived data. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context that can be used to generate new column. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv">
 <span id="_CPPv222ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv"></span><span id="ccv_cnnp_dataframe_map__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_map_f.iC.ccv_cnnp_column_data_deinit_f.iCPC.iC.voidPC"></span><span class="target" id="group__level__5__dataframe_1ga72d5738b5ddc3516d94e787681d13dac"></span><code class="descname">ccv_cnnp_dataframe_map</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv326ccv_cnnp_column_data_map_f" title="ccv_cnnp_column_data_map_f">ccv_cnnp_column_data_map_f</a> <em>map</em>, <em class="property">const</em> int <em>stream_type</em>, <a class="reference internal" href="#_CPPv329ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>deinit</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Derive a new column out of existing columns in the dataframe. <dl class="docutils">
