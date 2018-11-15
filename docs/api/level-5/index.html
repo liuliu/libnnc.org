@@ -582,8 +582,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv330ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKii">
-<span id="_CPPv230ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKii"></span><span id="ccv_cnnp_dataframe_copy_to_gpu__ccv_cnnp_dataframe_tPC.iC.iC.i"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga4d90311fa2f468c6cc9174aed69ac103"></span><code class="descname">ccv_cnnp_dataframe_copy_to_gpu</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>tensor_size</em>, int <em>device_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv330ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKii" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv330ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKii">
+<span id="_CPPv230ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKii"></span><span id="ccv_cnnp_dataframe_copy_to_gpu__ccv_cnnp_dataframe_tPC.iC.iC.iC.i"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga27ecf511ee6d5a4c04bbe17699d2f5f1"></span><code class="descname">ccv_cnnp_dataframe_copy_to_gpu</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>tensor_offset</em>, <em class="property">const</em> int <em>tensor_size</em>, int <em>device_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv330ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKii" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Derive a new column that copies a tensor array from given column to the derived column on GPU. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The index of the newly derived column. </dd>
@@ -591,6 +591,7 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that get the derived column. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The original column contains tensor array on CPU. </li>
+<li><code class="docutils literal notranslate"><span class="pre">tensor_offset</span></code>: Only copy as outputs[i] = inputs[i + tensor_offset]. </li>
 <li><code class="docutils literal notranslate"><span class="pre">tensor_size</span></code>: How many tensors in the tensor array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">device_id</span></code>: The device we want to copy the tensors to. </li>
 </ul>
@@ -600,8 +601,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv334ccv_cnnp_dataframe_add_aux_tensorsPC20ccv_cnnp_dataframe_tK22ccv_nnc_tensor_param_t">
-<span id="_CPPv234ccv_cnnp_dataframe_add_aux_tensorsPC20ccv_cnnp_dataframe_tK22ccv_nnc_tensor_param_t"></span><span id="ccv_cnnp_dataframe_add_aux_tensors__ccv_cnnp_dataframe_tPC.ccv_nnc_tensor_param_tC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga76cd21822c1fc973c0d861f4786e8a79"></span><code class="descname">ccv_cnnp_dataframe_add_aux_tensors</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv334ccv_cnnp_dataframe_add_aux_tensorsPC20ccv_cnnp_dataframe_tK22ccv_nnc_tensor_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv326ccv_cnnp_dataframe_add_auxPC20ccv_cnnp_dataframe_tK22ccv_nnc_tensor_param_t">
+<span id="_CPPv226ccv_cnnp_dataframe_add_auxPC20ccv_cnnp_dataframe_tK22ccv_nnc_tensor_param_t"></span><span id="ccv_cnnp_dataframe_add_aux__ccv_cnnp_dataframe_tPC.ccv_nnc_tensor_param_tC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga1d201179938b1edc125cb759dcc866f1"></span><code class="descname">ccv_cnnp_dataframe_add_aux</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv326ccv_cnnp_dataframe_add_auxPC20ccv_cnnp_dataframe_tK22ccv_nnc_tensor_param_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Add a new column contains some tensors. This will add a new column that each row is the tensor specified as the parameters. It comes handy when you want to have some auxiliary tensors along with each row. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The index of the newly added column. </dd>
