@@ -14,6 +14,13 @@ Dataframe API
    :content-only:
    :members:
 
+Dataframe Add-ons
+-----------------
+.. doxygengroup:: level_5_dataframe_add_ons
+   :project: libnnc
+   :content-only:
+   :members:
+
 Model API
 ---------
 .. doxygengroup:: level_5_model
