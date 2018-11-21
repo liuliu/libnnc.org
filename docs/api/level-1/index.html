@@ -1139,9 +1139,28 @@
 <dt id="_CPPv320ccv_nnc_device_countKi">
 <span id="_CPPv220ccv_nnc_device_countKi"></span><span id="ccv_nnc_device_count__iC"></span><span class="target" id="group__level__1__stream_1gad7a3f5ffcd39a0b43bf7eb02c4cc5a3b"></span><code class="descname">ccv_nnc_device_count</code><span class="sig-paren">(</span><em class="property">const</em> int <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ccv_nnc_device_countKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return number of devices. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The number of devices. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">type</span></code>: The type of devices (CCV_NNC_STREAM_CONTEXT_GPU / CCV_NNC_STREAM_CONTEXT_CPU) </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv320ccv_nnc_device_remapKiKiKi">
+<span id="_CPPv220ccv_nnc_device_remapKiKiKi"></span><span id="ccv_nnc_device_remap__iC.iC.iC"></span><span class="target" id="group__level__1__stream_1ga02fa2a397bc4b53f0b7ec4032413f10c"></span><code class="descname">ccv_nnc_device_remap</code><span class="sig-paren">(</span><em class="property">const</em> int <em>type</em>, <em class="property">const</em> int <em>source</em>, <em class="property">const</em> int <em>destination</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv320ccv_nnc_device_remapKiKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Remap a source device as the destination device. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if the device remap is successful, -1 if it is not. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">type</span></code>: The type of devices (CCV_NNC_STREAM_CONTEXT_GPU / CCV_NNC_STREAM_CONTEXT_CPU) </li>
+<li><code class="docutils literal notranslate"><span class="pre">source</span></code>: The original device id. </li>
+<li><code class="docutils literal notranslate"><span class="pre">destination</span></code>: The new device id. </li>
 </ul>
 </dd>
 </dl>
