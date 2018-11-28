@@ -993,6 +993,12 @@
 <dd><p>Opaque pointer to the signal object. </p>
 </dd></dl>
 
+<dl class="type">
+<dt id="_CPPv343ccv_nnc_stream_context_neighbor_discovery_f">
+<span id="_CPPv243ccv_nnc_stream_context_neighbor_discovery_f"></span><span id="ccv_nnc_stream_context_neighbor_discovery_f"></span><span class="target" id="group__level__1__stream_1ga1be3a7878a1106ad640440be81d7e55c"></span><em class="property">typedef </em><a class="reference internal" href="#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *(*<code class="descname">ccv_nnc_stream_context_neighbor_discovery_f</code>)<span class="sig-paren">(</span><em class="property">const</em> int device_id, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv343ccv_nnc_stream_context_neighbor_discovery_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The neighbor discovery function that will be called with the device id. </p>
+</dd></dl>
+
 <dl class="function">
 <dt id="_CPPv326ccv_nnc_stream_context_newKi">
 <span id="_CPPv226ccv_nnc_stream_context_newKi"></span><span id="ccv_nnc_stream_context_new__iC"></span><span class="target" id="group__level__1__stream_1gaf459324aa30a98b94bcf2a1155082683"></span><code class="descname">ccv_nnc_stream_context_new</code><span class="sig-paren">(</span><em class="property">const</em> int <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv326ccv_nnc_stream_context_newKi" title="Permalink to this definition">¶</a><br /></dt>
@@ -1161,6 +1167,37 @@
 <li><code class="docutils literal notranslate"><span class="pre">type</span></code>: The type of devices (CCV_NNC_STREAM_CONTEXT_GPU / CCV_NNC_STREAM_CONTEXT_CPU) </li>
 <li><code class="docutils literal notranslate"><span class="pre">source</span></code>: The original device id. </li>
 <li><code class="docutils literal notranslate"><span class="pre">destination</span></code>: The new device id. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv345ccv_nnc_stream_context_set_neighbor_discoveryPC24ccv_nnc_stream_context_t43ccv_nnc_stream_context_neighbor_discovery_fPCv">
+<span id="_CPPv245ccv_nnc_stream_context_set_neighbor_discoveryPC24ccv_nnc_stream_context_t43ccv_nnc_stream_context_neighbor_discovery_fPCv"></span><span id="ccv_nnc_stream_context_set_neighbor_discovery__ccv_nnc_stream_context_tPC.ccv_nnc_stream_context_neighbor_discovery_f.voidPC"></span><span class="target" id="group__level__1__stream_1ga7c47cb47f75d0983cb05eac998ee1a0c"></span>void <code class="descname">ccv_nnc_stream_context_set_neighbor_discovery</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em>, <a class="reference internal" href="#_CPPv343ccv_nnc_stream_context_neighbor_discovery_f" title="ccv_nnc_stream_context_neighbor_discovery_f">ccv_nnc_stream_context_neighbor_discovery_f</a> <em>discovery</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv345ccv_nnc_stream_context_set_neighbor_discoveryPC24ccv_nnc_stream_context_t43ccv_nnc_stream_context_neighbor_discovery_fPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the neighbor stream context discovery mechanism. This method exposes how neighbor should be defined per stream context. This method is useful for commands that operates cross devices and need to find the correct stream context for these devices. Stream context itself is bounded to one device only. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream context that bounds to a discovery mechanism. </li>
+<li><code class="docutils literal notranslate"><span class="pre">discovery</span></code>: The neighbor discovery function to invoke. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: The associated context with the neighbor discovery function. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv336ccv_nnc_stream_context_find_neighborPC24ccv_nnc_stream_context_tKi">
+<span id="_CPPv236ccv_nnc_stream_context_find_neighborPC24ccv_nnc_stream_context_tKi"></span><span id="ccv_nnc_stream_context_find_neighbor__ccv_nnc_stream_context_tPC.iC"></span><span class="target" id="group__level__1__stream_1gae3577090b36e8e9a4f75b8167a5d6ab1"></span><code class="descname">ccv_nnc_stream_context_find_neighbor</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv324ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em>, <em class="property">const</em> int <em>device_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv336ccv_nnc_stream_context_find_neighborPC24ccv_nnc_stream_context_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Find a neighbor stream context on a given device id for current stream context. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if no stream context found. Otherwise, return the stream context on that device. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream context which we will look for neighbors. </li>
+<li><code class="docutils literal notranslate"><span class="pre">device_id</span></code>: On which device the stream context may exist. </li>
 </ul>
 </dd>
 </dl>

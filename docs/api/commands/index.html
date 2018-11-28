@@ -299,6 +299,11 @@
 <dd></dd></dl>
 
 <dl class="enumerator">
+<dt id="_CPPv3N18available_backends24CCV_NNC_BACKEND_GPU_NCCLE">
+<span id="_CPPv2N18available_backends24CCV_NNC_BACKEND_GPU_NCCLE"></span><span class="target" id="group__available__backends_1ggae62fccd8cea8f216b24ba625d404c4aea7178d358973dd0a2d85eccf1241a0dfd"></span><code class="descname">CCV_NNC_BACKEND_GPU_NCCL</code> = 0x7afed9c7<a class="headerlink" href="#_CPPv3N18available_backends24CCV_NNC_BACKEND_GPU_NCCLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
 <dt id="_CPPv3N18available_backends23CCV_NNC_BACKEND_GPU_REFE">
 <span id="_CPPv2N18available_backends23CCV_NNC_BACKEND_GPU_REFE"></span><span class="target" id="group__available__backends_1ggae62fccd8cea8f216b24ba625d404c4aea63e185de5eaf8724c81d373626784ce5"></span><code class="descname">CCV_NNC_BACKEND_GPU_REF</code> = 0x5f19790a<a class="headerlink" href="#_CPPv3N18available_backends23CCV_NNC_BACKEND_GPU_REFE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -310,7 +315,7 @@
 
 <dl class="enumerator">
 <dt id="_CPPv3N18available_backends21CCV_NNC_BACKEND_COUNTE">
-<span id="_CPPv2N18available_backends21CCV_NNC_BACKEND_COUNTE"></span><span class="target" id="group__available__backends_1ggae62fccd8cea8f216b24ba625d404c4aeaec87f0018670aa28892fa0efe3a050a0"></span><code class="descname">CCV_NNC_BACKEND_COUNT</code> = 5<a class="headerlink" href="#_CPPv3N18available_backends21CCV_NNC_BACKEND_COUNTE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv2N18available_backends21CCV_NNC_BACKEND_COUNTE"></span><span class="target" id="group__available__backends_1ggae62fccd8cea8f216b24ba625d404c4aeaec87f0018670aa28892fa0efe3a050a0"></span><code class="descname">CCV_NNC_BACKEND_COUNT</code> = 6<a class="headerlink" href="#_CPPv3N18available_backends21CCV_NNC_BACKEND_COUNTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -432,6 +437,16 @@
 <dl class="macro">
 <dt id="c.CMD_SOFTMAX_BACKWARD">
 <span class="target" id="group__available__commands_1ga4f1ebf4a551475c3cfac57cc8d7f8406"></span><code class="descname">CMD_SOFTMAX_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_SOFTMAX_BACKWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_COMM_ALLREDUCE_FORWARD">
+<span class="target" id="group__available__commands_1gae02d2494873ecde70606700c6359ebaf"></span><code class="descname">CMD_COMM_ALLREDUCE_FORWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_COMM_ALLREDUCE_FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="macro">
+<dt id="c.CMD_COMM_ALLREDUCE_BACKWARD">
+<span class="target" id="group__available__commands_1ga43ff439602c1b5fea5cdf01e7e4c89db"></span><code class="descname">CMD_COMM_ALLREDUCE_BACKWARD</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.CMD_COMM_ALLREDUCE_BACKWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="macro">
@@ -727,6 +742,16 @@
 <dd></dd></dl>
 
 <dl class="enumerator">
+<dt id="_CPPv3N21available_command_ids30CCV_NNC_COMM_ALLREDUCE_FORWARDE">
+<span id="_CPPv2N21available_command_ids30CCV_NNC_COMM_ALLREDUCE_FORWARDE"></span><span class="target" id="group__available__command__ids_1ggaa94c5fdcac6a4b26211b612c3edc04ffa5e435cfa3fe655fdc10d03ecac76227a"></span><code class="descname">CCV_NNC_COMM_ALLREDUCE_FORWARD</code> = 0x75c8d340<a class="headerlink" href="#_CPPv3N21available_command_ids30CCV_NNC_COMM_ALLREDUCE_FORWARDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv3N21available_command_ids31CCV_NNC_COMM_ALLREDUCE_BACKWARDE">
+<span id="_CPPv2N21available_command_ids31CCV_NNC_COMM_ALLREDUCE_BACKWARDE"></span><span class="target" id="group__available__command__ids_1ggaa94c5fdcac6a4b26211b612c3edc04ffa6cb746b185d9626b72962e739adde168"></span><code class="descname">CCV_NNC_COMM_ALLREDUCE_BACKWARD</code> = 0x75c8d341<a class="headerlink" href="#_CPPv3N21available_command_ids31CCV_NNC_COMM_ALLREDUCE_BACKWARDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
 <dt id="_CPPv3N21available_command_ids30CCV_NNC_RANDOM_UNIFORM_FORWARDE">
 <span id="_CPPv2N21available_command_ids30CCV_NNC_RANDOM_UNIFORM_FORWARDE"></span><span class="target" id="group__available__command__ids_1ggaa94c5fdcac6a4b26211b612c3edc04ffa166ede471c7f36dae37cc6be539ecfa1"></span><code class="descname">CCV_NNC_RANDOM_UNIFORM_FORWARD</code> = 0xa0cd1d5e<a class="headerlink" href="#_CPPv3N21available_command_ids30CCV_NNC_RANDOM_UNIFORM_FORWARDE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -878,7 +903,7 @@
 
 <dl class="enumerator">
 <dt id="_CPPv3N21available_command_ids13CCV_NNC_COUNTE">
-<span id="_CPPv2N21available_command_ids13CCV_NNC_COUNTE"></span><span class="target" id="group__available__command__ids_1ggaa94c5fdcac6a4b26211b612c3edc04ffa7caa22dbb6b77120f8e0ac31dc8b6d99"></span><code class="descname">CCV_NNC_COUNT</code> = 55<a class="headerlink" href="#_CPPv3N21available_command_ids13CCV_NNC_COUNTE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv2N21available_command_ids13CCV_NNC_COUNTE"></span><span class="target" id="group__available__command__ids_1ggaa94c5fdcac6a4b26211b612c3edc04ffa7caa22dbb6b77120f8e0ac31dc8b6d99"></span><code class="descname">CCV_NNC_COUNT</code> = 57<a class="headerlink" href="#_CPPv3N21available_command_ids13CCV_NNC_COUNTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>

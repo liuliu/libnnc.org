@@ -297,6 +297,8 @@
 </li>
       <li><a href="../api/commands/#_CPPv3N18available_backends25CCV_NNC_BACKEND_GPU_CUDNNE">available_backends::CCV_NNC_BACKEND_GPU_CUDNN (C++ enumerator)</a>
 </li>
+      <li><a href="../api/commands/#_CPPv3N18available_backends24CCV_NNC_BACKEND_GPU_NCCLE">available_backends::CCV_NNC_BACKEND_GPU_NCCL (C++ enumerator)</a>
+</li>
       <li><a href="../api/commands/#_CPPv3N18available_backends23CCV_NNC_BACKEND_GPU_REFE">available_backends::CCV_NNC_BACKEND_GPU_REF (C++ enumerator)</a>
 </li>
       <li><a href="../api/commands/#_CPPv3N18available_backends18CCV_NNC_NO_BACKENDE">available_backends::CCV_NNC_NO_BACKEND (C++ enumerator)</a>
@@ -318,6 +320,10 @@
       <li><a href="../api/commands/#_CPPv3N21available_command_ids41CCV_NNC_CATEGORICAL_CROSSENTROPY_BACKWARDE">available_command_ids::CCV_NNC_CATEGORICAL_CROSSENTROPY_BACKWARD (C++ enumerator)</a>
 </li>
       <li><a href="../api/commands/#_CPPv3N21available_command_ids40CCV_NNC_CATEGORICAL_CROSSENTROPY_FORWARDE">available_command_ids::CCV_NNC_CATEGORICAL_CROSSENTROPY_FORWARD (C++ enumerator)</a>
+</li>
+      <li><a href="../api/commands/#_CPPv3N21available_command_ids31CCV_NNC_COMM_ALLREDUCE_BACKWARDE">available_command_ids::CCV_NNC_COMM_ALLREDUCE_BACKWARD (C++ enumerator)</a>
+</li>
+      <li><a href="../api/commands/#_CPPv3N21available_command_ids30CCV_NNC_COMM_ALLREDUCE_FORWARDE">available_command_ids::CCV_NNC_COMM_ALLREDUCE_FORWARD (C++ enumerator)</a>
 </li>
       <li><a href="../api/commands/#_CPPv3N21available_command_ids28CCV_NNC_CONVOLUTION_BACKWARDE">available_command_ids::CCV_NNC_CONVOLUTION_BACKWARD (C++ enumerator)</a>
 </li>
@@ -349,10 +355,10 @@
 </li>
       <li><a href="../api/commands/#_CPPv3N21available_command_ids21CCV_NNC_EWLOG_FORWARDE">available_command_ids::CCV_NNC_EWLOG_FORWARD (C++ enumerator)</a>
 </li>
-      <li><a href="../api/commands/#_CPPv3N21available_command_ids23CCV_NNC_EWPROD_BACKWARDE">available_command_ids::CCV_NNC_EWPROD_BACKWARD (C++ enumerator)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="../api/commands/#_CPPv3N21available_command_ids23CCV_NNC_EWPROD_BACKWARDE">available_command_ids::CCV_NNC_EWPROD_BACKWARD (C++ enumerator)</a>
+</li>
       <li><a href="../api/commands/#_CPPv3N21available_command_ids22CCV_NNC_EWPROD_FORWARDE">available_command_ids::CCV_NNC_EWPROD_FORWARD (C++ enumerator)</a>
 </li>
       <li><a href="../api/commands/#_CPPv3N21available_command_ids23CCV_NNC_EWSQRT_BACKWARDE">available_command_ids::CCV_NNC_EWSQRT_BACKWARD (C++ enumerator)</a>
@@ -775,12 +781,12 @@
 </li>
       <li><a href="../api/level-1/#_CPPv324ccv_nnc_hint_tensor_autoK13ccv_nnc_cmd_tPCK22ccv_nnc_tensor_param_tKiK14ccv_nnc_hint_tPC22ccv_nnc_tensor_param_tKi">ccv_nnc_hint_tensor_auto (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/level-1/#_CPPv319ccv_nnc_hint_verifyK14ccv_nnc_hint_tK19ccv_nnc_cmd_param_tK22ccv_nnc_tensor_param_tK22ccv_nnc_tensor_param_t">ccv_nnc_hint_verify (C++ function)</a>
 </li>
       <li><a href="../api/level-0/#_CPPv312ccv_nnc_initv">ccv_nnc_init (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/level-3/#c.CCV_NNC_IS_WHILE_COUNT_TENSOR_SYMBOL">CCV_NNC_IS_WHILE_COUNT_TENSOR_SYMBOL (C macro)</a>
 </li>
       <li><a href="../api/level-3.5/#_CPPv332ccv_nnc_minimizer_saved_aux_sizeK13ccv_nnc_cmd_t">ccv_nnc_minimizer_saved_aux_size (C++ function)</a>
@@ -799,11 +805,17 @@
 </li>
       <li><a href="../api/level-1/#_CPPv334ccv_nnc_stream_context_emit_signalPCK24ccv_nnc_stream_context_tPCK23ccv_nnc_stream_signal_t">ccv_nnc_stream_context_emit_signal (C++ function)</a>
 </li>
+      <li><a href="../api/level-1/#_CPPv336ccv_nnc_stream_context_find_neighborPC24ccv_nnc_stream_context_tKi">ccv_nnc_stream_context_find_neighbor (C++ function)</a>
+</li>
       <li><a href="../api/level-1/#_CPPv327ccv_nnc_stream_context_freePC24ccv_nnc_stream_context_t">ccv_nnc_stream_context_free (C++ function)</a>
 </li>
       <li><a href="../api/level-1/#_CPPv336ccv_nnc_stream_context_get_workspacePC24ccv_nnc_stream_context_tK6size_tKi">ccv_nnc_stream_context_get_workspace (C++ function)</a>
 </li>
+      <li><a href="../api/level-1/#_CPPv343ccv_nnc_stream_context_neighbor_discovery_f">ccv_nnc_stream_context_neighbor_discovery_f (C++ type)</a>
+</li>
       <li><a href="../api/level-1/#_CPPv326ccv_nnc_stream_context_newKi">ccv_nnc_stream_context_new (C++ function)</a>
+</li>
+      <li><a href="../api/level-1/#_CPPv345ccv_nnc_stream_context_set_neighbor_discoveryPC24ccv_nnc_stream_context_t43ccv_nnc_stream_context_neighbor_discovery_fPCv">ccv_nnc_stream_context_set_neighbor_discovery (C++ function)</a>
 </li>
       <li><a href="../api/level-1/#_CPPv324ccv_nnc_stream_context_t">ccv_nnc_stream_context_t (C++ type)</a>
 </li>
@@ -1018,6 +1030,10 @@
       <li><a href="../api/commands/#c.CMD_CATEGORICAL_CROSSENTROPY_BACKWARD">CMD_CATEGORICAL_CROSSENTROPY_BACKWARD (C macro)</a>
 </li>
       <li><a href="../api/commands/#c.CMD_CATEGORICAL_CROSSENTROPY_FORWARD">CMD_CATEGORICAL_CROSSENTROPY_FORWARD (C macro)</a>
+</li>
+      <li><a href="../api/commands/#c.CMD_COMM_ALLREDUCE_BACKWARD">CMD_COMM_ALLREDUCE_BACKWARD (C macro)</a>
+</li>
+      <li><a href="../api/commands/#c.CMD_COMM_ALLREDUCE_FORWARD">CMD_COMM_ALLREDUCE_FORWARD (C macro)</a>
 </li>
       <li><a href="../api/commands/#c.CMD_CONVOLUTION_BACKWARD">CMD_CONVOLUTION_BACKWARD (C macro)</a>
 </li>
