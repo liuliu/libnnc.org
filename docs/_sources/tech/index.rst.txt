@@ -10,3 +10,4 @@ These are articles that explain internal implementations of NNC. These will focu
    nnc-schd.rst
    nnc-dy.rst
    nnc-cnnp.rst
+   nnc-df.rst
