@@ -624,6 +624,104 @@
 </p>
 </dd></dl>
 
+<dl class="function">
+<dt id="_CPPv329ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_t">
+<span id="_CPPv229ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_t"></span><span id="ccv_cnnp_dataframe_read_image__ccv_cnnp_dataframe_tPC.iC.off_tC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga36e102ff76d95e6a51db117a0843cbe0"></span><code class="descname">ccv_cnnp_dataframe_read_image</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> off_t <em>filename_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read image off a said column. That column should contain the filename (as char array). The new column will contain the ccv_dense_matrix_t / ccv_nnc_tensor_t (both are toll-free bridging) of the image. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The index of the newly derived column. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that loads the images. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column which contains the filename. </li>
+<li><code class="docutils literal notranslate"><span class="pre">filename_offset</span></code>: The offset to the filename (as char array) from that column. For example, the column could be a struct and filename could be one of the field. In that case, you can pass offsetof(S, filename) </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv338ccv_cnnp_dataframe_image_random_jitterPC20ccv_cnnp_dataframe_tKiKiK24ccv_cnnp_random_jitter_t">
+<span id="_CPPv238ccv_cnnp_dataframe_image_random_jitterPC20ccv_cnnp_dataframe_tKiKiK24ccv_cnnp_random_jitter_t"></span><span id="ccv_cnnp_dataframe_image_random_jitter__ccv_cnnp_dataframe_tPC.iC.iC.ccv_cnnp_random_jitter_tC"></span><span class="target" id="group__level__5__dataframe__add__ons_1gaade798956c02739a61c79ecb02a43529"></span><code class="descname">ccv_cnnp_dataframe_image_random_jitter</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>datatype</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv324ccv_cnnp_random_jitter_t" title="ccv_cnnp_random_jitter_t">ccv_cnnp_random_jitter_t</a> <em>random_jitter</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv338ccv_cnnp_dataframe_image_random_jitterPC20ccv_cnnp_dataframe_tKiKiK24ccv_cnnp_random_jitter_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Apply random jitter on a image to generate a new image. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The index of the newly derived column. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that contains the original image. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column which contains the original image. </li>
+<li><code class="docutils literal notranslate"><span class="pre">datatype</span></code>: The final datatype of the image. We only support CCV_32F right now. </li>
+<li><code class="docutils literal notranslate"><span class="pre">random_jitter</span></code>: The random jitter parameters to be applied to. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv324ccv_cnnp_random_jitter_t">
+<span id="_CPPv224ccv_cnnp_random_jitter_t"></span><span id="ccv_cnnp_random_jitter_t"></span><span class="target" id="structccv__cnnp__random__jitter__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_random_jitter_t</code><a class="headerlink" href="#_CPPv324ccv_cnnp_random_jitter_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;ccv_nnc.h&gt;</em><p>The structure to describe how to apply random jitter to the image. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t8contrastE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t8contrastE"></span><span id="ccv_cnnp_random_jitter_t::contrast__float"></span><span class="target" id="structccv__cnnp__random__jitter__t_1a334b84e163f40f208aea32f5a2a06eda"></span>float <code class="descname">contrast</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t8contrastE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The random contrast, the final contrast will be 1 - contrast + random_unit * contrast * 2 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t10saturationE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t10saturationE"></span><span id="ccv_cnnp_random_jitter_t::saturation__float"></span><span class="target" id="structccv__cnnp__random__jitter__t_1afb2c607a9ebe89deb0cf4ea6e3ec56bc"></span>float <code class="descname">saturation</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t10saturationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The saturation, the final saturation will be 1 - saturation + random_unit * saturation * 2 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t10brightnessE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t10brightnessE"></span><span id="ccv_cnnp_random_jitter_t::brightness__float"></span><span class="target" id="structccv__cnnp__random__jitter__t_1afdf5d2c9b36fcf9e4dea7aaa9ed2fd51"></span>float <code class="descname">brightness</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t10brightnessE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The brightness, the final brightness will be 1 - brightness + random_unit * brightness * 2 </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t8lightingE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t8lightingE"></span><span id="ccv_cnnp_random_jitter_t::lighting__float"></span><span class="target" id="structccv__cnnp__random__jitter__t_1ad41c56ae01baabc6d7fb8c4d42d57bbe"></span>float <code class="descname">lighting</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t8lightingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>AlexNet style PCA based image jitter </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t9symmetricE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t9symmetricE"></span><span id="ccv_cnnp_random_jitter_t::symmetric__i"></span><span class="target" id="structccv__cnnp__random__jitter__t_1a8da6f60149df4d945bfe0bb04e252d99"></span>int <code class="descname">symmetric</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t9symmetricE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Apply random flip on x-axis (around y-axis </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t3minE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t3minE"></span><span id="ccv_cnnp_random_jitter_t::min__i"></span><span class="target" id="structccv__cnnp__random__jitter__t_1aa18dc337db42c64c2dc50d346642a84a"></span>int <code class="descname">min</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t3minE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The minimal dimension of resize </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t3maxE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t3maxE"></span><span id="ccv_cnnp_random_jitter_t::max__i"></span><span class="target" id="structccv__cnnp__random__jitter__t_1a5777f5454eb645db3746b66c2a202bda"></span>int <code class="descname">max</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t3maxE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The maximal dimension of resize. The final resize can be computed from min + (max - min) * random_unit </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t4rowsE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t4rowsE"></span><span id="ccv_cnnp_random_jitter_t::rows__i"></span><span class="target" id="structccv__cnnp__random__jitter__t_1af3d5d60f46d07c00be2661f48f9adbce"></span>int <code class="descname">rows</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t4rowsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The height of the final image. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv3N24ccv_cnnp_random_jitter_t4colsE">
+<span id="_CPPv2N24ccv_cnnp_random_jitter_t4colsE"></span><span id="ccv_cnnp_random_jitter_t::cols__i"></span><span class="target" id="structccv__cnnp__random__jitter__t_1a313afacd1d5a93a0349d9a31a940cf39"></span>int <code class="descname">cols</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t4colsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The width of the final image. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </div>
 <div class="section" id="model-api">
 <h2>Model API<a class="headerlink" href="#model-api" title="Permalink to this headline">¶</a></h2>
