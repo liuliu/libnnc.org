@@ -676,7 +676,7 @@
 
 <dl class="function">
 <dt id="_CPPv329ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_t">
-<span id="_CPPv229ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_t"></span><span id="ccv_cnnp_dataframe_read_image__ccv_cnnp_dataframe_tPC.iC.off_tC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga36e102ff76d95e6a51db117a0843cbe0"></span><code class="descname">ccv_cnnp_dataframe_read_image</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> off_t <em>filename_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_t" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv229ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_t"></span><span id="ccv_cnnp_dataframe_read_image__ccv_cnnp_dataframe_tPC.iC.off_tC"></span><span class="target" id="group__level__5__dataframe__add__ons_1gaa60a24edb1114a3a866031a7244d4d8e"></span><code class="descname">ccv_cnnp_dataframe_read_image</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> off_t <em>structof</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read image off a said column. That column should contain the filename (as char array). The new column will contain the ccv_dense_matrix_t / ccv_nnc_tensor_t (both are toll-free bridging) of the image. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The index of the newly derived column. </dd>
@@ -684,7 +684,7 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that loads the images. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column which contains the filename. </li>
-<li><code class="docutils literal notranslate"><span class="pre">filename_offset</span></code>: The offset to the filename (as char array) from that column. For example, the column could be a struct and filename could be one of the field. In that case, you can pass offsetof(S, filename) </li>
+<li><code class="docutils literal notranslate"><span class="pre">structof</span></code>: The offset to the filename (as char array) from that column. For example, the column could be a struct and filename could be one of the field. In that case, you can pass offsetof(S, filename) </li>
 </ul>
 </dd>
 </dl>
@@ -703,6 +703,28 @@
 <li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column which contains the original image. </li>
 <li><code class="docutils literal notranslate"><span class="pre">datatype</span></code>: The final datatype of the image. We only support CCV_32F right now. </li>
 <li><code class="docutils literal notranslate"><span class="pre">random_jitter</span></code>: The random jitter parameters to be applied to. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv326ccv_cnnp_dataframe_one_hotPC20ccv_cnnp_dataframe_tKiK5off_tKiKfKfKiKi">
+<span id="_CPPv226ccv_cnnp_dataframe_one_hotPC20ccv_cnnp_dataframe_tKiK5off_tKiKfKfKiKi"></span><span id="ccv_cnnp_dataframe_one_hot__ccv_cnnp_dataframe_tPC.iC.off_tC.iC.floatC.floatC.iC.iC"></span><span class="target" id="group__level__5__dataframe__add__ons_1gacd720418fa0de407edc0cd910d2437fa"></span><code class="descname">ccv_cnnp_dataframe_one_hot</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> off_t <em>structof</em>, <em class="property">const</em> int <em>range</em>, <em class="property">const</em> float <em>onval</em>, <em class="property">const</em> float <em>offval</em>, <em class="property">const</em> int <em>datatype</em>, <em class="property">const</em> int <em>format</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv326ccv_cnnp_dataframe_one_hotPC20ccv_cnnp_dataframe_tKiK5off_tKiKfKfKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generate a one-hot tensor off the label from a struct. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The index of the newly derived column. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that contains the label. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column which contains the label (as int). </li>
+<li><code class="docutils literal notranslate"><span class="pre">structof</span></code>: The offset to the label (as int) from that column. For example, the column could be a struct and label could be one of the field. You can pass offsetof(S, filename) </li>
+<li><code class="docutils literal notranslate"><span class="pre">range</span></code>: The range of the label, from [0…range - 1] </li>
+<li><code class="docutils literal notranslate"><span class="pre">onval</span></code>: The value when it hit. </li>
+<li><code class="docutils literal notranslate"><span class="pre">offval</span></code>: The value for the others. </li>
+<li><code class="docutils literal notranslate"><span class="pre">datatype</span></code>: The datatype of the tensor. </li>
+<li><code class="docutils literal notranslate"><span class="pre">format</span></code>: The format of the tensor. </li>
 </ul>
 </dd>
 </dl>
