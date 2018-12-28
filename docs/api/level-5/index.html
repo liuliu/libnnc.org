@@ -439,6 +439,56 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv329ccv_cnnp_dataframe_make_tuplePC20ccv_cnnp_dataframe_tPCKiKi">
+<span id="_CPPv229ccv_cnnp_dataframe_make_tuplePC20ccv_cnnp_dataframe_tPCKiKi"></span><span id="ccv_cnnp_dataframe_make_tuple__ccv_cnnp_dataframe_tPC.iCPC.iC"></span><span class="target" id="group__level__5__dataframe_1ga26087046c2a49547623a092da4b6d25a"></span><code class="descname">ccv_cnnp_dataframe_make_tuple</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_make_tuplePC20ccv_cnnp_dataframe_tPCKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Make a tuple out of columns specified. Thus, the new derived column will contains a tuple with data from all the columns specified here. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The derived column with the tuple. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe that will contain the new column. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idxs</span></code>: The columns to be tupled. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx_size</span></code>: The number of columns. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv329ccv_cnnp_dataframe_tuple_sizePCK20ccv_cnnp_dataframe_tKi">
+<span id="_CPPv229ccv_cnnp_dataframe_tuple_sizePCK20ccv_cnnp_dataframe_tKi"></span><span id="ccv_cnnp_dataframe_tuple_size__ccv_cnnp_dataframe_tCPC.iC"></span><span class="target" id="group__level__5__dataframe_1ga89827021bad22b4b61d0f285d43e22d2"></span><code class="descname">ccv_cnnp_dataframe_tuple_size</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_tuple_sizePCK20ccv_cnnp_dataframe_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The size of the tuple. It is equal to the number of columns we specified. The behavior of calling this method on a column that is not a tuple is undefined. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The tuple size of the column. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe that contains the tuple column. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The tuple column we are going to inspect. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv332ccv_cnnp_dataframe_extract_tuplePC20ccv_cnnp_dataframe_tKiKi">
+<span id="_CPPv232ccv_cnnp_dataframe_extract_tuplePC20ccv_cnnp_dataframe_tKiKi"></span><span id="ccv_cnnp_dataframe_extract_tuple__ccv_cnnp_dataframe_tPC.iC.iC"></span><span class="target" id="group__level__5__dataframe_1ga18fcfe229227f5c9ff60b59f2a5ef55f"></span><code class="descname">ccv_cnnp_dataframe_extract_tuple</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv332ccv_cnnp_dataframe_extract_tuplePC20ccv_cnnp_dataframe_tKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Extract a data out of a tuple. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The derived column with the extracted value. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe that will contain the new column. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column that is a tuple. </li>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index into the tuple. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv327ccv_cnnp_dataframe_iter_newPC20ccv_cnnp_dataframe_tPCKiKi">
 <span id="_CPPv227ccv_cnnp_dataframe_iter_newPC20ccv_cnnp_dataframe_tPCKiKi"></span><span id="ccv_cnnp_dataframe_iter_new__ccv_cnnp_dataframe_tPC.iCPC.iC"></span><span class="target" id="group__level__5__dataframe_1gad57de96b979c774d26b7ae8262c50c53"></span><code class="descname">ccv_cnnp_dataframe_iter_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv327ccv_cnnp_dataframe_iter_newPC20ccv_cnnp_dataframe_tPCKiKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get a new iterator of the dataframe. <dl class="docutils">
