@@ -439,6 +439,23 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv332ccv_cnnp_dataframe_extract_valuePC20ccv_cnnp_dataframe_tKiK5off_t">
+<span id="_CPPv232ccv_cnnp_dataframe_extract_valuePC20ccv_cnnp_dataframe_tKiK5off_t"></span><span id="ccv_cnnp_dataframe_extract_value__ccv_cnnp_dataframe_tPC.iC.off_tC"></span><span class="target" id="group__level__5__dataframe_1ga34aa9f102af80f7ba6ff6026dcad06d6"></span><code class="descname">ccv_cnnp_dataframe_extract_value</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> off_t <em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv332ccv_cnnp_dataframe_extract_valuePC20ccv_cnnp_dataframe_tKiK5off_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Extract a value out of a struct. Assuming the data points to a struct. This method extract n-offset value of that struct. For example, if you have struct { ccv_nnc_tensor_t* a; ccv_nnc_tensor_t* b; } S; if you want to extract the b tensor to a different column, you can call this function with offsetof(S, b). <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The new column that contains the extracted value. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object to be extracted. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column that we want to extract value of. </li>
+<li><code class="docutils literal notranslate"><span class="pre">offset</span></code>: The offset. For example, offsetof(S, b). </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv329ccv_cnnp_dataframe_make_tuplePC20ccv_cnnp_dataframe_tPCKiKi">
 <span id="_CPPv229ccv_cnnp_dataframe_make_tuplePC20ccv_cnnp_dataframe_tPCKiKi"></span><span id="ccv_cnnp_dataframe_make_tuple__ccv_cnnp_dataframe_tPC.iCPC.iC"></span><span class="target" id="group__level__5__dataframe_1ga26087046c2a49547623a092da4b6d25a"></span><code class="descname">ccv_cnnp_dataframe_make_tuple</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv320ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv329ccv_cnnp_dataframe_make_tuplePC20ccv_cnnp_dataframe_tPCKiKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Make a tuple out of columns specified. Thus, the new derived column will contains a tuple with data from all the columns specified here. Tuple here represented as void* tuple[], an array of void* pointers. <dl class="docutils">
