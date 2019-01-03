@@ -778,19 +778,19 @@
 <dl class="member">
 <dt id="_CPPv3N24ccv_cnnp_random_jitter_t8contrastE">
 <span id="_CPPv2N24ccv_cnnp_random_jitter_t8contrastE"></span><span id="ccv_cnnp_random_jitter_t::contrast__float"></span><span class="target" id="structccv__cnnp__random__jitter__t_1a334b84e163f40f208aea32f5a2a06eda"></span>float <code class="descname">contrast</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t8contrastE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The random contrast, the final contrast will be 1 - contrast + random_unit * contrast * 2 </p>
+<dd><p>The random contrast, the final contrast will be [1 / (1 + contrast), 1 + contrast] </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv3N24ccv_cnnp_random_jitter_t10saturationE">
 <span id="_CPPv2N24ccv_cnnp_random_jitter_t10saturationE"></span><span id="ccv_cnnp_random_jitter_t::saturation__float"></span><span class="target" id="structccv__cnnp__random__jitter__t_1afb2c607a9ebe89deb0cf4ea6e3ec56bc"></span>float <code class="descname">saturation</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t10saturationE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The saturation, the final saturation will be 1 - saturation + random_unit * saturation * 2 </p>
+<dd><p>The saturation, the final saturation will be [1 / (1 + saturation), 1 + saturation] </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv3N24ccv_cnnp_random_jitter_t10brightnessE">
 <span id="_CPPv2N24ccv_cnnp_random_jitter_t10brightnessE"></span><span id="ccv_cnnp_random_jitter_t::brightness__float"></span><span class="target" id="structccv__cnnp__random__jitter__t_1afdf5d2c9b36fcf9e4dea7aaa9ed2fd51"></span>float <code class="descname">brightness</code><a class="headerlink" href="#_CPPv3N24ccv_cnnp_random_jitter_t10brightnessE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The brightness, the final brightness will be 1 - brightness + random_unit * brightness * 2 </p>
+<dd><p>The brightness, the final brightness will be between [1 / (1 + brightness), 1 + brightness] </p>
 </dd></dl>
 
 <dl class="member">
