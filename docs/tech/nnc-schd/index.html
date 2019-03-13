@@ -146,6 +146,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#map">Map</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#reduce">Reduce</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#others">Others</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-df/#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
 </ul>
 </li>
 </ul>
@@ -281,7 +282,7 @@
             
   <div class="section" id="nnc-static-schedule-a-graph">
 <h1>NNC Static Schedule A Graph<a class="headerlink" href="#nnc-static-schedule-a-graph" title="Permalink to this headline">¶</a></h1>
-<p>A concrete graph runs in topological order sequentially when you invoke <a class="reference internal" href="../../api/level-2/#_CPPv317ccv_nnc_graph_runPC15ccv_nnc_graph_tPC21ccv_nnc_tensor_tape_tPC24ccv_nnc_stream_context_tKiPCK20ccv_nnc_graph_exec_tKiPCK20ccv_nnc_graph_exec_tKi" title="ccv_nnc_graph_run"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_graph_run</span></code></a>. Thus, all dependencies executed before the subsequent command got executed. This default behavior doesn’t leverage massive parallelism built in today’s CPU / GPU environment, leaves too much computation power on the table.</p>
+<p>A concrete graph runs in topological order sequentially when you invoke <a class="reference internal" href="../../api/level-2/#_CPPv417ccv_nnc_graph_runPC15ccv_nnc_graph_tPC21ccv_nnc_tensor_tape_tPC24ccv_nnc_stream_context_tKiPCK20ccv_nnc_graph_exec_tKiPCK20ccv_nnc_graph_exec_tKi" title="ccv_nnc_graph_run"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_graph_run</span></code></a>. Thus, all dependencies executed before the subsequent command got executed. This default behavior doesn’t leverage massive parallelism built in today’s CPU / GPU environment, leaves too much computation power on the table.</p>
 <p>NNC supports to static schedule a graph such that all the parallelism are utilized. That’s been said, <strong>static scheduling</strong> shouldn’t be confused with <strong>automatic parallelization</strong>. The later term suggests to turn a non-parallelizable graph into a parallelizable ones by adding additional data transfers or graph transformations. <strong>Static scheduling</strong> considers dependencies of a command, and try to schedule independent commands onto different streams.</p>
 <div class="section" id="stream">
 <h2>Stream<a class="headerlink" href="#stream" title="Permalink to this headline">¶</a></h2>
@@ -360,7 +361,7 @@
       <script type="text/javascript" src="../../_static/jquery.js"></script>
       <script type="text/javascript" src="../../_static/underscore.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
 
   
 
