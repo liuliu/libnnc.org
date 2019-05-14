@@ -658,8 +658,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv430ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKii">
-<span id="_CPPv330ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKii"></span><span id="_CPPv230ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKii"></span><span id="ccv_cnnp_dataframe_copy_to_gpu__ccv_cnnp_dataframe_tPC.iC.iC.iC.i"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga27ecf511ee6d5a4c04bbe17699d2f5f1"></span><code class="descname">ccv_cnnp_dataframe_copy_to_gpu</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>tensor_offset</em>, <em class="property">const</em> int <em>tensor_size</em>, int <em>device_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKii" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv430ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKiKi">
+<span id="_CPPv330ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKiKi"></span><span id="_CPPv230ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKiKi"></span><span id="ccv_cnnp_dataframe_copy_to_gpu__ccv_cnnp_dataframe_tPC.iC.iC.iC.iC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga41ff6fb01cd31c01eb1cbf2bd4a0f280"></span><code class="descname">ccv_cnnp_dataframe_copy_to_gpu</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>tensor_offset</em>, <em class="property">const</em> int <em>tensor_size</em>, <em class="property">const</em> int <em>device_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430ccv_cnnp_dataframe_copy_to_gpuPC20ccv_cnnp_dataframe_tKiKiKiKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Derive a new column that copies a tensor array from given column to the derived column on GPU. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The index of the newly derived column. </dd>
@@ -670,6 +670,28 @@
 <li><code class="docutils literal notranslate"><span class="pre">tensor_offset</span></code>: Only copy as outputs[i] = inputs[i + tensor_offset]. </li>
 <li><code class="docutils literal notranslate"><span class="pre">tensor_size</span></code>: How many tensors in the tensor array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">device_id</span></code>: The device we want to copy the tensors to. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv427ccv_cnnp_dataframe_cmd_execPC20ccv_cnnp_dataframe_tKiK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiKiKiPCK22ccv_nnc_tensor_param_tKiKi">
+<span id="_CPPv327ccv_cnnp_dataframe_cmd_execPC20ccv_cnnp_dataframe_tKiK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiKiKiPCK22ccv_nnc_tensor_param_tKiKi"></span><span id="_CPPv227ccv_cnnp_dataframe_cmd_execPC20ccv_cnnp_dataframe_tKiK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiKiKiPCK22ccv_nnc_tensor_param_tKiKi"></span><span id="ccv_cnnp_dataframe_cmd_exec__ccv_cnnp_dataframe_tPC.iC.ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.iC.iC.ccv_nnc_tensor_param_tCPC.iC.iC"></span><span class="target" id="group__level__5__dataframe__add__ons_1gac6f34e0ba664964910e06ec16b8f843c"></span><code class="descname">ccv_cnnp_dataframe_cmd_exec</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <em class="property">const</em> int <em>input_offset</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> ccv_nnc_tensor_param_t *<em class="property">const</em> <em>output_params</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> int <em>stream_type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427ccv_cnnp_dataframe_cmd_execPC20ccv_cnnp_dataframe_tKiK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiKiKiPCK22ccv_nnc_tensor_param_tKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Derive a new column by executing a generic command. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that get the derived column. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The original column contains tensor array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The command for this operation. </li>
+<li><code class="docutils literal notranslate"><span class="pre">hint</span></code>: The hint to run the command. </li>
+<li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: The flags with the command. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_offset</span></code>: Use inputs[i + input_offset] to inputs[i + input_offset + input_size - 1] as the inputs </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: How many tensors in the input array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">output_params</span></code>: The parameters for the outputs. </li>
+<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: How many tensors in the output array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream_type</span></code>: The type of stream context we are going to use. </li>
 </ul>
 </dd>
 </dl>
@@ -872,91 +894,91 @@
 <div class="section" id="model-api">
 <h2>Model API<a class="headerlink" href="#model-api" title="Permalink to this headline">¶</a></h2>
 <dl class="type">
-<dt id="_CPPv4N13level_5_model13__anonymous99E">
-<span id="_CPPv3N13level_5_model13__anonymous99E"></span><span id="_CPPv2N13level_5_model13__anonymous99E"></span><span id="level_5_model::__anonymous99"></span><span class="target" id="group__level__5__model_1ga2d5492e116eebd5075f247d21fb9db26"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous99</code><a class="headerlink" href="#_CPPv4N13level_5_model13__anonymous99E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model14__anonymous102E">
+<span id="_CPPv3N13level_5_model14__anonymous102E"></span><span id="_CPPv2N13level_5_model14__anonymous102E"></span><span id="level_5_model::__anonymous102"></span><span class="target" id="group__level__5__model_1ga7ee8d0f117a79ca7eb1e0076a9182bcb"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous102</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous102E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE">
-<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span class="target" id="group__level__5__model_1gga2d5492e116eebd5075f247d21fb9db26a8611ffeaa0db7b1d6ebeb3bd931d2e17"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcba8611ffeaa0db7b1d6ebeb3bd931d2e17"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This is the default flag, if the model is not initialized, will attempt to read from the disk. Otherwise, will persist existing parameters to disk. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE">
-<span id="_CPPv3N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span id="_CPPv2N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span class="target" id="group__level__5__model_1gga2d5492e116eebd5075f247d21fb9db26a9b371ebc4c047fb6bef78e16c0f34359"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span id="_CPPv2N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcba9b371ebc4c047fb6bef78e16c0f34359"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Only read parameters out of disk, even it is already initialized. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE">
-<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span class="target" id="group__level__5__model_1gga2d5492e116eebd5075f247d21fb9db26af62171f6c646550adbf616eb6f162c53"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcbaf62171f6c646550adbf616eb6f162c53"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Only write parameters to disk. </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="type">
-<dt id="_CPPv4N13level_5_model14__anonymous100E">
-<span id="_CPPv3N13level_5_model14__anonymous100E"></span><span id="_CPPv2N13level_5_model14__anonymous100E"></span><span id="level_5_model::__anonymous100"></span><span class="target" id="group__level__5__model_1ga73c53bacb25588538843a1dcfe5f382b"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous100</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous100E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model14__anonymous103E">
+<span id="_CPPv3N13level_5_model14__anonymous103E"></span><span id="_CPPv2N13level_5_model14__anonymous103E"></span><span id="level_5_model::__anonymous103"></span><span class="target" id="group__level__5__model_1gac34c4c978f4130a92a5068f9e21ea9fc"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous103</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous103E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_NONEE">
-<span id="_CPPv3N13level_5_model24CCV_CNNP_ACTIVATION_NONEE"></span><span id="_CPPv2N13level_5_model24CCV_CNNP_ACTIVATION_NONEE"></span><span class="target" id="group__level__5__model_1gga73c53bacb25588538843a1dcfe5f382ba1fe52204d0800b627cef036d66c09cec"></span><code class="descname">CCV_CNNP_ACTIVATION_NONE</code><a class="headerlink" href="#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_NONEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model24CCV_CNNP_ACTIVATION_NONEE"></span><span id="_CPPv2N13level_5_model24CCV_CNNP_ACTIVATION_NONEE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fca1fe52204d0800b627cef036d66c09cec"></span><code class="descname">CCV_CNNP_ACTIVATION_NONE</code><a class="headerlink" href="#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_NONEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_RELUE">
-<span id="_CPPv3N13level_5_model24CCV_CNNP_ACTIVATION_RELUE"></span><span id="_CPPv2N13level_5_model24CCV_CNNP_ACTIVATION_RELUE"></span><span class="target" id="group__level__5__model_1gga73c53bacb25588538843a1dcfe5f382ba451e5fcc445723ecc649829ca05e7e0f"></span><code class="descname">CCV_CNNP_ACTIVATION_RELU</code><a class="headerlink" href="#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_RELUE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model24CCV_CNNP_ACTIVATION_RELUE"></span><span id="_CPPv2N13level_5_model24CCV_CNNP_ACTIVATION_RELUE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fca451e5fcc445723ecc649829ca05e7e0f"></span><code class="descname">CCV_CNNP_ACTIVATION_RELU</code><a class="headerlink" href="#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_RELUE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE">
-<span id="_CPPv3N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span id="_CPPv2N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span class="target" id="group__level__5__model_1gga73c53bacb25588538843a1dcfe5f382ba2b4f5ea39f62ee5d074da78585cfabcd"></span><code class="descname">CCV_CNNP_ACTIVATION_SOFTMAX</code><a class="headerlink" href="#_CPPv4N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span id="_CPPv2N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fca2b4f5ea39f62ee5d074da78585cfabcd"></span><code class="descname">CCV_CNNP_ACTIVATION_SOFTMAX</code><a class="headerlink" href="#_CPPv4N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="type">
-<dt id="_CPPv4N13level_5_model14__anonymous101E">
-<span id="_CPPv3N13level_5_model14__anonymous101E"></span><span id="_CPPv2N13level_5_model14__anonymous101E"></span><span id="level_5_model::__anonymous101"></span><span class="target" id="group__level__5__model_1ga26e1124d33b4acdb532c49f6498df549"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous101</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous101E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model14__anonymous104E">
+<span id="_CPPv3N13level_5_model14__anonymous104E"></span><span id="_CPPv2N13level_5_model14__anonymous104E"></span><span id="level_5_model::__anonymous104"></span><span class="target" id="group__level__5__model_1ga10e74d65d7876276a8f6061c71dcf469"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous104</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous104E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model16CCV_CNNP_NO_NORME">
-<span id="_CPPv3N13level_5_model16CCV_CNNP_NO_NORME"></span><span id="_CPPv2N13level_5_model16CCV_CNNP_NO_NORME"></span><span class="target" id="group__level__5__model_1gga26e1124d33b4acdb532c49f6498df549abc2e0712dbc28f04a21765334227b257"></span><code class="descname">CCV_CNNP_NO_NORM</code><a class="headerlink" href="#_CPPv4N13level_5_model16CCV_CNNP_NO_NORME" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model16CCV_CNNP_NO_NORME"></span><span id="_CPPv2N13level_5_model16CCV_CNNP_NO_NORME"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469abc2e0712dbc28f04a21765334227b257"></span><code class="descname">CCV_CNNP_NO_NORM</code><a class="headerlink" href="#_CPPv4N13level_5_model16CCV_CNNP_NO_NORME" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model19CCV_CNNP_BATCH_NORME">
-<span id="_CPPv3N13level_5_model19CCV_CNNP_BATCH_NORME"></span><span id="_CPPv2N13level_5_model19CCV_CNNP_BATCH_NORME"></span><span class="target" id="group__level__5__model_1gga26e1124d33b4acdb532c49f6498df549ada7885abc6e2b1a10be88c4877d88190"></span><code class="descname">CCV_CNNP_BATCH_NORM</code><a class="headerlink" href="#_CPPv4N13level_5_model19CCV_CNNP_BATCH_NORME" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model19CCV_CNNP_BATCH_NORME"></span><span id="_CPPv2N13level_5_model19CCV_CNNP_BATCH_NORME"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469ada7885abc6e2b1a10be88c4877d88190"></span><code class="descname">CCV_CNNP_BATCH_NORM</code><a class="headerlink" href="#_CPPv4N13level_5_model19CCV_CNNP_BATCH_NORME" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="type">
-<dt id="_CPPv4N13level_5_model14__anonymous102E">
-<span id="_CPPv3N13level_5_model14__anonymous102E"></span><span id="_CPPv2N13level_5_model14__anonymous102E"></span><span id="level_5_model::__anonymous102"></span><span class="target" id="group__level__5__model_1ga7ee8d0f117a79ca7eb1e0076a9182bcb"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous102</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous102E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model14__anonymous105E">
+<span id="_CPPv3N13level_5_model14__anonymous105E"></span><span id="_CPPv2N13level_5_model14__anonymous105E"></span><span id="level_5_model::__anonymous105"></span><span class="target" id="group__level__5__model_1ga1f3b6c692395e5007ff47ce5d9304c1c"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous105</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous105E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model11CCV_CNNP_IOE">
-<span id="_CPPv3N13level_5_model11CCV_CNNP_IOE"></span><span id="_CPPv2N13level_5_model11CCV_CNNP_IOE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcba40070937b4589dc10c1872cbe9494f13"></span><code class="descname">CCV_CNNP_IO</code><a class="headerlink" href="#_CPPv4N13level_5_model11CCV_CNNP_IOE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model11CCV_CNNP_IOE"></span><span id="_CPPv2N13level_5_model11CCV_CNNP_IOE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1ca40070937b4589dc10c1872cbe9494f13"></span><code class="descname">CCV_CNNP_IO</code><a class="headerlink" href="#_CPPv4N13level_5_model11CCV_CNNP_IOE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a ccv_cnnp_io_t. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model18CCV_CNNP_NO_TENSORE">
-<span id="_CPPv3N13level_5_model18CCV_CNNP_NO_TENSORE"></span><span id="_CPPv2N13level_5_model18CCV_CNNP_NO_TENSORE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcba65c36f202728324331c751665f7b0801"></span><code class="descname">CCV_CNNP_NO_TENSOR</code><a class="headerlink" href="#_CPPv4N13level_5_model18CCV_CNNP_NO_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model18CCV_CNNP_NO_TENSORE"></span><span id="_CPPv2N13level_5_model18CCV_CNNP_NO_TENSORE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1ca65c36f202728324331c751665f7b0801"></span><code class="descname">CCV_CNNP_NO_TENSOR</code><a class="headerlink" href="#_CPPv4N13level_5_model18CCV_CNNP_NO_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is not used. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE">
-<span id="_CPPv3N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE"></span><span id="_CPPv2N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcba0956b88066a5bff5b38b5bcbc2bf0a5e"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR</code><a class="headerlink" href="#_CPPv4N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE"></span><span id="_CPPv2N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1ca0956b88066a5bff5b38b5bcbc2bf0a5e"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR</code><a class="headerlink" href="#_CPPv4N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a provided tensor for initialization. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE">
-<span id="_CPPv3N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span id="_CPPv2N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcba2bd3cb39cbaa3add603ddf0eeb74b6c4"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE</code><a class="headerlink" href="#_CPPv4N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span id="_CPPv2N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1ca2bd3cb39cbaa3add603ddf0eeb74b6c4"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE</code><a class="headerlink" href="#_CPPv4N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a provided tensor that can be updated. </p>
 </dd></dl>
 
@@ -1053,14 +1075,15 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv418ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiP4FILE">
-<span id="_CPPv318ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiP4FILE"></span><span id="_CPPv218ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiP4FILE"></span><span id="ccv_cnnp_model_dot__ccv_cnnp_model_tCPC.iC.FILEP"></span><span class="target" id="group__level__5__model_1gaf436a84fec13b46ed73a49f621db798d"></span>void <code class="descname">ccv_cnnp_model_dot</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>flags</em>, FILE *<em>out</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiP4FILE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv418ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiPCP4FILEKi">
+<span id="_CPPv318ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiPCP4FILEKi"></span><span id="_CPPv218ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiPCP4FILEKi"></span><span id="ccv_cnnp_model_dot__ccv_cnnp_model_tCPC.iC.FILEPPC.iC"></span><span class="target" id="group__level__5__model_1gab85f2705cb2cebbc877e4d1cb4bf8c3f"></span>void <code class="descname">ccv_cnnp_model_dot</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>flags</em>, FILE **<em class="property">const</em> <em>outs</em>, <em class="property">const</em> int <em>out_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ccv_cnnp_model_dotPCK16ccv_cnnp_model_tKiPCP4FILEKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Generate output that can be parsed by GraphViz (DOT language). <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
 <li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: Either CCV_NNC_SHORT_DOT_GRAPH or CCV_NNC_LONG_DOT_GRAPH </li>
-<li><code class="docutils literal notranslate"><span class="pre">out</span></code>: The output file stream. </li>
+<li><code class="docutils literal notranslate"><span class="pre">outs</span></code>: The output file streams. </li>
+<li><code class="docutils literal notranslate"><span class="pre">out_size</span></code>: The size of output file stream array. </li>
 </ul>
 </dd>
 </dl>
