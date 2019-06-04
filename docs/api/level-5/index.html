@@ -996,6 +996,12 @@
 <dd><p>With this type, now in NNC, we have 4 types that represents a “tensor”: ccv_nnc_tensor_t / ccv_nnc_tensor_view_t / ccv_nnc_tensor_multiview_t: a concrete tensor with memory allocated. ccv_nnc_tensor_symbol_t: a symbol representation of a tensor, with its data layout, device affinity, and type specified. ccv_nnc_tensor_variable_t: in dynamic graph, this represents a concrete tensor with memory allocated, but also associated with a recorded execution. ccv_cnnp_model_io_t: this is the most flexible one. No data layout, device affinity or type specified, the format has to be c / h / w, no batch size needed. This is a handle used by model API to associates model inputs / outputs. </p>
 </dd></dl>
 
+<dl class="type">
+<dt id="_CPPv430ccv_cnnp_model_minimizer_set_f">
+<span id="_CPPv330ccv_cnnp_model_minimizer_set_f"></span><span id="_CPPv230ccv_cnnp_model_minimizer_set_f"></span><span id="ccv_cnnp_model_minimizer_set_f"></span><span class="target" id="group__level__5__model_1gaaca4a333b5913ea572a5636c91c805ff"></span><em class="property">typedef </em><a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> (*<code class="descname">ccv_cnnp_model_minimizer_set_f</code>)<span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> model, <em class="property">const</em> <a class="reference internal" href="#_CPPv426ccv_cnnp_trainable_index_t" title="ccv_cnnp_trainable_index_t">ccv_cnnp_trainable_index_t</a> *<em class="property">const</em> indexes, <em class="property">const</em> int index_size, <em class="property">const</em> void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430ccv_cnnp_model_minimizer_set_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The setter function prototype for ccv_cnnp_model_set_minimizer. This is useful because it helps to set different minimizer parameters for different trainables. The example would be disable weight decay for bias / scale variables. If I expand this idea a bit, I can also support for different trainables, have entirely different minimizer function. However, I haven’t seen anything that can be trained with different minimizer (most likely due to epoch updates learn rate, therefore, it is hard to manipulate proper learn rate if different minimizers are used for different trainables at the same time). If there is a model does that, I can add that (need some thinking though). Because we cannot attach names to it (hmm, in retrospect, we probably should), the way we identify the trainables is to through which node it is used (by the command type), and in which position. Also, it is only interesting if the trainable is the input of some command. Therefore, only show it if it is an input. </p>
+</dd></dl>
+
 <dl class="function">
 <dt id="_CPPv414ccv_cnnp_inputv">
 <span id="_CPPv314ccv_cnnp_inputv"></span><span id="_CPPv214ccv_cnnp_inputv"></span><span id="ccv_cnnp_input__void"></span><span class="target" id="group__level__5__model_1ga4bc4fb92bf62272e9d59984c3deed14c"></span><code class="descname">ccv_cnnp_input</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_inputv" title="Permalink to this definition">¶</a><br /></dt>
@@ -1205,13 +1211,15 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_t">
-<span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_t"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_t"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC"></span><span class="target" id="group__level__5__model_1ga9eb5948fb3747988d38a58ba0210cd5e"></span>void <code class="descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tK30ccv_cnnp_model_minimizer_set_fPCKv">
+<span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tK30ccv_cnnp_model_minimizer_set_fPCKv"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tK30ccv_cnnp_model_minimizer_set_fPCKv"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.ccv_cnnp_model_minimizer_set_fC.voidCPC"></span><span class="target" id="group__level__5__model_1ga5ff043ff17bcd6be599f66af1d4da307"></span>void <code class="descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv430ccv_cnnp_model_minimizer_set_f" title="ccv_cnnp_model_minimizer_set_f">ccv_cnnp_model_minimizer_set_f</a> <em>minimizer_setter</em>, <em class="property">const</em> void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tK30ccv_cnnp_model_minimizer_set_fPCKv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set a new minimizer for the model. This is useful when you need to update learn rate for stochastic gradient descent for example. This method can be called any time during the training process (after compilation). <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
 <li><code class="docutils literal notranslate"><span class="pre">minimizer</span></code>: The wrapped command that represents a new optimization strategy. </li>
+<li><code class="docutils literal notranslate"><span class="pre">minimizer_setter</span></code>: The function to be called to return minimizer for a particular trainable. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context passed to the minimizer setter function. </li>
 </ul>
 </dd>
 </dl>
@@ -1454,6 +1462,12 @@
 </dd></dl>
 
 </div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv426ccv_cnnp_trainable_index_t">
+<span id="_CPPv326ccv_cnnp_trainable_index_t"></span><span id="_CPPv226ccv_cnnp_trainable_index_t"></span><span id="ccv_cnnp_trainable_index_t"></span><span class="target" id="structccv__cnnp__trainable__index__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_trainable_index_t</code><a class="headerlink" href="#_CPPv426ccv_cnnp_trainable_index_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;ccv_nnc.h&gt;</em><p>Simple structure for group of command and the index for the variable. </p>
 </dd></dl>
 
 <dl class="class">
