@@ -787,24 +787,6 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv441ccv_nnc_symbolic_graph_memory_compressionPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi">
-<span id="_CPPv341ccv_nnc_symbolic_graph_memory_compressionPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="_CPPv241ccv_nnc_symbolic_graph_memory_compressionPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="ccv_nnc_symbolic_graph_memory_compression__ccv_nnc_symbolic_graph_tPC.ccv_nnc_graph_exec_symbol_tCPC.iC.ccv_nnc_graph_exec_symbol_tCPC.iC"></span><span class="target" id="group__level__3__5__parallel_1ga00c93d76a8893bdaf0e3745b8581077f"></span>void <code class="descname">ccv_nnc_symbolic_graph_memory_compression</code><span class="sig-paren">(</span><a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>sources</em>, <em class="property">const</em> int <em>source_size</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>destinations</em>, <em class="property">const</em> int <em>destination_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv441ccv_nnc_symbolic_graph_memory_compressionPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Apply LSSC memory compression algorithm to the convolution activations. This will compress the activation layer for convolution, therefore, save the overall memory usage during training time.</p>
-<p><dl class="docutils">
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
-<li><code class="docutils literal notranslate"><span class="pre">sources</span></code>: The source execution node symbols array. </li>
-<li><code class="docutils literal notranslate"><span class="pre">source_size</span></code>: The size of source node symbols array. </li>
-<li><code class="docutils literal notranslate"><span class="pre">destinations</span></code>: The destinations execution node symbols array. </li>
-<li><code class="docutils literal notranslate"><span class="pre">destination_size</span></code>: The size of destination node symbols array. </li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
 <dt id="_CPPv426ccv_nnc_tensor_symbol_copyPCK24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKi">
 <span id="_CPPv326ccv_nnc_tensor_symbol_copyPCK24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKi"></span><span id="_CPPv226ccv_nnc_tensor_symbol_copyPCK24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKi"></span><span id="ccv_nnc_tensor_symbol_copy__ccv_nnc_symbolic_graph_tCPC.ccv_nnc_tensor_symbol_tC.iC"></span><span class="target" id="group__level__3__5__parallel_1gaf0aff5b3368a7b54940416644174e266"></span><code class="descname">ccv_nnc_tensor_symbol_copy</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>symbol</em>, <em class="property">const</em> int <em>device_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ccv_nnc_tensor_symbol_copyPCK24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the symbol that is on a device other than the default one. The list will be flushed if the ccv_nnc_symbolic_graph_data_parallel function is called again. <dl class="docutils">
