@@ -840,6 +840,12 @@
 </dd></dl>
 
 <dl class="member">
+<dt id="_CPPv4N24ccv_cnnp_random_jitter_t11center_cropE">
+<span id="_CPPv3N24ccv_cnnp_random_jitter_t11center_cropE"></span><span id="_CPPv2N24ccv_cnnp_random_jitter_t11center_cropE"></span><span id="ccv_cnnp_random_jitter_t::center_crop__i"></span><span class="target" id="structccv__cnnp__random__jitter__t_1ac8aedc78edaa9191eebfe2a5cf4d3bea"></span>int <code class="descname">center_crop</code><a class="headerlink" href="#_CPPv4N24ccv_cnnp_random_jitter_t11center_cropE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Enable crop to the center (otherwise do random crop). </p>
+</dd></dl>
+
+<dl class="member">
 <dt id="_CPPv4N24ccv_cnnp_random_jitter_t3minE">
 <span id="_CPPv3N24ccv_cnnp_random_jitter_t3minE"></span><span id="_CPPv2N24ccv_cnnp_random_jitter_t3minE"></span><span id="ccv_cnnp_random_jitter_t::min__i"></span><span class="target" id="structccv__cnnp__random__jitter__t_1aa18dc337db42c64c2dc50d346642a84a"></span>int <code class="descname">min</code><a class="headerlink" href="#_CPPv4N24ccv_cnnp_random_jitter_t3minE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The minimal dimension of resize </p>
@@ -894,47 +900,26 @@
 <div class="section" id="model-api">
 <h2>Model API<a class="headerlink" href="#model-api" title="Permalink to this headline">¶</a></h2>
 <dl class="type">
-<dt id="_CPPv4N13level_5_model14__anonymous102E">
-<span id="_CPPv3N13level_5_model14__anonymous102E"></span><span id="_CPPv2N13level_5_model14__anonymous102E"></span><span id="level_5_model::__anonymous102"></span><span class="target" id="group__level__5__model_1ga7ee8d0f117a79ca7eb1e0076a9182bcb"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous102</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous102E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model14__anonymous103E">
+<span id="_CPPv3N13level_5_model14__anonymous103E"></span><span id="_CPPv2N13level_5_model14__anonymous103E"></span><span id="level_5_model::__anonymous103"></span><span class="target" id="group__level__5__model_1gac34c4c978f4130a92a5068f9e21ea9fc"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous103</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous103E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE">
-<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcba8611ffeaa0db7b1d6ebeb3bd931d2e17"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fca8611ffeaa0db7b1d6ebeb3bd931d2e17"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This is the default flag, if the model is not initialized, will attempt to read from the disk. Otherwise, will persist existing parameters to disk. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE">
-<span id="_CPPv3N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span id="_CPPv2N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcba9b371ebc4c047fb6bef78e16c0f34359"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span id="_CPPv2N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fca9b371ebc4c047fb6bef78e16c0f34359"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Only read parameters out of disk, even it is already initialized. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE">
-<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span class="target" id="group__level__5__model_1gga7ee8d0f117a79ca7eb1e0076a9182bcbaf62171f6c646550adbf616eb6f162c53"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fcaf62171f6c646550adbf616eb6f162c53"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Only write parameters to disk. </p>
 </dd></dl>
-
-</dd></dl>
-
-<dl class="type">
-<dt id="_CPPv4N13level_5_model14__anonymous103E">
-<span id="_CPPv3N13level_5_model14__anonymous103E"></span><span id="_CPPv2N13level_5_model14__anonymous103E"></span><span id="level_5_model::__anonymous103"></span><span class="target" id="group__level__5__model_1gac34c4c978f4130a92a5068f9e21ea9fc"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous103</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous103E" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><em>Values:</em></p>
-<dl class="enumerator">
-<dt id="_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_NONEE">
-<span id="_CPPv3N13level_5_model24CCV_CNNP_ACTIVATION_NONEE"></span><span id="_CPPv2N13level_5_model24CCV_CNNP_ACTIVATION_NONEE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fca1fe52204d0800b627cef036d66c09cec"></span><code class="descname">CCV_CNNP_ACTIVATION_NONE</code><a class="headerlink" href="#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_NONEE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="enumerator">
-<dt id="_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_RELUE">
-<span id="_CPPv3N13level_5_model24CCV_CNNP_ACTIVATION_RELUE"></span><span id="_CPPv2N13level_5_model24CCV_CNNP_ACTIVATION_RELUE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fca451e5fcc445723ecc649829ca05e7e0f"></span><code class="descname">CCV_CNNP_ACTIVATION_RELU</code><a class="headerlink" href="#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_RELUE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="enumerator">
-<dt id="_CPPv4N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE">
-<span id="_CPPv3N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span id="_CPPv2N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span class="target" id="group__level__5__model_1ggac34c4c978f4130a92a5068f9e21ea9fca2b4f5ea39f62ee5d074da78585cfabcd"></span><code class="descname">CCV_CNNP_ACTIVATION_SOFTMAX</code><a class="headerlink" href="#_CPPv4N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -943,13 +928,18 @@
 <span id="_CPPv3N13level_5_model14__anonymous104E"></span><span id="_CPPv2N13level_5_model14__anonymous104E"></span><span id="level_5_model::__anonymous104"></span><span class="target" id="group__level__5__model_1ga10e74d65d7876276a8f6061c71dcf469"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous104</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous104E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
-<dt id="_CPPv4N13level_5_model16CCV_CNNP_NO_NORME">
-<span id="_CPPv3N13level_5_model16CCV_CNNP_NO_NORME"></span><span id="_CPPv2N13level_5_model16CCV_CNNP_NO_NORME"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469abc2e0712dbc28f04a21765334227b257"></span><code class="descname">CCV_CNNP_NO_NORM</code><a class="headerlink" href="#_CPPv4N13level_5_model16CCV_CNNP_NO_NORME" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_NONEE">
+<span id="_CPPv3N13level_5_model24CCV_CNNP_ACTIVATION_NONEE"></span><span id="_CPPv2N13level_5_model24CCV_CNNP_ACTIVATION_NONEE"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469a1fe52204d0800b627cef036d66c09cec"></span><code class="descname">CCV_CNNP_ACTIVATION_NONE</code><a class="headerlink" href="#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_NONEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="enumerator">
-<dt id="_CPPv4N13level_5_model19CCV_CNNP_BATCH_NORME">
-<span id="_CPPv3N13level_5_model19CCV_CNNP_BATCH_NORME"></span><span id="_CPPv2N13level_5_model19CCV_CNNP_BATCH_NORME"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469ada7885abc6e2b1a10be88c4877d88190"></span><code class="descname">CCV_CNNP_BATCH_NORM</code><a class="headerlink" href="#_CPPv4N13level_5_model19CCV_CNNP_BATCH_NORME" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_RELUE">
+<span id="_CPPv3N13level_5_model24CCV_CNNP_ACTIVATION_RELUE"></span><span id="_CPPv2N13level_5_model24CCV_CNNP_ACTIVATION_RELUE"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469a451e5fcc445723ecc649829ca05e7e0f"></span><code class="descname">CCV_CNNP_ACTIVATION_RELU</code><a class="headerlink" href="#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_RELUE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE">
+<span id="_CPPv3N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span id="_CPPv2N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469a2b4f5ea39f62ee5d074da78585cfabcd"></span><code class="descname">CCV_CNNP_ACTIVATION_SOFTMAX</code><a class="headerlink" href="#_CPPv4N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -959,26 +949,42 @@
 <span id="_CPPv3N13level_5_model14__anonymous105E"></span><span id="_CPPv2N13level_5_model14__anonymous105E"></span><span id="level_5_model::__anonymous105"></span><span class="target" id="group__level__5__model_1ga1f3b6c692395e5007ff47ce5d9304c1c"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous105</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous105E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
+<dt id="_CPPv4N13level_5_model16CCV_CNNP_NO_NORME">
+<span id="_CPPv3N13level_5_model16CCV_CNNP_NO_NORME"></span><span id="_CPPv2N13level_5_model16CCV_CNNP_NO_NORME"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1cabc2e0712dbc28f04a21765334227b257"></span><code class="descname">CCV_CNNP_NO_NORM</code><a class="headerlink" href="#_CPPv4N13level_5_model16CCV_CNNP_NO_NORME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N13level_5_model19CCV_CNNP_BATCH_NORME">
+<span id="_CPPv3N13level_5_model19CCV_CNNP_BATCH_NORME"></span><span id="_CPPv2N13level_5_model19CCV_CNNP_BATCH_NORME"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1cada7885abc6e2b1a10be88c4877d88190"></span><code class="descname">CCV_CNNP_BATCH_NORM</code><a class="headerlink" href="#_CPPv4N13level_5_model19CCV_CNNP_BATCH_NORME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N13level_5_model14__anonymous106E">
+<span id="_CPPv3N13level_5_model14__anonymous106E"></span><span id="_CPPv2N13level_5_model14__anonymous106E"></span><span id="level_5_model::__anonymous106"></span><span class="target" id="group__level__5__model_1ga0ae1e3bf78c960c83e2d437efd802058"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous106</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous106E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="enumerator">
 <dt id="_CPPv4N13level_5_model11CCV_CNNP_IOE">
-<span id="_CPPv3N13level_5_model11CCV_CNNP_IOE"></span><span id="_CPPv2N13level_5_model11CCV_CNNP_IOE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1ca40070937b4589dc10c1872cbe9494f13"></span><code class="descname">CCV_CNNP_IO</code><a class="headerlink" href="#_CPPv4N13level_5_model11CCV_CNNP_IOE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model11CCV_CNNP_IOE"></span><span id="_CPPv2N13level_5_model11CCV_CNNP_IOE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058a40070937b4589dc10c1872cbe9494f13"></span><code class="descname">CCV_CNNP_IO</code><a class="headerlink" href="#_CPPv4N13level_5_model11CCV_CNNP_IOE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a ccv_cnnp_io_t. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model18CCV_CNNP_NO_TENSORE">
-<span id="_CPPv3N13level_5_model18CCV_CNNP_NO_TENSORE"></span><span id="_CPPv2N13level_5_model18CCV_CNNP_NO_TENSORE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1ca65c36f202728324331c751665f7b0801"></span><code class="descname">CCV_CNNP_NO_TENSOR</code><a class="headerlink" href="#_CPPv4N13level_5_model18CCV_CNNP_NO_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model18CCV_CNNP_NO_TENSORE"></span><span id="_CPPv2N13level_5_model18CCV_CNNP_NO_TENSORE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058a65c36f202728324331c751665f7b0801"></span><code class="descname">CCV_CNNP_NO_TENSOR</code><a class="headerlink" href="#_CPPv4N13level_5_model18CCV_CNNP_NO_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is not used. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE">
-<span id="_CPPv3N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE"></span><span id="_CPPv2N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1ca0956b88066a5bff5b38b5bcbc2bf0a5e"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR</code><a class="headerlink" href="#_CPPv4N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE"></span><span id="_CPPv2N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058a0956b88066a5bff5b38b5bcbc2bf0a5e"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR</code><a class="headerlink" href="#_CPPv4N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a provided tensor for initialization. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE">
-<span id="_CPPv3N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span id="_CPPv2N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1ca2bd3cb39cbaa3add603ddf0eeb74b6c4"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE</code><a class="headerlink" href="#_CPPv4N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span id="_CPPv2N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058a2bd3cb39cbaa3add603ddf0eeb74b6c4"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE</code><a class="headerlink" href="#_CPPv4N13level_5_model40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a provided tensor that can be updated. </p>
 </dd></dl>
 
@@ -1190,6 +1196,20 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
 <li><code class="docutils literal notranslate"><span class="pre">parallel</span></code>: Number of devices we want to run on. 0 will use all devices available. 1 will skip. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv437ccv_cnnp_model_set_memory_compressionPC16ccv_cnnp_model_tKi">
+<span id="_CPPv337ccv_cnnp_model_set_memory_compressionPC16ccv_cnnp_model_tKi"></span><span id="_CPPv237ccv_cnnp_model_set_memory_compressionPC16ccv_cnnp_model_tKi"></span><span id="ccv_cnnp_model_set_memory_compression__ccv_cnnp_model_tPC.iC"></span><span class="target" id="group__level__5__model_1ga484e7a24a69ee12446bfb29edcadbb2b"></span>void <code class="descname">ccv_cnnp_model_set_memory_compression</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>memory_compression</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv437ccv_cnnp_model_set_memory_compressionPC16ccv_cnnp_model_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Apply memory compression to the composed model. The memory compression technique can reduce memory usage up to 75% comparing with raw mix-precision model during training time. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">memory_compression</span></code>: Whether to enable the memory compression (1 - enable, 0 - disable (default)) </li>
 </ul>
 </dd>
 </dl>
