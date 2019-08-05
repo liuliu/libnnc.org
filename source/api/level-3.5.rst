@@ -49,6 +49,13 @@ Automatic Graph Parallelization
    :content-only:
    :members:
 
+Memory Compression
+------------------
+.. doxygengroup:: level_3_5_memory_compression
+   :project: libnnc
+   :content-only:
+   :members:
+
 While Loop Others
 -----------------
 .. doxygengroup:: level_3_5_while_others
