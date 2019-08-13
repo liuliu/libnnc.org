@@ -182,6 +182,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../level-3.5/#gradient-based-optimization">Gradient-based Optimization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-3.5/#graph-simplification">Graph Simplification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-3.5/#automatic-graph-parallelization">Automatic Graph Parallelization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../level-3.5/#memory-compression">Memory Compression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-3.5/#while-loop-others">While Loop Others</a></li>
 </ul>
 </li>
@@ -418,6 +419,40 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">a</span></code>: Tensor a. </li>
 <li><code class="docutils literal notranslate"><span class="pre">b</span></code>: Tensor b. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv420ccv_nnc_tensor_writePCK16ccv_nnc_tensor_tPCvPCKc">
+<span id="_CPPv320ccv_nnc_tensor_writePCK16ccv_nnc_tensor_tPCvPCKc"></span><span id="_CPPv220ccv_nnc_tensor_writePCK16ccv_nnc_tensor_tPCvPCKc"></span><span id="ccv_nnc_tensor_write__ccv_nnc_tensor_tCPC.voidPC.cCPC"></span><span class="target" id="group__level__1__tensor_1gad81f0cef23c0c2d931c394e6d723e261"></span>int <code class="descname">ccv_nnc_tensor_write</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, void *<em class="property">const</em> <em>handle</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_nnc_tensor_writePCK16ccv_nnc_tensor_tPCvPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write tensor to a SQLite database with a given name. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>CCV_IO_FINAL for success, otherwise error. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor. </li>
+<li><code class="docutils literal notranslate"><span class="pre">handle</span></code>: The SQLite handle. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name to find the tensor in the database. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv419ccv_nnc_tensor_readPCvPCKcPCP16ccv_nnc_tensor_t">
+<span id="_CPPv319ccv_nnc_tensor_readPCvPCKcPCP16ccv_nnc_tensor_t"></span><span id="_CPPv219ccv_nnc_tensor_readPCvPCKcPCP16ccv_nnc_tensor_t"></span><span id="ccv_nnc_tensor_read__voidPC.cCPC.ccv_nnc_tensor_tPPC"></span><span class="target" id="group__level__1__tensor_1ga6eb6a089f264d90d23b0866cd154521d"></span>int <code class="descname">ccv_nnc_tensor_read</code><span class="sig-paren">(</span>void *<em class="property">const</em> <em>handle</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em>, ccv_nnc_tensor_t **<em class="property">const</em> <em>tensor_out</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_tensor_readPCvPCKcPCP16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read a tensor from a SQLite database with a given name. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>CCV_IO_FINAL for success, otherwise error. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">handle</span></code>: The SQLite handle. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name to find the tensor in the database. </li>
+<li><code class="docutils literal notranslate"><span class="pre">tensor_out</span></code>: The pointer to hold the tensor. If you supply the tensor yourself, we will read the data into the existing tensor. </li>
 </ul>
 </dd>
 </dl>

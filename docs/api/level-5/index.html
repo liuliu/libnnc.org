@@ -182,6 +182,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../level-3.5/#gradient-based-optimization">Gradient-based Optimization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-3.5/#graph-simplification">Graph Simplification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-3.5/#automatic-graph-parallelization">Automatic Graph Parallelization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../level-3.5/#memory-compression">Memory Compression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-3.5/#while-loop-others">While Loop Others</a></li>
 </ul>
 </li>
@@ -1036,8 +1037,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv418ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKi">
-<span id="_CPPv318ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKi"></span><span id="_CPPv218ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKi"></span><span id="ccv_cnnp_model_new__ccv_cnnp_model_io_tCPC.iC.ccv_cnnp_model_io_tCPC.iC"></span><span class="target" id="group__level__5__model_1gaa26ebdd94259487693eeea9f4bda6101"></span><code class="descname">ccv_cnnp_model_new</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv418ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKiPCKc">
+<span id="_CPPv318ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKiPCKc"></span><span id="_CPPv218ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKiPCKc"></span><span id="ccv_cnnp_model_new__ccv_cnnp_model_io_tCPC.iC.ccv_cnnp_model_io_tCPC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga6fde76219da0a7e5118045ca3a91e06f"></span><code class="descname">ccv_cnnp_model_new</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This method name is deceiving. It return a composed model, not a naked model. This composed model takes set of inputs, and run through various other models to arrive at the set of outputs. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A composed model that takes inputs, and generate the outputs. </dd>
@@ -1047,6 +1048,7 @@
 <li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of inputs array. </li>
 <li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The set of outputs. </li>
 <li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of outputs array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1054,8 +1056,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv423ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKi">
-<span id="_CPPv323ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKi"></span><span id="_CPPv223ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKi"></span><span id="ccv_cnnp_sequential_new__ccv_cnnp_model_tPCPC.iC"></span><span class="target" id="group__level__5__model_1ga48fdcbc974b0988228e15933010ac394"></span><code class="descname">ccv_cnnp_sequential_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> *<em class="property">const</em> <em>models</em>, <em class="property">const</em> int <em>model_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv423ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKiPCKc">
+<span id="_CPPv323ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKiPCKc"></span><span id="_CPPv223ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKiPCKc"></span><span id="ccv_cnnp_sequential_new__ccv_cnnp_model_tPCPC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga0482078f989591f8d0e4afa3e7e4d575"></span><code class="descname">ccv_cnnp_sequential_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> *<em class="property">const</em> <em>models</em>, <em class="property">const</em> int <em>model_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This method returns a sequential model, which composed from a sequence of models. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A composed model that applies these models one by one in sequence. </dd>
@@ -1063,6 +1065,7 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">models</span></code>: The list of models, that takes one input, and emit one output, feeding into the subsequent one. </li>
 <li><code class="docutils literal notranslate"><span class="pre">model_size</span></code>: The size of the list. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1290,34 +1293,14 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv412ccv_cnnp_addv">
-<span id="_CPPv312ccv_cnnp_addv"></span><span id="_CPPv212ccv_cnnp_addv"></span><span id="ccv_cnnp_add__void"></span><span class="target" id="group__level__5__model_1ga6d8fdd36fca28ad3ab5615e64cfafe97"></span><code class="descname">ccv_cnnp_add</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_addv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv412ccv_cnnp_addPCKc">
+<span id="_CPPv312ccv_cnnp_addPCKc"></span><span id="_CPPv212ccv_cnnp_addPCKc"></span><span id="ccv_cnnp_add__cCPC"></span><span class="target" id="group__level__5__model_1gacca43535491e926e3450d7ef0a7309f9"></span><code class="descname">ccv_cnnp_add</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_addPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Add multiple input tensors together. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A model that can be applied with multiple inputs, and generate output that is a sum of the inputs. </dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv415ccv_cnnp_concatv">
-<span id="_CPPv315ccv_cnnp_concatv"></span><span id="_CPPv215ccv_cnnp_concatv"></span><span id="ccv_cnnp_concat__void"></span><span class="target" id="group__level__5__model_1gaf549cbe214fd98d2b75efb7adf618111"></span><code class="descname">ccv_cnnp_concat</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415ccv_cnnp_concatv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Concatenate input tensors together. <dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>A model that can be applied with multiple inputs, and generate output that is a concatenation of the inputs. </dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv417ccv_cnnp_identityK16ccv_cnnp_param_t">
-<span id="_CPPv317ccv_cnnp_identityK16ccv_cnnp_param_t"></span><span id="_CPPv217ccv_cnnp_identityK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_identity__ccv_cnnp_param_tC"></span><span class="target" id="group__level__5__model_1ga8065ded1c11654d1f574083e58b4d425"></span><code class="descname">ccv_cnnp_identity</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_identityK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>An identity layer that takes input and do nothing pass it as the output. Realistically, we use this because we want to apply some normalization / activation function on top of the input. <dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>A model that takes input and pass it as output. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Parameters (such as hint and activation or norm). </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1325,8 +1308,39 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv420ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t">
-<span id="_CPPv320ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="_CPPv220ccv_cnnp_convolutionKiKiACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_convolution__iC.iC.iCA.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5__model_1gacc3bca08460f5cbe5a6f46b088816624"></span><code class="descname">ccv_cnnp_convolution</code><span class="sig-paren">(</span><em class="property">const</em> int <em>groups</em>, <em class="property">const</em> int <em>filters</em>, <em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv415ccv_cnnp_concatPCKc">
+<span id="_CPPv315ccv_cnnp_concatPCKc"></span><span id="_CPPv215ccv_cnnp_concatPCKc"></span><span id="ccv_cnnp_concat__cCPC"></span><span class="target" id="group__level__5__model_1ga3c389c7d68fe1e6bee3d8b9965fdd1cd"></span><code class="descname">ccv_cnnp_concat</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415ccv_cnnp_concatPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Concatenate input tensors together. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model that can be applied with multiple inputs, and generate output that is a concatenation of the inputs. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv417ccv_cnnp_identityK16ccv_cnnp_param_tPCKc">
+<span id="_CPPv317ccv_cnnp_identityK16ccv_cnnp_param_tPCKc"></span><span id="_CPPv217ccv_cnnp_identityK16ccv_cnnp_param_tPCKc"></span><span id="ccv_cnnp_identity__ccv_cnnp_param_tC.cCPC"></span><span class="target" id="group__level__5__model_1gaef0ae128fe86ab5b3ee617a3c399cf73"></span><code class="descname">ccv_cnnp_identity</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_identityK16ccv_cnnp_param_tPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An identity layer that takes input and do nothing pass it as the output. Realistically, we use this because we want to apply some normalization / activation function on top of the input. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model that takes input and pass it as output. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Parameters (such as hint and activation or norm). </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv420ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc">
+<span id="_CPPv320ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc"></span><span id="_CPPv220ccv_cnnp_convolutionKiKiACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc"></span><span id="ccv_cnnp_convolution__iC.iC.iCA.ccv_cnnp_param_tC.cCPC"></span><span class="target" id="group__level__5__model_1gae37d696c86b218f7026865bafb1a5078"></span><code class="descname">ccv_cnnp_convolution</code><span class="sig-paren">(</span><em class="property">const</em> int <em>groups</em>, <em class="property">const</em> int <em>filters</em>, <em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A convolution model. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A convolution model. </dd>
@@ -1336,6 +1350,7 @@
 <li><code class="docutils literal notranslate"><span class="pre">filters</span></code>: The total number of filters in the model (filters = groups * per group filters). </li>
 <li><code class="docutils literal notranslate"><span class="pre">kdim</span></code>: The dimensions of the kernel. </li>
 <li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Other parameters (such as hint and activation or norm). </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1343,8 +1358,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv414ccv_cnnp_denseKiK16ccv_cnnp_param_t">
-<span id="_CPPv314ccv_cnnp_denseKiK16ccv_cnnp_param_t"></span><span id="_CPPv214ccv_cnnp_denseKiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_dense__iC.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5__model_1gafeb954309e7ce374402c1792277f3997"></span><code class="descname">ccv_cnnp_dense</code><span class="sig-paren">(</span><em class="property">const</em> int <em>count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_denseKiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv414ccv_cnnp_denseKiK16ccv_cnnp_param_tPCKc">
+<span id="_CPPv314ccv_cnnp_denseKiK16ccv_cnnp_param_tPCKc"></span><span id="_CPPv214ccv_cnnp_denseKiK16ccv_cnnp_param_tPCKc"></span><span id="ccv_cnnp_dense__iC.ccv_cnnp_param_tC.cCPC"></span><span class="target" id="group__level__5__model_1ga08c22961e6ca61a6777106bfaa51837c"></span><code class="descname">ccv_cnnp_dense</code><span class="sig-paren">(</span><em class="property">const</em> int <em>count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_denseKiK16ccv_cnnp_param_tPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A dense layer model. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A dense layer model. </dd>
@@ -1352,6 +1367,7 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">count</span></code>: The output dimension. </li>
 <li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Other parameters (such as hint and activation or norm). </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1359,8 +1375,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv417ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t">
-<span id="_CPPv317ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="_CPPv217ccv_cnnp_max_poolACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_max_pool__iCA.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5__model_1ga1c1195fb9f3204e09a80a1e0220e0244"></span><code class="descname">ccv_cnnp_max_pool</code><span class="sig-paren">(</span><em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv417ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc">
+<span id="_CPPv317ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc"></span><span id="_CPPv217ccv_cnnp_max_poolACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc"></span><span id="ccv_cnnp_max_pool__iCA.ccv_cnnp_param_tC.cCPC"></span><span class="target" id="group__level__5__model_1gab759dc3da6b356d4ae6141c43e3c4df8"></span><code class="descname">ccv_cnnp_max_pool</code><span class="sig-paren">(</span><em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A max pool model. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A max pool model. </dd>
@@ -1368,6 +1384,7 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">kdim</span></code>: The pooling window dimension. </li>
 <li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Other parameters (such as hint and activation or norm). </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1375,8 +1392,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv421ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t">
-<span id="_CPPv321ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="_CPPv221ccv_cnnp_average_poolACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t"></span><span id="ccv_cnnp_average_pool__iCA.ccv_cnnp_param_tC"></span><span class="target" id="group__level__5__model_1ga6ac212e3ab0d77e8e1323ab450651586"></span><code class="descname">ccv_cnnp_average_pool</code><span class="sig-paren">(</span><em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv421ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc">
+<span id="_CPPv321ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc"></span><span id="_CPPv221ccv_cnnp_average_poolACCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc"></span><span id="ccv_cnnp_average_pool__iCA.ccv_cnnp_param_tC.cCPC"></span><span class="target" id="group__level__5__model_1ga72a4508008ae6903b8d94abea9f08550"></span><code class="descname">ccv_cnnp_average_pool</code><span class="sig-paren">(</span><em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> <a class="reference internal" href="#_CPPv416ccv_cnnp_param_t" title="ccv_cnnp_param_t">ccv_cnnp_param_t</a> <em>params</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>An average pool model. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>An average pool model. </dd>
@@ -1384,6 +1401,7 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">kdim</span></code>: The pooling window dimension. </li>
 <li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Other parameters (such as hint and activation or norm). </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1391,14 +1409,15 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv416ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_Ki">
-<span id="_CPPv316ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="_CPPv216ccv_cnnp_reshapeACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_cnnp_reshape__iCA"></span><span class="target" id="group__level__5__model_1ga84c701c916004fd9875493838ed47599"></span><code class="descname">ccv_cnnp_reshape</code><span class="sig-paren">(</span><em class="property">const</em> int <em>dim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv416ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_KiPCKc">
+<span id="_CPPv316ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_KiPCKc"></span><span id="_CPPv216ccv_cnnp_reshapeACCV_NNC_MAX_DIM_ALLOC_KiPCKc"></span><span id="ccv_cnnp_reshape__iCA.cCPC"></span><span class="target" id="group__level__5__model_1ga815af5892a3e21d3655f06019d10b87c"></span><code class="descname">ccv_cnnp_reshape</code><span class="sig-paren">(</span><em class="property">const</em> int <em>dim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_KiPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Reshape an input into a different dimension. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A reshape layer model. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">dim</span></code>: The new dimension for the input. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1406,18 +1425,23 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv416ccv_cnnp_flattenv">
-<span id="_CPPv316ccv_cnnp_flattenv"></span><span id="_CPPv216ccv_cnnp_flattenv"></span><span id="ccv_cnnp_flatten__void"></span><span class="target" id="group__level__5__model_1ga598b099e1855292f7a9a08aef000e0c4"></span><code class="descname">ccv_cnnp_flatten</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ccv_cnnp_flattenv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv416ccv_cnnp_flattenPCKc">
+<span id="_CPPv316ccv_cnnp_flattenPCKc"></span><span id="_CPPv216ccv_cnnp_flattenPCKc"></span><span id="ccv_cnnp_flatten__cCPC"></span><span class="target" id="group__level__5__model_1ga8c911f22bf064aa9d61b6e8553fe0679"></span><code class="descname">ccv_cnnp_flatten</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ccv_cnnp_flattenPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Flatten an input tensor into a one dimensional array. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A flatten layer model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
 </dl>
 </p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK23ccv_cnnp_tensor_param_tKiPCKiKi">
-<span id="_CPPv317ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK23ccv_cnnp_tensor_param_tKiPCKiKi"></span><span id="_CPPv217ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK23ccv_cnnp_tensor_param_tKiPCKiKi"></span><span id="ccv_cnnp_cmd_exec__ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_cnnp_tensor_param_tCPC.iC.iCPC.iC"></span><span class="target" id="group__level__5__model_1ga63321d7e73ef52195f87c0185e966d5a"></span><code class="descname">ccv_cnnp_cmd_exec</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_cnnp_tensor_param_t" title="ccv_cnnp_tensor_param_t">ccv_cnnp_tensor_param_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> int *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK23ccv_cnnp_tensor_param_tKiPCKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK23ccv_cnnp_tensor_param_tKiPCKiKiPCKc">
+<span id="_CPPv317ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK23ccv_cnnp_tensor_param_tKiPCKiKiPCKc"></span><span id="_CPPv217ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK23ccv_cnnp_tensor_param_tKiPCKiKiPCKc"></span><span id="ccv_cnnp_cmd_exec__ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_cnnp_tensor_param_tCPC.iC.iCPC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga28683d8ed2d2ae7763900edc11648796"></span><code class="descname">ccv_cnnp_cmd_exec</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_cnnp_tensor_param_t" title="ccv_cnnp_tensor_param_t">ccv_cnnp_tensor_param_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> int *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK23ccv_cnnp_tensor_param_tKiPCKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A generic model based on the command. If the tensors are labeled as ccv_cnnp_io_t, it will participate as the input / output of the model. If it is a init tensor, the model will use this tensor for that parameter. More over, if it is marked as trainable, that tensor will be differentiated against when you call ccv_cnnp_model_fit. This model however doesn’t take over ownership of the tensor. You should manage the life cycle of the given tensor and it is your responsibility to make sure they outlive the model. Also, all inputs and outputs marked as init tensors will be shared if you reuse this model in other places. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A model based on the given command. </dd>
@@ -1430,6 +1454,7 @@
 <li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of input list. </li>
 <li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: A list of types identify each output as ccv_cnnp_io_t or a none tensor. </li>
 <li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the outputs. There is no need to give ccv_cnnp_tensor_param_t for outputs because all of them are CCV_CNNP_IO type. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1437,8 +1462,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKi">
-<span id="_CPPv314ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKi"></span><span id="_CPPv214ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKi"></span><span id="ccv_cnnp_graph__ccv_nnc_symbolic_graph_tCPC.ccv_cnnp_tensor_symbol_param_tCPC.iC.ccv_nnc_tensor_symbol_tPC.iC.ccv_nnc_tensor_symbol_tPC.iC"></span><span class="target" id="group__level__5__model_1ga9e8884f3310880c96f9a41ce67939cbf"></span><code class="descname">ccv_cnnp_graph</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv430ccv_cnnp_tensor_symbol_param_t" title="ccv_cnnp_tensor_symbol_param_t">ccv_cnnp_tensor_symbol_param_t</a> *<em class="property">const</em> <em>tensor_symbol_params</em>, <em class="property">const</em> int <em>tensor_symbol_param_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc">
+<span id="_CPPv314ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc"></span><span id="_CPPv214ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc"></span><span id="ccv_cnnp_graph__ccv_nnc_symbolic_graph_tCPC.ccv_cnnp_tensor_symbol_param_tCPC.iC.ccv_nnc_tensor_symbol_tPC.iC.ccv_nnc_tensor_symbol_tPC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga0be825af48de9576577670d1ce3938a1"></span><code class="descname">ccv_cnnp_graph</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv430ccv_cnnp_tensor_symbol_param_t" title="ccv_cnnp_tensor_symbol_param_t">ccv_cnnp_tensor_symbol_param_t</a> *<em class="property">const</em> <em>tensor_symbol_params</em>, <em class="property">const</em> int <em>tensor_symbol_param_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A generic model based on the symbolic graph we provided. A list of tensor symbols are labeled whether it is ccv_cnnp_io_t or not (we identify whether this is a input or output based on whether it is in the graph). If it is not, we init it with a given tensor. If it is marked as trainable, that tensor will be differentiated against when you call ccv_cnnp_model_fit. The model doesn’t take ownership over the init tensors. You are responsible to make sure the init tensors outlive the model until the initialization occurred. Also, these tensors will be shared if the model is reused. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A model based on the given symbolic graph. </dd>
@@ -1451,6 +1476,7 @@
 <li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the input list. </li>
 <li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The outputs from this graph. We can figure out which ones are outputs, but this gives us the order. </li>
 <li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the output list. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
