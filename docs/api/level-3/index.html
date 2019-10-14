@@ -691,14 +691,27 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv426ccv_nnc_tensor_bind_symbolPCK22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t">
-<span id="_CPPv326ccv_nnc_tensor_bind_symbolPCK22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t"></span><span id="_CPPv226ccv_nnc_tensor_bind_symbolPCK22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t"></span><span id="ccv_nnc_tensor_bind_symbol__ccv_nnc_tensor_arena_tCPC.ccv_nnc_tensor_symbol_tC.ccv_nnc_tensor_tCPC"></span><span class="target" id="group__level__3__essentials_1ga0a6642e49e8c54fdef6e11e044072d1a"></span>void <code class="descname">ccv_nnc_tensor_bind_symbol</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv422ccv_nnc_tensor_arena_t" title="ccv_nnc_tensor_arena_t">ccv_nnc_tensor_arena_t</a> *<em class="property">const</em> <em>tensor_arena</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>symbol</em>, <em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ccv_nnc_tensor_bind_symbolPCK22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv426ccv_nnc_tensor_bind_symbolPC22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t">
+<span id="_CPPv326ccv_nnc_tensor_bind_symbolPC22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t"></span><span id="_CPPv226ccv_nnc_tensor_bind_symbolPC22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t"></span><span id="ccv_nnc_tensor_bind_symbol__ccv_nnc_tensor_arena_tPC.ccv_nnc_tensor_symbol_tC.ccv_nnc_tensor_tCPC"></span><span class="target" id="group__level__3__essentials_1gaa6cc8a8289c031b8b7f087e677c8caf2"></span>void <code class="descname">ccv_nnc_tensor_bind_symbol</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv422ccv_nnc_tensor_arena_t" title="ccv_nnc_tensor_arena_t">ccv_nnc_tensor_arena_t</a> *<em class="property">const</em> <em>tensor_arena</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>symbol</em>, <em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ccv_nnc_tensor_bind_symbolPC22ccv_nnc_tensor_arena_tK23ccv_nnc_tensor_symbol_tPCK16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Bind a tensor to a symbol. You still responsible to manage the life-time of the tensor to make sure it is not freed until everything is done. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">tensor_arena</span></code>: The tensor arena object generated through compilation. </li>
 <li><code class="docutils literal notranslate"><span class="pre">symbol</span></code>: The tensor symbol reference. Because tensor symbol reference is on stack. It can still be used even the original symbolic graph is free’d. </li>
 <li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The new tensor to bind to. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv435ccv_nnc_tensor_arena_clear_bindingsPC22ccv_nnc_tensor_arena_t">
+<span id="_CPPv335ccv_nnc_tensor_arena_clear_bindingsPC22ccv_nnc_tensor_arena_t"></span><span id="_CPPv235ccv_nnc_tensor_arena_clear_bindingsPC22ccv_nnc_tensor_arena_t"></span><span id="ccv_nnc_tensor_arena_clear_bindings__ccv_nnc_tensor_arena_tPC"></span><span class="target" id="group__level__3__essentials_1ga3848250fdfc9207876184385e23128da"></span>void <code class="descname">ccv_nnc_tensor_arena_clear_bindings</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv422ccv_nnc_tensor_arena_t" title="ccv_nnc_tensor_arena_t">ccv_nnc_tensor_arena_t</a> *<em class="property">const</em> <em>tensor_arena</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv435ccv_nnc_tensor_arena_clear_bindingsPC22ccv_nnc_tensor_arena_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Clear existing bindings on the tensor arena. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">tensor_arena</span></code>: The tensor arena object generated through compilation to clear bindings. </li>
 </ul>
 </dd>
 </dl>
@@ -1098,6 +1111,23 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv434ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi">
+<span id="_CPPv334ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="_CPPv234ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="ccv_nnc_symbolic_graph_tensor_auto__ccv_nnc_symbolic_graph_tPC.ccv_nnc_graph_exec_symbol_tCPC.iC.ccv_nnc_graph_exec_symbol_tCPC.iC"></span><span class="target" id="group__level__3__others_1ga9b23e2f9cfc9c7d6f700f5837df3f997"></span>void <code class="descname">ccv_nnc_symbolic_graph_tensor_auto</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>sources</em>, <em class="property">const</em> int <em>source_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>destinations</em>, <em class="property">const</em> int <em>destination_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Compute all the tensor shapes within this graph. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">sources</span></code>: The sources for the graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">source_size</span></code>: The size of the sources array. 0 to use default sources. </li>
+<li><code class="docutils literal notranslate"><span class="pre">destinations</span></code>: The destinations for the graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">destination_size</span></code>: The size of the destinations array. 0 to use default destinations. </li>
 </ul>
 </dd>
 </dl>
