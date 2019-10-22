@@ -541,6 +541,12 @@
 </dd></dl>
 
 <dl class="type">
+<dt id="_CPPv418ccv_nnc_cmd_vtab_t">
+<span id="_CPPv318ccv_nnc_cmd_vtab_t"></span><span id="_CPPv218ccv_nnc_cmd_vtab_t"></span><span id="ccv_nnc_cmd_vtab_t"></span><span class="target" id="group__level__1__cmd_1gad4c11b4ea3354c19c41d39117c532466"></span><em class="property">typedef </em><em class="property">struct</em> <a class="reference internal" href="#_CPPv418ccv_nnc_cmd_vtab_s" title="ccv_nnc_cmd_vtab_s">ccv_nnc_cmd_vtab_s</a> <code class="descname">ccv_nnc_cmd_vtab_t</code><a class="headerlink" href="#_CPPv418ccv_nnc_cmd_vtab_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The function prototype is for automatically deduce tensor shapes. </p>
+</dd></dl>
+
+<dl class="type">
 <dt id="_CPPv413ccv_nnc_cmd_t">
 <span id="_CPPv313ccv_nnc_cmd_t"></span><span id="_CPPv213ccv_nnc_cmd_t"></span><span id="ccv_nnc_cmd_t"></span><span class="target" id="group__level__1__cmd_1ga6626ce3b7d0cb0811eb16644172d55ce"></span><em class="property">typedef </em><em class="property">struct</em> <a class="reference internal" href="#_CPPv413ccv_nnc_cmd_s" title="ccv_nnc_cmd_s">ccv_nnc_cmd_s</a> <code class="descname">ccv_nnc_cmd_t</code><a class="headerlink" href="#_CPPv413ccv_nnc_cmd_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -602,15 +608,15 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv411ccv_nnc_cmdK8uint32_t18ccv_nnc_cmd_exec_fK19ccv_nnc_cmd_param_tKi">
-<span id="_CPPv311ccv_nnc_cmdK8uint32_t18ccv_nnc_cmd_exec_fK19ccv_nnc_cmd_param_tKi"></span><span id="_CPPv211ccv_nnc_cmdK8uint32_t18ccv_nnc_cmd_exec_fK19ccv_nnc_cmd_param_tKi"></span><span id="ccv_nnc_cmd__uint32_tC.ccv_nnc_cmd_exec_f.ccv_nnc_cmd_param_tC.iC"></span><span class="target" id="group__level__1__cmd_1gafaecc7704530fb413bad9daa56ab4dd0"></span><code class="descname">ccv_nnc_cmd</code><span class="sig-paren">(</span><em class="property">const</em> uint32_t <em>cmd</em>, <a class="reference internal" href="#_CPPv418ccv_nnc_cmd_exec_f" title="ccv_nnc_cmd_exec_f">ccv_nnc_cmd_exec_f</a> <em>exec</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_nnc_cmd_param_t" title="ccv_nnc_cmd_param_t">ccv_nnc_cmd_param_t</a> <em>params</em>, <em class="property">const</em> int <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ccv_nnc_cmdK8uint32_t18ccv_nnc_cmd_exec_fK19ccv_nnc_cmd_param_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv411ccv_nnc_cmdK8uint32_tPC18ccv_nnc_cmd_vtab_tK19ccv_nnc_cmd_param_tKi">
+<span id="_CPPv311ccv_nnc_cmdK8uint32_tPC18ccv_nnc_cmd_vtab_tK19ccv_nnc_cmd_param_tKi"></span><span id="_CPPv211ccv_nnc_cmdK8uint32_tPC18ccv_nnc_cmd_vtab_tK19ccv_nnc_cmd_param_tKi"></span><span id="ccv_nnc_cmd__uint32_tC.ccv_nnc_cmd_vtab_tPC.ccv_nnc_cmd_param_tC.iC"></span><span class="target" id="group__level__1__cmd_1ga21dba0cf4fad119b80dcae58caa1bc67"></span><code class="descname">ccv_nnc_cmd</code><span class="sig-paren">(</span><em class="property">const</em> uint32_t <em>cmd</em>, <a class="reference internal" href="#_CPPv418ccv_nnc_cmd_vtab_t" title="ccv_nnc_cmd_vtab_t">ccv_nnc_cmd_vtab_t</a> *<em class="property">const</em> <em>isa</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_nnc_cmd_param_t" title="ccv_nnc_cmd_param_t">ccv_nnc_cmd_param_t</a> <em>params</em>, <em class="property">const</em> int <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ccv_nnc_cmdK8uint32_tPC18ccv_nnc_cmd_vtab_tK19ccv_nnc_cmd_param_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a wrapped command with parameters. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A wrapped ccv_nnc_cmd_t structure. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The command identifier. </li>
-<li><code class="docutils literal notranslate"><span class="pre">exec</span></code>: If this is a CCV_NNC_CUSTOM_FORWARD / CCV_NNC_CUSTOM_BACKWARD command, this supplies the custom function. </li>
+<li><code class="docutils literal notranslate"><span class="pre">isa</span></code>: If this is a CCV_NNC_CUSTOM_FORWARD / CCV_NNC_CUSTOM_BACKWARD command, this supplies the custom functions. </li>
 <li><code class="docutils literal notranslate"><span class="pre">params</span></code>: The parameters for the command. </li>
 <li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: A reserved field for flags. </li>
 </ul>
@@ -1033,12 +1039,18 @@
 </dd></dl>
 
 <dl class="member">
-<dt id="_CPPv4N13ccv_nnc_cmd_s4execE">
-<span id="_CPPv3N13ccv_nnc_cmd_s4execE"></span><span id="_CPPv2N13ccv_nnc_cmd_s4execE"></span><span class="target" id="structccv__nnc__cmd__s_1a1deac0cd891585e6cfde715f6b520fbe"></span>int (*<code class="descname">exec</code>)<span class="sig-paren">(</span><em class="property">const</em> <em class="property">struct</em> <a class="reference internal" href="#_CPPv413ccv_nnc_cmd_s" title="ccv_nnc_cmd_s">ccv_nnc_cmd_s</a> cmd, <em class="property">const</em> <a class="reference internal" href="#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> hint, <em class="property">const</em> int flags, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> inputs, <em class="property">const</em> int input_size, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> outputs, <em class="property">const</em> int output_size, <a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> stream_context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13ccv_nnc_cmd_s4execE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>This has to be the same as the ccv_nnc_cmd_exec_f type. This is for type CCV_NNC_CUSTOM_FORWARD / CCV_NNC_CUSTOM_BACKWARD </p>
+<dt id="_CPPv4N13ccv_nnc_cmd_s3isaE">
+<span id="_CPPv3N13ccv_nnc_cmd_s3isaE"></span><span id="_CPPv2N13ccv_nnc_cmd_s3isaE"></span><span id="ccv_nnc_cmd_s::isa__ccv_nnc_cmd_vtab_tP"></span><span class="target" id="structccv__nnc__cmd__s_1aecf7fd60e3dbc047729731de7f5b8fe2"></span><a class="reference internal" href="#_CPPv418ccv_nnc_cmd_vtab_t" title="ccv_nnc_cmd_vtab_t">ccv_nnc_cmd_vtab_t</a> *<code class="descname">isa</code><a class="headerlink" href="#_CPPv4N13ccv_nnc_cmd_s3isaE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This is for type CCV_NNC_CUSTOM_FORWARD / CCV_NNC_CUSTOM_BACKWARD </p>
 </dd></dl>
 
 </div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv418ccv_nnc_cmd_vtab_s">
+<span id="_CPPv318ccv_nnc_cmd_vtab_s"></span><span id="_CPPv218ccv_nnc_cmd_vtab_s"></span><span id="ccv_nnc_cmd_vtab_s"></span><span class="target" id="structccv__nnc__cmd__vtab__s"></span><em class="property">struct </em><code class="descname">ccv_nnc_cmd_vtab_s</code><a class="headerlink" href="#_CPPv418ccv_nnc_cmd_vtab_s" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;ccv_nnc.h&gt;</em><p>The function prototype is for automatically deduce tensor shapes. </p>
 </dd></dl>
 
 </div>
