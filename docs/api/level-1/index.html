@@ -910,7 +910,8 @@
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t7epsilonE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t7epsilonE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t7epsilonE"></span><span id="ccv_nnc_cmd_param_t::epsilon__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a45c4f746e902fda1731592aa21f25588"></span>float <code class="descname">epsilon</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t7epsilonE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[bnorm.epsilon] The epsilon for standard derivation.</p>
-<p>[lnorm.epsilon] The epsilon for standard derivation. </p>
+<p>[lnorm.epsilon] The epsilon for standard derivation.</p>
+<p>[adam.epsilon] The epsilon for standard derivation. </p>
 </dd></dl>
 
 <dl class="member">
@@ -923,37 +924,57 @@
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t8momentumE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t8momentumE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t8momentumE"></span><span id="ccv_nnc_cmd_param_t::momentum__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a46b2a82466a4ad5dc6534da77091c0c7"></span>float <code class="descname">momentum</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t8momentumE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[bnorm.momentum] running_mean = running_mean * momentum + mean * (1 - momentum).</p>
-<p>[minimize.momentum] For SGD, this follows <a class="reference external" href="http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf">http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf</a>. </p>
+<p>[sgd.momentum] For SGD, this follows <a class="reference external" href="http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf">http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf</a>. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t8nesterovE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t8nesterovE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t8nesterovE"></span><span id="ccv_nnc_cmd_param_t::nesterov__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a3b3158aecd4f3033128850d784203502"></span>int <code class="descname">nesterov</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t8nesterovE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[minimize.nesterov] Nesterov accelerated gradient. </p>
+<dd><p>[sgd.nesterov] Nesterov accelerated gradient. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t4rateE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t4rateE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4rateE"></span><span id="ccv_nnc_cmd_param_t::rate__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a9f25b7296b42dfc4e3a79443796a6428"></span>float <code class="descname">rate</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4rateE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[minimize.rate] The learning rate. </p>
+<dd><p>[sgd.rate] The learning rate.</p>
+<p>[adam.rate] The learning rate. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t5scaleE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t5scaleE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5scaleE"></span><span id="ccv_nnc_cmd_param_t::scale__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1adda1c40ae785690e6d699312e216a80b"></span>float <code class="descname">scale</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5scaleE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[minimize.scale] The scale to be applied to the gradient before doing any minimization. </p>
+<dd><p>[sgd.scale] The scale to be applied to the gradient before doing any minimization. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t5decayE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t5decayE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5decayE"></span><span id="ccv_nnc_cmd_param_t::decay__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a6ebcff92cb8172501abd01447ef2bbee"></span>float <code class="descname">decay</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5decayE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[minimize.decay] This is the weight decay parameter, which represents L2 regularization after momentum applied. </p>
+<dd><p>[sgd.decay] This is the weight decay parameter, which represents L2 regularization after momentum applied.</p>
+<p>[adam.decay] This is the weight decay parameter, which represents L2 regularization. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t9dampeningE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t9dampeningE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t9dampeningE"></span><span id="ccv_nnc_cmd_param_t::dampening__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a70ebf7e31717c51cc5fbdac4bd70f864"></span>float <code class="descname">dampening</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t9dampeningE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[minimize.dampening] This usually == momentum, however, it can be changed. </p>
+<dd><p>[sgd.dampening] This usually == momentum, however, it can be changed. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t4stepE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t4stepE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4stepE"></span><span id="ccv_nnc_cmd_param_t::step__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a4aa9d9fdbb5a3c9035fd81e2de4b04b6"></span>int <code class="descname">step</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4stepE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[adam.step] Step t in adam optimizer. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t5beta1E">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t5beta1E"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5beta1E"></span><span id="ccv_nnc_cmd_param_t::beta1__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1af1e3ca6d21404c94e692189b5d9eb78a"></span>float <code class="descname">beta1</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5beta1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[adam.beta1] The beta1 hyper-parameter in adam optimizer. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t5beta2E">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t5beta2E"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5beta2E"></span><span id="ccv_nnc_cmd_param_t::beta2__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1ac78967ffcb966ebca6cb94737928b196"></span>float <code class="descname">beta2</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5beta2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[adam.beta2] The beta2 hyper-parameter in adam optimizer. </p>
 </dd></dl>
 
 <dl class="member">
