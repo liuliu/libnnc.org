@@ -294,7 +294,7 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../api/commands/#_CPPv4N18available_backends14__anonymous148E">available_backends::__anonymous148 (C++ type)</a>
+      <li><a href="../api/commands/#_CPPv4N18available_backends14__anonymous143E">available_backends::__anonymous143 (C++ type)</a>
 </li>
       <li><a href="../api/commands/#_CPPv4N18available_backends21CCV_NNC_BACKEND_COUNTE">available_backends::CCV_NNC_BACKEND_COUNT (C++ enumerator)</a>
 </li>
@@ -312,7 +312,7 @@
 </li>
       <li><a href="../api/commands/#_CPPv4N18available_backends18CCV_NNC_NO_BACKENDE">available_backends::CCV_NNC_NO_BACKEND (C++ enumerator)</a>
 </li>
-      <li><a href="../api/commands/#_CPPv4N21available_command_ids14__anonymous149E">available_command_ids::__anonymous149 (C++ type)</a>
+      <li><a href="../api/commands/#_CPPv4N21available_command_ids14__anonymous144E">available_command_ids::__anonymous144 (C++ type)</a>
 </li>
       <li><a href="../api/commands/#_CPPv4N21available_command_ids21CCV_NNC_ADAM_BACKWARDE">available_command_ids::CCV_NNC_ADAM_BACKWARD (C++ enumerator)</a>
 </li>
@@ -478,6 +478,8 @@
 </li>
       <li><a href="../api/level-5/#_CPPv421ccv_cnnp_average_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc">ccv_cnnp_average_pool (C++ function)</a>
 </li>
+      <li><a href="../api/level-5/#_CPPv419ccv_cnnp_batch_normKfKfPCKc">ccv_cnnp_batch_norm (C++ function)</a>
+</li>
       <li><a href="../api/level-5/#_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc">ccv_cnnp_cmd_exec (C++ function)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv437ccv_cnnp_cmd_exec_init_state_deinit_f">ccv_cnnp_cmd_exec_init_state_deinit_f (C++ type)</a>
@@ -594,8 +596,6 @@
 </li>
       <li><a href="../api/level-5/#_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc">ccv_cnnp_graph (C++ function)</a>
 </li>
-      <li><a href="../api/level-5/#_CPPv417ccv_cnnp_identityK16ccv_cnnp_param_tPCKc">ccv_cnnp_identity (C++ function)</a>
-</li>
       <li><a href="../api/level-5/#_CPPv414ccv_cnnp_inputv">ccv_cnnp_input (C++ function)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv417ccv_cnnp_max_poolA21CCV_NNC_MAX_DIM_ALLOC_KiK16ccv_cnnp_param_tPCKc">ccv_cnnp_max_pool (C++ function)</a>
@@ -642,13 +642,9 @@
 </li>
       <li><a href="../api/level-5/#_CPPv416ccv_cnnp_param_t">ccv_cnnp_param_t (C++ class)</a>
 </li>
-      <li><a href="../api/level-5/#_CPPv4N16ccv_cnnp_param_t10activationE">ccv_cnnp_param_t::activation (C++ member)</a>
-</li>
       <li><a href="../api/level-5/#_CPPv4N16ccv_cnnp_param_t4hintE">ccv_cnnp_param_t::hint (C++ member)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv4N16ccv_cnnp_param_t7no_biasE">ccv_cnnp_param_t::no_bias (C++ member)</a>
-</li>
-      <li><a href="../api/level-5/#_CPPv4N16ccv_cnnp_param_t4normE">ccv_cnnp_param_t::norm (C++ member)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv424ccv_cnnp_random_jitter_t">ccv_cnnp_random_jitter_t (C++ class)</a>
 </li>
@@ -684,9 +680,13 @@
 </li>
       <li><a href="../api/level-5/#_CPPv4N24ccv_cnnp_random_jitter_t1yE">ccv_cnnp_random_jitter_t::y (C++ member)</a>
 </li>
+      <li><a href="../api/level-5/#_CPPv413ccv_cnnp_reluPCKc">ccv_cnnp_relu (C++ function)</a>
+</li>
       <li><a href="../api/level-5/#_CPPv416ccv_cnnp_reshapeA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiPCKc">ccv_cnnp_reshape (C++ function)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv423ccv_cnnp_sequential_newPCPC16ccv_cnnp_model_tKiPCKc">ccv_cnnp_sequential_new (C++ function)</a>
+</li>
+      <li><a href="../api/level-5/#_CPPv416ccv_cnnp_softmaxPCKc">ccv_cnnp_softmax (C++ function)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv428ccv_cnnp_state_initializer_f">ccv_cnnp_state_initializer_f (C++ type)</a>
 </li>
@@ -1402,11 +1402,11 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../api/level-1/#_CPPv4N11level_1_cmd13__anonymous95E">level_1_cmd::__anonymous95 (C++ type)</a>
+      <li><a href="../api/level-1/#_CPPv4N11level_1_cmd13__anonymous92E">level_1_cmd::__anonymous92 (C++ type)</a>
 </li>
-      <li><a href="../api/level-1/#_CPPv4N11level_1_cmd13__anonymous96E">level_1_cmd::__anonymous96 (C++ type)</a>
+      <li><a href="../api/level-1/#_CPPv4N11level_1_cmd13__anonymous93E">level_1_cmd::__anonymous93 (C++ type)</a>
 </li>
-      <li><a href="../api/level-1/#_CPPv4N11level_1_cmd13__anonymous97E">level_1_cmd::__anonymous97 (C++ type)</a>
+      <li><a href="../api/level-1/#_CPPv4N11level_1_cmd13__anonymous94E">level_1_cmd::__anonymous94 (C++ type)</a>
 </li>
       <li><a href="../api/level-1/#_CPPv4N11level_1_cmd25CCV_NNC_ACCUMULATE_OUTPUTE">level_1_cmd::CCV_NNC_ACCUMULATE_OUTPUT (C++ enumerator)</a>
 </li>
@@ -1426,23 +1426,23 @@
 </li>
       <li><a href="../api/level-1/#_CPPv4N11level_1_cmd25CCV_NNC_ZERO_MEMORY_ALLOCE">level_1_cmd::CCV_NNC_ZERO_MEMORY_ALLOC (C++ enumerator)</a>
 </li>
-      <li><a href="../api/level-1/#_CPPv4N14level_1_stream13__anonymous98E">level_1_stream::__anonymous98 (C++ type)</a>
+      <li><a href="../api/level-1/#_CPPv4N14level_1_stream13__anonymous95E">level_1_stream::__anonymous95 (C++ type)</a>
 </li>
       <li><a href="../api/level-1/#_CPPv4N14level_1_stream22CCV_STREAM_CONTEXT_CPUE">level_1_stream::CCV_STREAM_CONTEXT_CPU (C++ enumerator)</a>
 </li>
       <li><a href="../api/level-1/#_CPPv4N14level_1_stream22CCV_STREAM_CONTEXT_GPUE">level_1_stream::CCV_STREAM_CONTEXT_GPU (C++ enumerator)</a>
 </li>
-      <li><a href="../api/level-2/#_CPPv4N18level_2_essentials13__anonymous99E">level_2_essentials::__anonymous99 (C++ type)</a>
+      <li><a href="../api/level-2/#_CPPv4N18level_2_essentials13__anonymous96E">level_2_essentials::__anonymous96 (C++ type)</a>
 </li>
       <li><a href="../api/level-2/#_CPPv4N18level_2_essentials22CCV_NNC_LONG_DOT_GRAPHE">level_2_essentials::CCV_NNC_LONG_DOT_GRAPH (C++ enumerator)</a>
 </li>
       <li><a href="../api/level-2/#_CPPv4N18level_2_essentials23CCV_NNC_SHORT_DOT_GRAPHE">level_2_essentials::CCV_NNC_SHORT_DOT_GRAPH (C++ enumerator)</a>
 </li>
-      <li><a href="../api/level-3.5/#_CPPv4N18level_3_5_parallel14__anonymous107E">level_3_5_parallel::__anonymous107 (C++ type)</a>
+      <li><a href="../api/level-3.5/#_CPPv4N18level_3_5_parallel14__anonymous104E">level_3_5_parallel::__anonymous104 (C++ type)</a>
 </li>
       <li><a href="../api/level-3.5/#_CPPv4N18level_3_5_parallel30CCV_NNC_PARALLEL_REDUCE_OP_SUME">level_3_5_parallel::CCV_NNC_PARALLEL_REDUCE_OP_SUM (C++ enumerator)</a>
 </li>
-      <li><a href="../api/level-3.5/#_CPPv4N18level_3_5_simplify14__anonymous106E">level_3_5_simplify::__anonymous106 (C++ type)</a>
+      <li><a href="../api/level-3.5/#_CPPv4N18level_3_5_simplify14__anonymous103E">level_3_5_simplify::__anonymous103 (C++ type)</a>
 </li>
       <li><a href="../api/level-3.5/#_CPPv4N18level_3_5_simplify49CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATIONE">level_3_5_simplify::CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATION (C++ enumerator)</a>
 </li>
@@ -1452,23 +1452,23 @@
 </li>
       <li><a href="../api/level-3.5/#_CPPv4N18level_3_5_simplify27CCV_NNC_SIMPLIFY_OPS_FUSIONE">level_3_5_simplify::CCV_NNC_SIMPLIFY_OPS_FUSION (C++ enumerator)</a>
 </li>
-      <li><a href="../api/level-3.5/#_CPPv4N22level_3_5_while_others14__anonymous105E">level_3_5_while_others::__anonymous105 (C++ type)</a>
+      <li><a href="../api/level-3.5/#_CPPv4N22level_3_5_while_others14__anonymous102E">level_3_5_while_others::__anonymous102 (C++ type)</a>
 </li>
       <li><a href="../api/level-3.5/#_CPPv4N22level_3_5_while_others21CCV_NNC_MULTIVIEW_K0NE">level_3_5_while_others::CCV_NNC_MULTIVIEW_K0N (C++ enumerator)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/level-3.5/#_CPPv4N22level_3_5_while_others21CCV_NNC_MULTIVIEW_K1NE">level_3_5_while_others::CCV_NNC_MULTIVIEW_K1N (C++ enumerator)</a>
 </li>
       <li><a href="../api/level-3/#_CPPv4N18level_3_essentials14__anonymous100E">level_3_essentials::__anonymous100 (C++ type)</a>
 </li>
       <li><a href="../api/level-3/#_CPPv4N18level_3_essentials14__anonymous101E">level_3_essentials::__anonymous101 (C++ type)</a>
 </li>
-      <li><a href="../api/level-3/#_CPPv4N18level_3_essentials14__anonymous102E">level_3_essentials::__anonymous102 (C++ type)</a>
+      <li><a href="../api/level-3/#_CPPv4N18level_3_essentials13__anonymous97E">level_3_essentials::__anonymous97 (C++ type)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="../api/level-3/#_CPPv4N18level_3_essentials14__anonymous103E">level_3_essentials::__anonymous103 (C++ type)</a>
+      <li><a href="../api/level-3/#_CPPv4N18level_3_essentials13__anonymous98E">level_3_essentials::__anonymous98 (C++ type)</a>
 </li>
-      <li><a href="../api/level-3/#_CPPv4N18level_3_essentials14__anonymous104E">level_3_essentials::__anonymous104 (C++ type)</a>
+      <li><a href="../api/level-3/#_CPPv4N18level_3_essentials13__anonymous99E">level_3_essentials::__anonymous99 (C++ type)</a>
 </li>
       <li><a href="../api/level-3/#_CPPv4N18level_3_essentials25CCV_NNC_AUTOGEN_ALL_EXECSE">level_3_essentials::CCV_NNC_AUTOGEN_ALL_EXECS (C++ enumerator)</a>
 </li>
@@ -1494,21 +1494,9 @@
 </li>
       <li><a href="../api/level-3/#_CPPv4N18level_3_essentials33CCV_NNC_WHILE_COUNT_TENSOR_SYMBOLE">level_3_essentials::CCV_NNC_WHILE_COUNT_TENSOR_SYMBOL (C++ enumerator)</a>
 </li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model14__anonymous108E">level_5_model::__anonymous108 (C++ type)</a>
+      <li><a href="../api/level-5/#_CPPv4N13level_5_model14__anonymous105E">level_5_model::__anonymous105 (C++ type)</a>
 </li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model14__anonymous109E">level_5_model::__anonymous109 (C++ type)</a>
-</li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model14__anonymous110E">level_5_model::__anonymous110 (C++ type)</a>
-</li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model14__anonymous111E">level_5_model::__anonymous111 (C++ type)</a>
-</li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_NONEE">level_5_model::CCV_CNNP_ACTIVATION_NONE (C++ enumerator)</a>
-</li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model24CCV_CNNP_ACTIVATION_RELUE">level_5_model::CCV_CNNP_ACTIVATION_RELU (C++ enumerator)</a>
-</li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model27CCV_CNNP_ACTIVATION_SOFTMAXE">level_5_model::CCV_CNNP_ACTIVATION_SOFTMAX (C++ enumerator)</a>
-</li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model19CCV_CNNP_BATCH_NORME">level_5_model::CCV_CNNP_BATCH_NORM (C++ enumerator)</a>
+      <li><a href="../api/level-5/#_CPPv4N13level_5_model14__anonymous106E">level_5_model::__anonymous106 (C++ type)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv4N13level_5_model27CCV_CNNP_INIT_SHARED_TENSORE">level_5_model::CCV_CNNP_INIT_SHARED_TENSOR (C++ enumerator)</a>
 </li>
@@ -1521,8 +1509,6 @@
       <li><a href="../api/level-5/#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE">level_5_model::CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE (C++ enumerator)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE">level_5_model::CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY (C++ enumerator)</a>
-</li>
-      <li><a href="../api/level-5/#_CPPv4N13level_5_model16CCV_CNNP_NO_NORME">level_5_model::CCV_CNNP_NO_NORM (C++ enumerator)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv4N13level_5_model18CCV_CNNP_NO_TENSORE">level_5_model::CCV_CNNP_NO_TENSOR (C++ enumerator)</a>
 </li>
