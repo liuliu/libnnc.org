@@ -1289,6 +1289,83 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc">
+<span id="_CPPv317ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc"></span><span id="_CPPv217ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc"></span><span id="ccv_cnnp_cmd_exec__ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_cnnp_cmd_exec_io_tCPC.iC.iCPC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga86c597347f1296c5d82fca706b91fe87"></span><code class="descname">ccv_cnnp_cmd_exec</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv422ccv_cnnp_cmd_exec_io_t" title="ccv_cnnp_cmd_exec_io_t">ccv_cnnp_cmd_exec_io_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> int *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A generic model based on the command. If the tensors are labeled as ccv_cnnp_io_t, it will participate as the input / output of the model. If it is a init tensor, the model will use this tensor for that parameter. More over, if it is marked as trainable, that tensor will be differentiated against when you call ccv_cnnp_model_fit. This model however doesn’t take over ownership of the tensor. You should manage the life cycle of the given tensor and it is your responsibility to make sure they outlive the model. Also, all inputs and outputs marked as init tensors will be shared if you reuse this model in other places. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model based on the given command. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The command to generate this model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">hint</span></code>: The hint to run the command. </li>
+<li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: The flags with the command. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: A list of ccv_cnnp_cmd_exec_io_t identify each input as either a init tensor or a ccv_cnnp_io_t. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of input list. </li>
+<li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: A list of types identify each output as ccv_cnnp_io_t or a none tensor. </li>
+<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the outputs. There is no need to give ccv_cnnp_tensor_param_t for outputs because all of them are CCV_CNNP_IO type. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv425ccv_cnnp_cmd_exec_io_copyPCK16ccv_nnc_tensor_t">
+<span id="_CPPv325ccv_cnnp_cmd_exec_io_copyPCK16ccv_nnc_tensor_t"></span><span id="_CPPv225ccv_cnnp_cmd_exec_io_copyPCK16ccv_nnc_tensor_t"></span><span id="ccv_cnnp_cmd_exec_io_copy__ccv_nnc_tensor_tCPC"></span><span class="target" id="group__level__5__model_1ga51d7d42fa90061d1c2b1668f9fa17a08"></span><code class="descname">ccv_cnnp_cmd_exec_io_copy</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_cnnp_cmd_exec_io_copyPCK16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy a tensor as initialization for the given parameter. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A init_state that can be passed to ccv_cnnp_cmd_exec_io_t </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor to copy from. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv427ccv_cnnp_cmd_exec_io_set_byK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiK22ccv_nnc_tensor_param_t">
+<span id="_CPPv327ccv_cnnp_cmd_exec_io_set_byK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiK22ccv_nnc_tensor_param_t"></span><span id="_CPPv227ccv_cnnp_cmd_exec_io_set_byK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiK22ccv_nnc_tensor_param_t"></span><span id="ccv_cnnp_cmd_exec_io_set_by__ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_nnc_tensor_param_tC"></span><span class="target" id="group__level__5__model_1ga57c4290645c1897f66e19b9fb6af92f7"></span><code class="descname">ccv_cnnp_cmd_exec_io_set_by</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427ccv_cnnp_cmd_exec_io_set_byK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiK22ccv_nnc_tensor_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize a given parameter with the command. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A init_state that can be passed to ccv_cnnp_cmd_exec_io_t </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The command to call when need to initialize. </li>
+<li><code class="docutils literal notranslate"><span class="pre">hint</span></code>: The hint to accompany the command. </li>
+<li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: The flags to accompany the command. </li>
+<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: The tensor configuration. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc">
+<span id="_CPPv314ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc"></span><span id="_CPPv214ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc"></span><span id="ccv_cnnp_graph__ccv_nnc_symbolic_graph_tCPC.ccv_cnnp_tensor_symbol_param_tCPC.iC.ccv_nnc_tensor_symbol_tPC.iC.ccv_nnc_tensor_symbol_tPC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga0be825af48de9576577670d1ce3938a1"></span><code class="descname">ccv_cnnp_graph</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv430ccv_cnnp_tensor_symbol_param_t" title="ccv_cnnp_tensor_symbol_param_t">ccv_cnnp_tensor_symbol_param_t</a> *<em class="property">const</em> <em>tensor_symbol_params</em>, <em class="property">const</em> int <em>tensor_symbol_param_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A generic model based on the symbolic graph we provided. A list of tensor symbols are labeled whether it is ccv_cnnp_io_t or not (we identify whether this is a input or output based on whether it is in the graph). If it is not, we init it with a given tensor. If it is marked as trainable, that tensor will be differentiated against when you call ccv_cnnp_model_fit. The model doesn’t take ownership over the init tensors. You are responsible to make sure the init tensors outlive the model until the initialization occurred. Also, these tensors will be shared if the model is reused. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model based on the given symbolic graph. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph that is our blue print for this model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">tensor_symbol_params</span></code>: The list of tensor symbol parameters that labels a given symbol. </li>
+<li><code class="docutils literal notranslate"><span class="pre">tensor_symbol_param_size</span></code>: The size of the list. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The inputs to this graph. We can figure out which ones are inputs, but this gives us the order. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the input list. </li>
+<li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The outputs from this graph. We can figure out which ones are outputs, but this gives us the order. </li>
+<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the output list. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv412ccv_cnnp_addPCKc">
 <span id="_CPPv312ccv_cnnp_addPCKc"></span><span id="_CPPv212ccv_cnnp_addPCKc"></span><span id="ccv_cnnp_add__cCPC"></span><span class="target" id="group__level__5__model_1gacca43535491e926e3450d7ef0a7309f9"></span><code class="descname">ccv_cnnp_add</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_addPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Add multiple input tensors together. <dl class="docutils">
@@ -1459,20 +1536,16 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc">
-<span id="_CPPv317ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc"></span><span id="_CPPv217ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc"></span><span id="ccv_cnnp_cmd_exec__ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_cnnp_cmd_exec_io_tCPC.iC.iCPC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga86c597347f1296c5d82fca706b91fe87"></span><code class="descname">ccv_cnnp_cmd_exec</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv422ccv_cnnp_cmd_exec_io_t" title="ccv_cnnp_cmd_exec_io_t">ccv_cnnp_cmd_exec_io_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> int *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A generic model based on the command. If the tensors are labeled as ccv_cnnp_io_t, it will participate as the input / output of the model. If it is a init tensor, the model will use this tensor for that parameter. More over, if it is marked as trainable, that tensor will be differentiated against when you call ccv_cnnp_model_fit. This model however doesn’t take over ownership of the tensor. You should manage the life cycle of the given tensor and it is your responsibility to make sure they outlive the model. Also, all inputs and outputs marked as init tensors will be shared if you reuse this model in other places. <dl class="docutils">
+<dt id="_CPPv419ccv_cnnp_layer_normKfA21CCV_NNC_MAX_DIM_ALLOC_KiKiPCKc">
+<span id="_CPPv319ccv_cnnp_layer_normKfA21CCV_NNC_MAX_DIM_ALLOC_KiKiPCKc"></span><span id="_CPPv219ccv_cnnp_layer_normKfACCV_NNC_MAX_DIM_ALLOC_KiKiPCKc"></span><span id="ccv_cnnp_layer_norm__floatC.iCA.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga09c4cd384b3329c981d744f07d9b1b90"></span><code class="descname">ccv_cnnp_layer_norm</code><span class="sig-paren">(</span><em class="property">const</em> float <em>epsilon</em>, <em class="property">const</em> int <em>axis</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>axis_count</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_layer_normKfA21CCV_NNC_MAX_DIM_ALLOC_KiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A layer norm model. <dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>A model based on the given command. </dd>
+<dd>A layer norm model. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The command to generate this model. </li>
-<li><code class="docutils literal notranslate"><span class="pre">hint</span></code>: The hint to run the command. </li>
-<li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: The flags with the command. </li>
-<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: A list of ccv_cnnp_cmd_exec_io_t identify each input as either a init tensor or a ccv_cnnp_io_t. </li>
-<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of input list. </li>
-<li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: A list of types identify each output as ccv_cnnp_io_t or a none tensor. </li>
-<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the outputs. There is no need to give ccv_cnnp_tensor_param_t for outputs because all of them are CCV_CNNP_IO type. </li>
+<li><code class="docutils literal notranslate"><span class="pre">epsilon</span></code>: The epsilon in layer norm parameter. </li>
+<li><code class="docutils literal notranslate"><span class="pre">axis</span></code>: The axis are the feature axis to compute norm. </li>
+<li><code class="docutils literal notranslate"><span class="pre">axis_count</span></code>: How many axis we count as feature. </li>
 <li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
@@ -1481,14 +1554,15 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv425ccv_cnnp_cmd_exec_io_copyPCK16ccv_nnc_tensor_t">
-<span id="_CPPv325ccv_cnnp_cmd_exec_io_copyPCK16ccv_nnc_tensor_t"></span><span id="_CPPv225ccv_cnnp_cmd_exec_io_copyPCK16ccv_nnc_tensor_t"></span><span id="ccv_cnnp_cmd_exec_io_copy__ccv_nnc_tensor_tCPC"></span><span class="target" id="group__level__5__model_1ga51d7d42fa90061d1c2b1668f9fa17a08"></span><code class="descname">ccv_cnnp_cmd_exec_io_copy</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_cnnp_cmd_exec_io_copyPCK16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Copy a tensor as initialization for the given parameter. <dl class="docutils">
+<dt id="_CPPv419ccv_cnnp_scalar_mulKfPCKc">
+<span id="_CPPv319ccv_cnnp_scalar_mulKfPCKc"></span><span id="_CPPv219ccv_cnnp_scalar_mulKfPCKc"></span><span id="ccv_cnnp_scalar_mul__floatC.cCPC"></span><span class="target" id="group__level__5__model_1ga10f3cd5922d5fe03b792895f89c24f3d"></span><code class="descname">ccv_cnnp_scalar_mul</code><span class="sig-paren">(</span><em class="property">const</em> float <em>a</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_scalar_mulKfPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A scalar multiplication model. Y = aX where a is a scalar. <dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>A init_state that can be passed to ccv_cnnp_cmd_exec_io_t </dd>
+<dd>A scalar multiplication model. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor to copy from. </li>
+<li><code class="docutils literal notranslate"><span class="pre">a</span></code>: The scalar parameter. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1496,17 +1570,16 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv427ccv_cnnp_cmd_exec_io_set_byK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiK22ccv_nnc_tensor_param_t">
-<span id="_CPPv327ccv_cnnp_cmd_exec_io_set_byK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiK22ccv_nnc_tensor_param_t"></span><span id="_CPPv227ccv_cnnp_cmd_exec_io_set_byK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiK22ccv_nnc_tensor_param_t"></span><span id="ccv_cnnp_cmd_exec_io_set_by__ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_nnc_tensor_param_tC"></span><span class="target" id="group__level__5__model_1ga57c4290645c1897f66e19b9fb6af92f7"></span><code class="descname">ccv_cnnp_cmd_exec_io_set_by</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427ccv_cnnp_cmd_exec_io_set_byK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiK22ccv_nnc_tensor_param_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Initialize a given parameter with the command. <dl class="docutils">
+<dt id="_CPPv418ccv_cnnp_transposeKiKiPCKc">
+<span id="_CPPv318ccv_cnnp_transposeKiKiPCKc"></span><span id="_CPPv218ccv_cnnp_transposeKiKiPCKc"></span><span id="ccv_cnnp_transpose__iC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga0e49e9488d26af1b366294cb7ef5ef7a"></span><code class="descname">ccv_cnnp_transpose</code><span class="sig-paren">(</span><em class="property">const</em> int <em>axis_a</em>, <em class="property">const</em> int <em>axis_b</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ccv_cnnp_transposeKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A matrix transpose model. <dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>A init_state that can be passed to ccv_cnnp_cmd_exec_io_t </dd>
+<dd>A matrix transpose model. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The command to call when need to initialize. </li>
-<li><code class="docutils literal notranslate"><span class="pre">hint</span></code>: The hint to accompany the command. </li>
-<li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: The flags to accompany the command. </li>
-<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: The tensor configuration. </li>
+<li><code class="docutils literal notranslate"><span class="pre">axis_a</span></code>: The axis to be exchanged with axis_b </li>
+<li><code class="docutils literal notranslate"><span class="pre">axis_b</span></code>: The axis to be exchanged with axis_a </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
 </dl>
@@ -1514,20 +1587,31 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc">
-<span id="_CPPv314ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc"></span><span id="_CPPv214ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc"></span><span id="ccv_cnnp_graph__ccv_nnc_symbolic_graph_tCPC.ccv_cnnp_tensor_symbol_param_tCPC.iC.ccv_nnc_tensor_symbol_tPC.iC.ccv_nnc_tensor_symbol_tPC.iC.cCPC"></span><span class="target" id="group__level__5__model_1ga0be825af48de9576577670d1ce3938a1"></span><code class="descname">ccv_cnnp_graph</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv430ccv_cnnp_tensor_symbol_param_t" title="ccv_cnnp_tensor_symbol_param_t">ccv_cnnp_tensor_symbol_param_t</a> *<em class="property">const</em> <em>tensor_symbol_params</em>, <em class="property">const</em> int <em>tensor_symbol_param_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A generic model based on the symbolic graph we provided. A list of tensor symbols are labeled whether it is ccv_cnnp_io_t or not (we identify whether this is a input or output based on whether it is in the graph). If it is not, we init it with a given tensor. If it is marked as trainable, that tensor will be differentiated against when you call ccv_cnnp_model_fit. The model doesn’t take ownership over the init tensors. You are responsible to make sure the init tensors outlive the model until the initialization occurred. Also, these tensors will be shared if the model is reused. <dl class="docutils">
+<dt id="_CPPv415ccv_cnnp_matmulAL2E_KiAL2E_KiPCKc">
+<span id="_CPPv315ccv_cnnp_matmulAL2E_KiAL2E_KiPCKc"></span><span id="_CPPv215ccv_cnnp_matmulA2_KiA2_KiPCKc"></span><span id="ccv_cnnp_matmul__iCA.iCA.cCPC"></span><span class="target" id="group__level__5__model_1ga6eb6c751cf5c257038b90515653ca2ba"></span><code class="descname">ccv_cnnp_matmul</code><span class="sig-paren">(</span><em class="property">const</em> int <em>transpose_a</em>[2], <em class="property">const</em> int <em>transpose_b</em>[2], <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415ccv_cnnp_matmulAL2E_KiAL2E_KiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A batched matrix multiplication model. <dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>A model based on the given symbolic graph. </dd>
+<dd>A batched matrix multiplication model. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph that is our blue print for this model. </li>
-<li><code class="docutils literal notranslate"><span class="pre">tensor_symbol_params</span></code>: The list of tensor symbol parameters that labels a given symbol. </li>
-<li><code class="docutils literal notranslate"><span class="pre">tensor_symbol_param_size</span></code>: The size of the list. </li>
-<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The inputs to this graph. We can figure out which ones are inputs, but this gives us the order. </li>
-<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the input list. </li>
-<li><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The outputs from this graph. We can figure out which ones are outputs, but this gives us the order. </li>
-<li><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of the output list. </li>
+<li><code class="docutils literal notranslate"><span class="pre">transpose_a</span></code>: The axis to be transposed in the first matrix. </li>
+<li><code class="docutils literal notranslate"><span class="pre">transpose_b</span></code>: The axis to be transposed in the second matrix. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv416ccv_cnnp_dropoutKfPCKc">
+<span id="_CPPv316ccv_cnnp_dropoutKfPCKc"></span><span id="_CPPv216ccv_cnnp_dropoutKfPCKc"></span><span id="ccv_cnnp_dropout__floatC.cCPC"></span><span class="target" id="group__level__5__model_1ga318dae992fba351dc81239a7eeb795f9"></span><code class="descname">ccv_cnnp_dropout</code><span class="sig-paren">(</span><em class="property">const</em> float <em>p</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ccv_cnnp_dropoutKfPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A dropout model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A dropout model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">p</span></code>: The probability to drop the current value. </li>
 <li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
@@ -1566,26 +1650,6 @@
 <dt id="_CPPv426ccv_cnnp_trainable_index_t">
 <span id="_CPPv326ccv_cnnp_trainable_index_t"></span><span id="_CPPv226ccv_cnnp_trainable_index_t"></span><span id="ccv_cnnp_trainable_index_t"></span><span class="target" id="structccv__cnnp__trainable__index__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_trainable_index_t</code><a class="headerlink" href="#_CPPv426ccv_cnnp_trainable_index_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><em>#include &lt;ccv_nnc.h&gt;</em><p>Simple structure for group of command and the index for the variable. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv416ccv_cnnp_param_t">
-<span id="_CPPv316ccv_cnnp_param_t"></span><span id="_CPPv216ccv_cnnp_param_t"></span><span id="ccv_cnnp_param_t"></span><span class="target" id="structccv__cnnp__param__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_param_t</code><a class="headerlink" href="#_CPPv416ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Public Members</p>
-<dl class="member">
-<dt id="_CPPv4N16ccv_cnnp_param_t7no_biasE">
-<span id="_CPPv3N16ccv_cnnp_param_t7no_biasE"></span><span id="_CPPv2N16ccv_cnnp_param_t7no_biasE"></span><span id="ccv_cnnp_param_t::no_bias__i"></span><span class="target" id="structccv__cnnp__param__t_1a4531ac7b6c18891995aa27d63d37724e"></span>int <code class="descname">no_bias</code><a class="headerlink" href="#_CPPv4N16ccv_cnnp_param_t7no_biasE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>No bias term. </p>
-</dd></dl>
-
-<dl class="member">
-<dt id="_CPPv4N16ccv_cnnp_param_t4hintE">
-<span id="_CPPv3N16ccv_cnnp_param_t4hintE"></span><span id="_CPPv2N16ccv_cnnp_param_t4hintE"></span><span id="ccv_cnnp_param_t::hint__ccv_nnc_hint_t"></span><span class="target" id="structccv__cnnp__param__t_1a5f44542ea50e46d8868aa684e35f7993"></span><a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <code class="descname">hint</code><a class="headerlink" href="#_CPPv4N16ccv_cnnp_param_t4hintE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The hint for a particular operation </p>
-</dd></dl>
-
-</div>
 </dd></dl>
 
 <dl class="class">
@@ -1649,6 +1713,26 @@
 <dt id="_CPPv4N30ccv_cnnp_tensor_symbol_param_t4typeE">
 <span id="_CPPv3N30ccv_cnnp_tensor_symbol_param_t4typeE"></span><span id="_CPPv2N30ccv_cnnp_tensor_symbol_param_t4typeE"></span><span id="ccv_cnnp_tensor_symbol_param_t::type__i"></span><span class="target" id="structccv__cnnp__tensor__symbol__param__t_1a8224b58bc9868bc0e09f81a3e5b20177"></span>int <code class="descname">type</code><a class="headerlink" href="#_CPPv4N30ccv_cnnp_tensor_symbol_param_t4typeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The type of the parameter, could be CCV_CNNP_IO, INIT_SHARED_TENSOR, or INIT_SHARED_TENSOR_TRAINABLE </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv416ccv_cnnp_param_t">
+<span id="_CPPv316ccv_cnnp_param_t"></span><span id="_CPPv216ccv_cnnp_param_t"></span><span id="ccv_cnnp_param_t"></span><span class="target" id="structccv__cnnp__param__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_param_t</code><a class="headerlink" href="#_CPPv416ccv_cnnp_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv4N16ccv_cnnp_param_t7no_biasE">
+<span id="_CPPv3N16ccv_cnnp_param_t7no_biasE"></span><span id="_CPPv2N16ccv_cnnp_param_t7no_biasE"></span><span id="ccv_cnnp_param_t::no_bias__i"></span><span class="target" id="structccv__cnnp__param__t_1a4531ac7b6c18891995aa27d63d37724e"></span>int <code class="descname">no_bias</code><a class="headerlink" href="#_CPPv4N16ccv_cnnp_param_t7no_biasE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>No bias term. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N16ccv_cnnp_param_t4hintE">
+<span id="_CPPv3N16ccv_cnnp_param_t4hintE"></span><span id="_CPPv2N16ccv_cnnp_param_t4hintE"></span><span id="ccv_cnnp_param_t::hint__ccv_nnc_hint_t"></span><span class="target" id="structccv__cnnp__param__t_1a5f44542ea50e46d8868aa684e35f7993"></span><a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <code class="descname">hint</code><a class="headerlink" href="#_CPPv4N16ccv_cnnp_param_t4hintE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The hint for a particular operation </p>
 </dd></dl>
 
 </div>
