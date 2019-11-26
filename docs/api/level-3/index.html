@@ -1281,6 +1281,22 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv436ccv_nnc_graph_exec_symbol_replace_ioPCK24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tK23ccv_nnc_tensor_symbol_tK23ccv_nnc_tensor_symbol_t">
+<span id="_CPPv336ccv_nnc_graph_exec_symbol_replace_ioPCK24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tK23ccv_nnc_tensor_symbol_tK23ccv_nnc_tensor_symbol_t"></span><span id="_CPPv236ccv_nnc_graph_exec_symbol_replace_ioPCK24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tK23ccv_nnc_tensor_symbol_tK23ccv_nnc_tensor_symbol_t"></span><span id="ccv_nnc_graph_exec_symbol_replace_io__ccv_nnc_symbolic_graph_tCPC.ccv_nnc_graph_exec_symbol_tC.ccv_nnc_tensor_symbol_tC.ccv_nnc_tensor_symbol_tC"></span><span class="target" id="group__level__3__others_1gae438ba492e1ae1df516dd2ab2fb073da"></span>void <code class="descname">ccv_nnc_graph_exec_symbol_replace_io</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> <em>symbol</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>old_symbol</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>new_symbol</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436ccv_nnc_graph_exec_symbol_replace_ioPCK24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tK23ccv_nnc_tensor_symbol_tK23ccv_nnc_tensor_symbol_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Replace a input / output tensor symbol on an exec symbol. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">symbol</span></code>: The execution node symbol reference. </li>
+<li><code class="docutils literal notranslate"><span class="pre">old_symbol</span></code>: The old tensor symbol to be replaced. </li>
+<li><code class="docutils literal notranslate"><span class="pre">new_symbol</span></code>: The new tensor symbol on input / output. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv428ccv_nnc_graph_exec_symbol_toPCK24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tPCPKiPCi">
 <span id="_CPPv328ccv_nnc_graph_exec_symbol_toPCK24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tPCPKiPCi"></span><span id="_CPPv228ccv_nnc_graph_exec_symbol_toPCK24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tPCPKiPCi"></span><span id="ccv_nnc_graph_exec_symbol_to__ccv_nnc_symbolic_graph_tCPC.ccv_nnc_graph_exec_symbol_tC.iCPPC.iPC"></span><span class="target" id="group__level__3__others_1ga56c224bdfebae66cce128011d0284546"></span>void <code class="descname">ccv_nnc_graph_exec_symbol_to</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> <em>symbol</em>, <em class="property">const</em> int **<em class="property">const</em> <em>tos</em>, int *<em class="property">const</em> <em>to_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_nnc_graph_exec_symbol_toPCK24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tPCPKiPCi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Which exec symbol this is connected to. For efficiency consideration, this returns pointer directly. <dl class="docutils">
