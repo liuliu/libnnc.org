@@ -798,8 +798,24 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
-<li><code class="docutils literal notranslate"><span class="pre">symbol</span></code>: The tensor symbol we want to retrieve its counterparts on a different device. </li>
+<li><code class="docutils literal notranslate"><span class="pre">symbol</span></code>: The tensor symbol we want to retrieve its counterpart on a different device. </li>
 <li><code class="docutils literal notranslate"><span class="pre">device_id</span></code>: The device numeric id for this symbol. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv430ccv_nnc_tensor_symbol_set_copyPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKiK23ccv_nnc_tensor_symbol_t">
+<span id="_CPPv330ccv_nnc_tensor_symbol_set_copyPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKiK23ccv_nnc_tensor_symbol_t"></span><span id="_CPPv230ccv_nnc_tensor_symbol_set_copyPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKiK23ccv_nnc_tensor_symbol_t"></span><span id="ccv_nnc_tensor_symbol_set_copy__ccv_nnc_symbolic_graph_tPC.ccv_nnc_tensor_symbol_tC.iC.ccv_nnc_tensor_symbol_tC"></span><span class="target" id="group__level__3__5__parallel_1ga21076999f6461ed90753ca3e5cb2e4c4"></span>void <code class="descname">ccv_nnc_tensor_symbol_set_copy</code><span class="sig-paren">(</span><a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>symbol</em>, <em class="property">const</em> int <em>device_id</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>copy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430ccv_nnc_tensor_symbol_set_copyPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKiK23ccv_nnc_tensor_symbol_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set corresponding symbol for this symbol on another device. Thus, someone else can query this later with ccv_nnc_tensor_symbol_copy <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">symbol</span></code>: The tensor symbol we want to set its counterpart on a different device. </li>
+<li><code class="docutils literal notranslate"><span class="pre">device_id</span></code>: The device numeric id for this symbol. </li>
+<li><code class="docutils literal notranslate"><span class="pre">copy</span></code>: The tensor symbol counterpart on a different device. </li>
 </ul>
 </dd>
 </dl>
@@ -815,8 +831,24 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
-<li><code class="docutils literal notranslate"><span class="pre">symbol</span></code>: The execution node we want to retrieve its counterparts on a different device. </li>
+<li><code class="docutils literal notranslate"><span class="pre">symbol</span></code>: The execution node we want to retrieve its counterpart on a different device. </li>
 <li><code class="docutils literal notranslate"><span class="pre">device_id</span></code>: The device numeric id for this symbol. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv434ccv_nnc_graph_exec_symbol_set_copyPC24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tKiK27ccv_nnc_graph_exec_symbol_t">
+<span id="_CPPv334ccv_nnc_graph_exec_symbol_set_copyPC24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tKiK27ccv_nnc_graph_exec_symbol_t"></span><span id="_CPPv234ccv_nnc_graph_exec_symbol_set_copyPC24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tKiK27ccv_nnc_graph_exec_symbol_t"></span><span id="ccv_nnc_graph_exec_symbol_set_copy__ccv_nnc_symbolic_graph_tPC.ccv_nnc_graph_exec_symbol_tC.iC.ccv_nnc_graph_exec_symbol_tC"></span><span class="target" id="group__level__3__5__parallel_1ga3d833746d1f35ca364e67ceb7739b241"></span>void <code class="descname">ccv_nnc_graph_exec_symbol_set_copy</code><span class="sig-paren">(</span><a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> <em>symbol</em>, <em class="property">const</em> int <em>device_id</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> <em>copy</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434ccv_nnc_graph_exec_symbol_set_copyPC24ccv_nnc_symbolic_graph_tK27ccv_nnc_graph_exec_symbol_tKiK27ccv_nnc_graph_exec_symbol_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set corresponding symbol for this symbol on another device. Thus, someone else can query this later with ccv_nnc_graph_exec_symbol_copy <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">symbol</span></code>: The execution node we want to set its counterpart on a different device. </li>
+<li><code class="docutils literal notranslate"><span class="pre">device_id</span></code>: The device numeric id for this symbol. </li>
+<li><code class="docutils literal notranslate"><span class="pre">copy</span></code>: The execution node counterpart on a different device. </li>
 </ul>
 </dd>
 </dl>

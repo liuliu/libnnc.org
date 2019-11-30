@@ -1181,6 +1181,21 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv431ccv_nnc_stream_context_try_waitPCK24ccv_nnc_stream_context_t">
+<span id="_CPPv331ccv_nnc_stream_context_try_waitPCK24ccv_nnc_stream_context_t"></span><span id="_CPPv231ccv_nnc_stream_context_try_waitPCK24ccv_nnc_stream_context_t"></span><span id="ccv_nnc_stream_context_try_wait__ccv_nnc_stream_context_tCPC"></span><span class="target" id="group__level__1__stream_1ga8142bc0824758705370d843c6727c17f"></span>int <code class="descname">ccv_nnc_stream_context_try_wait</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431ccv_nnc_stream_context_try_waitPCK24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Wait until command tasks submitted and signals on the stream context completed. If graph run haven’t done, return -1. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if there is no graph run to wait, -1 if there is and we skipped. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: The stream context to wait. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv427ccv_nnc_stream_context_freePC24ccv_nnc_stream_context_t">
 <span id="_CPPv327ccv_nnc_stream_context_freePC24ccv_nnc_stream_context_t"></span><span id="_CPPv227ccv_nnc_stream_context_freePC24ccv_nnc_stream_context_t"></span><span id="ccv_nnc_stream_context_free__ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__1__stream_1gae23d0f3e45b8afab4d8b193413ff8413"></span>void <code class="descname">ccv_nnc_stream_context_free</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427ccv_nnc_stream_context_freePC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Deallocate the stream context. <dl class="docutils">
