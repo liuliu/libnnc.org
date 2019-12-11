@@ -336,22 +336,6 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv428ccv_nnc_tensor_from_variablePC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t">
-<span id="_CPPv328ccv_nnc_tensor_from_variablePC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t"></span><span id="_CPPv228ccv_nnc_tensor_from_variablePC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t"></span><span id="ccv_nnc_tensor_from_variable__ccv_nnc_dynamic_graph_tPC.ccv_nnc_tensor_variable_tC"></span><span class="target" id="group__level__4_1gabb1986c8eca9d7a25c8497d18e9f8555"></span><code class="descname">ccv_nnc_tensor_from_variable</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> <em>tensor_variable</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_nnc_tensor_from_variablePC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the underlying tensor for the tensor variable. The tensor allocation may be performed when calling this method. <dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>The underlying tensor. </dd>
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The dynamic graph. </li>
-<li><code class="docutils literal notranslate"><span class="pre">tensor_variable</span></code>: The tensor variable to get the underlying tensor. </li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
 <dt id="_CPPv427ccv_nnc_tensor_variable_setPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tPC16ccv_nnc_tensor_t">
 <span id="_CPPv327ccv_nnc_tensor_variable_setPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tPC16ccv_nnc_tensor_t"></span><span id="_CPPv227ccv_nnc_tensor_variable_setPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tPC16ccv_nnc_tensor_t"></span><span id="ccv_nnc_tensor_variable_set__ccv_nnc_dynamic_graph_tPC.ccv_nnc_tensor_variable_tC.ccv_nnc_tensor_tPC"></span><span class="target" id="group__level__4_1ga750b9bf63654e9d20e90d0eb2ec4e691"></span>void <code class="descname">ccv_nnc_tensor_variable_set</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> <em>tensor_variable</em>, ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427ccv_nnc_tensor_variable_setPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tPC16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set a tensor on the tensor variable. Tensor variable doesn’t take over the life-cycle management of the tensor (in similar way as the tensor binds). <dl class="docutils">
