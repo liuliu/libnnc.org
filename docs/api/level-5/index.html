@@ -967,12 +967,6 @@
 </dd></dl>
 
 <dl class="type">
-<dt id="_CPPv430ccv_cnnp_model_minimizer_set_f">
-<span id="_CPPv330ccv_cnnp_model_minimizer_set_f"></span><span id="_CPPv230ccv_cnnp_model_minimizer_set_f"></span><span id="ccv_cnnp_model_minimizer_set_f"></span><span class="target" id="group__level__5__model_1gaaca4a333b5913ea572a5636c91c805ff"></span><em class="property">typedef </em><a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> (*<code class="descname">ccv_cnnp_model_minimizer_set_f</code>)<span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> model, <em class="property">const</em> <a class="reference internal" href="#_CPPv426ccv_cnnp_trainable_index_t" title="ccv_cnnp_trainable_index_t">ccv_cnnp_trainable_index_t</a> *<em class="property">const</em> indexes, <em class="property">const</em> int index_size, <em class="property">const</em> void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430ccv_cnnp_model_minimizer_set_f" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>The setter function prototype for ccv_cnnp_model_set_minimizer. This is useful because it helps to set different minimizer parameters for different trainables. The example would be disable weight decay for bias / scale variables. If I expand this idea a bit, I can also support for different trainables, have entirely different minimizer function. However, I haven’t seen anything that can be trained with different minimizer (most likely due to epoch updates learn rate, therefore, it is hard to manipulate proper learn rate if different minimizers are used for different trainables at the same time). If there is a model does that, I can add that (need some thinking though). Because we cannot attach names to it (hmm, in retrospect, we probably should), the way we identify the trainables is to through which node it is used (by the command type), and in which position. Also, it is only interesting if the trainable is the input of some command. Therefore, only show it if it is an input. </p>
-</dd></dl>
-
-<dl class="type">
 <dt id="_CPPv428ccv_cnnp_state_initializer_f">
 <span id="_CPPv328ccv_cnnp_state_initializer_f"></span><span id="_CPPv228ccv_cnnp_state_initializer_f"></span><span id="ccv_cnnp_state_initializer_f"></span><span class="target" id="group__level__5__model_1gaaae482503eb04d5f74bd7e4c5dcc7a82"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_state_initializer_f</code>)<span class="sig-paren">(</span>void *<em class="property">const</em> context, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> cmd, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> hint, <em class="property">const</em> int flags, ccv_nnc_tensor_t *<em class="property">const</em> input, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> output_symbol<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_state_initializer_f" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -1230,15 +1224,31 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tK30ccv_cnnp_model_minimizer_set_fPCKv">
-<span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tK30ccv_cnnp_model_minimizer_set_fPCKv"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tK30ccv_cnnp_model_minimizer_set_fPCKv"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.ccv_cnnp_model_minimizer_set_fC.voidCPC"></span><span class="target" id="group__level__5__model_1ga5ff043ff17bcd6be599f66af1d4da307"></span>void <code class="descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv430ccv_cnnp_model_minimizer_set_f" title="ccv_cnnp_model_minimizer_set_f">ccv_cnnp_model_minimizer_set_f</a> <em>minimizer_setter</em>, <em class="property">const</em> void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tK30ccv_cnnp_model_minimizer_set_fPCKv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv429ccv_cnnp_model_trainable_spanPC16ccv_cnnp_model_tKi">
+<span id="_CPPv329ccv_cnnp_model_trainable_spanPC16ccv_cnnp_model_tKi"></span><span id="_CPPv229ccv_cnnp_model_trainable_spanPC16ccv_cnnp_model_tKi"></span><span id="ccv_cnnp_model_trainable_span__ccv_cnnp_model_tPC.iC"></span><span class="target" id="group__level__5__model_1ga2de47e2e4cfefaf18534a6150c526ac8"></span><code class="descname">ccv_cnnp_model_trainable_span</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_model_trainable_spanPC16ccv_cnnp_model_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the trainables associated with the model with some indexes. -1 means all. Otherwise it is indexed. You can also get nil trainables. For functional model or sequential model, the index meant for trainables of all its sub-models’ at the given index. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The trainable span that can be used to set minimizers. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index of a collection of trainables. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi">
+<span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.ccv_cnnp_trainable_span_tCPC.iC"></span><span class="target" id="group__level__5__model_1gac49ffebcb800369cb535121199e3707b"></span>void <code class="descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_cnnp_trainable_span_t" title="ccv_cnnp_trainable_span_t">ccv_cnnp_trainable_span_t</a> *<em class="property">const</em> <em>trainable_spans</em>, <em class="property">const</em> int <em>trainable_span_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set a new minimizer for the model. This is useful when you need to update learn rate for stochastic gradient descent for example. This method can be called any time during the training process (after compilation). <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
 <li><code class="docutils literal notranslate"><span class="pre">minimizer</span></code>: The wrapped command that represents a new optimization strategy. </li>
-<li><code class="docutils literal notranslate"><span class="pre">minimizer_setter</span></code>: The function to be called to return minimizer for a particular trainable. </li>
-<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context passed to the minimizer setter function. </li>
+<li><code class="docutils literal notranslate"><span class="pre">trainable_spans</span></code>: The trainables to be applied the minimizer on. 0 meant for all. </li>
+<li><code class="docutils literal notranslate"><span class="pre">trainable_span_size</span></code>: The number of trainable spans. </li>
 </ul>
 </dd>
 </dl>
@@ -1647,9 +1657,9 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv426ccv_cnnp_trainable_index_t">
-<span id="_CPPv326ccv_cnnp_trainable_index_t"></span><span id="_CPPv226ccv_cnnp_trainable_index_t"></span><span id="ccv_cnnp_trainable_index_t"></span><span class="target" id="structccv__cnnp__trainable__index__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_trainable_index_t</code><a class="headerlink" href="#_CPPv426ccv_cnnp_trainable_index_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><em>#include &lt;ccv_nnc.h&gt;</em><p>Simple structure for group of command and the index for the variable. </p>
+<dt id="_CPPv425ccv_cnnp_trainable_span_t">
+<span id="_CPPv325ccv_cnnp_trainable_span_t"></span><span id="_CPPv225ccv_cnnp_trainable_span_t"></span><span id="ccv_cnnp_trainable_span_t"></span><span class="target" id="structccv__cnnp__trainable__span__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_trainable_span_t</code><a class="headerlink" href="#_CPPv425ccv_cnnp_trainable_span_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><em>#include &lt;ccv_nnc.h&gt;</em><p>Representation of a collection of trainables for a model. You can regard this as a simple immutable objects without thinking about its life-cycle. However, this is meaningless without an valid underlying model and if the underlying model is freed, the behavior is undefined. </p>
 </dd></dl>
 
 <dl class="class">
