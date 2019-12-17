@@ -1240,6 +1240,38 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv428ccv_cnnp_model_set_trainablePC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPCK16ccv_nnc_tensor_t">
+<span id="_CPPv328ccv_cnnp_model_set_trainablePC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPCK16ccv_nnc_tensor_t"></span><span id="_CPPv228ccv_cnnp_model_set_trainablePC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPCK16ccv_nnc_tensor_t"></span><span id="ccv_cnnp_model_set_trainable__ccv_cnnp_model_tPC.ccv_cnnp_trainable_span_tC.iC.ccv_nnc_tensor_tCPC"></span><span class="target" id="group__level__5__model_1ga1b716145d9326aa162aa1ee5f9d8398c"></span>void <code class="descname">ccv_cnnp_model_set_trainable</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_cnnp_trainable_span_t" title="ccv_cnnp_trainable_span_t">ccv_cnnp_trainable_span_t</a> <em>trainable_span</em>, <em class="property">const</em> int <em>index</em>, <em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_trainablePC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPCK16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set a trainable that is specified by the trainable span. This will override whatever value in that trainable. The given tensor should match the dimension of the trainable. It doesn’t matter whether the given tensor is on CPU or GPU, it will be copied over. This method is limited, it can only set tensor once the model is compiled. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">trainable_span</span></code>: The trainable span that is used to specify which trainable to override. </li>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index, if any, to the trainable span (trainable span covers multiple trainables). </li>
+<li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor contains the value we want to copy over. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv429ccv_cnnp_model_trainable_copyPC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPC16ccv_nnc_tensor_t">
+<span id="_CPPv329ccv_cnnp_model_trainable_copyPC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPC16ccv_nnc_tensor_t"></span><span id="_CPPv229ccv_cnnp_model_trainable_copyPC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPC16ccv_nnc_tensor_t"></span><span id="ccv_cnnp_model_trainable_copy__ccv_cnnp_model_tPC.ccv_cnnp_trainable_span_tC.iC.ccv_nnc_tensor_tPC"></span><span class="target" id="group__level__5__model_1gacf4a0dc635ce165b58389375c487f956"></span>void <code class="descname">ccv_cnnp_model_trainable_copy</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_cnnp_trainable_span_t" title="ccv_cnnp_trainable_span_t">ccv_cnnp_trainable_span_t</a> <em>trainable_span</em>, <em class="property">const</em> int <em>index</em>, ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_model_trainable_copyPC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPC16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy a trainable that is specified by the trainable span out of a model. This will override the value in the tensor you provided. The given tensor should match the dimension of the trainable and should already be allocated. It doesn’t matter whether the given tensor is on CPU or GPU. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">trainable_span</span></code>: The trainable span that is used to specify which trainable to override. </li>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index, if any, to the trainable span (trainable span covers multiple trainables). </li>
+<li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that receives value. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi">
 <span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.ccv_cnnp_trainable_span_tCPC.iC"></span><span class="target" id="group__level__5__model_1gac49ffebcb800369cb535121199e3707b"></span>void <code class="descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_cnnp_trainable_span_t" title="ccv_cnnp_trainable_span_t">ccv_cnnp_trainable_span_t</a> *<em class="property">const</em> <em>trainable_spans</em>, <em class="property">const</em> int <em>trainable_span_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set a new minimizer for the model. This is useful when you need to update learn rate for stochastic gradient descent for example. This method can be called any time during the training process (after compilation). <dl class="docutils">
