@@ -1062,6 +1062,22 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv421ccv_cnnp_model_absorbPC16ccv_cnnp_model_tPC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKi">
+<span id="_CPPv321ccv_cnnp_model_absorbPC16ccv_cnnp_model_tPC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKi"></span><span id="_CPPv221ccv_cnnp_model_absorbPC16ccv_cnnp_model_tPC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKi"></span><span id="ccv_cnnp_model_absorb__ccv_cnnp_model_tPC.ccv_cnnp_model_tPC.ccv_nnc_tensor_param_tCPC.iC"></span><span class="target" id="group__level__5__model_1gaf4f91f43f05566a4ac27b802a5846afa"></span>void <code class="descname">ccv_cnnp_model_absorb</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>init</em>, <em class="property">const</em> ccv_nnc_tensor_param_t *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_cnnp_model_absorbPC16ccv_cnnp_model_tPC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Absorb a new model into the existing model. This requires the new model has exactly the same trainables but other dimensionality’s can change. The new model has to not be compiled yet, its life-cycle management will be take over by the existing model. You don’t need to free it separately. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The existing model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">init</span></code>: The new model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The tensor parameters for the model’s inputs, that can be used to derive all tensor shapes. </li>
+<li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the inputs array. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv426ccv_cnnp_model_tensor_autoPC16ccv_cnnp_model_tPC22ccv_nnc_tensor_param_tKi">
 <span id="_CPPv326ccv_cnnp_model_tensor_autoPC16ccv_cnnp_model_tPC22ccv_nnc_tensor_param_tKi"></span><span id="_CPPv226ccv_cnnp_model_tensor_autoPC16ccv_cnnp_model_tPC22ccv_nnc_tensor_param_tKi"></span><span id="ccv_cnnp_model_tensor_auto__ccv_cnnp_model_tPC.ccv_nnc_tensor_param_tPC.iC"></span><span class="target" id="group__level__5__model_1gac2d88d7dc97a0a59b340ae9c4fb7e76d"></span>void <code class="descname">ccv_cnnp_model_tensor_auto</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, ccv_nnc_tensor_param_t *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ccv_cnnp_model_tensor_autoPC16ccv_cnnp_model_tPC22ccv_nnc_tensor_param_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Compute the shape of the output tensor after the model applied to the input. This can only be called after the model is compiled with proper input parameters. <dl class="docutils">

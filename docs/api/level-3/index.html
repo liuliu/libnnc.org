@@ -987,6 +987,42 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv431ccv_nnc_tensor_symbol_alias_setPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki">
+<span id="_CPPv331ccv_nnc_tensor_symbol_alias_setPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="_CPPv231ccv_nnc_tensor_symbol_alias_setPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_nnc_tensor_symbol_alias_set__ccv_nnc_symbolic_graph_tPC.ccv_nnc_tensor_symbol_tC.iCA.iCA"></span><span class="target" id="group__level__3__others_1ga1098ca4d0a31acf1d1550c472d0df535"></span>int <code class="descname">ccv_nnc_tensor_symbol_alias_set</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>tensor</em>, <em class="property">const</em> int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431ccv_nnc_tensor_symbol_alias_setPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the tensor symbol alias parameters. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>non-zero if it is not a tensor alias. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor symbol reference. </li>
+<li><code class="docutils literal notranslate"><span class="pre">ofs</span></code>: The offset on each of the dimension. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inc</span></code>: The line size of each dimension. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv434ccv_nnc_tensor_symbol_alias_paramsPCK24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tA21CCV_NNC_MAX_DIM_ALLOC_iA21CCV_NNC_MAX_DIM_ALLOC_i">
+<span id="_CPPv334ccv_nnc_tensor_symbol_alias_paramsPCK24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tA21CCV_NNC_MAX_DIM_ALLOC_iA21CCV_NNC_MAX_DIM_ALLOC_i"></span><span id="_CPPv234ccv_nnc_tensor_symbol_alias_paramsPCK24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tACCV_NNC_MAX_DIM_ALLOC_iACCV_NNC_MAX_DIM_ALLOC_i"></span><span id="ccv_nnc_tensor_symbol_alias_params__ccv_nnc_symbolic_graph_tCPC.ccv_nnc_tensor_symbol_tC.iA.iA"></span><span class="target" id="group__level__3__others_1ga0e9a0c2677026a9d9a772b5a65afdce7"></span>int <code class="descname">ccv_nnc_tensor_symbol_alias_params</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>tensor</em>, int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434ccv_nnc_tensor_symbol_alias_paramsPCK24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tA21CCV_NNC_MAX_DIM_ALLOC_iA21CCV_NNC_MAX_DIM_ALLOC_i" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the parameters for a tensor symbol. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>non-zero if it is not a tensor alias. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor symbol reference. </li>
+<li><code class="docutils literal notranslate"><span class="pre">ofs</span></code>: The offset on each of the dimension. </li>
+<li><code class="docutils literal notranslate"><span class="pre">inc</span></code>: The line size of each dimension. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv431ccv_nnc_tensor_symbol_set_flagsPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKi">
 <span id="_CPPv331ccv_nnc_tensor_symbol_set_flagsPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKi"></span><span id="_CPPv231ccv_nnc_tensor_symbol_set_flagsPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKi"></span><span id="ccv_nnc_tensor_symbol_set_flags__ccv_nnc_symbolic_graph_tPC.ccv_nnc_tensor_symbol_tC.iC"></span><span class="target" id="group__level__3__others_1ga452bd6648a37e01f44173dca7ba17c03"></span>int <code class="descname">ccv_nnc_tensor_symbol_set_flags</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> <em>tensor</em>, <em class="property">const</em> int <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431ccv_nnc_tensor_symbol_set_flagsPC24ccv_nnc_symbolic_graph_tK23ccv_nnc_tensor_symbol_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the flags for this tensor symbol. The flags are only used for symbol, not for tensor. <dl class="docutils">
@@ -1141,12 +1177,13 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv434ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi">
-<span id="_CPPv334ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="_CPPv234ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="ccv_nnc_symbolic_graph_tensor_auto__ccv_nnc_symbolic_graph_tPC.ccv_nnc_graph_exec_symbol_tCPC.iC.ccv_nnc_graph_exec_symbol_tCPC.iC"></span><span class="target" id="group__level__3__others_1ga9b23e2f9cfc9c7d6f700f5837df3f997"></span>void <code class="descname">ccv_nnc_symbolic_graph_tensor_auto</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>sources</em>, <em class="property">const</em> int <em>source_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>destinations</em>, <em class="property">const</em> int <em>destination_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv434ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tKiPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi">
+<span id="_CPPv334ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tKiPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="_CPPv234ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tKiPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi"></span><span id="ccv_nnc_symbolic_graph_tensor_auto__ccv_nnc_symbolic_graph_tPC.iC.ccv_nnc_graph_exec_symbol_tCPC.iC.ccv_nnc_graph_exec_symbol_tCPC.iC"></span><span class="target" id="group__level__3__others_1ga7e0496b82c899d2a3afc7094af1c8a04"></span>void <code class="descname">ccv_nnc_symbolic_graph_tensor_auto</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> int <em>overwrite</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>sources</em>, <em class="property">const</em> int <em>source_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>destinations</em>, <em class="property">const</em> int <em>destination_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434ccv_nnc_symbolic_graph_tensor_autoPC24ccv_nnc_symbolic_graph_tKiPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Compute all the tensor shapes within this graph. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">overwrite</span></code>: If the tensor shape is not auto, by default, we don’t overwrite it. </li>
 <li><code class="docutils literal notranslate"><span class="pre">sources</span></code>: The sources for the graph. </li>
 <li><code class="docutils literal notranslate"><span class="pre">source_size</span></code>: The size of the sources array. 0 to use default sources. </li>
 <li><code class="docutils literal notranslate"><span class="pre">destinations</span></code>: The destinations for the graph. </li>
@@ -1263,6 +1300,37 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">tensor_arena</span></code>: The tensor arena object generated through compilation. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv427ccv_nnc_tensor_arena_reinitPC22ccv_nnc_tensor_arena_tPCK24ccv_nnc_symbolic_graph_t">
+<span id="_CPPv327ccv_nnc_tensor_arena_reinitPC22ccv_nnc_tensor_arena_tPCK24ccv_nnc_symbolic_graph_t"></span><span id="_CPPv227ccv_nnc_tensor_arena_reinitPC22ccv_nnc_tensor_arena_tPCK24ccv_nnc_symbolic_graph_t"></span><span id="ccv_nnc_tensor_arena_reinit__ccv_nnc_tensor_arena_tPC.ccv_nnc_symbolic_graph_tCPC"></span><span class="target" id="group__level__3__others_1gae188452fcf7c43efd2a9a021260229b6"></span>int <code class="descname">ccv_nnc_tensor_arena_reinit</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv422ccv_nnc_tensor_arena_t" title="ccv_nnc_tensor_arena_t">ccv_nnc_tensor_arena_t</a> *<em class="property">const</em> <em>tensor_arena</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427ccv_nnc_tensor_arena_reinitPC22ccv_nnc_tensor_arena_tPCK24ccv_nnc_symbolic_graph_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Re-init the tensor arena with updated symbolic graph. This won’t work if the symbolic graph requires larger tensors than what’s available. Use this method properly, you can avoid re-compile a graph just because some tensor shape changed. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>0 if successful, -1 if the tensor arena doesn’t have enough space to just re-init. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">tensor_arena</span></code>: The tensor arena object generated through compilation. </li>
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The updated symbolic graph with different tensor shape. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv425ccv_nnc_graph_exec_reinitPC26ccv_nnc_graph_exec_arena_tPC15ccv_nnc_graph_tPCK24ccv_nnc_symbolic_graph_t">
+<span id="_CPPv325ccv_nnc_graph_exec_reinitPC26ccv_nnc_graph_exec_arena_tPC15ccv_nnc_graph_tPCK24ccv_nnc_symbolic_graph_t"></span><span id="_CPPv225ccv_nnc_graph_exec_reinitPC26ccv_nnc_graph_exec_arena_tPC15ccv_nnc_graph_tPCK24ccv_nnc_symbolic_graph_t"></span><span id="ccv_nnc_graph_exec_reinit__ccv_nnc_graph_exec_arena_tPC.ccv_nnc_graph_tPC.ccv_nnc_symbolic_graph_tCPC"></span><span class="target" id="group__level__3__others_1ga6a17d6841d933be796c97adccc403c01"></span>void <code class="descname">ccv_nnc_graph_exec_reinit</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv426ccv_nnc_graph_exec_arena_t" title="ccv_nnc_graph_exec_arena_t">ccv_nnc_graph_exec_arena_t</a> *<em class="property">const</em> <em>graph_exec_arena</em>, <a class="reference internal" href="../level-2/#_CPPv415ccv_nnc_graph_t" title="ccv_nnc_graph_t">ccv_nnc_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>symbolic_graph</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_nnc_graph_exec_reinitPC26ccv_nnc_graph_exec_arena_tPC15ccv_nnc_graph_tPCK24ccv_nnc_symbolic_graph_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Re-init the graph exec arena with updated symbolic graph. This updated some hyper-parameters of executions to match the updated symbolic graph. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">graph_exec_arena</span></code>: The graph exec arena object provided mapping between symbolic and concrete graph. </li>
+<li><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The concrete graph generated through compile method. </li>
+<li><code class="docutils literal notranslate"><span class="pre">symbolic_graph</span></code>: The updated symbolic graph. </li>
 </ul>
 </dd>
 </dl>
