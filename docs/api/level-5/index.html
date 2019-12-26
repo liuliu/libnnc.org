@@ -967,6 +967,12 @@
 </dd></dl>
 
 <dl class="type">
+<dt id="_CPPv424ccv_cnnp_model_dynamic_f">
+<span id="_CPPv324ccv_cnnp_model_dynamic_f"></span><span id="_CPPv224ccv_cnnp_model_dynamic_f"></span><span id="ccv_cnnp_model_dynamic_f"></span><span class="target" id="group__level__5__model_1ga3d4e2c027375ca7c0ad80c6d53debf3e"></span><em class="property">typedef </em><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *(*<code class="descname">ccv_cnnp_model_dynamic_f</code>)<span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_param_t *<em class="property">const</em> inputs, <em class="property">const</em> int input_size, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424ccv_cnnp_model_dynamic_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A model generation function to be called for dynamic models. </p>
+</dd></dl>
+
+<dl class="type">
 <dt id="_CPPv428ccv_cnnp_state_initializer_f">
 <span id="_CPPv328ccv_cnnp_state_initializer_f"></span><span id="_CPPv228ccv_cnnp_state_initializer_f"></span><span id="ccv_cnnp_state_initializer_f"></span><span class="target" id="group__level__5__model_1gaaae482503eb04d5f74bd7e4c5dcc7a82"></span><em class="property">typedef </em>void (*<code class="descname">ccv_cnnp_state_initializer_f</code>)<span class="sig-paren">(</span>void *<em class="property">const</em> context, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> cmd, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> hint, <em class="property">const</em> int flags, ccv_nnc_tensor_t *<em class="property">const</em> input, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> output_symbol<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_state_initializer_f" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
@@ -1045,6 +1051,23 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv420ccv_cnnp_dynamic_new24ccv_cnnp_model_dynamic_fPCvPCKc">
+<span id="_CPPv320ccv_cnnp_dynamic_new24ccv_cnnp_model_dynamic_fPCvPCKc"></span><span id="_CPPv220ccv_cnnp_dynamic_new24ccv_cnnp_model_dynamic_fPCvPCKc"></span><span id="ccv_cnnp_dynamic_new__ccv_cnnp_model_dynamic_f.voidPC.cCPC"></span><span class="target" id="group__level__5__model_1ga874f06fc1e1b6e8f65ad0cf685832b51"></span><code class="descname">ccv_cnnp_dynamic_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_cnnp_model_dynamic_f" title="ccv_cnnp_model_dynamic_f">ccv_cnnp_model_dynamic_f</a> <em>func</em>, void *<em class="property">const</em> <em>context</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_cnnp_dynamic_new24ccv_cnnp_model_dynamic_fPCvPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This method returns a model that will be recreated if it is recompiled. Put it this way, you can call ccv_cnnp_model_compile multiple times with different inputs and input size, however, the model will only be recompiled to some extent. For example, if you called ccv_cnnp_reshape, the shape is determined at the moment you create that model, recompilation won’t change. There are two ways to workaround this: 1. Use models that doesn’t have explicit shape specified, for example, ccv_cnnp_dense, and avoid models that is not as flexible, such as ccv_cnnp_reshape, or ccv_cnnp_cmd_exec. 2. Create with ccv_cnnp_dynamic_new such that the model will be recreated again whenever recompile. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model object that is yet to be created until build. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">func</span></code>: The function to be called to create the model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context used along to create the model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv422ccv_cnnp_model_compilePC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKiK13ccv_nnc_cmd_tK13ccv_nnc_cmd_t">
 <span id="_CPPv322ccv_cnnp_model_compilePC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKiK13ccv_nnc_cmd_tK13ccv_nnc_cmd_t"></span><span id="_CPPv222ccv_cnnp_model_compilePC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKiK13ccv_nnc_cmd_tK13ccv_nnc_cmd_t"></span><span id="ccv_cnnp_model_compile__ccv_cnnp_model_tPC.ccv_nnc_tensor_param_tCPC.iC.ccv_nnc_cmd_tC.ccv_nnc_cmd_tC"></span><span class="target" id="group__level__5__model_1ga82d3c85f2b5bde3c469c80e2ea0919f3"></span>void <code class="descname">ccv_cnnp_model_compile</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> ccv_nnc_tensor_param_t *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>loss</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422ccv_cnnp_model_compilePC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKiK13ccv_nnc_cmd_tK13ccv_nnc_cmd_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Prepare the model to be trained, the input specifies the batch size etc. Input size technically is not needed, here is a safety check. <dl class="docutils">
@@ -1071,6 +1094,21 @@
 <li><code class="docutils literal notranslate"><span class="pre">init</span></code>: The new model. </li>
 <li><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The tensor parameters for the model’s inputs, that can be used to derive all tensor shapes. </li>
 <li><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of the inputs array. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv419ccv_cnnp_model_copyPCK16ccv_cnnp_model_t">
+<span id="_CPPv319ccv_cnnp_model_copyPCK16ccv_cnnp_model_t"></span><span id="_CPPv219ccv_cnnp_model_copyPCK16ccv_cnnp_model_t"></span><span id="ccv_cnnp_model_copy__ccv_cnnp_model_tCPC"></span><span class="target" id="group__level__5__model_1ga887ed33b70f3213ecf5a8740525f4a02"></span><code class="descname">ccv_cnnp_model_copy</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_model_copyPCK16ccv_cnnp_model_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a copy of an existing model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The new model that is exactly the same copy of the old one. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The existing model. </li>
 </ul>
 </dd>
 </dl>
