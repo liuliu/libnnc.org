@@ -27,3 +27,10 @@ Model API
    :project: libnnc
    :content-only:
    :members:
+
+Model Add-ons
+-------------
+.. doxygengroup:: level_5_model_add_ons
+   :project: libnnc
+   :content-only:
+   :members:
