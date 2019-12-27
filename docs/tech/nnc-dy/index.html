@@ -130,7 +130,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#naming-the-variable">Naming The Variable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tracing-the-operation">Tracing The Operation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#optimizations">Optimizations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#interoperability-not-ready">Interoperability (Not Ready)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interoperability">Interoperability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#future-optimizations">Future Optimizations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#some-maybes">Some Maybes</a></li>
 </ul>
@@ -138,6 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../nnc-cnnp/">NNC Common Neural Network Primitives</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../nnc-cnnp/#model">Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nnc-cnnp/#model-io">Model IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-cnnp/#fit-evaluate-backward-apply-gradients">Fit, Evaluate, Backward, Apply Gradients</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../nnc-df/">NNC Dataframe</a><ul>
@@ -182,6 +183,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#gradient-based-optimization">Gradient-based Optimization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#graph-simplification">Graph Simplification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#automatic-graph-parallelization">Automatic Graph Parallelization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#memory-compression">Memory Compression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#while-loop-others">While Loop Others</a></li>
 </ul>
 </li>
@@ -195,6 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#dataframe-api">Dataframe API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#dataframe-add-ons">Dataframe Add-ons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#model-api">Model API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#model-add-ons">Model Add-ons</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/convenience/">Convenience API</a></li>
@@ -293,7 +296,7 @@
 <p>NNC’s <strong>dynamic graph execution</strong> design will attempt to address above problems with reasonable compromises. It borrows some good ideas from 10 years ago when I first started to implement ccv.</p>
 <div class="section" id="naming-the-variable">
 <h2>Naming The Variable<a class="headerlink" href="#naming-the-variable" title="Permalink to this headline">¶</a></h2>
-<p>Like in most frameworks, <strong>dynamic graph execution</strong> in NNC operates at variables. <strong>Dynamic graph</strong> executes command on a set of input variables, writes the result to a set of output variables. Variables can be inspected anytime with <a class="reference internal" href="../../api/level-4/#_CPPv428ccv_nnc_tensor_from_variablePC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_from_variable"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_tensor_from_variable</span></code></a>. The underlying tensor may not be allocated when the variable is created. <a class="reference internal" href="../../api/level-4/#_CPPv425ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">ccv_nnc_tensor_variable_t</span></code></a> is an opaque structure and its inner work shouldn’t be of an interest to users.</p>
+<p>Like in most frameworks, <strong>dynamic graph execution</strong> in NNC operates at variables. <strong>Dynamic graph</strong> executes command on a set of input variables, writes the result to a set of output variables. Variables can be inspected anytime with <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_tensor_from_variable</span></code>. The underlying tensor may not be allocated when the variable is created. <a class="reference internal" href="../../api/level-4/#_CPPv425ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">ccv_nnc_tensor_variable_t</span></code></a> is an opaque structure and its inner work shouldn’t be of an interest to users.</p>
 </div>
 <div class="section" id="tracing-the-operation">
 <h2>Tracing The Operation<a class="headerlink" href="#tracing-the-operation" title="Permalink to this headline">¶</a></h2>
@@ -304,10 +307,13 @@
 <div class="section" id="optimizations">
 <h2>Optimizations<a class="headerlink" href="#optimizations" title="Permalink to this headline">¶</a></h2>
 <p>In <strong>PyTorch</strong>, there is a need to <code class="docutils literal notranslate"><span class="pre">requires_grad</span></code> such that the framework knows which variable should be discarded to save memory. If it is not done carefully, the memory usage can grow unbounded. <strong>Dynamic graph</strong> here provides <a class="reference internal" href="../../api/level-4/#_CPPv428ccv_nnc_tensor_variable_freePC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_free"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_tensor_variable_free</span></code></a> where when a tensor variable is freed, we will release its memory when it is safe. This method meant to hook up with object finalization methods in host languages (C++’s destructor, Objective-C’s <code class="docutils literal notranslate"><span class="pre">dealloc</span></code>, <code class="docutils literal notranslate"><span class="pre">deinit</span></code> in Swift, <code class="docutils literal notranslate"><span class="pre">finalize</span></code> in Java, <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code> in Python).</p>
+<p>However, the <code class="docutils literal notranslate"><span class="pre">requires_grad</span></code> can still be useful in case you need to keep track of trainables (such as weights) yourselves. For these cases, while training, it is all good because trainables update themselves and free their previous ones once updated. But for evaluation, these trainables won’t be freed and can grow the memory unbounded (because the system assumes that you may want to compute the gradient against these trainables at later time). We provided <a class="reference internal" href="../../api/level-4/#_CPPv433ccv_nnc_dynamic_graph_set_no_gradPC23ccv_nnc_dynamic_graph_tKi" title="ccv_nnc_dynamic_graph_set_no_grad"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_dynamic_graph_set_no_grad</span></code></a> function to declare our intention.</p>
 </div>
-<div class="section" id="interoperability-not-ready">
-<h2>Interoperability (Not Ready)<a class="headerlink" href="#interoperability-not-ready" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="interoperability">
+<h2>Interoperability<a class="headerlink" href="#interoperability" title="Permalink to this headline">¶</a></h2>
 <p>There are some sticky issues with interoperability between <strong>static graph</strong> (the <strong>symbolic graph</strong> we formed by hand) with <strong>dynamic graph</strong>. The way they interoperate is through <code class="docutils literal notranslate"><span class="pre">CCV_NNC_CUSTOM_FORWARD</span></code> / <code class="docutils literal notranslate"><span class="pre">CCV_NNC_CUSTOM_BACKWARD</span></code> functions. When a <strong>static graph</strong> includes a <strong>dynamic graph</strong>, its tape needs to book-keeping for the <strong>dynamic graph</strong>. When a <strong>dynamic graph</strong> includes a <strong>static graph</strong>, it also needs to create a tape at that point for the execution. All these implies significant changes for the <a class="reference internal" href="../../api/level-2/#_CPPv421ccv_nnc_tensor_tape_t" title="ccv_nnc_tensor_tape_t"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">ccv_nnc_tensor_tape_t</span></code></a> implementation to accommodate these new requirements.</p>
+<p>Ultimately, it doesn’t make much sense to have <strong>dynamic graph</strong> embedded into a <strong>static graph</strong>. If you already knew the shapes of the inputs (as it is inside another <strong>static graph</strong>), you can create ordinary <strong>static graph</strong>. There is simply no need to support that. Therefore, the only use case we need to support is for <strong>dynamic graph</strong> to embed a <strong>static graph</strong>. We support that through <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_dynamic_evaluate</span></code>. This function takes a CNNP model, and evaluate it directly against some tensor variable inputs. The CNNP model underneath uses the <strong>static graph</strong>, and that is how the interoperability works.</p>
+<p>In fact, it would be the recommended way to use small CNNP models and <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_dynamic_evaluate</span></code> them. Unlike ordinary <a class="reference internal" href="../../api/level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">ccv_nnc_cmd_t</span></code></a>, a CNNP model contains states, and that is one less thing you need to worry about.</p>
 </div>
 <div class="section" id="future-optimizations">
 <h2>Future Optimizations<a class="headerlink" href="#future-optimizations" title="Permalink to this headline">¶</a></h2>

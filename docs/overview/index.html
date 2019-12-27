@@ -130,7 +130,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy/#naming-the-variable">Naming The Variable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy/#tracing-the-operation">Tracing The Operation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy/#optimizations">Optimizations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy/#interoperability-not-ready">Interoperability (Not Ready)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy/#interoperability">Interoperability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy/#future-optimizations">Future Optimizations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tech/nnc-dy/#some-maybes">Some Maybes</a></li>
 </ul>
@@ -138,6 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tech/nnc-cnnp/">NNC Common Neural Network Primitives</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tech/nnc-cnnp/#model">Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tech/nnc-cnnp/#model-io">Model IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tech/nnc-cnnp/#fit-evaluate-backward-apply-gradients">Fit, Evaluate, Backward, Apply Gradients</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tech/nnc-df/">NNC Dataframe</a><ul>
@@ -182,6 +183,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../api/level-3.5/#gradient-based-optimization">Gradient-based Optimization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/level-3.5/#graph-simplification">Graph Simplification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/level-3.5/#automatic-graph-parallelization">Automatic Graph Parallelization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-3.5/#memory-compression">Memory Compression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/level-3.5/#while-loop-others">While Loop Others</a></li>
 </ul>
 </li>
@@ -195,6 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../api/level-5/#dataframe-api">Dataframe API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/level-5/#dataframe-add-ons">Dataframe Add-ons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../api/level-5/#model-api">Model API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/level-5/#model-add-ons">Model Add-ons</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../api/convenience/">Convenience API</a></li>
@@ -334,6 +337,7 @@
 <div class="section" id="common-neural-network-primitives">
 <h2>5. Common Neural Network Primitives<a class="headerlink" href="#common-neural-network-primitives" title="Permalink to this headline">¶</a></h2>
 <p>A set of <strong>common neural network primitives</strong> for modeling as well as parameter updates is provided. The API looks very much like <strong>Sonnet</strong> or <strong>Keras</strong>. <strong>Common neural network primitives</strong> implemented these interfaces at a common language layer (C language). Thus, variety of host languages to implement a simple shim layer on top to enable these high-level APIs.</p>
+<p>Quite some efforts were put in place to make <strong>common neural network primitives</strong> work with <strong>dynamic graph</strong>. This enables easiest model building and training. With <strong>dynamic graph</strong>, you can manipulate inputs, gradients and losses with ease. With <strong>common neural network primitives</strong>, many states such as trainables and running averages are kept inside the primitives, there are much less variables to keep track with.</p>
 </div>
 <div class="section" id="supplementary-materials">
 <h2>Supplementary Materials<a class="headerlink" href="#supplementary-materials" title="Permalink to this headline">¶</a></h2>
