@@ -531,12 +531,29 @@
 <span id="_CPPv328ccv_cnnp_dataframe_iter_nextPC25ccv_cnnp_dataframe_iter_tPCPvKiPC24ccv_nnc_stream_context_t"></span><span id="_CPPv228ccv_cnnp_dataframe_iter_nextPC25ccv_cnnp_dataframe_iter_tPCPvKiPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_dataframe_iter_next__ccv_cnnp_dataframe_iter_tPC.voidPPC.iC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5__dataframe_1gaf7afb7f7d372b586c6025b0d79c7ce56"></span>int <code class="descname">ccv_cnnp_dataframe_iter_next</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv425ccv_cnnp_dataframe_iter_t" title="ccv_cnnp_dataframe_iter_t">ccv_cnnp_dataframe_iter_t</a> *<em class="property">const</em> <em>iter</em>, void **<em class="property">const</em> <em>data_ref</em>, <em class="property">const</em> int <em>column_idx_size</em>, <a class="reference internal" href="../level-1/#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_dataframe_iter_nextPC25ccv_cnnp_dataframe_iter_tPCPvKiPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the next item from the iterator. <dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>0 if the iteration is successful, -1 if it is ended. </dd>
+<dd>0 if the iteration is successful, -1 if there is no more row. -2 if it is already ended. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">iter</span></code>: The iterator to go through. </li>
 <li><code class="docutils literal notranslate"><span class="pre">data_ref</span></code>: The output for the data. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idx_size</span></code>: The size of the data_ref array. </li>
+<li><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream context to extract data asynchronously. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv428ccv_cnnp_dataframe_iter_peekPC25ccv_cnnp_dataframe_iter_tPCPvKiKiPC24ccv_nnc_stream_context_t">
+<span id="_CPPv328ccv_cnnp_dataframe_iter_peekPC25ccv_cnnp_dataframe_iter_tPCPvKiKiPC24ccv_nnc_stream_context_t"></span><span id="_CPPv228ccv_cnnp_dataframe_iter_peekPC25ccv_cnnp_dataframe_iter_tPCPvKiKiPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_dataframe_iter_peek__ccv_cnnp_dataframe_iter_tPC.voidPPC.iC.iC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5__dataframe_1gac892f91a4b08007c66af93d4765f9206"></span>void <code class="descname">ccv_cnnp_dataframe_iter_peek</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv425ccv_cnnp_dataframe_iter_t" title="ccv_cnnp_dataframe_iter_t">ccv_cnnp_dataframe_iter_t</a> *<em class="property">const</em> <em>iter</em>, void **<em class="property">const</em> <em>data_ref</em>, <em class="property">const</em> int <em>offset</em>, <em class="property">const</em> int <em>data_ref_size</em>, <a class="reference internal" href="../level-1/#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_dataframe_iter_peekPC25ccv_cnnp_dataframe_iter_tPCPvKiKiPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assuming iterator is on the same row, peek into potentially different column index. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">iter</span></code>: The iterator to go through. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data_ref</span></code>: The output for the data. </li>
+<li><code class="docutils literal notranslate"><span class="pre">offset</span></code>: The offset for which column in this iterator to peek at. </li>
+<li><code class="docutils literal notranslate"><span class="pre">data_ref_size</span></code>: How many columns in this iterator to peek at. </li>
 <li><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream context to extract data asynchronously. </li>
 </ul>
 </dd>
