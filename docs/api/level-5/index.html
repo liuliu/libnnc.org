@@ -775,6 +775,24 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv436ccv_cnnp_dataframe_mask_for_sequencePC20ccv_cnnp_dataframe_tKiKiKi">
+<span id="_CPPv336ccv_cnnp_dataframe_mask_for_sequencePC20ccv_cnnp_dataframe_tKiKiKi"></span><span id="_CPPv236ccv_cnnp_dataframe_mask_for_sequencePC20ccv_cnnp_dataframe_tKiKiKi"></span><span id="ccv_cnnp_dataframe_mask_for_sequence__ccv_cnnp_dataframe_tPC.iC.iC.iC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga32316b1085b46767bb7d70e8856f3945"></span><code class="descname">ccv_cnnp_dataframe_mask_for_sequence</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>variable_size</em>, <em class="property">const</em> int <em>max_length</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436ccv_cnnp_dataframe_mask_for_sequencePC20ccv_cnnp_dataframe_tKiKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generate mask for sequence attention. This will mask out the extra bits for attention layer. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The index of the newly derived column. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that contains the label. </li>
+<li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column which contains the sequence lengths (a 1d tensor). </li>
+<li><code class="docutils literal notranslate"><span class="pre">variable_size</span></code>: The size of the final mask can vary, depending on the max length of current batch. </li>
+<li><code class="docutils literal notranslate"><span class="pre">max_length</span></code>: The absolute max length for inputs. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv431ccv_cnnp_dataframe_batching_newPC20ccv_cnnp_dataframe_tPCKiKiKiKiKi">
 <span id="_CPPv331ccv_cnnp_dataframe_batching_newPC20ccv_cnnp_dataframe_tPCKiKiKiKiKi"></span><span id="_CPPv231ccv_cnnp_dataframe_batching_newPC20ccv_cnnp_dataframe_tPCKiKiKiKiKi"></span><span id="ccv_cnnp_dataframe_batching_new__ccv_cnnp_dataframe_tPC.iCPC.iC.iC.iC.iC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga3e75f8bcf49b9b7e846a8b81c9bc6e70"></span><code class="descname">ccv_cnnp_dataframe_batching_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em>, <em class="property">const</em> int <em>batch_count</em>, <em class="property">const</em> int <em>group_count</em>, <em class="property">const</em> int <em>format</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431ccv_cnnp_dataframe_batching_newPC20ccv_cnnp_dataframe_tPCKiKiKiKiKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Batch multiple tensors in a column into one tensor. This method can take multiple columns, which will result a tuple of tensors. Each tensor in the tuple is a batched one from a given column. <dl class="docutils">
