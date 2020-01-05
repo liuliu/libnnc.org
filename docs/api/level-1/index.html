@@ -299,6 +299,8 @@
 <dt id="_CPPv418ccv_nnc_tensor_newPCKvK22ccv_nnc_tensor_param_tKi">
 <span id="_CPPv318ccv_nnc_tensor_newPCKvK22ccv_nnc_tensor_param_tKi"></span><span id="_CPPv218ccv_nnc_tensor_newPCKvK22ccv_nnc_tensor_param_tKi"></span><span id="ccv_nnc_tensor_new__voidCPC.ccv_nnc_tensor_param_tC.iC"></span><span class="target" id="group__level__1__tensor_1ga037127681d533d70340431664f9f5d5f"></span><code class="descname">ccv_nnc_tensor_new</code><span class="sig-paren">(</span><em class="property">const</em> void *<em class="property">const</em> <em>ptr</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em>, <em class="property">const</em> int <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ccv_nnc_tensor_newPCKvK22ccv_nnc_tensor_param_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a new tensor. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The newly created tensor. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">ptr</span></code>: If 0, nnc will allocate the tensor ourselves. Otherwise, will use the memory region referenced by ‘ptr’. </li>
@@ -314,11 +316,29 @@
 <dt id="_CPPv414ccv_nnc_tensorPCKvK22ccv_nnc_tensor_param_tKi">
 <span id="_CPPv314ccv_nnc_tensorPCKvK22ccv_nnc_tensor_param_tKi"></span><span id="_CPPv214ccv_nnc_tensorPCKvK22ccv_nnc_tensor_param_tKi"></span><span id="ccv_nnc_tensor__voidCPC.ccv_nnc_tensor_param_tC.iC"></span><span class="target" id="group__level__1__tensor_1ga05d929aad8d228760265bb72b3c51b42"></span><code class="descname">ccv_nnc_tensor</code><span class="sig-paren">(</span><em class="property">const</em> void *<em class="property">const</em> <em>ptr</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em>, <em class="property">const</em> int <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_nnc_tensorPCKvK22ccv_nnc_tensor_param_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a new tensor on stack. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The tensor struct. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">ptr</span></code>: If 0, nnc will allocate the tensor ourselves. Otherwise, will use the memory region referenced by ‘ptr’. </li>
 <li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Tensor parameters. </li>
 <li><code class="docutils literal notranslate"><span class="pre">flags</span></code>: Reserved flags for the allocation. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv421ccv_nnc_tensor_resizePC16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_t">
+<span id="_CPPv321ccv_nnc_tensor_resizePC16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_t"></span><span id="_CPPv221ccv_nnc_tensor_resizePC16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_t"></span><span id="ccv_nnc_tensor_resize__ccv_nnc_tensor_tPC.ccv_nnc_tensor_param_tC"></span><span class="target" id="group__level__1__tensor_1gad01445ded8e34c830b7ef512f32af203"></span><code class="descname">ccv_nnc_tensor_resize</code><span class="sig-paren">(</span>ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_nnc_tensor_resizePC16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Resize an existing tensor to a new dimension. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Potentially a new tensor, but if the size is sufficient, it will be in-place operation. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The old tensor to be resized. </li>
+<li><code class="docutils literal notranslate"><span class="pre">params</span></code>: Tensor parameters. </li>
 </ul>
 </dd>
 </dl>
@@ -357,6 +377,8 @@
 <dt id="_CPPv423ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki">
 <span id="_CPPv323ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="_CPPv223ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_nnc_tensor_view_new__ccv_nnc_tensor_tCPC.iCA.iCA.iCA"></span><span class="target" id="group__level__1__tensor_1ga3a70fe427da27e06ea556a111f537c92"></span><code class="descname">ccv_nnc_tensor_view_new</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, <em class="property">const</em> int <em>dim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a tensor view. A tensor view can be non-continuous. Essentially, it provides a view into a tensor. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The newly created tensor view. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that we want to view into. </li>
@@ -373,6 +395,8 @@
 <dt id="_CPPv419ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki">
 <span id="_CPPv319ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="_CPPv219ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_nnc_tensor_view__ccv_nnc_tensor_tCPC.iCA.iCA.iCA"></span><span class="target" id="group__level__1__tensor_1ga467a8f110e12e2ff923f9ce8353bd20c"></span><code class="descname">ccv_nnc_tensor_view</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, <em class="property">const</em> int <em>dim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a tensor view on stack. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The tensor view struct. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that we want to view into. </li>
@@ -1298,22 +1322,6 @@
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">signal</span></code>: The signal we want to inspect. </li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv433ccv_nnc_stream_context_get_signalPC24ccv_nnc_stream_context_tK7int64_t">
-<span id="_CPPv333ccv_nnc_stream_context_get_signalPC24ccv_nnc_stream_context_tK7int64_t"></span><span id="_CPPv233ccv_nnc_stream_context_get_signalPC24ccv_nnc_stream_context_tK7int64_t"></span><span id="ccv_nnc_stream_context_get_signal__ccv_nnc_stream_context_tPC.int64_tC"></span><span class="target" id="group__level__1__stream_1ga9f34d99826b54b02112426a0b3dd6626"></span><code class="descname">ccv_nnc_stream_context_get_signal</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream</em>, <em class="property">const</em> int64_t <em>identifier</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433ccv_nnc_stream_context_get_signalPC24ccv_nnc_stream_context_tK7int64_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get a signal handle for a stream context, you can then wait this signal for this stream. This is handy if you want to have a stream context specific signal that can be identified with an identifier, and don’t want to maintain it yourself. The returned signal cannot be freed and managed by the stream itself. <dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>A signal that is binded to this stream and ready to be used. </dd>
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">stream</span></code>: The stream where the signal will be bind to. </li>
-<li><code class="docutils literal notranslate"><span class="pre">identifier</span></code>: The identifier for this signal. </li>
 </ul>
 </dd>
 </dl>
