@@ -792,17 +792,34 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv436ccv_cnnp_dataframe_mask_for_sequencePC20ccv_cnnp_dataframe_tKiKiKi">
-<span id="_CPPv336ccv_cnnp_dataframe_mask_for_sequencePC20ccv_cnnp_dataframe_tKiKiKi"></span><span id="_CPPv236ccv_cnnp_dataframe_mask_for_sequencePC20ccv_cnnp_dataframe_tKiKiKi"></span><span id="ccv_cnnp_dataframe_mask_for_sequence__ccv_cnnp_dataframe_tPC.iC.iC.iC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga32316b1085b46767bb7d70e8856f3945"></span><code class="descname">ccv_cnnp_dataframe_mask_for_sequence</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>variable_size</em>, <em class="property">const</em> int <em>max_length</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436ccv_cnnp_dataframe_mask_for_sequencePC20ccv_cnnp_dataframe_tKiKiKi" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Generate mask for sequence attention. This will mask out the extra bits for attention layer. <dl class="docutils">
+<dt id="_CPPv430ccv_cnnp_dataframe_one_squaredPC20ccv_cnnp_dataframe_tKiKiKi">
+<span id="_CPPv330ccv_cnnp_dataframe_one_squaredPC20ccv_cnnp_dataframe_tKiKiKi"></span><span id="_CPPv230ccv_cnnp_dataframe_one_squaredPC20ccv_cnnp_dataframe_tKiKiKi"></span><span id="ccv_cnnp_dataframe_one_squared__ccv_cnnp_dataframe_tPC.iC.iC.iC"></span><span class="target" id="group__level__5__dataframe__add__ons_1ga4188e543924870edf92ff78121da2824"></span><code class="descname">ccv_cnnp_dataframe_one_squared</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>variable_size</em>, <em class="property">const</em> int <em>max_length</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430ccv_cnnp_dataframe_one_squaredPC20ccv_cnnp_dataframe_tKiKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generate vector with ones up to a given length, the rest will be zeros. When applied to batched lengths array, this will generate a matrix of these vectors, squared. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The index of the newly derived column. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that contains the label. </li>
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that will contain the matrix. </li>
 <li><code class="docutils literal notranslate"><span class="pre">column_idx</span></code>: The column which contains the sequence lengths (a 1d tensor). </li>
-<li><code class="docutils literal notranslate"><span class="pre">variable_size</span></code>: The size of the final mask can vary, depending on the max length of current batch. </li>
+<li><code class="docutils literal notranslate"><span class="pre">variable_size</span></code>: The size of the final vector can vary, depending on the max length of current batch. </li>
 <li><code class="docutils literal notranslate"><span class="pre">max_length</span></code>: The absolute max length for inputs. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv427ccv_cnnp_dataframe_truncatePC20ccv_cnnp_dataframe_tKiKi">
+<span id="_CPPv327ccv_cnnp_dataframe_truncatePC20ccv_cnnp_dataframe_tKiKi"></span><span id="_CPPv227ccv_cnnp_dataframe_truncatePC20ccv_cnnp_dataframe_tKiKi"></span><span id="ccv_cnnp_dataframe_truncate__ccv_cnnp_dataframe_tPC.iC.iC"></span><span class="target" id="group__level__5__dataframe__add__ons_1gaa17eb89849a525c34cb1116c8dbd0125"></span><code class="descname">ccv_cnnp_dataframe_truncate</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <em class="property">const</em> int <em>seq_idx</em>, <em class="property">const</em> int <em>len_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427ccv_cnnp_dataframe_truncatePC20ccv_cnnp_dataframe_tKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Truncate a given matrix (as a list of vector) to the given size provided by another vector. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The index of the newly derived column. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">dataframe</span></code>: The dataframe object that will contain the matrix. </li>
+<li><code class="docutils literal notranslate"><span class="pre">seq_idx</span></code>: The column of the given matrix to be truncated. </li>
+<li><code class="docutils literal notranslate"><span class="pre">len_idx</span></code>: The column of the given sizes as a vector. </li>
 </ul>
 </dd>
 </dl>
