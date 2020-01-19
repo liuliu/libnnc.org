@@ -1292,6 +1292,20 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv433ccv_cnnp_model_set_compile_paramsPC16ccv_cnnp_model_tK38ccv_nnc_symbolic_graph_compile_param_t">
+<span id="_CPPv333ccv_cnnp_model_set_compile_paramsPC16ccv_cnnp_model_tK38ccv_nnc_symbolic_graph_compile_param_t"></span><span id="_CPPv233ccv_cnnp_model_set_compile_paramsPC16ccv_cnnp_model_tK38ccv_nnc_symbolic_graph_compile_param_t"></span><span id="ccv_cnnp_model_set_compile_params__ccv_cnnp_model_tPC.ccv_nnc_symbolic_graph_compile_param_tC"></span><span class="target" id="group__level__5__model_1ga7213c0ea86d3dcdbfbaf82959828e325"></span>void <code class="descname">ccv_cnnp_model_set_compile_params</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> ccv_nnc_symbolic_graph_compile_param_t <em>compile_params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433ccv_cnnp_model_set_compile_paramsPC16ccv_cnnp_model_tK38ccv_nnc_symbolic_graph_compile_param_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set compile parameters on the model so it compiles the graph with the said parameters. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
+<li><code class="docutils literal notranslate"><span class="pre">compile_params</span></code>: A ccv_nnc_symbolic_graph_compile_param_t struct defines compilation parameters. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv433ccv_cnnp_model_set_workspace_sizePC16ccv_cnnp_model_t6size_t">
 <span id="_CPPv333ccv_cnnp_model_set_workspace_sizePC16ccv_cnnp_model_t6size_t"></span><span id="_CPPv233ccv_cnnp_model_set_workspace_sizePC16ccv_cnnp_model_t6size_t"></span><span id="ccv_cnnp_model_set_workspace_size__ccv_cnnp_model_tPC.s"></span><span class="target" id="group__level__5__model_1gaebeea7673fe7954ae0cc09c386494a63"></span>void <code class="descname">ccv_cnnp_model_set_workspace_size</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, size_t <em>workspace_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433ccv_cnnp_model_set_workspace_sizePC16ccv_cnnp_model_t6size_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This method set the max workspace size. If the graph is already compiled. It will re-run autotune to use the new workspace size to find the best algorithm. <dl class="docutils">
