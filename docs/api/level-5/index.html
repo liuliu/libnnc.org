@@ -958,42 +958,68 @@
 <div class="section" id="model-api">
 <h2>Model API<a class="headerlink" href="#model-api" title="Permalink to this headline">¶</a></h2>
 <dl class="type">
-<dt id="_CPPv4N13level_5_model14__anonymous106E">
-<span id="_CPPv3N13level_5_model14__anonymous106E"></span><span id="_CPPv2N13level_5_model14__anonymous106E"></span><span id="level_5_model::__anonymous106"></span><span class="target" id="group__level__5__model_1ga0ae1e3bf78c960c83e2d437efd802058"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous106</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous106E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model14__anonymous104E">
+<span id="_CPPv3N13level_5_model14__anonymous104E"></span><span id="_CPPv2N13level_5_model14__anonymous104E"></span><span id="level_5_model::__anonymous104"></span><span class="target" id="group__level__5__model_1ga10e74d65d7876276a8f6061c71dcf469"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous104</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous104E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This method exposes parameter for a model out as a potential input for another model. Since it is a ccv_cnnp_model_io_t, it can also be used by other methods. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: A model that we can extract parameters out. </li>
+<li><code class="docutils literal notranslate"><span class="pre">selector</span></code>: The selector for a parameter. ALL_PARAMETERS means all parameters, or you can select CCV_CNNP_PARAMETER_SELECT_WEIGHT or CCV_CNNP_PARAMETER_SELECT_BIAS. </li>
+<li><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index into a parameter. ALL_PARAMETERS means all parameters. </li>
+</ul>
+</dd>
+</dl>
+</p>
+<p><em>Values:</em></p>
+<dl class="enumerator">
+<dt id="_CPPv4N13level_5_model32CCV_CNNP_PARAMETER_SELECT_WEIGHTE">
+<span id="_CPPv3N13level_5_model32CCV_CNNP_PARAMETER_SELECT_WEIGHTE"></span><span id="_CPPv2N13level_5_model32CCV_CNNP_PARAMETER_SELECT_WEIGHTE"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469ad44990255018b1e118e60026f6e5f4df"></span><code class="descname">CCV_CNNP_PARAMETER_SELECT_WEIGHT</code> = 0<a class="headerlink" href="#_CPPv4N13level_5_model32CCV_CNNP_PARAMETER_SELECT_WEIGHTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="enumerator">
+<dt id="_CPPv4N13level_5_model30CCV_CNNP_PARAMETER_SELECT_BIASE">
+<span id="_CPPv3N13level_5_model30CCV_CNNP_PARAMETER_SELECT_BIASE"></span><span id="_CPPv2N13level_5_model30CCV_CNNP_PARAMETER_SELECT_BIASE"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469af63d2a7f14f6f3bd040227a537a579f7"></span><code class="descname">CCV_CNNP_PARAMETER_SELECT_BIAS</code> = 1<a class="headerlink" href="#_CPPv4N13level_5_model30CCV_CNNP_PARAMETER_SELECT_BIASE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv4N13level_5_model14__anonymous105E">
+<span id="_CPPv3N13level_5_model14__anonymous105E"></span><span id="_CPPv2N13level_5_model14__anonymous105E"></span><span id="level_5_model::__anonymous105"></span><span class="target" id="group__level__5__model_1ga1f3b6c692395e5007ff47ce5d9304c1c"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous105</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous105E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model29CCV_CNNP_DISABLE_OUTGRAD_NONEE">
-<span id="_CPPv3N13level_5_model29CCV_CNNP_DISABLE_OUTGRAD_NONEE"></span><span id="_CPPv2N13level_5_model29CCV_CNNP_DISABLE_OUTGRAD_NONEE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058ab794bfd10b61dd7151223b583ca0cfbb"></span><code class="descname">CCV_CNNP_DISABLE_OUTGRAD_NONE</code> = (uint64_t)0<a class="headerlink" href="#_CPPv4N13level_5_model29CCV_CNNP_DISABLE_OUTGRAD_NONEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model29CCV_CNNP_DISABLE_OUTGRAD_NONEE"></span><span id="_CPPv2N13level_5_model29CCV_CNNP_DISABLE_OUTGRAD_NONEE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1cab794bfd10b61dd7151223b583ca0cfbb"></span><code class="descname">CCV_CNNP_DISABLE_OUTGRAD_NONE</code> = (uint64_t)0<a class="headerlink" href="#_CPPv4N13level_5_model29CCV_CNNP_DISABLE_OUTGRAD_NONEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Don’t disable any outgrad. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model28CCV_CNNP_DISABLE_OUTGRAD_ALLE">
-<span id="_CPPv3N13level_5_model28CCV_CNNP_DISABLE_OUTGRAD_ALLE"></span><span id="_CPPv2N13level_5_model28CCV_CNNP_DISABLE_OUTGRAD_ALLE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058aa73128967f27ebe358d4b4880cbaf458"></span><code class="descname">CCV_CNNP_DISABLE_OUTGRAD_ALL</code> = (uint64_t)(int64_t)-1<a class="headerlink" href="#_CPPv4N13level_5_model28CCV_CNNP_DISABLE_OUTGRAD_ALLE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model28CCV_CNNP_DISABLE_OUTGRAD_ALLE"></span><span id="_CPPv2N13level_5_model28CCV_CNNP_DISABLE_OUTGRAD_ALLE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1caa73128967f27ebe358d4b4880cbaf458"></span><code class="descname">CCV_CNNP_DISABLE_OUTGRAD_ALL</code> = (uint64_t)(int64_t)-1<a class="headerlink" href="#_CPPv4N13level_5_model28CCV_CNNP_DISABLE_OUTGRAD_ALLE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Disable all inputs’ outgrads. </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="type">
-<dt id="_CPPv4N13level_5_model14__anonymous107E">
-<span id="_CPPv3N13level_5_model14__anonymous107E"></span><span id="_CPPv2N13level_5_model14__anonymous107E"></span><span id="level_5_model::__anonymous107"></span><span class="target" id="group__level__5__model_1ga01aea4eb01aa6415eee118b5a5ee3dad"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous107</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous107E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N13level_5_model14__anonymous106E">
+<span id="_CPPv3N13level_5_model14__anonymous106E"></span><span id="_CPPv2N13level_5_model14__anonymous106E"></span><span id="level_5_model::__anonymous106"></span><span class="target" id="group__level__5__model_1ga0ae1e3bf78c960c83e2d437efd802058"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous106</code><a class="headerlink" href="#_CPPv4N13level_5_model14__anonymous106E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE">
-<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span class="target" id="group__level__5__model_1gga01aea4eb01aa6415eee118b5a5ee3dada8611ffeaa0db7b1d6ebeb3bd931d2e17"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058a8611ffeaa0db7b1d6ebeb3bd931d2e17"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This is the default flag, if the model is not initialized, will attempt to read from the disk. Otherwise, will persist existing parameters to disk. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE">
-<span id="_CPPv3N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span id="_CPPv2N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span class="target" id="group__level__5__model_1gga01aea4eb01aa6415eee118b5a5ee3dada9b371ebc4c047fb6bef78e16c0f34359"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span id="_CPPv2N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058a9b371ebc4c047fb6bef78e16c0f34359"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_READ_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model35CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Only read parameters out of disk, even it is already initialized. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE">
-<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span class="target" id="group__level__5__model_1gga01aea4eb01aa6415eee118b5a5ee3dadaf62171f6c646550adbf616eb6f162c53"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span id="_CPPv2N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058af62171f6c646550adbf616eb6f162c53"></span><code class="descname">CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY</code><a class="headerlink" href="#_CPPv4N13level_5_model36CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Only write parameters to disk. </p>
 </dd></dl>
 
@@ -1041,6 +1067,11 @@
 </dl>
 </p>
 </dd></dl>
+
+<dl class="function">
+<dt id="_CPPv425ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi">
+<span id="_CPPv325ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi"></span><span id="_CPPv225ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi"></span><span id="ccv_cnnp_model_parameters__ccv_cnnp_model_tPC.iC.iC"></span><span class="target" id="group__level__5__model_1ga879740dc8d3d0616094853f0499d2c50"></span><code class="descname">ccv_cnnp_model_parameters</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>selector</em>, <em class="property">const</em> int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="function">
 <dt id="_CPPv418ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKiPCKc">
@@ -1115,7 +1146,7 @@
 <dl class="function">
 <dt id="_CPPv421ccv_cnnp_model_absorbPC16ccv_cnnp_model_tPC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKi">
 <span id="_CPPv321ccv_cnnp_model_absorbPC16ccv_cnnp_model_tPC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKi"></span><span id="_CPPv221ccv_cnnp_model_absorbPC16ccv_cnnp_model_tPC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKi"></span><span id="ccv_cnnp_model_absorb__ccv_cnnp_model_tPC.ccv_cnnp_model_tPC.ccv_nnc_tensor_param_tCPC.iC"></span><span class="target" id="group__level__5__model_1gaf4f91f43f05566a4ac27b802a5846afa"></span>void <code class="descname">ccv_cnnp_model_absorb</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>init</em>, <em class="property">const</em> ccv_nnc_tensor_param_t *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_cnnp_model_absorbPC16ccv_cnnp_model_tPC16ccv_cnnp_model_tPCK22ccv_nnc_tensor_param_tKi" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Absorb a new model into the existing model. This requires the new model has exactly the same trainables but other dimensionality’s can change. The new model has to not be compiled yet, its life-cycle management will be take over by the existing model. You don’t need to free it separately. <dl class="docutils">
+<dd><p>Absorb a new model into the existing model. This requires the new model has exactly the same parameters but other dimensionality’s can change. The new model has to not be compiled yet, its life-cycle management will be take over by the existing model. You don’t need to free it separately. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The existing model. </li>
@@ -1218,7 +1249,7 @@
 <dl class="function">
 <dt id="_CPPv423ccv_cnnp_model_backwardPC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC21ccv_nnc_tensor_tape_tPC24ccv_nnc_stream_context_t">
 <span id="_CPPv323ccv_cnnp_model_backwardPC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC21ccv_nnc_tensor_tape_tPC24ccv_nnc_stream_context_t"></span><span id="_CPPv223ccv_cnnp_model_backwardPC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC21ccv_nnc_tensor_tape_tPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_model_backward__ccv_cnnp_model_tPC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_tensor_tape_tPC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5__model_1gaec086a8448b5f3c17a0bf8ee019703bc"></span>void <code class="descname">ccv_cnnp_model_backward</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>ingrads</em>, <em class="property">const</em> int <em>ingrad_size</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>outgrads</em>, <em class="property">const</em> int <em>outgrad_size</em>, <a class="reference internal" href="../level-2/#_CPPv421ccv_nnc_tensor_tape_t" title="ccv_nnc_tensor_tape_t">ccv_nnc_tensor_tape_t</a> *<em class="property">const</em> <em>tensor_tape</em>, <a class="reference internal" href="../level-1/#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423ccv_cnnp_model_backwardPC16ccv_cnnp_model_tPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC21ccv_nnc_tensor_tape_tPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Based on the input gradients, compute the output gradients (w.r.t. the inputs). This also adds trainable gradients. <dl class="docutils">
+<dd><p>Based on the input gradients, compute the output gradients (w.r.t. the inputs). This also adds parameter gradients. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
@@ -1237,7 +1268,7 @@
 <dl class="function">
 <dt id="_CPPv430ccv_cnnp_model_apply_gradientsPC16ccv_cnnp_model_tPC24ccv_nnc_stream_context_t">
 <span id="_CPPv330ccv_cnnp_model_apply_gradientsPC16ccv_cnnp_model_tPC24ccv_nnc_stream_context_t"></span><span id="_CPPv230ccv_cnnp_model_apply_gradientsPC16ccv_cnnp_model_tPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_model_apply_gradients__ccv_cnnp_model_tPC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5__model_1gaa333b95220587c3ec5703972c32647dc"></span>void <code class="descname">ccv_cnnp_model_apply_gradients</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <a class="reference internal" href="../level-1/#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430ccv_cnnp_model_apply_gradientsPC16ccv_cnnp_model_tPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Apply the computed gradients to the trainable tensors. <dl class="docutils">
+<dd><p>Apply the computed gradients to the parameter tensors. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
@@ -1320,30 +1351,13 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv429ccv_cnnp_model_trainable_spanPC16ccv_cnnp_model_tKi">
-<span id="_CPPv329ccv_cnnp_model_trainable_spanPC16ccv_cnnp_model_tKi"></span><span id="_CPPv229ccv_cnnp_model_trainable_spanPC16ccv_cnnp_model_tKi"></span><span id="ccv_cnnp_model_trainable_span__ccv_cnnp_model_tPC.iC"></span><span class="target" id="group__level__5__model_1ga2de47e2e4cfefaf18534a6150c526ac8"></span><code class="descname">ccv_cnnp_model_trainable_span</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_model_trainable_spanPC16ccv_cnnp_model_tKi" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the trainables associated with the model with some indexes. -1 means all. Otherwise it is indexed. You can also get nil trainables. For functional model or sequential model, the index meant for trainables of all its sub-models’ at the given index. <dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>The trainable span that can be used to set minimizers. </dd>
+<dt id="_CPPv428ccv_cnnp_model_set_parameterPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPCK16ccv_nnc_tensor_t">
+<span id="_CPPv328ccv_cnnp_model_set_parameterPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPCK16ccv_nnc_tensor_t"></span><span id="_CPPv228ccv_cnnp_model_set_parameterPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPCK16ccv_nnc_tensor_t"></span><span id="ccv_cnnp_model_set_parameter__ccv_cnnp_model_tPC.ccv_cnnp_model_io_tC.ccv_nnc_tensor_tCPC"></span><span class="target" id="group__level__5__model_1ga7852668058cf191c694731f76594be7a"></span>void <code class="descname">ccv_cnnp_model_set_parameter</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>parameter</em>, <em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_parameterPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPCK16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set a parameter that is specified by the parameter span. This will override whatever value in that parameter. The given tensor should match the dimension of the parameter. It doesn’t matter whether the given tensor is on CPU or GPU, it will be copied over. This method is limited, it can only set tensor once the model is compiled. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
-<li><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index of a collection of trainables. </li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="_CPPv428ccv_cnnp_model_set_trainablePC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPCK16ccv_nnc_tensor_t">
-<span id="_CPPv328ccv_cnnp_model_set_trainablePC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPCK16ccv_nnc_tensor_t"></span><span id="_CPPv228ccv_cnnp_model_set_trainablePC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPCK16ccv_nnc_tensor_t"></span><span id="ccv_cnnp_model_set_trainable__ccv_cnnp_model_tPC.ccv_cnnp_trainable_span_tC.iC.ccv_nnc_tensor_tCPC"></span><span class="target" id="group__level__5__model_1ga1b716145d9326aa162aa1ee5f9d8398c"></span>void <code class="descname">ccv_cnnp_model_set_trainable</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_cnnp_trainable_span_t" title="ccv_cnnp_trainable_span_t">ccv_cnnp_trainable_span_t</a> <em>trainable_span</em>, <em class="property">const</em> int <em>index</em>, <em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_trainablePC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPCK16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set a trainable that is specified by the trainable span. This will override whatever value in that trainable. The given tensor should match the dimension of the trainable. It doesn’t matter whether the given tensor is on CPU or GPU, it will be copied over. This method is limited, it can only set tensor once the model is compiled. <dl class="docutils">
-<dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last simple">
-<li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
-<li><code class="docutils literal notranslate"><span class="pre">trainable_span</span></code>: The trainable span that is used to specify which trainable to override. </li>
-<li><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index, if any, to the trainable span (trainable span covers multiple trainables). </li>
+<li><code class="docutils literal notranslate"><span class="pre">parameter</span></code>: The parameter that is used to specify which parameter to override. </li>
 <li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor contains the value we want to copy over. </li>
 </ul>
 </dd>
@@ -1352,14 +1366,13 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv429ccv_cnnp_model_trainable_copyPC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPC16ccv_nnc_tensor_t">
-<span id="_CPPv329ccv_cnnp_model_trainable_copyPC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPC16ccv_nnc_tensor_t"></span><span id="_CPPv229ccv_cnnp_model_trainable_copyPC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPC16ccv_nnc_tensor_t"></span><span id="ccv_cnnp_model_trainable_copy__ccv_cnnp_model_tPC.ccv_cnnp_trainable_span_tC.iC.ccv_nnc_tensor_tPC"></span><span class="target" id="group__level__5__model_1gacf4a0dc635ce165b58389375c487f956"></span>void <code class="descname">ccv_cnnp_model_trainable_copy</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_cnnp_trainable_span_t" title="ccv_cnnp_trainable_span_t">ccv_cnnp_trainable_span_t</a> <em>trainable_span</em>, <em class="property">const</em> int <em>index</em>, ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_model_trainable_copyPC16ccv_cnnp_model_tK25ccv_cnnp_trainable_span_tKiPC16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Copy a trainable that is specified by the trainable span out of a model. This will override the value in the tensor you provided. The given tensor should match the dimension of the trainable and should already be allocated. It doesn’t matter whether the given tensor is on CPU or GPU. <dl class="docutils">
+<dt id="_CPPv429ccv_cnnp_model_parameter_copyPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPC16ccv_nnc_tensor_t">
+<span id="_CPPv329ccv_cnnp_model_parameter_copyPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPC16ccv_nnc_tensor_t"></span><span id="_CPPv229ccv_cnnp_model_parameter_copyPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPC16ccv_nnc_tensor_t"></span><span id="ccv_cnnp_model_parameter_copy__ccv_cnnp_model_tPC.ccv_cnnp_model_io_tC.ccv_nnc_tensor_tPC"></span><span class="target" id="group__level__5__model_1ga4027a586d3c1b8ce8125579c67743f0f"></span>void <code class="descname">ccv_cnnp_model_parameter_copy</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>parameter</em>, ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_model_parameter_copyPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPC16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Copy a parameter that is specified by the parameter span out of a model. This will override the value in the tensor you provided. The given tensor should match the dimension of the parameter and should already be allocated. It doesn’t matter whether the given tensor is on CPU or GPU. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
-<li><code class="docutils literal notranslate"><span class="pre">trainable_span</span></code>: The trainable span that is used to specify which trainable to override. </li>
-<li><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index, if any, to the trainable span (trainable span covers multiple trainables). </li>
+<li><code class="docutils literal notranslate"><span class="pre">parameter</span></code>: The parameter that is used to specify which parameter to override. </li>
 <li><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that receives value. </li>
 </ul>
 </dd>
@@ -1368,15 +1381,15 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi">
-<span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.ccv_cnnp_trainable_span_tCPC.iC"></span><span class="target" id="group__level__5__model_1gac49ffebcb800369cb535121199e3707b"></span>void <code class="descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_cnnp_trainable_span_t" title="ccv_cnnp_trainable_span_t">ccv_cnnp_trainable_span_t</a> *<em class="property">const</em> <em>trainable_spans</em>, <em class="property">const</em> int <em>trainable_span_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK25ccv_cnnp_trainable_span_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK19ccv_cnnp_model_io_tKi">
+<span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK19ccv_cnnp_model_io_tKi"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK19ccv_cnnp_model_io_tKi"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.ccv_cnnp_model_io_tCPC.iC"></span><span class="target" id="group__level__5__model_1ga848b07a00ec6434090a3d142d09c7f6e"></span>void <code class="descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>parameters</em>, <em class="property">const</em> int <em>parameter_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK19ccv_cnnp_model_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set a new minimizer for the model. This is useful when you need to update learn rate for stochastic gradient descent for example. This method can be called any time during the training process (after compilation). <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </li>
 <li><code class="docutils literal notranslate"><span class="pre">minimizer</span></code>: The wrapped command that represents a new optimization strategy. </li>
-<li><code class="docutils literal notranslate"><span class="pre">trainable_spans</span></code>: The trainables to be applied the minimizer on. 0 meant for all. </li>
-<li><code class="docutils literal notranslate"><span class="pre">trainable_span_size</span></code>: The number of trainable spans. </li>
+<li><code class="docutils literal notranslate"><span class="pre">parameters</span></code>: The parameters to be applied the minimizer on. 0 meant for all. </li>
+<li><code class="docutils literal notranslate"><span class="pre">parameter_size</span></code>: The number of parameter spans. </li>
 </ul>
 </dd>
 </dl>
@@ -1386,7 +1399,7 @@
 <dl class="function">
 <dt id="_CPPv424ccv_cnnp_model_minimizerPC16ccv_cnnp_model_t">
 <span id="_CPPv324ccv_cnnp_model_minimizerPC16ccv_cnnp_model_t"></span><span id="_CPPv224ccv_cnnp_model_minimizerPC16ccv_cnnp_model_t"></span><span id="ccv_cnnp_model_minimizer__ccv_cnnp_model_tPC"></span><span class="target" id="group__level__5__model_1ga0cf592082c15ecca2f001b6d5b7f9fbb"></span><code class="descname">ccv_cnnp_model_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424ccv_cnnp_model_minimizerPC16ccv_cnnp_model_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Retrieve the default minimizer for the model. This is set either you call model compile or ccv_cnnp_model_set_minimizer with no trainable spans. <dl class="docutils">
+<dd><p>Retrieve the default minimizer for the model. This is set either you call model compile or ccv_cnnp_model_set_minimizer with no parameter spans. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The minimizer command. </dd>
 <dt><strong>Parameters</strong></dt>
@@ -1468,46 +1481,40 @@
 </div>
 </dd></dl>
 
-<dl class="class">
-<dt id="_CPPv425ccv_cnnp_trainable_span_t">
-<span id="_CPPv325ccv_cnnp_trainable_span_t"></span><span id="_CPPv225ccv_cnnp_trainable_span_t"></span><span id="ccv_cnnp_trainable_span_t"></span><span class="target" id="structccv__cnnp__trainable__span__t"></span><em class="property">struct </em><code class="descname">ccv_cnnp_trainable_span_t</code><a class="headerlink" href="#_CPPv425ccv_cnnp_trainable_span_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><em>#include &lt;ccv_nnc.h&gt;</em><p>Representation of a collection of trainables for a model. You can regard this as a simple immutable objects without thinking about its life-cycle. However, this is meaningless without an valid underlying model and if the underlying model is freed, the behavior is undefined. </p>
-</dd></dl>
-
 </div>
 <div class="section" id="model-add-ons">
 <h2>Model Add-ons<a class="headerlink" href="#model-add-ons" title="Permalink to this headline">¶</a></h2>
 <dl class="type">
-<dt id="_CPPv4N21level_5_model_add_ons14__anonymous108E">
-<span id="_CPPv3N21level_5_model_add_ons14__anonymous108E"></span><span id="_CPPv2N21level_5_model_add_ons14__anonymous108E"></span><span id="level_5_model_add_ons::__anonymous108"></span><span class="target" id="group__level__5__model__add__ons_1ga7646ae03981912f97626c39dfe9318da"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous108</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons14__anonymous108E" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N21level_5_model_add_ons14__anonymous107E">
+<span id="_CPPv3N21level_5_model_add_ons14__anonymous107E"></span><span id="_CPPv2N21level_5_model_add_ons14__anonymous107E"></span><span id="level_5_model_add_ons::__anonymous107"></span><span class="target" id="group__level__5__model__add__ons_1ga01aea4eb01aa6415eee118b5a5ee3dad"></span><em class="property">enum </em><code class="descclassname"><strong>[anonymous]</strong><code class="descclassname">::</code></code><code class="descname">__anonymous107</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons14__anonymous107E" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="enumerator">
 <dt id="_CPPv4N21level_5_model_add_ons11CCV_CNNP_IOE">
-<span id="_CPPv3N21level_5_model_add_ons11CCV_CNNP_IOE"></span><span id="_CPPv2N21level_5_model_add_ons11CCV_CNNP_IOE"></span><span class="target" id="group__level__5__model__add__ons_1gga7646ae03981912f97626c39dfe9318daa40070937b4589dc10c1872cbe9494f13"></span><code class="descname">CCV_CNNP_IO</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons11CCV_CNNP_IOE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N21level_5_model_add_ons11CCV_CNNP_IOE"></span><span id="_CPPv2N21level_5_model_add_ons11CCV_CNNP_IOE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada40070937b4589dc10c1872cbe9494f13"></span><code class="descname">CCV_CNNP_IO</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons11CCV_CNNP_IOE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a ccv_cnnp_io_t. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N21level_5_model_add_ons18CCV_CNNP_NO_TENSORE">
-<span id="_CPPv3N21level_5_model_add_ons18CCV_CNNP_NO_TENSORE"></span><span id="_CPPv2N21level_5_model_add_ons18CCV_CNNP_NO_TENSORE"></span><span class="target" id="group__level__5__model__add__ons_1gga7646ae03981912f97626c39dfe9318daa65c36f202728324331c751665f7b0801"></span><code class="descname">CCV_CNNP_NO_TENSOR</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons18CCV_CNNP_NO_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N21level_5_model_add_ons18CCV_CNNP_NO_TENSORE"></span><span id="_CPPv2N21level_5_model_add_ons18CCV_CNNP_NO_TENSORE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada65c36f202728324331c751665f7b0801"></span><code class="descname">CCV_CNNP_NO_TENSOR</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons18CCV_CNNP_NO_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is not used. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N21level_5_model_add_ons26CCV_CNNP_TENSOR_NOT_OUTPUTE">
-<span id="_CPPv3N21level_5_model_add_ons26CCV_CNNP_TENSOR_NOT_OUTPUTE"></span><span id="_CPPv2N21level_5_model_add_ons26CCV_CNNP_TENSOR_NOT_OUTPUTE"></span><span class="target" id="group__level__5__model__add__ons_1gga7646ae03981912f97626c39dfe9318daa81c5f637a4b2ed0f7be8d035028cb4ab"></span><code class="descname">CCV_CNNP_TENSOR_NOT_OUTPUT</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons26CCV_CNNP_TENSOR_NOT_OUTPUTE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N21level_5_model_add_ons26CCV_CNNP_TENSOR_NOT_OUTPUTE"></span><span id="_CPPv2N21level_5_model_add_ons26CCV_CNNP_TENSOR_NOT_OUTPUTE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada81c5f637a4b2ed0f7be8d035028cb4ab"></span><code class="descname">CCV_CNNP_TENSOR_NOT_OUTPUT</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons26CCV_CNNP_TENSOR_NOT_OUTPUTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This parameter indicates this is a tensor parameter, but it is not an output reflected as ccv_cnnp_io_t </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N21level_5_model_add_ons27CCV_CNNP_INIT_SHARED_TENSORE">
-<span id="_CPPv3N21level_5_model_add_ons27CCV_CNNP_INIT_SHARED_TENSORE"></span><span id="_CPPv2N21level_5_model_add_ons27CCV_CNNP_INIT_SHARED_TENSORE"></span><span class="target" id="group__level__5__model__add__ons_1gga7646ae03981912f97626c39dfe9318daa0956b88066a5bff5b38b5bcbc2bf0a5e"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons27CCV_CNNP_INIT_SHARED_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N21level_5_model_add_ons27CCV_CNNP_INIT_SHARED_TENSORE"></span><span id="_CPPv2N21level_5_model_add_ons27CCV_CNNP_INIT_SHARED_TENSORE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada0956b88066a5bff5b38b5bcbc2bf0a5e"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons27CCV_CNNP_INIT_SHARED_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a provided tensor for initialization. </p>
 </dd></dl>
 
 <dl class="enumerator">
 <dt id="_CPPv4N21level_5_model_add_ons40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE">
-<span id="_CPPv3N21level_5_model_add_ons40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span id="_CPPv2N21level_5_model_add_ons40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span class="target" id="group__level__5__model__add__ons_1gga7646ae03981912f97626c39dfe9318daa2bd3cb39cbaa3add603ddf0eeb74b6c4"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N21level_5_model_add_ons40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span id="_CPPv2N21level_5_model_add_ons40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada2bd3cb39cbaa3add603ddf0eeb74b6c4"></span><code class="descname">CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE</code><a class="headerlink" href="#_CPPv4N21level_5_model_add_ons40CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a provided tensor that can be updated. </p>
 </dd></dl>
 
@@ -1531,7 +1538,7 @@
 <dl class="function">
 <dt id="_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc">
 <span id="_CPPv317ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc"></span><span id="_CPPv217ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc"></span><span id="ccv_cnnp_cmd_exec__ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_cnnp_cmd_exec_io_tCPC.iC.iCPC.iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga86c597347f1296c5d82fca706b91fe87"></span><code class="descname">ccv_cnnp_cmd_exec</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv422ccv_cnnp_cmd_exec_io_t" title="ccv_cnnp_cmd_exec_io_t">ccv_cnnp_cmd_exec_io_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> int *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ccv_cnnp_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCK22ccv_cnnp_cmd_exec_io_tKiPCKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A generic model based on the command. If the tensors are labeled as ccv_cnnp_io_t, it will participate as the input / output of the model. If it is a init tensor, the model will use this tensor for that parameter. More over, if it is marked as trainable, that tensor will be differentiated against when you call ccv_cnnp_model_fit. This model however doesn’t take over ownership of the tensor. You should manage the life cycle of the given tensor and it is your responsibility to make sure they outlive the model. Also, all inputs and outputs marked as init tensors will be shared if you reuse this model in other places. <dl class="docutils">
+<dd><p>A generic model based on the command. If the tensors are labeled as ccv_cnnp_io_t, it will participate as the input / output of the model. If it is a init tensor, the model will use this tensor for that parameter. More over, if it is marked as parameter, that tensor will be differentiated against when you call ccv_cnnp_model_fit. This model however doesn’t take over ownership of the tensor. You should manage the life cycle of the given tensor and it is your responsibility to make sure they outlive the model. Also, all inputs and outputs marked as init tensors will be shared if you reuse this model in other places. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A model based on the given command. </dd>
 <dt><strong>Parameters</strong></dt>
@@ -1586,7 +1593,7 @@
 <dl class="function">
 <dt id="_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc">
 <span id="_CPPv314ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc"></span><span id="_CPPv214ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc"></span><span id="ccv_cnnp_graph__ccv_nnc_symbolic_graph_tCPC.ccv_cnnp_tensor_symbol_param_tCPC.iC.ccv_nnc_tensor_symbol_tPC.iC.ccv_nnc_tensor_symbol_tPC.iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga0be825af48de9576577670d1ce3938a1"></span><code class="descname">ccv_cnnp_graph</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv430ccv_cnnp_tensor_symbol_param_t" title="ccv_cnnp_tensor_symbol_param_t">ccv_cnnp_tensor_symbol_param_t</a> *<em class="property">const</em> <em>tensor_symbol_params</em>, <em class="property">const</em> int <em>tensor_symbol_param_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <a class="reference internal" href="../level-3/#_CPPv423ccv_nnc_tensor_symbol_t" title="ccv_nnc_tensor_symbol_t">ccv_nnc_tensor_symbol_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_graphPCK24ccv_nnc_symbolic_graph_tPCK30ccv_cnnp_tensor_symbol_param_tKiPC23ccv_nnc_tensor_symbol_tKiPC23ccv_nnc_tensor_symbol_tKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A generic model based on the symbolic graph we provided. A list of tensor symbols are labeled whether it is ccv_cnnp_io_t or not (we identify whether this is a input or output based on whether it is in the graph). If it is not, we init it with a given tensor. If it is marked as trainable, that tensor will be differentiated against when you call ccv_cnnp_model_fit. The model doesn’t take ownership over the init tensors. You are responsible to make sure the init tensors outlive the model until the initialization occurred. Also, these tensors will be shared if the model is reused. <dl class="docutils">
+<dd><p>A generic model based on the symbolic graph we provided. A list of tensor symbols are labeled whether it is ccv_cnnp_io_t or not (we identify whether this is a input or output based on whether it is in the graph). If it is not, we init it with a given tensor. If it is marked as parameter, that tensor will be differentiated against when you call ccv_cnnp_model_fit. The model doesn’t take ownership over the init tensors. You are responsible to make sure the init tensors outlive the model until the initialization occurred. Also, these tensors will be shared if the model is reused. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A model based on the given symbolic graph. </dd>
 <dt><strong>Parameters</strong></dt>
