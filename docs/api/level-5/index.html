@@ -1706,6 +1706,26 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv416ccv_cnnp_sigmoidPCKc">
+<span id="_CPPv316ccv_cnnp_sigmoidPCKc"></span><span id="_CPPv216ccv_cnnp_sigmoidPCKc"></span><span id="ccv_cnnp_sigmoid__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga60ae2ffa90990b5cd1289f2264e76de1"></span><code class="descname">ccv_cnnp_sigmoid</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ccv_cnnp_sigmoidPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A sigmoid activation layer model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A sigmoid activation layer model. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv414ccv_cnnp_swishPCKc">
+<span id="_CPPv314ccv_cnnp_swishPCKc"></span><span id="_CPPv214ccv_cnnp_swishPCKc"></span><span id="ccv_cnnp_swish__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gac092549580ce50e261fef8ddfa9d3829"></span><code class="descname">ccv_cnnp_swish</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ccv_cnnp_swishPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A swish activation layer model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A swish activation layer model. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv416ccv_cnnp_softmaxPCKc">
 <span id="_CPPv316ccv_cnnp_softmaxPCKc"></span><span id="_CPPv216ccv_cnnp_softmaxPCKc"></span><span id="ccv_cnnp_softmax__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gad1a808dd2c0f8b66b7690df5e7ff0da6"></span><code class="descname">ccv_cnnp_softmax</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ccv_cnnp_softmaxPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A softmax activation layer model. <dl class="docutils">
@@ -1801,6 +1821,21 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv412ccv_cnnp_mulPCKc">
+<span id="_CPPv312ccv_cnnp_mulPCKc"></span><span id="_CPPv212ccv_cnnp_mulPCKc"></span><span id="ccv_cnnp_mul__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga7f7cded84353304dcb409d8e1519ea53"></span><code class="descname">ccv_cnnp_mul</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_mulPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Multiple two input tensors together. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A model that can be applied with two inputs, and generate output that is a product of the inputs. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv419ccv_cnnp_scalar_mulKfPCKc">
 <span id="_CPPv319ccv_cnnp_scalar_mulKfPCKc"></span><span id="_CPPv219ccv_cnnp_scalar_mulKfPCKc"></span><span id="ccv_cnnp_scalar_mul__floatC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga10f3cd5922d5fe03b792895f89c24f3d"></span><code class="descname">ccv_cnnp_scalar_mul</code><span class="sig-paren">(</span><em class="property">const</em> float <em>a</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_scalar_mulKfPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A scalar multiplication model. Y = aX where a is a scalar. <dl class="docutils">
@@ -1876,6 +1911,24 @@
 <dd><ul class="breatheparameterlist first last simple">
 <li><code class="docutils literal notranslate"><span class="pre">eq</span></code>: If a value in the given mask tensor is equal to this. </li>
 <li><code class="docutils literal notranslate"><span class="pre">fill</span></code>: Fill in this value to the output tensor. </li>
+<li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv421ccv_cnnp_index_selectKiKiKiPCKc">
+<span id="_CPPv321ccv_cnnp_index_selectKiKiKiPCKc"></span><span id="_CPPv221ccv_cnnp_index_selectKiKiKiPCKc"></span><span id="ccv_cnnp_index_select__iC.iC.iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gacef5d305b90498990d6adfd0e263c7d3"></span><code class="descname">ccv_cnnp_index_select</code><span class="sig-paren">(</span><em class="property">const</em> int <em>datatype</em>, <em class="property">const</em> int <em>vocab_size</em>, <em class="property">const</em> int <em>embed_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_cnnp_index_selectKiKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A index select model. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>A index select model. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal notranslate"><span class="pre">datatype</span></code>: The data type of the vocabulary. </li>
+<li><code class="docutils literal notranslate"><span class="pre">vocab_size</span></code>: The size of the vocabulary. </li>
+<li><code class="docutils literal notranslate"><span class="pre">embed_size</span></code>: The size of the embedding. </li>
 <li><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </li>
 </ul>
 </dd>
