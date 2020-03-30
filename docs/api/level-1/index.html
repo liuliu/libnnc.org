@@ -914,7 +914,8 @@
 <dl class="member">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t5alphaE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t5alphaE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5alphaE"></span><span id="ccv_nnc_cmd_param_t::alpha__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a3f55b88566d977ca8d34c27304a6f8dc"></span>float <code class="descname">alpha</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5alphaE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[rnorm.alpha] See **rnorm.kappa**. </p>
+<dd><p>[rnorm.alpha] See **rnorm.kappa**.</p>
+<p>[rmsprop.momentum] The alpha hyper-parameter. </p>
 </dd></dl>
 
 <dl class="member">
@@ -937,7 +938,8 @@
 <span id="_CPPv3N19ccv_nnc_cmd_param_t7epsilonE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t7epsilonE"></span><span id="ccv_nnc_cmd_param_t::epsilon__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a45c4f746e902fda1731592aa21f25588"></span>float <code class="descname">epsilon</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t7epsilonE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[bnorm.epsilon] The epsilon for standard derivation.</p>
 <p>[lnorm.epsilon] The epsilon for standard derivation.</p>
-<p>[adam.epsilon] The epsilon for standard derivation. </p>
+<p>[adam.epsilon] The epsilon for standard derivation.</p>
+<p>[rmsprop.epsilon] The epsilon for standard derivation. </p>
 </dd></dl>
 
 <dl class="member">
@@ -950,7 +952,8 @@
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t8momentumE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t8momentumE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t8momentumE"></span><span id="ccv_nnc_cmd_param_t::momentum__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a46b2a82466a4ad5dc6534da77091c0c7"></span>float <code class="descname">momentum</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t8momentumE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[bnorm.momentum] running_mean = running_mean * momentum + mean * (1 - momentum).</p>
-<p>[sgd.momentum] For SGD, this follows <a class="reference external" href="http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf">http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf</a>. </p>
+<p>[sgd.momentum] For SGD, this follows <a class="reference external" href="http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf">http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf</a>.</p>
+<p>[rmsprop.momentum] The momentum hyper-parameter. </p>
 </dd></dl>
 
 <dl class="member">
@@ -963,7 +966,8 @@
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t4rateE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t4rateE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4rateE"></span><span id="ccv_nnc_cmd_param_t::rate__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a9f25b7296b42dfc4e3a79443796a6428"></span>float <code class="descname">rate</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4rateE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[sgd.rate] The learning rate.</p>
-<p>[adam.rate] The learning rate. </p>
+<p>[adam.rate] The learning rate.</p>
+<p>[rmsprop.rate] The learning rate. </p>
 </dd></dl>
 
 <dl class="member">
@@ -976,7 +980,8 @@
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t5decayE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t5decayE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5decayE"></span><span id="ccv_nnc_cmd_param_t::decay__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a6ebcff92cb8172501abd01447ef2bbee"></span>float <code class="descname">decay</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5decayE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[sgd.decay] This is the weight decay parameter, which represents L2 regularization after momentum applied.</p>
-<p>[adam.decay] This is the weight decay parameter, which represents L2 regularization. </p>
+<p>[adam.decay] This is the weight decay parameter, which represents L2 regularization.</p>
+<p>[rmsprop.decay] This is the weight decay parameter, which represents L2 regularization after momentum applied. </p>
 </dd></dl>
 
 <dl class="member">
@@ -1037,6 +1042,12 @@
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t1pE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t1pE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t1pE"></span><span id="ccv_nnc_cmd_param_t::p__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a7f534f9b9c9e94864f833f0daa38b116"></span>float <code class="descname">p</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t1pE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[dropout.p] Dropout probability. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t8entiretyE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t8entiretyE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t8entiretyE"></span><span id="ccv_nnc_cmd_param_t::entirety__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a7808ee9dfe8adf8bb8dd9c37255aeb79"></span>int <code class="descname">entirety</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t8entiretyE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[dropout.entirety] Drop the whole layer with the given probability. </p>
 </dd></dl>
 
 </div>
