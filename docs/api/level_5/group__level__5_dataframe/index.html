@@ -130,7 +130,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#naming-the-variable">Naming The Variable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#tracing-the-operation">Tracing The Operation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#optimizations">Optimizations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#interoperability-not-ready">Interoperability (Not Ready)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#interoperability">Interoperability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#future-optimizations">Future Optimizations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#some-maybes">Some Maybes</a></li>
 </ul>
@@ -138,6 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../tech/nnc-cnnp/">NNC Common Neural Network Primitives</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-cnnp/#model">Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-cnnp/#model-io">Model IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-cnnp/#fit-evaluate-backward-apply-gradients">Fit, Evaluate, Backward, Apply Gradients</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tech/nnc-df/">NNC Dataframe</a><ul>
@@ -182,6 +183,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#gradient-based-optimization">Gradient-based Optimization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#graph-simplification">Graph Simplification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#automatic-graph-parallelization">Automatic Graph Parallelization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#memory-compression">Memory Compression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#while-loop-others">While Loop Others</a></li>
 </ul>
 </li>
@@ -195,6 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#dataframe-api">Dataframe API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#dataframe-add-ons">Dataframe Add-ons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#model-api">Model API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-5/#model-add-ons">Model Add-ons</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../convenience/">Convenience API</a></li>
@@ -289,18 +292,18 @@
 <p>Comparing to Python, Swift is a stronger typed language. Though all being high-level, they all have pretty good string support (of course!), operator overloading, and polymorphism. String support makes column naming natural, Operator overloading makes conditioning and filtering easier, and polymorphism makes column type representation straight-forward. These, unfortunately, are the challenges I need to face when implementing in C with the eye towards that later the similar ideas can be implemented on top on a high-level language based on this one.</p>
 <p>It seems I haven’t answered the most crucial question yet: what’s special about these data process APIs? It is easier to answer this to first see what Pandas or MLDataTable does.</p>
 <ul class="simple">
-<li>They both represent data as tables. Each column represents different type of the data (time, nd-array, scalar or string). As such, they both have API to add / remove / rename columns, and load tabular data from disk.</li>
-<li>They both provide API to filter (remove / add) rows, and derive new column from existing columns.</li>
-<li>Pandas provides more API for data alignment (merge columns from different tables into one table), and compute statistics (group rows by some criteria, and compute min / max / std / mean within that group).</li>
-<li>MLDataTable provides API to batching data (random split) which covered in TensorFlow / PyTorch’s Dataset API as well.</li>
+<li><p>They both represent data as tables. Each column represents different type of the data (time, nd-array, scalar or string). As such, they both have API to add / remove / rename columns, and load tabular data from disk.</p></li>
+<li><p>They both provide API to filter (remove / add) rows, and derive new column from existing columns.</p></li>
+<li><p>Pandas provides more API for data alignment (merge columns from different tables into one table), and compute statistics (group rows by some criteria, and compute min / max / std / mean within that group).</p></li>
+<li><p>MLDataTable provides API to batching data (random split) which covered in TensorFlow / PyTorch’s Dataset API as well.</p></li>
 </ul>
 <p>It turns out when you have a noisy dataset, these functionalities are useful to remove unwanted data quickly. If you have a relatively clean dataset, it also allows you to prepare data in a more elegant way. For NNC, the interesting requirements are:</p>
 <ol class="arabic simple">
-<li>Represents scalars, tensors, string as columns; columns can be named.</li>
-<li>New columns can be derived, from existing ones.</li>
-<li>Rows can be filtered, grouped, and statistics can be computed.</li>
-<li>Columns can be aligned, with some given indexes.</li>
-<li>All these can be done efficiently, on a scale of hundreds of Gigabytes data.</li>
+<li><p>Represents scalars, tensors, string as columns; columns can be named.</p></li>
+<li><p>New columns can be derived, from existing ones.</p></li>
+<li><p>Rows can be filtered, grouped, and statistics can be computed.</p></li>
+<li><p>Columns can be aligned, with some given indexes.</p></li>
+<li><p>All these can be done efficiently, on a scale of hundreds of Gigabytes data.</p></li>
 </ol>
 </div>
 
@@ -354,7 +357,7 @@
             VERSION:'a deep learning framework from ccv',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'',
+            FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };

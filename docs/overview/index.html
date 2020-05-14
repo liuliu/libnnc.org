@@ -312,9 +312,9 @@
 <h2>3. Symbolic Graph<a class="headerlink" href="#symbolic-graph" title="Permalink to this headline">¶</a></h2>
 <p><strong>Symbolic graph</strong> expresses commands, the associated tensors and their execution orders (dependencies). This may sound very similar to the <strong>computation graph</strong> above, but there are several important differences:</p>
 <ol class="arabic simple">
-<li>there is no concept of <em>stream</em> at this point, because the <strong>symbolic graph</strong> doesn’t carry out the actual computation, and <em>stream</em> can be determined purely by the execution order;</li>
-<li>there is no tensor allocation. <strong>Symbolic graph</strong> uses the tensor metadata (layout, precision, dimensions, even which GPU it is associated with), but no actual allocation took place until it is compiled to a <strong>computation graph</strong>;</li>
-<li>There is no 1:1 mapping guarantee about the commands in the <strong>symbolic graph</strong> with the command instances in the <strong>computation graph</strong>.</li>
+<li><p>there is no concept of <em>stream</em> at this point, because the <strong>symbolic graph</strong> doesn’t carry out the actual computation, and <em>stream</em> can be determined purely by the execution order;</p></li>
+<li><p>there is no tensor allocation. <strong>Symbolic graph</strong> uses the tensor metadata (layout, precision, dimensions, even which GPU it is associated with), but no actual allocation took place until it is compiled to a <strong>computation graph</strong>;</p></li>
+<li><p>There is no 1:1 mapping guarantee about the commands in the <strong>symbolic graph</strong> with the command instances in the <strong>computation graph</strong>.</p></li>
 </ol>
 <p>In fact, <strong>symbolic graph</strong> doesn’t take tensors. It takes tensor symbols. The tensor symbol usage within the symbolic graph follows strict <em>static single assignment (SSA)</em> rule. It can only be used as a command instance’s output once. This is important because by following <em>SSA</em>, potential data races are completely eliminated. More over, certain processes and the actual tensor allocation algorithm are much easier to implement with this assumption. With <em>SSA</em> rule, the execution orders (dependencies) can be generated trivially.</p>
 <p>It may feel like the tensor metadata is over-specified. For example, why precision or layout, or which GPU it resides is relevant? Because tensor symbols have many to 1 mapping with the actual tensors. Specifications on the tensor symbol avoid processes on the <strong>symbolic graph</strong> resulting a tensor symbol that needs to be backed with conversions. Any conversions on the <strong>symbolic graph</strong> has to be explicit command instances.</p>
@@ -322,9 +322,9 @@
 <p>Processes can be carried out on the <strong>symbolic graph</strong> ranging from <em>automatic differentiation</em>, to <em>common sub-expression elimination</em> (CSE), or <em>operator fusion</em> (finer-grained set of commands be replaced by a combined command implementation).</p>
 <p>When the actual computation is needed. A <strong>symbolic graph</strong> can be compiled to a <strong>computation graph</strong>. The compilation process can involve optimizations that previously already possible on the given <strong>computation graph</strong> (such as CSE). More importantly, this step performs additional optimization passes that will violate the <em>SSA</em> rule above. Currently, it will perform following processes that are not available as pure optimization passes:</p>
 <ol class="arabic simple">
-<li>In-place safe command instance will operate on the same tensor symbol inputs / outputs whenever possible (for example, <code class="docutils literal notranslate"><span class="pre">1.23</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">y</span></code> will be re-written to <code class="docutils literal notranslate"><span class="pre">1.23</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">x</span></code> if no other places use <code class="docutils literal notranslate"><span class="pre">x</span></code>);</li>
-<li>Tensor allocation based on the liveness analysis for the tensor symbols. This step will generate the many to 1 mapping between tensor symbols with the actual tensors;</li>
-<li>Emit implicit commands for tensor initialization. Certain tensor symbols need to be initialized before use (zero init for now), which is impossible to know when until tensor allocation was taken place. This is one reason why there is no 1:1 mapping between <strong>symbolic graph</strong> and <strong>computation graph</strong>.</li>
+<li><p>In-place safe command instance will operate on the same tensor symbol inputs / outputs whenever possible (for example, <code class="docutils literal notranslate"><span class="pre">1.23</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">y</span></code> will be re-written to <code class="docutils literal notranslate"><span class="pre">1.23</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">=&gt;</span> <span class="pre">x</span></code> if no other places use <code class="docutils literal notranslate"><span class="pre">x</span></code>);</p></li>
+<li><p>Tensor allocation based on the liveness analysis for the tensor symbols. This step will generate the many to 1 mapping between tensor symbols with the actual tensors;</p></li>
+<li><p>Emit implicit commands for tensor initialization. Certain tensor symbols need to be initialized before use (zero init for now), which is impossible to know when until tensor allocation was taken place. This is one reason why there is no 1:1 mapping between <strong>symbolic graph</strong> and <strong>computation graph</strong>.</p></li>
 </ol>
 <p>All above steps are carried out recursively for its <em>``while`` / ``case..of`` type sub-graphs</em> too.</p>
 </div>
@@ -358,10 +358,10 @@
 <p>The <em>``while`` type sub-graph</em> is a special type of a <strong>symbolic graph</strong> or a <strong>computation graph</strong>. This is because it expresses a generic loop structure with custom evaluation function supplied.</p>
 <p>The loop execution within a <em>``while`` type sub-graph</em> looks like this:</p>
 <ol class="arabic simple">
-<li>The sub-graph starts the execution from a set of source command instances;</li>
-<li>It proceeds either serially or in parallel until all evaluation command instances executed. The subsequent command instances are on hold;</li>
-<li>The evaluation function is called, and depends on the result, the execution within the sub-graph will either abort (break), or continue, until all the destination command instances executed and reached;</li>
-<li>Once all destination command instances executed and reached, we will start from step 1. again.</li>
+<li><p>The sub-graph starts the execution from a set of source command instances;</p></li>
+<li><p>It proceeds either serially or in parallel until all evaluation command instances executed. The subsequent command instances are on hold;</p></li>
+<li><p>The evaluation function is called, and depends on the result, the execution within the sub-graph will either abort (break), or continue, until all the destination command instances executed and reached;</p></li>
+<li><p>Once all destination command instances executed and reached, we will start from step 1. again.</p></li>
 </ol>
 <p>For <em>``while`` type symbolic sub-graph</em>, the obvious question would be how <em>SSA</em> rule plays out in the loop structure. We allow in the sub-graph to specify certain output tensor symbols carry over to the input tensor symbols in the next round, practically made these input tensor symbols parameters. The <em>compilation</em> step will handle this properly and allocate the input tensors at the same memory locations as the output tensors (there are <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_multiview_t</span></code> workaround if the condition cannot be satisfied).</p>
 <p>When doing <em>automatic differentiation</em>, a <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_tape_t</span></code> need to be provided for the <em>``while`` type sub-graph</em> to record the outputs properly.</p>
@@ -371,9 +371,9 @@
 <p>The <em>``case..of`` type sub-graph</em> is another special type of a <strong>symbolic graph</strong> or a <strong>computation graph</strong>. It expresses a generic branch structure with custom evaluation function supplied.</p>
 <p>The <em>``case..of`` type sub-graph</em> contains several separate sub-graphs identified by indexes from 0 to n:</p>
 <ol class="arabic simple">
-<li>The evaluation function is called, if the result is &gt;= 0, a sub-graph is selected for execution, otherwise, jump to step 3.;</li>
-<li>The selected sub-graph executed from beginning to end;</li>
-<li>If the result is &lt; 0, no sub-graph executed.</li>
+<li><p>The evaluation function is called, if the result is &gt;= 0, a sub-graph is selected for execution, otherwise, jump to step 3.;</p></li>
+<li><p>The selected sub-graph executed from beginning to end;</p></li>
+<li><p>If the result is &lt; 0, no sub-graph executed.</p></li>
 </ol>
 <p>For <em>``case..of`` type symbolic sub-graph</em>, if a tensor symbol is <em>written-once</em>, how to proceed if all sub-graphs skipped (in typical case, if a sub-graph executed, presumably, the tensor you want will be written by a command in that sub-graph)? We allow you to specify for these output tensor symbols, which symbol from the input can be supplied as <em>replacement</em>. The <em>compilation</em> step will ensure a <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_multiview_t</span></code> is created to handle these cases.</p>
 <p>When doing <em>automatic differentiation</em>, a <code class="docutils literal notranslate"><span class="pre">ccv_nnc_tensor_tape_t</span></code> need to be provided for the <em>``case..of`` type sub-graph</em> to record the outputs properly.</p>
@@ -381,13 +381,13 @@
 <div class="section" id="limits-and-constraints">
 <h3>Limits and Constraints<a class="headerlink" href="#limits-and-constraints" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li>Tensor itself supports up to 8 dimensions. This is defined in <code class="docutils literal notranslate"><span class="pre">CCV_NNC_MAX_DIM_ALLOC</span></code>.</li>
-<li>Tensor’s dimension can only reach to up <code class="docutils literal notranslate"><span class="pre">INT_MAX</span></code>. That may be a limiting factor for some of the tensors if they need more than 8GiB (32-bit floating point assumed) on one dimension.</li>
-<li>The limit on number of inputs and output tensors is <code class="docutils literal notranslate"><span class="pre">INT_MAX</span></code>. To perform <em>automatic differentiation</em> properly, this number drops to <code class="docutils literal notranslate"><span class="pre">floor(INT_MAX</span> <span class="pre">/</span> <span class="pre">3)</span></code>. However, for more than 64 parameters, there are internal heap allocation required, which makes previously deterministic execution none-deterministic (it may take arbitrarily long depending on the <code class="docutils literal notranslate"><span class="pre">malloc</span></code> you use).</li>
-<li>The allocated tensor size can go up to <code class="docutils literal notranslate"><span class="pre">min(UINT64_MAX,</span> <span class="pre">SIZE_MAX)</span></code>.</li>
-<li>A computation can only depend on no more than <code class="docutils literal notranslate"><span class="pre">2^16</span></code> other computations. This is determined by a core macro <code class="docutils literal notranslate"><span class="pre">CCV_NNC_GRAPH_VISIT</span></code>.</li>
-<li>The sub-graph can go as deep as <code class="docutils literal notranslate"><span class="pre">2^(31</span> <span class="pre">-</span> <span class="pre">4)</span></code>, otherwise the outer-most while count tensor cannot be referenced by the inner-most sub-graph.</li>
-<li>The maximum number of GPU devices per machine or NUMA nodes per machine is 4095. This is defined in <code class="docutils literal notranslate"><span class="pre">CCV_COMPUTE_DEVICE_ANY</span></code>.</li>
+<li><p>Tensor itself supports up to 8 dimensions. This is defined in <code class="docutils literal notranslate"><span class="pre">CCV_NNC_MAX_DIM_ALLOC</span></code>.</p></li>
+<li><p>Tensor’s dimension can only reach to up <code class="docutils literal notranslate"><span class="pre">INT_MAX</span></code>. That may be a limiting factor for some of the tensors if they need more than 8GiB (32-bit floating point assumed) on one dimension.</p></li>
+<li><p>The limit on number of inputs and output tensors is <code class="docutils literal notranslate"><span class="pre">INT_MAX</span></code>. To perform <em>automatic differentiation</em> properly, this number drops to <code class="docutils literal notranslate"><span class="pre">floor(INT_MAX</span> <span class="pre">/</span> <span class="pre">3)</span></code>. However, for more than 64 parameters, there are internal heap allocation required, which makes previously deterministic execution none-deterministic (it may take arbitrarily long depending on the <code class="docutils literal notranslate"><span class="pre">malloc</span></code> you use).</p></li>
+<li><p>The allocated tensor size can go up to <code class="docutils literal notranslate"><span class="pre">min(UINT64_MAX,</span> <span class="pre">SIZE_MAX)</span></code>.</p></li>
+<li><p>A computation can only depend on no more than <code class="docutils literal notranslate"><span class="pre">2^16</span></code> other computations. This is determined by a core macro <code class="docutils literal notranslate"><span class="pre">CCV_NNC_GRAPH_VISIT</span></code>.</p></li>
+<li><p>The sub-graph can go as deep as <code class="docutils literal notranslate"><span class="pre">2^(31</span> <span class="pre">-</span> <span class="pre">4)</span></code>, otherwise the outer-most while count tensor cannot be referenced by the inner-most sub-graph.</p></li>
+<li><p>The maximum number of GPU devices per machine or NUMA nodes per machine is 4095. This is defined in <code class="docutils literal notranslate"><span class="pre">CCV_COMPUTE_DEVICE_ANY</span></code>.</p></li>
 </ol>
 </div>
 </div>
@@ -443,7 +443,7 @@
             VERSION:'a deep learning framework from ccv',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'',
+            FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };

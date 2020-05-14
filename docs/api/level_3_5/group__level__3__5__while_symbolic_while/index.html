@@ -130,7 +130,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#naming-the-variable">Naming The Variable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#tracing-the-operation">Tracing The Operation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#optimizations">Optimizations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#interoperability-not-ready">Interoperability (Not Ready)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#interoperability">Interoperability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#future-optimizations">Future Optimizations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-dy/#some-maybes">Some Maybes</a></li>
 </ul>
@@ -138,6 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../tech/nnc-cnnp/">NNC Common Neural Network Primitives</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-cnnp/#model">Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-cnnp/#model-io">Model IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../tech/nnc-cnnp/#fit-evaluate-backward-apply-gradients">Fit, Evaluate, Backward, Apply Gradients</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../tech/nnc-df/">NNC Dataframe</a><ul>
@@ -182,6 +183,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#gradient-based-optimization">Gradient-based Optimization</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#graph-simplification">Graph Simplification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#automatic-graph-parallelization">Automatic Graph Parallelization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#memory-compression">Memory Compression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-3.5/#while-loop-others">While Loop Others</a></li>
 </ul>
 </li>
@@ -195,6 +197,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#dataframe-api">Dataframe API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#dataframe-add-ons">Dataframe Add-ons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../level-5/#model-api">Model API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../level-5/#model-add-ons">Model Add-ons</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../convenience/">Convenience API</a></li>
@@ -288,11 +291,11 @@
 <p>In NNC, a computation graph cannot allow cycles. Thus, there is no flexible way to express loops.</p>
 <p>A little survey on this problem:</p>
 <ul class="simple">
-<li>Caffe2 supports specific type of recurrent neural network.</li>
-<li>TensorFlow as it stands, supports while construct. Its while construct is very straightforward, a body and a condition is provided, you can construct whatever graph as you want.</li>
-<li>mxnet supports recurrent neural network by unrolling it into normal none-looped graph.</li>
-<li>Theano supports “scan” ops, which is a terminable loop (with loop variant, known as sequence).</li>
-<li>CNTK supports this with custom BrainScript. Within BrainScript, you can access the previous state in a function, therefore, effectively supports calling a method multiple times (looping over).</li>
+<li><p>Caffe2 supports specific type of recurrent neural network.</p></li>
+<li><p>TensorFlow as it stands, supports while construct. Its while construct is very straightforward, a body and a condition is provided, you can construct whatever graph as you want.</p></li>
+<li><p>mxnet supports recurrent neural network by unrolling it into normal none-looped graph.</p></li>
+<li><p>Theano supports “scan” ops, which is a terminable loop (with loop variant, known as sequence).</p></li>
+<li><p>CNTK supports this with custom BrainScript. Within BrainScript, you can access the previous state in a function, therefore, effectively supports calling a method multiple times (looping over).</p></li>
 </ul>
 <p>Of above, Caffe2 and mxnet gave up on supporting generic loop for performance reasons. TensorFlow supports generic while loop, with all the trouble it may introduce (see the Nested while loop bug in TensorFlow that recently fixed). Theano picked a point seems pretty sweet, although there are limitations. CNTK’s BrainScript is a DSL, they can do whatever they want with the drawback now that they need to implement a language runtime. TensorFlow, Theano and CNTK all support auto-differentiation over the while loop with tape (Wengert list).</p>
 <p>A simple way to support loop is to support conditional jump. In fact, conditional jump is a more generic way of doing loops. However, if you put this into the consideration that fully differentiable computation graph wanna to be supported, it is terrible. With conditional jump, it is really hard for you to know which tensor is used where, thus keep track for reverse accumulation (backward propagation). There is no counter or whatsoever, it is pretty hard to trace back on which line is executed how many times. Compounding this with NNC’s promise that as long as it shows on the graph can be “parallel” computed, it will be parallel computed, it is close to impossible to track if conditional jump used in its raw form. Certain restrictions must be applied to how to do the loop. The compromise comes from closer examination of NNC’s preferences.</p>
@@ -309,9 +312,9 @@
 <p>This function will replace the nodes that it affects to one sub-graph node. Thus, how to drive this sub-graph is opaque. Its backward form is opaque as well.</p>
 <p>There are no connection between its nodes and the outside graph nodes other than the three sets:</p>
 <ol class="arabic simple">
-<li>Incoming nodes, the set of nodes that contains the incoming edges from outside, they cannot have edges points by inside nodes. The sub-graph computation starts from these incoming nodes;</li>
-<li>Condition false output nodes, when condition is false, we will break out of this while loop, these nodes pointing to the outside nodes, but no inside nodes;</li>
-<li>End nodes, the set of nodes that marks the end of the while body, and after these nodes are executed, we will return to the incoming nodes. These end nodes shouldn’t have any edges pointing to inside nodes (OK if end nodes are condition true output nodes as well);</li>
+<li><p>Incoming nodes, the set of nodes that contains the incoming edges from outside, they cannot have edges points by inside nodes. The sub-graph computation starts from these incoming nodes;</p></li>
+<li><p>Condition false output nodes, when condition is false, we will break out of this while loop, these nodes pointing to the outside nodes, but no inside nodes;</p></li>
+<li><p>End nodes, the set of nodes that marks the end of the while body, and after these nodes are executed, we will return to the incoming nodes. These end nodes shouldn’t have any edges pointing to inside nodes (OK if end nodes are condition true output nodes as well);</p></li>
 </ol>
 <p>Since these will become a sub-graph (which, to its owner graph, just simple “node”), it will have inputs and outputs. Besides that, the loop body needs to be parameterized to be SSA compliant (see: <a class="reference external" href="https://www.cs.cmu.edu/~fp/courses/15411-f13/lectures/06-ssa.pdf">https://www.cs.cmu.edu/~fp/courses/15411-f13/lectures/06-ssa.pdf</a>). Thus, a list of body parameters need to be provided.</p>
 </div>
@@ -366,7 +369,7 @@
             VERSION:'a deep learning framework from ccv',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'',
+            FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };

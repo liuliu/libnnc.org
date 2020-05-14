@@ -289,8 +289,8 @@
 <p>If <strong>dynamic graph execution</strong> is just about executing a command when issuing it, this is not interesting. <strong>Dynamic graph execution</strong> by these frameworks also supports <em>automatic differentiation</em>. A good <strong>dynamic graph execution</strong> framework such as <strong>PyTorch</strong> enables easier debugging, more intuitive coding thus quicker experimentation cycle.</p>
 <p>That has been said, there are a few drawbacks when you support <strong>dynamic graph execution</strong> naively.</p>
 <ol class="arabic simple">
-<li>Limited optimization opportunities. With <strong>dynamic graph execution</strong>, the framework lacks the foresight, makes optimizations such as <em>common sub-expression elimination</em> or <em>data layout optimization</em> hard to implement;</li>
-<li>Unbounded memory usage. Since a <strong>dynamic graph execution</strong> engine needs to be able to differentiate arbitrary variables within the framework, a Wengert list (a tape) has to be kept. In many situations, to trim that list requires user attention otherwise the memory usage will continue to grow.</li>
+<li><p>Limited optimization opportunities. With <strong>dynamic graph execution</strong>, the framework lacks the foresight, makes optimizations such as <em>common sub-expression elimination</em> or <em>data layout optimization</em> hard to implement;</p></li>
+<li><p>Unbounded memory usage. Since a <strong>dynamic graph execution</strong> engine needs to be able to differentiate arbitrary variables within the framework, a Wengert list (a tape) has to be kept. In many situations, to trim that list requires user attention otherwise the memory usage will continue to grow.</p></li>
 </ol>
 <p>To work-around 1., mixing <strong>static graph execution</strong> with <strong>dynamic graph execution</strong> is desirable. However, that imposes its own set of problems: when a <strong>static graph</strong> contains a <strong>dynamic graph</strong>, and if the <strong>static graph</strong> contains a loop structure, the tape for the <strong>static graph</strong> need to cross into the <strong>dynamic graph</strong> to continue work. When a <strong>dynamic graph</strong> contains a <strong>static graph</strong>, the Wengert list (the tape) of the <strong>dynamic graph</strong> need to not only store the tensors, but also the <strong>static graph</strong> as a whole.</p>
 <p>NNC’s <strong>dynamic graph execution</strong> design will attempt to address above problems with reasonable compromises. It borrows some good ideas from 10 years ago when I first started to implement ccv.</p>
@@ -376,7 +376,7 @@
             VERSION:'a deep learning framework from ccv',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'',
+            FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };

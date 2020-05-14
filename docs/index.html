@@ -290,21 +290,21 @@
 <p>There are some unique interesting bits:</p>
 <blockquote>
 <div><ul class="simple">
-<li>NNC supports control flows, with a very specific while loop construct and multi-way branch construct;</li>
-<li>NNC implements a sophisticated <a class="reference internal" href="tech/nnc-alloc/"><span class="doc">tensor allocation algorithm</span></a> that treats tensors as a region of memory, which enables tensor partial reuse;</li>
-<li>The above allocation algorithm handles control flows, eliminates data transfers for while loop, and minimizes data transfers for branching;</li>
-<li><a class="reference internal" href="tech/nnc-dy/"><span class="doc">Dynamic execution</span></a> in NNC is implemented on top of its static graph counterpart, thus, all optimization passes available for static graph can be applied when doing automatic differentiation in the dynamic execution mode;</li>
-<li>Because the dataflow graph is fully specified, it can be <a class="reference internal" href="tech/nnc-schd/"><span class="doc">statically scheduled</span></a> to execute in parallel on the hardware trivially, with all the control flows in place;</li>
-<li>A <a class="reference external" href="https://keras.io">Keras</a>-like interface is implemented, making high-level deep learning concepts accessible through C;</li>
-<li>Clear and concise <a class="reference internal" href="api/"><span class="doc">C interface</span></a> enables integrations beyond Python for full-range of deep learning framework functionalities.</li>
+<li><p>NNC supports control flows, with a very specific while loop construct and multi-way branch construct;</p></li>
+<li><p>NNC implements a sophisticated <a class="reference internal" href="tech/nnc-alloc/"><span class="doc">tensor allocation algorithm</span></a> that treats tensors as a region of memory, which enables tensor partial reuse;</p></li>
+<li><p>The above allocation algorithm handles control flows, eliminates data transfers for while loop, and minimizes data transfers for branching;</p></li>
+<li><p><a class="reference internal" href="tech/nnc-dy/"><span class="doc">Dynamic execution</span></a> in NNC is implemented on top of its static graph counterpart, thus, all optimization passes available for static graph can be applied when doing automatic differentiation in the dynamic execution mode;</p></li>
+<li><p>Because the dataflow graph is fully specified, it can be <a class="reference internal" href="tech/nnc-schd/"><span class="doc">statically scheduled</span></a> to execute in parallel on the hardware trivially, with all the control flows in place;</p></li>
+<li><p>A <a class="reference external" href="https://keras.io">Keras</a>-like interface is implemented, making high-level deep learning concepts accessible through C;</p></li>
+<li><p>Clear and concise <a class="reference internal" href="api/"><span class="doc">C interface</span></a> enables integrations beyond Python for full-range of deep learning framework functionalities.</p></li>
 </ul>
 </div></blockquote>
 <p>Over the next a few months, I will write more about this. There are still tremendous amount of work ahead for me to get to a point of release.</p>
 <blockquote>
 <div><ul class="simple">
-<li><a class="reference internal" href="overview/"><span class="doc">Overview</span></a></li>
-<li><a class="reference internal" href="tech/"><span class="doc">Technicals</span></a></li>
-<li><a class="reference internal" href="api/"><span class="doc">API Reference</span></a></li>
+<li><p><a class="reference internal" href="overview/"><span class="doc">Overview</span></a></p></li>
+<li><p><a class="reference internal" href="tech/"><span class="doc">Technicals</span></a></p></li>
+<li><p><a class="reference internal" href="api/"><span class="doc">API Reference</span></a></p></li>
 </ul>
 </div></blockquote>
 </div>
@@ -357,7 +357,7 @@
             VERSION:'a deep learning framework from ccv',
             LANGUAGE:'None',
             COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'',
+            FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
