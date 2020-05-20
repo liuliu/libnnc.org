@@ -369,14 +369,14 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv423ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki">
-<span id="_CPPv323ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="_CPPv223ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_nnc_tensor_view_new__ccv_nnc_tensor_tCPC.iCA.iCA.iCA"></span><span class="target" id="group__level__1__tensor_1ga3a70fe427da27e06ea556a111f537c92"></span><code class="sig-name descname">ccv_nnc_tensor_view_new</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, <em class="property">const</em> int <em>dim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv423ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki">
+<span id="_CPPv323ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="_CPPv223ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_tACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_nnc_tensor_view_new__ccv_nnc_tensor_tCPC.ccv_nnc_tensor_param_tC.iCA.iCA"></span><span class="target" id="group__level__1__tensor_1gaf96a1134cc1c67bfa74ac1ea33b1644a"></span><code class="sig-name descname">ccv_nnc_tensor_view_new</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em>, <em class="property">const</em> int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423ccv_nnc_tensor_view_newPCK16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a tensor view. A tensor view can be non-continuous. Essentially, it provides a view into a tensor. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The newly created tensor view. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that we want to view into. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dim</span></code>: The new dimension of the tensor view. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code>: The tensor parameters for the tensor view. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ofs</span></code>: The offset on each of the dimension. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">inc</span></code>: The line size of each dimension. </p></li>
 </ul>
@@ -386,14 +386,14 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv419ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki">
-<span id="_CPPv319ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="_CPPv219ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_nnc_tensor_view__ccv_nnc_tensor_tCPC.iCA.iCA.iCA"></span><span class="target" id="group__level__1__tensor_1ga467a8f110e12e2ff923f9ce8353bd20c"></span><code class="sig-name descname">ccv_nnc_tensor_view</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, <em class="property">const</em> int <em>dim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv419ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki">
+<span id="_CPPv319ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="_CPPv219ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_tACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_Ki"></span><span id="ccv_nnc_tensor_view__ccv_nnc_tensor_tCPC.ccv_nnc_tensor_param_tC.iCA.iCA"></span><span class="target" id="group__level__1__tensor_1ga37be15afbde3b3de75b0b2a93932f623"></span><code class="sig-name descname">ccv_nnc_tensor_view</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, <em class="property">const</em> ccv_nnc_tensor_param_t <em>params</em>, <em class="property">const</em> int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>]<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_tensor_viewPCK16ccv_nnc_tensor_tK22ccv_nnc_tensor_param_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_Ki" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a tensor view on stack. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The tensor view struct. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that we want to view into. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dim</span></code>: The new dimension of the tensor view. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code>: The tensor parameters for the tensor view. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ofs</span></code>: The offset on each of the dimension. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">inc</span></code>: The line size of each dimension. </p></li>
 </ul>
