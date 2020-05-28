@@ -517,13 +517,14 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv439ccv_nnc_dynamic_graph_bookkeeping_countPCK23ccv_nnc_dynamic_graph_t">
-<span id="_CPPv339ccv_nnc_dynamic_graph_bookkeeping_countPCK23ccv_nnc_dynamic_graph_t"></span><span id="_CPPv239ccv_nnc_dynamic_graph_bookkeeping_countPCK23ccv_nnc_dynamic_graph_t"></span><span id="ccv_nnc_dynamic_graph_bookkeeping_count__ccv_nnc_dynamic_graph_tCPC"></span><span class="target" id="group__level__4_1gaafb483339116f5e81bacc248e7ff26c2"></span><code class="sig-name descname">ccv_nnc_dynamic_graph_bookkeeping_count</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv439ccv_nnc_dynamic_graph_bookkeeping_countPCK23ccv_nnc_dynamic_graph_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv439ccv_nnc_dynamic_graph_bookkeeping_countPCK23ccv_nnc_dynamic_graph_tKi">
+<span id="_CPPv339ccv_nnc_dynamic_graph_bookkeeping_countPCK23ccv_nnc_dynamic_graph_tKi"></span><span id="_CPPv239ccv_nnc_dynamic_graph_bookkeeping_countPCK23ccv_nnc_dynamic_graph_tKi"></span><span id="ccv_nnc_dynamic_graph_bookkeeping_count__ccv_nnc_dynamic_graph_tCPC.iC"></span><span class="target" id="group__level__4_1ga0c4bab86cc5ee1645a190dbd572e29d0"></span><code class="sig-name descname">ccv_nnc_dynamic_graph_bookkeeping_count</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> int <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv439ccv_nnc_dynamic_graph_bookkeeping_countPCK23ccv_nnc_dynamic_graph_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Count how many ops we kept for gradient computation purpose. This method is useful when we want to assert at end of some train loop, we shouldn’t have any gradient computation left. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>How many gradient computations we kept. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The dynamic graph. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code>: The type of variables to trace. CCV_NNC_SYMBOL_TENSOR / CCV_NNC_SYMBOL_GRAPH_EXEC </p></li>
 </ul>
 </dd>
 </dl>
