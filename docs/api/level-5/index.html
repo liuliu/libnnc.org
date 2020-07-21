@@ -958,16 +958,7 @@
 <dl class="cpp enum">
 <dt id="_CPPv4Ut3_104">
 <span id="_CPPv3Ut3_104"></span><span class="target" id="group__level__5__model_1ga10e74d65d7876276a8f6061c71dcf469"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_104" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>This method exposes parameter for a model out as a potential input for another model. Since it is a ccv_cnnp_model_io_t, it can also be used by other methods. <dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: A model that we can extract parameters out. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code>: The selector for a parameter. ALL_PARAMETERS means all parameters, or you can select CCV_CNNP_PARAMETER_SELECT_WEIGHT or CCV_CNNP_PARAMETER_SELECT_BIAS. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index into a parameter. ALL_PARAMETERS means all parameters. </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-<p><em>Values:</em></p>
+<dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4NUt3_10432CCV_CNNP_PARAMETER_SELECT_WEIGHTE">
 <span id="_CPPv3NUt3_10432CCV_CNNP_PARAMETER_SELECT_WEIGHTE"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469ad44990255018b1e118e60026f6e5f4df"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_PARAMETER_SELECT_WEIGHT</code> = 0<a class="headerlink" href="#_CPPv4NUt3_10432CCV_CNNP_PARAMETER_SELECT_WEIGHTE" title="Permalink to this definition">¶</a><br /></dt>
@@ -1067,7 +1058,16 @@
 <dl class="cpp function">
 <dt id="_CPPv425ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi">
 <span id="_CPPv325ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi"></span><span id="_CPPv225ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi"></span><span id="ccv_cnnp_model_parameters__ccv_cnnp_model_tPC.iC.iC"></span><span class="target" id="group__level__5__model_1ga879740dc8d3d0616094853f0499d2c50"></span><code class="sig-name descname">ccv_cnnp_model_parameters</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>selector</em>, <em class="property">const</em> int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>This method exposes parameter for a model out as a potential input for another model. Since it is a ccv_cnnp_model_io_t, it can also be used by other methods. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: A model that we can extract parameters out. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code>: The selector for a parameter. ALL_PARAMETERS means all parameters, or you can select CCV_CNNP_PARAMETER_SELECT_WEIGHT or CCV_CNNP_PARAMETER_SELECT_BIAS. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index</span></code>: The index into a parameter. ALL_PARAMETERS means all parameters. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="cpp function">
 <dt id="_CPPv418ccv_cnnp_model_newPCK19ccv_cnnp_model_io_tKiPCK19ccv_cnnp_model_io_tKiPCKc">
@@ -1351,6 +1351,21 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code>: The parameter that is used to specify which parameter to override. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that receives value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv429ccv_cnnp_model_set_parametersPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t">
+<span id="_CPPv329ccv_cnnp_model_set_parametersPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t"></span><span id="_CPPv229ccv_cnnp_model_set_parametersPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t"></span><span id="ccv_cnnp_model_set_parameters__ccv_cnnp_model_tPC.ccv_cnnp_model_io_tC.ccv_cnnp_model_tCPC.ccv_cnnp_model_io_tC"></span><span class="target" id="group__level__5__model_1ga267bcec93bf7c6d74d58778e1c343baf"></span>void <code class="sig-name descname">ccv_cnnp_model_set_parameters</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>parameters</em>, <em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>from_model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>from_parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_model_set_parametersPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set parameters from another model. This will override whatever values in these parameters. The given parameters from another model should match the dimension of the parameter. It doesn’t matter whether the given tensor is on CPU or GPU. This method can only set when both models are compiled. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model to be set on parameters. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code>: The parameters to be override. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_model</span></code>: The model to copy parameters from. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_parameters</span></code>: The parameters to be copied from. </p></li>
 </ul>
 </dd>
 </dl>
