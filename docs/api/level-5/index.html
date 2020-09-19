@@ -303,7 +303,8 @@
 <dl class="cpp type">
 <dt id="_CPPv429ccv_cnnp_column_data_deinit_f">
 <span id="_CPPv329ccv_cnnp_column_data_deinit_f"></span><span id="_CPPv229ccv_cnnp_column_data_deinit_f"></span><span id="ccv_cnnp_column_data_deinit_f"></span><span class="target" id="group__level__5__dataframe_1ga5db78d50a084d41e15f59704186157d0"></span><em class="property">typedef </em>void (*<code class="sig-name descname">ccv_cnnp_column_data_deinit_f</code>)<span class="sig-paren">(</span>void *<em class="property">const</em> data, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_column_data_deinit_f" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A destructor for data. </p>
+<dd><p>A data enumeration block to supply data for given row indexes.</p>
+<p>A destructor for data. </p>
 </dd></dl>
 
 <dl class="cpp type">
@@ -372,7 +373,8 @@
 <dl class="cpp function">
 <dt id="_CPPv422ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv37ccv_cnnp_column_data_context_deinit_f">
 <span id="_CPPv322ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv37ccv_cnnp_column_data_context_deinit_f"></span><span id="_CPPv222ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv37ccv_cnnp_column_data_context_deinit_f"></span><span id="ccv_cnnp_dataframe_map__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_map_f.iC.ccv_cnnp_column_data_deinit_f.iCPC.iC.voidPC.ccv_cnnp_column_data_context_deinit_f"></span><span class="target" id="group__level__5__dataframe_1ga6fdcb408dca7fdfaf99ca975fb169c1a"></span><code class="sig-name descname">ccv_cnnp_dataframe_map</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv426ccv_cnnp_column_data_map_f" title="ccv_cnnp_column_data_map_f">ccv_cnnp_column_data_map_f</a> <em>map</em>, <em class="property">const</em> int <em>stream_type</em>, <a class="reference internal" href="#_CPPv429ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>data_deinit</em>, <em class="property">const</em> int *<em class="property">const</em> <em>column_idxs</em>, <em class="property">const</em> int <em>column_idx_size</em>, void *<em class="property">const</em> <em>context</em>, <a class="reference internal" href="#_CPPv437ccv_cnnp_column_data_context_deinit_f" title="ccv_cnnp_column_data_context_deinit_f">ccv_cnnp_column_data_context_deinit_f</a> <em>context_deinit</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv37ccv_cnnp_column_data_context_deinit_f" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Derive a new column out of existing columns in the dataframe. <dl class="simple">
+<dd><p>A map block that takes the data from multiple columns and derive new data out of it.</p>
+<p>Derive a new column out of existing columns in the dataframe. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The new column index. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -419,7 +421,8 @@
 <dl class="cpp function">
 <dt id="_CPPv429ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_reduce_f29ccv_cnnp_column_data_deinit_fKiKiPCv37ccv_cnnp_column_data_context_deinit_f">
 <span id="_CPPv329ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_reduce_f29ccv_cnnp_column_data_deinit_fKiKiPCv37ccv_cnnp_column_data_context_deinit_f"></span><span id="_CPPv229ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_reduce_f29ccv_cnnp_column_data_deinit_fKiKiPCv37ccv_cnnp_column_data_context_deinit_f"></span><span id="ccv_cnnp_dataframe_reduce_new__ccv_cnnp_dataframe_tPC.ccv_cnnp_column_data_reduce_f.ccv_cnnp_column_data_deinit_f.iC.iC.voidPC.ccv_cnnp_column_data_context_deinit_f"></span><span class="target" id="group__level__5__dataframe_1ga4f3890623928cfcb0a767867c2b96519"></span><code class="sig-name descname">ccv_cnnp_dataframe_reduce_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420ccv_cnnp_dataframe_t" title="ccv_cnnp_dataframe_t">ccv_cnnp_dataframe_t</a> *<em class="property">const</em> <em>dataframe</em>, <a class="reference internal" href="#_CPPv429ccv_cnnp_column_data_reduce_f" title="ccv_cnnp_column_data_reduce_f">ccv_cnnp_column_data_reduce_f</a> <em>reduce</em>, <a class="reference internal" href="#_CPPv429ccv_cnnp_column_data_deinit_f" title="ccv_cnnp_column_data_deinit_f">ccv_cnnp_column_data_deinit_f</a> <em>data_deinit</em>, <em class="property">const</em> int <em>column_idx</em>, <em class="property">const</em> int <em>batch_size</em>, void *<em class="property">const</em> <em>context</em>, <a class="reference internal" href="#_CPPv437ccv_cnnp_column_data_context_deinit_f" title="ccv_cnnp_column_data_context_deinit_f">ccv_cnnp_column_data_context_deinit_f</a> <em>context_deinit</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_dataframe_reduce_newPC20ccv_cnnp_dataframe_t29ccv_cnnp_column_data_reduce_f29ccv_cnnp_column_data_deinit_fKiKiPCv37ccv_cnnp_column_data_context_deinit_f" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Reduce a dataframe by batch size. Thus, n rows are reduced to 1 row per reduce function on one specific column. This will also reduce the multi-column dataframe down to 1 column by selecting the one column to reduce. <dl class="simple">
+<dd><p>A reduce block that takes multiple rows of one column, and reduce to one row.</p>
+<p>Reduce a dataframe by batch size. Thus, n rows are reduced to 1 row per reduce function on one specific column. This will also reduce the multi-column dataframe down to 1 column by selecting the one column to reduce. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The reduced dataframe. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -613,6 +616,12 @@
 <dt id="_CPPv4N22ccv_cnnp_column_data_t11stream_typeE">
 <span id="_CPPv3N22ccv_cnnp_column_data_t11stream_typeE"></span><span id="_CPPv2N22ccv_cnnp_column_data_t11stream_typeE"></span><span id="ccv_cnnp_column_data_t::stream_type__i"></span><span class="target" id="structccv__cnnp__column__data__t_1a11726fbfcbdc177200249b189d62ba6f"></span>int <code class="sig-name descname">stream_type</code><a class="headerlink" href="#_CPPv4N22ccv_cnnp_column_data_t11stream_typeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The type of stream context for this column. Each column only compatible with one stream type. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N22ccv_cnnp_column_data_t10block_typeE">
+<span id="_CPPv3N22ccv_cnnp_column_data_t10block_typeE"></span><span id="_CPPv2N22ccv_cnnp_column_data_t10block_typeE"></span><span id="ccv_cnnp_column_data_t::block_type__i"></span><span class="target" id="structccv__cnnp__column__data__t_1a3470893b520267e592959e24e782cce5"></span>int <code class="sig-name descname">block_type</code><a class="headerlink" href="#_CPPv4N22ccv_cnnp_column_data_t10block_typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The type of the supplied data_enum block. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -956,58 +965,58 @@
 <div class="section" id="model-api">
 <h2>Model API<a class="headerlink" href="#model-api" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_104">
-<span id="_CPPv3Ut3_104"></span><span class="target" id="group__level__5__model_1ga10e74d65d7876276a8f6061c71dcf469"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_104" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_110">
+<span id="_CPPv3Ut3_110"></span><span class="target" id="group__level__5__model_1ga1b7b7893d940926615b39239ac05829d"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_110" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10432CCV_CNNP_PARAMETER_SELECT_WEIGHTE">
-<span id="_CPPv3NUt3_10432CCV_CNNP_PARAMETER_SELECT_WEIGHTE"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469ad44990255018b1e118e60026f6e5f4df"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_PARAMETER_SELECT_WEIGHT</code> = 0<a class="headerlink" href="#_CPPv4NUt3_10432CCV_CNNP_PARAMETER_SELECT_WEIGHTE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11032CCV_CNNP_PARAMETER_SELECT_WEIGHTE">
+<span id="_CPPv3NUt3_11032CCV_CNNP_PARAMETER_SELECT_WEIGHTE"></span><span class="target" id="group__level__5__model_1gga1b7b7893d940926615b39239ac05829dad44990255018b1e118e60026f6e5f4df"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_PARAMETER_SELECT_WEIGHT</code> = 0<a class="headerlink" href="#_CPPv4NUt3_11032CCV_CNNP_PARAMETER_SELECT_WEIGHTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10430CCV_CNNP_PARAMETER_SELECT_BIASE">
-<span id="_CPPv3NUt3_10430CCV_CNNP_PARAMETER_SELECT_BIASE"></span><span class="target" id="group__level__5__model_1gga10e74d65d7876276a8f6061c71dcf469af63d2a7f14f6f3bd040227a537a579f7"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_PARAMETER_SELECT_BIAS</code> = 1<a class="headerlink" href="#_CPPv4NUt3_10430CCV_CNNP_PARAMETER_SELECT_BIASE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11030CCV_CNNP_PARAMETER_SELECT_BIASE">
+<span id="_CPPv3NUt3_11030CCV_CNNP_PARAMETER_SELECT_BIASE"></span><span class="target" id="group__level__5__model_1gga1b7b7893d940926615b39239ac05829daf63d2a7f14f6f3bd040227a537a579f7"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_PARAMETER_SELECT_BIAS</code> = 1<a class="headerlink" href="#_CPPv4NUt3_11030CCV_CNNP_PARAMETER_SELECT_BIASE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_105">
-<span id="_CPPv3Ut3_105"></span><span class="target" id="group__level__5__model_1ga1f3b6c692395e5007ff47ce5d9304c1c"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_105" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_111">
+<span id="_CPPv3Ut3_111"></span><span class="target" id="group__level__5__model_1ga098384b0034af0daa7c9c5c82b563567"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_111" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10529CCV_CNNP_DISABLE_OUTGRAD_NONEE">
-<span id="_CPPv3NUt3_10529CCV_CNNP_DISABLE_OUTGRAD_NONEE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1cab794bfd10b61dd7151223b583ca0cfbb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_DISABLE_OUTGRAD_NONE</code> = (uint64_t)0<a class="headerlink" href="#_CPPv4NUt3_10529CCV_CNNP_DISABLE_OUTGRAD_NONEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11129CCV_CNNP_DISABLE_OUTGRAD_NONEE">
+<span id="_CPPv3NUt3_11129CCV_CNNP_DISABLE_OUTGRAD_NONEE"></span><span class="target" id="group__level__5__model_1gga098384b0034af0daa7c9c5c82b563567ab794bfd10b61dd7151223b583ca0cfbb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_DISABLE_OUTGRAD_NONE</code> = (uint64_t)0<a class="headerlink" href="#_CPPv4NUt3_11129CCV_CNNP_DISABLE_OUTGRAD_NONEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Don’t disable any outgrad. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10528CCV_CNNP_DISABLE_OUTGRAD_ALLE">
-<span id="_CPPv3NUt3_10528CCV_CNNP_DISABLE_OUTGRAD_ALLE"></span><span class="target" id="group__level__5__model_1gga1f3b6c692395e5007ff47ce5d9304c1caa73128967f27ebe358d4b4880cbaf458"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_DISABLE_OUTGRAD_ALL</code> = (uint64_t)(int64_t)-1<a class="headerlink" href="#_CPPv4NUt3_10528CCV_CNNP_DISABLE_OUTGRAD_ALLE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11128CCV_CNNP_DISABLE_OUTGRAD_ALLE">
+<span id="_CPPv3NUt3_11128CCV_CNNP_DISABLE_OUTGRAD_ALLE"></span><span class="target" id="group__level__5__model_1gga098384b0034af0daa7c9c5c82b563567aa73128967f27ebe358d4b4880cbaf458"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_DISABLE_OUTGRAD_ALL</code> = (uint64_t)(int64_t)-1<a class="headerlink" href="#_CPPv4NUt3_11128CCV_CNNP_DISABLE_OUTGRAD_ALLE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Disable all inputs’ outgrads. </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_106">
-<span id="_CPPv3Ut3_106"></span><span class="target" id="group__level__5__model_1ga0ae1e3bf78c960c83e2d437efd802058"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_106" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_112">
+<span id="_CPPv3Ut3_112"></span><span class="target" id="group__level__5__model_1ga92c4bd66c8074c3d126a069275a0a80c"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_112" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10636CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE">
-<span id="_CPPv3NUt3_10636CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058a8611ffeaa0db7b1d6ebeb3bd931d2e17"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE</code><a class="headerlink" href="#_CPPv4NUt3_10636CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11236CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE">
+<span id="_CPPv3NUt3_11236CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE"></span><span class="target" id="group__level__5__model_1gga92c4bd66c8074c3d126a069275a0a80ca8611ffeaa0db7b1d6ebeb3bd931d2e17"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_MODEL_CHECKPOINT_READ_WRITE</code><a class="headerlink" href="#_CPPv4NUt3_11236CCV_CNNP_MODEL_CHECKPOINT_READ_WRITEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This is the default flag, if the model is not initialized, will attempt to read from the disk. Otherwise, will persist existing parameters to disk. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10635CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE">
-<span id="_CPPv3NUt3_10635CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058a9b371ebc4c047fb6bef78e16c0f34359"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_MODEL_CHECKPOINT_READ_ONLY</code><a class="headerlink" href="#_CPPv4NUt3_10635CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11235CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE">
+<span id="_CPPv3NUt3_11235CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE"></span><span class="target" id="group__level__5__model_1gga92c4bd66c8074c3d126a069275a0a80ca9b371ebc4c047fb6bef78e16c0f34359"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_MODEL_CHECKPOINT_READ_ONLY</code><a class="headerlink" href="#_CPPv4NUt3_11235CCV_CNNP_MODEL_CHECKPOINT_READ_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Only read parameters out of disk, even it is already initialized. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10636CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE">
-<span id="_CPPv3NUt3_10636CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span class="target" id="group__level__5__model_1gga0ae1e3bf78c960c83e2d437efd802058af62171f6c646550adbf616eb6f162c53"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY</code><a class="headerlink" href="#_CPPv4NUt3_10636CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11236CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE">
+<span id="_CPPv3NUt3_11236CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE"></span><span class="target" id="group__level__5__model_1gga92c4bd66c8074c3d126a069275a0a80caf62171f6c646550adbf616eb6f162c53"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLY</code><a class="headerlink" href="#_CPPv4NUt3_11236CCV_CNNP_MODEL_CHECKPOINT_WRITE_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Only write parameters to disk. </p>
 </dd></dl>
 
@@ -1155,6 +1164,20 @@
 <span id="_CPPv319ccv_cnnp_model_copyPCK16ccv_cnnp_model_t"></span><span id="_CPPv219ccv_cnnp_model_copyPCK16ccv_cnnp_model_t"></span><span id="ccv_cnnp_model_copy__ccv_cnnp_model_tCPC"></span><span class="target" id="group__level__5__model_1ga887ed33b70f3213ecf5a8740525f4a02"></span><code class="sig-name descname">ccv_cnnp_model_copy</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_model_copyPCK16ccv_cnnp_model_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a copy of an existing model. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The new model that is exactly the same copy of the old one. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The existing model. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv426ccv_cnnp_model_output_sizePCK16ccv_cnnp_model_t">
+<span id="_CPPv326ccv_cnnp_model_output_sizePCK16ccv_cnnp_model_t"></span><span id="_CPPv226ccv_cnnp_model_output_sizePCK16ccv_cnnp_model_t"></span><span id="ccv_cnnp_model_output_size__ccv_cnnp_model_tCPC"></span><span class="target" id="group__level__5__model_1gaa5d96891d1a1d406e2536175e75cb62c"></span><code class="sig-name descname">ccv_cnnp_model_output_size</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ccv_cnnp_model_output_sizePCK16ccv_cnnp_model_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the output size of the model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The output size of the model. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The existing model. </p></li>
@@ -1472,36 +1495,36 @@
 <div class="section" id="model-add-ons">
 <h2>Model Add-ons<a class="headerlink" href="#model-add-ons" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_107">
-<span id="_CPPv3Ut3_107"></span><span class="target" id="group__level__5__model__add__ons_1ga01aea4eb01aa6415eee118b5a5ee3dad"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_107" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_113">
+<span id="_CPPv3Ut3_113"></span><span class="target" id="group__level__5__model__add__ons_1ga2ee507fea44084259042ff7bb45ecabf"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_113" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10711CCV_CNNP_IOE">
-<span id="_CPPv3NUt3_10711CCV_CNNP_IOE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada40070937b4589dc10c1872cbe9494f13"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_IO</code><a class="headerlink" href="#_CPPv4NUt3_10711CCV_CNNP_IOE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11311CCV_CNNP_IOE">
+<span id="_CPPv3NUt3_11311CCV_CNNP_IOE"></span><span class="target" id="group__level__5__model__add__ons_1gga2ee507fea44084259042ff7bb45ecabfa40070937b4589dc10c1872cbe9494f13"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_IO</code><a class="headerlink" href="#_CPPv4NUt3_11311CCV_CNNP_IOE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a ccv_cnnp_io_t. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10718CCV_CNNP_NO_TENSORE">
-<span id="_CPPv3NUt3_10718CCV_CNNP_NO_TENSORE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada65c36f202728324331c751665f7b0801"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_NO_TENSOR</code><a class="headerlink" href="#_CPPv4NUt3_10718CCV_CNNP_NO_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11318CCV_CNNP_NO_TENSORE">
+<span id="_CPPv3NUt3_11318CCV_CNNP_NO_TENSORE"></span><span class="target" id="group__level__5__model__add__ons_1gga2ee507fea44084259042ff7bb45ecabfa65c36f202728324331c751665f7b0801"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_NO_TENSOR</code><a class="headerlink" href="#_CPPv4NUt3_11318CCV_CNNP_NO_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is not used. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10726CCV_CNNP_TENSOR_NOT_OUTPUTE">
-<span id="_CPPv3NUt3_10726CCV_CNNP_TENSOR_NOT_OUTPUTE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada81c5f637a4b2ed0f7be8d035028cb4ab"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_TENSOR_NOT_OUTPUT</code><a class="headerlink" href="#_CPPv4NUt3_10726CCV_CNNP_TENSOR_NOT_OUTPUTE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11326CCV_CNNP_TENSOR_NOT_OUTPUTE">
+<span id="_CPPv3NUt3_11326CCV_CNNP_TENSOR_NOT_OUTPUTE"></span><span class="target" id="group__level__5__model__add__ons_1gga2ee507fea44084259042ff7bb45ecabfa81c5f637a4b2ed0f7be8d035028cb4ab"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_TENSOR_NOT_OUTPUT</code><a class="headerlink" href="#_CPPv4NUt3_11326CCV_CNNP_TENSOR_NOT_OUTPUTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This parameter indicates this is a tensor parameter, but it is not an output reflected as ccv_cnnp_io_t </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10727CCV_CNNP_INIT_SHARED_TENSORE">
-<span id="_CPPv3NUt3_10727CCV_CNNP_INIT_SHARED_TENSORE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada0956b88066a5bff5b38b5bcbc2bf0a5e"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_INIT_SHARED_TENSOR</code><a class="headerlink" href="#_CPPv4NUt3_10727CCV_CNNP_INIT_SHARED_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11327CCV_CNNP_INIT_SHARED_TENSORE">
+<span id="_CPPv3NUt3_11327CCV_CNNP_INIT_SHARED_TENSORE"></span><span class="target" id="group__level__5__model__add__ons_1gga2ee507fea44084259042ff7bb45ecabfa0956b88066a5bff5b38b5bcbc2bf0a5e"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_INIT_SHARED_TENSOR</code><a class="headerlink" href="#_CPPv4NUt3_11327CCV_CNNP_INIT_SHARED_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a provided tensor for initialization. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10740CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE">
-<span id="_CPPv3NUt3_10740CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span class="target" id="group__level__5__model__add__ons_1gga01aea4eb01aa6415eee118b5a5ee3dada2bd3cb39cbaa3add603ddf0eeb74b6c4"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE</code><a class="headerlink" href="#_CPPv4NUt3_10740CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11340CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE">
+<span id="_CPPv3NUt3_11340CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE"></span><span class="target" id="group__level__5__model__add__ons_1gga2ee507fea44084259042ff7bb45ecabfa2bd3cb39cbaa3add603ddf0eeb74b6c4"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE</code><a class="headerlink" href="#_CPPv4NUt3_11340CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The parameter is a provided tensor that can be updated. </p>
 </dd></dl>
 
