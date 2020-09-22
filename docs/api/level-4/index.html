@@ -302,6 +302,12 @@
 </dd></dl>
 
 <dl class="cpp type">
+<dt id="_CPPv431ccv_nnc_tensor_variable_owner_f">
+<span id="_CPPv331ccv_nnc_tensor_variable_owner_f"></span><span id="_CPPv231ccv_nnc_tensor_variable_owner_f"></span><span id="ccv_nnc_tensor_variable_owner_f"></span><span class="target" id="group__level__4_1ga2e8d4b78e8cf1136fb3671bf6f0fd5ba"></span><em class="property">typedef </em>void (*<code class="sig-name descname">ccv_nnc_tensor_variable_owner_f</code>)<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> graph, <em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> tensor, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> owner, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431ccv_nnc_tensor_variable_owner_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A ownership update function to be called when a tensor variable transferred ownership (at the moment, that means a tensor variable will be freed in the sense that no backward computation need it no more). Thus, we pass in tensor rather than tensor variable for the ownership change. </p>
+</dd></dl>
+
+<dl class="cpp type">
 <dt id="_CPPv416ccv_cnnp_model_t">
 <span id="_CPPv316ccv_cnnp_model_t"></span><span id="_CPPv216ccv_cnnp_model_t"></span><span id="ccv_cnnp_model_t"></span><span class="target" id="group__level__4_1ga0d6f8d1be5cf6bd28eb2f199a6c61a79"></span><em class="property">typedef </em><em class="property">struct</em> ccv_cnnp_model_s <code class="sig-name descname">ccv_cnnp_model_t</code><a class="headerlink" href="#_CPPv416ccv_cnnp_model_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read more in Level-5 API section.</p>
@@ -344,6 +350,21 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The dynamic graph. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor_variable</span></code>: The tensor variable to set. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that is going to be associated with the tensor variable. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv434ccv_nnc_tensor_variable_owner_hookPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t31ccv_nnc_tensor_variable_owner_fPCv">
+<span id="_CPPv334ccv_nnc_tensor_variable_owner_hookPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t31ccv_nnc_tensor_variable_owner_fPCv"></span><span id="_CPPv234ccv_nnc_tensor_variable_owner_hookPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t31ccv_nnc_tensor_variable_owner_fPCv"></span><span id="ccv_nnc_tensor_variable_owner_hook__ccv_nnc_dynamic_graph_tPC.ccv_nnc_tensor_variable_tC.ccv_nnc_tensor_variable_owner_f.voidPC"></span><span class="target" id="group__level__4_1ga024312818abf81c1781a507a49de1c5a"></span>void <code class="sig-name descname">ccv_nnc_tensor_variable_owner_hook</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> <em>tensor_variable</em>, <a class="reference internal" href="#_CPPv431ccv_nnc_tensor_variable_owner_f" title="ccv_nnc_tensor_variable_owner_f">ccv_nnc_tensor_variable_owner_f</a> <em>func</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434ccv_nnc_tensor_variable_owner_hookPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t31ccv_nnc_tensor_variable_owner_fPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Hook into a tensor variable such that when it is switched to a new owner, the callback will receive the update. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The dynamic graph. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tensor_variable</span></code>: The tensor variable to observe ownership change. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">func</span></code>: The callback function. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context to be passed along to the callback function. </p></li>
 </ul>
 </dd>
 </dl>
