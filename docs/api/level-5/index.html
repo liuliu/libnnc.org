@@ -1639,9 +1639,9 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv412ccv_cnnp_addPCKc">
-<span id="_CPPv312ccv_cnnp_addPCKc"></span><span id="_CPPv212ccv_cnnp_addPCKc"></span><span id="ccv_cnnp_add__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gacca43535491e926e3450d7ef0a7309f9"></span><code class="sig-name descname">ccv_cnnp_add</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_addPCKc" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Add multiple input tensors together. <dl class="simple">
+<dt id="_CPPv412ccv_cnnp_sumPCKc">
+<span id="_CPPv312ccv_cnnp_sumPCKc"></span><span id="_CPPv212ccv_cnnp_sumPCKc"></span><span id="ccv_cnnp_sum__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gae51c4cea9b96dced06cdadc20af2c773"></span><code class="sig-name descname">ccv_cnnp_sum</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_sumPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sum multiple input tensors together. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>A model that can be applied with multiple inputs, and generate output that is a sum of the inputs. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -1837,12 +1837,29 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv412ccv_cnnp_mulPCKc">
-<span id="_CPPv312ccv_cnnp_mulPCKc"></span><span id="_CPPv212ccv_cnnp_mulPCKc"></span><span id="ccv_cnnp_mul__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga7f7cded84353304dcb409d8e1519ea53"></span><code class="sig-name descname">ccv_cnnp_mul</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_mulPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv412ccv_cnnp_addKfKfPCKc">
+<span id="_CPPv312ccv_cnnp_addKfKfPCKc"></span><span id="_CPPv212ccv_cnnp_addKfKfPCKc"></span><span id="ccv_cnnp_add__floatC.floatC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga95a8dc99d4b33cfa952e1a7cb56c4265"></span><code class="sig-name descname">ccv_cnnp_add</code><span class="sig-paren">(</span><em class="property">const</em> float <em>p</em>, <em class="property">const</em> float <em>q</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_addKfKfPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add two input tensors together. Different from sum because this support broadcasting. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A model that can be applied with two inputs, and generate output that is a product of the inputs. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code>: The weight for the first input. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code>: The weight for the second input. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv412ccv_cnnp_mulKfPCKc">
+<span id="_CPPv312ccv_cnnp_mulKfPCKc"></span><span id="_CPPv212ccv_cnnp_mulKfPCKc"></span><span id="ccv_cnnp_mul__floatC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gab261b9f25bb835f75aab6ac5598a665c"></span><code class="sig-name descname">ccv_cnnp_mul</code><span class="sig-paren">(</span><em class="property">const</em> float <em>p</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412ccv_cnnp_mulKfPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Multiple two input tensors together. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>A model that can be applied with two inputs, and generate output that is a product of the inputs. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code>: The weight for the output. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
 </ul>
 </dd>
