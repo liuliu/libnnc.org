@@ -21,6 +21,13 @@ Dataframe Add-ons
    :content-only:
    :members:
 
+Dataframe CSV Support
+---------------------
+.. doxygengroup:: level_5_dataframe_csv
+   :project: libnnc
+   :content-only:
+   :members:
+
 Model API
 ---------
 .. doxygengroup:: level_5_model
