@@ -1,6 +1,7 @@
-# Why to support comma-separated-values files in dataframe?
+Why to support comma-separated-values files in dataframe?
+=========================================================
 
-C can be used as a parser. It usually can be fast. But most of them can be buggy and has bugs that can either crash, be exploited, or simply incorrect. There really isn't much motivation for me to start write a parser, even as simple as for CSV files.
+C can be used as a parser. It usually can be fast. But most of them can be buggy and has bugs that can either crash, be exploited, or simply incorrect. There really isn’t much motivation for me to start write a parser, even as simple as for CSV files.
 
 However, it does brought to my attention that a full-speed (defined by saturating the PCIx4 for SSD) implementation would be beneficial. I am also started to use nnc in many places that is handy to load a csv file and generate some tensors out of it.
 
@@ -10,4 +11,4 @@ This implementation plan to use a variant of the two-pass approach documented in
 
 The speculative approach while interesting, for many-core system implementation, it can be challenging and the worse-case scenario is indeed worse.
 
-The implementation itself follows https://tools.ietf.org/html/rfc4180, with only customization of delimiters (so it can support table-separated-values) and quotes (so you can choose between " and '). Escaping only supports double-quotes for whatever quote symbol you elect. 
+The implementation itself follows https://tools.ietf.org/html/rfc4180, with only customization of delimiters (so it can support table-separated-values) and quotes (so you can choose between " and ’). Escaping only supports double-quotes for whatever quote symbol you elect.
