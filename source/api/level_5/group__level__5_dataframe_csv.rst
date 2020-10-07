@@ -7,7 +7,9 @@ However, it does brought to my attention that a full-speed (defined by saturatin
 
 This implementation plan to use a variant of the two-pass approach documented in https://www.microsoft.com/en-us/research/uploads/prod/2019/04/chunker-sigmod19.pdf while first implemented in https://github.com/wiseio/paratext. It is differentiated from these two in these particular ways:
 
-1. The first pass will not only find the quotes and even / odd CRLF, but also collect statistics on how many lines assuming the first CRLF is within quote / outside of the quote; 2. The second pass will do a copy into a continuous page mirrors the original csv file, but null-terminate each column, and assign the start pointer for each.
+1. The first pass will not only find the quotes and even / odd CRLF, but also collect statistics on how many lines assuming the first CRLF is within quote / outside of the quote;
+
+2. The second pass will do a copy into a continuous page mirrors the original csv file, but null-terminate each column, and assign the start pointer for each.
 
 The speculative approach while interesting, for many-core system implementation, it can be challenging and the worse-case scenario is indeed worse.
 
