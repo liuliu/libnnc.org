@@ -1152,6 +1152,12 @@
 </dd></dl>
 
 <dl class="cpp type">
+<dt id="_CPPv435ccv_nnc_stream_context_destructor_f">
+<span id="_CPPv335ccv_nnc_stream_context_destructor_f"></span><span id="_CPPv235ccv_nnc_stream_context_destructor_f"></span><span id="ccv_nnc_stream_context_destructor_f"></span><span class="target" id="group__level__1__stream_1gabbf6618717946850a69e8af24795998b"></span><em class="property">typedef </em>void (*<code class="sig-name descname">ccv_nnc_stream_context_destructor_f</code>)<span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> stream, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv435ccv_nnc_stream_context_destructor_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The hooks to be called when a stream context is destroyed. At the moment, the stream context will be destroyed at the time ccv_nnc_stream_context_free is called, so there is no tricks. This method is useful because we have some resources associated with stream pointer, hence, would be good to free these resources upon free the stream. </p>
+</dd></dl>
+
+<dl class="cpp type">
 <dt id="_CPPv423ccv_nnc_stream_signal_t">
 <span id="_CPPv323ccv_nnc_stream_signal_t"></span><span id="_CPPv223ccv_nnc_stream_signal_t"></span><span id="ccv_nnc_stream_signal_t"></span><span class="target" id="group__level__1__stream_1gaa38ecd393d7446aa90b4c25b8e56f658"></span><em class="property">typedef </em><em class="property">struct</em> ccv_nnc_stream_signal_s <code class="sig-name descname">ccv_nnc_stream_signal_t</code><a class="headerlink" href="#_CPPv423ccv_nnc_stream_signal_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Opaque pointer to the signal object. </p>
@@ -1253,6 +1259,35 @@
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: The stream context to wait. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv442ccv_nnc_stream_context_add_destructor_hookPC24ccv_nnc_stream_context_t35ccv_nnc_stream_context_destructor_fPCv">
+<span id="_CPPv342ccv_nnc_stream_context_add_destructor_hookPC24ccv_nnc_stream_context_t35ccv_nnc_stream_context_destructor_fPCv"></span><span id="_CPPv242ccv_nnc_stream_context_add_destructor_hookPC24ccv_nnc_stream_context_t35ccv_nnc_stream_context_destructor_fPCv"></span><span id="ccv_nnc_stream_context_add_destructor_hook__ccv_nnc_stream_context_tPC.ccv_nnc_stream_context_destructor_f.voidPC"></span><span class="target" id="group__level__1__stream_1ga2de6f036e7bb33c88f5fa2d322d5bb09"></span>int <code class="sig-name descname">ccv_nnc_stream_context_add_destructor_hook</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream</em>, <a class="reference internal" href="#_CPPv435ccv_nnc_stream_context_destructor_f" title="ccv_nnc_stream_context_destructor_f">ccv_nnc_stream_context_destructor_f</a> <em>destructor</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv442ccv_nnc_stream_context_add_destructor_hookPC24ccv_nnc_stream_context_t35ccv_nnc_stream_context_destructor_fPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a new destructor hook callback when a stream is freed. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A integer identifier to help remove the hook. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: The stream to be observed. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destructor</span></code>: The new destructor callback method. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">context</span></code>: additional context. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv445ccv_nnc_stream_context_remove_destructor_hookPC24ccv_nnc_stream_context_tKi">
+<span id="_CPPv345ccv_nnc_stream_context_remove_destructor_hookPC24ccv_nnc_stream_context_tKi"></span><span id="_CPPv245ccv_nnc_stream_context_remove_destructor_hookPC24ccv_nnc_stream_context_tKi"></span><span id="ccv_nnc_stream_context_remove_destructor_hook__ccv_nnc_stream_context_tPC.iC"></span><span class="target" id="group__level__1__stream_1ga46ddc80cfa00d689beb05d31c3301e71"></span>void <code class="sig-name descname">ccv_nnc_stream_context_remove_destructor_hook</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream</em>, <em class="property">const</em> int <em>hook_id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv445ccv_nnc_stream_context_remove_destructor_hookPC24ccv_nnc_stream_context_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Remove a destructor hook callback. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: The stream we observe. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hook_id</span></code>: The returned integer when calling the add method. </p></li>
 </ul>
 </dd>
 </dl>
