@@ -1103,9 +1103,9 @@
 </dd></dl>
 
 <dl class="cpp type">
-<dt id="_CPPv422ccv_cnnp_model_owner_f">
-<span id="_CPPv322ccv_cnnp_model_owner_f"></span><span id="_CPPv222ccv_cnnp_model_owner_f"></span><span id="ccv_cnnp_model_owner_f"></span><span class="target" id="group__level__5__model_1gad13f0a7dec79b07f910b091597e576b3"></span><em class="property">typedef </em>void (*<code class="sig-name descname">ccv_cnnp_model_owner_f</code>)<span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> model, <em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> owner, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422ccv_cnnp_model_owner_f" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A ownership update function to be called when a model transferred ownership to someone else. </p>
+<dt id="_CPPv423ccv_cnnp_model_notify_f">
+<span id="_CPPv323ccv_cnnp_model_notify_f"></span><span id="_CPPv223ccv_cnnp_model_notify_f"></span><span id="ccv_cnnp_model_notify_f"></span><span class="target" id="group__level__5__model_1ga60e737220a127d11bea8802c801e6808"></span><em class="property">typedef </em>void (*<code class="sig-name descname">ccv_cnnp_model_notify_f</code>)<span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> model, <em class="property">const</em> int tag, void *<em class="property">const</em> payload, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423ccv_cnnp_model_notify_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A notification function such that a model can be notified. This is useful to broadcast a message to all models as sub-model of someone else. </p>
 </dd></dl>
 
 <dl class="cpp type">
@@ -1155,13 +1155,27 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv425ccv_cnnp_model_owner_hookPC16ccv_cnnp_model_t22ccv_cnnp_model_owner_fPCv">
-<span id="_CPPv325ccv_cnnp_model_owner_hookPC16ccv_cnnp_model_t22ccv_cnnp_model_owner_fPCv"></span><span id="_CPPv225ccv_cnnp_model_owner_hookPC16ccv_cnnp_model_t22ccv_cnnp_model_owner_fPCv"></span><span id="ccv_cnnp_model_owner_hook__ccv_cnnp_model_tPC.ccv_cnnp_model_owner_f.voidPC"></span><span class="target" id="group__level__5__model_1ga70f51c5d7013ebaa669b06cf057918a0"></span>void <code class="sig-name descname">ccv_cnnp_model_owner_hook</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <a class="reference internal" href="#_CPPv422ccv_cnnp_model_owner_f" title="ccv_cnnp_model_owner_f">ccv_cnnp_model_owner_f</a> <em>func</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_cnnp_model_owner_hookPC16ccv_cnnp_model_t22ccv_cnnp_model_owner_fPCv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Hook into a model such that when it is switched to a new owner, the callback will receive the update. <dl class="simple">
+<dt id="_CPPv426ccv_cnnp_model_notify_hookPC16ccv_cnnp_model_t23ccv_cnnp_model_notify_fPCv">
+<span id="_CPPv326ccv_cnnp_model_notify_hookPC16ccv_cnnp_model_t23ccv_cnnp_model_notify_fPCv"></span><span id="_CPPv226ccv_cnnp_model_notify_hookPC16ccv_cnnp_model_t23ccv_cnnp_model_notify_fPCv"></span><span id="ccv_cnnp_model_notify_hook__ccv_cnnp_model_tPC.ccv_cnnp_model_notify_f.voidPC"></span><span class="target" id="group__level__5__model_1ga89602734308cfe24c380a03c0d6d1b53"></span>void <code class="sig-name descname">ccv_cnnp_model_notify_hook</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <a class="reference internal" href="#_CPPv423ccv_cnnp_model_notify_f" title="ccv_cnnp_model_notify_f">ccv_cnnp_model_notify_f</a> <em>func</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ccv_cnnp_model_notify_hookPC16ccv_cnnp_model_t23ccv_cnnp_model_notify_fPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Hook into a model such that when there is a notification, the callback will receive it. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: A model that can be owned by others, initially, a model is owned by no one. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: A model that can be notified. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">func</span></code>: The callback function. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context to be passed along to the callback function. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv421ccv_cnnp_model_notifyPCK16ccv_cnnp_model_tKiPCv">
+<span id="_CPPv321ccv_cnnp_model_notifyPCK16ccv_cnnp_model_tKiPCv"></span><span id="_CPPv221ccv_cnnp_model_notifyPCK16ccv_cnnp_model_tKiPCv"></span><span id="ccv_cnnp_model_notify__ccv_cnnp_model_tCPC.iC.voidPC"></span><span class="target" id="group__level__5__model_1ga554695924f59dde3daa35c785717e957"></span>void <code class="sig-name descname">ccv_cnnp_model_notify</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>tag</em>, void *<em class="property">const</em> <em>payload</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_cnnp_model_notifyPCK16ccv_cnnp_model_tKiPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Notify a model and its sub-models with a tag and a payload. This will be triggered synchronously. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: A model that will be notified. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code>: An integer to help identify what kind of notification. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payload</span></code>: A payload pointer that you can carry arbitrary information. </p></li>
 </ul>
 </dd>
 </dl>
@@ -1379,11 +1393,43 @@
 <dl class="cpp function">
 <dt id="_CPPv425ccv_cnnp_model_checkpointPC16ccv_cnnp_model_tPCKcKi">
 <span id="_CPPv325ccv_cnnp_model_checkpointPC16ccv_cnnp_model_tPCKcKi"></span><span id="_CPPv225ccv_cnnp_model_checkpointPC16ccv_cnnp_model_tPCKcKi"></span><span id="ccv_cnnp_model_checkpoint__ccv_cnnp_model_tPC.cCPC.iC"></span><span class="target" id="group__level__5__model_1ga4a994f3266ae993aa8fdbf85de416492"></span>void <code class="sig-name descname">ccv_cnnp_model_checkpoint</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> char *<em class="property">const</em> <em>fn</em>, <em class="property">const</em> int <em>flags</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_cnnp_model_checkpointPC16ccv_cnnp_model_tPCKcKi" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>This method checkpoint the given model. If the model is initialized, it will persist all parameters to the given file path. If it is not initialized, this method will try to load tensors off the disk. <dl class="simple">
+<dd><p>This method checkpoint the given model. If the model is initialized, it will persist all parameters to the given file path. If it is not initialized, this method will try to load tensors off the disk. Under the hood, it calls ccv_cnnp_model_write / ccv_cnnp_model_read when appropriate. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fn</span></code>: The file name. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code>: Whether we perform read / write on this checkpoint, or read only / write only. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv420ccv_cnnp_model_writePCK16ccv_cnnp_model_tPCvPCKc">
+<span id="_CPPv320ccv_cnnp_model_writePCK16ccv_cnnp_model_tPCvPCKc"></span><span id="_CPPv220ccv_cnnp_model_writePCK16ccv_cnnp_model_tPCvPCKc"></span><span id="ccv_cnnp_model_write__ccv_cnnp_model_tCPC.voidPC.cCPC"></span><span class="target" id="group__level__5__model_1ga7c0e10c11aeff8bc0b2cc1c383aadb18"></span>int <code class="sig-name descname">ccv_cnnp_model_write</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, void *<em class="property">const</em> <em>handle</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_cnnp_model_writePCK16ccv_cnnp_model_tPCvPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Write model’s tensors to a SQLite database with a given name. Note that we specifically say “model’s tensors” because it doesn’t persist the model’s structure. Hence, you shouldn’t expect us to take a name to then have a fully functional model restored from there. You still need to construct the model. This method only write the tensors (weights and other internal ones) to disk. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>CCV_IO_FINAL for success, otherwise error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The model. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">handle</span></code>: The SQLite handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name to find the tensors related to the model in the database. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv419ccv_cnnp_model_readPCvPCKcPCK16ccv_cnnp_model_t">
+<span id="_CPPv319ccv_cnnp_model_readPCvPCKcPCK16ccv_cnnp_model_t"></span><span id="_CPPv219ccv_cnnp_model_readPCvPCKcPCK16ccv_cnnp_model_t"></span><span id="ccv_cnnp_model_read__voidPC.cCPC.ccv_cnnp_model_tCPC"></span><span class="target" id="group__level__5__model_1ga072f01aeabb105ae1013c03c6a6afcb9"></span>int <code class="sig-name descname">ccv_cnnp_model_read</code><span class="sig-paren">(</span>void *<em class="property">const</em> <em>handle</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em>, <em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model_out</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_model_readPCvPCKcPCK16ccv_cnnp_model_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Read model’s tensors from a SQLite database with a given name. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>CCV_IO_FINAL for success, otherwise error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">handle</span></code>: The SQLite handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name to find the tensors related to the model in the database. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">model_out</span></code>: The model which you want to restore the tensors. It should have the same structure as the one in write to. </p></li>
 </ul>
 </dd>
 </dl>
@@ -1486,12 +1532,13 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK19ccv_cnnp_model_io_tKi">
-<span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK19ccv_cnnp_model_io_tKi"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK19ccv_cnnp_model_io_tKi"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.ccv_cnnp_model_io_tCPC.iC"></span><span class="target" id="group__level__5__model_1ga848b07a00ec6434090a3d142d09c7f6e"></span>void <code class="sig-name descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>parameters</em>, <em class="property">const</em> int <em>parameter_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tPCK19ccv_cnnp_model_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tKiPCK19ccv_cnnp_model_io_tKi">
+<span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tKiPCK19ccv_cnnp_model_io_tKi"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tKiPCK19ccv_cnnp_model_io_tKi"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.iC.ccv_cnnp_model_io_tCPC.iC"></span><span class="target" id="group__level__5__model_1ga7a4323bc01b470885dda74b367f09f96"></span>void <code class="sig-name descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> int <em>reset</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>parameters</em>, <em class="property">const</em> int <em>parameter_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tKiPCK19ccv_cnnp_model_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set a new minimizer for the model. This is useful when you need to update learn rate for stochastic gradient descent for example. This method can be called any time during the training process (after compilation). <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">minimizer</span></code>: The wrapped command that represents a new optimization strategy. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reset</span></code>: Reset all previous states of minimizers. This only makes sense if both parameters and parameter_size is 0. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code>: The parameters to be applied the minimizer on. 0 meant for all. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameter_size</span></code>: The number of parameter spans. </p></li>
 </ul>
