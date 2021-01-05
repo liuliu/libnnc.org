@@ -42,4 +42,4 @@ Over the next a few months, I will write more about this. There are still tremen
  * :doc:`overview`
  * :doc:`tech/index`
  * :doc:`api/index`
- * `Swift for NNC </s4nnc/>`
+ * `Swift for NNC </s4nnc/>`_
