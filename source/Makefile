@@ -218,3 +218,7 @@ pseudoxml:
 .PHONY: doxygen
 doxygen:
 	doxygen _doxygen.conf && ./_doxygen.sh
+
+.PHONY: s4nnc
+s4nnc:
+	rm -rf s4nnc/s4nnc && ./s4nnc.sh && cp -r _s4nnc/docs s4nnc/s4nnc

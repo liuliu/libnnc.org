@@ -1,0 +1,861 @@
+{
+  "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 3265,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public struct SGDOptimizer : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type>, <Type usr=\"s:4main15OptimizerAddonsP\">OptimizerAddons<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 57
+          }
+        ],
+        "key.bodylength" : 1560,
+        "key.bodyoffset" : 113,
+        "key.doc.column" : 15,
+        "key.doc.comment" : "Stochastic gradient descent optimizer.",
+        "key.doc.declaration" : "public struct SGDOptimizer : Optimizer, OptimizerAddons",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift\" line=\"4\" column=\"15\"><Name>SGDOptimizer<\/Name><USR>s:4main12SGDOptimizerV<\/USR><Declaration>public struct SGDOptimizer : Optimizer, OptimizerAddons<\/Declaration><CommentParts><Abstract><Para>Stochastic gradient descent optimizer.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 4,
+        "key.doc.name" : "SGDOptimizer",
+        "key.doc.type" : "Class",
+        "key.doclength" : 43,
+        "key.docoffset" : 14,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 9,
+            "key.offset" : 85
+          },
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 15,
+            "key.offset" : 96
+          }
+        ],
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>SGDOptimizer<\/decl.name> : <ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol>, <ref.protocol usr=\"s:4main15OptimizerAddonsP\">OptimizerAddons<\/ref.protocol><\/decl.struct>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Optimizer"
+          },
+          {
+            "key.name" : "OptimizerAddons"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 1610,
+        "key.name" : "SGDOptimizer",
+        "key.namelength" : 12,
+        "key.nameoffset" : 71,
+        "key.offset" : 64,
+        "key.parsed_declaration" : "public struct SGDOptimizer: Optimizer, OptimizerAddons",
+        "key.parsed_scope.end" : 57,
+        "key.parsed_scope.start" : 4,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 116
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.name" : "graph",
+            "key.namelength" : 5,
+            "key.nameoffset" : 127,
+            "key.offset" : 123,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP5graphAA12DynamicGraphCvp"
+              }
+            ],
+            "key.parsed_declaration" : "public let graph: DynamicGraph",
+            "key.parsed_scope.end" : 5,
+            "key.parsed_scope.start" : 5,
+            "key.typename" : "DynamicGraph",
+            "key.typeusr" : "$s4main12DynamicGraphCD",
+            "key.usr" : "s:4main12SGDOptimizerV5graphAA12DynamicGraphCvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var nesterov: <Type usr=\"s:Sb\">Bool<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 149
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>nesterov<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 18,
+            "key.name" : "nesterov",
+            "key.namelength" : 8,
+            "key.nameoffset" : 160,
+            "key.offset" : 156,
+            "key.parsed_declaration" : "public var nesterov: Bool",
+            "key.parsed_scope.end" : 6,
+            "key.parsed_scope.start" : 6,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Bool",
+            "key.typeusr" : "$sSbD",
+            "key.usr" : "s:4main12SGDOptimizerV8nesterovSbvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var rate: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 177
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rate<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 15,
+            "key.name" : "rate",
+            "key.namelength" : 4,
+            "key.nameoffset" : 188,
+            "key.offset" : 184,
+            "key.parsed_declaration" : "public var rate: Float",
+            "key.parsed_scope.end" : 7,
+            "key.parsed_scope.start" : 7,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main12SGDOptimizerV4rateSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var scale: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 202
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>scale<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 16,
+            "key.name" : "scale",
+            "key.namelength" : 5,
+            "key.nameoffset" : 213,
+            "key.offset" : 209,
+            "key.parsed_declaration" : "public var scale: Float",
+            "key.parsed_scope.end" : 8,
+            "key.parsed_scope.start" : 8,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main12SGDOptimizerV5scaleSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var decay: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 228
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>decay<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 16,
+            "key.name" : "decay",
+            "key.namelength" : 5,
+            "key.nameoffset" : 239,
+            "key.offset" : 235,
+            "key.parsed_declaration" : "public var decay: Float",
+            "key.parsed_scope.end" : 9,
+            "key.parsed_scope.start" : 9,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main12SGDOptimizerV5decaySfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var momentum: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 254
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>momentum<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 19,
+            "key.name" : "momentum",
+            "key.namelength" : 8,
+            "key.nameoffset" : 265,
+            "key.offset" : 261,
+            "key.parsed_declaration" : "public var momentum: Float",
+            "key.parsed_scope.end" : 10,
+            "key.parsed_scope.start" : 10,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main12SGDOptimizerV8momentumSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var dampening: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 283
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>dampening<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 20,
+            "key.name" : "dampening",
+            "key.namelength" : 9,
+            "key.nameoffset" : 294,
+            "key.offset" : 290,
+            "key.parsed_declaration" : "public var dampening: Float",
+            "key.parsed_scope.end" : 11,
+            "key.parsed_scope.start" : 11,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main12SGDOptimizerV9dampeningSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 313
+              }
+            ],
+            "key.bodylength" : 387,
+            "key.bodyoffset" : 369,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 437,
+            "key.name" : "parameters",
+            "key.namelength" : 10,
+            "key.nameoffset" : 324,
+            "key.offset" : 320,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
+              }
+            ],
+            "key.parsed_declaration" : "public var parameters = [DynamicGraph_AnyParameters]()",
+            "key.parsed_scope.end" : 25,
+            "key.parsed_scope.start" : 12,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "[DynamicGraph_AnyParameters]",
+            "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
+            "key.usr" : "s:4main12SGDOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>var savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 35,
+            "key.name" : "savedAux",
+            "key.namelength" : 8,
+            "key.nameoffset" : 765,
+            "key.offset" : 761,
+            "key.parsed_declaration" : "var savedAux = [DynamicGraph_Any]()",
+            "key.parsed_scope.end" : 27,
+            "key.parsed_scope.start" : 27,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.typename" : "[DynamicGraph_Any]",
+            "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
+            "key.usr" : "s:4main12SGDOptimizerV8savedAuxSayAA16DynamicGraph_Any_pGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>var minimizer: ccv_nnc_cmd_t { get }<\/Declaration>",
+            "key.bodylength" : 317,
+            "key.bodyoffset" : 829,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>minimizer<\/decl.name>: <decl.var.type>ccv_nnc_cmd_t<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 348,
+            "key.name" : "minimizer",
+            "key.namelength" : 9,
+            "key.nameoffset" : 803,
+            "key.offset" : 799,
+            "key.parsed_declaration" : "var minimizer: ccv_nnc_cmd_t",
+            "key.parsed_scope.end" : 37,
+            "key.parsed_scope.start" : 28,
+            "key.typename" : "<<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4main12SGDOptimizerV9minimizerXevp"
+          },
+          {
+            "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+            "key.kind" : "source.lang.swift.decl.var.local",
+            "key.length" : 49,
+            "key.name" : "params",
+            "key.namelength" : 6,
+            "key.nameoffset" : 838,
+            "key.offset" : 834,
+            "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
+            "key.parsed_scope.end" : 29,
+            "key.parsed_scope.start" : 29,
+            "key.typename" : "<<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4main12SGDOptimizerV9minimizerXevg6paramsL_Xevp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(_ graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>, nesterov: <Type usr=\"s:Sb\">Bool<\/Type>, rate: <Type usr=\"s:Sf\">Float<\/Type>, scale: <Type usr=\"s:Sf\">Float<\/Type>, decay: <Type usr=\"s:Sf\">Float<\/Type>, momentum: <Type usr=\"s:Sf\">Float<\/Type>, dampening: <Type usr=\"s:Sf\">Float<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1151
+              }
+            ],
+            "key.bodylength" : 182,
+            "key.bodyoffset" : 1291,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>graph<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>nesterov<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>rate<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>scale<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>decay<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>momentum<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dampening<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 316,
+            "key.name" : "init(_:nesterov:rate:scale:decay:momentum:dampening:)",
+            "key.namelength" : 131,
+            "key.nameoffset" : 1158,
+            "key.offset" : 1158,
+            "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, nesterov: Bool, rate: Float, scale: Float, decay: Float, momentum: Float,\n  dampening: Float\n)",
+            "key.parsed_scope.end" : 50,
+            "key.parsed_scope.start" : 39,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(SGDOptimizer.Type) -> (DynamicGraph, Bool, Float, Float, Float, Float, Float) -> SGDOptimizer",
+            "key.typeusr" : "$s_8nesterov4rate5scale5decay8momentum9dampening4main12SGDOptimizerVAG12DynamicGraphC_SbS5ftcD",
+            "key.usr" : "s:4main12SGDOptimizerV_8nesterov4rate5scale5decay8momentum9dampeningAcA12DynamicGraphC_SbS5ftcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func step(streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1478
+              }
+            ],
+            "key.bodylength" : 144,
+            "key.bodyoffset" : 1527,
+            "key.doc.column" : 8,
+            "key.doc.declaration" : "func step(streamContext: StreamContext?)",
+            "key.doc.discussion" : [
+              {
+                "Note" : ""
+              }
+            ],
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"12\" column=\"8\"><Name>step(streamContext:)<\/Name><USR>s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF<\/USR><Declaration>func step(streamContext: StreamContext?)<\/Declaration><CommentParts><Abstract><Para>Update parameters.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to execute the update operation.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Note><Para>This documentation comment was inherited from <codeVoice>Optimizer<\/codeVoice>.<\/Para><\/Note><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 12,
+            "key.doc.name" : "step(streamContext:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The stream context to execute the update operation."
+                  }
+                ],
+                "name" : "streamContext"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 187,
+            "key.name" : "step(streamContext:)",
+            "key.namelength" : 35,
+            "key.nameoffset" : 1490,
+            "key.offset" : 1485,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF"
+              }
+            ],
+            "key.parsed_declaration" : "public func step(streamContext: StreamContext?)",
+            "key.parsed_scope.end" : 56,
+            "key.parsed_scope.start" : 52,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(SGDOptimizer) -> (StreamContext?) -> ()",
+            "key.typeusr" : "$s13streamContexty4main06StreamB0CSg_tcD",
+            "key.usr" : "s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF"
+          }
+        ],
+        "key.typename" : "SGDOptimizer.Type",
+        "key.typeusr" : "$s4main12SGDOptimizerVmD",
+        "key.usr" : "s:4main12SGDOptimizerV"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public struct AdamOptimizer : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type>, <Type usr=\"s:4main15OptimizerAddonsP\">OptimizerAddons<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 1696
+          }
+        ],
+        "key.bodylength" : 1510,
+        "key.bodyoffset" : 1753,
+        "key.doc.column" : 15,
+        "key.doc.comment" : "Adam optimizer.",
+        "key.doc.declaration" : "public struct AdamOptimizer : Optimizer, OptimizerAddons",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift\" line=\"60\" column=\"15\"><Name>AdamOptimizer<\/Name><USR>s:4main13AdamOptimizerV<\/USR><Declaration>public struct AdamOptimizer : Optimizer, OptimizerAddons<\/Declaration><CommentParts><Abstract><Para>Adam optimizer.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 60,
+        "key.doc.name" : "AdamOptimizer",
+        "key.doc.type" : "Class",
+        "key.doclength" : 20,
+        "key.docoffset" : 1676,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 9,
+            "key.offset" : 1725
+          },
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 15,
+            "key.offset" : 1736
+          }
+        ],
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>AdamOptimizer<\/decl.name> : <ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol>, <ref.protocol usr=\"s:4main15OptimizerAddonsP\">OptimizerAddons<\/ref.protocol><\/decl.struct>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Optimizer"
+          },
+          {
+            "key.name" : "OptimizerAddons"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 1561,
+        "key.name" : "AdamOptimizer",
+        "key.namelength" : 13,
+        "key.nameoffset" : 1710,
+        "key.offset" : 1703,
+        "key.parsed_declaration" : "public struct AdamOptimizer: Optimizer, OptimizerAddons",
+        "key.parsed_scope.end" : 113,
+        "key.parsed_scope.start" : 60,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1756
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.name" : "graph",
+            "key.namelength" : 5,
+            "key.nameoffset" : 1767,
+            "key.offset" : 1763,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP5graphAA12DynamicGraphCvp"
+              }
+            ],
+            "key.parsed_declaration" : "public let graph: DynamicGraph",
+            "key.parsed_scope.end" : 61,
+            "key.parsed_scope.start" : 61,
+            "key.typename" : "DynamicGraph",
+            "key.typeusr" : "$s4main12DynamicGraphCD",
+            "key.usr" : "s:4main13AdamOptimizerV5graphAA12DynamicGraphCvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var step: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1789
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>step<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 13,
+            "key.name" : "step",
+            "key.namelength" : 4,
+            "key.nameoffset" : 1800,
+            "key.offset" : 1796,
+            "key.parsed_declaration" : "public var step: Int",
+            "key.parsed_scope.end" : 62,
+            "key.parsed_scope.start" : 62,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main13AdamOptimizerV4step13streamContextyAA06StreamF0CSg_tF\">step(streamContext:)<\/RelatedName>"
+              }
+            ],
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:4main13AdamOptimizerV4stepSivp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var rate: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1812
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rate<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 15,
+            "key.name" : "rate",
+            "key.namelength" : 4,
+            "key.nameoffset" : 1823,
+            "key.offset" : 1819,
+            "key.parsed_declaration" : "public var rate: Float",
+            "key.parsed_scope.end" : 63,
+            "key.parsed_scope.start" : 63,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13AdamOptimizerV4rateSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var beta1: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1837
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>beta1<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 16,
+            "key.name" : "beta1",
+            "key.namelength" : 5,
+            "key.nameoffset" : 1848,
+            "key.offset" : 1844,
+            "key.parsed_declaration" : "public var beta1: Float",
+            "key.parsed_scope.end" : 64,
+            "key.parsed_scope.start" : 64,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13AdamOptimizerV5beta1Sfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var beta2: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1863
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>beta2<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 16,
+            "key.name" : "beta2",
+            "key.namelength" : 5,
+            "key.nameoffset" : 1874,
+            "key.offset" : 1870,
+            "key.parsed_declaration" : "public var beta2: Float",
+            "key.parsed_scope.end" : 65,
+            "key.parsed_scope.start" : 65,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13AdamOptimizerV5beta2Sfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var decay: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1889
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>decay<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 16,
+            "key.name" : "decay",
+            "key.namelength" : 5,
+            "key.nameoffset" : 1900,
+            "key.offset" : 1896,
+            "key.parsed_declaration" : "public var decay: Float",
+            "key.parsed_scope.end" : 66,
+            "key.parsed_scope.start" : 66,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13AdamOptimizerV5decaySfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var epsilon: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1915
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>epsilon<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 18,
+            "key.name" : "epsilon",
+            "key.namelength" : 7,
+            "key.nameoffset" : 1926,
+            "key.offset" : 1922,
+            "key.parsed_declaration" : "public var epsilon: Float",
+            "key.parsed_scope.end" : 67,
+            "key.parsed_scope.start" : 67,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13AdamOptimizerV7epsilonSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1943
+              }
+            ],
+            "key.bodylength" : 387,
+            "key.bodyoffset" : 1999,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 437,
+            "key.name" : "parameters",
+            "key.namelength" : 10,
+            "key.nameoffset" : 1954,
+            "key.offset" : 1950,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
+              }
+            ],
+            "key.parsed_declaration" : "public var parameters = [DynamicGraph_AnyParameters]()",
+            "key.parsed_scope.end" : 81,
+            "key.parsed_scope.start" : 68,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "[DynamicGraph_AnyParameters]",
+            "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
+            "key.usr" : "s:4main13AdamOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>var savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 35,
+            "key.name" : "savedAux",
+            "key.namelength" : 8,
+            "key.nameoffset" : 2395,
+            "key.offset" : 2391,
+            "key.parsed_declaration" : "var savedAux = [DynamicGraph_Any]()",
+            "key.parsed_scope.end" : 83,
+            "key.parsed_scope.start" : 83,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.typename" : "[DynamicGraph_Any]",
+            "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
+            "key.usr" : "s:4main13AdamOptimizerV8savedAuxSayAA16DynamicGraph_Any_pGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>var minimizer: ccv_nnc_cmd_t { get }<\/Declaration>",
+            "key.bodylength" : 305,
+            "key.bodyoffset" : 2459,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>minimizer<\/decl.name>: <decl.var.type>ccv_nnc_cmd_t<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 336,
+            "key.name" : "minimizer",
+            "key.namelength" : 9,
+            "key.nameoffset" : 2433,
+            "key.offset" : 2429,
+            "key.parsed_declaration" : "var minimizer: ccv_nnc_cmd_t",
+            "key.parsed_scope.end" : 93,
+            "key.parsed_scope.start" : 84,
+            "key.typename" : "<<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4main13AdamOptimizerV9minimizerXevp"
+          },
+          {
+            "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+            "key.kind" : "source.lang.swift.decl.var.local",
+            "key.length" : 49,
+            "key.name" : "params",
+            "key.namelength" : 6,
+            "key.nameoffset" : 2468,
+            "key.offset" : 2464,
+            "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
+            "key.parsed_scope.end" : 85,
+            "key.parsed_scope.start" : 85,
+            "key.typename" : "<<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4main13AdamOptimizerV9minimizerXevg6paramsL_Xevp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(_ graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>, step: <Type usr=\"s:Si\">Int<\/Type>, rate: <Type usr=\"s:Sf\">Float<\/Type>, beta1: <Type usr=\"s:Sf\">Float<\/Type>, beta2: <Type usr=\"s:Sf\">Float<\/Type>, decay: <Type usr=\"s:Sf\">Float<\/Type>, epsilon: <Type usr=\"s:Sf\">Float<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 2769
+              }
+            ],
+            "key.bodylength" : 164,
+            "key.bodyoffset" : 2899,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>graph<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>step<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>rate<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>beta1<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>beta2<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>decay<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>epsilon<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 288,
+            "key.name" : "init(_:step:rate:beta1:beta2:decay:epsilon:)",
+            "key.namelength" : 121,
+            "key.nameoffset" : 2776,
+            "key.offset" : 2776,
+            "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, step: Int, rate: Float, beta1: Float, beta2: Float, decay: Float,\n  epsilon: Float\n)",
+            "key.parsed_scope.end" : 106,
+            "key.parsed_scope.start" : 95,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(AdamOptimizer.Type) -> (DynamicGraph, Int, Float, Float, Float, Float, Float) -> AdamOptimizer",
+            "key.typeusr" : "$s_4step4rate5beta15beta25decay7epsilon4main13AdamOptimizerVAG12DynamicGraphC_SiS5ftcD",
+            "key.usr" : "s:4main13AdamOptimizerV_4step4rate5beta15beta25decay7epsilonAcA12DynamicGraphC_SiS5ftcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func step(streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3068
+              }
+            ],
+            "key.bodylength" : 144,
+            "key.bodyoffset" : 3117,
+            "key.doc.column" : 8,
+            "key.doc.declaration" : "func step(streamContext: StreamContext?)",
+            "key.doc.discussion" : [
+              {
+                "Note" : ""
+              }
+            ],
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"12\" column=\"8\"><Name>step(streamContext:)<\/Name><USR>s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF<\/USR><Declaration>func step(streamContext: StreamContext?)<\/Declaration><CommentParts><Abstract><Para>Update parameters.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to execute the update operation.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Note><Para>This documentation comment was inherited from <codeVoice>Optimizer<\/codeVoice>.<\/Para><\/Note><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 12,
+            "key.doc.name" : "step(streamContext:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The stream context to execute the update operation."
+                  }
+                ],
+                "name" : "streamContext"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 187,
+            "key.name" : "step(streamContext:)",
+            "key.namelength" : 35,
+            "key.nameoffset" : 3080,
+            "key.offset" : 3075,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF"
+              }
+            ],
+            "key.parsed_declaration" : "public func step(streamContext: StreamContext?)",
+            "key.parsed_scope.end" : 112,
+            "key.parsed_scope.start" : 108,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main13AdamOptimizerV4stepSivp\">step<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(AdamOptimizer) -> (StreamContext?) -> ()",
+            "key.typeusr" : "$s13streamContexty4main06StreamB0CSg_tcD",
+            "key.usr" : "s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF"
+          }
+        ],
+        "key.typename" : "AdamOptimizer.Type",
+        "key.typeusr" : "$s4main13AdamOptimizerVmD",
+        "key.usr" : "s:4main13AdamOptimizerV"
+      }
+    ]
+  }
+}

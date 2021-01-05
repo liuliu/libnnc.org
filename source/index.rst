@@ -13,6 +13,7 @@ NNC: Neural Network Collection
    overview.rst
    tech/index.rst
    api/index.rst
+   Swift for NNC <https://libnnc.org/s4nnc/>
 
 At the end of 2014, when I was looking at these new computer vision models with complex neural network architectures, it became apparently clear what `ccv <http://libccv.org>`_ has implemented (the neural network) as one of many computer vision algorithms will be the only algorithm matters in the future. More importantly, what I have in `ccv <http://libccv.org>`_ is a early attempt, but ill-equipped to support these advanced architectures. There is no multi-way networks, no customizable losses, and no automatic differentiation.
 

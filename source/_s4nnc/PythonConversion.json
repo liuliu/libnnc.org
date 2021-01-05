@@ -1,0 +1,251 @@
+{
+  "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 1846,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.private",
+        "key.annotated_decl" : "<Declaration>private let np: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.private",
+            "key.length" : 7,
+            "key.offset" : 42
+          }
+        ],
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift",
+        "key.fully_annotated_decl" : "<decl.var.global><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>np<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.global>",
+        "key.kind" : "source.lang.swift.decl.var.global",
+        "key.length" : 31,
+        "key.name" : "np",
+        "key.namelength" : 2,
+        "key.nameoffset" : 54,
+        "key.offset" : 50,
+        "key.parsed_declaration" : "private let np = Python.import(\"numpy\")",
+        "key.parsed_scope.end" : 5,
+        "key.parsed_scope.start" : 5,
+        "key.typename" : "<<error type>>",
+        "key.typeusr" : "$sXeD",
+        "key.usr" : "s:4main2np33_E0AEB10524EED233A450789DA24E09E7LLXevp"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.private",
+        "key.annotated_decl" : "<Declaration>private let ctypes: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.private",
+            "key.length" : 7,
+            "key.offset" : 82
+          }
+        ],
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift",
+        "key.fully_annotated_decl" : "<decl.var.global><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>ctypes<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.global>",
+        "key.kind" : "source.lang.swift.decl.var.global",
+        "key.length" : 36,
+        "key.name" : "ctypes",
+        "key.namelength" : 6,
+        "key.nameoffset" : 94,
+        "key.offset" : 90,
+        "key.parsed_declaration" : "private let ctypes = Python.import(\"ctypes\")",
+        "key.parsed_scope.end" : 6,
+        "key.parsed_scope.start" : 6,
+        "key.typename" : "<<error type>>",
+        "key.typeusr" : "$sXeD",
+        "key.usr" : "s:4main6ctypes33_E0AEB10524EED233A450789DA24E09E7LLXevp"
+      },
+      {
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.bodylength" : 1191,
+        "key.bodyoffset" : 183,
+        "key.doc.column" : 15,
+        "key.doc.declaration" : "public struct Tensor<Element> : AnyTensor where Element : main.TensorNumeric",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"449\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 449,
+        "key.doc.name" : "Tensor",
+        "key.doc.type" : "Class",
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : AnyTensor <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 1247,
+        "key.name" : "Tensor",
+        "key.namelength" : 6,
+        "key.nameoffset" : 138,
+        "key.offset" : 128,
+        "key.parsed_declaration" : "extension Tensor where Element: NumpyScalarCompatible",
+        "key.parsed_scope.end" : 40,
+        "key.parsed_scope.start" : 8,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init?(numpy numpyArray: PythonObject)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 242
+              }
+            ],
+            "key.bodylength" : 1084,
+            "key.bodyoffset" : 288,
+            "key.doc.column" : 10,
+            "key.doc.comment" : "Initialize a tensor from numpy object.",
+            "key.doc.declaration" : "public init?(numpy numpyArray: PythonObject)",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift\" line=\"12\" column=\"10\"><Name>init(numpy:)<\/Name><USR>s:4main6TensorVyXeXecfc<\/USR><Declaration>public init?(numpy numpyArray: PythonObject)<\/Declaration><CommentParts><Abstract><Para>Initialize a tensor from numpy object.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 12,
+            "key.doc.name" : "init(numpy:)",
+            "key.doc.type" : "Function",
+            "key.doclength" : 53,
+            "key.docoffset" : 186,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>?(<decl.var.parameter><decl.var.parameter.argument_label>numpy<\/decl.var.parameter.argument_label> <decl.var.parameter.name>numpyArray<\/decl.var.parameter.name>: <decl.var.parameter.type>PythonObject<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 1124,
+            "key.name" : "init(numpy:)",
+            "key.namelength" : 37,
+            "key.nameoffset" : 249,
+            "key.offset" : 249,
+            "key.parsed_declaration" : "public init?(numpy numpyArray: PythonObject)",
+            "key.parsed_scope.end" : 39,
+            "key.parsed_scope.start" : 12,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyACyxGAA04_AnyB0Ccfc\">init(_: _AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyACyxGAA03AnyB0_pcfc\">init(_: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV_6format10dimensionsACyxGAA10DeviceKindO_AA0B6FormatOSaySiGtcfc\">init(_: DeviceKind, format: TensorFormat, dimensions: [Int])<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyACyxGAA10DeviceKindO_AA0B15DimensionFormatOtcfc\">init(_: DeviceKind, _: TensorDimensionFormat)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV_6format10dimensionsACyxGqd___AA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc\">init&lt;S&gt;(_: S, format: TensorFormat, dimensions: [Int]) where Element == S.Element, S : Sequence<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyACyxGqd___AA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc\">init&lt;S&gt;(_: S, _: TensorDimensionFormat) where Element == S.Element, S : Sequence<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV_6format10dimensions20unsafeMutablePointer9keepAliveACyxGAA10DeviceKindO_AA0B6FormatOSaySiGSpyxGyptcfc\">init(_:format:dimensions:unsafeMutablePointer:keepAlive:)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>let pyShape: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>pyShape<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 53,
+                "key.name" : "pyShape",
+                "key.namelength" : 7,
+                "key.nameoffset" : 621,
+                "key.offset" : 617,
+                "key.parsed_declaration" : "let pyShape = numpyArray.__array_interface__[\"shape\"]",
+                "key.parsed_scope.end" : 22,
+                "key.parsed_scope.start" : 22,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main6TensorVyXeXecfc7pyShapeL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let contiguousNumpyArray: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>contiguousNumpyArray<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 59,
+                "key.name" : "contiguousNumpyArray",
+                "key.namelength" : 20,
+                "key.nameoffset" : 922,
+                "key.offset" : 918,
+                "key.parsed_declaration" : "let contiguousNumpyArray = np.ascontiguousarray(numpyArray)",
+                "key.parsed_scope.end" : 27,
+                "key.parsed_scope.start" : 27,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main6TensorVyXeXecfc20contiguousNumpyArrayL_Xevp"
+              }
+            ],
+            "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>.Type) -> (<<error type>>) -> Tensor<Element>?",
+            "key.typeusr" : "$syXeXecD",
+            "key.usr" : "s:4main6TensorVyXeXecfc"
+          }
+        ],
+        "key.typename" : "Tensor<Element>.Type",
+        "key.typeusr" : "$s4main6TensorVyxGmD",
+        "key.usr" : "s:4main6TensorV"
+      },
+      {
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.bodylength" : 412,
+        "key.bodyoffset" : 1432,
+        "key.doc.column" : 15,
+        "key.doc.declaration" : "public struct Tensor<Element> : AnyTensor where Element : main.TensorNumeric",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"449\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 449,
+        "key.doc.name" : "Tensor",
+        "key.doc.type" : "Class",
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : AnyTensor <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 468,
+        "key.name" : "Tensor",
+        "key.namelength" : 6,
+        "key.nameoffset" : 1387,
+        "key.offset" : 1377,
+        "key.parsed_declaration" : "extension Tensor where Element: NumpyScalarCompatible",
+        "key.parsed_scope.end" : 54,
+        "key.parsed_scope.start" : 42,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func makeNumpyArray() -&gt; PythonObject<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1493
+              }
+            ],
+            "key.bodylength" : 303,
+            "key.bodyoffset" : 1539,
+            "key.doc.column" : 15,
+            "key.doc.comment" : "Make a numpy object from a typed tensor.",
+            "key.doc.declaration" : "public func makeNumpyArray() -> PythonObject",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift\" line=\"46\" column=\"15\"><Name>makeNumpyArray()<\/Name><USR>s:4main6TensorV14makeNumpyArrayyXeXeF<\/USR><Declaration>public func makeNumpyArray() -&gt; PythonObject<\/Declaration><CommentParts><Abstract><Para>Make a numpy object from a typed tensor.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 46,
+            "key.doc.name" : "makeNumpyArray()",
+            "key.doc.type" : "Function",
+            "key.doclength" : 55,
+            "key.docoffset" : 1435,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/PythonConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>makeNumpyArray<\/decl.name>() -&gt; <decl.function.returntype>PythonObject<\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 343,
+            "key.name" : "makeNumpyArray()",
+            "key.namelength" : 16,
+            "key.nameoffset" : 1505,
+            "key.offset" : 1500,
+            "key.parsed_declaration" : "public func makeNumpyArray() -> PythonObject",
+            "key.parsed_scope.end" : 53,
+            "key.parsed_scope.start" : 46,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>) -> () -> <<error type>>",
+            "key.typeusr" : "$syXeXecD",
+            "key.usr" : "s:4main6TensorV14makeNumpyArrayyXeXeF"
+          }
+        ],
+        "key.typename" : "Tensor<Element>.Type",
+        "key.typeusr" : "$s4main6TensorVyxGmD",
+        "key.usr" : "s:4main6TensorV"
+      }
+    ]
+  }
+}
