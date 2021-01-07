@@ -425,11 +425,11 @@
         "key.usr" : "s:4main9DataFrameV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class UntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct UntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 692,
         "key.bodyoffset" : 4475,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 728,
         "key.name" : "DataFrame.UntypedSeries",
@@ -456,7 +456,7 @@
             "key.doc.comment" : " Combine tensors into one tensor. This is useful for GPU batching.\n\n - Parameters:\n   - size: How many tensors to group together.\n   - repeating: How many new columns to be created.\n - Returns: A new dataframe with combined tensors.",
             "key.doc.declaration" : "public func combine(size: Int, repeating: Int? = nil) -> DataFrame",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"124\" column=\"15\"><Name>combine(size:repeating:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesC7combine4size9repeatingACSi_SiSgtF<\/USR><Declaration>public func combine(size: Int, repeating: Int? = nil) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Combine tensors into one tensor. This is useful for GPU batching.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many tensors to group together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many new columns to be created.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe with combined tensors.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"124\" column=\"15\"><Name>combine(size:repeating:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesV7combine4size9repeatingACSi_SiSgtF<\/USR><Declaration>public func combine(size: Int, repeating: Int? = nil) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Combine tensors into one tensor. This is useful for GPU batching.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many tensors to group together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many new columns to be created.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe with combined tensors.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
             "key.doc.line" : 124,
             "key.doc.name" : "combine(size:repeating:)",
             "key.doc.parameters" : [
@@ -501,19 +501,19 @@
             ],
             "key.typename" : "(DataFrame.UntypedSeries) -> (Int, Int?) -> DataFrame",
             "key.typeusr" : "$s4size9repeating4main9DataFrameVSi_SiSgtcD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC7combine4size9repeatingACSi_SiSgtF"
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV7combine4size9repeatingACSi_SiSgtF"
           }
         ],
         "key.typename" : "DataFrame.UntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV13UntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV13UntypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class TypedSeries&lt;Element&gt; : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct TypedSeries&lt;Element&gt; : DataSeries<\/Declaration>",
         "key.bodylength" : 489,
         "key.bodyoffset" : 5228,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 548,
         "key.name" : "DataFrame.TypedSeries",
@@ -540,7 +540,7 @@
             "key.doc.comment" : " Combine tensors into one tensor. This is useful for GPU batching.\n\n - Parameters:\n   - size: How many tensors to group together.\n   - repeating: How many new columns to be created.\n - Returns: A new dataframe with combined tensors.",
             "key.doc.declaration" : "public func combine(size: Int, repeating: Int? = nil) -> DataFrame",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"145\" column=\"15\"><Name>combine(size:repeating:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE7combine4size9repeatingACSi_SiSgtF<\/USR><Declaration>public func combine(size: Int, repeating: Int? = nil) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Combine tensors into one tensor. This is useful for GPU batching.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many tensors to group together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many new columns to be created.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe with combined tensors.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"145\" column=\"15\"><Name>combine(size:repeating:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE7combine4size9repeatingACSi_SiSgtF<\/USR><Declaration>public func combine(size: Int, repeating: Int? = nil) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Combine tensors into one tensor. This is useful for GPU batching.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many tensors to group together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many new columns to be created.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe with combined tensors.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
             "key.doc.line" : 145,
             "key.doc.name" : "combine(size:repeating:)",
             "key.doc.parameters" : [
@@ -585,19 +585,19 @@
             ],
             "key.typename" : "<Element where Element : AnyTensor> (DataFrame.TypedSeries<Element>) -> (Int, Int?) -> DataFrame",
             "key.typeusr" : "$s4size9repeating4main9DataFrameVSi_SiSgtcD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE7combine4size9repeatingACSi_SiSgtF"
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE7combine4size9repeatingACSi_SiSgtF"
           }
         ],
         "key.typename" : "DataFrame.TypedSeries<Element>.Type",
-        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesCy_xGmD",
-        "key.usr" : "s:4main9DataFrameV11TypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesVy_xGmD",
+        "key.usr" : "s:4main9DataFrameV11TypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class ManyUntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct ManyUntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 530,
         "key.bodyoffset" : 5759,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>ManyUntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>ManyUntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 570,
         "key.name" : "DataFrame.ManyUntypedSeries",
@@ -624,7 +624,7 @@
             "key.doc.comment" : " Combine tensors into one tensor. This is useful for GPU batching.\n\n - Parameters:\n   - size: How many tensors to group together.\n   - repeating: How many new columns to be created.\n - Returns: A new dataframe with combined tensors.",
             "key.doc.declaration" : "public func combine(size: Int, repeating: Int? = nil) -> DataFrame",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"160\" column=\"15\"><Name>combine(size:repeating:)<\/Name><USR>s:4main9DataFrameV17ManyUntypedSeriesC7combine4size9repeatingACSi_SiSgtF<\/USR><Declaration>public func combine(size: Int, repeating: Int? = nil) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Combine tensors into one tensor. This is useful for GPU batching.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many tensors to group together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many new columns to be created.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe with combined tensors.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"160\" column=\"15\"><Name>combine(size:repeating:)<\/Name><USR>s:4main9DataFrameV17ManyUntypedSeriesV7combine4size9repeatingACSi_SiSgtF<\/USR><Declaration>public func combine(size: Int, repeating: Int? = nil) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Combine tensors into one tensor. This is useful for GPU batching.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many tensors to group together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many new columns to be created.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe with combined tensors.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
             "key.doc.line" : 160,
             "key.doc.name" : "combine(size:repeating:)",
             "key.doc.parameters" : [
@@ -669,12 +669,12 @@
             ],
             "key.typename" : "(DataFrame.ManyUntypedSeries) -> (Int, Int?) -> DataFrame",
             "key.typeusr" : "$s4size9repeating4main9DataFrameVSi_SiSgtcD",
-            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC7combine4size9repeatingACSi_SiSgtF"
+            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV7combine4size9repeatingACSi_SiSgtF"
           }
         ],
         "key.typename" : "DataFrame.ManyUntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV17ManyUntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV17ManyUntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV"
       },
       {
         "key.annotated_decl" : "<Declaration>public struct DataFrame<\/Declaration>",
@@ -777,11 +777,11 @@
         "key.usr" : "s:4main9DataFrameV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class UntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct UntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 389,
         "key.bodyoffset" : 8211,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 425,
         "key.name" : "DataFrame.UntypedSeries",
@@ -794,7 +794,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toLoadImage() -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toLoadImage() -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -808,14 +808,14 @@
             "key.doc.comment" : "Load images into tensors. It is expected to be called from a column with file paths.",
             "key.doc.declaration" : "public func toLoadImage() -> DataFrame.UntypedSeries",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"215\" column=\"15\"><Name>toLoadImage()<\/Name><USR>s:4main9DataFrameV13UntypedSeriesC11toLoadImageAEyF<\/USR><Declaration>public func toLoadImage() -&gt; DataFrame.UntypedSeries<\/Declaration><CommentParts><Abstract><Para>Load images into tensors. It is expected to be called from a column with file paths.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"215\" column=\"15\"><Name>toLoadImage()<\/Name><USR>s:4main9DataFrameV13UntypedSeriesV11toLoadImageAEyF<\/USR><Declaration>public func toLoadImage() -&gt; DataFrame.UntypedSeries<\/Declaration><CommentParts><Abstract><Para>Load images into tensors. It is expected to be called from a column with file paths.<\/Para><\/Abstract><\/CommentParts><\/Function>",
             "key.doc.line" : 215,
             "key.doc.name" : "toLoadImage()",
             "key.doc.type" : "Function",
             "key.doclength" : 89,
             "key.docoffset" : 8214,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toLoadImage<\/decl.name>() -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toLoadImage<\/decl.name>() -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 287,
             "key.name" : "toLoadImage()",
@@ -829,20 +829,20 @@
 
             ],
             "key.typename" : "(DataFrame.UntypedSeries) -> () -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCycD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC11toLoadImageAEyF"
+            "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVycD",
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV11toLoadImageAEyF"
           }
         ],
         "key.typename" : "DataFrame.UntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV13UntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV13UntypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class TypedSeries&lt;Element&gt; : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct TypedSeries&lt;Element&gt; : DataSeries<\/Declaration>",
         "key.bodylength" : 281,
         "key.bodyoffset" : 8660,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 339,
         "key.name" : "DataFrame.TypedSeries",
@@ -855,7 +855,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toLoadImage() -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toLoadImage() -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -869,14 +869,14 @@
             "key.doc.comment" : "Load images into tensors. It is expected to be called from a column with file paths.",
             "key.doc.declaration" : "public func toLoadImage() -> DataFrame.UntypedSeries",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"226\" column=\"15\"><Name>toLoadImage()<\/Name><USR>s:4main9DataFrameV11TypedSeriesCAASSRszlE11toLoadImageAC07UntypedE0CyF<\/USR><Declaration>public func toLoadImage() -&gt; DataFrame.UntypedSeries<\/Declaration><CommentParts><Abstract><Para>Load images into tensors. It is expected to be called from a column with file paths.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"226\" column=\"15\"><Name>toLoadImage()<\/Name><USR>s:4main9DataFrameV11TypedSeriesVAASSRszlE11toLoadImageAC07UntypedE0VyF<\/USR><Declaration>public func toLoadImage() -&gt; DataFrame.UntypedSeries<\/Declaration><CommentParts><Abstract><Para>Load images into tensors. It is expected to be called from a column with file paths.<\/Para><\/Abstract><\/CommentParts><\/Function>",
             "key.doc.line" : 226,
             "key.doc.name" : "toLoadImage()",
             "key.doc.type" : "Function",
             "key.doclength" : 89,
             "key.docoffset" : 8663,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toLoadImage<\/decl.name>() -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toLoadImage<\/decl.name>() -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 179,
             "key.name" : "toLoadImage()",
@@ -890,13 +890,13 @@
 
             ],
             "key.typename" : "<Element where Element == String> (DataFrame.TypedSeries<Element>) -> () -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCycD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesCAASSRszlE11toLoadImageAC07UntypedE0CyF"
+            "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVycD",
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesVAASSRszlE11toLoadImageAC07UntypedE0VyF"
           }
         ],
         "key.typename" : "DataFrame.TypedSeries<Element>.Type",
-        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesCy_xGmD",
-        "key.usr" : "s:4main9DataFrameV11TypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesVy_xGmD",
+        "key.usr" : "s:4main9DataFrameV11TypedSeriesV"
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -1140,11 +1140,11 @@
         "key.usr" : "s:4main9DataFrameV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class UntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct UntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 584,
         "key.bodyoffset" : 10701,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 620,
         "key.name" : "DataFrame.UntypedSeries",
@@ -1157,7 +1157,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toOneHot&lt;Element&gt;(_ dataType: <Type usr=\"s:4main9DataFrameV13UntypedSeriesC8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF7ElementL_xmfp\">Element<\/Type>.Type, count: <Type usr=\"s:Si\">Int<\/Type>, onval: <Type usr=\"s:Sf\">Float<\/Type> = 1, offval: <Type usr=\"s:Sf\">Float<\/Type> = 0) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toOneHot&lt;Element&gt;(_ dataType: <Type usr=\"s:4main9DataFrameV13UntypedSeriesV8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF7ElementL_xmfp\">Element<\/Type>.Type, count: <Type usr=\"s:Si\">Int<\/Type>, onval: <Type usr=\"s:Sf\">Float<\/Type> = 1, offval: <Type usr=\"s:Sf\">Float<\/Type> = 0) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1171,14 +1171,14 @@
             "key.doc.comment" : "Create one-hot tensors. It is expected to be called from a column with Int.",
             "key.doc.declaration" : "public func toOneHot<Element>(_ dataType: Element.Type, count: Int, onval: Float = 1, offval: Float = 0) -> DataFrame.UntypedSeries where Element : main.TensorNumeric",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"283\" column=\"15\"><Name>toOneHot(_:count:onval:offval:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesC8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF<\/USR><Declaration>public func toOneHot&lt;Element&gt;(_ dataType: Element.Type, count: Int, onval: Float = 1, offval: Float = 0) -&gt; DataFrame.UntypedSeries where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Create one-hot tensors. It is expected to be called from a column with Int.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"283\" column=\"15\"><Name>toOneHot(_:count:onval:offval:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesV8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF<\/USR><Declaration>public func toOneHot&lt;Element&gt;(_ dataType: Element.Type, count: Int, onval: Float = 1, offval: Float = 0) -&gt; DataFrame.UntypedSeries where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Create one-hot tensors. It is expected to be called from a column with Int.<\/Para><\/Abstract><\/CommentParts><\/Function>",
             "key.doc.line" : 283,
             "key.doc.name" : "toOneHot(_:count:onval:offval:)",
             "key.doc.type" : "Function",
             "key.doclength" : 80,
             "key.docoffset" : 10704,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toOneHot<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dataType<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>count<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>onval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toOneHot<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dataType<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>count<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>onval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 491,
             "key.name" : "toOneHot(_:count:onval:offval:)",
@@ -1216,24 +1216,24 @@
                 "key.parsed_scope.start" : 283,
                 "key.typename" : "Element.Type",
                 "key.typeusr" : "$sxmD",
-                "key.usr" : "s:4main9DataFrameV13UntypedSeriesC8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF7ElementL_xmfp"
+                "key.usr" : "s:4main9DataFrameV13UntypedSeriesV8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF7ElementL_xmfp"
               }
             ],
             "key.typename" : "<Element where Element : TensorNumeric> (DataFrame.UntypedSeries) -> (Element.Type, Int, Float, Float) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$s_5count5onval6offval4main9DataFrameV13UntypedSeriesCxm_SiS2ftcAD13TensorNumericRzluD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF"
+            "key.typeusr" : "$s_5count5onval6offval4main9DataFrameV13UntypedSeriesVxm_SiS2ftcAD13TensorNumericRzluD",
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF"
           }
         ],
         "key.typename" : "DataFrame.UntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV13UntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV13UntypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class TypedSeries&lt;Element&gt; : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct TypedSeries&lt;Element&gt; : DataSeries<\/Declaration>",
         "key.bodylength" : 433,
         "key.bodyoffset" : 11342,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 488,
         "key.name" : "DataFrame.TypedSeries",
@@ -1246,7 +1246,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toOneHot&lt;Element&gt;(_ dataType: <Type usr=\"s:4main9DataFrameV11TypedSeriesCAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Cqd__m_SiS2ftAA13TensorNumericRd__lF7ElementL_qd__mfp\">Element<\/Type>.Type, count: <Type usr=\"s:Si\">Int<\/Type>, onval: <Type usr=\"s:Sf\">Float<\/Type> = 1, offval: <Type usr=\"s:Sf\">Float<\/Type> = 0) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toOneHot&lt;Element&gt;(_ dataType: <Type usr=\"s:4main9DataFrameV11TypedSeriesVAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Vqd__m_SiS2ftAA13TensorNumericRd__lF7ElementL_qd__mfp\">Element<\/Type>.Type, count: <Type usr=\"s:Si\">Int<\/Type>, onval: <Type usr=\"s:Sf\">Float<\/Type> = 1, offval: <Type usr=\"s:Sf\">Float<\/Type> = 0) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1260,14 +1260,14 @@
             "key.doc.comment" : "Create one-hot tensors. It is expected to be called from a column with Int.",
             "key.doc.declaration" : "public func toOneHot<Element>(_ dataType: Element.Type, count: Int, onval: Float = 1, offval: Float = 0) -> DataFrame.UntypedSeries where Element : main.TensorNumeric",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"299\" column=\"15\"><Name>toOneHot(_:count:onval:offval:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesCAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Cqd__m_SiS2ftAA13TensorNumericRd__lF<\/USR><Declaration>public func toOneHot&lt;Element&gt;(_ dataType: Element.Type, count: Int, onval: Float = 1, offval: Float = 0) -&gt; DataFrame.UntypedSeries where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Create one-hot tensors. It is expected to be called from a column with Int.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"299\" column=\"15\"><Name>toOneHot(_:count:onval:offval:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesVAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Vqd__m_SiS2ftAA13TensorNumericRd__lF<\/USR><Declaration>public func toOneHot&lt;Element&gt;(_ dataType: Element.Type, count: Int, onval: Float = 1, offval: Float = 0) -&gt; DataFrame.UntypedSeries where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Create one-hot tensors. It is expected to be called from a column with Int.<\/Para><\/Abstract><\/CommentParts><\/Function>",
             "key.doc.line" : 299,
             "key.doc.name" : "toOneHot(_:count:onval:offval:)",
             "key.doc.type" : "Function",
             "key.doclength" : 80,
             "key.docoffset" : 11345,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toOneHot<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesCAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Cqd__m_SiS2ftAA13TensorNumericRd__lF7ElementL_qd__mfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dataType<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesCAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Cqd__m_SiS2ftAA13TensorNumericRd__lF7ElementL_qd__mfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>count<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>onval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toOneHot<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesVAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Vqd__m_SiS2ftAA13TensorNumericRd__lF7ElementL_qd__mfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dataType<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesVAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Vqd__m_SiS2ftAA13TensorNumericRd__lF7ElementL_qd__mfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>count<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>onval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 340,
             "key.name" : "toOneHot(_:count:onval:offval:)",
@@ -1305,17 +1305,17 @@
                 "key.parsed_scope.start" : 299,
                 "key.typename" : "Element.Type",
                 "key.typeusr" : "$sqd__mD",
-                "key.usr" : "s:4main9DataFrameV11TypedSeriesCAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Cqd__m_SiS2ftAA13TensorNumericRd__lF7ElementL_qd__mfp"
+                "key.usr" : "s:4main9DataFrameV11TypedSeriesVAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Vqd__m_SiS2ftAA13TensorNumericRd__lF7ElementL_qd__mfp"
               }
             ],
             "key.typename" : "<Element, Element where Element == Int, Element : TensorNumeric> (DataFrame.TypedSeries<Element>) -> (Element.Type, Int, Float, Float) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$s_5count5onval6offval4main9DataFrameV13UntypedSeriesCqd__m_SiS2ftcAD13TensorNumericRd__luD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesCAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Cqd__m_SiS2ftAA13TensorNumericRd__lF"
+            "key.typeusr" : "$s_5count5onval6offval4main9DataFrameV13UntypedSeriesVqd__m_SiS2ftcAD13TensorNumericRd__luD",
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesVAASiRszlE8toOneHot_5count5onval6offvalAC07UntypedE0Vqd__m_SiS2ftAA13TensorNumericRd__lF"
           }
         ],
         "key.typename" : "DataFrame.TypedSeries<Element>.Type",
-        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesCy_xGmD",
-        "key.usr" : "s:4main9DataFrameV11TypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesVy_xGmD",
+        "key.usr" : "s:4main9DataFrameV11TypedSeriesV"
       },
       {
         "key.annotated_decl" : "<Declaration>public struct DataFrame<\/Declaration>",
@@ -1452,11 +1452,11 @@
         "key.usr" : "s:4main9DataFrameV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class UntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct UntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 404,
         "key.bodyoffset" : 12426,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 440,
         "key.name" : "DataFrame.UntypedSeries",
@@ -1469,7 +1469,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toGPU(_ ordinal: <Type usr=\"s:Si\">Int<\/Type> = 0) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toGPU(_ ordinal: <Type usr=\"s:Si\">Int<\/Type> = 0) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1483,14 +1483,14 @@
             "key.doc.comment" : "Copy tensor to GPU. It is expected to be called from a column of tensors.",
             "key.doc.declaration" : "public func toGPU(_ ordinal: Int = 0) -> DataFrame.UntypedSeries",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"327\" column=\"15\"><Name>toGPU(_:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesC5toGPUyAESiF<\/USR><Declaration>public func toGPU(_ ordinal: Int = 0) -&gt; DataFrame.UntypedSeries<\/Declaration><CommentParts><Abstract><Para>Copy tensor to GPU. It is expected to be called from a column of tensors.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"327\" column=\"15\"><Name>toGPU(_:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesV5toGPUyAESiF<\/USR><Declaration>public func toGPU(_ ordinal: Int = 0) -&gt; DataFrame.UntypedSeries<\/Declaration><CommentParts><Abstract><Para>Copy tensor to GPU. It is expected to be called from a column of tensors.<\/Para><\/Abstract><\/CommentParts><\/Function>",
             "key.doc.line" : 327,
             "key.doc.name" : "toGPU(_:)",
             "key.doc.type" : "Function",
             "key.doclength" : 78,
             "key.docoffset" : 12429,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toGPU<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ordinal<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toGPU<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ordinal<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 313,
             "key.name" : "toGPU(_:)",
@@ -1504,20 +1504,20 @@
 
             ],
             "key.typename" : "(DataFrame.UntypedSeries) -> (Int) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesCSicD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC5toGPUyAESiF"
+            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesVSicD",
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV5toGPUyAESiF"
           }
         ],
         "key.typename" : "DataFrame.UntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV13UntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV13UntypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class TypedSeries&lt;Element&gt; : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct TypedSeries&lt;Element&gt; : DataSeries<\/Declaration>",
         "key.bodylength" : 296,
         "key.bodyoffset" : 12891,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 355,
         "key.name" : "DataFrame.TypedSeries",
@@ -1530,7 +1530,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toGPU(_ ordinal: <Type usr=\"s:Si\">Int<\/Type> = 0) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toGPU(_ ordinal: <Type usr=\"s:Si\">Int<\/Type> = 0) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1544,14 +1544,14 @@
             "key.doc.comment" : "Copy tensor to GPU. It is expected to be called from a column of tensors.",
             "key.doc.declaration" : "public func toGPU(_ ordinal: Int = 0) -> DataFrame.UntypedSeries",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"338\" column=\"15\"><Name>toGPU(_:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE5toGPUyAC07UntypedE0CSiF<\/USR><Declaration>public func toGPU(_ ordinal: Int = 0) -&gt; DataFrame.UntypedSeries<\/Declaration><CommentParts><Abstract><Para>Copy tensor to GPU. It is expected to be called from a column of tensors.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"338\" column=\"15\"><Name>toGPU(_:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE5toGPUyAC07UntypedE0VSiF<\/USR><Declaration>public func toGPU(_ ordinal: Int = 0) -&gt; DataFrame.UntypedSeries<\/Declaration><CommentParts><Abstract><Para>Copy tensor to GPU. It is expected to be called from a column of tensors.<\/Para><\/Abstract><\/CommentParts><\/Function>",
             "key.doc.line" : 338,
             "key.doc.name" : "toGPU(_:)",
             "key.doc.type" : "Function",
             "key.doclength" : 78,
             "key.docoffset" : 12894,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toGPU<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ordinal<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toGPU<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ordinal<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 205,
             "key.name" : "toGPU(_:)",
@@ -1565,13 +1565,13 @@
 
             ],
             "key.typename" : "<Element where Element : AnyTensor> (DataFrame.TypedSeries<Element>) -> (Int) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesCSicD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE5toGPUyAC07UntypedE0CSiF"
+            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesVSicD",
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE5toGPUyAC07UntypedE0VSiF"
           }
         ],
         "key.typename" : "DataFrame.TypedSeries<Element>.Type",
-        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesCy_xGmD",
-        "key.usr" : "s:4main9DataFrameV11TypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesVy_xGmD",
+        "key.usr" : "s:4main9DataFrameV11TypedSeriesV"
       },
       {
         "key.annotated_decl" : "<Declaration>public struct DataFrame<\/Declaration>",
@@ -1803,7 +1803,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public subscript(name: <Type usr=\"s:SS\">String<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type> { get }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public subscript(name: <Type usr=\"s:SS\">String<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type> { get }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1814,7 +1814,7 @@
             "key.bodylength" : 231,
             "key.bodyoffset" : 13952,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>name<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>name<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.function.subscript>",
             "key.kind" : "source.lang.swift.decl.function.subscript",
             "key.length" : 284,
             "key.name" : "subscript(_:)",
@@ -1826,15 +1826,15 @@
             "key.parsed_scope.start" : 364,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0CSicip\">subscript(_:)<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0VSicip\">subscript(_:)<\/RelatedName>"
               }
             ],
             "key.substructure" : [
 
             ],
             "key.typename" : "(String) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesCSScD",
-            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0CSScip"
+            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesVSScD",
+            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0VSScip"
           },
           {
             "key.annotated_decl" : "<Declaration>let tupleIndex: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
@@ -1851,7 +1851,7 @@
             "key.parsed_scope.start" : 365,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
-            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0CSScig10tupleIndexL_Sivp"
+            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0VSScig10tupleIndexL_Sivp"
           },
           {
             "key.annotated_decl" : "<Declaration>let property: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type><\/Declaration>",
@@ -1868,11 +1868,11 @@
             "key.parsed_scope.start" : 366,
             "key.typename" : "DataFrame.ColumnProperty",
             "key.typeusr" : "$s4main9DataFrameV14ColumnPropertyVD",
-            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0CSScig8propertyL_AC14ColumnPropertyVvp"
+            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0VSScig8propertyL_AC14ColumnPropertyVvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public subscript(tupleIndex: <Type usr=\"s:Si\">Int<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type> { get }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public subscript(tupleIndex: <Type usr=\"s:Si\">Int<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type> { get }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1883,7 +1883,7 @@
             "key.bodylength" : 240,
             "key.bodyoffset" : 14249,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>tupleIndex<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>tupleIndex<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.function.subscript>",
             "key.kind" : "source.lang.swift.decl.function.subscript",
             "key.length" : 296,
             "key.name" : "subscript(_:)",
@@ -1895,15 +1895,15 @@
             "key.parsed_scope.start" : 370,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0CSScip\">subscript(_:)<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0VSScip\">subscript(_:)<\/RelatedName>"
               }
             ],
             "key.substructure" : [
 
             ],
             "key.typename" : "(Int) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesCSicD",
-            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0CSicip"
+            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesVSicD",
+            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0VSicip"
           },
           {
             "key.annotated_decl" : "<Declaration>let property: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type><\/Declaration>",
@@ -1920,7 +1920,7 @@
             "key.parsed_scope.start" : 372,
             "key.typename" : "DataFrame.ColumnProperty",
             "key.typeusr" : "$s4main9DataFrameV14ColumnPropertyVD",
-            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0CSicig8propertyL_AC14ColumnPropertyVvp"
+            "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultVyAC0eF0VSicig8propertyL_AC14ColumnPropertyVvp"
           }
         ],
         "key.typename" : "DataFrame.ManyUntypedSeriesTensorResult.Type",
@@ -1928,11 +1928,11 @@
         "key.usr" : "s:4main9DataFrameV29ManyUntypedSeriesTensorResultV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class ManyUntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct ManyUntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 834,
         "key.bodyoffset" : 14533,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>ManyUntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>ManyUntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 874,
         "key.name" : "DataFrame.ManyUntypedSeries",
@@ -1982,7 +1982,7 @@
                 "key.parsed_scope.start" : 383,
                 "key.typename" : "[Int32]",
                 "key.typeusr" : "$sSays5Int32VGD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC5toGPUyAC0deF12TensorResultVSiF10inputIndexL_Says5Int32VGvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV5toGPUyAC0deF12TensorResultVSiF10inputIndexL_Says5Int32VGvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let _dataframe: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
@@ -1999,7 +1999,7 @@
                 "key.parsed_scope.start" : 384,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC5toGPUyAC0deF12TensorResultVSiF10_dataframeL_s13OpaquePointerVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV5toGPUyAC0deF12TensorResultVSiF10_dataframeL_s13OpaquePointerVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let tupleIndex: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -2016,7 +2016,7 @@
                 "key.parsed_scope.start" : 385,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC5toGPUyAC0deF12TensorResultVSiF10tupleIndexL_Xevp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV5toGPUyAC0deF12TensorResultVSiF10tupleIndexL_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let copyIndex: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -2033,7 +2033,7 @@
                 "key.parsed_scope.start" : 387,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC5toGPUyAC0deF12TensorResultVSiF9copyIndexL_Xevp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV5toGPUyAC0deF12TensorResultVSiF9copyIndexL_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var namedIndex: [<Type usr=\"s:SS\">String<\/Type> : <Type usr=\"s:Si\">Int<\/Type>]<\/Declaration>",
@@ -2050,17 +2050,17 @@
                 "key.parsed_scope.start" : 389,
                 "key.typename" : "[String : Int]",
                 "key.typeusr" : "$sSDySSSiGD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC5toGPUyAC0deF12TensorResultVSiF10namedIndexL_SDySSSiGvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV5toGPUyAC0deF12TensorResultVSiF10namedIndexL_SDySSSiGvp"
               }
             ],
             "key.typename" : "(DataFrame.ManyUntypedSeries) -> (Int) -> DataFrame.ManyUntypedSeriesTensorResult",
             "key.typeusr" : "$sy4main9DataFrameV29ManyUntypedSeriesTensorResultVSicD",
-            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC5toGPUyAC0deF12TensorResultVSiF"
+            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV5toGPUyAC0deF12TensorResultVSiF"
           }
         ],
         "key.typename" : "DataFrame.ManyUntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV17ManyUntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV17ManyUntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV"
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -2268,11 +2268,11 @@
         "key.usr" : "s:4main9DataFrameV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class UntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct UntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 434,
         "key.bodyoffset" : 16227,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 470,
         "key.name" : "DataFrame.UntypedSeries",
@@ -2285,7 +2285,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toOneSquared(maxLength: <Type usr=\"s:Si\">Int<\/Type>, variableLength: <Type usr=\"s:Sb\">Bool<\/Type> = true) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toOneSquared(maxLength: <Type usr=\"s:Si\">Int<\/Type>, variableLength: <Type usr=\"s:Sb\">Bool<\/Type> = true) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -2296,7 +2296,7 @@
             "key.bodylength" : 331,
             "key.bodyoffset" : 16328,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toOneSquared<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>maxLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>variableLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = true<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toOneSquared<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>maxLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>variableLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = true<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 423,
             "key.name" : "toOneSquared(maxLength:variableLength:)",
@@ -2310,20 +2310,20 @@
 
             ],
             "key.typename" : "(DataFrame.UntypedSeries) -> (Int, Bool) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$s9maxLength08variableB04main9DataFrameV13UntypedSeriesCSi_SbtcD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC12toOneSquared9maxLength08variableJ0AESi_SbtF"
+            "key.typeusr" : "$s9maxLength08variableB04main9DataFrameV13UntypedSeriesVSi_SbtcD",
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV12toOneSquared9maxLength08variableJ0AESi_SbtF"
           }
         ],
         "key.typename" : "DataFrame.UntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV13UntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV13UntypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class TypedSeries&lt;Element&gt; : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct TypedSeries&lt;Element&gt; : DataSeries<\/Declaration>",
         "key.bodylength" : 326,
         "key.bodyoffset" : 16722,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 385,
         "key.name" : "DataFrame.TypedSeries",
@@ -2336,7 +2336,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toOneSquared(maxLength: <Type usr=\"s:Si\">Int<\/Type>, variableLength: <Type usr=\"s:Sb\">Bool<\/Type> = true) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toOneSquared(maxLength: <Type usr=\"s:Si\">Int<\/Type>, variableLength: <Type usr=\"s:Sb\">Bool<\/Type> = true) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -2347,7 +2347,7 @@
             "key.bodylength" : 223,
             "key.bodyoffset" : 16823,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toOneSquared<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>maxLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>variableLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = true<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toOneSquared<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>maxLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>variableLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = true<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 315,
             "key.name" : "toOneSquared(maxLength:variableLength:)",
@@ -2361,13 +2361,13 @@
 
             ],
             "key.typename" : "<Element where Element : AnyTensor> (DataFrame.TypedSeries<Element>) -> (Int, Bool) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$s9maxLength08variableB04main9DataFrameV13UntypedSeriesCSi_SbtcD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE12toOneSquared9maxLength08variableL0AC07UntypedE0CSi_SbtF"
+            "key.typeusr" : "$s9maxLength08variableB04main9DataFrameV13UntypedSeriesVSi_SbtcD",
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE12toOneSquared9maxLength08variableL0AC07UntypedE0VSi_SbtF"
           }
         ],
         "key.typename" : "DataFrame.TypedSeries<Element>.Type",
-        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesCy_xGmD",
-        "key.usr" : "s:4main9DataFrameV11TypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesVy_xGmD",
+        "key.usr" : "s:4main9DataFrameV11TypedSeriesV"
       },
       {
         "key.annotated_decl" : "<Declaration>public struct DataFrame<\/Declaration>",
@@ -2504,11 +2504,11 @@
         "key.usr" : "s:4main9DataFrameV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class UntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct UntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 905,
         "key.bodyoffset" : 17691,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 941,
         "key.name" : "DataFrame.UntypedSeries",
@@ -2521,7 +2521,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toTruncate(_ other: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toTruncate(_ other: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -2532,7 +2532,7 @@
             "key.bodylength" : 368,
             "key.bodyoffset" : 17779,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTruncate<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>other<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTruncate<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>other<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 447,
             "key.name" : "toTruncate(_:)",
@@ -2544,19 +2544,19 @@
             "key.parsed_scope.start" : 462,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV13UntypedSeriesC10toTruncateyAeC05TypedE0Cy_xGAA9AnyTensorRzlF\">toTruncate&lt;Element&gt;(_: DataFrame.TypedSeries&lt;Element&gt;) -&gt; DataFrame.UntypedSeries where Element : AnyTensor<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV13UntypedSeriesV10toTruncateyAeC05TypedE0Vy_xGAA9AnyTensorRzlF\">toTruncate&lt;Element&gt;(_: DataFrame.TypedSeries&lt;Element&gt;) -&gt; DataFrame.UntypedSeries where Element : AnyTensor<\/RelatedName>"
               }
             ],
             "key.substructure" : [
 
             ],
             "key.typename" : "(DataFrame.UntypedSeries) -> (DataFrame.UntypedSeries) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesCAEcD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC10toTruncateyA2EF"
+            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesVAEcD",
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV10toTruncateyA2EF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toTruncate&lt;Element&gt;(_ other: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV11TypedSeriesC\">TypedSeries<\/Type>&lt;<Type usr=\"s:4main9DataFrameV13UntypedSeriesC10toTruncateyAeC05TypedE0Cy_xGAA9AnyTensorRzlF7ElementL_xmfp\">Element<\/Type>&gt;) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toTruncate&lt;Element&gt;(_ other: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV11TypedSeriesV\">TypedSeries<\/Type>&lt;<Type usr=\"s:4main9DataFrameV13UntypedSeriesV10toTruncateyAeC05TypedE0Vy_xGAA9AnyTensorRzlF7ElementL_xmfp\">Element<\/Type>&gt;) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -2567,7 +2567,7 @@
             "key.bodylength" : 324,
             "key.bodyoffset" : 18270,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTruncate<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC10toTruncateyAeC05TypedE0Cy_xGAA9AnyTensorRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>other<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV11TypedSeriesC\">TypedSeries<\/ref.class>&lt;<ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC10toTruncateyAeC05TypedE0Cy_xGAA9AnyTensorRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTruncate<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV10toTruncateyAeC05TypedE0Vy_xGAA9AnyTensorRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>other<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV11TypedSeriesV\">TypedSeries<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV10toTruncateyAeC05TypedE0Vy_xGAA9AnyTensorRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 436,
             "key.name" : "toTruncate(_:)",
@@ -2579,7 +2579,7 @@
             "key.parsed_scope.start" : 474,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV13UntypedSeriesC10toTruncateyA2EF\">toTruncate(_: DataFrame.UntypedSeries) -&gt; DataFrame.UntypedSeries<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV13UntypedSeriesV10toTruncateyA2EF\">toTruncate(_: DataFrame.UntypedSeries) -&gt; DataFrame.UntypedSeries<\/RelatedName>"
               }
             ],
             "key.substructure" : [
@@ -2610,24 +2610,24 @@
                 "key.parsed_scope.start" : 474,
                 "key.typename" : "Element.Type",
                 "key.typeusr" : "$sxmD",
-                "key.usr" : "s:4main9DataFrameV13UntypedSeriesC10toTruncateyAeC05TypedE0Cy_xGAA9AnyTensorRzlF7ElementL_xmfp"
+                "key.usr" : "s:4main9DataFrameV13UntypedSeriesV10toTruncateyAeC05TypedE0Vy_xGAA9AnyTensorRzlF7ElementL_xmfp"
               }
             ],
             "key.typename" : "<Element where Element : AnyTensor> (DataFrame.UntypedSeries) -> (DataFrame.TypedSeries<Element>) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesCAC05TypedE0Cy_xGcAA9AnyTensorRzluD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC10toTruncateyAeC05TypedE0Cy_xGAA9AnyTensorRzlF"
+            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesVAC05TypedE0Vy_xGcAA9AnyTensorRzluD",
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV10toTruncateyAeC05TypedE0Vy_xGAA9AnyTensorRzlF"
           }
         ],
         "key.typename" : "DataFrame.UntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV13UntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV13UntypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class TypedSeries&lt;Element&gt; : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct TypedSeries&lt;Element&gt; : DataSeries<\/Declaration>",
         "key.bodylength" : 771,
         "key.bodyoffset" : 18657,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 830,
         "key.name" : "DataFrame.TypedSeries",
@@ -2640,7 +2640,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toTruncate(_ other: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toTruncate(_ other: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -2651,7 +2651,7 @@
             "key.bodylength" : 333,
             "key.bodyoffset" : 18745,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTruncate<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>other<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTruncate<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>other<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 412,
             "key.name" : "toTruncate(_:)",
@@ -2663,19 +2663,19 @@
             "key.parsed_scope.start" : 488,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0CAEy_qd__GAaFRd__lF\">toTruncate&lt;OtherElement&gt;(_: DataFrame.TypedSeries&lt;OtherElement&gt;) -&gt; DataFrame.UntypedSeries where OtherElement : AnyTensor<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0VAEy_qd__GAaFRd__lF\">toTruncate&lt;OtherElement&gt;(_: DataFrame.TypedSeries&lt;OtherElement&gt;) -&gt; DataFrame.UntypedSeries where OtherElement : AnyTensor<\/RelatedName>"
               }
             ],
             "key.substructure" : [
 
             ],
             "key.typename" : "<Element where Element : AnyTensor> (DataFrame.TypedSeries<Element>) -> (DataFrame.UntypedSeries) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesCAEcD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0CAIF"
+            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesVAEcD",
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0VAIF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toTruncate&lt;OtherElement&gt;(_ other: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV11TypedSeriesC\">TypedSeries<\/Type>&lt;<Type usr=\"s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0CAEy_qd__GAaFRd__lF12OtherElementL_qd__mfp\">OtherElement<\/Type>&gt;) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type> where OtherElement : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toTruncate&lt;OtherElement&gt;(_ other: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV11TypedSeriesV\">TypedSeries<\/Type>&lt;<Type usr=\"s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0VAEy_qd__GAaFRd__lF12OtherElementL_qd__mfp\">OtherElement<\/Type>&gt;) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type> where OtherElement : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -2686,7 +2686,7 @@
             "key.bodylength" : 216,
             "key.bodyoffset" : 19210,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTruncate<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0CAEy_qd__GAaFRd__lF12OtherElementL_qd__mfp\"><decl.generic_type_param.name>OtherElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>other<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV11TypedSeriesC\">TypedSeries<\/ref.class>&lt;<ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0CAEy_qd__GAaFRd__lF12OtherElementL_qd__mfp\">OtherElement<\/ref.generic_type_param>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>OtherElement : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTruncate<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0VAEy_qd__GAaFRd__lF12OtherElementL_qd__mfp\"><decl.generic_type_param.name>OtherElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>other<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV11TypedSeriesV\">TypedSeries<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0VAEy_qd__GAaFRd__lF12OtherElementL_qd__mfp\">OtherElement<\/ref.generic_type_param>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>OtherElement : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 338,
             "key.name" : "toTruncate(_:)",
@@ -2698,7 +2698,7 @@
             "key.parsed_scope.start" : 497,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0CAIF\">toTruncate(_: DataFrame.UntypedSeries) -&gt; DataFrame.UntypedSeries<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0VAIF\">toTruncate(_: DataFrame.UntypedSeries) -&gt; DataFrame.UntypedSeries<\/RelatedName>"
               }
             ],
             "key.substructure" : [
@@ -2729,17 +2729,17 @@
                 "key.parsed_scope.start" : 497,
                 "key.typename" : "OtherElement.Type",
                 "key.typeusr" : "$sqd__mD",
-                "key.usr" : "s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0CAEy_qd__GAaFRd__lF12OtherElementL_qd__mfp"
+                "key.usr" : "s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0VAEy_qd__GAaFRd__lF12OtherElementL_qd__mfp"
               }
             ],
             "key.typename" : "<Element, OtherElement where Element : AnyTensor, OtherElement : AnyTensor> (DataFrame.TypedSeries<Element>) -> (DataFrame.TypedSeries<OtherElement>) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesCAC05TypedE0Cy_qd__GcAA9AnyTensorRd__luD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0CAEy_qd__GAaFRd__lF"
+            "key.typeusr" : "$sy4main9DataFrameV13UntypedSeriesVAC05TypedE0Vy_qd__GcAA9AnyTensorRd__luD",
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE10toTruncateyAC07UntypedE0VAEy_qd__GAaFRd__lF"
           }
         ],
         "key.typename" : "DataFrame.TypedSeries<Element>.Type",
-        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesCy_xGmD",
-        "key.usr" : "s:4main9DataFrameV11TypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesVy_xGmD",
+        "key.usr" : "s:4main9DataFrameV11TypedSeriesV"
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -3635,11 +3635,11 @@
         "key.usr" : "s:4main9DataFrameV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class UntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct UntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 1118,
         "key.bodyoffset" : 23224,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1154,
         "key.name" : "DataFrame.UntypedSeries",
@@ -3652,7 +3652,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toImageJitter&lt;Element&gt;(_ ofType: <Type usr=\"s:4main9DataFrameV13UntypedSeriesC13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF7ElementL_xmfp\">Element<\/Type>.Type, size: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO4SizeV\">Size<\/Type>, resize: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO6ResizeV\">Resize<\/Type>, contrast: <Type usr=\"s:Sf\">Float<\/Type> = 0, saturation: <Type usr=\"s:Sf\">Float<\/Type> = 0, brightness: <Type usr=\"s:Sf\">Float<\/Type> = 0, lighting: <Type usr=\"s:Sf\">Float<\/Type> = 0, aspectRatio: <Type usr=\"s:Sf\">Float<\/Type> = 0, symmetric: <Type usr=\"s:Sb\">Bool<\/Type> = false, seed: <Type usr=\"s:Si\">Int<\/Type> = 0, centerCrop: <Type usr=\"s:Sb\">Bool<\/Type> = false, offset: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO6OffsetV\">Offset<\/Type> = ImageJitter.Offset(x: 0, y: 0), normalize: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO9NormalizeV\">Normalize<\/Type> = ImageJitter.Normalize(mean: [])) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toImageJitter&lt;Element&gt;(_ ofType: <Type usr=\"s:4main9DataFrameV13UntypedSeriesV13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF7ElementL_xmfp\">Element<\/Type>.Type, size: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO4SizeV\">Size<\/Type>, resize: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO6ResizeV\">Resize<\/Type>, contrast: <Type usr=\"s:Sf\">Float<\/Type> = 0, saturation: <Type usr=\"s:Sf\">Float<\/Type> = 0, brightness: <Type usr=\"s:Sf\">Float<\/Type> = 0, lighting: <Type usr=\"s:Sf\">Float<\/Type> = 0, aspectRatio: <Type usr=\"s:Sf\">Float<\/Type> = 0, symmetric: <Type usr=\"s:Sb\">Bool<\/Type> = false, seed: <Type usr=\"s:Si\">Int<\/Type> = 0, centerCrop: <Type usr=\"s:Sb\">Bool<\/Type> = false, offset: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO6OffsetV\">Offset<\/Type> = ImageJitter.Offset(x: 0, y: 0), normalize: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO9NormalizeV\">Normalize<\/Type> = ImageJitter.Normalize(mean: [])) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -3666,14 +3666,14 @@
             "key.doc.comment" : "Apply some jitter to loaded images.",
             "key.doc.declaration" : "public func toImageJitter<Element>(_ ofType: Element.Type, size: ImageJitter.Size, resize: ImageJitter.Resize, contrast: Float = 0, saturation: Float = 0, brightness: Float = 0, lighting: Float = 0, aspectRatio: Float = 0, symmetric: Bool = false, seed: Int = 0, centerCrop: Bool = false, offset: ImageJitter.Offset = ImageJitter.Offset(x: 0, y: 0), normalize: ImageJitter.Normalize = ImageJitter.Normalize(mean: [])) -> DataFrame.UntypedSeries where Element : main.TensorNumeric",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"644\" column=\"15\"><Name>toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesC13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF<\/USR><Declaration>public func toImageJitter&lt;Element&gt;(_ ofType: Element.Type, size: ImageJitter.Size, resize: ImageJitter.Resize, contrast: Float = 0, saturation: Float = 0, brightness: Float = 0, lighting: Float = 0, aspectRatio: Float = 0, symmetric: Bool = false, seed: Int = 0, centerCrop: Bool = false, offset: ImageJitter.Offset = ImageJitter.Offset(x: 0, y: 0), normalize: ImageJitter.Normalize = ImageJitter.Normalize(mean: [])) -&gt; DataFrame.UntypedSeries where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Apply some jitter to loaded images.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"644\" column=\"15\"><Name>toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesV13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF<\/USR><Declaration>public func toImageJitter&lt;Element&gt;(_ ofType: Element.Type, size: ImageJitter.Size, resize: ImageJitter.Resize, contrast: Float = 0, saturation: Float = 0, brightness: Float = 0, lighting: Float = 0, aspectRatio: Float = 0, symmetric: Bool = false, seed: Int = 0, centerCrop: Bool = false, offset: ImageJitter.Offset = ImageJitter.Offset(x: 0, y: 0), normalize: ImageJitter.Normalize = ImageJitter.Normalize(mean: [])) -&gt; DataFrame.UntypedSeries where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Apply some jitter to loaded images.<\/Para><\/Abstract><\/CommentParts><\/Function>",
             "key.doc.line" : 644,
             "key.doc.name" : "toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)",
             "key.doc.type" : "Function",
             "key.doclength" : 40,
             "key.docoffset" : 23227,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toImageJitter<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ofType<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO4SizeV\">Size<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>resize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO6ResizeV\">Resize<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>contrast<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>saturation<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>brightness<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>lighting<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>aspectRatio<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>symmetric<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>centerCrop<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO6OffsetV\">Offset<\/ref.struct><\/decl.var.parameter.type> = ImageJitter.Offset(x: 0, y: 0)<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>normalize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO9NormalizeV\">Normalize<\/ref.struct><\/decl.var.parameter.type> = ImageJitter.Normalize(mean: [])<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toImageJitter<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ofType<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO4SizeV\">Size<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>resize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO6ResizeV\">Resize<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>contrast<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>saturation<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>brightness<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>lighting<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>aspectRatio<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>symmetric<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>centerCrop<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO6OffsetV\">Offset<\/ref.struct><\/decl.var.parameter.type> = ImageJitter.Offset(x: 0, y: 0)<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>normalize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO9NormalizeV\">Normalize<\/ref.struct><\/decl.var.parameter.type> = ImageJitter.Normalize(mean: [])<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1065,
             "key.name" : "toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)",
@@ -3711,24 +3711,24 @@
                 "key.parsed_scope.start" : 644,
                 "key.typename" : "Element.Type",
                 "key.typeusr" : "$sxmD",
-                "key.usr" : "s:4main9DataFrameV13UntypedSeriesC13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF7ElementL_xmfp"
+                "key.usr" : "s:4main9DataFrameV13UntypedSeriesV13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF7ElementL_xmfp"
               }
             ],
             "key.typename" : "<Element where Element : TensorNumeric> (DataFrame.UntypedSeries) -> (Element.Type, ImageJitter.Size, ImageJitter.Resize, Float, Float, Float, Float, Float, Bool, Int, Bool, ImageJitter.Offset, ImageJitter.Normalize) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$s_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalize4main9DataFrameV13UntypedSeriesCxm_AM11ImageJitterO4SizeVAS6ResizeVS5fSbSiSbAS6OffsetVAS9NormalizeVtcAM13TensorNumericRzluD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF"
+            "key.typeusr" : "$s_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalize4main9DataFrameV13UntypedSeriesVxm_AM11ImageJitterO4SizeVAS6ResizeVS5fSbSiSbAS6OffsetVAS9NormalizeVtcAM13TensorNumericRzluD",
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF"
           }
         ],
         "key.typename" : "DataFrame.UntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV13UntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV13UntypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class TypedSeries&lt;Element&gt; : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct TypedSeries&lt;Element&gt; : DataSeries<\/Declaration>",
         "key.bodylength" : 1010,
         "key.bodyoffset" : 24403,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1069,
         "key.name" : "DataFrame.TypedSeries",
@@ -3741,7 +3741,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toImageJitter&lt;Element&gt;(_ ofType: <Type usr=\"s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Cqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF7ElementL_qd__mfp\">Element<\/Type>.Type, size: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO4SizeV\">Size<\/Type>, resize: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO6ResizeV\">Resize<\/Type>, contrast: <Type usr=\"s:Sf\">Float<\/Type> = 0, saturation: <Type usr=\"s:Sf\">Float<\/Type> = 0, brightness: <Type usr=\"s:Sf\">Float<\/Type> = 0, lighting: <Type usr=\"s:Sf\">Float<\/Type> = 0, aspectRatio: <Type usr=\"s:Sf\">Float<\/Type> = 0, symmetric: <Type usr=\"s:Sb\">Bool<\/Type> = false, seed: <Type usr=\"s:Si\">Int<\/Type> = 0, centerCrop: <Type usr=\"s:Sb\">Bool<\/Type> = false, offset: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO6OffsetV\">Offset<\/Type> = ImageJitter.Offset(x: 0, y: 0), normalize: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO9NormalizeV\">Normalize<\/Type> = ImageJitter.Normalize(mean: [])) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toImageJitter&lt;Element&gt;(_ ofType: <Type usr=\"s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Vqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF7ElementL_qd__mfp\">Element<\/Type>.Type, size: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO4SizeV\">Size<\/Type>, resize: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO6ResizeV\">Resize<\/Type>, contrast: <Type usr=\"s:Sf\">Float<\/Type> = 0, saturation: <Type usr=\"s:Sf\">Float<\/Type> = 0, brightness: <Type usr=\"s:Sf\">Float<\/Type> = 0, lighting: <Type usr=\"s:Sf\">Float<\/Type> = 0, aspectRatio: <Type usr=\"s:Sf\">Float<\/Type> = 0, symmetric: <Type usr=\"s:Sb\">Bool<\/Type> = false, seed: <Type usr=\"s:Si\">Int<\/Type> = 0, centerCrop: <Type usr=\"s:Sb\">Bool<\/Type> = false, offset: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO6OffsetV\">Offset<\/Type> = ImageJitter.Offset(x: 0, y: 0), normalize: <Type usr=\"s:4main11ImageJitterO\">ImageJitter<\/Type>.<Type usr=\"s:4main11ImageJitterO9NormalizeV\">Normalize<\/Type> = ImageJitter.Normalize(mean: [])) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -3755,14 +3755,14 @@
             "key.doc.comment" : "Apply some jitter to loaded images.",
             "key.doc.declaration" : "public func toImageJitter<Element>(_ ofType: Element.Type, size: ImageJitter.Size, resize: ImageJitter.Resize, contrast: Float = 0, saturation: Float = 0, brightness: Float = 0, lighting: Float = 0, aspectRatio: Float = 0, symmetric: Bool = false, seed: Int = 0, centerCrop: Bool = false, offset: ImageJitter.Offset = ImageJitter.Offset(x: 0, y: 0), normalize: ImageJitter.Normalize = ImageJitter.Normalize(mean: [])) -> DataFrame.UntypedSeries where Element : main.TensorNumeric",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"668\" column=\"15\"><Name>toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Cqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF<\/USR><Declaration>public func toImageJitter&lt;Element&gt;(_ ofType: Element.Type, size: ImageJitter.Size, resize: ImageJitter.Resize, contrast: Float = 0, saturation: Float = 0, brightness: Float = 0, lighting: Float = 0, aspectRatio: Float = 0, symmetric: Bool = false, seed: Int = 0, centerCrop: Bool = false, offset: ImageJitter.Offset = ImageJitter.Offset(x: 0, y: 0), normalize: ImageJitter.Normalize = ImageJitter.Normalize(mean: [])) -&gt; DataFrame.UntypedSeries where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Apply some jitter to loaded images.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift\" line=\"668\" column=\"15\"><Name>toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Vqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF<\/USR><Declaration>public func toImageJitter&lt;Element&gt;(_ ofType: Element.Type, size: ImageJitter.Size, resize: ImageJitter.Resize, contrast: Float = 0, saturation: Float = 0, brightness: Float = 0, lighting: Float = 0, aspectRatio: Float = 0, symmetric: Bool = false, seed: Int = 0, centerCrop: Bool = false, offset: ImageJitter.Offset = ImageJitter.Offset(x: 0, y: 0), normalize: ImageJitter.Normalize = ImageJitter.Normalize(mean: [])) -&gt; DataFrame.UntypedSeries where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Apply some jitter to loaded images.<\/Para><\/Abstract><\/CommentParts><\/Function>",
             "key.doc.line" : 668,
             "key.doc.name" : "toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)",
             "key.doc.type" : "Function",
             "key.doclength" : 40,
             "key.docoffset" : 24406,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toImageJitter<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Cqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF7ElementL_qd__mfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ofType<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Cqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF7ElementL_qd__mfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO4SizeV\">Size<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>resize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO6ResizeV\">Resize<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>contrast<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>saturation<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>brightness<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>lighting<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>aspectRatio<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>symmetric<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>centerCrop<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO6OffsetV\">Offset<\/ref.struct><\/decl.var.parameter.type> = ImageJitter.Offset(x: 0, y: 0)<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>normalize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO9NormalizeV\">Normalize<\/ref.struct><\/decl.var.parameter.type> = ImageJitter.Normalize(mean: [])<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.class usr=\"s:4main9DataFrameV13UntypedSeriesC\">UntypedSeries<\/ref.class><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toImageJitter<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Vqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF7ElementL_qd__mfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ofType<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Vqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF7ElementL_qd__mfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO4SizeV\">Size<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>resize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO6ResizeV\">Resize<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>contrast<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>saturation<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>brightness<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>lighting<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>aspectRatio<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>symmetric<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>centerCrop<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO6OffsetV\">Offset<\/ref.struct><\/decl.var.parameter.type> = ImageJitter.Offset(x: 0, y: 0)<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>normalize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main11ImageJitterO\">ImageJitter<\/ref.enum>.<ref.struct usr=\"s:4main11ImageJitterO9NormalizeV\">Normalize<\/ref.struct><\/decl.var.parameter.type> = ImageJitter.Normalize(mean: [])<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct>.<ref.struct usr=\"s:4main9DataFrameV13UntypedSeriesV\">UntypedSeries<\/ref.struct><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 957,
             "key.name" : "toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)",
@@ -3800,17 +3800,17 @@
                 "key.parsed_scope.start" : 668,
                 "key.typename" : "Element.Type",
                 "key.typeusr" : "$sqd__mD",
-                "key.usr" : "s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Cqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF7ElementL_qd__mfp"
+                "key.usr" : "s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Vqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF7ElementL_qd__mfp"
               }
             ],
             "key.typename" : "<Element, Element where Element : AnyTensor, Element : TensorNumeric> (DataFrame.TypedSeries<Element>) -> (Element.Type, ImageJitter.Size, ImageJitter.Resize, Float, Float, Float, Float, Float, Bool, Int, Bool, ImageJitter.Offset, ImageJitter.Normalize) -> DataFrame.UntypedSeries",
-            "key.typeusr" : "$s_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalize4main9DataFrameV13UntypedSeriesCqd__m_AM11ImageJitterO4SizeVAS6ResizeVS5fSbSiSbAS6OffsetVAS9NormalizeVtcAM13TensorNumericRd__luD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesCA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Cqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF"
+            "key.typeusr" : "$s_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalize4main9DataFrameV13UntypedSeriesVqd__m_AM11ImageJitterO4SizeVAS6ResizeVS5fSbSiSbAS6OffsetVAS9NormalizeVtcAM13TensorNumericRd__luD",
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesVA2A9AnyTensorRzlE13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAC07UntypedE0Vqd__m_AA0iJ0O4SizeVAW6ResizeVS5fSbSiSbAW6OffsetVAW9NormalizeVtAA0G7NumericRd__lF"
           }
         ],
         "key.typename" : "DataFrame.TypedSeries<Element>.Type",
-        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesCy_xGmD",
-        "key.usr" : "s:4main9DataFrameV11TypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesVy_xGmD",
+        "key.usr" : "s:4main9DataFrameV11TypedSeriesV"
       }
     ]
   }

@@ -606,11 +606,11 @@
         "key.usr" : "s:4main9DataFrameV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class UntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct UntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 1977,
         "key.bodyoffset" : 7461,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>UntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 2013,
         "key.name" : "DataFrame.UntypedSeries",
@@ -623,7 +623,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func sample&lt;T, U&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([<Type usr=\"s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1TL_xmfp\">T<\/Type>]) -&gt; <Type usr=\"s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1UL_q_mfp\">U<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func sample&lt;T, U&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([<Type usr=\"s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1TL_xmfp\">T<\/Type>]) -&gt; <Type usr=\"s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1UL_q_mfp\">U<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -637,7 +637,7 @@
             "key.doc.comment" : " Sample existing column to create a new dataframe.\n\n - Parameters:\n   - size: How many rows to be sampled together.\n   - repeating: Will we repeat the sampling to create more columns?\n   - sampler: The sampling function, for example, averaging, max, first, last etc.\n - Returns: A new dataframe.",
             "key.doc.declaration" : "public func sample<T, U>(size: Int, repeating: Int? = nil, sampler: @escaping ([T]) -> U) -> DataFrame",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"195\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF<\/USR><Declaration>public func sample&lt;T, U&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([T]) -&gt; U) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing column to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"195\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF<\/USR><Declaration>public func sample&lt;T, U&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([T]) -&gt; U) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing column to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
             "key.doc.line" : 195,
             "key.doc.name" : "sample(size:repeating:sampler:)",
             "key.doc.parameters" : [
@@ -675,7 +675,7 @@
             "key.doclength" : 333,
             "key.docoffset" : 7464,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1UL_q_mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1TL_xmfp\">T<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1UL_q_mfp\">U<\/ref.generic_type_param><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1UL_q_mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1TL_xmfp\">T<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1UL_q_mfp\">U<\/ref.generic_type_param><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1630,
             "key.name" : "sample(size:repeating:sampler:)",
@@ -701,7 +701,7 @@
                 "key.parsed_scope.start" : 195,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
-                "key.usr" : "s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1TL_xmfp"
+                "key.usr" : "s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1TL_xmfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U<\/Declaration>",
@@ -718,7 +718,7 @@
                 "key.parsed_scope.start" : 195,
                 "key.typename" : "U.Type",
                 "key.typeusr" : "$sq_mD",
-                "key.usr" : "s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1UL_q_mfp"
+                "key.usr" : "s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF1UL_q_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let wrappedSampler: ([<Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type>]) -&gt; <Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type><\/Declaration>",
@@ -735,24 +735,24 @@
                 "key.parsed_scope.start" : 204,
                 "key.typename" : "([AnyObject]) -> AnyObject",
                 "key.typeusr" : "$syyXlSayyXlGcD",
-                "key.usr" : "s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF14wrappedSamplerL_yyXlSayyXlGcvp"
+                "key.usr" : "s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF14wrappedSamplerL_yyXlSayyXlGcvp"
               }
             ],
             "key.typename" : "<T, U> (DataFrame.UntypedSeries) -> (Int, Int?, @escaping ([T]) -> U) -> DataFrame",
             "key.typeusr" : "$s4size9repeating7sampler4main9DataFrameVSi_SiSgq_SayxGctcr0_luD",
-            "key.usr" : "s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF"
+            "key.usr" : "s:4main9DataFrameV13UntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF"
           }
         ],
         "key.typename" : "DataFrame.UntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV13UntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV13UntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV13UntypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class TypedSeries&lt;Element&gt; : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct TypedSeries&lt;Element&gt; : DataSeries<\/Declaration>",
         "key.bodylength" : 1783,
         "key.bodyoffset" : 9474,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>TypedSeries<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1817,
         "key.name" : "DataFrame.TypedSeries",
@@ -765,7 +765,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func sample&lt;U&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([<Type usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\">Element<\/Type>]) -&gt; <Type usr=\"s:4main9DataFrameV11TypedSeriesC6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF1UL_qd__mfp\">U<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func sample&lt;U&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([<Type usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\">Element<\/Type>]) -&gt; <Type usr=\"s:4main9DataFrameV11TypedSeriesV6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF1UL_qd__mfp\">U<\/Type>) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -779,7 +779,7 @@
             "key.doc.comment" : " Sample existing column to create a new dataframe.\n\n - Parameters:\n   - size: How many rows to be sampled together.\n   - repeating: Will we repeat the sampling to create more columns?\n   - sampler: The sampling function, for example, averaging, max, first, last etc.\n - Returns: A new dataframe.",
             "key.doc.declaration" : "public func sample<U>(size: Int, repeating: Int? = nil, sampler: @escaping ([Element]) -> U) -> DataFrame",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"245\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesC6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF<\/USR><Declaration>public func sample&lt;U&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([Element]) -&gt; U) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing column to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"245\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV11TypedSeriesV6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF<\/USR><Declaration>public func sample&lt;U&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([Element]) -&gt; U) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing column to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
             "key.doc.line" : 245,
             "key.doc.name" : "sample(size:repeating:sampler:)",
             "key.doc.parameters" : [
@@ -817,7 +817,7 @@
             "key.doclength" : 333,
             "key.docoffset" : 9477,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF1UL_qd__mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC7Elementxmfp\">Element<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesC6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF1UL_qd__mfp\">U<\/ref.generic_type_param><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF1UL_qd__mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV7Elementxmfp\">Element<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main9DataFrameV11TypedSeriesV6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF1UL_qd__mfp\">U<\/ref.generic_type_param><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1436,
             "key.name" : "sample(size:repeating:sampler:)",
@@ -843,7 +843,7 @@
                 "key.parsed_scope.start" : 245,
                 "key.typename" : "U.Type",
                 "key.typeusr" : "$sqd__mD",
-                "key.usr" : "s:4main9DataFrameV11TypedSeriesC6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF1UL_qd__mfp"
+                "key.usr" : "s:4main9DataFrameV11TypedSeriesV6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF1UL_qd__mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let wrappedSampler: ([<Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type>]) -&gt; <Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type><\/Declaration>",
@@ -860,24 +860,24 @@
                 "key.parsed_scope.start" : 248,
                 "key.typename" : "([AnyObject]) -> AnyObject",
                 "key.typeusr" : "$syyXlSayyXlGcD",
-                "key.usr" : "s:4main9DataFrameV11TypedSeriesC6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF14wrappedSamplerL_yyXlSayyXlGcvp"
+                "key.usr" : "s:4main9DataFrameV11TypedSeriesV6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF14wrappedSamplerL_yyXlSayyXlGcvp"
               }
             ],
             "key.typename" : "<Element, U> (DataFrame.TypedSeries<Element>) -> (Int, Int?, @escaping ([Element]) -> U) -> DataFrame",
             "key.typeusr" : "$s4size9repeating7sampler4main9DataFrameVSi_SiSgqd__SayxGctcluD",
-            "key.usr" : "s:4main9DataFrameV11TypedSeriesC6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF"
+            "key.usr" : "s:4main9DataFrameV11TypedSeriesV6sample4size9repeating7samplerACSi_SiSgqd__SayxGctlF"
           }
         ],
         "key.typename" : "DataFrame.TypedSeries<Element>.Type",
-        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesCy_xGmD",
-        "key.usr" : "s:4main9DataFrameV11TypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV11TypedSeriesVy_xGmD",
+        "key.usr" : "s:4main9DataFrameV11TypedSeriesV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public final class ManyUntypedSeries : <Type usr=\"s:4main10DataSeriesP\">DataSeries<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct ManyUntypedSeries : DataSeries<\/Declaration>",
         "key.bodylength" : 14707,
         "key.bodyoffset" : 11299,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrame.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>ManyUntypedSeries<\/decl.name> : <ref.protocol usr=\"s:4main10DataSeriesP\">DataSeries<\/ref.protocol><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>ManyUntypedSeries<\/decl.name> : DataSeries<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 14747,
         "key.name" : "DataFrame.ManyUntypedSeries",
@@ -890,7 +890,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func sample&lt;C0, C1, U0, U1&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([(<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C0L_xmfp\">C0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C1L_q_mfp\">C1<\/Type>)]) -&gt; (<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U0L_q0_mfp\">U0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U1L_q1_mfp\">U1<\/Type>)) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func sample&lt;C0, C1, U0, U1&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([(<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C0L_xmfp\">C0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C1L_q_mfp\">C1<\/Type>)]) -&gt; (<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U0L_q0_mfp\">U0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U1L_q1_mfp\">U1<\/Type>)) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -904,7 +904,7 @@
             "key.doc.comment" : " Sample existing columns to create a new dataframe.\n\n - Parameters:\n   - size: How many rows to be sampled together.\n   - repeating: Will we repeat the sampling to create more columns?\n   - sampler: The sampling function, for example, averaging, max, first, last etc.\n - Returns: A new dataframe.",
             "key.doc.declaration" : "public func sample<C0, C1, U0, U1>(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1)]) -> (U0, U1)) -> DataFrame",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"289\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF<\/USR><Declaration>public func sample&lt;C0, C1, U0, U1&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1)]) -&gt; (U0, U1)) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing columns to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"289\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF<\/USR><Declaration>public func sample&lt;C0, C1, U0, U1&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1)]) -&gt; (U0, U1)) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing columns to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
             "key.doc.line" : 289,
             "key.doc.name" : "sample(size:repeating:sampler:)",
             "key.doc.parameters" : [
@@ -942,7 +942,7 @@
             "key.doclength" : 334,
             "key.docoffset" : 11302,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C0L_xmfp\"><decl.generic_type_param.name>C0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C1L_q_mfp\"><decl.generic_type_param.name>C1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U0L_q0_mfp\"><decl.generic_type_param.name>U0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U1L_q1_mfp\"><decl.generic_type_param.name>U1<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C0L_xmfp\">C0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C1L_q_mfp\">C1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U0L_q0_mfp\">U0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U1L_q1_mfp\">U1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C0L_xmfp\"><decl.generic_type_param.name>C0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C1L_q_mfp\"><decl.generic_type_param.name>C1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U0L_q0_mfp\"><decl.generic_type_param.name>U0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U1L_q1_mfp\"><decl.generic_type_param.name>U1<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C0L_xmfp\">C0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C1L_q_mfp\">C1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U0L_q0_mfp\">U0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U1L_q1_mfp\">U1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 3528,
             "key.name" : "sample(size:repeating:sampler:)",
@@ -954,10 +954,10 @@
             "key.parsed_scope.start" : 289,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF\">sample&lt;C0, C1, C2, U0, U1, U2&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2)]) -&gt; (U0, U1, U2)) -&gt; DataFrame<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF\">sample&lt;C0, C1, C2, U0, U1, U2&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2)]) -&gt; (U0, U1, U2)) -&gt; DataFrame<\/RelatedName>"
               },
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF\">sample&lt;C0, C1, C2, C3, U0, U1, U2, U3&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2, C3)]) -&gt; (U0, U1, U2, U3)) -&gt; DataFrame<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF\">sample&lt;C0, C1, C2, C3, U0, U1, U2, U3&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2, C3)]) -&gt; (U0, U1, U2, U3)) -&gt; DataFrame<\/RelatedName>"
               }
             ],
             "key.substructure" : [
@@ -976,7 +976,7 @@
                 "key.parsed_scope.start" : 289,
                 "key.typename" : "C0.Type",
                 "key.typeusr" : "$sxmD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C0L_xmfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C0L_xmfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>C1<\/Declaration>",
@@ -993,7 +993,7 @@
                 "key.parsed_scope.start" : 289,
                 "key.typename" : "C1.Type",
                 "key.typeusr" : "$sq_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C1L_q_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2C1L_q_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U0<\/Declaration>",
@@ -1010,7 +1010,7 @@
                 "key.parsed_scope.start" : 289,
                 "key.typename" : "U0.Type",
                 "key.typeusr" : "$sq0_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U0L_q0_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U0L_q0_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U1<\/Declaration>",
@@ -1027,7 +1027,7 @@
                 "key.parsed_scope.start" : 289,
                 "key.typename" : "U1.Type",
                 "key.typeusr" : "$sq1_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U1L_q1_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF2U1L_q1_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let wrappedSampler: ([<Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type>]) -&gt; <Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type><\/Declaration>",
@@ -1044,7 +1044,7 @@
                 "key.parsed_scope.start" : 293,
                 "key.typename" : "([AnyObject]) -> AnyObject",
                 "key.typeusr" : "$syyXlSayyXlGcD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF14wrappedSamplerL_yyXlSayyXlGcvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF14wrappedSamplerL_yyXlSayyXlGcvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let property: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type><\/Declaration>",
@@ -1061,7 +1061,7 @@
                 "key.parsed_scope.start" : 296,
                 "key.typename" : "DataFrame.ColumnProperty",
                 "key.typeusr" : "$s4main9DataFrameV14ColumnPropertyVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF8propertyL_AC14ColumnPropertyVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF8propertyL_AC14ColumnPropertyVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let sampled: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
@@ -1078,7 +1078,7 @@
                 "key.parsed_scope.start" : 301,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF7sampledL_s13OpaquePointerVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF7sampledL_s13OpaquePointerVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let _dataframe: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
@@ -1095,7 +1095,7 @@
                 "key.parsed_scope.start" : 311,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF10_dataframeL_s13OpaquePointerVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF10_dataframeL_s13OpaquePointerVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var columnProperties: [<Type usr=\"s:SS\">String<\/Type> : <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type>]<\/Declaration>",
@@ -1112,7 +1112,7 @@
                 "key.parsed_scope.start" : 312,
                 "key.typename" : "[String : DataFrame.ColumnProperty]",
                 "key.typeusr" : "$sSDySS4main9DataFrameV14ColumnPropertyVGD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF16columnPropertiesL_SDySSAC14ColumnPropertyVGvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF16columnPropertiesL_SDySSAC14ColumnPropertyVGvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let mainProperty: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type><\/Declaration>",
@@ -1129,16 +1129,16 @@
                 "key.parsed_scope.start" : 314,
                 "key.typename" : "DataFrame.ColumnProperty",
                 "key.typeusr" : "$s4main9DataFrameV14ColumnPropertyVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF0A8PropertyL_AC06ColumnK0Vvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF0A8PropertyL_AC06ColumnK0Vvp"
               }
             ],
             "key.typename" : "<C0, C1, U0, U1> (DataFrame.ManyUntypedSeries) -> (Int, Int?, @escaping ([(C0, C1)]) -> (U0, U1)) -> DataFrame",
             "key.typeusr" : "$s4size9repeating7sampler4main9DataFrameVSi_SiSgq0__q1_tSayx_q_tGctcr2_luD",
-            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF"
+            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func sample&lt;C0, C1, C2, U0, U1, U2&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([(<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C0L_xmfp\">C0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C1L_q_mfp\">C1<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C2L_q0_mfp\">C2<\/Type>)]) -&gt; (<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U0L_q1_mfp\">U0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U1L_q2_mfp\">U1<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U2L_q3_mfp\">U2<\/Type>)) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func sample&lt;C0, C1, C2, U0, U1, U2&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([(<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C0L_xmfp\">C0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C1L_q_mfp\">C1<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C2L_q0_mfp\">C2<\/Type>)]) -&gt; (<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U0L_q1_mfp\">U0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U1L_q2_mfp\">U1<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U2L_q3_mfp\">U2<\/Type>)) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1152,7 +1152,7 @@
             "key.doc.comment" : " Sample existing columns to create a new dataframe.\n\n - Parameters:\n   - size: How many rows to be sampled together.\n   - repeating: Will we repeat the sampling to create more columns?\n   - sampler: The sampling function, for example, averaging, max, first, last etc.\n - Returns: A new dataframe.",
             "key.doc.declaration" : "public func sample<C0, C1, C2, U0, U1, U2>(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2)]) -> (U0, U1, U2)) -> DataFrame",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"368\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF<\/USR><Declaration>public func sample&lt;C0, C1, C2, U0, U1, U2&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2)]) -&gt; (U0, U1, U2)) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing columns to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"368\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF<\/USR><Declaration>public func sample&lt;C0, C1, C2, U0, U1, U2&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2)]) -&gt; (U0, U1, U2)) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing columns to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
             "key.doc.line" : 368,
             "key.doc.name" : "sample(size:repeating:sampler:)",
             "key.doc.parameters" : [
@@ -1190,7 +1190,7 @@
             "key.doclength" : 334,
             "key.docoffset" : 15178,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C0L_xmfp\"><decl.generic_type_param.name>C0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C1L_q_mfp\"><decl.generic_type_param.name>C1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C2L_q0_mfp\"><decl.generic_type_param.name>C2<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U0L_q1_mfp\"><decl.generic_type_param.name>U0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U1L_q2_mfp\"><decl.generic_type_param.name>U1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U2L_q3_mfp\"><decl.generic_type_param.name>U2<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C0L_xmfp\">C0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C1L_q_mfp\">C1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C2L_q0_mfp\">C2<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U0L_q1_mfp\">U0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U1L_q2_mfp\">U1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U2L_q3_mfp\">U2<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C0L_xmfp\"><decl.generic_type_param.name>C0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C1L_q_mfp\"><decl.generic_type_param.name>C1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C2L_q0_mfp\"><decl.generic_type_param.name>C2<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U0L_q1_mfp\"><decl.generic_type_param.name>U0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U1L_q2_mfp\"><decl.generic_type_param.name>U1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U2L_q3_mfp\"><decl.generic_type_param.name>U2<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C0L_xmfp\">C0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C1L_q_mfp\">C1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C2L_q0_mfp\">C2<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U0L_q1_mfp\">U0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U1L_q2_mfp\">U1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U2L_q3_mfp\">U2<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 4549,
             "key.name" : "sample(size:repeating:sampler:)",
@@ -1202,10 +1202,10 @@
             "key.parsed_scope.start" : 368,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF\">sample&lt;C0, C1, U0, U1&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1)]) -&gt; (U0, U1)) -&gt; DataFrame<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF\">sample&lt;C0, C1, U0, U1&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1)]) -&gt; (U0, U1)) -&gt; DataFrame<\/RelatedName>"
               },
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF\">sample&lt;C0, C1, C2, C3, U0, U1, U2, U3&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2, C3)]) -&gt; (U0, U1, U2, U3)) -&gt; DataFrame<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF\">sample&lt;C0, C1, C2, C3, U0, U1, U2, U3&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2, C3)]) -&gt; (U0, U1, U2, U3)) -&gt; DataFrame<\/RelatedName>"
               }
             ],
             "key.substructure" : [
@@ -1224,7 +1224,7 @@
                 "key.parsed_scope.start" : 368,
                 "key.typename" : "C0.Type",
                 "key.typeusr" : "$sxmD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C0L_xmfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C0L_xmfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>C1<\/Declaration>",
@@ -1241,7 +1241,7 @@
                 "key.parsed_scope.start" : 368,
                 "key.typename" : "C1.Type",
                 "key.typeusr" : "$sq_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C1L_q_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C1L_q_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>C2<\/Declaration>",
@@ -1258,7 +1258,7 @@
                 "key.parsed_scope.start" : 368,
                 "key.typename" : "C2.Type",
                 "key.typeusr" : "$sq0_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C2L_q0_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2C2L_q0_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U0<\/Declaration>",
@@ -1275,7 +1275,7 @@
                 "key.parsed_scope.start" : 368,
                 "key.typename" : "U0.Type",
                 "key.typeusr" : "$sq1_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U0L_q1_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U0L_q1_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U1<\/Declaration>",
@@ -1292,7 +1292,7 @@
                 "key.parsed_scope.start" : 368,
                 "key.typename" : "U1.Type",
                 "key.typeusr" : "$sq2_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U1L_q2_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U1L_q2_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U2<\/Declaration>",
@@ -1309,7 +1309,7 @@
                 "key.parsed_scope.start" : 368,
                 "key.typename" : "U2.Type",
                 "key.typeusr" : "$sq3_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U2L_q3_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF2U2L_q3_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let wrappedSampler: ([<Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type>]) -&gt; <Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type><\/Declaration>",
@@ -1326,7 +1326,7 @@
                 "key.parsed_scope.start" : 372,
                 "key.typename" : "([AnyObject]) -> AnyObject",
                 "key.typeusr" : "$syyXlSayyXlGcD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF14wrappedSamplerL_yyXlSayyXlGcvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF14wrappedSamplerL_yyXlSayyXlGcvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let property: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type><\/Declaration>",
@@ -1343,7 +1343,7 @@
                 "key.parsed_scope.start" : 375,
                 "key.typename" : "DataFrame.ColumnProperty",
                 "key.typeusr" : "$s4main9DataFrameV14ColumnPropertyVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF8propertyL_AC14ColumnPropertyVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF8propertyL_AC14ColumnPropertyVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let sampled: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
@@ -1360,7 +1360,7 @@
                 "key.parsed_scope.start" : 380,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF7sampledL_s13OpaquePointerVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF7sampledL_s13OpaquePointerVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let _dataframe: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
@@ -1377,7 +1377,7 @@
                 "key.parsed_scope.start" : 390,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF10_dataframeL_s13OpaquePointerVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF10_dataframeL_s13OpaquePointerVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var columnProperties: [<Type usr=\"s:SS\">String<\/Type> : <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type>]<\/Declaration>",
@@ -1394,7 +1394,7 @@
                 "key.parsed_scope.start" : 391,
                 "key.typename" : "[String : DataFrame.ColumnProperty]",
                 "key.typeusr" : "$sSDySS4main9DataFrameV14ColumnPropertyVGD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF16columnPropertiesL_SDySSAC14ColumnPropertyVGvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF16columnPropertiesL_SDySSAC14ColumnPropertyVGvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let mainProperty: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type><\/Declaration>",
@@ -1411,16 +1411,16 @@
                 "key.parsed_scope.start" : 393,
                 "key.typename" : "DataFrame.ColumnProperty",
                 "key.typeusr" : "$s4main9DataFrameV14ColumnPropertyVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF0A8PropertyL_AC06ColumnK0Vvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF0A8PropertyL_AC06ColumnK0Vvp"
               }
             ],
             "key.typename" : "<C0, C1, C2, U0, U1, U2> (DataFrame.ManyUntypedSeries) -> (Int, Int?, @escaping ([(C0, C1, C2)]) -> (U0, U1, U2)) -> DataFrame",
             "key.typeusr" : "$s4size9repeating7sampler4main9DataFrameVSi_SiSgq1__q2_q3_tSayx_q_q0_tGctcr4_luD",
-            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF"
+            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func sample&lt;C0, C1, C2, C3, U0, U1, U2, U3&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([(<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C0L_xmfp\">C0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C1L_q_mfp\">C1<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C2L_q0_mfp\">C2<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C3L_q1_mfp\">C3<\/Type>)]) -&gt; (<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U0L_q2_mfp\">U0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U1L_q3_mfp\">U1<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U2L_q4_mfp\">U2<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U3L_q5_mfp\">U3<\/Type>)) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func sample&lt;C0, C1, C2, C3, U0, U1, U2, U3&gt;(size: <Type usr=\"s:Si\">Int<\/Type>, repeating: <Type usr=\"s:Si\">Int<\/Type>? = nil, sampler: @escaping ([(<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C0L_xmfp\">C0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C1L_q_mfp\">C1<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C2L_q0_mfp\">C2<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C3L_q1_mfp\">C3<\/Type>)]) -&gt; (<Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U0L_q2_mfp\">U0<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U1L_q3_mfp\">U1<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U2L_q4_mfp\">U2<\/Type>, <Type usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U3L_q5_mfp\">U3<\/Type>)) -&gt; <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1434,7 +1434,7 @@
             "key.doc.comment" : " Sample existing columns to create a new dataframe.\n\n - Parameters:\n   - size: How many rows to be sampled together.\n   - repeating: Will we repeat the sampling to create more columns?\n   - sampler: The sampling function, for example, averaging, max, first, last etc.\n - Returns: A new dataframe.",
             "key.doc.declaration" : "public func sample<C0, C1, C2, C3, U0, U1, U2, U3>(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2, C3)]) -> (U0, U1, U2, U3)) -> DataFrame",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"462\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF<\/USR><Declaration>public func sample&lt;C0, C1, C2, C3, U0, U1, U2, U3&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2, C3)]) -&gt; (U0, U1, U2, U3)) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing columns to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift\" line=\"462\" column=\"15\"><Name>sample(size:repeating:sampler:)<\/Name><USR>s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF<\/USR><Declaration>public func sample&lt;C0, C1, C2, C3, U0, U1, U2, U3&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2, C3)]) -&gt; (U0, U1, U2, U3)) -&gt; DataFrame<\/Declaration><CommentParts><Abstract><Para>Sample existing columns to create a new dataframe.<\/Para><\/Abstract><Parameters><Parameter><Name>size<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How many rows to be sampled together.<\/Para><\/Discussion><\/Parameter><Parameter><Name>repeating<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Will we repeat the sampling to create more columns?<\/Para><\/Discussion><\/Parameter><Parameter><Name>sampler<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The sampling function, for example, averaging, max, first, last etc.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>A new dataframe.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
             "key.doc.line" : 462,
             "key.doc.name" : "sample(size:repeating:sampler:)",
             "key.doc.parameters" : [
@@ -1472,7 +1472,7 @@
             "key.doclength" : 334,
             "key.docoffset" : 20075,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DataFrameCore.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C0L_xmfp\"><decl.generic_type_param.name>C0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C1L_q_mfp\"><decl.generic_type_param.name>C1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C2L_q0_mfp\"><decl.generic_type_param.name>C2<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C3L_q1_mfp\"><decl.generic_type_param.name>C3<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U0L_q2_mfp\"><decl.generic_type_param.name>U0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U1L_q3_mfp\"><decl.generic_type_param.name>U1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U2L_q4_mfp\"><decl.generic_type_param.name>U2<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U3L_q5_mfp\"><decl.generic_type_param.name>U3<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C0L_xmfp\">C0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C1L_q_mfp\">C1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C2L_q0_mfp\">C2<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C3L_q1_mfp\">C3<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U0L_q2_mfp\">U0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U1L_q3_mfp\">U1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U2L_q4_mfp\">U2<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U3L_q5_mfp\">U3<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>sample<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C0L_xmfp\"><decl.generic_type_param.name>C0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C1L_q_mfp\"><decl.generic_type_param.name>C1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C2L_q0_mfp\"><decl.generic_type_param.name>C2<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C3L_q1_mfp\"><decl.generic_type_param.name>C3<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U0L_q2_mfp\"><decl.generic_type_param.name>U0<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U1L_q3_mfp\"><decl.generic_type_param.name>U1<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U2L_q4_mfp\"><decl.generic_type_param.name>U2<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U3L_q5_mfp\"><decl.generic_type_param.name>U3<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>size<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>repeating<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>sampler<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C0L_xmfp\">C0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C1L_q_mfp\">C1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C2L_q0_mfp\">C2<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C3L_q1_mfp\">C3<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U0L_q2_mfp\">U0<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U1L_q3_mfp\">U1<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U2L_q4_mfp\">U2<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U3L_q5_mfp\">U3<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9DataFrameV\">DataFrame<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 5586,
             "key.name" : "sample(size:repeating:sampler:)",
@@ -1484,10 +1484,10 @@
             "key.parsed_scope.start" : 462,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF\">sample&lt;C0, C1, U0, U1&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1)]) -&gt; (U0, U1)) -&gt; DataFrame<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq0__q1_tSayx_q_tGctr2_lF\">sample&lt;C0, C1, U0, U1&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1)]) -&gt; (U0, U1)) -&gt; DataFrame<\/RelatedName>"
               },
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF\">sample&lt;C0, C1, C2, U0, U1, U2&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2)]) -&gt; (U0, U1, U2)) -&gt; DataFrame<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq1__q2_q3_tSayx_q_q0_tGctr4_lF\">sample&lt;C0, C1, C2, U0, U1, U2&gt;(size: Int, repeating: Int? = nil, sampler: @escaping ([(C0, C1, C2)]) -&gt; (U0, U1, U2)) -&gt; DataFrame<\/RelatedName>"
               }
             ],
             "key.substructure" : [
@@ -1506,7 +1506,7 @@
                 "key.parsed_scope.start" : 462,
                 "key.typename" : "C0.Type",
                 "key.typeusr" : "$sxmD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C0L_xmfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C0L_xmfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>C1<\/Declaration>",
@@ -1523,7 +1523,7 @@
                 "key.parsed_scope.start" : 462,
                 "key.typename" : "C1.Type",
                 "key.typeusr" : "$sq_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C1L_q_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C1L_q_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>C2<\/Declaration>",
@@ -1540,7 +1540,7 @@
                 "key.parsed_scope.start" : 462,
                 "key.typename" : "C2.Type",
                 "key.typeusr" : "$sq0_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C2L_q0_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C2L_q0_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>C3<\/Declaration>",
@@ -1557,7 +1557,7 @@
                 "key.parsed_scope.start" : 462,
                 "key.typename" : "C3.Type",
                 "key.typeusr" : "$sq1_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C3L_q1_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2C3L_q1_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U0<\/Declaration>",
@@ -1574,7 +1574,7 @@
                 "key.parsed_scope.start" : 462,
                 "key.typename" : "U0.Type",
                 "key.typeusr" : "$sq2_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U0L_q2_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U0L_q2_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U1<\/Declaration>",
@@ -1591,7 +1591,7 @@
                 "key.parsed_scope.start" : 462,
                 "key.typename" : "U1.Type",
                 "key.typeusr" : "$sq3_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U1L_q3_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U1L_q3_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U2<\/Declaration>",
@@ -1608,7 +1608,7 @@
                 "key.parsed_scope.start" : 462,
                 "key.typename" : "U2.Type",
                 "key.typeusr" : "$sq4_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U2L_q4_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U2L_q4_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>U3<\/Declaration>",
@@ -1625,7 +1625,7 @@
                 "key.parsed_scope.start" : 462,
                 "key.typename" : "U3.Type",
                 "key.typeusr" : "$sq5_mD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U3L_q5_mfp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF2U3L_q5_mfp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let wrappedSampler: ([<Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type>]) -&gt; <Type usr=\"s:s9AnyObjecta\">AnyObject<\/Type><\/Declaration>",
@@ -1642,7 +1642,7 @@
                 "key.parsed_scope.start" : 466,
                 "key.typename" : "([AnyObject]) -> AnyObject",
                 "key.typeusr" : "$syyXlSayyXlGcD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF14wrappedSamplerL_yyXlSayyXlGcvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF14wrappedSamplerL_yyXlSayyXlGcvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let property: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type><\/Declaration>",
@@ -1659,7 +1659,7 @@
                 "key.parsed_scope.start" : 469,
                 "key.typename" : "DataFrame.ColumnProperty",
                 "key.typeusr" : "$s4main9DataFrameV14ColumnPropertyVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF8propertyL_AC14ColumnPropertyVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF8propertyL_AC14ColumnPropertyVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let sampled: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
@@ -1676,7 +1676,7 @@
                 "key.parsed_scope.start" : 474,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF7sampledL_s13OpaquePointerVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF7sampledL_s13OpaquePointerVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let _dataframe: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
@@ -1693,7 +1693,7 @@
                 "key.parsed_scope.start" : 484,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF10_dataframeL_s13OpaquePointerVvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF10_dataframeL_s13OpaquePointerVvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var columnProperties: [<Type usr=\"s:SS\">String<\/Type> : <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type>]<\/Declaration>",
@@ -1710,7 +1710,7 @@
                 "key.parsed_scope.start" : 485,
                 "key.typename" : "[String : DataFrame.ColumnProperty]",
                 "key.typeusr" : "$sSDySS4main9DataFrameV14ColumnPropertyVGD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF16columnPropertiesL_SDySSAC14ColumnPropertyVGvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF16columnPropertiesL_SDySSAC14ColumnPropertyVGvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let mainProperty: <Type usr=\"s:4main9DataFrameV\">DataFrame<\/Type>.<Type usr=\"s:4main9DataFrameV14ColumnPropertyV\">ColumnProperty<\/Type><\/Declaration>",
@@ -1727,17 +1727,17 @@
                 "key.parsed_scope.start" : 487,
                 "key.typename" : "DataFrame.ColumnProperty",
                 "key.typeusr" : "$s4main9DataFrameV14ColumnPropertyVD",
-                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF0A8PropertyL_AC06ColumnK0Vvp"
+                "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF0A8PropertyL_AC06ColumnK0Vvp"
               }
             ],
             "key.typename" : "<C0, C1, C2, C3, U0, U1, U2, U3> (DataFrame.ManyUntypedSeries) -> (Int, Int?, @escaping ([(C0, C1, C2, C3)]) -> (U0, U1, U2, U3)) -> DataFrame",
             "key.typeusr" : "$s4size9repeating7sampler4main9DataFrameVSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctcr6_luD",
-            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF"
+            "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV6sample4size9repeating7samplerACSi_SiSgq2__q3_q4_q5_tSayx_q_q0_q1_tGctr6_lF"
           }
         ],
         "key.typename" : "DataFrame.ManyUntypedSeries.Type",
-        "key.typeusr" : "$s4main9DataFrameV17ManyUntypedSeriesCmD",
-        "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesC"
+        "key.typeusr" : "$s4main9DataFrameV17ManyUntypedSeriesVmD",
+        "key.usr" : "s:4main9DataFrameV17ManyUntypedSeriesV"
       }
     ]
   }
