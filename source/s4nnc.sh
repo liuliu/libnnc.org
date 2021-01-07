@@ -14,4 +14,4 @@ cd _s4nnc
 
 jq -s . *.json > s4nnc.json
 
-jazzy --sourcekitten-sourcefile s4nnc.json
+jazzy --sourcekitten-sourcefile s4nnc.json --module "Swift for NNC"

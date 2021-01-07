@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>UntypedSeries Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+    <script src="../../js/lunr.min.js" defer></script>
+    <script src="../../js/typeahead.jquery.js" defer></script>
+    <script src="../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/UntypedSeries" class="dashAnchor"></a>
+    <a title="UntypedSeries Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">NNC Docs</a> (41% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">NNC Reference</a>
+        <img id="carat" src="../../img/carat.png" />
+        UntypedSeries Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/Add.html">Add</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/AnyModelBuilder.html">AnyModelBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes.html#/s:4main16AnyTensorStorageC">AnyTensorStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/AveragePool.html">AveragePool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/BatchNorm.html">BatchNorm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Convolution.html">Convolution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Dense.html">Dense</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Dropout.html">Dropout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DynamicGraph.html">DynamicGraph</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DynamicGraph/AnyTensor.html">– AnyTensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DynamicGraph/Tensor.html">– Tensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DynamicGraph/Group.html">– Group</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DynamicGraph/LogLevel.html">– LogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DynamicGraph.html#/s:4main12DynamicGraphC10StatisticsV">– Statistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DynamicGraph/Store.html">– Store</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Flatten.html">Flatten</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/LayerNorm.html">LayerNorm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/MaskedFill.html">MaskedFill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Matmul.html">Matmul</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/MaxPool.html">MaxPool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Model/IO.html">– IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Model.html#/s:4main5ModelC10ParametersC">– Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Model/ParametersType.html">– ParametersType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ModelBuilder.html">ModelBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Mul.html">Mul</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/RELU.html">RELU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Reshape.html">Reshape</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Scalmul.html">Scalmul</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Sigmoid.html">Sigmoid</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Softmax.html">Softmax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/StreamContext.html">StreamContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Sum.html">Sum</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Swish.html">Swish</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Transpose.html">Transpose</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Enums/DataType.html">DataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/DeviceKind.html">DeviceKind</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/DeviceKind/GPUInfo.html">– GPUInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/Functional.html">Functional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ImageJitter.html">ImageJitter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ImageJitter/Size.html">– Size</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ImageJitter/Resize.html">– Resize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ImageJitter/Offset.html">– Offset</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ImageJitter/Normalize.html">– Normalize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/TensorFormat.html">TensorFormat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Float16.html">Float16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Float32.html">Float32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Float64.html">Float64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/UInt8.html">UInt8</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1moiyAA5ModelC2IOCAF_AFtF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1moiyAA5ModelC2IOCAF_SftF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1moiyAA5ModelC2IOCSf_AFtF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1moiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1moiyxx_SftAA24DynamicGraph_TensorGroupRzlF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1moiyxx_xtAA24DynamicGraph_TensorGroupRzlF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1poiyAA5ModelC2IOCAF_AFtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1poiyxx_xtAA24DynamicGraph_TensorGroupRzlF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1soiyAA5ModelC2IOCAF_AFtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1soiyxx_xtAA24DynamicGraph_TensorGroupRzlF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main2zmoiyAA5ModelC2IOCAF_AFtF">.*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main2zmoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main2zpoiyAA5ModelC2IOCAF_AFtF">.+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main2zpoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main2eeoiySbAA12DynamicGraphC9AnyTensorC_AFtF">==(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Protocols/AnyTensor.html">AnyTensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/DataSeries.html">DataSeries</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/DynamicGraph_AnyGroup.html">DynamicGraph_AnyGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols.html#/s:4main26DynamicGraph_AnyParametersP">DynamicGraph_AnyParameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/DynamicGraph_AnyTensor.html">DynamicGraph_AnyTensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/DynamicGraph_AnyTensorGroup.html">DynamicGraph_AnyTensorGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/DynamicGraph_TensorGroup.html">DynamicGraph_TensorGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/Loss.html">Loss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/Optimizer.html">Optimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/TensorNumeric.html">TensorNumeric</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/_DynamicGraph_TensorGroup.html">_DynamicGraph_TensorGroup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Structs/AdamOptimizer.html">AdamOptimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/BinaryCrossEntropyLoss.html">BinaryCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/CategoricalCrossEntropyLoss.html">CategoricalCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/DataFrame.html">DataFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/DataFrame/UntypedSeries.html">– UntypedSeries</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/DataFrame/TypedSeries.html">– TypedSeries</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/DataFrame/ManyUntypedSeries.html">– ManyUntypedSeries</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/DataFrame/ManyUntypedSeriesToGPU.html">– ManyUntypedSeriesToGPU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/DataSeriesIterator.html">DataSeriesIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Hint.html">Hint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Hint/Border.html">– Border</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SGDOptimizer.html">SGDOptimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SigmoidBinaryCrossEntropyLoss.html">SigmoidBinaryCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SmoothL1Loss.html">SmoothL1Loss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/SoftmaxCrossEntropyLoss.html">SoftmaxCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Tensor.html">Tensor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:4main5Groupa">Group</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>UntypedSeries</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">UntypedSeries</span> <span class="p">:</span> <span class="kt"><a href="../../Protocols/DataSeries.html">DataSeries</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ST7ElementQa"></a>
+                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ST7ElementQa">Element</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ST12makeIterator0B0QzyF"></a>
+                    <a name="//apple_ref/swift/Method/makeIterator()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ST12makeIterator0B0QzyF">makeIterator()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">makeIterator</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataSeriesIterator.html">DataSeriesIterator</a></span><span class="o">&lt;</span><span class="kt">UntypedSeries</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC8prefetch_13streamContextySi_AA06StreamH0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/prefetch(_:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC8prefetch_13streamContextySi_AA06StreamH0CSgtF">prefetch(_:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">prefetch</span><span class="p">(</span><span class="n">_</span> <span class="nv">i</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC4nextyyXlSgAA13StreamContextCSgF"></a>
+                    <a name="//apple_ref/swift/Method/next(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC4nextyyXlSgAA13StreamContextCSgF">next(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">next</span><span class="p">(</span><span class="n">_</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC19underestmiatedCountSivp"></a>
+                    <a name="//apple_ref/swift/Property/underestmiatedCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC19underestmiatedCountSivp">underestmiatedCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">underestmiatedCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC5countSivp"></a>
+                    <a name="//apple_ref/swift/Property/count" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC5countSivp">count</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC7combine4size9repeatingACSi_SiSgtF"></a>
+                    <a name="//apple_ref/swift/Method/combine(size:repeating:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC7combine4size9repeatingACSi_SiSgtF">combine(size:<wbr>repeating:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Combine tensors into one tensor. This is useful for GPU batching.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">combine</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">repeating</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How many tensors to group together.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>repeating</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How many new columns to be created.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new dataframe with combined tensors.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC11toLoadImageAEyF"></a>
+                    <a name="//apple_ref/swift/Method/toLoadImage()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC11toLoadImageAEyF">toLoadImage()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Load images into tensors. It is expected to be called from a column with file paths.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toLoadImage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF"></a>
+                    <a name="//apple_ref/swift/Method/toOneHot(_:count:onval:offval:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC8toOneHot_5count5onval6offvalAExm_SiS2ftAA13TensorNumericRzlF">toOneHot(_:<wbr>count:<wbr>onval:<wbr>offval:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create one-hot tensors. It is expected to be called from a column with Int.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">toOneHot</span><span class="o">&lt;</span><span class="kt"><a href="../../Structs/DataFrame/UntypedSeries.html#/s:ST7ElementQa">Element</a></span><span class="p">:</span> <span class="kt"><a href="../../Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="n">_</span> <span class="nv">dataType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DataFrame/UntypedSeries.html#/s:ST7ElementQa">Element</a></span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">onval</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">offval</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC5toGPUyAESiF"></a>
+                    <a name="//apple_ref/swift/Method/toGPU(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC5toGPUyAESiF">toGPU(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Copy tensor to GPU. It is expected to be called from a column of tensors.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toGPU</span><span class="p">(</span><span class="n">_</span> <span class="nv">ordinal</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC12toOneSquared9maxLength08variableJ0AESi_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/toOneSquared(maxLength:variableLength:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC12toOneSquared9maxLength08variableJ0AESi_SbtF">toOneSquared(maxLength:<wbr>variableLength:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toOneSquared</span><span class="p">(</span><span class="nv">maxLength</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">variableLength</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC10toTruncateyA2EF"></a>
+                    <a name="//apple_ref/swift/Method/toTruncate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC10toTruncateyA2EF">toTruncate(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">toTruncate</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC10toTruncateyAeC05TypedE0Cy_xGAA9AnyTensorRzlF"></a>
+                    <a name="//apple_ref/swift/Method/toTruncate(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC10toTruncateyAeC05TypedE0Cy_xGAA9AnyTensorRzlF">toTruncate(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">toTruncate</span><span class="o">&lt;</span><span class="kt"><a href="../../Structs/DataFrame/UntypedSeries.html#/s:ST7ElementQa">Element</a></span><span class="p">:</span> <span class="kt"><a href="../../Protocols/AnyTensor.html">AnyTensor</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt"><a href="../../Structs/DataFrame/TypedSeries.html">TypedSeries</a></span><span class="o">&lt;</span><span class="kt"><a href="../../Structs/DataFrame/UntypedSeries.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF"></a>
+                    <a name="//apple_ref/swift/Method/toImageJitter(_:size:resize:contrast:saturation:brightness:lighting:aspectRatio:symmetric:seed:centerCrop:offset:normalize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC13toImageJitter_4size6resize8contrast10saturation10brightness8lighting11aspectRatio9symmetric4seed10centerCrop6offset9normalizeAExm_AA0gH0O4SizeVAT6ResizeVS5fSbSiSbAT6OffsetVAT9NormalizeVtAA13TensorNumericRzlF">toImageJitter(_:<wbr>size:<wbr>resize:<wbr>contrast:<wbr>saturation:<wbr>brightness:<wbr>lighting:<wbr>aspectRatio:<wbr>symmetric:<wbr>seed:<wbr>centerCrop:<wbr>offset:<wbr>normalize:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Apply some jitter to loaded images.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">toImageJitter</span><span class="o">&lt;</span><span class="kt"><a href="../../Structs/DataFrame/UntypedSeries.html#/s:ST7ElementQa">Element</a></span><span class="p">:</span> <span class="kt"><a href="../../Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="n">_</span> <span class="nv">ofType</span><span class="p">:</span> <span class="kt"><a href="../../Structs/DataFrame/UntypedSeries.html#/s:ST7ElementQa">Element</a></span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="kt"><a href="../../Enums/ImageJitter.html">ImageJitter</a></span><span class="o">.</span><span class="kt">Size</span><span class="p">,</span> <span class="nv">resize</span><span class="p">:</span> <span class="kt"><a href="../../Enums/ImageJitter.html">ImageJitter</a></span><span class="o">.</span><span class="kt">Resize</span><span class="p">,</span> <span class="nv">contrast</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nv">saturation</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">brightness</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">lighting</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">aspectRatio</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nv">symmetric</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">seed</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">centerCrop</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../../Enums/ImageJitter.html">ImageJitter</a></span><span class="o">.</span><span class="kt">Offset</span> <span class="o">=</span> <span class="kt"><a href="../../Enums/ImageJitter.html">ImageJitter</a></span><span class="o">.</span><span class="kt">Offset</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">),</span>
+  <span class="nv">normalize</span><span class="p">:</span> <span class="kt"><a href="../../Enums/ImageJitter.html">ImageJitter</a></span><span class="o">.</span><span class="kt">Normalize</span> <span class="o">=</span> <span class="kt"><a href="../../Enums/ImageJitter.html">ImageJitter</a></span><span class="o">.</span><span class="kt">Normalize</span><span class="p">(</span><span class="nv">mean</span><span class="p">:</span> <span class="p">[])</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/sample(size:repeating:sampler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC6sample4size9repeating7samplerACSi_SiSgq_SayxGctr0_lF">sample(size:<wbr>repeating:<wbr>sampler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sample existing column to create a new dataframe.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sample</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">repeating</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">sampler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">T</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How many rows to be sampled together.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>repeating</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Will we repeat the sampling to create more columns?</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sampler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sampling function, for example, averaging, max, first, last etc.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new dataframe.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC4fromyAEypFZ"></a>
+                    <a name="//apple_ref/swift/Method/from(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC4fromyAEypFZ">from(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="n">_</span> <span class="nv">scalar</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC4fromyAExSTRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/from(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC4fromyAExSTRzlFZ">from(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new column from a sequence of objects.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">from</span><span class="o">&lt;</span><span class="kt">S</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">sequence</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span> <span class="k">where</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt">Sequence</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9DataFrameV13UntypedSeriesC3mapyAEq_xcr0_lF"></a>
+                    <a name="//apple_ref/swift/Method/map(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9DataFrameV13UntypedSeriesC3mapyAEq_xcr0_lF">map(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a new column by applying some transformations on an existing column.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">,</span> <span class="kt">U</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">mapper</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Structs/DataFrame.html">DataFrame</a></span><span class="o">.</span><span class="kt">UntypedSeries</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-01-07)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
