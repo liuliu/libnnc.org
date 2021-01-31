@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 4584,
+    "key.length" : 4700,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -1240,7 +1240,7 @@
             "key.offset" : 4025
           }
         ],
-        "key.bodylength" : 523,
+        "key.bodylength" : 639,
         "key.bodyoffset" : 4059,
         "key.doc.column" : 15,
         "key.doc.comment" : "Smooth L1 loss (for object detection).",
@@ -1267,18 +1267,18 @@
           }
         ],
         "key.kind" : "source.lang.swift.decl.struct",
-        "key.length" : 551,
+        "key.length" : 667,
         "key.name" : "SmoothL1Loss",
         "key.namelength" : 12,
         "key.nameoffset" : 4039,
         "key.offset" : 4032,
         "key.parsed_declaration" : "public struct SmoothL1Loss: Loss",
-        "key.parsed_scope.end" : 114,
+        "key.parsed_scope.end" : 119,
         "key.parsed_scope.start" : 103,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func callAsFunction&lt;T, U&gt;(_ input: <Type usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/Type>, target: <Type usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/Type>, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?) -&gt; [<Type usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/Type>.<Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/Type>] where T : <Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/Type>, U : <Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/Type>, T.AnyTensor == U.AnyTensor<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var beta: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1286,24 +1286,80 @@
                 "key.offset" : 4062
               }
             ],
-            "key.bodylength" : 314,
-            "key.bodyoffset" : 4266,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>beta<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 15,
+            "key.name" : "beta",
+            "key.namelength" : 4,
+            "key.nameoffset" : 4073,
+            "key.offset" : 4069,
+            "key.parsed_declaration" : "public var beta: Float",
+            "key.parsed_scope.end" : 104,
+            "key.parsed_scope.start" : 104,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main12SmoothL1LossV4betaSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(beta: <Type usr=\"s:Sf\">Float<\/Type> = 1)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 4087
+              }
+            ],
+            "key.bodylength" : 24,
+            "key.bodyoffset" : 4117,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>beta<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 1<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 48,
+            "key.name" : "init(beta:)",
+            "key.namelength" : 21,
+            "key.nameoffset" : 4094,
+            "key.offset" : 4094,
+            "key.parsed_declaration" : "public init(beta: Float = 1)",
+            "key.parsed_scope.end" : 107,
+            "key.parsed_scope.start" : 105,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(SmoothL1Loss.Type) -> (Float) -> SmoothL1Loss",
+            "key.typeusr" : "$s4beta4main12SmoothL1LossVSf_tcD",
+            "key.usr" : "s:4main12SmoothL1LossV4betaACSf_tcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func callAsFunction&lt;T, U&gt;(_ input: <Type usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/Type>, target: <Type usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/Type>, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?) -&gt; [<Type usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/Type>.<Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/Type>] where T : <Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/Type>, U : <Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/Type>, T.AnyTensor == U.AnyTensor<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 4145
+              }
+            ],
+            "key.bodylength" : 347,
+            "key.bodyoffset" : 4349,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>input<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>target<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>T : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement>U : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement>T.AnyTensor == U.AnyTensor<\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 512,
+            "key.length" : 545,
             "key.name" : "callAsFunction(_:target:streamContext:)",
             "key.namelength" : 140,
-            "key.nameoffset" : 4074,
-            "key.offset" : 4069,
+            "key.nameoffset" : 4157,
+            "key.offset" : 4152,
             "key.overrides" : [
               {
                 "key.usr" : "s:4main4LossP14callAsFunction_6target13streamContextSay9AnyTensorQyd__Gqd___qd_0_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRd__AaMRd_0_AGQyd_0_AHRSr0_lF"
               }
             ],
             "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.AnyTensorGroup, U: DynamicGraph.AnyTensorGroup>(\n  _ input: T, target: U, streamContext: StreamContext?\n) -> [T.AnyTensor] where T.AnyTensor == U.AnyTensor",
-            "key.parsed_scope.end" : 113,
-            "key.parsed_scope.start" : 104,
+            "key.parsed_scope.end" : 118,
+            "key.parsed_scope.start" : 108,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -1311,7 +1367,7 @@
                   {
                     "key.kind" : "source.lang.swift.structure.elem.typeref",
                     "key.length" : 27,
-                    "key.offset" : 4092
+                    "key.offset" : 4175
                   }
                 ],
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
@@ -1325,11 +1381,11 @@
                 "key.length" : 30,
                 "key.name" : "T",
                 "key.namelength" : 1,
-                "key.nameoffset" : 4089,
-                "key.offset" : 4089,
+                "key.nameoffset" : 4172,
+                "key.offset" : 4172,
                 "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.AnyTensorGroup",
-                "key.parsed_scope.end" : 104,
-                "key.parsed_scope.start" : 104,
+                "key.parsed_scope.end" : 108,
+                "key.parsed_scope.start" : 108,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp"
@@ -1340,7 +1396,7 @@
                   {
                     "key.kind" : "source.lang.swift.structure.elem.typeref",
                     "key.length" : 27,
-                    "key.offset" : 4124
+                    "key.offset" : 4207
                   }
                 ],
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
@@ -1354,11 +1410,11 @@
                 "key.length" : 30,
                 "key.name" : "U",
                 "key.namelength" : 1,
-                "key.nameoffset" : 4121,
-                "key.offset" : 4121,
+                "key.nameoffset" : 4204,
+                "key.offset" : 4204,
                 "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.AnyTensorGroup, U: DynamicGraph.AnyTensorGroup",
-                "key.parsed_scope.end" : 104,
-                "key.parsed_scope.start" : 104,
+                "key.parsed_scope.end" : 108,
+                "key.parsed_scope.start" : 108,
                 "key.typename" : "U.Type",
                 "key.typeusr" : "$sq_mD",
                 "key.usr" : "s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp"
@@ -1371,11 +1427,11 @@
                 "key.length" : 49,
                 "key.name" : "params",
                 "key.namelength" : 6,
-                "key.nameoffset" : 4275,
-                "key.offset" : 4271,
+                "key.nameoffset" : 4358,
+                "key.offset" : 4354,
                 "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
-                "key.parsed_scope.end" : 107,
-                "key.parsed_scope.start" : 107,
+                "key.parsed_scope.end" : 111,
+                "key.parsed_scope.start" : 111,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF6paramsL_Xevp"
@@ -1388,11 +1444,11 @@
                 "key.length" : 64,
                 "key.name" : "cmd",
                 "key.namelength" : 3,
-                "key.nameoffset" : 4376,
-                "key.offset" : 4372,
+                "key.nameoffset" : 4492,
+                "key.offset" : 4488,
                 "key.parsed_declaration" : "let cmd = ccv_nnc_cmd(CCV_NNC_SMOOTH_L1_FORWARD, nil, params, 0)",
-                "key.parsed_scope.end" : 109,
-                "key.parsed_scope.start" : 109,
+                "key.parsed_scope.end" : 114,
+                "key.parsed_scope.start" : 114,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12SmoothL1LossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamJ0CSgtAA013DynamicGraph_kL5GroupRzAaMR_AGQy_AHRSr0_lF3cmdL_Xevp"
