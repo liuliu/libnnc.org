@@ -1533,6 +1533,42 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv433ccv_cnnp_model_parameters_zip_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t">
+<span id="_CPPv333ccv_cnnp_model_parameters_zip_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t"></span><span id="_CPPv233ccv_cnnp_model_parameters_zip_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t"></span><span id="ccv_cnnp_model_parameters_zip_map__ccv_cnnp_model_tPC.ccv_cnnp_model_io_tC.ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_nnc_stream_context_tPC.ccv_cnnp_model_tCPC.ccv_cnnp_model_io_tC"></span><span class="target" id="group__level__5__model_1ga9fb4388445e5b3b13f28298b7f8913a0"></span>void <code class="sig-name descname">ccv_cnnp_model_parameters_zip_map</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>parameters</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <a class="reference internal" href="../level-1/#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em>, <em class="property">const</em> <a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>from_model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>from_parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433ccv_cnnp_model_parameters_zip_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Process parameters such as exponential averaging. parameters = zip(from_parameters, to_parameters).map { cmd(from_parameter, to_parameter) } <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model to have parameters zip mapped. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code>: The parameters to be written (and read). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The command to apply on the parameters. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code>: The hint supplied to the cmd. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code>: The flags supplied to the cmd. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream context to be associated with. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_model</span></code>: The other composed model to have parameters zipped. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from_parameters</span></code>: The parameters to be read. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv429ccv_cnnp_model_parameters_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_t">
+<span id="_CPPv329ccv_cnnp_model_parameters_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_t"></span><span id="_CPPv229ccv_cnnp_model_parameters_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_t"></span><span id="ccv_cnnp_model_parameters_map__ccv_cnnp_model_tPC.ccv_cnnp_model_io_tC.ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__5__model_1ga0b99748b89dfd3b8f1060be9c2c5dfd9"></span>void <code class="sig-name descname">ccv_cnnp_model_parameters_map</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>parameters</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, <a class="reference internal" href="../level-1/#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_cnnp_model_parameters_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Process parameters such as clipping. parameters = parameters.map { cmd(parameter) } <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model to have parameters mapped. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code>: The parameters to be mapped. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The command to apply on the parameters. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code>: The hint supplied to the cmd. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code>: The flags supplied to the cmd. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream context to be associated with. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tKiPCK19ccv_cnnp_model_io_tKi">
 <span id="_CPPv328ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tKiPCK19ccv_cnnp_model_io_tKi"></span><span id="_CPPv228ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tKiPCK19ccv_cnnp_model_io_tKi"></span><span id="ccv_cnnp_model_set_minimizer__ccv_cnnp_model_tPC.ccv_nnc_cmd_tC.iC.ccv_cnnp_model_io_tCPC.iC"></span><span class="target" id="group__level__5__model_1ga7a4323bc01b470885dda74b367f09f96"></span>void <code class="sig-name descname">ccv_cnnp_model_set_minimizer</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>minimizer</em>, <em class="property">const</em> int <em>reset</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>parameters</em>, <em class="property">const</em> int <em>parameter_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_cnnp_model_set_minimizerPC16ccv_cnnp_model_tK13ccv_nnc_cmd_tKiPCK19ccv_cnnp_model_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set a new minimizer for the model. This is useful when you need to update learn rate for stochastic gradient descent for example. This method can be called any time during the training process (after compilation). <dl class="simple">
@@ -2096,6 +2132,38 @@
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">width_scale</span></code>: The scale of the width of the input. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">height_scale</span></code>: The scale of the height of the input. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv419ccv_cnnp_reduce_sumPCKiKiPCKc">
+<span id="_CPPv319ccv_cnnp_reduce_sumPCKiKiPCKc"></span><span id="_CPPv219ccv_cnnp_reduce_sumPCKiKiPCKc"></span><span id="ccv_cnnp_reduce_sum__iCPC.iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga88569e54b13e2bbd2eb224174bb8be99"></span><code class="sig-name descname">ccv_cnnp_reduce_sum</code><span class="sig-paren">(</span><em class="property">const</em> int *<em class="property">const</em> <em>axis</em>, <em class="property">const</em> int <em>axis_count</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_reduce_sumPCKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A sum value reducer model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A sum value reducer model. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">axis</span></code>: The axis to be reduced. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axis_count</span></code>: The size of the axis array. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv419ccv_cnnp_reduce_maxPCKiKiPCKc">
+<span id="_CPPv319ccv_cnnp_reduce_maxPCKiKiPCKc"></span><span id="_CPPv219ccv_cnnp_reduce_maxPCKiKiPCKc"></span><span id="ccv_cnnp_reduce_max__iCPC.iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gac1cb29b8d9f76633c63ee1c571ee2e00"></span><code class="sig-name descname">ccv_cnnp_reduce_max</code><span class="sig-paren">(</span><em class="property">const</em> int *<em class="property">const</em> <em>axis</em>, <em class="property">const</em> int <em>axis_count</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_reduce_maxPCKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A max value reducer model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A max value reducer model. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">axis</span></code>: The axis to be reduced. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axis_count</span></code>: The size of the axis array. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
 </ul>
 </dd>

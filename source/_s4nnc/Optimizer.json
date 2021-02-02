@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 10463,
+    "key.length" : 10911,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -585,20 +585,416 @@
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.internal",
+        "key.annotated_decl" : "<Declaration>struct HashableModel : <Type usr=\"s:SH\">Hashable<\/Type><\/Declaration>",
+        "key.bodylength" : 231,
+        "key.bodyoffset" : 3731,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 8,
+            "key.offset" : 3721
+          }
+        ],
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>HashableModel<\/decl.name> : <ref.protocol usr=\"s:SH\">Hashable<\/ref.protocol><\/decl.struct>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Hashable"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 264,
+        "key.name" : "HashableModel",
+        "key.namelength" : 13,
+        "key.nameoffset" : 3706,
+        "key.offset" : 3699,
+        "key.parsed_declaration" : "struct HashableModel: Hashable",
+        "key.parsed_scope.end" : 121,
+        "key.parsed_scope.start" : 112,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>var model: <Type usr=\"s:4main5ModelC\">Model<\/Type><\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>model<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main5ModelC\">Model<\/ref.class><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 16,
+            "key.name" : "model",
+            "key.namelength" : 5,
+            "key.nameoffset" : 3738,
+            "key.offset" : 3734,
+            "key.parsed_declaration" : "var model: Model",
+            "key.parsed_scope.end" : 113,
+            "key.parsed_scope.start" : 113,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.typename" : "Model",
+            "key.typeusr" : "$s4main5ModelCD",
+            "key.usr" : "s:4main13HashableModelV5modelAA0C0Cvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public static func == (lhs: <Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type>, rhs: <Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type>) -&gt; <Type usr=\"s:Sb\">Bool<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3753
+              }
+            ],
+            "key.bodylength" : 38,
+            "key.bodyoffset" : 3825,
+            "key.doc.declaration" : "static func == (lhs: Self, rhs: Self) -> Bool",
+            "key.doc.discussion" : [
+              {
+                "Para" : "Equality is the inverse of inequality. For any values `a` and `b`, `a == b` implies that `a != b` is `false`."
+              },
+              {
+                "Note" : ""
+              }
+            ],
+            "key.doc.full_as_xml" : "<Function><Name>==(_:_:)<\/Name><USR>s:SQ2eeoiySbx_xtFZ<\/USR><Declaration>static func == (lhs: Self, rhs: Self) -&gt; Bool<\/Declaration><CommentParts><Abstract><Para>Returns a Boolean value indicating whether two values are equal.<\/Para><\/Abstract><Parameters><Parameter><Name>lhs<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>A value to compare.<\/Para><\/Discussion><\/Parameter><Parameter><Name>rhs<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Another value to compare.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>Equality is the inverse of inequality. For any values <codeVoice>a<\/codeVoice> and <codeVoice>b<\/codeVoice>, <codeVoice>a == b<\/codeVoice> implies that <codeVoice>a != b<\/codeVoice> is <codeVoice>false<\/codeVoice>.<\/Para><Note><Para>This documentation comment was inherited from <codeVoice>Equatable<\/codeVoice>.<\/Para><\/Note><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.name" : "==(_:_:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "A value to compare."
+                  }
+                ],
+                "name" : "lhs"
+              },
+              {
+                "discussion" : [
+                  {
+                    "Para" : "Another value to compare."
+                  }
+                ],
+                "name" : "rhs"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+            "key.fully_annotated_decl" : "<decl.function.operator.infix><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>== <\/decl.name>(<decl.var.parameter><decl.var.parameter.name>lhs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>rhs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.function.returntype><\/decl.function.operator.infix>",
+            "key.kind" : "source.lang.swift.decl.function.method.static",
+            "key.length" : 104,
+            "key.name" : "==(_:_:)",
+            "key.namelength" : 43,
+            "key.nameoffset" : 3772,
+            "key.offset" : 3760,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:SQ2eeoiySbx_xtFZ"
+              }
+            ],
+            "key.parsed_declaration" : "public static func == (lhs: HashableModel, rhs: HashableModel) -> Bool",
+            "key.parsed_scope.end" : 116,
+            "key.parsed_scope.start" : 114,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main2eeoiySbAA12DynamicGraphC13WeakAnyTensorV_AFtF\">== (_: DynamicGraph.WeakAnyTensor, _: DynamicGraph.WeakAnyTensor) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s2eeoiySbypXpSg_ABtF\">== (_: Any.Type?, _: Any.Type?) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s2eeoiySbx_xtSYRzSQ8RawValueRpzlF\">== &lt;T&gt;(_: T, _: T) -&gt; Bool where T : RawRepresentable, T.RawValue : Equatable<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s2eeoiySbyt_yttF\">== (_: (), _: ()) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s2eeoiySbx_q_t_x_q_ttSQRzSQR_r0_lF\">== &lt;A, B&gt;(_: (A, B), _: (A, B)) -&gt; Bool where A : Equatable, B : Equatable<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s2eeoiySbx_q_q0_t_x_q_q0_ttSQRzSQR_SQR0_r1_lF\">== &lt;A, B, C&gt;(_: (A, B, C), _: (A, B, C)) -&gt; Bool where A : Equatable, B : Equatable, C : Equatable<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s2eeoiySbx_q_q0_q1_t_x_q_q0_q1_ttSQRzSQR_SQR0_SQR1_r2_lF\">== &lt;A, B, C, D&gt;(_: (A, B, C, D), _: (A, B, C, D)) -&gt; Bool where A : Equatable, B : Equatable, C : Equatable, D : Equatable<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s2eeoiySbx_q_q0_q1_q2_t_x_q_q0_q1_q2_ttSQRzSQR_SQR0_SQR1_SQR2_r3_lF\">== &lt;A, B, C, D, E&gt;(_: (A, B, C, D, E), _: (A, B, C, D, E)) -&gt; Bool where A : Equatable, B : Equatable, C : Equatable, D : Equatable, E : Equatable<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s2eeoiySbx_q_q0_q1_q2_q3_t_x_q_q0_q1_q2_q3_ttSQRzSQR_SQR0_SQR1_SQR2_SQR3_r4_lF\">== &lt;A, B, C, D, E, F&gt;(_: (A, B, C, D, E, F), _: (A, B, C, D, E, F)) -&gt; Bool where A : Equatable, B : Equatable, C : Equatable, D : Equatable, E : Equatable, F : Equatable<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SasSQRzlE2eeoiySbSayxG_ABtFZ\">== (_: Array&lt;Element&gt;, _: Array&lt;Element&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s10ArraySliceVsSQRzlE2eeoiySbAByxG_ADtFZ\">== (_: ArraySlice&lt;Element&gt;, _: ArraySlice&lt;Element&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:Sb2eeoiyS2b_SbtFZ\">== (_: Bool, _: Bool) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SJ2eeoiySbSJ_SJtFZ\">== (_: Character, _: Character) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s17CodingUserInfoKeyV2eeoiySbAB_ABtFZ\">== (_: CodingUserInfoKey, _: CodingUserInfoKey) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s15ContiguousArrayVsSQRzlE2eeoiySbAByxG_ADtFZ\">== (_: ContiguousArray&lt;Element&gt;, _: ContiguousArray&lt;Element&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SNsSxRzSZ6StrideRpzrlE5IndexO2eeoiySbADyx_G_AFtFZ\">== (_: ClosedRange&lt;Bound&gt;.Index, _: ClosedRange&lt;Bound&gt;.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SN2eeoiySbSNyxG_ABtFZ\">== (_: ClosedRange&lt;Bound&gt;, _: ClosedRange&lt;Bound&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s13OpaquePointerV2eeoiySbAB_ABtFZ\">== (_: OpaquePointer, _: OpaquePointer) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SD4KeysV2eeoiySbAByxq__G_ADtFZ\">== (_: Dictionary&lt;Key, Value&gt;.Keys, _: Dictionary&lt;Key, Value&gt;.Keys) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SDsSQR_rlE2eeoiySbSDyxq_G_ABtFZ\">== (_: [Key : Value], _: [Key : Value]) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SD5IndexV2eeoiySbAByxq__G_ADtFZ\">== (_: Dictionary&lt;Key, Value&gt;.Index, _: Dictionary&lt;Key, Value&gt;.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s15EmptyCollectionV2eeoiySbAByxG_ADtFZ\">== (_: EmptyCollection&lt;Element&gt;, _: EmptyCollection&lt;Element&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SQ2eeoiySbx_xtFZ\">== (_: Self, _: Self) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s8AnyIndexV2eeoiySbAB_ABtFZ\">== (_: AnyIndex, _: AnyIndex) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s15FlattenSequenceVsSlRzSl7ElementRpzrlE5IndexV2eeoiySbAFyx_G_AHtFZ\">== (_: FlattenCollection&lt;Base&gt;.Index, _: FlattenCollection&lt;Base&gt;.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s17FloatingPointSignO2eeoiySbAB_ABtFZ\">== (_: FloatingPointSign, _: FloatingPointSign) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s27FloatingPointClassificationO2eeoiySbAB_ABtFZ\">== (_: FloatingPointClassification, _: FloatingPointClassification) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s25FloatingPointRoundingRuleO2eeoiySbAB_ABtFZ\">== (_: FloatingPointRoundingRule, _: FloatingPointRoundingRule) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SFsE2eeoiySbx_xtFZ\">== (_: Self, _: Self) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s11AnyHashableV2eeoiySbAB_ABtFZ\">== (_: AnyHashable, _: AnyHashable) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SzsE2eeoiySbx_qd__tSzRd__lFZ\">== &lt;Other&gt;(_: Self, _: Other) -&gt; Bool where Other : BinaryInteger<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s10AnyKeyPathC2eeoiySbAB_ABtFZ\">== (_: AnyKeyPath, _: AnyKeyPath) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s20ManagedBufferPointerV2eeoiySbAByxq_G_ADtFZ\">== (_: ManagedBufferPointer&lt;Header, Element&gt;, _: ManagedBufferPointer&lt;Header, Element&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s7UnicodeO6ScalarV2eeoiySbAD_ADtFZ\">== (_: Unicode.Scalar, _: Unicode.Scalar) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SO2eeoiySbSO_SOtFZ\">== (_: ObjectIdentifier, _: ObjectIdentifier) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SqsSQRzlE2eeoiySbxSg_ABtFZ\">== (_: Wrapped?, _: Wrapped?) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:Sq2eeoiySbxSg_s26_OptionalNilComparisonTypeVtFZ\">== (_: Wrapped?, _: _OptionalNilComparisonType) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:Sq2eeoiySbs26_OptionalNilComparisonTypeV_xSgtFZ\">== (_: _OptionalNilComparisonType, _: Wrapped?) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s8_PointerPsE2eeoiySbx_xtFZ\">== (_: Self, _: Self) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s5NeverO2eeoiySbAB_ABtFZ\">== (_: Never, _: Never) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s23LazyPrefixWhileSequenceVsSlRzrlE5IndexV2eeoiySbADyx_G_AFtFZ\">== (_: LazyPrefixWhileCollection&lt;Base&gt;.Index, _: LazyPrefixWhileCollection&lt;Base&gt;.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:Sn2eeoiySbSnyxG_ABtFZ\">== (_: Range&lt;Bound&gt;, _: Range&lt;Bound&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s6ResultOsSQRzSQR_rlE2eeoiySbAByxq_G_ADtFZ\">== (_: Result&lt;Success, Failure&gt;, _: Result&lt;Success, Failure&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s18ReversedCollectionV5IndexV2eeoiySbADyx_G_AFtFZ\">== (_: ReversedCollection&lt;Base&gt;.Index, _: ReversedCollection&lt;Base&gt;.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:Sh2eeoiySbShyxG_ABtFZ\">== (_: Set&lt;Element&gt;, _: Set&lt;Element&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:Sh5IndexV2eeoiySbAByx_G_ADtFZ\">== (_: Set&lt;Element&gt;.Index, _: Set&lt;Element&gt;.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SxsE2eeoiySbx_xtFZ\">== (_: Self, _: Self) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SysE2eeoiySbx_qd__tSyRd__lFZ\">== &lt;RHS&gt;(_: Self, _: RHS) -&gt; Bool where RHS : StringProtocol<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SS2eeoiySbSS_SStFZ\">== (_: String, _: String) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:SS5IndexV2eeoiySbAB_ABtFZ\">== (_: String.Index, _: String.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s11_UIntBufferV5IndexV2eeoiySbADyx_G_AFtFZ\">== (_: _UIntBuffer&lt;Element&gt;.Index, _: _UIntBuffer&lt;Element&gt;.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s7UnicodeO15GeneralCategoryO2eeoiySbAD_ADtFZ\">== (_: Unicode.GeneralCategory, _: Unicode.GeneralCategory) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s7UnicodeO23CanonicalCombiningClassV2eeoiySbAD_ADtFZ\">== (_: Unicode.CanonicalCombiningClass, _: Unicode.CanonicalCombiningClass) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s7UnicodeO11NumericTypeO2eeoiySbAD_ADtFZ\">== (_: Unicode.NumericType, _: Unicode.NumericType) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s7UnicodeO5UTF32O2eeoiySbAD_ADtFZ\">== (_: Unicode.UTF32, _: Unicode.UTF32) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s21UnicodeDecodingResultO2eeoiySbAB_ABtFZ\">== (_: UnicodeDecodingResult, _: UnicodeDecodingResult) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s16_ValidUTF8BufferV5IndexV2eeoiySbAD_ADtFZ\">== (_: _ValidUTF8Buffer.Index, _: _ValidUTF8Buffer.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s20CollectionDifferenceV5IndexV2eeoiySbADyx_G_AFtFZ\">== (_: CollectionDifference&lt;ChangeElement&gt;.Index, _: CollectionDifference&lt;ChangeElement&gt;.Index) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s20CollectionDifferenceV6ChangeOsSQRzlE2eeoiySbADyx_G_AFtFZ\">== (_: CollectionDifference&lt;ChangeElement&gt;.Change, _: CollectionDifference&lt;ChangeElement&gt;.Change) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s20CollectionDifferenceVsSQRzlE2eeoiySbAByxG_ADtFZ\">== (_: CollectionDifference&lt;ChangeElement&gt;, _: CollectionDifference&lt;ChangeElement&gt;) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s6MirrorV12DisplayStyleO2eeoiySbAD_ADtFZ\">== (_: Mirror.DisplayStyle, _: Mirror.DisplayStyle) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s4SIMDPsE2eeoiySbx_xtFZ\">== (_: Self, _: Self) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s5UInt8V2eeoiySbAB_ABtFZ\">== (_: UInt8, _: UInt8) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s4Int8V2eeoiySbAB_ABtFZ\">== (_: Int8, _: Int8) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s6UInt16V2eeoiySbAB_ABtFZ\">== (_: UInt16, _: UInt16) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s5Int16V2eeoiySbAB_ABtFZ\">== (_: Int16, _: Int16) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s6UInt32V2eeoiySbAB_ABtFZ\">== (_: UInt32, _: UInt32) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s5Int32V2eeoiySbAB_ABtFZ\">== (_: Int32, _: Int32) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s6UInt64V2eeoiySbAB_ABtFZ\">== (_: UInt64, _: UInt64) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:s5Int64V2eeoiySbAB_ABtFZ\">== (_: Int64, _: Int64) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:Su2eeoiySbSu_SutFZ\">== (_: UInt, _: UInt) -&gt; Bool<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:Si2eeoiySbSi_SitFZ\">== (_: Int, _: Int) -&gt; Bool<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(HashableModel.Type) -> (HashableModel, HashableModel) -> Bool",
+            "key.typeusr" : "$sySb4main13HashableModelV_ACtcD",
+            "key.usr" : "s:SQ2eeoiySbx_xtFZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func hash(into hasher: inout <Type usr=\"s:s6HasherV\">Hasher<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3868
+              }
+            ],
+            "key.bodylength" : 47,
+            "key.bodyoffset" : 3913,
+            "key.doc.declaration" : "func hash(into hasher: inout Hasher)",
+            "key.doc.discussion" : [
+              {
+                "Para" : "Implement this method to conform to the `Hashable` protocol. The components used for hashing must be the same as the components compared in your type’s `==` operator implementation. Call `hasher.combine(_:)` with each of these components."
+              },
+              {
+                "Important" : ""
+              },
+              {
+                "Note" : ""
+              }
+            ],
+            "key.doc.full_as_xml" : "<Function><Name>hash(into:)<\/Name><USR>s:SH4hash4intoys6HasherVz_tF<\/USR><Declaration>func hash(into hasher: inout Hasher)<\/Declaration><CommentParts><Abstract><Para>Hashes the essential components of this value by feeding them into the given hasher.<\/Para><\/Abstract><Parameters><Parameter><Name>hasher<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The hasher to use when combining the components of this instance.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>Implement this method to conform to the <codeVoice>Hashable<\/codeVoice> protocol. The components used for hashing must be the same as the components compared in your type’s <codeVoice>==<\/codeVoice> operator implementation. Call <codeVoice>hasher.combine(_:)<\/codeVoice> with each of these components.<\/Para><Important><Para>Never call <codeVoice>finalize()<\/codeVoice> on <codeVoice>hasher<\/codeVoice>. Doing so may become a compile-time error in the future.<\/Para><\/Important><Note><Para>This documentation comment was inherited from <codeVoice>Hashable<\/codeVoice>.<\/Para><\/Note><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.name" : "hash(into:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The hasher to use when combining the components of this instance."
+                  }
+                ],
+                "name" : "hasher"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>hash<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>into<\/decl.var.parameter.argument_label> <decl.var.parameter.name>hasher<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.keyword>inout<\/syntaxtype.keyword> <ref.struct usr=\"s:s6HasherV\">Hasher<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 86,
+            "key.name" : "hash(into:)",
+            "key.namelength" : 31,
+            "key.nameoffset" : 3880,
+            "key.offset" : 3875,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:SH4hash4intoys6HasherVz_tF"
+              }
+            ],
+            "key.parsed_declaration" : "public func hash(into hasher: inout Hasher)",
+            "key.parsed_scope.end" : 120,
+            "key.parsed_scope.start" : 118,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(HashableModel) -> (inout Hasher) -> ()",
+            "key.typeusr" : "$s4intoys6HasherVz_tcD",
+            "key.usr" : "s:SH4hash4intoys6HasherVz_tF"
+          }
+        ],
+        "key.typename" : "HashableModel.Type",
+        "key.typeusr" : "$s4main13HashableModelVmD",
+        "key.usr" : "s:4main13HashableModelV"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>func optimizerStep(graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>, minimizer: ccv_nnc_cmd_t, parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>], savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>], streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?)<\/Declaration>",
-        "key.bodylength" : 2338,
-        "key.bodyoffset" : 3875,
+        "key.bodylength" : 2423,
+        "key.bodyoffset" : 4141,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>optimizerStep<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>graph<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>minimizer<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>parameters<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>savedAux<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
-        "key.length" : 2515,
+        "key.length" : 2600,
         "key.name" : "optimizerStep(graph:minimizer:parameters:savedAux:streamContext:)",
         "key.namelength" : 169,
-        "key.nameoffset" : 3704,
-        "key.offset" : 3699,
+        "key.nameoffset" : 3970,
+        "key.offset" : 3965,
         "key.parsed_declaration" : "func optimizerStep(\n  graph: DynamicGraph, minimizer: ccv_nnc_cmd_t, parameters: [DynamicGraph_AnyParameters],\n  savedAux: [DynamicGraph_Any], streamContext: StreamContext?\n)",
-        "key.parsed_scope.end" : 165,
-        "key.parsed_scope.start" : 112,
+        "key.parsed_scope.end" : 177,
+        "key.parsed_scope.start" : 123,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>let modelParameters: [<Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>]<\/Declaration>",
@@ -608,11 +1004,11 @@
             "key.length" : 71,
             "key.name" : "modelParameters",
             "key.namelength" : 15,
-            "key.nameoffset" : 3882,
-            "key.offset" : 3878,
+            "key.nameoffset" : 4148,
+            "key.offset" : 4144,
             "key.parsed_declaration" : "let modelParameters = parameters.compactMap { $0 as? Model.Parameters }",
-            "key.parsed_scope.end" : 116,
-            "key.parsed_scope.start" : 116,
+            "key.parsed_scope.end" : 127,
+            "key.parsed_scope.start" : 127,
             "key.typename" : "[Model.Parameters]",
             "key.typeusr" : "$sSay4main5ModelC10ParametersCGD",
             "key.usr" : "s:4main13optimizerStepyXeXeF15modelParametersL_SayAA5ModelC0E0CGvp"
@@ -625,31 +1021,31 @@
             "key.length" : 119,
             "key.name" : "primaryModelParameters",
             "key.namelength" : 22,
-            "key.nameoffset" : 3956,
-            "key.offset" : 3952,
+            "key.nameoffset" : 4222,
+            "key.offset" : 4218,
             "key.parsed_declaration" : "let primaryModelParameters = modelParameters.filter {\n  $0._io == $0.model!._parameters && $0.model!.owner == nil\n}",
-            "key.parsed_scope.end" : 117,
-            "key.parsed_scope.start" : 117,
+            "key.parsed_scope.end" : 128,
+            "key.parsed_scope.start" : 128,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13optimizerStepyXeXeF22primaryModelParametersL_Xevp"
           },
           {
-            "key.annotated_decl" : "<Declaration>var models: <Type usr=\"s:Sh\">Set<\/Type>&lt;<Type usr=\"s:4main5ModelC\">Model<\/Type>&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var models: <Type usr=\"s:Sh\">Set<\/Type>&lt;<Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type>&gt;<\/Declaration>",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
-            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>models<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sh\">Set<\/ref.struct>&lt;<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>&gt;<\/decl.var.type><\/decl.var.local>",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>models<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sh\">Set<\/ref.struct>&lt;<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
-            "key.length" : 70,
+            "key.length" : 92,
             "key.name" : "models",
             "key.namelength" : 6,
-            "key.nameoffset" : 4078,
-            "key.offset" : 4074,
-            "key.parsed_declaration" : "var models = Set(modelParameters.map { $0.model!.owner ?? $0.model! })",
-            "key.parsed_scope.end" : 120,
-            "key.parsed_scope.start" : 120,
-            "key.typename" : "Set<Model>",
-            "key.typeusr" : "$sShy4main5ModelCGD",
-            "key.usr" : "s:4main13optimizerStepyXeXeF6modelsL_ShyAA5ModelCGvp"
+            "key.nameoffset" : 4344,
+            "key.offset" : 4340,
+            "key.parsed_declaration" : "var models = Set(modelParameters.map { HashableModel(model: $0.model!.owner ?? $0.model!) })",
+            "key.parsed_scope.end" : 131,
+            "key.parsed_scope.start" : 131,
+            "key.typename" : "Set<HashableModel>",
+            "key.typeusr" : "$sShy4main13HashableModelVGD",
+            "key.usr" : "s:4main13optimizerStepyXeXeF6modelsL_ShyAA13HashableModelVGvp"
           },
           {
             "key.annotated_decl" : "<Declaration>let params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -659,11 +1055,11 @@
             "key.length" : 49,
             "key.name" : "params",
             "key.namelength" : 6,
-            "key.nameoffset" : 4435,
-            "key.offset" : 4431,
+            "key.nameoffset" : 4745,
+            "key.offset" : 4741,
             "key.parsed_declaration" : "let params = CmdParamsFactory.factory.newParams()",
-            "key.parsed_scope.end" : 128,
-            "key.parsed_scope.start" : 128,
+            "key.parsed_scope.end" : 139,
+            "key.parsed_scope.start" : 139,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13optimizerStepyXeXeF6paramsL_Xevp"
@@ -676,31 +1072,31 @@
             "key.length" : 52,
             "key.name" : "noop",
             "key.namelength" : 4,
-            "key.nameoffset" : 4487,
-            "key.offset" : 4483,
+            "key.nameoffset" : 4797,
+            "key.offset" : 4793,
             "key.parsed_declaration" : "let noop = ccv_nnc_cmd(CCV_NNC_NOOP, nil, params, 0)",
-            "key.parsed_scope.end" : 129,
-            "key.parsed_scope.start" : 129,
+            "key.parsed_scope.end" : 140,
+            "key.parsed_scope.start" : 140,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13optimizerStepyXeXeF4noopL_Xevp"
           },
           {
-            "key.annotated_decl" : "<Declaration>var modelParametersMap: [<Type usr=\"s:4main5ModelC\">Model<\/Type> : [<Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>]]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var modelParametersMap: [<Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type> : [<Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>]]<\/Declaration>",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
-            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>modelParametersMap<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class> : [<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class>]]<\/decl.var.type><\/decl.var.local>",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>modelParametersMap<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct> : [<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class>]]<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
-            "key.length" : 54,
+            "key.length" : 62,
             "key.name" : "modelParametersMap",
             "key.namelength" : 18,
-            "key.nameoffset" : 4671,
-            "key.offset" : 4667,
-            "key.parsed_declaration" : "var modelParametersMap = [Model: [Model.Parameters]]()",
-            "key.parsed_scope.end" : 134,
-            "key.parsed_scope.start" : 134,
-            "key.typename" : "[Model : [Model.Parameters]]",
-            "key.typeusr" : "$sSDy4main5ModelCSayAC10ParametersCGGD",
-            "key.usr" : "s:4main13optimizerStepyXeXeF18modelParametersMapL_SDyAA5ModelCSayAE0E0CGGvp"
+            "key.nameoffset" : 4983,
+            "key.offset" : 4979,
+            "key.parsed_declaration" : "var modelParametersMap = [HashableModel: [Model.Parameters]]()",
+            "key.parsed_scope.end" : 145,
+            "key.parsed_scope.start" : 145,
+            "key.typename" : "[HashableModel : [Model.Parameters]]",
+            "key.typeusr" : "$sSDy4main13HashableModelVSayAA0C0C10ParametersCGGD",
+            "key.usr" : "s:4main13optimizerStepyXeXeF18modelParametersMapL_SDyAA13HashableModelVSayAA0H0C0E0CGGvp"
           },
           {
             "key.annotated_decl" : "<Declaration>let tensorParameters: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
@@ -710,11 +1106,11 @@
             "key.length" : 72,
             "key.name" : "tensorParameters",
             "key.namelength" : 16,
-            "key.nameoffset" : 5253,
-            "key.offset" : 5249,
+            "key.nameoffset" : 5604,
+            "key.offset" : 5600,
             "key.parsed_declaration" : "let tensorParameters = parameters.compactMap { $0 as? DynamicGraph_Any }",
-            "key.parsed_scope.end" : 145,
-            "key.parsed_scope.start" : 145,
+            "key.parsed_scope.end" : 157,
+            "key.parsed_scope.start" : 157,
             "key.typename" : "[DynamicGraph_Any]",
             "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
             "key.usr" : "s:4main13optimizerStepyXeXeF16tensorParametersL_SayAA16DynamicGraph_Any_pGvp"
@@ -727,7 +1123,7 @@
       {
         "key.annotated_decl" : "<Declaration>public protocol Optimizer<\/Declaration>",
         "key.bodylength" : 1307,
-        "key.bodyoffset" : 6237,
+        "key.bodyoffset" : 6588,
         "key.doc.column" : 17,
         "key.doc.declaration" : "public protocol Optimizer",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
@@ -741,27 +1137,27 @@
         "key.length" : 1329,
         "key.name" : "Optimizer",
         "key.namelength" : 9,
-        "key.nameoffset" : 6226,
-        "key.offset" : 6216,
+        "key.nameoffset" : 6577,
+        "key.offset" : 6567,
         "key.parsed_declaration" : "extension Optimizer",
-        "key.parsed_scope.end" : 199,
-        "key.parsed_scope.start" : 167,
+        "key.parsed_scope.end" : 211,
+        "key.parsed_scope.start" : 179,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>func savedAux(minimizer: ccv_nnc_cmd_t) -&gt; [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
             "key.bodylength" : 1239,
-            "key.bodyoffset" : 6303,
+            "key.bodyoffset" : 6654,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>minimizer<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1303,
             "key.name" : "savedAux(minimizer:)",
             "key.namelength" : 34,
-            "key.nameoffset" : 6245,
-            "key.offset" : 6240,
+            "key.nameoffset" : 6596,
+            "key.offset" : 6591,
             "key.parsed_declaration" : "func savedAux(minimizer: ccv_nnc_cmd_t) -> [DynamicGraph_Any]",
-            "key.parsed_scope.end" : 198,
-            "key.parsed_scope.start" : 168,
+            "key.parsed_scope.end" : 210,
+            "key.parsed_scope.start" : 180,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let parameters: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
@@ -771,11 +1167,11 @@
                 "key.length" : 71,
                 "key.name" : "parameters",
                 "key.namelength" : 10,
-                "key.nameoffset" : 6312,
-                "key.offset" : 6308,
+                "key.nameoffset" : 6663,
+                "key.offset" : 6659,
                 "key.parsed_declaration" : "let parameters = self.parameters.compactMap { $0 as? DynamicGraph_Any }",
-                "key.parsed_scope.end" : 169,
-                "key.parsed_scope.start" : 169,
+                "key.parsed_scope.end" : 181,
+                "key.parsed_scope.start" : 181,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main9OptimizerP10parametersSayAA26DynamicGraph_AnyParameters_pGvp\">parameters<\/RelatedName>"
@@ -797,8 +1193,8 @@
       },
       {
         "key.annotated_decl" : "<Declaration>protocol Collection : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
-        "key.bodylength" : 2867,
-        "key.bodyoffset" : 7594,
+        "key.bodylength" : 2964,
+        "key.bodyoffset" : 7945,
         "key.doc.declaration" : "protocol Collection : Sequence",
         "key.doc.discussion" : [
           {
@@ -911,15 +1307,15 @@
         "key.groupname" : "Collection",
         "key.is_system" : true,
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 2915,
+        "key.length" : 3012,
         "key.modulename" : "Swift",
         "key.name" : "Collection",
         "key.namelength" : 10,
-        "key.nameoffset" : 7557,
-        "key.offset" : 7547,
+        "key.nameoffset" : 7908,
+        "key.offset" : 7898,
         "key.parsed_declaration" : "extension Collection where Element: Optimizer",
-        "key.parsed_scope.end" : 264,
-        "key.parsed_scope.start" : 201,
+        "key.parsed_scope.end" : 277,
+        "key.parsed_scope.start" : 213,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -928,17 +1324,17 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 7758
+                "key.offset" : 8109
               }
             ],
-            "key.bodylength" : 2646,
-            "key.bodyoffset" : 7813,
+            "key.bodylength" : 2743,
+            "key.bodyoffset" : 8164,
             "key.doc.column" : 15,
             "key.doc.comment" : " Update parameters together for a collection of optimizers.\n\n - Parameter streamContext: The stream context to have update operation on.",
             "key.doc.declaration" : "public func step(streamContext: StreamContext? = nil)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"207\" column=\"15\"><Name>step(streamContext:)<\/Name><USR>s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF<\/USR><Declaration>public func step(streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Update parameters together for a collection of optimizers.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to have update operation on.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
-            "key.doc.line" : 207,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"219\" column=\"15\"><Name>step(streamContext:)<\/Name><USR>s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF<\/USR><Declaration>public func step(streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Update parameters together for a collection of optimizers.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to have update operation on.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 219,
             "key.doc.name" : "step(streamContext:)",
             "key.doc.parameters" : [
               {
@@ -952,37 +1348,37 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 158,
-            "key.docoffset" : 7597,
+            "key.docoffset" : 7948,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 2695,
+            "key.length" : 2792,
             "key.name" : "step(streamContext:)",
             "key.namelength" : 41,
-            "key.nameoffset" : 7770,
-            "key.offset" : 7765,
+            "key.nameoffset" : 8121,
+            "key.offset" : 8116,
             "key.parsed_declaration" : "public func step(streamContext: StreamContext? = nil)",
-            "key.parsed_scope.end" : 263,
-            "key.parsed_scope.start" : 207,
+            "key.parsed_scope.end" : 276,
+            "key.parsed_scope.start" : 219,
             "key.substructure" : [
               {
-                "key.annotated_decl" : "<Declaration>var models: <Type usr=\"s:Sh\">Set<\/Type>&lt;<Type usr=\"s:4main5ModelC\">Model<\/Type>&gt;<\/Declaration>",
+                "key.annotated_decl" : "<Declaration>var models: <Type usr=\"s:Sh\">Set<\/Type>&lt;<Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type>&gt;<\/Declaration>",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>models<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sh\">Set<\/ref.struct>&lt;<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>models<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sh\">Set<\/ref.struct>&lt;<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.groupname" : "Collection",
                 "key.kind" : "source.lang.swift.decl.var.local",
-                "key.length" : 25,
+                "key.length" : 33,
                 "key.name" : "models",
                 "key.namelength" : 6,
-                "key.nameoffset" : 8082,
-                "key.offset" : 8078,
-                "key.parsed_declaration" : "var models = Set<Model>()",
-                "key.parsed_scope.end" : 211,
-                "key.parsed_scope.start" : 211,
-                "key.typename" : "Set<Model>",
-                "key.typeusr" : "$sShy4main5ModelCGD",
-                "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF6modelsL_ShyAA5ModelCGvp"
+                "key.nameoffset" : 8433,
+                "key.offset" : 8429,
+                "key.parsed_declaration" : "var models = Set<HashableModel>()",
+                "key.parsed_scope.end" : 223,
+                "key.parsed_scope.start" : 223,
+                "key.typename" : "Set<HashableModel>",
+                "key.typeusr" : "$sShy4main13HashableModelVGD",
+                "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF6modelsL_ShyAA13HashableModelVGvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var primaries: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -993,11 +1389,11 @@
                 "key.length" : 55,
                 "key.name" : "primaries",
                 "key.namelength" : 9,
-                "key.nameoffset" : 8112,
-                "key.offset" : 8108,
+                "key.nameoffset" : 8471,
+                "key.offset" : 8467,
                 "key.parsed_declaration" : "var primaries = [(ccv_nnc_cmd_t, [Model.Parameters])]()",
-                "key.parsed_scope.end" : 212,
-                "key.parsed_scope.start" : 212,
+                "key.parsed_scope.end" : 224,
+                "key.parsed_scope.start" : 224,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF9primariesL_Xevp"
@@ -1011,11 +1407,11 @@
                 "key.length" : 57,
                 "key.name" : "secondaries",
                 "key.namelength" : 11,
-                "key.nameoffset" : 8172,
-                "key.offset" : 8168,
+                "key.nameoffset" : 8531,
+                "key.offset" : 8527,
                 "key.parsed_declaration" : "var secondaries = [(ccv_nnc_cmd_t, [Model.Parameters])]()",
-                "key.parsed_scope.end" : 213,
-                "key.parsed_scope.start" : 213,
+                "key.parsed_scope.end" : 225,
+                "key.parsed_scope.start" : 225,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF11secondariesL_Xevp"
@@ -1029,11 +1425,11 @@
                 "key.length" : 49,
                 "key.name" : "params",
                 "key.namelength" : 6,
-                "key.nameoffset" : 9292,
-                "key.offset" : 9288,
+                "key.nameoffset" : 9695,
+                "key.offset" : 9691,
                 "key.parsed_declaration" : "let params = CmdParamsFactory.factory.newParams()",
-                "key.parsed_scope.end" : 238,
-                "key.parsed_scope.start" : 238,
+                "key.parsed_scope.end" : 250,
+                "key.parsed_scope.start" : 250,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF6paramsL_Xevp"
@@ -1047,11 +1443,11 @@
                 "key.length" : 52,
                 "key.name" : "noop",
                 "key.namelength" : 4,
-                "key.nameoffset" : 9346,
-                "key.offset" : 9342,
+                "key.nameoffset" : 9749,
+                "key.offset" : 9745,
                 "key.parsed_declaration" : "let noop = ccv_nnc_cmd(CCV_NNC_NOOP, nil, params, 0)",
-                "key.parsed_scope.end" : 239,
-                "key.parsed_scope.start" : 239,
+                "key.parsed_scope.end" : 251,
+                "key.parsed_scope.start" : 251,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF4noopL_Xevp"
