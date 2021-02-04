@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 1915,
+    "key.length" : 2704,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -186,6 +186,100 @@
             "key.typename" : "(Model.Parameters) -> (Float, Model.Parameters) -> ()",
             "key.typeusr" : "$s_2toySf_4main5ModelC10ParametersCtcD",
             "key.usr" : "s:4main5ModelC10ParametersC4lerp_2toySf_AEtF"
+          }
+        ],
+        "key.typename" : "Model.Parameters.Type",
+        "key.typeusr" : "$s4main5ModelC10ParametersCmD",
+        "key.usr" : "s:4main5ModelC10ParametersC"
+      },
+      {
+        "key.annotated_decl" : "<Declaration>public final class <Type usr=\"s:4main5ModelC\">Model<\/Type>.Parameters : <Type usr=\"s:4main5ModelC2IOC\">IO<\/Type><\/Declaration>",
+        "key.bodylength" : 758,
+        "key.bodyoffset" : 1944,
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<decl.name>Parameters<\/decl.name> : <ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.class>",
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 787,
+        "key.name" : "Model.Parameters",
+        "key.namelength" : 16,
+        "key.nameoffset" : 1926,
+        "key.offset" : 1916,
+        "key.parsed_declaration" : "extension Model.Parameters",
+        "key.parsed_scope.end" : 82,
+        "key.parsed_scope.start" : 60,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func clamp(min: <Type usr=\"s:Sf\">Float<\/Type>? = nil, max: <Type usr=\"s:Sf\">Float<\/Type>? = nil)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 2009
+              }
+            ],
+            "key.bodylength" : 634,
+            "key.bodyoffset" : 2066,
+            "key.doc.column" : 15,
+            "key.doc.comment" : "Clamp current parameters between two values.",
+            "key.doc.declaration" : "public func clamp(min: Float? = nil, max: Float? = nil)",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"64\" column=\"15\"><Name>clamp(min:max:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp3min3maxySfSg_AItF<\/USR><Declaration>public func clamp(min: Float? = nil, max: Float? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters between two values.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 64,
+            "key.doc.name" : "clamp(min:max:)",
+            "key.doc.type" : "Function",
+            "key.doclength" : 59,
+            "key.docoffset" : 1947,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>min<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>max<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 685,
+            "key.name" : "clamp(min:max:)",
+            "key.namelength" : 43,
+            "key.nameoffset" : 2021,
+            "key.offset" : 2016,
+            "key.parsed_declaration" : "public func clamp(min: Float? = nil, max: Float? = nil)",
+            "key.parsed_scope.end" : 81,
+            "key.parsed_scope.start" : 64,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 49,
+                "key.name" : "params",
+                "key.namelength" : 6,
+                "key.nameoffset" : 2368,
+                "key.offset" : 2364,
+                "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
+                "key.parsed_scope.end" : 74,
+                "key.parsed_scope.start" : 74,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3maxySfSg_AItF6paramsL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let cmd: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cmd<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 60,
+                "key.name" : "cmd",
+                "key.namelength" : 3,
+                "key.nameoffset" : 2549,
+                "key.offset" : 2545,
+                "key.parsed_declaration" : "let cmd = ccv_nnc_cmd(CCV_NNC_CLAMP_FORWARD, nil, params, 0)",
+                "key.parsed_scope.end" : 78,
+                "key.parsed_scope.start" : 78,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3maxySfSg_AItF3cmdL_Xevp"
+              }
+            ],
+            "key.typename" : "(Model.Parameters) -> (Float?, Float?) -> ()",
+            "key.typeusr" : "$s3min3maxySfSg_ACtcD",
+            "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3maxySfSg_AItF"
           }
         ],
         "key.typename" : "Model.Parameters.Type",

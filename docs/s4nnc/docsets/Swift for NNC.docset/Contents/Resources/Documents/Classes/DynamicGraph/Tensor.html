@@ -240,6 +240,12 @@
                 <a href="../../Functions.html#/s:4main1poiyxx_xtAA24DynamicGraph_TensorGroupRzlF">+(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1sopyAA5ModelC2IOCAFF">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1sopyxxAA24DynamicGraph_TensorGroupRzlF">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Functions.html#/s:4main1soiyAA5ModelC2IOCAF_AFtF">-(_:_:)</a>
               </li>
               <li class="nav-group-task">
@@ -338,6 +344,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Structs/SGDOptimizer.html">SGDOptimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/Sequential.html">Sequential</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Structs/SigmoidBinaryCrossEntropyLoss.html">SigmoidBinaryCrossEntropyLoss</a>
@@ -547,6 +556,34 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main12DynamicGraphC6TensorCyAEy_xGSnySiGd_AA13StreamContextCSgtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC6TensorCyAEy_xGSnySiGd_AA13StreamContextCSgtcip">subscript(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">ranges</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;...</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Tensor</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main12DynamicGraphC6TensorC10transposed__13streamContextAEy_xGSi_SiAA06StreamG0CSgtF"></a>
                     <a name="//apple_ref/swift/Method/transposed(_:_:streamContext:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main12DynamicGraphC6TensorC10transposed__13streamContextAEy_xGSi_SiAA06StreamG0CSgtF">transposed(_:<wbr>_:<wbr>streamContext:<wbr>)</a>
@@ -688,6 +725,93 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main12DynamicGraphC6TensorC4lerp_2to13streamContextySf_AEy_xGAA06StreamH0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/lerp(_:to:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC6TensorC4lerp_2to13streamContextySf_AEy_xGAA06StreamH0CSgtF">lerp(_:<wbr>to:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Interpolate from this tensor to the other tensor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lerp</span><span class="p">(</span>
+  <span class="n">_</span> <span class="nv">weight</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Tensor</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC6TensorC5clamp3min3max13streamContextySfSg_AjA06StreamI0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/clamp(min:max:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC6TensorC5clamp3min3max13streamContextySfSg_AjA06StreamI0CSgtF">clamp(min:<wbr>max:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clamp the given tensor between two values.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clamp</span><span class="p">(</span>
+  <span class="nv">min</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC6TensorC7clamped3min3max13streamContextAEy_xGSfSg_AkA06StreamI0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/clamped(min:max:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC6TensorC7clamped3min3max13streamContextAEy_xGSfSg_AkA06StreamI0CSgtF">clamped(min:<wbr>max:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Clamp the given tensor between two values.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clamped</span><span class="p">(</span>
+  <span class="nv">min</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">max</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Tensor</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main12DynamicGraphC6TensorC8_Elementa"></a>
                     <a name="//apple_ref/swift/Alias/_Element" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main12DynamicGraphC6TensorC8_Elementa">_Element</a>
@@ -744,7 +868,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-01)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
