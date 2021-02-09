@@ -99,7 +99,13 @@
                 <a href="../../Classes/Matmul.html">Matmul</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes/Max.html">Max</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Classes/MaxPool.html">MaxPool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Min.html">Min</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/Model.html">Model</a>
@@ -121,6 +127,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/RELU.html">RELU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ReduceMax.html">ReduceMax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ReduceSum.html">ReduceSum</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/Reshape.html">Reshape</a>
@@ -177,6 +189,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Enums/ImageJitter/Normalize.html">– Normalize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ReduceOp.html">ReduceOp</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a>
@@ -451,111 +466,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC6TensorC8reshaped6format10dimensions6offset10incrementsAEy_xGXDAA0D6FormatO_SaySiGANSgAOtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(format:dimensions:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC6TensorC8reshaped6format10dimensions6offset10incrementsAEy_xGXDAA0D6FormatO_SaySiGANSgAOtF">reshaped(format:<wbr>dimensions:<wbr>offset:<wbr>increments:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4main12DynamicGraphC6TensorC8reshaped_6offset10incrementsAEy_xGXDAA0D15DimensionFormatO_SaySiGSgAMtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC6TensorC8reshaped_6offset10incrementsAEy_xGXDAA0D15DimensionFormatO_SaySiGSgAMtF">reshaped(_:<wbr>offset:<wbr>increments:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Create a new tensor representing the same variable but with different sizes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>dimensionFormat</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>New format and dimensions for the tensor.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>offset</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Whether offset on each dimensions.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>increments</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The step on each dimensions.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The new tensor with different format but the same underlying variable.</p>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:4main12DynamicGraphC6TensorCyAEy_xGSnySiGd_AA13StreamContextCSgtcip"></a>
                     <a name="//apple_ref/swift/Method/subscript(_:_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main12DynamicGraphC6TensorCyAEy_xGSnySiGd_AA13StreamContextCSgtcip">subscript(_:<wbr>_:<wbr>)</a>
@@ -631,6 +541,35 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rand</span><span class="p">(</span>
   <span class="n">_</span> <span class="nv">lowerBound</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">_</span> <span class="nv">upperBound</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC6TensorC5randn3std4mean13streamContextySf_SfAA06StreamI0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/randn(std:mean:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC6TensorC5randn3std4mean13streamContextySf_SfAA06StreamI0CSgtF">randn(std:<wbr>mean:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fill the given tensor with normal-distributed random values.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">randn</span><span class="p">(</span>
+  <span class="nv">std</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">mean</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span></code></pre>
 
                         </div>
@@ -812,6 +751,34 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main12DynamicGraphC6TensorC7reduced_4axis13streamContextAEy_xGAA8ReduceOpO_SaySiGAA06StreamH0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/reduced(_:axis:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC6TensorC7reduced_4axis13streamContextAEy_xGAA8ReduceOpO_SaySiGAA06StreamH0CSgtF">reduced(_:<wbr>axis:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reduced</span><span class="p">(</span><span class="n">_</span> <span class="nv">op</span><span class="p">:</span> <span class="kt"><a href="../../Enums/ReduceOp.html">ReduceOp</a></span><span class="p">,</span> <span class="nv">axis</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Tensor</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main12DynamicGraphC6TensorC8_Elementa"></a>
                     <a name="//apple_ref/swift/Alias/_Element" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main12DynamicGraphC6TensorC8_Elementa">_Element</a>
@@ -868,7 +835,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-03)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

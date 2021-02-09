@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 7114,
+    "key.length" : 4281,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -51,7 +51,7 @@
             "key.offset" : 231
           }
         ],
-        "key.bodylength" : 101,
+        "key.bodylength" : 168,
         "key.bodyoffset" : 293,
         "key.doc.column" : 17,
         "key.doc.comment" : "Protocol for other places to recognize AnyTensor and AnyGroup with static dispatch.",
@@ -78,13 +78,13 @@
           }
         ],
         "key.kind" : "source.lang.swift.decl.protocol",
-        "key.length" : 157,
+        "key.length" : 224,
         "key.name" : "DynamicGraph_Any",
         "key.namelength" : 16,
         "key.nameoffset" : 247,
         "key.offset" : 238,
         "key.parsed_declaration" : "public protocol DynamicGraph_Any: DynamicGraph_AnyParameters",
-        "key.parsed_scope.end" : 10,
+        "key.parsed_scope.end" : 12,
         "key.parsed_scope.start" : 6,
         "key.substructure" : [
           {
@@ -109,20 +109,60 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>var format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type> { get }<\/Declaration>",
+            "key.bodylength" : 5,
+            "key.bodyoffset" : 354,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>format<\/decl.name>: <decl.var.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 32,
+            "key.name" : "format",
+            "key.namelength" : 6,
+            "key.nameoffset" : 332,
+            "key.offset" : 328,
+            "key.parsed_declaration" : "var format: TensorFormat",
+            "key.parsed_scope.end" : 8,
+            "key.parsed_scope.start" : 8,
+            "key.typename" : "TensorFormat",
+            "key.typeusr" : "$s4main12TensorFormatOD",
+            "key.usr" : "s:4main16DynamicGraph_AnyP6formatAA12TensorFormatOvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>var increments: [<Type usr=\"s:Si\">Int<\/Type>] { get }<\/Declaration>",
+            "key.bodylength" : 5,
+            "key.bodyoffset" : 386,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>increments<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 29,
+            "key.name" : "increments",
+            "key.namelength" : 10,
+            "key.nameoffset" : 367,
+            "key.offset" : 363,
+            "key.parsed_declaration" : "var increments: [Int]",
+            "key.parsed_scope.end" : 9,
+            "key.parsed_scope.start" : 9,
+            "key.typename" : "[Int]",
+            "key.typeusr" : "$sSaySiGD",
+            "key.usr" : "s:4main16DynamicGraph_AnyP10incrementsSaySiGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>var isConstant: <Type usr=\"s:Sb\">Bool<\/Type> { get }<\/Declaration>",
             "key.bodylength" : 5,
-            "key.bodyoffset" : 350,
+            "key.bodyoffset" : 417,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>isConstant<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 28,
             "key.name" : "isConstant",
             "key.namelength" : 10,
-            "key.nameoffset" : 332,
-            "key.offset" : 328,
+            "key.nameoffset" : 399,
+            "key.offset" : 395,
             "key.parsed_declaration" : "var isConstant: Bool",
-            "key.parsed_scope.end" : 8,
-            "key.parsed_scope.start" : 8,
+            "key.parsed_scope.end" : 10,
+            "key.parsed_scope.start" : 10,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main16DynamicGraph_AnyP10isConstantSbvp"
@@ -131,18 +171,18 @@
             "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>var requiresGrad: <Type usr=\"s:Sb\">Bool<\/Type> { get set }<\/Declaration>",
             "key.bodylength" : 9,
-            "key.bodyoffset" : 383,
+            "key.bodyoffset" : 450,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>requiresGrad<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 34,
             "key.name" : "requiresGrad",
             "key.namelength" : 12,
-            "key.nameoffset" : 363,
-            "key.offset" : 359,
+            "key.nameoffset" : 430,
+            "key.offset" : 426,
             "key.parsed_declaration" : "var requiresGrad: Bool",
-            "key.parsed_scope.end" : 9,
-            "key.parsed_scope.start" : 9,
+            "key.parsed_scope.end" : 11,
+            "key.parsed_scope.start" : 11,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
@@ -160,26 +200,26 @@
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 432
+            "key.offset" : 499
           }
         ],
         "key.bodylength" : 49,
-        "key.bodyoffset" : 489,
+        "key.bodyoffset" : 556,
         "key.doc.column" : 17,
         "key.doc.comment" : "Protocol for group of tensors.",
         "key.doc.declaration" : "public protocol DynamicGraph_AnyGroup : main.DynamicGraph_Any",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"13\" column=\"17\"><Name>DynamicGraph_AnyGroup<\/Name><USR>s:4main21DynamicGraph_AnyGroupP<\/USR><Declaration>public protocol DynamicGraph_AnyGroup : main.DynamicGraph_Any<\/Declaration><CommentParts><Abstract><Para>Protocol for group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 13,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"15\" column=\"17\"><Name>DynamicGraph_AnyGroup<\/Name><USR>s:4main21DynamicGraph_AnyGroupP<\/USR><Declaration>public protocol DynamicGraph_AnyGroup : main.DynamicGraph_Any<\/Declaration><CommentParts><Abstract><Para>Protocol for group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 15,
         "key.doc.name" : "DynamicGraph_AnyGroup",
         "key.doc.type" : "Class",
         "key.doclength" : 35,
-        "key.docoffset" : 397,
+        "key.docoffset" : 464,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 16,
-            "key.offset" : 471
+            "key.offset" : 538
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
@@ -193,28 +233,28 @@
         "key.length" : 100,
         "key.name" : "DynamicGraph_AnyGroup",
         "key.namelength" : 21,
-        "key.nameoffset" : 448,
-        "key.offset" : 439,
+        "key.nameoffset" : 515,
+        "key.offset" : 506,
         "key.parsed_declaration" : "public protocol DynamicGraph_AnyGroup: DynamicGraph_Any",
-        "key.parsed_scope.end" : 15,
-        "key.parsed_scope.start" : 13,
+        "key.parsed_scope.end" : 17,
+        "key.parsed_scope.start" : 15,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>var untyped: [<Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type>] { get }<\/Declaration>",
             "key.bodylength" : 5,
-            "key.bodyoffset" : 531,
+            "key.bodyoffset" : 598,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>untyped<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 45,
             "key.name" : "untyped",
             "key.namelength" : 7,
-            "key.nameoffset" : 496,
-            "key.offset" : 492,
+            "key.nameoffset" : 563,
+            "key.offset" : 559,
             "key.parsed_declaration" : "var untyped: [DynamicGraph.AnyTensor]",
-            "key.parsed_scope.end" : 14,
-            "key.parsed_scope.start" : 14,
+            "key.parsed_scope.end" : 16,
+            "key.parsed_scope.start" : 16,
             "key.typename" : "[DynamicGraph.AnyTensor]",
             "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
             "key.usr" : "s:4main21DynamicGraph_AnyGroupP7untypedSayAA0bC0C0D6TensorCGvp"
@@ -226,26 +266,26 @@
       },
       {
         "key.annotated_decl" : "<Declaration>public protocol DynamicGraph_AnyGroup : <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
-        "key.bodylength" : 672,
-        "key.bodyoffset" : 574,
+        "key.bodylength" : 1019,
+        "key.bodyoffset" : 641,
         "key.doc.column" : 17,
         "key.doc.declaration" : "public protocol DynamicGraph_AnyGroup : main.DynamicGraph_Any",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"13\" column=\"17\"><Name>DynamicGraph_AnyGroup<\/Name><USR>s:4main21DynamicGraph_AnyGroupP<\/USR><Declaration>public protocol DynamicGraph_AnyGroup : main.DynamicGraph_Any<\/Declaration><CommentParts><Abstract><Para>Protocol for group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 13,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"15\" column=\"17\"><Name>DynamicGraph_AnyGroup<\/Name><USR>s:4main21DynamicGraph_AnyGroupP<\/USR><Declaration>public protocol DynamicGraph_AnyGroup : main.DynamicGraph_Any<\/Declaration><CommentParts><Abstract><Para>Protocol for group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 15,
         "key.doc.name" : "DynamicGraph_AnyGroup",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
         "key.fully_annotated_decl" : "<decl.protocol><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>protocol<\/syntaxtype.keyword> <decl.name>DynamicGraph_AnyGroup<\/decl.name> : <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.protocol>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 706,
+        "key.length" : 1053,
         "key.name" : "DynamicGraph_AnyGroup",
         "key.namelength" : 21,
-        "key.nameoffset" : 551,
-        "key.offset" : 541,
+        "key.nameoffset" : 618,
+        "key.offset" : 608,
         "key.parsed_declaration" : "extension DynamicGraph_AnyGroup",
-        "key.parsed_scope.end" : 46,
-        "key.parsed_scope.start" : 17,
+        "key.parsed_scope.end" : 62,
+        "key.parsed_scope.start" : 19,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -254,22 +294,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 577
+                "key.offset" : 644
               }
             ],
             "key.bodylength" : 148,
-            "key.bodyoffset" : 607,
+            "key.bodyoffset" : 674,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>dimensions<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 172,
             "key.name" : "dimensions",
             "key.namelength" : 10,
-            "key.nameoffset" : 588,
-            "key.offset" : 584,
+            "key.nameoffset" : 655,
+            "key.offset" : 651,
             "key.parsed_declaration" : "public var dimensions: [Int]",
-            "key.parsed_scope.end" : 24,
-            "key.parsed_scope.start" : 18,
+            "key.parsed_scope.end" : 26,
+            "key.parsed_scope.start" : 20,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main16DynamicGraph_AnyP10dimensionsSaySiGvp\">dimensions<\/RelatedName>"
@@ -287,11 +327,11 @@
             "key.length" : 38,
             "key.name" : "dimensions",
             "key.namelength" : 10,
-            "key.nameoffset" : 616,
-            "key.offset" : 612,
+            "key.nameoffset" : 683,
+            "key.offset" : 679,
             "key.parsed_declaration" : "let dimensions = untyped[0].dimensions",
-            "key.parsed_scope.end" : 19,
-            "key.parsed_scope.start" : 19,
+            "key.parsed_scope.end" : 21,
+            "key.parsed_scope.start" : 21,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main21DynamicGraph_AnyGroupPAAE10dimensionsSaySiGvp\">dimensions<\/RelatedName>"
@@ -306,27 +346,141 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type> { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 826
+              }
+            ],
+            "key.bodylength" : 128,
+            "key.bodyoffset" : 859,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>format<\/decl.name>: <decl.var.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 155,
+            "key.name" : "format",
+            "key.namelength" : 6,
+            "key.nameoffset" : 837,
+            "key.offset" : 833,
+            "key.parsed_declaration" : "public var format: TensorFormat",
+            "key.parsed_scope.end" : 33,
+            "key.parsed_scope.start" : 27,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main16DynamicGraph_AnyP6formatAA12TensorFormatOvp\">format<\/RelatedName>"
+              }
+            ],
+            "key.typename" : "TensorFormat",
+            "key.typeusr" : "$s4main12TensorFormatOD",
+            "key.usr" : "s:4main21DynamicGraph_AnyGroupPAAE6formatAA12TensorFormatOvp"
+          },
+          {
+            "key.annotated_decl" : "<Declaration>let format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type><\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>format<\/decl.name>: <decl.var.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.type><\/decl.var.local>",
+            "key.kind" : "source.lang.swift.decl.var.local",
+            "key.length" : 30,
+            "key.name" : "format",
+            "key.namelength" : 6,
+            "key.nameoffset" : 868,
+            "key.offset" : 864,
+            "key.parsed_declaration" : "let format = untyped[0].format",
+            "key.parsed_scope.end" : 28,
+            "key.parsed_scope.start" : 28,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main21DynamicGraph_AnyGroupPAAE6formatAA12TensorFormatOvp\">format<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main16DynamicGraph_AnyP6formatAA12TensorFormatOvp\">format<\/RelatedName>"
+              }
+            ],
+            "key.typename" : "TensorFormat",
+            "key.typeusr" : "$s4main12TensorFormatOD",
+            "key.usr" : "s:4main21DynamicGraph_AnyGroupPAAE6formatAA12TensorFormatOvgADL_AFvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var increments: [<Type usr=\"s:Si\">Int<\/Type>] { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 991
+              }
+            ],
+            "key.bodylength" : 148,
+            "key.bodyoffset" : 1021,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>increments<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 172,
+            "key.name" : "increments",
+            "key.namelength" : 10,
+            "key.nameoffset" : 1002,
+            "key.offset" : 998,
+            "key.parsed_declaration" : "public var increments: [Int]",
+            "key.parsed_scope.end" : 40,
+            "key.parsed_scope.start" : 34,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main16DynamicGraph_AnyP10incrementsSaySiGvp\">increments<\/RelatedName>"
+              }
+            ],
+            "key.typename" : "[Int]",
+            "key.typeusr" : "$sSaySiGD",
+            "key.usr" : "s:4main21DynamicGraph_AnyGroupPAAE10incrementsSaySiGvp"
+          },
+          {
+            "key.annotated_decl" : "<Declaration>let increments: [<Type usr=\"s:Si\">Int<\/Type>]<\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>increments<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.type><\/decl.var.local>",
+            "key.kind" : "source.lang.swift.decl.var.local",
+            "key.length" : 38,
+            "key.name" : "increments",
+            "key.namelength" : 10,
+            "key.nameoffset" : 1030,
+            "key.offset" : 1026,
+            "key.parsed_declaration" : "let increments = untyped[0].increments",
+            "key.parsed_scope.end" : 35,
+            "key.parsed_scope.start" : 35,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main21DynamicGraph_AnyGroupPAAE10incrementsSaySiGvp\">increments<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main16DynamicGraph_AnyP10incrementsSaySiGvp\">increments<\/RelatedName>"
+              }
+            ],
+            "key.typename" : "[Int]",
+            "key.typeusr" : "$sSaySiGD",
+            "key.usr" : "s:4main21DynamicGraph_AnyGroupPAAE10incrementsSaySiGvgADL_AEvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>public var isConstant: <Type usr=\"s:Sb\">Bool<\/Type> { get }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 759
+                "key.offset" : 1173
               }
             ],
             "key.bodylength" : 148,
-            "key.bodyoffset" : 788,
+            "key.bodyoffset" : 1202,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>isConstant<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 171,
             "key.name" : "isConstant",
             "key.namelength" : 10,
-            "key.nameoffset" : 770,
-            "key.offset" : 766,
+            "key.nameoffset" : 1184,
+            "key.offset" : 1180,
             "key.parsed_declaration" : "public var isConstant: Bool",
-            "key.parsed_scope.end" : 31,
-            "key.parsed_scope.start" : 25,
+            "key.parsed_scope.end" : 47,
+            "key.parsed_scope.start" : 41,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main16DynamicGraph_AnyP10isConstantSbvp\">isConstant<\/RelatedName>"
@@ -344,11 +498,11 @@
             "key.length" : 38,
             "key.name" : "isConstant",
             "key.namelength" : 10,
-            "key.nameoffset" : 797,
-            "key.offset" : 793,
+            "key.nameoffset" : 1211,
+            "key.offset" : 1207,
             "key.parsed_declaration" : "let isConstant = untyped[0].isConstant",
-            "key.parsed_scope.end" : 26,
-            "key.parsed_scope.start" : 26,
+            "key.parsed_scope.end" : 42,
+            "key.parsed_scope.start" : 42,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main21DynamicGraph_AnyGroupPAAE10isConstantSbvp\">isConstant<\/RelatedName>"
@@ -368,22 +522,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 940
+                "key.offset" : 1354
               }
             ],
             "key.bodylength" : 273,
-            "key.bodyoffset" : 971,
+            "key.bodyoffset" : 1385,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>requiresGrad<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 298,
             "key.name" : "requiresGrad",
             "key.namelength" : 12,
-            "key.nameoffset" : 951,
-            "key.offset" : 947,
+            "key.nameoffset" : 1365,
+            "key.offset" : 1361,
             "key.parsed_declaration" : "public var requiresGrad: Bool",
-            "key.parsed_scope.end" : 45,
-            "key.parsed_scope.start" : 32,
+            "key.parsed_scope.end" : 61,
+            "key.parsed_scope.start" : 48,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main16DynamicGraph_AnyP12requiresGradSbvp\">requiresGrad<\/RelatedName>"
@@ -402,11 +556,11 @@
             "key.length" : 42,
             "key.name" : "requiresGrad",
             "key.namelength" : 12,
-            "key.nameoffset" : 992,
-            "key.offset" : 988,
+            "key.nameoffset" : 1406,
+            "key.offset" : 1402,
             "key.parsed_declaration" : "let requiresGrad = untyped[0].requiresGrad",
-            "key.parsed_scope.end" : 34,
-            "key.parsed_scope.start" : 34,
+            "key.parsed_scope.end" : 50,
+            "key.parsed_scope.start" : 50,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main21DynamicGraph_AnyGroupPAAE12requiresGradSbvp\">requiresGrad<\/RelatedName>"
@@ -427,7 +581,7 @@
       {
         "key.annotated_decl" : "<Declaration>public class <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.AnyTensor<\/Declaration>",
         "key.bodylength" : 1,
-        "key.bodyoffset" : 1301,
+        "key.bodyoffset" : 1715,
         "key.doc.column" : 16,
         "key.doc.declaration" : "public class main.DynamicGraph.AnyTensor",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DynamicGraph.swift",
@@ -439,7 +593,7 @@
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 16,
-            "key.offset" : 1283
+            "key.offset" : 1697
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DynamicGraph.swift",
@@ -453,11 +607,11 @@
         "key.length" : 54,
         "key.name" : "DynamicGraph.AnyTensor",
         "key.namelength" : 22,
-        "key.nameoffset" : 1259,
-        "key.offset" : 1249,
+        "key.nameoffset" : 1673,
+        "key.offset" : 1663,
         "key.parsed_declaration" : "extension DynamicGraph.AnyTensor: DynamicGraph_Any",
-        "key.parsed_scope.end" : 49,
-        "key.parsed_scope.start" : 48,
+        "key.parsed_scope.end" : 65,
+        "key.parsed_scope.start" : 64,
         "key.typename" : "DynamicGraph.AnyTensor.Type",
         "key.typeusr" : "$s4main12DynamicGraphC9AnyTensorCmD",
         "key.usr" : "s:4main12DynamicGraphC9AnyTensorC"
@@ -465,12 +619,12 @@
       {
         "key.annotated_decl" : "<Declaration>public final class <Type usr=\"s:4main5ModelC\">Model<\/Type>.Parameters : IO<\/Declaration>",
         "key.bodylength" : 1,
-        "key.bodyoffset" : 1361,
+        "key.bodyoffset" : 1775,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 26,
-            "key.offset" : 1333
+            "key.offset" : 1747
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
@@ -484,11 +638,11 @@
         "key.length" : 58,
         "key.name" : "Model.Parameters",
         "key.namelength" : 16,
-        "key.nameoffset" : 1315,
-        "key.offset" : 1305,
+        "key.nameoffset" : 1729,
+        "key.offset" : 1719,
         "key.parsed_declaration" : "extension Model.Parameters: DynamicGraph_AnyParameters",
-        "key.parsed_scope.end" : 52,
-        "key.parsed_scope.start" : 51,
+        "key.parsed_scope.end" : 68,
+        "key.parsed_scope.start" : 67,
         "key.typename" : "Model.Parameters.Type",
         "key.typeusr" : "$s4main5ModelC10ParametersCmD",
         "key.usr" : "s:4main5ModelC10ParametersC"
@@ -496,7 +650,7 @@
       {
         "key.annotated_decl" : "<Declaration>public final class DynamicGraph<\/Declaration>",
         "key.bodylength" : 1790,
-        "key.bodyoffset" : 1389,
+        "key.bodyoffset" : 1803,
         "key.doc.column" : 20,
         "key.doc.declaration" : "public final class DynamicGraph",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/DynamicGraph.swift",
@@ -510,11 +664,11 @@
         "key.length" : 1815,
         "key.name" : "DynamicGraph",
         "key.namelength" : 12,
-        "key.nameoffset" : 1375,
-        "key.offset" : 1365,
+        "key.nameoffset" : 1789,
+        "key.offset" : 1779,
         "key.parsed_declaration" : "extension DynamicGraph",
-        "key.parsed_scope.end" : 100,
-        "key.parsed_scope.start" : 54,
+        "key.parsed_scope.end" : 116,
+        "key.parsed_scope.start" : 70,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -523,7 +677,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1393
+                "key.offset" : 1807
               }
             ],
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
@@ -532,11 +686,11 @@
             "key.length" : 42,
             "key.name" : "AnyGroup",
             "key.namelength" : 8,
-            "key.nameoffset" : 1410,
-            "key.offset" : 1400,
+            "key.nameoffset" : 1824,
+            "key.offset" : 1814,
             "key.parsed_declaration" : "public typealias AnyGroup = DynamicGraph_AnyGroup",
-            "key.parsed_scope.end" : 56,
-            "key.parsed_scope.start" : 56,
+            "key.parsed_scope.end" : 72,
+            "key.parsed_scope.start" : 72,
             "key.typename" : "DynamicGraph_AnyGroup.Protocol",
             "key.typeusr" : "$s4main21DynamicGraph_AnyGroup_pmD",
             "key.usr" : "s:4main12DynamicGraphC8AnyGroupa"
@@ -548,31 +702,31 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1481
+                "key.offset" : 1895
               }
             ],
             "key.bodylength" : 1585,
-            "key.bodyoffset" : 1591,
+            "key.bodyoffset" : 2005,
             "key.doc.column" : 17,
             "key.doc.comment" : "Type-aware group of tensors.",
             "key.doc.declaration" : "public struct Group<Element> : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"59\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-            "key.doc.line" : 59,
+            "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"75\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+            "key.doc.line" : 75,
             "key.doc.name" : "Group",
             "key.doc.type" : "Class",
             "key.doclength" : 33,
-            "key.docoffset" : 1446,
+            "key.docoffset" : 1860,
             "key.elements" : [
               {
                 "key.kind" : "source.lang.swift.structure.elem.typeref",
                 "key.length" : 22,
-                "key.offset" : 1535
+                "key.offset" : 1949
               },
               {
                 "key.kind" : "source.lang.swift.structure.elem.typeref",
                 "key.length" : 28,
-                "key.offset" : 1559
+                "key.offset" : 1973
               }
             ],
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
@@ -589,11 +743,11 @@
             "key.length" : 1689,
             "key.name" : "Group",
             "key.namelength" : 5,
-            "key.nameoffset" : 1495,
-            "key.offset" : 1488,
+            "key.nameoffset" : 1909,
+            "key.offset" : 1902,
             "key.parsed_declaration" : "public struct Group<Element: DynamicGraph.AnyTensor>: RandomAccessCollection, DynamicGraph\n    .AnyGroup",
-            "key.parsed_scope.end" : 98,
-            "key.parsed_scope.start" : 59,
+            "key.parsed_scope.end" : 114,
+            "key.parsed_scope.start" : 75,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>Element : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
@@ -601,7 +755,7 @@
                   {
                     "key.kind" : "source.lang.swift.structure.elem.typeref",
                     "key.length" : 22,
-                    "key.offset" : 1510
+                    "key.offset" : 1924
                   }
                 ],
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
@@ -615,11 +769,11 @@
                 "key.length" : 31,
                 "key.name" : "Element",
                 "key.namelength" : 7,
-                "key.nameoffset" : 1501,
-                "key.offset" : 1501,
+                "key.nameoffset" : 1915,
+                "key.offset" : 1915,
                 "key.parsed_declaration" : "public struct Group<Element: DynamicGraph.AnyTensor",
-                "key.parsed_scope.end" : 59,
-                "key.parsed_scope.start" : 59,
+                "key.parsed_scope.end" : 75,
+                "key.parsed_scope.start" : 75,
                 "key.typename" : "Element.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV7Elementxmfp"
@@ -631,27 +785,27 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1596
+                    "key.offset" : 2010
                   }
                 ],
                 "key.bodylength" : 45,
-                "key.bodyoffset" : 1642,
+                "key.bodyoffset" : 2056,
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
                 "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>untyped<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
                 "key.kind" : "source.lang.swift.decl.var.instance",
                 "key.length" : 85,
                 "key.name" : "untyped",
                 "key.namelength" : 7,
-                "key.nameoffset" : 1607,
-                "key.offset" : 1603,
+                "key.nameoffset" : 2021,
+                "key.offset" : 2017,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:4main21DynamicGraph_AnyGroupP7untypedSayAA0bC0C0D6TensorCGvp"
                   }
                 ],
                 "key.parsed_declaration" : "public var untyped: [DynamicGraph.AnyTensor]",
-                "key.parsed_scope.end" : 62,
-                "key.parsed_scope.start" : 62,
+                "key.parsed_scope.end" : 78,
+                "key.parsed_scope.start" : 78,
                 "key.typename" : "[DynamicGraph.AnyTensor]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV7untypedSayAC9AnyTensorCGvp"
@@ -665,11 +819,11 @@
                 "key.length" : 30,
                 "key.name" : "underlyingArray",
                 "key.namelength" : 15,
-                "key.nameoffset" : 1697,
-                "key.offset" : 1693,
+                "key.nameoffset" : 2111,
+                "key.offset" : 2107,
                 "key.parsed_declaration" : "var underlyingArray: [Element]",
-                "key.parsed_scope.end" : 63,
-                "key.parsed_scope.start" : 63,
+                "key.parsed_scope.end" : 79,
+                "key.parsed_scope.start" : 79,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "[Element]",
                 "key.typeusr" : "$sSayxGD",
@@ -682,7 +836,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1729
+                    "key.offset" : 2143
                   }
                 ],
                 "key.doc.declaration" : "associatedtype Element where Self.Element == Self.Iterator.Element",
@@ -700,8 +854,8 @@
                 "key.length" : 27,
                 "key.name" : "Element",
                 "key.namelength" : 7,
-                "key.nameoffset" : 1746,
-                "key.offset" : 1736,
+                "key.nameoffset" : 2160,
+                "key.offset" : 2150,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk7ElementQa"
@@ -717,8 +871,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public typealias Element = Element",
-                "key.parsed_scope.end" : 65,
-                "key.parsed_scope.start" : 65,
+                "key.parsed_scope.end" : 81,
+                "key.parsed_scope.start" : 81,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/RelatedName>"
@@ -735,7 +889,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1768
+                    "key.offset" : 2182
                   }
                 ],
                 "key.doc.declaration" : "associatedtype Index : Comparable where Self.Index == Self.Indices.Element, Self.Indices.Element == Self.Indices.Index, Self.Indices.Index == Self.SubSequence.Index, Self.SubSequence.Index == Self.Indices.Indices.Element, Self.Indices.Indices.Element == Self.Indices.Indices.Index, Self.Indices.Indices.Index == Self.SubSequence.Indices.Element, Self.SubSequence.Indices.Element == Self.SubSequence.Indices.Index, Self.SubSequence.Indices.Index == Self.SubSequence.Indices.Indices.Element, Self.SubSequence.Indices.Indices.Element == Self.SubSequence.Indices.Indices.Index",
@@ -756,8 +910,8 @@
                 "key.length" : 21,
                 "key.name" : "Index",
                 "key.namelength" : 5,
-                "key.nameoffset" : 1785,
-                "key.offset" : 1775,
+                "key.nameoffset" : 2199,
+                "key.offset" : 2189,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk5IndexQa"
@@ -770,8 +924,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public typealias Index = Int",
-                "key.parsed_scope.end" : 66,
-                "key.parsed_scope.start" : 66,
+                "key.parsed_scope.end" : 82,
+                "key.parsed_scope.start" : 82,
                 "key.typename" : "Int.Type",
                 "key.typeusr" : "$sSimD",
                 "key.usr" : "s:Sl5IndexQa"
@@ -783,7 +937,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1801
+                    "key.offset" : 2215
                   }
                 ],
                 "key.doc.declaration" : "associatedtype Indices : Collection = DefaultIndices<Self> where Self.Indices == Self.Indices.SubSequence",
@@ -801,8 +955,8 @@
                 "key.length" : 32,
                 "key.name" : "Indices",
                 "key.namelength" : 7,
-                "key.nameoffset" : 1818,
-                "key.offset" : 1808,
+                "key.nameoffset" : 2232,
+                "key.offset" : 2222,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk7IndicesQa"
@@ -815,8 +969,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public typealias Indices = Range<Index>",
-                "key.parsed_scope.end" : 67,
-                "key.parsed_scope.start" : 67,
+                "key.parsed_scope.end" : 83,
+                "key.parsed_scope.start" : 83,
                 "key.typename" : "Range<Int>.Type",
                 "key.typeusr" : "$sSnySiGmD",
                 "key.usr" : "s:Sl7IndicesQa"
@@ -828,7 +982,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1845
+                    "key.offset" : 2259
                   }
                 ],
                 "key.doc.declaration" : "associatedtype SubSequence : Collection = Slice<Self> where Self.Element == Self.SubSequence.Element, Self.SubSequence == Self.SubSequence.SubSequence",
@@ -849,8 +1003,8 @@
                 "key.length" : 50,
                 "key.name" : "SubSequence",
                 "key.namelength" : 11,
-                "key.nameoffset" : 1862,
-                "key.offset" : 1852,
+                "key.nameoffset" : 2276,
+                "key.offset" : 2266,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk11SubSequenceQa"
@@ -863,8 +1017,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public typealias SubSequence = Array<Element>.SubSequence",
-                "key.parsed_scope.end" : 68,
-                "key.parsed_scope.start" : 68,
+                "key.parsed_scope.end" : 84,
+                "key.parsed_scope.start" : 84,
                 "key.typename" : "ArraySlice<Element>.Type",
                 "key.typeusr" : "$ss10ArraySliceVyxGmD",
                 "key.usr" : "s:Sl11SubSequenceQa"
@@ -876,11 +1030,11 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1907
+                    "key.offset" : 2321
                   }
                 ],
                 "key.bodylength" : 26,
-                "key.bodyoffset" : 1935,
+                "key.bodyoffset" : 2349,
                 "key.doc.declaration" : "var endIndex: Self.Index { get }",
                 "key.doc.discussion" : [
                   {
@@ -905,8 +1059,8 @@
                 "key.length" : 48,
                 "key.name" : "endIndex",
                 "key.namelength" : 8,
-                "key.nameoffset" : 1918,
-                "key.offset" : 1914,
+                "key.nameoffset" : 2332,
+                "key.offset" : 2328,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk8endIndex0B0Qzvp"
@@ -919,8 +1073,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public var endIndex: Index",
-                "key.parsed_scope.end" : 69,
-                "key.parsed_scope.start" : 69,
+                "key.parsed_scope.end" : 85,
+                "key.parsed_scope.start" : 85,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:Sl8endIndex0B0Qzvp"
@@ -932,11 +1086,11 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1967
+                    "key.offset" : 2381
                   }
                 ],
                 "key.bodylength" : 25,
-                "key.bodyoffset" : 1996,
+                "key.bodyoffset" : 2410,
                 "key.doc.declaration" : "override var indices: Self.Indices { get }",
                 "key.doc.discussion" : [
                   {
@@ -958,8 +1112,8 @@
                 "key.length" : 48,
                 "key.name" : "indices",
                 "key.namelength" : 7,
-                "key.nameoffset" : 1978,
-                "key.offset" : 1974,
+                "key.nameoffset" : 2392,
+                "key.offset" : 2388,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk7indices7IndicesQzvp"
@@ -972,8 +1126,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public var indices: Indices",
-                "key.parsed_scope.end" : 70,
-                "key.parsed_scope.start" : 70,
+                "key.parsed_scope.end" : 86,
+                "key.parsed_scope.start" : 86,
                 "key.typename" : "Range<Int>",
                 "key.typeusr" : "$sSnySiGD",
                 "key.usr" : "s:Sk7indices7IndicesQzvp"
@@ -985,11 +1139,11 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 2027
+                    "key.offset" : 2441
                   }
                 ],
                 "key.bodylength" : 28,
-                "key.bodyoffset" : 2057,
+                "key.bodyoffset" : 2471,
                 "key.doc.declaration" : "var startIndex: Self.Index { get }",
                 "key.doc.discussion" : [
                   {
@@ -1008,8 +1162,8 @@
                 "key.length" : 52,
                 "key.name" : "startIndex",
                 "key.namelength" : 10,
-                "key.nameoffset" : 2038,
-                "key.offset" : 2034,
+                "key.nameoffset" : 2452,
+                "key.offset" : 2448,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk10startIndex0B0Qzvp"
@@ -1022,8 +1176,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public var startIndex: Index",
-                "key.parsed_scope.end" : 71,
-                "key.parsed_scope.start" : 71,
+                "key.parsed_scope.end" : 87,
+                "key.parsed_scope.start" : 87,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:Sl10startIndex0B0Qzvp"
@@ -1035,11 +1189,11 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 2091
+                    "key.offset" : 2505
                   }
                 ],
                 "key.bodylength" : 38,
-                "key.bodyoffset" : 2136,
+                "key.bodyoffset" : 2550,
                 "key.doc.declaration" : "override func formIndex(after i: inout Self.Index)",
                 "key.doc.discussion" : [
                   {
@@ -1065,8 +1219,8 @@
                 "key.length" : 77,
                 "key.name" : "formIndex(after:)",
                 "key.namelength" : 31,
-                "key.nameoffset" : 2103,
-                "key.offset" : 2098,
+                "key.nameoffset" : 2517,
+                "key.offset" : 2512,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk9formIndex5aftery0B0Qzz_tF"
@@ -1079,8 +1233,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public func formIndex(after i: inout Index)",
-                "key.parsed_scope.end" : 72,
-                "key.parsed_scope.start" : 72,
+                "key.parsed_scope.end" : 88,
+                "key.parsed_scope.start" : 88,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV9formIndex6beforeySiz_tF\">formIndex(before:)<\/RelatedName>"
@@ -1100,11 +1254,11 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 2180
+                    "key.offset" : 2594
                   }
                 ],
                 "key.bodylength" : 39,
-                "key.bodyoffset" : 2226,
+                "key.bodyoffset" : 2640,
                 "key.doc.declaration" : "override func formIndex(before i: inout Self.Index)",
                 "key.doc.discussion" : [
                   {
@@ -1130,8 +1284,8 @@
                 "key.length" : 79,
                 "key.name" : "formIndex(before:)",
                 "key.namelength" : 32,
-                "key.nameoffset" : 2192,
-                "key.offset" : 2187,
+                "key.nameoffset" : 2606,
+                "key.offset" : 2601,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sk9formIndex6beforey0B0Qzz_tF"
@@ -1141,8 +1295,8 @@
                   }
                 ],
                 "key.parsed_declaration" : "public func formIndex(before i: inout Index)",
-                "key.parsed_scope.end" : 73,
-                "key.parsed_scope.start" : 73,
+                "key.parsed_scope.end" : 89,
+                "key.parsed_scope.start" : 89,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV9formIndex5afterySiz_tF\">formIndex(after:)<\/RelatedName>"
@@ -1162,11 +1316,11 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 2271
+                    "key.offset" : 2685
                   }
                 ],
                 "key.bodylength" : 27,
-                "key.bodyoffset" : 2317,
+                "key.bodyoffset" : 2731,
                 "key.doc.declaration" : "subscript(position: Self.Index) -> Self.Element { get }",
                 "key.doc.discussion" : [
                   {
@@ -1204,8 +1358,8 @@
                 "key.length" : 67,
                 "key.name" : "subscript(_:)",
                 "key.namelength" : 26,
-                "key.nameoffset" : 2278,
-                "key.offset" : 2278,
+                "key.nameoffset" : 2692,
+                "key.offset" : 2692,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sky7ElementQz5IndexQzcip"
@@ -1218,11 +1372,14 @@
                   }
                 ],
                 "key.parsed_declaration" : "public subscript(position: Index) -> Element",
-                "key.parsed_scope.end" : 74,
-                "key.parsed_scope.start" : 74,
+                "key.parsed_scope.end" : 90,
+                "key.parsed_scope.start" : 90,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVys10ArraySliceVyxGSnySiGcip\">subscript(_:)<\/RelatedName>"
+                  },
+                  {
+                    "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVyAEy_xGSnySiGd_AA13StreamContextCSgtcip\">subscript(_:_:)<\/RelatedName>"
                   }
                 ],
                 "key.substructure" : [
@@ -1239,11 +1396,11 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 2350
+                    "key.offset" : 2764
                   }
                 ],
                 "key.bodylength" : 20,
-                "key.bodyoffset" : 2395,
+                "key.bodyoffset" : 2809,
                 "key.doc.declaration" : "override subscript(bounds: Range<Self.Index>) -> Self.SubSequence { get }",
                 "key.doc.discussion" : [
                   {
@@ -1281,8 +1438,8 @@
                 "key.length" : 59,
                 "key.name" : "subscript(_:)",
                 "key.namelength" : 21,
-                "key.nameoffset" : 2357,
-                "key.offset" : 2357,
+                "key.nameoffset" : 2771,
+                "key.offset" : 2771,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:Sky11SubSequenceQzSny5IndexQzGcip"
@@ -1295,11 +1452,14 @@
                   }
                 ],
                 "key.parsed_declaration" : "public subscript(x: Indices) -> SubSequence",
-                "key.parsed_scope.end" : 75,
-                "key.parsed_scope.start" : 75,
+                "key.parsed_scope.end" : 91,
+                "key.parsed_scope.start" : 91,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVyxSicip\">subscript(_:)<\/RelatedName>"
+                  },
+                  {
+                    "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVyAEy_xGSnySiGd_AA13StreamContextCSgtcip\">subscript(_:_:)<\/RelatedName>"
                   }
                 ],
                 "key.substructure" : [
@@ -1316,22 +1476,22 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 2422
+                    "key.offset" : 2836
                   }
                 ],
                 "key.bodylength" : 38,
-                "key.bodyoffset" : 2459,
+                "key.bodyoffset" : 2873,
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
                 "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>elements<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/ref.generic_type_param><\/decl.var.parameter.type>...<\/decl.var.parameter>)<\/decl.function.constructor>",
                 "key.kind" : "source.lang.swift.decl.function.method.instance",
                 "key.length" : 69,
                 "key.name" : "init(_:)",
                 "key.namelength" : 28,
-                "key.nameoffset" : 2429,
-                "key.offset" : 2429,
+                "key.nameoffset" : 2843,
+                "key.offset" : 2843,
                 "key.parsed_declaration" : "public init(_ elements: Element...)",
-                "key.parsed_scope.end" : 79,
-                "key.parsed_scope.start" : 77,
+                "key.parsed_scope.end" : 95,
+                "key.parsed_scope.start" : 93,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVyAEy_xGAEy_qd__GcAC9AnyTensorCRbd__lufc\">init&lt;OtherElement&gt;(_: Group&lt;OtherElement&gt;) where OtherElement : DynamicGraph.AnyTensor<\/RelatedName>"
@@ -1354,27 +1514,27 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 2504
+                    "key.offset" : 2918
                   }
                 ],
                 "key.bodylength" : 482,
-                "key.bodyoffset" : 2590,
+                "key.bodyoffset" : 3004,
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
                 "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupVyAEy_xGAEy_qd__GcAC9AnyTensorCRbd__lufc12OtherElementL_qd__mfp\"><decl.generic_type_param.name>OtherElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>otherGroup<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupVyAEy_xGAEy_qd__GcAC9AnyTensorCRbd__lufc12OtherElementL_qd__mfp\">OtherElement<\/ref.generic_type_param>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>OtherElement : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.function.constructor>",
                 "key.kind" : "source.lang.swift.decl.function.method.instance",
                 "key.length" : 562,
                 "key.name" : "init(_:)",
                 "key.namelength" : 77,
-                "key.nameoffset" : 2511,
-                "key.offset" : 2511,
+                "key.nameoffset" : 2925,
+                "key.offset" : 2925,
                 "key.overrides" : [
                   {
                     "key.usr" : "s:4main24DynamicGraph_TensorGroupPyx03AnyD0Qzcfc"
                   }
                 ],
                 "key.parsed_declaration" : "public init<OtherElement: DynamicGraph.AnyTensor>(_ otherGroup: Group<OtherElement>)",
-                "key.parsed_scope.end" : 93,
-                "key.parsed_scope.start" : 81,
+                "key.parsed_scope.end" : 109,
+                "key.parsed_scope.start" : 97,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVyAEy_xGxd_tcfc\">init(_: Element...)<\/RelatedName>"
@@ -1390,7 +1550,7 @@
                       {
                         "key.kind" : "source.lang.swift.structure.elem.typeref",
                         "key.length" : 22,
-                        "key.offset" : 2530
+                        "key.offset" : 2944
                       }
                     ],
                     "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
@@ -1404,11 +1564,11 @@
                     "key.length" : 36,
                     "key.name" : "OtherElement",
                     "key.namelength" : 12,
-                    "key.nameoffset" : 2516,
-                    "key.offset" : 2516,
+                    "key.nameoffset" : 2930,
+                    "key.offset" : 2930,
                     "key.parsed_declaration" : "public init<OtherElement: DynamicGraph.AnyTensor",
-                    "key.parsed_scope.end" : 81,
-                    "key.parsed_scope.start" : 81,
+                    "key.parsed_scope.end" : 97,
+                    "key.parsed_scope.start" : 97,
                     "key.typename" : "OtherElement.Type",
                     "key.typeusr" : "$sqd__mD",
                     "key.usr" : "s:4main12DynamicGraphC5GroupVyAEy_xGAEy_qd__GcAC9AnyTensorCRbd__lufc12OtherElementL_qd__mfp"
@@ -1425,22 +1585,22 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 3079
+                    "key.offset" : 3493
                   }
                 ],
                 "key.bodylength" : 50,
-                "key.bodyoffset" : 3122,
+                "key.bodyoffset" : 3536,
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
                 "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>underlyingArray<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
                 "key.kind" : "source.lang.swift.decl.function.method.instance",
                 "key.length" : 87,
                 "key.name" : "init(_:)",
                 "key.namelength" : 34,
-                "key.nameoffset" : 3086,
-                "key.offset" : 3086,
+                "key.nameoffset" : 3500,
+                "key.offset" : 3500,
                 "key.parsed_declaration" : "public init(_ underlyingArray: [Element])",
-                "key.parsed_scope.end" : 97,
-                "key.parsed_scope.start" : 95,
+                "key.parsed_scope.end" : 113,
+                "key.parsed_scope.start" : 111,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVyAEy_xGxd_tcfc\">init(_: Element...)<\/RelatedName>"
@@ -1473,7 +1633,7 @@
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 3182
+            "key.offset" : 3596
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
@@ -1482,11 +1642,11 @@
         "key.length" : 36,
         "key.name" : "Group",
         "key.namelength" : 5,
-        "key.nameoffset" : 3199,
-        "key.offset" : 3189,
+        "key.nameoffset" : 3613,
+        "key.offset" : 3603,
         "key.parsed_declaration" : "public typealias Group = DynamicGraph.Group",
-        "key.parsed_scope.end" : 102,
-        "key.parsed_scope.start" : 102,
+        "key.parsed_scope.end" : 118,
+        "key.parsed_scope.start" : 118,
         "key.typename" : "DynamicGraph.Group.Type",
         "key.typeusr" : "$s4main12DynamicGraphC5GroupVmD",
         "key.usr" : "s:4main5Groupa"
@@ -1494,25 +1654,25 @@
       {
         "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type>, <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/Type> where Element : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
         "key.bodylength" : 570,
-        "key.bodyoffset" : 3303,
+        "key.bodyoffset" : 3709,
         "key.doc.column" : 17,
         "key.doc.declaration" : "public struct Group<Element> : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"59\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 59,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"75\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 75,
         "key.doc.name" : "Group",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
         "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol>, <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/ref.typealias> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 647,
+        "key.length" : 639,
         "key.name" : "DynamicGraph.Group",
         "key.namelength" : 18,
-        "key.nameoffset" : 3237,
-        "key.offset" : 3227,
-        "key.parsed_declaration" : "extension DynamicGraph.Group where Element == DynamicGraph.Tensor<Float64>",
-        "key.parsed_scope.end" : 120,
-        "key.parsed_scope.start" : 104,
+        "key.nameoffset" : 3651,
+        "key.offset" : 3641,
+        "key.parsed_declaration" : "extension DynamicGraph.Group where Element: DynamicGraph.AnyTensor",
+        "key.parsed_scope.end" : 136,
+        "key.parsed_scope.start" : 120,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1521,63 +1681,33 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3306
+                "key.offset" : 3712
               }
             ],
             "key.bodylength" : 158,
-            "key.bodyoffset" : 3433,
+            "key.bodyoffset" : 3839,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 279,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
             "key.namelength" : 105,
-            "key.nameoffset" : 3318,
-            "key.offset" : 3313,
+            "key.nameoffset" : 3724,
+            "key.offset" : 3719,
             "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 112,
-            "key.parsed_scope.start" : 105,
+            "key.parsed_scope.end" : 128,
+            "key.parsed_scope.start" : 121,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV8reshaped_6offset10incrementsAEy_xGAA21TensorDimensionFormatO_SaySiGSgAMtF\">reshaped(_:offset:increments:)<\/RelatedName>"
               }
             ],
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Double>> (DynamicGraph.Group<Element>) -> (TensorFormat, [Int], [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s6format10dimensions6offset10increments4main12DynamicGraphC5GroupVy_AG6TensorCy_SdGGAE0I6FormatO_SaySiGAPSgAQtcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF"
+            "key.typename" : "<Element where Element : DynamicGraph.AnyTensor> (DynamicGraph.Group<Element>) -> (TensorFormat, [Int], [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
+            "key.typeusr" : "$s6format10dimensions6offset10increments4main12DynamicGraphC5GroupVy_xGAE12TensorFormatO_SaySiGAMSgANtcD",
+            "key.usr" : "s:4main12DynamicGraphC5GroupV8reshaped6format10dimensions6offset10incrementsAEy_xGAA12TensorFormatO_SaySiGANSgAOtF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1586,853 +1716,33 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3595
+                "key.offset" : 4001
               }
             ],
             "key.bodylength" : 148,
-            "key.bodyoffset" : 3723,
+            "key.bodyoffset" : 4129,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 270,
             "key.name" : "reshaped(_:offset:increments:)",
             "key.namelength" : 106,
-            "key.nameoffset" : 3607,
-            "key.offset" : 3602,
+            "key.nameoffset" : 4013,
+            "key.offset" : 4008,
             "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 119,
-            "key.parsed_scope.start" : 113,
+            "key.parsed_scope.end" : 135,
+            "key.parsed_scope.start" : 129,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV8reshaped6format10dimensions6offset10incrementsAEy_xGAA12TensorFormatO_SaySiGANSgAOtF\">reshaped(format:dimensions:offset:increments:)<\/RelatedName>"
               }
             ],
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Double>> (DynamicGraph.Group<Element>) -> (TensorDimensionFormat, [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s_6offset10increments4main12DynamicGraphC5GroupVy_AE6TensorCy_SdGGAC0G15DimensionFormatO_SaySiGSgAOtcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF"
-          }
-        ],
-        "key.typename" : "DynamicGraph.Group<Element>.Type",
-        "key.typeusr" : "$s4main12DynamicGraphC5GroupVy_xGmD",
-        "key.usr" : "s:4main12DynamicGraphC5GroupV"
-      },
-      {
-        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type>, <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/Type> where Element : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
-        "key.bodylength" : 570,
-        "key.bodyoffset" : 3950,
-        "key.doc.column" : 17,
-        "key.doc.declaration" : "public struct Group<Element> : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor",
-        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"59\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 59,
-        "key.doc.name" : "Group",
-        "key.doc.type" : "Class",
-        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol>, <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/ref.typealias> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
-        "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 645,
-        "key.name" : "DynamicGraph.Group",
-        "key.namelength" : 18,
-        "key.nameoffset" : 3886,
-        "key.offset" : 3876,
-        "key.parsed_declaration" : "extension DynamicGraph.Group where Element == DynamicGraph.Tensor<Int64>",
-        "key.parsed_scope.end" : 138,
-        "key.parsed_scope.start" : 122,
-        "key.substructure" : [
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>], offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 3953
-              }
-            ],
-            "key.bodylength" : 158,
-            "key.bodyoffset" : 4080,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 279,
-            "key.name" : "reshaped(format:dimensions:offset:increments:)",
-            "key.namelength" : 105,
-            "key.nameoffset" : 3965,
-            "key.offset" : 3960,
-            "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 130,
-            "key.parsed_scope.start" : 123,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Int64>> (DynamicGraph.Group<Element>) -> (TensorFormat, [Int], [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s6format10dimensions6offset10increments4main12DynamicGraphC5GroupVy_AG6TensorCy_s5Int64VGGAE0I6FormatO_SaySiGARSgAStcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF"
-          },
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(_ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>, offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 4242
-              }
-            ],
-            "key.bodylength" : 148,
-            "key.bodyoffset" : 4370,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 270,
-            "key.name" : "reshaped(_:offset:increments:)",
-            "key.namelength" : 106,
-            "key.nameoffset" : 4254,
-            "key.offset" : 4249,
-            "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 137,
-            "key.parsed_scope.start" : 131,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Int64>> (DynamicGraph.Group<Element>) -> (TensorDimensionFormat, [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s_6offset10increments4main12DynamicGraphC5GroupVy_AE6TensorCy_s5Int64VGGAC0G15DimensionFormatO_SaySiGSgAQtcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF"
-          }
-        ],
-        "key.typename" : "DynamicGraph.Group<Element>.Type",
-        "key.typeusr" : "$s4main12DynamicGraphC5GroupVy_xGmD",
-        "key.usr" : "s:4main12DynamicGraphC5GroupV"
-      },
-      {
-        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type>, <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/Type> where Element : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
-        "key.bodylength" : 570,
-        "key.bodyoffset" : 4599,
-        "key.doc.column" : 17,
-        "key.doc.declaration" : "public struct Group<Element> : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor",
-        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"59\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 59,
-        "key.doc.name" : "Group",
-        "key.doc.type" : "Class",
-        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol>, <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/ref.typealias> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
-        "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 647,
-        "key.name" : "DynamicGraph.Group",
-        "key.namelength" : 18,
-        "key.nameoffset" : 4533,
-        "key.offset" : 4523,
-        "key.parsed_declaration" : "extension DynamicGraph.Group where Element == DynamicGraph.Tensor<Float32>",
-        "key.parsed_scope.end" : 156,
-        "key.parsed_scope.start" : 140,
-        "key.substructure" : [
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>], offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 4602
-              }
-            ],
-            "key.bodylength" : 158,
-            "key.bodyoffset" : 4729,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 279,
-            "key.name" : "reshaped(format:dimensions:offset:increments:)",
-            "key.namelength" : 105,
-            "key.nameoffset" : 4614,
-            "key.offset" : 4609,
-            "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 148,
-            "key.parsed_scope.start" : 141,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Float>> (DynamicGraph.Group<Element>) -> (TensorFormat, [Int], [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s6format10dimensions6offset10increments4main12DynamicGraphC5GroupVy_AG6TensorCy_SfGGAE0I6FormatO_SaySiGAPSgAQtcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF"
-          },
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(_ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>, offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 4891
-              }
-            ],
-            "key.bodylength" : 148,
-            "key.bodyoffset" : 5019,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 270,
-            "key.name" : "reshaped(_:offset:increments:)",
-            "key.namelength" : 106,
-            "key.nameoffset" : 4903,
-            "key.offset" : 4898,
-            "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 155,
-            "key.parsed_scope.start" : 149,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Float>> (DynamicGraph.Group<Element>) -> (TensorDimensionFormat, [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s_6offset10increments4main12DynamicGraphC5GroupVy_AE6TensorCy_SfGGAC0G15DimensionFormatO_SaySiGSgAOtcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF"
-          }
-        ],
-        "key.typename" : "DynamicGraph.Group<Element>.Type",
-        "key.typeusr" : "$s4main12DynamicGraphC5GroupVy_xGmD",
-        "key.usr" : "s:4main12DynamicGraphC5GroupV"
-      },
-      {
-        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type>, <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/Type> where Element : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
-        "key.bodylength" : 570,
-        "key.bodyoffset" : 5246,
-        "key.doc.column" : 17,
-        "key.doc.declaration" : "public struct Group<Element> : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor",
-        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"59\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 59,
-        "key.doc.name" : "Group",
-        "key.doc.type" : "Class",
-        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol>, <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/ref.typealias> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
-        "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 645,
-        "key.name" : "DynamicGraph.Group",
-        "key.namelength" : 18,
-        "key.nameoffset" : 5182,
-        "key.offset" : 5172,
-        "key.parsed_declaration" : "extension DynamicGraph.Group where Element == DynamicGraph.Tensor<Int32>",
-        "key.parsed_scope.end" : 174,
-        "key.parsed_scope.start" : 158,
-        "key.substructure" : [
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>], offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 5249
-              }
-            ],
-            "key.bodylength" : 158,
-            "key.bodyoffset" : 5376,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 279,
-            "key.name" : "reshaped(format:dimensions:offset:increments:)",
-            "key.namelength" : 105,
-            "key.nameoffset" : 5261,
-            "key.offset" : 5256,
-            "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 166,
-            "key.parsed_scope.start" : 159,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Int32>> (DynamicGraph.Group<Element>) -> (TensorFormat, [Int], [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s6format10dimensions6offset10increments4main12DynamicGraphC5GroupVy_AG6TensorCy_s5Int32VGGAE0I6FormatO_SaySiGARSgAStcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF"
-          },
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(_ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>, offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 5538
-              }
-            ],
-            "key.bodylength" : 148,
-            "key.bodyoffset" : 5666,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 270,
-            "key.name" : "reshaped(_:offset:increments:)",
-            "key.namelength" : 106,
-            "key.nameoffset" : 5550,
-            "key.offset" : 5545,
-            "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 173,
-            "key.parsed_scope.start" : 167,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Int32>> (DynamicGraph.Group<Element>) -> (TensorDimensionFormat, [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s_6offset10increments4main12DynamicGraphC5GroupVy_AE6TensorCy_s5Int32VGGAC0G15DimensionFormatO_SaySiGSgAQtcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF"
-          }
-        ],
-        "key.typename" : "DynamicGraph.Group<Element>.Type",
-        "key.typeusr" : "$s4main12DynamicGraphC5GroupVy_xGmD",
-        "key.usr" : "s:4main12DynamicGraphC5GroupV"
-      },
-      {
-        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type>, <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/Type> where Element : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
-        "key.bodylength" : 570,
-        "key.bodyoffset" : 5895,
-        "key.doc.column" : 17,
-        "key.doc.declaration" : "public struct Group<Element> : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor",
-        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"59\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 59,
-        "key.doc.name" : "Group",
-        "key.doc.type" : "Class",
-        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol>, <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/ref.typealias> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
-        "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 647,
-        "key.name" : "DynamicGraph.Group",
-        "key.namelength" : 18,
-        "key.nameoffset" : 5829,
-        "key.offset" : 5819,
-        "key.parsed_declaration" : "extension DynamicGraph.Group where Element == DynamicGraph.Tensor<Float16>",
-        "key.parsed_scope.end" : 192,
-        "key.parsed_scope.start" : 176,
-        "key.substructure" : [
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>], offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 5898
-              }
-            ],
-            "key.bodylength" : 158,
-            "key.bodyoffset" : 6025,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 279,
-            "key.name" : "reshaped(format:dimensions:offset:increments:)",
-            "key.namelength" : 105,
-            "key.nameoffset" : 5910,
-            "key.offset" : 5905,
-            "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 184,
-            "key.parsed_scope.start" : 177,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Float16>> (DynamicGraph.Group<Element>) -> (TensorFormat, [Int], [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s6format10dimensions6offset10increments4main12DynamicGraphC5GroupVy_AG6TensorCy_s7Float16VGGAE0I6FormatO_SaySiGARSgAStcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF"
-          },
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(_ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>, offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 6187
-              }
-            ],
-            "key.bodylength" : 148,
-            "key.bodyoffset" : 6315,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 270,
-            "key.name" : "reshaped(_:offset:increments:)",
-            "key.namelength" : 106,
-            "key.nameoffset" : 6199,
-            "key.offset" : 6194,
-            "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 191,
-            "key.parsed_scope.start" : 185,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<Float16>> (DynamicGraph.Group<Element>) -> (TensorDimensionFormat, [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s_6offset10increments4main12DynamicGraphC5GroupVy_AE6TensorCy_s7Float16VGGAC0G15DimensionFormatO_SaySiGSgAQtcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF"
-          }
-        ],
-        "key.typename" : "DynamicGraph.Group<Element>.Type",
-        "key.typeusr" : "$s4main12DynamicGraphC5GroupVy_xGmD",
-        "key.usr" : "s:4main12DynamicGraphC5GroupV"
-      },
-      {
-        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type>, <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/Type> where Element : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
-        "key.bodylength" : 570,
-        "key.bodyoffset" : 6542,
-        "key.doc.column" : 17,
-        "key.doc.declaration" : "public struct Group<Element> : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor",
-        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift\" line=\"59\" column=\"17\"><Name>Group<\/Name><USR>s:4main12DynamicGraphC5GroupV<\/USR><Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection, DynamicGraph.AnyGroup where Element : main.DynamicGraph.AnyTensor<\/Declaration><CommentParts><Abstract><Para>Type-aware group of tensors.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 59,
-        "key.doc.name" : "Group",
-        "key.doc.type" : "Class",
-        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol>, <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/ref.typealias> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
-        "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 645,
-        "key.name" : "DynamicGraph.Group",
-        "key.namelength" : 18,
-        "key.nameoffset" : 6478,
-        "key.offset" : 6468,
-        "key.parsed_declaration" : "extension DynamicGraph.Group where Element == DynamicGraph.Tensor<UInt8>",
-        "key.parsed_scope.end" : 210,
-        "key.parsed_scope.start" : 194,
-        "key.substructure" : [
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>], offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 6545
-              }
-            ],
-            "key.bodylength" : 158,
-            "key.bodyoffset" : 6672,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 279,
-            "key.name" : "reshaped(format:dimensions:offset:increments:)",
-            "key.namelength" : 105,
-            "key.nameoffset" : 6557,
-            "key.offset" : 6552,
-            "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 202,
-            "key.parsed_scope.start" : 195,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<UInt8>> (DynamicGraph.Group<Element>) -> (TensorFormat, [Int], [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s6format10dimensions6offset10increments4main12DynamicGraphC5GroupVy_AG6TensorCy_s5UInt8VGGAE0I6FormatO_SaySiGARSgAStcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF"
-          },
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(_ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>, offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;Element&gt;<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 6834
-              }
-            ],
-            "key.bodylength" : 148,
-            "key.bodyoffset" : 6962,
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
-            "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 270,
-            "key.name" : "reshaped(_:offset:increments:)",
-            "key.namelength" : 106,
-            "key.nameoffset" : 6846,
-            "key.offset" : 6841,
-            "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 209,
-            "key.parsed_scope.start" : 203,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SdGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int64VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AHGAA0E6FormatO_SaySiGAQSgARtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_SfGRszrlE8reshaped_6offset10incrementsAEy_AHGAA0E15DimensionFormatO_SaySiGSgAPtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5Int32VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s7Float16VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              },
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped6format10dimensions6offset10incrementsAEy_AJGAA0E6FormatO_SaySiGASSgATtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; DynamicGraph.Group&lt;Element&gt;<\/RelatedName>"
-              }
-            ],
-            "key.substructure" : [
-
-            ],
-            "key.typename" : "<Element where Element == DynamicGraph.Tensor<UInt8>> (DynamicGraph.Group<Element>) -> (TensorDimensionFormat, [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
-            "key.typeusr" : "$s_6offset10increments4main12DynamicGraphC5GroupVy_AE6TensorCy_s5UInt8VGGAC0G15DimensionFormatO_SaySiGSgAQtcD",
-            "key.usr" : "s:4main12DynamicGraphC5GroupVAaC6TensorCy_s5UInt8VGRszrlE8reshaped_6offset10incrementsAEy_AJGAA0E15DimensionFormatO_SaySiGSgARtF"
+            "key.typename" : "<Element where Element : DynamicGraph.AnyTensor> (DynamicGraph.Group<Element>) -> (TensorDimensionFormat, [Int]?, [Int]?) -> DynamicGraph.Group<Element>",
+            "key.typeusr" : "$s_6offset10increments4main12DynamicGraphC5GroupVy_xGAC21TensorDimensionFormatO_SaySiGSgALtcD",
+            "key.usr" : "s:4main12DynamicGraphC5GroupV8reshaped_6offset10incrementsAEy_xGAA21TensorDimensionFormatO_SaySiGSgAMtF"
           }
         ],
         "key.typename" : "DynamicGraph.Group<Element>.Type",
