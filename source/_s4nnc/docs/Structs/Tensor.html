@@ -643,9 +643,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main6TensorV_6format10dimensionsACyxGqd___AA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:format:dimensions:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main6TensorV_6format10dimensionsACyxGqd___AA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc">init(_:<wbr>format:<wbr>dimensions:<wbr>)</a>
+                    <a name="/s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:kind:format:dimensions:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc">init(_:<wbr>kind:<wbr>format:<wbr>dimensions:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -660,7 +660,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">Sequence</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">sequence</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">Sequence</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">sequence</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span>
 <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Element</span></code></pre>
 
                         </div>
@@ -671,9 +671,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main6TensorVyACyxGqd___AA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main6TensorVyACyxGqd___AA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc">init(_:<wbr>_:<wbr>)</a>
+                    <a name="/s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc">init(_:<wbr>_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -688,7 +688,9 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">Sequence</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">sequence</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">)</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">Sequence</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="n">_</span> <span class="nv">sequence</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span>
+<span class="p">)</span>
 <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Element</span></code></pre>
 
                         </div>
