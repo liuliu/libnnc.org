@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 2704,
+    "key.length" : 3490,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -77,44 +77,44 @@
       },
       {
         "key.annotated_decl" : "<Declaration>public final class <Type usr=\"s:4main5ModelC\">Model<\/Type>.Parameters : <Type usr=\"s:4main5ModelC2IOC\">IO<\/Type><\/Declaration>",
-        "key.bodylength" : 1161,
+        "key.bodylength" : 1286,
         "key.bodyoffset" : 752,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<decl.name>Parameters<\/decl.name> : <ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 1190,
+        "key.length" : 1315,
         "key.name" : "Model.Parameters",
         "key.namelength" : 16,
         "key.nameoffset" : 734,
         "key.offset" : 724,
         "key.parsed_declaration" : "extension Model.Parameters",
-        "key.parsed_scope.end" : 58,
+        "key.parsed_scope.end" : 61,
         "key.parsed_scope.start" : 27,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func lerp(_ weight: <Type usr=\"s:Sf\">Float<\/Type>, to parameters: <Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func lerp(_ weight: <Type usr=\"s:Sf\">Float<\/Type>, to parameters: <Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil)<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1093
+                "key.offset" : 1173
               }
             ],
             "key.bodylength" : 750,
-            "key.bodyoffset" : 1161,
+            "key.bodyoffset" : 1286,
             "key.doc.column" : 15,
-            "key.doc.comment" : " Interpolate from current parameters to the another.\n\n parameters = (1 - weight) * parameters + weight * other\n\n - Parameter weight: How much the other parameter should weight, it must be between [0, 1].\n - Parameter parameters: The parameters of another model, it must match the parameters to update.",
-            "key.doc.declaration" : "public func lerp(_ weight: Float, to parameters: Model.Parameters)",
+            "key.doc.comment" : " Interpolate from current parameters to the another.\n\n parameters = (1 - weight) * parameters + weight * other\n\n - Parameter weight: How much the other parameter should weight, it must be between [0, 1].\n - Parameter parameters: The parameters of another model, it must match the parameters to update.\n - Parameter streamContext: The stream context to apply the lerp operation.",
+            "key.doc.declaration" : "public func lerp(_ weight: Float, to parameters: Model.Parameters, streamContext: StreamContext? = nil)",
             "key.doc.discussion" : [
               {
                 "Para" : "parameters = (1 - weight) * parameters + weight * other"
               }
             ],
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"36\" column=\"15\"><Name>lerp(_:to:)<\/Name><USR>s:4main5ModelC10ParametersC4lerp_2toySf_AEtF<\/USR><Declaration>public func lerp(_ weight: Float, to parameters: Model.Parameters)<\/Declaration><CommentParts><Abstract><Para>Interpolate from current parameters to the another.<\/Para><\/Abstract><Parameters><Parameter><Name>weight<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How much the other parameter should weight, it must be between [0, 1].<\/Para><\/Discussion><\/Parameter><Parameter><Name>parameters<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The parameters of another model, it must match the parameters to update.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>parameters = (1 - weight) * parameters + weight * other<\/Para><\/Discussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 36,
-            "key.doc.name" : "lerp(_:to:)",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"37\" column=\"15\"><Name>lerp(_:to:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF<\/USR><Declaration>public func lerp(_ weight: Float, to parameters: Model.Parameters, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Interpolate from current parameters to the another.<\/Para><\/Abstract><Parameters><Parameter><Name>weight<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How much the other parameter should weight, it must be between [0, 1].<\/Para><\/Discussion><\/Parameter><Parameter><Name>parameters<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The parameters of another model, it must match the parameters to update.<\/Para><\/Discussion><\/Parameter><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to apply the lerp operation.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>parameters = (1 - weight) * parameters + weight * other<\/Para><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 37,
+            "key.doc.name" : "lerp(_:to:streamContext:)",
             "key.doc.parameters" : [
               {
                 "discussion" : [
@@ -131,22 +131,30 @@
                   }
                 ],
                 "name" : "parameters"
+              },
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The stream context to apply the lerp operation."
+                  }
+                ],
+                "name" : "streamContext"
               }
             ],
             "key.doc.type" : "Function",
-            "key.doclength" : 335,
+            "key.doclength" : 415,
             "key.docoffset" : 755,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>lerp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>weight<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>to<\/decl.var.parameter.argument_label> <decl.var.parameter.name>parameters<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>lerp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>weight<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>to<\/decl.var.parameter.argument_label> <decl.var.parameter.name>parameters<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 812,
-            "key.name" : "lerp(_:to:)",
-            "key.namelength" : 54,
-            "key.nameoffset" : 1105,
-            "key.offset" : 1100,
-            "key.parsed_declaration" : "public func lerp(_ weight: Float, to parameters: Model.Parameters)",
-            "key.parsed_scope.end" : 57,
-            "key.parsed_scope.start" : 36,
+            "key.length" : 857,
+            "key.name" : "lerp(_:to:streamContext:)",
+            "key.namelength" : 99,
+            "key.nameoffset" : 1185,
+            "key.offset" : 1180,
+            "key.parsed_declaration" : "public func lerp(\n  _ weight: Float, to parameters: Model.Parameters, streamContext: StreamContext? = nil\n)",
+            "key.parsed_scope.end" : 60,
+            "key.parsed_scope.start" : 37,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -156,14 +164,14 @@
                 "key.length" : 49,
                 "key.name" : "params",
                 "key.namelength" : 6,
-                "key.nameoffset" : 1579,
-                "key.offset" : 1575,
+                "key.nameoffset" : 1704,
+                "key.offset" : 1700,
                 "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
-                "key.parsed_scope.end" : 51,
-                "key.parsed_scope.start" : 51,
+                "key.parsed_scope.end" : 54,
+                "key.parsed_scope.start" : 54,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main5ModelC10ParametersC4lerp_2toySf_AEtF6paramsL_Xevp"
+                "key.usr" : "s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF6paramsL_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let cmd: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -173,19 +181,19 @@
                 "key.length" : 58,
                 "key.name" : "cmd",
                 "key.namelength" : 3,
-                "key.nameoffset" : 1724,
-                "key.offset" : 1720,
+                "key.nameoffset" : 1849,
+                "key.offset" : 1845,
                 "key.parsed_declaration" : "let cmd = ccv_nnc_cmd(CCV_NNC_ADD_FORWARD, nil, params, 0)",
-                "key.parsed_scope.end" : 54,
-                "key.parsed_scope.start" : 54,
+                "key.parsed_scope.end" : 57,
+                "key.parsed_scope.start" : 57,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main5ModelC10ParametersC4lerp_2toySf_AEtF3cmdL_Xevp"
+                "key.usr" : "s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF3cmdL_Xevp"
               }
             ],
-            "key.typename" : "(Model.Parameters) -> (Float, Model.Parameters) -> ()",
-            "key.typeusr" : "$s_2toySf_4main5ModelC10ParametersCtcD",
-            "key.usr" : "s:4main5ModelC10ParametersC4lerp_2toySf_AEtF"
+            "key.typename" : "(Model.Parameters) -> (Float, Model.Parameters, StreamContext?) -> ()",
+            "key.typeusr" : "$s_2to13streamContextySf_4main5ModelC10ParametersCAC06StreamC0CSgtcD",
+            "key.usr" : "s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF"
           }
         ],
         "key.typename" : "Model.Parameters.Type",
@@ -194,53 +202,46 @@
       },
       {
         "key.annotated_decl" : "<Declaration>public final class <Type usr=\"s:4main5ModelC\">Model<\/Type>.Parameters : <Type usr=\"s:4main5ModelC2IOC\">IO<\/Type><\/Declaration>",
-        "key.bodylength" : 758,
-        "key.bodyoffset" : 1944,
+        "key.bodylength" : 1419,
+        "key.bodyoffset" : 2069,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<decl.name>Parameters<\/decl.name> : <ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 787,
+        "key.length" : 1448,
         "key.name" : "Model.Parameters",
         "key.namelength" : 16,
-        "key.nameoffset" : 1926,
-        "key.offset" : 1916,
+        "key.nameoffset" : 2051,
+        "key.offset" : 2041,
         "key.parsed_declaration" : "extension Model.Parameters",
-        "key.parsed_scope.end" : 82,
-        "key.parsed_scope.start" : 60,
+        "key.parsed_scope.end" : 103,
+        "key.parsed_scope.start" : 63,
         "key.substructure" : [
           {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func clamp(min: <Type usr=\"s:Sf\">Float<\/Type>? = nil, max: <Type usr=\"s:Sf\">Float<\/Type>? = nil)<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 2009
-              }
-            ],
+            "key.annotated_decl" : "<Declaration>func clamp(min: <Type usr=\"s:Sf\">Float<\/Type>?, max: <Type usr=\"s:Sf\">Float<\/Type>?, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?)<\/Declaration>",
             "key.bodylength" : 634,
-            "key.bodyoffset" : 2066,
-            "key.doc.column" : 15,
-            "key.doc.comment" : "Clamp current parameters between two values.",
-            "key.doc.declaration" : "public func clamp(min: Float? = nil, max: Float? = nil)",
-            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"64\" column=\"15\"><Name>clamp(min:max:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp3min3maxySfSg_AItF<\/USR><Declaration>public func clamp(min: Float? = nil, max: Float? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters between two values.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 64,
-            "key.doc.name" : "clamp(min:max:)",
-            "key.doc.type" : "Function",
-            "key.doclength" : 59,
-            "key.docoffset" : 1947,
+            "key.bodyoffset" : 2141,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>min<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>max<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>min<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>max<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 685,
-            "key.name" : "clamp(min:max:)",
-            "key.namelength" : 43,
-            "key.nameoffset" : 2021,
-            "key.offset" : 2016,
-            "key.parsed_declaration" : "public func clamp(min: Float? = nil, max: Float? = nil)",
+            "key.length" : 704,
+            "key.name" : "clamp(min:max:streamContext:)",
+            "key.namelength" : 62,
+            "key.nameoffset" : 2077,
+            "key.offset" : 2072,
+            "key.parsed_declaration" : "func clamp(min: Float?, max: Float?, streamContext: StreamContext?)",
             "key.parsed_scope.end" : 81,
             "key.parsed_scope.start" : 64,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextySNySfG_AA06StreamF0CSgtF\">clamp(_: ClosedRange&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextys16PartialRangeFromVySfG_AA06StreamF0CSgtF\">clamp(_: PartialRangeFrom&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextys19PartialRangeThroughVySfG_AA06StreamF0CSgtF\">clamp(_: PartialRangeThrough&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              }
+            ],
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -250,14 +251,14 @@
                 "key.length" : 49,
                 "key.name" : "params",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2368,
-                "key.offset" : 2364,
+                "key.nameoffset" : 2443,
+                "key.offset" : 2439,
                 "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
                 "key.parsed_scope.end" : 74,
                 "key.parsed_scope.start" : 74,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3maxySfSg_AItF6paramsL_Xevp"
+                "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF6paramsL_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let cmd: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -267,19 +268,172 @@
                 "key.length" : 60,
                 "key.name" : "cmd",
                 "key.namelength" : 3,
-                "key.nameoffset" : 2549,
-                "key.offset" : 2545,
+                "key.nameoffset" : 2624,
+                "key.offset" : 2620,
                 "key.parsed_declaration" : "let cmd = ccv_nnc_cmd(CCV_NNC_CLAMP_FORWARD, nil, params, 0)",
                 "key.parsed_scope.end" : 78,
                 "key.parsed_scope.start" : 78,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3maxySfSg_AItF3cmdL_Xevp"
+                "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF3cmdL_Xevp"
               }
             ],
-            "key.typename" : "(Model.Parameters) -> (Float?, Float?) -> ()",
-            "key.typeusr" : "$s3min3maxySfSg_ACtcD",
-            "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3maxySfSg_AItF"
+            "key.typename" : "(Model.Parameters) -> (Float?, Float?, StreamContext?) -> ()",
+            "key.typeusr" : "$s3min3max13streamContextySfSg_AD4main06StreamD0CSgtcD",
+            "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func clamp(_ range: <Type usr=\"s:SN\">ClosedRange<\/Type>&lt;<Type usr=\"s:Sf\">Float<\/Type>&gt;, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 2842
+              }
+            ],
+            "key.bodylength" : 89,
+            "key.bodyoffset" : 2927,
+            "key.doc.column" : 15,
+            "key.doc.comment" : "Clamp current parameters between two values.",
+            "key.doc.declaration" : "public func clamp(_ range: ClosedRange<Float>, streamContext: StreamContext? = nil)",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"86\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextySNySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: ClosedRange&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters between two values.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 86,
+            "key.doc.name" : "clamp(_:streamContext:)",
+            "key.doc.type" : "Function",
+            "key.doclength" : 59,
+            "key.docoffset" : 2780,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>range<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 168,
+            "key.name" : "clamp(_:streamContext:)",
+            "key.namelength" : 71,
+            "key.nameoffset" : 2854,
+            "key.offset" : 2849,
+            "key.parsed_declaration" : "public func clamp(_ range: ClosedRange<Float>, streamContext: StreamContext? = nil)",
+            "key.parsed_scope.end" : 88,
+            "key.parsed_scope.start" : 86,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF\">clamp(min:max:streamContext:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextys16PartialRangeFromVySfG_AA06StreamF0CSgtF\">clamp(_: PartialRangeFrom&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextys19PartialRangeThroughVySfG_AA06StreamF0CSgtF\">clamp(_: PartialRangeThrough&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Model.Parameters) -> (ClosedRange<Float>, StreamContext?) -> ()",
+            "key.typeusr" : "$s_13streamContextySNySfG_4main06StreamB0CSgtcD",
+            "key.usr" : "s:4main5ModelC10ParametersC5clamp_13streamContextySNySfG_AA06StreamF0CSgtF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func clamp(_ range: <Type usr=\"s:s16PartialRangeFromV\">PartialRangeFrom<\/Type>&lt;<Type usr=\"s:Sf\">Float<\/Type>&gt;, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3083
+              }
+            ],
+            "key.bodylength" : 76,
+            "key.bodyoffset" : 3173,
+            "key.doc.column" : 15,
+            "key.doc.comment" : "Clamp current parameters with a lower bound.",
+            "key.doc.declaration" : "public func clamp(_ range: PartialRangeFrom<Float>, streamContext: StreamContext? = nil)",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"93\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextys16PartialRangeFromVySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: PartialRangeFrom&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters with a lower bound.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 93,
+            "key.doc.name" : "clamp(_:streamContext:)",
+            "key.doc.type" : "Function",
+            "key.doclength" : 59,
+            "key.docoffset" : 3021,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>range<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s16PartialRangeFromV\">PartialRangeFrom<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 160,
+            "key.name" : "clamp(_:streamContext:)",
+            "key.namelength" : 76,
+            "key.nameoffset" : 3095,
+            "key.offset" : 3090,
+            "key.parsed_declaration" : "public func clamp(_ range: PartialRangeFrom<Float>, streamContext: StreamContext? = nil)",
+            "key.parsed_scope.end" : 95,
+            "key.parsed_scope.start" : 93,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF\">clamp(min:max:streamContext:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextySNySfG_AA06StreamF0CSgtF\">clamp(_: ClosedRange&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextys19PartialRangeThroughVySfG_AA06StreamF0CSgtF\">clamp(_: PartialRangeThrough&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Model.Parameters) -> (PartialRangeFrom<Float>, StreamContext?) -> ()",
+            "key.typeusr" : "$s_13streamContextys16PartialRangeFromVySfG_4main06StreamB0CSgtcD",
+            "key.usr" : "s:4main5ModelC10ParametersC5clamp_13streamContextys16PartialRangeFromVySfG_AA06StreamF0CSgtF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func clamp(_ range: <Type usr=\"s:s19PartialRangeThroughV\">PartialRangeThrough<\/Type>&lt;<Type usr=\"s:Sf\">Float<\/Type>&gt;, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3317
+              }
+            ],
+            "key.bodylength" : 76,
+            "key.bodyoffset" : 3410,
+            "key.doc.column" : 15,
+            "key.doc.comment" : "Clamp current parameters with an upper bound.",
+            "key.doc.declaration" : "public func clamp(_ range: PartialRangeThrough<Float>, streamContext: StreamContext? = nil)",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"100\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextys19PartialRangeThroughVySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: PartialRangeThrough&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters with an upper bound.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 100,
+            "key.doc.name" : "clamp(_:streamContext:)",
+            "key.doc.type" : "Function",
+            "key.doclength" : 60,
+            "key.docoffset" : 3254,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>range<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s19PartialRangeThroughV\">PartialRangeThrough<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 163,
+            "key.name" : "clamp(_:streamContext:)",
+            "key.namelength" : 79,
+            "key.nameoffset" : 3329,
+            "key.offset" : 3324,
+            "key.parsed_declaration" : "public func clamp(_ range: PartialRangeThrough<Float>, streamContext: StreamContext? = nil)",
+            "key.parsed_scope.end" : 102,
+            "key.parsed_scope.start" : 100,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF\">clamp(min:max:streamContext:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextySNySfG_AA06StreamF0CSgtF\">clamp(_: ClosedRange&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextys16PartialRangeFromVySfG_AA06StreamF0CSgtF\">clamp(_: PartialRangeFrom&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Model.Parameters) -> (PartialRangeThrough<Float>, StreamContext?) -> ()",
+            "key.typeusr" : "$s_13streamContextys19PartialRangeThroughVySfG_4main06StreamB0CSgtcD",
+            "key.usr" : "s:4main5ModelC10ParametersC5clamp_13streamContextys19PartialRangeThroughVySfG_AA06StreamF0CSgtF"
           }
         ],
         "key.typename" : "Model.Parameters.Type",
