@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 5539,
+    "key.length" : 5577,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -14,7 +14,7 @@
             "key.offset" : 164
           }
         ],
-        "key.bodylength" : 3729,
+        "key.bodylength" : 3767,
         "key.bodyoffset" : 184,
         "key.doc.column" : 14,
         "key.doc.comment" : "A model is a base class for stateful operations on a dynamic graph. It can be\nuse to construct computations statically, thus, more efficient.",
@@ -29,13 +29,13 @@
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Model<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.class",
-        "key.length" : 3743,
+        "key.length" : 3781,
         "key.name" : "Model",
         "key.namelength" : 5,
         "key.nameoffset" : 177,
         "key.offset" : 171,
         "key.parsed_declaration" : "public class Model",
-        "key.parsed_scope.end" : 124,
+        "key.parsed_scope.end" : 125,
         "key.parsed_scope.start" : 5,
         "key.substructure" : [
           {
@@ -254,28 +254,54 @@
             "key.usr" : "s:4main5ModelC5ownerACSgvp"
           },
           {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>weak var graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>?<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.weak",
+                "key.length" : 4,
+                "key.offset" : 874
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>weak<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>?<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 30,
+            "key.name" : "graph",
+            "key.namelength" : 5,
+            "key.nameoffset" : 883,
+            "key.offset" : 879,
+            "key.parsed_declaration" : "weak var graph: DynamicGraph? = nil",
+            "key.parsed_scope.end" : 32,
+            "key.parsed_scope.start" : 32,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.typename" : "DynamicGraph?",
+            "key.typeusr" : "$s4main12DynamicGraphCSgD",
+            "key.usr" : "s:4main5ModelC5graphAA12DynamicGraphCSgvp"
+          },
+          {
             "key.accessibility" : "source.lang.swift.accessibility.private",
             "key.annotated_decl" : "<Declaration>private func ownerHook()<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 875
+                "key.offset" : 913
               }
             ],
             "key.bodylength" : 352,
-            "key.bodyoffset" : 901,
+            "key.bodyoffset" : 939,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>ownerHook<\/decl.name>()<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 371,
             "key.name" : "ownerHook()",
             "key.namelength" : 11,
-            "key.nameoffset" : 888,
-            "key.offset" : 883,
+            "key.nameoffset" : 926,
+            "key.offset" : 921,
             "key.parsed_declaration" : "private func ownerHook()",
-            "key.parsed_scope.end" : 41,
-            "key.parsed_scope.start" : 33,
+            "key.parsed_scope.end" : 42,
+            "key.parsed_scope.start" : 34,
             "key.substructure" : [
 
             ],
@@ -290,22 +316,22 @@
               {
                 "key.attribute" : "source.decl.attribute.required",
                 "key.length" : 8,
-                "key.offset" : 1258
+                "key.offset" : 1296
               }
             ],
             "key.bodylength" : 118,
-            "key.bodyoffset" : 1297,
+            "key.bodyoffset" : 1335,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>required<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>model<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 149,
             "key.name" : "init(_:)",
             "key.namelength" : 28,
-            "key.nameoffset" : 1267,
-            "key.offset" : 1267,
+            "key.nameoffset" : 1305,
+            "key.offset" : 1305,
             "key.parsed_declaration" : "required init(_ model: OpaquePointer)",
-            "key.parsed_scope.end" : 47,
-            "key.parsed_scope.start" : 43,
+            "key.parsed_scope.end" : 48,
+            "key.parsed_scope.start" : 44,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC__4nameACSayAC2IOCG_AGSStcfc\">init(_:_:name:)<\/RelatedName>"
@@ -325,18 +351,18 @@
             "key.accessibility" : "source.lang.swift.accessibility.internal",
             "key.annotated_decl" : "<Declaration>func obtainUnderlyingModel(_ owner: <Type usr=\"s:4main5ModelC\">Model<\/Type>) -&gt; <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
             "key.bodylength" : 218,
-            "key.bodyoffset" : 1481,
+            "key.bodyoffset" : 1519,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>obtainUnderlyingModel<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>owner<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main5ModelC\">Model<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 280,
             "key.name" : "obtainUnderlyingModel(_:)",
             "key.namelength" : 37,
-            "key.nameoffset" : 1425,
-            "key.offset" : 1420,
+            "key.nameoffset" : 1463,
+            "key.offset" : 1458,
             "key.parsed_declaration" : "func obtainUnderlyingModel(_ owner: Model) -> OpaquePointer",
-            "key.parsed_scope.end" : 54,
-            "key.parsed_scope.start" : 49,
+            "key.parsed_scope.end" : 55,
+            "key.parsed_scope.start" : 50,
             "key.substructure" : [
 
             ],
@@ -351,22 +377,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1704
+                "key.offset" : 1742
               }
             ],
             "key.bodylength" : 189,
-            "key.bodyoffset" : 1755,
+            "key.bodyoffset" : 1793,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>inputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.var.parameter.type>...<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 234,
             "key.name" : "callAsFunction(_:)",
             "key.namelength" : 31,
-            "key.nameoffset" : 1716,
-            "key.offset" : 1711,
+            "key.nameoffset" : 1754,
+            "key.offset" : 1749,
             "key.parsed_declaration" : "public func callAsFunction(_ inputs: IO...) -> IO",
-            "key.parsed_scope.end" : 60,
-            "key.parsed_scope.start" : 56,
+            "key.parsed_scope.end" : 61,
+            "key.parsed_scope.start" : 57,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_SayAA013DynamicGraph_I0_pGAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF\">callAsFunction&lt;T&gt;(inputs: T, _: [DynamicGraph_Any], streamContext: StreamContext? = nil) -&gt; [T.AnyTensor] where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
@@ -384,11 +410,11 @@
                 "key.length" : 59,
                 "key.name" : "_inputs",
                 "key.namelength" : 7,
-                "key.nameoffset" : 1764,
-                "key.offset" : 1760,
+                "key.nameoffset" : 1802,
+                "key.offset" : 1798,
                 "key.parsed_declaration" : "let _inputs: [ccv_cnnp_model_io_t?] = inputs.map { $0._io }",
-                "key.parsed_scope.end" : 57,
-                "key.parsed_scope.start" : 57,
+                "key.parsed_scope.end" : 58,
+                "key.parsed_scope.start" : 58,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC14callAsFunctionyAC2IOCAFd_tF7_inputsL_Xevp"
@@ -401,11 +427,11 @@
                 "key.length" : 69,
                 "key.name" : "_io",
                 "key.namelength" : 3,
-                "key.nameoffset" : 1828,
-                "key.offset" : 1824,
+                "key.nameoffset" : 1866,
+                "key.offset" : 1862,
                 "key.parsed_declaration" : "let _io = ccv_cnnp_model_apply(_model, _inputs, Int32(inputs.count))!",
-                "key.parsed_scope.end" : 58,
-                "key.parsed_scope.start" : 58,
+                "key.parsed_scope.end" : 59,
+                "key.parsed_scope.start" : 59,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC14callAsFunctionyAC2IOCAFd_tF3_ioL_Xevp"
@@ -419,18 +445,18 @@
             "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>deinit<\/Declaration>",
             "key.bodylength" : 211,
-            "key.bodyoffset" : 1957,
+            "key.bodyoffset" : 1995,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.destructor><syntaxtype.keyword>deinit<\/syntaxtype.keyword><\/decl.function.destructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 220,
             "key.name" : "deinit",
             "key.namelength" : 6,
-            "key.nameoffset" : 1949,
-            "key.offset" : 1949,
+            "key.nameoffset" : 1987,
+            "key.offset" : 1987,
             "key.parsed_declaration" : "deinit",
-            "key.parsed_scope.end" : 69,
-            "key.parsed_scope.start" : 62,
+            "key.parsed_scope.end" : 70,
+            "key.parsed_scope.start" : 63,
             "key.substructure" : [
 
             ],
@@ -445,21 +471,21 @@
               {
                 "key.attribute" : "source.decl.attribute.final",
                 "key.length" : 5,
-                "key.offset" : 2180
+                "key.offset" : 2218
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2173
+                "key.offset" : 2211
               }
             ],
             "key.bodylength" : 3,
-            "key.bodyoffset" : 2208,
+            "key.bodyoffset" : 2246,
             "key.elements" : [
               {
                 "key.kind" : "source.lang.swift.structure.elem.typeref",
                 "key.length" : 2,
-                "key.offset" : 2204
+                "key.offset" : 2242
               }
             ],
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
@@ -473,11 +499,11 @@
             "key.length" : 26,
             "key.name" : "Parameters",
             "key.namelength" : 10,
-            "key.nameoffset" : 2192,
-            "key.offset" : 2186,
+            "key.nameoffset" : 2230,
+            "key.offset" : 2224,
             "key.parsed_declaration" : "public final class Parameters: IO",
-            "key.parsed_scope.end" : 72,
-            "key.parsed_scope.start" : 71,
+            "key.parsed_scope.end" : 73,
+            "key.parsed_scope.start" : 72,
             "key.typename" : "Model.Parameters.Type",
             "key.typeusr" : "$s4main5ModelC10ParametersCmD",
             "key.usr" : "s:4main5ModelC10ParametersC"
@@ -491,11 +517,11 @@
             "key.length" : 43,
             "key.name" : "_parameters",
             "key.namelength" : 11,
-            "key.nameoffset" : 2220,
-            "key.offset" : 2216,
+            "key.nameoffset" : 2258,
+            "key.offset" : 2254,
             "key.parsed_declaration" : "var _parameters: ccv_cnnp_model_io_t? = nil",
-            "key.parsed_scope.end" : 74,
-            "key.parsed_scope.start" : 74,
+            "key.parsed_scope.end" : 75,
+            "key.parsed_scope.start" : 75,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -508,32 +534,32 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2347
+                "key.offset" : 2385
               }
             ],
             "key.bodylength" : 255,
-            "key.bodyoffset" : 2382,
+            "key.bodyoffset" : 2420,
             "key.doc.column" : 14,
             "key.doc.comment" : "Abstract representation of the stateful components from the model.",
             "key.doc.declaration" : "public var parameters: Parameters { get }",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
-            "key.doc.full_as_xml" : "<Other file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"79\" column=\"14\"><Name>parameters<\/Name><USR>s:4main5ModelC10parametersAC10ParametersCvp<\/USR><Declaration>public var parameters: Parameters { get }<\/Declaration><CommentParts><Abstract><Para>Abstract representation of the stateful components from the model.<\/Para><\/Abstract><\/CommentParts><\/Other>",
-            "key.doc.line" : 79,
+            "key.doc.full_as_xml" : "<Other file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"80\" column=\"14\"><Name>parameters<\/Name><USR>s:4main5ModelC10parametersAC10ParametersCvp<\/USR><Declaration>public var parameters: Parameters { get }<\/Declaration><CommentParts><Abstract><Para>Abstract representation of the stateful components from the model.<\/Para><\/Abstract><\/CommentParts><\/Other>",
+            "key.doc.line" : 80,
             "key.doc.name" : "parameters",
             "key.doc.type" : "Other",
             "key.doclength" : 81,
-            "key.docoffset" : 2263,
+            "key.docoffset" : 2301,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 284,
             "key.name" : "parameters",
             "key.namelength" : 10,
-            "key.nameoffset" : 2358,
-            "key.offset" : 2354,
+            "key.nameoffset" : 2396,
+            "key.offset" : 2392,
             "key.parsed_declaration" : "public var parameters: Parameters",
-            "key.parsed_scope.end" : 86,
-            "key.parsed_scope.start" : 79,
+            "key.parsed_scope.end" : 87,
+            "key.parsed_scope.start" : 80,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10parameters3forAC10ParametersCAC0E4TypeO_tF\">parameters(for:)<\/RelatedName>"
@@ -550,29 +576,29 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2642
+                "key.offset" : 2680
               }
             ],
             "key.bodylength" : 33,
-            "key.bodyoffset" : 2670,
+            "key.bodyoffset" : 2708,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<decl.name>ParametersType<\/decl.name><\/decl.enum>",
             "key.kind" : "source.lang.swift.decl.enum",
             "key.length" : 55,
             "key.name" : "ParametersType",
             "key.namelength" : 14,
-            "key.nameoffset" : 2654,
-            "key.offset" : 2649,
+            "key.nameoffset" : 2692,
+            "key.offset" : 2687,
             "key.parsed_declaration" : "public enum ParametersType",
-            "key.parsed_scope.end" : 91,
-            "key.parsed_scope.start" : 88,
+            "key.parsed_scope.end" : 92,
+            "key.parsed_scope.start" : 89,
             "key.substructure" : [
               {
                 "key.kind" : "source.lang.swift.decl.enumcase",
                 "key.length" : 11,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2675,
+                "key.offset" : 2713,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -583,11 +609,11 @@
                     "key.length" : 6,
                     "key.name" : "weight",
                     "key.namelength" : 6,
-                    "key.nameoffset" : 2680,
-                    "key.offset" : 2680,
+                    "key.nameoffset" : 2718,
+                    "key.offset" : 2718,
                     "key.parsed_declaration" : "case weight",
-                    "key.parsed_scope.end" : 89,
-                    "key.parsed_scope.start" : 89,
+                    "key.parsed_scope.end" : 90,
+                    "key.parsed_scope.start" : 90,
                     "key.typename" : "(Model.ParametersType.Type) -> Model.ParametersType",
                     "key.typeusr" : "$sy4main5ModelC14ParametersTypeOAEmcD",
                     "key.usr" : "s:4main5ModelC14ParametersTypeO6weightyA2EmF"
@@ -599,7 +625,7 @@
                 "key.length" : 9,
                 "key.namelength" : 0,
                 "key.nameoffset" : 0,
-                "key.offset" : 2691,
+                "key.offset" : 2729,
                 "key.substructure" : [
                   {
                     "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -610,11 +636,11 @@
                     "key.length" : 4,
                     "key.name" : "bias",
                     "key.namelength" : 4,
-                    "key.nameoffset" : 2696,
-                    "key.offset" : 2696,
+                    "key.nameoffset" : 2734,
+                    "key.offset" : 2734,
                     "key.parsed_declaration" : "case bias",
-                    "key.parsed_scope.end" : 90,
-                    "key.parsed_scope.start" : 90,
+                    "key.parsed_scope.end" : 91,
+                    "key.parsed_scope.start" : 91,
                     "key.typename" : "(Model.ParametersType.Type) -> Model.ParametersType",
                     "key.typeusr" : "$sy4main5ModelC14ParametersTypeOAEmcD",
                     "key.usr" : "s:4main5ModelC14ParametersTypeO4biasyA2EmF"
@@ -633,7 +659,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 2708
+                "key.offset" : 2746
               }
             ],
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
@@ -642,11 +668,11 @@
             "key.length" : 47,
             "key.name" : "_biasParameters",
             "key.namelength" : 15,
-            "key.nameoffset" : 2720,
-            "key.offset" : 2716,
+            "key.nameoffset" : 2758,
+            "key.offset" : 2754,
             "key.parsed_declaration" : "private var _biasParameters: ccv_cnnp_model_io_t? = nil",
-            "key.parsed_scope.end" : 93,
-            "key.parsed_scope.start" : 93,
+            "key.parsed_scope.end" : 94,
+            "key.parsed_scope.start" : 94,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -659,7 +685,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 2766
+                "key.offset" : 2804
               }
             ],
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
@@ -668,11 +694,11 @@
             "key.length" : 49,
             "key.name" : "_weightParameters",
             "key.namelength" : 17,
-            "key.nameoffset" : 2778,
-            "key.offset" : 2774,
+            "key.nameoffset" : 2816,
+            "key.offset" : 2812,
             "key.parsed_declaration" : "private var _weightParameters: ccv_cnnp_model_io_t? = nil",
-            "key.parsed_scope.end" : 94,
-            "key.parsed_scope.start" : 94,
+            "key.parsed_scope.end" : 95,
+            "key.parsed_scope.start" : 95,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -685,17 +711,17 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3093
+                "key.offset" : 3131
               }
             ],
             "key.bodylength" : 753,
-            "key.bodyoffset" : 3157,
+            "key.bodyoffset" : 3195,
             "key.doc.column" : 15,
             "key.doc.comment" : " Broadly speaking, you can have two types of parameters, weight and bias.\n You can get them in abstract fashion with this method.\n\n - Parameter type: Whether it is weight or bias.\n - Returns: An abstract representation of parameters.",
             "key.doc.declaration" : "public func parameters(for type: ParametersType) -> Parameters",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"103\" column=\"15\"><Name>parameters(for:)<\/Name><USR>s:4main5ModelC10parameters3forAC10ParametersCAC0E4TypeO_tF<\/USR><Declaration>public func parameters(for type: ParametersType) -&gt; Parameters<\/Declaration><CommentParts><Abstract><Para>Broadly speaking, you can have two types of parameters, weight and bias. You can get them in abstract fashion with this method.<\/Para><\/Abstract><Parameters><Parameter><Name>type<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether it is weight or bias.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>An abstract representation of parameters.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 103,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"104\" column=\"15\"><Name>parameters(for:)<\/Name><USR>s:4main5ModelC10parameters3forAC10ParametersCAC0E4TypeO_tF<\/USR><Declaration>public func parameters(for type: ParametersType) -&gt; Parameters<\/Declaration><CommentParts><Abstract><Para>Broadly speaking, you can have two types of parameters, weight and bias. You can get them in abstract fashion with this method.<\/Para><\/Abstract><Parameters><Parameter><Name>type<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether it is weight or bias.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>An abstract representation of parameters.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 104,
             "key.doc.name" : "parameters(for:)",
             "key.doc.parameters" : [
               {
@@ -714,18 +740,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 263,
-            "key.docoffset" : 2827,
+            "key.docoffset" : 2865,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>for<\/decl.var.parameter.argument_label> <decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main5ModelC14ParametersTypeO\">ParametersType<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 811,
             "key.name" : "parameters(for:)",
             "key.namelength" : 36,
-            "key.nameoffset" : 3105,
-            "key.offset" : 3100,
+            "key.nameoffset" : 3143,
+            "key.offset" : 3138,
             "key.parsed_declaration" : "public func parameters(for type: ParametersType) -> Parameters",
-            "key.parsed_scope.end" : 122,
-            "key.parsed_scope.start" : 103,
+            "key.parsed_scope.end" : 123,
+            "key.parsed_scope.start" : 104,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10parametersAC10ParametersCvp\">parameters<\/RelatedName>"
@@ -746,7 +772,7 @@
       {
         "key.annotated_decl" : "<Declaration>public class Model<\/Declaration>",
         "key.bodylength" : 252,
-        "key.bodyoffset" : 3933,
+        "key.bodyoffset" : 3971,
         "key.doc.column" : 14,
         "key.doc.declaration" : "public class Model",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
@@ -760,11 +786,11 @@
         "key.length" : 270,
         "key.name" : "Model",
         "key.namelength" : 5,
-        "key.nameoffset" : 3926,
-        "key.offset" : 3916,
+        "key.nameoffset" : 3964,
+        "key.offset" : 3954,
         "key.parsed_declaration" : "extension Model",
-        "key.parsed_scope.end" : 135,
-        "key.parsed_scope.start" : 126,
+        "key.parsed_scope.end" : 136,
+        "key.parsed_scope.start" : 127,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -773,32 +799,32 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4079
+                "key.offset" : 4117
               }
             ],
             "key.bodylength" : 76,
-            "key.bodyoffset" : 4107,
+            "key.bodyoffset" : 4145,
             "key.doc.column" : 15,
             "key.doc.comment" : "Make a copy of the model. This won't copy over the parameters. If you want, you need to copy\nparameters over explicitly.",
             "key.doc.declaration" : "public func copy() -> Self",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"131\" column=\"15\"><Name>copy()<\/Name><USR>s:4main5ModelC4copyACXDyF<\/USR><Declaration>public func copy() -&gt; Self<\/Declaration><CommentParts><Abstract><Para>Make a copy of the model. This won’t copy over the parameters. If you want, you need to copy parameters over explicitly.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 131,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"132\" column=\"15\"><Name>copy()<\/Name><USR>s:4main5ModelC4copyACXDyF<\/USR><Declaration>public func copy() -&gt; Self<\/Declaration><CommentParts><Abstract><Para>Make a copy of the model. This won’t copy over the parameters. If you want, you need to copy parameters over explicitly.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 132,
             "key.doc.name" : "copy()",
             "key.doc.type" : "Function",
             "key.doclength" : 140,
-            "key.docoffset" : 3936,
+            "key.docoffset" : 3974,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>copy<\/decl.name>() -&gt; <decl.function.returntype><ref.class usr=\"s:4main5ModelC\">Self<\/ref.class><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 98,
             "key.name" : "copy()",
             "key.namelength" : 6,
-            "key.nameoffset" : 4091,
-            "key.offset" : 4086,
+            "key.nameoffset" : 4129,
+            "key.offset" : 4124,
             "key.parsed_declaration" : "public func copy() -> Self",
-            "key.parsed_scope.end" : 134,
-            "key.parsed_scope.start" : 131,
+            "key.parsed_scope.end" : 135,
+            "key.parsed_scope.start" : 132,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let newModel: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -808,11 +834,11 @@
                 "key.length" : 48,
                 "key.name" : "newModel",
                 "key.namelength" : 8,
-                "key.nameoffset" : 4116,
-                "key.offset" : 4112,
+                "key.nameoffset" : 4154,
+                "key.offset" : 4150,
                 "key.parsed_declaration" : "let newModel = Self(ccv_cnnp_model_copy(_model))",
-                "key.parsed_scope.end" : 132,
-                "key.parsed_scope.start" : 132,
+                "key.parsed_scope.end" : 133,
+                "key.parsed_scope.start" : 133,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC4copyACXDyF03newB0L_Xevp"
@@ -830,7 +856,7 @@
       {
         "key.annotated_decl" : "<Declaration>public class Model<\/Declaration>",
         "key.bodylength" : 1134,
-        "key.bodyoffset" : 4250,
+        "key.bodyoffset" : 4288,
         "key.doc.column" : 14,
         "key.doc.comment" : "MARK - Functional and Sequential Models",
         "key.doc.declaration" : "public class Model",
@@ -840,18 +866,18 @@
         "key.doc.name" : "Model",
         "key.doc.type" : "Class",
         "key.doclength" : 44,
-        "key.docoffset" : 4188,
+        "key.docoffset" : 4226,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Model<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1152,
         "key.name" : "Model",
         "key.namelength" : 5,
-        "key.nameoffset" : 4243,
-        "key.offset" : 4233,
+        "key.nameoffset" : 4281,
+        "key.offset" : 4271,
         "key.parsed_declaration" : "extension Model",
-        "key.parsed_scope.end" : 170,
-        "key.parsed_scope.start" : 139,
+        "key.parsed_scope.end" : 171,
+        "key.parsed_scope.start" : 140,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -860,22 +886,22 @@
               {
                 "key.attribute" : "source.decl.attribute.convenience",
                 "key.length" : 11,
-                "key.offset" : 4601
+                "key.offset" : 4639
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4594
+                "key.offset" : 4632
               }
             ],
             "key.bodylength" : 267,
-            "key.bodyoffset" : 4671,
+            "key.bodyoffset" : 4709,
             "key.doc.column" : 22,
             "key.doc.comment" : " You can compose a new model from old models when applying IO on them.\n\n - Parameters:\n   - inputs: The input IOs for the new model, usually it is some set of Input objects.\n   - outputs: The output IOs for the new model, usually it is outputs of some other models.\n   - name: The name of the new model.",
             "key.doc.declaration" : "public convenience init(_ inputs: [IO], _ outputs: [IO], name: String = \"\")",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"149\" column=\"22\"><Name>init(_:_:name:)<\/Name><USR>s:4main5ModelC__4nameACSayAC2IOCG_AGSStcfc<\/USR><Declaration>public convenience init(_ inputs: [IO], _ outputs: [IO], name: String = &quot;&quot;)<\/Declaration><CommentParts><Abstract><Para>You can compose a new model from old models when applying IO on them.<\/Para><\/Abstract><Parameters><Parameter><Name>inputs<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The input IOs for the new model, usually it is some set of Input objects.<\/Para><\/Discussion><\/Parameter><Parameter><Name>outputs<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The output IOs for the new model, usually it is outputs of some other models.<\/Para><\/Discussion><\/Parameter><Parameter><Name>name<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The name of the new model.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
-            "key.doc.line" : 149,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"150\" column=\"22\"><Name>init(_:_:name:)<\/Name><USR>s:4main5ModelC__4nameACSayAC2IOCG_AGSStcfc<\/USR><Declaration>public convenience init(_ inputs: [IO], _ outputs: [IO], name: String = &quot;&quot;)<\/Declaration><CommentParts><Abstract><Para>You can compose a new model from old models when applying IO on them.<\/Para><\/Abstract><Parameters><Parameter><Name>inputs<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The input IOs for the new model, usually it is some set of Input objects.<\/Para><\/Discussion><\/Parameter><Parameter><Name>outputs<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The output IOs for the new model, usually it is outputs of some other models.<\/Para><\/Discussion><\/Parameter><Parameter><Name>name<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The name of the new model.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 150,
             "key.doc.name" : "init(_:_:name:)",
             "key.doc.parameters" : [
               {
@@ -905,18 +931,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 337,
-            "key.docoffset" : 4254,
+            "key.docoffset" : 4292,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>convenience<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>inputs<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>outputs<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;&quot;<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 326,
             "key.name" : "init(_:_:name:)",
             "key.namelength" : 56,
-            "key.nameoffset" : 4613,
-            "key.offset" : 4613,
+            "key.nameoffset" : 4651,
+            "key.offset" : 4651,
             "key.parsed_declaration" : "public convenience init(_ inputs: [IO], _ outputs: [IO], name: String = \"\")",
-            "key.parsed_scope.end" : 155,
-            "key.parsed_scope.start" : 149,
+            "key.parsed_scope.end" : 156,
+            "key.parsed_scope.start" : 150,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelCyACs13OpaquePointerVcfc\">init(_:)<\/RelatedName>"
@@ -934,11 +960,11 @@
                 "key.length" : 59,
                 "key.name" : "_inputs",
                 "key.namelength" : 7,
-                "key.nameoffset" : 4680,
-                "key.offset" : 4676,
+                "key.nameoffset" : 4718,
+                "key.offset" : 4714,
                 "key.parsed_declaration" : "let _inputs: [ccv_cnnp_model_io_t?] = inputs.map { $0._io }",
-                "key.parsed_scope.end" : 150,
-                "key.parsed_scope.start" : 150,
+                "key.parsed_scope.end" : 151,
+                "key.parsed_scope.start" : 151,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC__4nameACSayAC2IOCG_AGSStcfc7_inputsL_Xevp"
@@ -951,11 +977,11 @@
                 "key.length" : 61,
                 "key.name" : "_outputs",
                 "key.namelength" : 8,
-                "key.nameoffset" : 4744,
-                "key.offset" : 4740,
+                "key.nameoffset" : 4782,
+                "key.offset" : 4778,
                 "key.parsed_declaration" : "let _outputs: [ccv_cnnp_model_io_t?] = outputs.map { $0._io }",
-                "key.parsed_scope.end" : 151,
-                "key.parsed_scope.start" : 151,
+                "key.parsed_scope.end" : 152,
+                "key.parsed_scope.start" : 152,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC__4nameACSayAC2IOCG_AGSStcfc8_outputsL_Xevp"
@@ -968,11 +994,11 @@
                 "key.length" : 107,
                 "key.name" : "_model",
                 "key.namelength" : 6,
-                "key.nameoffset" : 4810,
-                "key.offset" : 4806,
+                "key.nameoffset" : 4848,
+                "key.offset" : 4844,
                 "key.parsed_declaration" : "let _model = ccv_cnnp_model_new(\n  _inputs, Int32(inputs.count), _outputs, Int32(outputs.count), name)!",
-                "key.parsed_scope.end" : 152,
-                "key.parsed_scope.start" : 152,
+                "key.parsed_scope.end" : 153,
+                "key.parsed_scope.start" : 153,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC6_models13OpaquePointerVvp\">_model<\/RelatedName>"
@@ -994,22 +1020,22 @@
               {
                 "key.attribute" : "source.decl.attribute.convenience",
                 "key.length" : 11,
-                "key.offset" : 5161
+                "key.offset" : 5199
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 5154
+                "key.offset" : 5192
               }
             ],
             "key.bodylength" : 164,
-            "key.bodyoffset" : 5217,
+            "key.bodyoffset" : 5255,
             "key.doc.column" : 22,
             "key.doc.comment" : " You can compose a new model of a list of models assuming one's output is another's input.\n\n - Parameters:\n   - models: The array of models.\n   - name: The name of the new model.",
             "key.doc.declaration" : "public convenience init(_ models: [Model], name: String = \"\")",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"164\" column=\"22\"><Name>init(_:name:)<\/Name><USR>s:4main5ModelC_4nameACSayACG_SStcfc<\/USR><Declaration>public convenience init(_ models: [Model], name: String = &quot;&quot;)<\/Declaration><CommentParts><Abstract><Para>You can compose a new model of a list of models assuming one’s output is another’s input.<\/Para><\/Abstract><Parameters><Parameter><Name>models<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The array of models.<\/Para><\/Discussion><\/Parameter><Parameter><Name>name<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The name of the new model.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
-            "key.doc.line" : 164,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"165\" column=\"22\"><Name>init(_:name:)<\/Name><USR>s:4main5ModelC_4nameACSayACG_SStcfc<\/USR><Declaration>public convenience init(_ models: [Model], name: String = &quot;&quot;)<\/Declaration><CommentParts><Abstract><Para>You can compose a new model of a list of models assuming one’s output is another’s input.<\/Para><\/Abstract><Parameters><Parameter><Name>models<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The array of models.<\/Para><\/Discussion><\/Parameter><Parameter><Name>name<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The name of the new model.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 165,
             "key.doc.name" : "init(_:name:)",
             "key.doc.parameters" : [
               {
@@ -1031,18 +1057,18 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 208,
-            "key.docoffset" : 4943,
+            "key.docoffset" : 4981,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>convenience<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>models<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;&quot;<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 209,
             "key.name" : "init(_:name:)",
             "key.namelength" : 42,
-            "key.nameoffset" : 5173,
-            "key.offset" : 5173,
+            "key.nameoffset" : 5211,
+            "key.offset" : 5211,
             "key.parsed_declaration" : "public convenience init(_ models: [Model], name: String = \"\")",
-            "key.parsed_scope.end" : 168,
-            "key.parsed_scope.start" : 164,
+            "key.parsed_scope.end" : 169,
+            "key.parsed_scope.start" : 165,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelCyACs13OpaquePointerVcfc\">init(_:)<\/RelatedName>"
@@ -1060,11 +1086,11 @@
                 "key.length" : 56,
                 "key.name" : "_models",
                 "key.namelength" : 7,
-                "key.nameoffset" : 5226,
-                "key.offset" : 5222,
+                "key.nameoffset" : 5264,
+                "key.offset" : 5260,
                 "key.parsed_declaration" : "let _models: [OpaquePointer?] = models.map { $0._model }",
-                "key.parsed_scope.end" : 165,
-                "key.parsed_scope.start" : 165,
+                "key.parsed_scope.end" : 166,
+                "key.parsed_scope.start" : 166,
                 "key.typename" : "[OpaquePointer?]",
                 "key.typeusr" : "$sSays13OpaquePointerVSgGD",
                 "key.usr" : "s:4main5ModelC_4nameACSayACG_SStcfc7_modelsL_Says13OpaquePointerVSgGvp"
@@ -1077,11 +1103,11 @@
                 "key.length" : 73,
                 "key.name" : "_model",
                 "key.namelength" : 6,
-                "key.nameoffset" : 5287,
-                "key.offset" : 5283,
+                "key.nameoffset" : 5325,
+                "key.offset" : 5321,
                 "key.parsed_declaration" : "let _model = ccv_cnnp_sequential_new(_models, Int32(models.count), name)!",
-                "key.parsed_scope.end" : 166,
-                "key.parsed_scope.start" : 166,
+                "key.parsed_scope.end" : 167,
+                "key.parsed_scope.start" : 167,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC6_models13OpaquePointerVvp\">_model<\/RelatedName>"
@@ -1108,31 +1134,31 @@
           {
             "key.attribute" : "source.decl.attribute.final",
             "key.length" : 5,
-            "key.offset" : 5433
+            "key.offset" : 5471
           },
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 5426
+            "key.offset" : 5464
           }
         ],
         "key.bodylength" : 75,
-        "key.bodyoffset" : 5462,
+        "key.bodyoffset" : 5500,
         "key.doc.column" : 20,
         "key.doc.comment" : "Model Inputs for Functional Model",
         "key.doc.declaration" : "public final class Input : Model.IO",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"174\" column=\"20\"><Name>Input<\/Name><USR>s:4main5InputC<\/USR><Declaration>public final class Input : Model.IO<\/Declaration><CommentParts><Abstract><Para>Model Inputs for Functional Model<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 174,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"175\" column=\"20\"><Name>Input<\/Name><USR>s:4main5InputC<\/USR><Declaration>public final class Input : Model.IO<\/Declaration><CommentParts><Abstract><Para>Model Inputs for Functional Model<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 175,
         "key.doc.name" : "Input",
         "key.doc.type" : "Class",
         "key.doclength" : 38,
-        "key.docoffset" : 5387,
+        "key.docoffset" : 5425,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 8,
-            "key.offset" : 5452
+            "key.offset" : 5490
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
@@ -1146,11 +1172,11 @@
         "key.length" : 99,
         "key.name" : "Input",
         "key.namelength" : 5,
-        "key.nameoffset" : 5445,
-        "key.offset" : 5439,
+        "key.nameoffset" : 5483,
+        "key.offset" : 5477,
         "key.parsed_declaration" : "public final class Input: Model.IO",
-        "key.parsed_scope.end" : 179,
-        "key.parsed_scope.start" : 174,
+        "key.parsed_scope.end" : 180,
+        "key.parsed_scope.start" : 175,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1159,22 +1185,22 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 5465
+                "key.offset" : 5503
               }
             ],
             "key.bodylength" : 55,
-            "key.bodyoffset" : 5480,
+            "key.bodyoffset" : 5518,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>()<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 64,
             "key.name" : "init()",
             "key.namelength" : 6,
-            "key.nameoffset" : 5472,
-            "key.offset" : 5472,
+            "key.nameoffset" : 5510,
+            "key.offset" : 5510,
             "key.parsed_declaration" : "public init()",
-            "key.parsed_scope.end" : 178,
-            "key.parsed_scope.start" : 175,
+            "key.parsed_scope.end" : 179,
+            "key.parsed_scope.start" : 176,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let _io: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -1184,11 +1210,11 @@
                 "key.length" : 27,
                 "key.name" : "_io",
                 "key.namelength" : 3,
-                "key.nameoffset" : 5489,
-                "key.offset" : 5485,
+                "key.nameoffset" : 5527,
+                "key.offset" : 5523,
                 "key.parsed_declaration" : "let _io = ccv_cnnp_input()!",
-                "key.parsed_scope.end" : 176,
-                "key.parsed_scope.start" : 176,
+                "key.parsed_scope.end" : 177,
+                "key.parsed_scope.start" : 177,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC2IOC3_ioXevp\">_io<\/RelatedName>"
