@@ -1812,12 +1812,13 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv415ccv_cnnp_concatPCKc">
-<span id="_CPPv315ccv_cnnp_concatPCKc"></span><span id="_CPPv215ccv_cnnp_concatPCKc"></span><span id="ccv_cnnp_concat__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga3c389c7d68fe1e6bee3d8b9965fdd1cd"></span><code class="sig-name descname">ccv_cnnp_concat</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415ccv_cnnp_concatPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv415ccv_cnnp_concatKiPCKc">
+<span id="_CPPv315ccv_cnnp_concatKiPCKc"></span><span id="_CPPv215ccv_cnnp_concatKiPCKc"></span><span id="ccv_cnnp_concat__iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gad5bdf0fd6c8e59af44b084cac70be29a"></span><code class="sig-name descname">ccv_cnnp_concat</code><span class="sig-paren">(</span><em class="property">const</em> int <em>axis</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415ccv_cnnp_concatKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Concatenate input tensors together. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>A model that can be applied with multiple inputs, and generate output that is a concatenation of the inputs. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">axis</span></code>: Along this axis, we concatenate tensors together. Other dimensions need to be exactly the same. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
 </ul>
 </dd>
