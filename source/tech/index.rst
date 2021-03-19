@@ -11,3 +11,4 @@ These are articles that explain internal implementations of NNC. These will focu
    nnc-dy.rst
    nnc-cnnp.rst
    nnc-df.rst
+   nnc-uops.rst

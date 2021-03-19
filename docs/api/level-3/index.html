@@ -150,6 +150,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-df/#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech/nnc-uops/">NNC Micro Ops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#describe-micro-ops">Describe Micro Ops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#simplification">Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#loop-fusion">Loop-Fusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#variable-substitution">Variable Substitution</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">API Reference</a><ul class="current">
@@ -158,9 +166,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../level-1/">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../level_1/group__level__1__uops_micro_jittor/">The concept of meta-ops in Jittor is amazing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-1/#tensors">Tensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-1/#commands">Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../level-1/#streams">Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../level-1/#micro-ops">Micro Ops</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../level-2/">Level 2 API</a><ul>
@@ -293,126 +303,126 @@
 <div class="section" id="essentials">
 <h2>Essentials<a class="headerlink" href="#essentials" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut2_98">
-<span id="_CPPv3Ut2_98"></span><span class="target" id="group__level__3__essentials_1ga78372742882dccd1c13323dbd66c25c5"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut2_98" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_113">
+<span id="_CPPv3Ut3_113"></span><span class="target" id="group__level__3__essentials_1ga2ee507fea44084259042ff7bb45ecabf"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_113" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9832CCV_NNC_TENSOR_SYMBOL_INIT_ZEROSE">
-<span id="_CPPv3NUt2_9832CCV_NNC_TENSOR_SYMBOL_INIT_ZEROSE"></span><span class="target" id="group__level__3__essentials_1gga78372742882dccd1c13323dbd66c25c5a5d0c1fd51959ddcfc96c283a4a95c716"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_TENSOR_SYMBOL_INIT_ZEROS</code> = 0x01<a class="headerlink" href="#_CPPv4NUt2_9832CCV_NNC_TENSOR_SYMBOL_INIT_ZEROSE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11332CCV_NNC_TENSOR_SYMBOL_INIT_ZEROSE">
+<span id="_CPPv3NUt3_11332CCV_NNC_TENSOR_SYMBOL_INIT_ZEROSE"></span><span class="target" id="group__level__3__essentials_1gga2ee507fea44084259042ff7bb45ecabfa5d0c1fd51959ddcfc96c283a4a95c716"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_TENSOR_SYMBOL_INIT_ZEROS</code> = 0x01<a class="headerlink" href="#_CPPv4NUt3_11332CCV_NNC_TENSOR_SYMBOL_INIT_ZEROSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Initialize underlying tensor for the symbol with zeros </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9831CCV_NNC_TENSOR_SYMBOL_INIT_ONESE">
-<span id="_CPPv3NUt2_9831CCV_NNC_TENSOR_SYMBOL_INIT_ONESE"></span><span class="target" id="group__level__3__essentials_1gga78372742882dccd1c13323dbd66c25c5addf19cbb1b50ab9d8ba9818a2fc9ebf2"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_TENSOR_SYMBOL_INIT_ONES</code> = 0x02<a class="headerlink" href="#_CPPv4NUt2_9831CCV_NNC_TENSOR_SYMBOL_INIT_ONESE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11331CCV_NNC_TENSOR_SYMBOL_INIT_ONESE">
+<span id="_CPPv3NUt3_11331CCV_NNC_TENSOR_SYMBOL_INIT_ONESE"></span><span class="target" id="group__level__3__essentials_1gga2ee507fea44084259042ff7bb45ecabfaddf19cbb1b50ab9d8ba9818a2fc9ebf2"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_TENSOR_SYMBOL_INIT_ONES</code> = 0x02<a class="headerlink" href="#_CPPv4NUt3_11331CCV_NNC_TENSOR_SYMBOL_INIT_ONESE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Initialize underlying tensor for the symbol with ones </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9830CCV_NNC_TENSOR_SYMBOL_TAPE_VARE">
-<span id="_CPPv3NUt2_9830CCV_NNC_TENSOR_SYMBOL_TAPE_VARE"></span><span class="target" id="group__level__3__essentials_1gga78372742882dccd1c13323dbd66c25c5a9cfd183ceebd41efa15ec2d805e97807"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_TENSOR_SYMBOL_TAPE_VAR</code> = 0x04<a class="headerlink" href="#_CPPv4NUt2_9830CCV_NNC_TENSOR_SYMBOL_TAPE_VARE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11330CCV_NNC_TENSOR_SYMBOL_TAPE_VARE">
+<span id="_CPPv3NUt3_11330CCV_NNC_TENSOR_SYMBOL_TAPE_VARE"></span><span class="target" id="group__level__3__essentials_1gga2ee507fea44084259042ff7bb45ecabfa9cfd183ceebd41efa15ec2d805e97807"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_TENSOR_SYMBOL_TAPE_VAR</code> = 0x04<a class="headerlink" href="#_CPPv4NUt3_11330CCV_NNC_TENSOR_SYMBOL_TAPE_VARE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Mark this as a tape variable (it cannot be folded, will contain flag CCV_TAPE_ALLOC) </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9826CCV_NNC_TENSOR_SYMBOL_DEADE">
-<span id="_CPPv3NUt2_9826CCV_NNC_TENSOR_SYMBOL_DEADE"></span><span class="target" id="group__level__3__essentials_1gga78372742882dccd1c13323dbd66c25c5a821cc3885c5b2d4a8ebf5f71eeefbd36"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_TENSOR_SYMBOL_DEAD</code> = 0x80000000<a class="headerlink" href="#_CPPv4NUt2_9826CCV_NNC_TENSOR_SYMBOL_DEADE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11326CCV_NNC_TENSOR_SYMBOL_DEADE">
+<span id="_CPPv3NUt3_11326CCV_NNC_TENSOR_SYMBOL_DEADE"></span><span class="target" id="group__level__3__essentials_1gga2ee507fea44084259042ff7bb45ecabfa821cc3885c5b2d4a8ebf5f71eeefbd36"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_TENSOR_SYMBOL_DEAD</code> = 0x80000000<a class="headerlink" href="#_CPPv4NUt3_11326CCV_NNC_TENSOR_SYMBOL_DEADE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Mark this tensor symbol as dead, any future usage will cause assertion </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut2_99">
-<span id="_CPPv3Ut2_99"></span><span class="target" id="group__level__3__essentials_1ga2d5492e116eebd5075f247d21fb9db26"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut2_99" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_114">
+<span id="_CPPv3Ut3_114"></span><span class="target" id="group__level__3__essentials_1gaa7df87806f64f3b241c8cde9eb57cad5"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_114" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9923CCV_NNC_GRAPH_EXEC_DEADE">
-<span id="_CPPv3NUt2_9923CCV_NNC_GRAPH_EXEC_DEADE"></span><span class="target" id="group__level__3__essentials_1gga2d5492e116eebd5075f247d21fb9db26aa67f1272cc67d9649045edb2812143ac"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_GRAPH_EXEC_DEAD</code> = 0x1<a class="headerlink" href="#_CPPv4NUt2_9923CCV_NNC_GRAPH_EXEC_DEADE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11423CCV_NNC_GRAPH_EXEC_DEADE">
+<span id="_CPPv3NUt3_11423CCV_NNC_GRAPH_EXEC_DEADE"></span><span class="target" id="group__level__3__essentials_1ggaa7df87806f64f3b241c8cde9eb57cad5aa67f1272cc67d9649045edb2812143ac"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_GRAPH_EXEC_DEAD</code> = 0x1<a class="headerlink" href="#_CPPv4NUt3_11423CCV_NNC_GRAPH_EXEC_DEADE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Mark this node as dead. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9926CCV_NNC_GRAPH_EXEC_P_WHILEE">
-<span id="_CPPv3NUt2_9926CCV_NNC_GRAPH_EXEC_P_WHILEE"></span><span class="target" id="group__level__3__essentials_1gga2d5492e116eebd5075f247d21fb9db26a624d8024843e10c6ff76e769c3272a0e"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_GRAPH_EXEC_P_WHILE</code> = 0x10<a class="headerlink" href="#_CPPv4NUt2_9926CCV_NNC_GRAPH_EXEC_P_WHILEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11426CCV_NNC_GRAPH_EXEC_P_WHILEE">
+<span id="_CPPv3NUt3_11426CCV_NNC_GRAPH_EXEC_P_WHILEE"></span><span class="target" id="group__level__3__essentials_1ggaa7df87806f64f3b241c8cde9eb57cad5a624d8024843e10c6ff76e769c3272a0e"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_GRAPH_EXEC_P_WHILE</code> = 0x10<a class="headerlink" href="#_CPPv4NUt3_11426CCV_NNC_GRAPH_EXEC_P_WHILEE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Mark this node keyword is while </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9926CCV_NNC_GRAPH_EXEC_CASE_OFE">
-<span id="_CPPv3NUt2_9926CCV_NNC_GRAPH_EXEC_CASE_OFE"></span><span class="target" id="group__level__3__essentials_1gga2d5492e116eebd5075f247d21fb9db26a9d047c231707c4e5f5a44d1ed348df17"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_GRAPH_EXEC_CASE_OF</code> = 0x20<a class="headerlink" href="#_CPPv4NUt2_9926CCV_NNC_GRAPH_EXEC_CASE_OFE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11426CCV_NNC_GRAPH_EXEC_CASE_OFE">
+<span id="_CPPv3NUt3_11426CCV_NNC_GRAPH_EXEC_CASE_OFE"></span><span class="target" id="group__level__3__essentials_1ggaa7df87806f64f3b241c8cde9eb57cad5a9d047c231707c4e5f5a44d1ed348df17"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_GRAPH_EXEC_CASE_OF</code> = 0x20<a class="headerlink" href="#_CPPv4NUt3_11426CCV_NNC_GRAPH_EXEC_CASE_OFE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Mark this node keyword is case_of </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_100">
-<span id="_CPPv3Ut3_100"></span><span class="target" id="group__level__3__essentials_1ga73c53bacb25588538843a1dcfe5f382b"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_100" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_115">
+<span id="_CPPv3Ut3_115"></span><span class="target" id="group__level__3__essentials_1ga2f1398dba5e4a5616b83437528bdb28e"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_115" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10024CCV_NNC_NO_TENSOR_SYMBOLE">
-<span id="_CPPv3NUt3_10024CCV_NNC_NO_TENSOR_SYMBOLE"></span><span class="target" id="group__level__3__essentials_1gga73c53bacb25588538843a1dcfe5f382ba5f09675188215b4654635d9878224c2f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_NO_TENSOR_SYMBOL</code> = -1<a class="headerlink" href="#_CPPv4NUt3_10024CCV_NNC_NO_TENSOR_SYMBOLE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11524CCV_NNC_NO_TENSOR_SYMBOLE">
+<span id="_CPPv3NUt3_11524CCV_NNC_NO_TENSOR_SYMBOLE"></span><span class="target" id="group__level__3__essentials_1gga2f1398dba5e4a5616b83437528bdb28ea5f09675188215b4654635d9878224c2f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_NO_TENSOR_SYMBOL</code> = -1<a class="headerlink" href="#_CPPv4NUt3_11524CCV_NNC_NO_TENSOR_SYMBOLE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Special symbol reference for no tensor symbol. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10033CCV_NNC_WHILE_COUNT_TENSOR_SYMBOLE">
-<span id="_CPPv3NUt3_10033CCV_NNC_WHILE_COUNT_TENSOR_SYMBOLE"></span><span class="target" id="group__level__3__essentials_1gga73c53bacb25588538843a1dcfe5f382bab78cda469740acbc3f4529b289d3d37e"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_WHILE_COUNT_TENSOR_SYMBOL</code> = -2<a class="headerlink" href="#_CPPv4NUt3_10033CCV_NNC_WHILE_COUNT_TENSOR_SYMBOLE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11533CCV_NNC_WHILE_COUNT_TENSOR_SYMBOLE">
+<span id="_CPPv3NUt3_11533CCV_NNC_WHILE_COUNT_TENSOR_SYMBOLE"></span><span class="target" id="group__level__3__essentials_1gga2f1398dba5e4a5616b83437528bdb28eab78cda469740acbc3f4529b289d3d37e"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_WHILE_COUNT_TENSOR_SYMBOL</code> = -2<a class="headerlink" href="#_CPPv4NUt3_11533CCV_NNC_WHILE_COUNT_TENSOR_SYMBOLE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Special symbol reference for while loop count tensor. </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_101">
-<span id="_CPPv3Ut3_101"></span><span class="target" id="group__level__3__essentials_1ga26e1124d33b4acdb532c49f6498df549"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_101" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_116">
+<span id="_CPPv3Ut3_116"></span><span class="target" id="group__level__3__essentials_1gaeac2de18c0ed342a690b3e2ba3c52426"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_116" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10128CCV_NNC_NO_GRAPH_EXEC_SYMBOLE">
-<span id="_CPPv3NUt3_10128CCV_NNC_NO_GRAPH_EXEC_SYMBOLE"></span><span class="target" id="group__level__3__essentials_1gga26e1124d33b4acdb532c49f6498df549a00c871cba450479a2f042c84ee0359c3"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_NO_GRAPH_EXEC_SYMBOL</code> = -1<a class="headerlink" href="#_CPPv4NUt3_10128CCV_NNC_NO_GRAPH_EXEC_SYMBOLE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11628CCV_NNC_NO_GRAPH_EXEC_SYMBOLE">
+<span id="_CPPv3NUt3_11628CCV_NNC_NO_GRAPH_EXEC_SYMBOLE"></span><span class="target" id="group__level__3__essentials_1ggaeac2de18c0ed342a690b3e2ba3c52426a00c871cba450479a2f042c84ee0359c3"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_NO_GRAPH_EXEC_SYMBOL</code> = -1<a class="headerlink" href="#_CPPv4NUt3_11628CCV_NNC_NO_GRAPH_EXEC_SYMBOLE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Special symbol reference for no exec symbol. </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_102">
-<span id="_CPPv3Ut3_102"></span><span class="target" id="group__level__3__essentials_1ga7ee8d0f117a79ca7eb1e0076a9182bcb"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_102" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_117">
+<span id="_CPPv3Ut3_117"></span><span class="target" id="group__level__3__essentials_1ga0ac0b7994a7d738aa77d2c1cfe8d6d13"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_117" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10221CCV_NNC_SYMBOL_TENSORE">
-<span id="_CPPv3NUt3_10221CCV_NNC_SYMBOL_TENSORE"></span><span class="target" id="group__level__3__essentials_1gga7ee8d0f117a79ca7eb1e0076a9182bcba062c45f634b21c25d5bcfdea5493637c"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SYMBOL_TENSOR</code><a class="headerlink" href="#_CPPv4NUt3_10221CCV_NNC_SYMBOL_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11721CCV_NNC_SYMBOL_TENSORE">
+<span id="_CPPv3NUt3_11721CCV_NNC_SYMBOL_TENSORE"></span><span class="target" id="group__level__3__essentials_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a062c45f634b21c25d5bcfdea5493637c"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SYMBOL_TENSOR</code><a class="headerlink" href="#_CPPv4NUt3_11721CCV_NNC_SYMBOL_TENSORE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Identifier for tensor symbol </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10227CCV_NNC_SYMBOL_TENSOR_ALIASE">
-<span id="_CPPv3NUt3_10227CCV_NNC_SYMBOL_TENSOR_ALIASE"></span><span class="target" id="group__level__3__essentials_1gga7ee8d0f117a79ca7eb1e0076a9182bcba436c4b765963d2a5aa1f9ddae48279de"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SYMBOL_TENSOR_ALIAS</code><a class="headerlink" href="#_CPPv4NUt3_10227CCV_NNC_SYMBOL_TENSOR_ALIASE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11727CCV_NNC_SYMBOL_TENSOR_ALIASE">
+<span id="_CPPv3NUt3_11727CCV_NNC_SYMBOL_TENSOR_ALIASE"></span><span class="target" id="group__level__3__essentials_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a436c4b765963d2a5aa1f9ddae48279de"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SYMBOL_TENSOR_ALIAS</code><a class="headerlink" href="#_CPPv4NUt3_11727CCV_NNC_SYMBOL_TENSOR_ALIASE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Identifier for tensor alias symbol </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10225CCV_NNC_SYMBOL_GRAPH_EXECE">
-<span id="_CPPv3NUt3_10225CCV_NNC_SYMBOL_GRAPH_EXECE"></span><span class="target" id="group__level__3__essentials_1gga7ee8d0f117a79ca7eb1e0076a9182bcba20998acbca60ae720faf45e751cd735d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SYMBOL_GRAPH_EXEC</code><a class="headerlink" href="#_CPPv4NUt3_10225CCV_NNC_SYMBOL_GRAPH_EXECE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11725CCV_NNC_SYMBOL_GRAPH_EXECE">
+<span id="_CPPv3NUt3_11725CCV_NNC_SYMBOL_GRAPH_EXECE"></span><span class="target" id="group__level__3__essentials_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a20998acbca60ae720faf45e751cd735d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SYMBOL_GRAPH_EXEC</code><a class="headerlink" href="#_CPPv4NUt3_11725CCV_NNC_SYMBOL_GRAPH_EXECE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Identifier for exec symbol </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_103">
-<span id="_CPPv3Ut3_103"></span><span class="target" id="group__level__3__essentials_1gac34c4c978f4130a92a5068f9e21ea9fc"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_103" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_118">
+<span id="_CPPv3Ut3_118"></span><span class="target" id="group__level__3__essentials_1ga5bea799269f02f5b3395d6b2c068b618"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_118" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10325CCV_NNC_AUTOGEN_ALL_EXECSE">
-<span id="_CPPv3NUt3_10325CCV_NNC_AUTOGEN_ALL_EXECSE"></span><span class="target" id="group__level__3__essentials_1ggac34c4c978f4130a92a5068f9e21ea9fcac26f42f6e7baab6d937444160029a9df"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_AUTOGEN_ALL_EXECS</code> = 0x1<a class="headerlink" href="#_CPPv4NUt3_10325CCV_NNC_AUTOGEN_ALL_EXECSE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11825CCV_NNC_AUTOGEN_ALL_EXECSE">
+<span id="_CPPv3NUt3_11825CCV_NNC_AUTOGEN_ALL_EXECSE"></span><span class="target" id="group__level__3__essentials_1gga5bea799269f02f5b3395d6b2c068b618ac26f42f6e7baab6d937444160029a9df"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_AUTOGEN_ALL_EXECS</code> = 0x1<a class="headerlink" href="#_CPPv4NUt3_11825CCV_NNC_AUTOGEN_ALL_EXECSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Automatic concatenation for all execution nodes </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_10340CCV_NNC_AUTOGEN_SOURCES_AND_DESTINATIONSE">
-<span id="_CPPv3NUt3_10340CCV_NNC_AUTOGEN_SOURCES_AND_DESTINATIONSE"></span><span class="target" id="group__level__3__essentials_1ggac34c4c978f4130a92a5068f9e21ea9fcad25f8edcb2f7b96146fac81e9a25e7d4"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_AUTOGEN_SOURCES_AND_DESTINATIONS</code> = 0x2<a class="headerlink" href="#_CPPv4NUt3_10340CCV_NNC_AUTOGEN_SOURCES_AND_DESTINATIONSE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11840CCV_NNC_AUTOGEN_SOURCES_AND_DESTINATIONSE">
+<span id="_CPPv3NUt3_11840CCV_NNC_AUTOGEN_SOURCES_AND_DESTINATIONSE"></span><span class="target" id="group__level__3__essentials_1gga5bea799269f02f5b3395d6b2c068b618ad25f8edcb2f7b96146fac81e9a25e7d4"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_AUTOGEN_SOURCES_AND_DESTINATIONS</code> = 0x2<a class="headerlink" href="#_CPPv4NUt3_11840CCV_NNC_AUTOGEN_SOURCES_AND_DESTINATIONSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Automatically find all source and destination nodes. </p>
 </dd></dl>
 

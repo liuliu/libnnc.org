@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>NNC Micro Ops &mdash; nnc, a deep learning framework from ccv</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../">
+          
+
+          
+            
+            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a deep learning framework from ccv
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../overview/#what-s-nnc">What’s NNC?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview/#tensors-commands-and-streams">1. Tensors, Commands and Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview/#computation-graph">2. Computation Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview/#symbolic-graph">3. Symbolic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview/#dynamic-graph">4. Dynamic Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview/#common-neural-network-primitives">5. Common Neural Network Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview/#supplementary-materials">Supplementary Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../overview/#toll-free-bridging">Toll-Free Bridging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../overview/#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../overview/#while-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">while</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../overview/#case-of-type-sub-graph"><code class="docutils literal notranslate"><span class="pre">case..of</span></code> Type Sub-Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../overview/#limits-and-constraints">Limits and Constraints</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../">Technicals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-alloc/">The NNC Tensor Allocation Algorithm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#tensor-representation">Tensor Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#loop-representation">Loop Representation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#the-problem-definition">The Problem Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#the-core-algorithm">The Core Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#basic-structure">Basic Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#candidate-selection">Candidate Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#insertion">Insertion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#intuition">Intuition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#loop">Loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#multi-view-tensor">Multi-view Tensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#loop-with-efficient-tensor-allocation">Loop with Efficient Tensor Allocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#sub-computation-graph">Sub-Computation Graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-schd/">NNC Static Schedule A Graph</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-schd/#stream">Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-schd/#static-schedule">Static Schedule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-schd/#while-and-case-of"><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-dy/">NNC Dynamic Graph Execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-dy/#naming-the-variable">Naming The Variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-dy/#tracing-the-operation">Tracing The Operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-dy/#optimizations">Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-dy/#interoperability">Interoperability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-dy/#future-optimizations">Future Optimizations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-dy/#some-maybes">Some Maybes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-cnnp/">NNC Common Neural Network Primitives</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-cnnp/#model">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-cnnp/#model-io">Model IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-cnnp/#fit-evaluate-backward-apply-gradients">Fit, Evaluate, Backward, Apply Gradients</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-df/">NNC Dataframe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-df/#operations-on-the-data">Operations on the Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-df/#iteration">Iteration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-df/#map">Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-df/#reduce">Reduce</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-df/#others">Others</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-df/#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/level-0/">Level 0 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-0/#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/level-1/">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_1/group__level__1__uops_micro_jittor/">The concept of meta-ops in Jittor is amazing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#tensors">Tensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#streams">Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#micro-ops">Micro Ops</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/level-2/">Level 2 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-2/#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-2/#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/level-3/">Level 3 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3/#essentials">Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3/#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/level-3.5/">Level 3.5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_3_5/group__level__3__5__case__of_symbolic_switch/">Construct “switch” control structure in symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_3_5/group__level__3__5__simplify_symbolic_simplify/">Symbolic graph simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_3_5/group__level__3__5__while_symbolic_while/">Construct a “while” loop in a symbolic graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#automatic-differentiation">Automatic Differentiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#while-loop-essentials">While Loop Essentials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#branching">Branching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#gradient-based-optimization">Gradient-based Optimization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#graph-simplification">Graph Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#automatic-graph-parallelization">Automatic Graph Parallelization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#memory-compression">Memory Compression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-3.5/#while-loop-others">While Loop Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/level-4/">Level 4 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-4/#essentials">Essentials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/level-5/">Level 5 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_5/group__level__5_dataframe/">What is “dataframe” in ML?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_5/group__level__5_dataframe_csv/">Why to support comma-separated-values files in dataframe?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_5/group__level__5_model/">Models, layers, and Keras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#dataframe-api">Dataframe API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#dataframe-add-ons">Dataframe Add-ons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#dataframe-csv-support">Dataframe CSV Support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#model-api">Model API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-5/#model-add-ons">Model Add-ons</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/convenience/">Convenience API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/commands/">Available Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/commands/#backends">Backends</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/commands/#commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/commands/#command-identifiers">Command Identifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://libnnc.org/s4nnc/">Swift for NNC</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          
+            <a href="../../">
+          
+
+          
+            
+            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../">Docs</a> &raquo;</li>
+        
+      <li>NNC Micro Ops</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/tech/nnc-uops.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nnc-micro-ops">
+<h1>NNC Micro Ops<a class="headerlink" href="#nnc-micro-ops" title="Permalink to this headline">¶</a></h1>
+<p>A machine-learning framework constructed with differentiable ops can have a problem with too many of them. This is necessary though. As we entering into the ever fast-growing AI landscape, each model is a bit of different. Even with intention to limit how many ops are,  NNC has accumulated, over years, around 50 ops. PyTorch and TensorFlow, each has more than 100 ops and counting.</p>
+<p>Implementing these ops are not the most annoying part. The annoying part comes from implementing them for different platforms, with special optimization techniques in mind. That means, for example, Convolution can have at least 6 implementations: A CUDA direct convolution, A 3x3 optimized CUDA Winograd implementation, x86_64 direct, x86_64 3x3 Winograd, aarch64 direct, aarch64 3x3 Winograd. This is just a tip of iceberg, there are probably more than 7 separate implementations for convolution in cuDNN alone.</p>
+<p>Apache TVM tries to solve this effectively heterogeneous computation problem by automatically generating and scheduling new op kernels on different platforms.</p>
+<p>I am not interested in performance. NNC is a small project, performance tuning on heterogeneous computation environment can easily absorb all my time with various degrees of failures. It is better left that for capable hands.</p>
+<p>I am interested in correctness of these ops, and a quick way to validate the correctness claims of various kernel implementations (in NNC terminology, <em>backend</em> implementations). The best to have confidence in correctness for ops, is through randomized Oracle tests.</p>
+<p>Oracle tests, however, require a canonical implementation to begin with. Now, the question turns to: how to have confidence in the canonical implementation? I don’t have a definitive answer, but from my experience, the easiest way to gain confidence in a piece of code is to have less lines of code and run the same code with as much scenarios as possible.</p>
+<p>Thus, I am searching for something that can describe all the ops with as few lines of code as possible, and underneath, has a very small kernel to execute the description.</p>
+<p><a class="reference external" href="https://halide-lang.org/">Halide language</a> and works inspired by Halide such as JAX comes close to that realization. But it is not really an option to ship Halide or JAX as a dependency for NNC. On the other hand, having support for a fully-featured language such as Halide or Python may not be as small surface area as I want. The kernels for these, such as XLA is not exactly small and verifiable as I desired.</p>
+<p><a class="reference external" href="https://github.com/Jittor/jittor">Jittor</a> has an interesting take on this problem. To be fair, <cite>Jittor</cite>’s choice won’t be very interesting if you already have a fully-featured system like XLA or TVM. The choice becomes more interesting if you want to bootstrap machine-learning ops with minimal work / code.</p>
+<p><cite>Jittor</cite> defines a small set of meta-ops, these meta-ops themselves are quite straightforward to implement separately, and can be differentiated easily. These includes <em>reindex</em>, <em>element-wise unary / binary ops</em>, <em>reduce</em> and <em>select</em>. These meta-ops run separately can be costly, mostly for memory. To transform complex op into combinations of these meta-ops, it often requires to unroll values into higher dimensions and then does element-wise operations there. The unrolling to higher dimensions can be costly on memory for that reason. Some usual optimizations such as loop-fusion pretty much required for this approach to be practical.</p>
+<p>NNC implemented the exactly approach as <cite>Jittor</cite> did. This enables us to describe our ops in concise and simple manner (just a few reindex and element-wise ops). Because these meta-ops (NNC called it micro-ops, or uops) are easy to implement separately, the whole implementation should only be a few thousands lines of code and will be regularly exercised.</p>
+<div class="section" id="describe-micro-ops">
+<h2>Describe Micro Ops<a class="headerlink" href="#describe-micro-ops" title="Permalink to this headline">¶</a></h2>
+<p>To do loop-fusion or generate code from micro ops, the system should not only be able to execute micro ops, but to understand them and optimize them. That requires us to describe the micro ops with a intermediate representation.</p>
+<p>NNC uses a very specific IR to describe these micro ops. Broadly speaking, NNC’s IR has blocks and these blocks can run serially. Each block is a nested loop. Each loop contains their start index, end index, an array of loop-carried variable ids, an array of statements to run inside this loop. A nested loop always runs its inner loop before run any of its statements. Start / end index are described with index expressions, so it can be flexible.</p>
+<p>Statements inside a loop have two types. Assignment statement assigns evaluated expression value to a tensor. Compound assignment statement does reduce with a loop-carried variable and an evaluated expression. There is no branching whatsoever with this simple intermediate representation.</p>
+<p><cite>Jittor</cite>’s implementation describes meta-ops with a DSL. This DSL requires to be parsed into its own IR. NNC’s implementation describes micro-ops by constructing the IR directly with helper functions. NNC does parsing for index expressions so it is easier to describe reindex op. That is a fairly straightforward recursive-descent parser. We want to minimize parsing in general to reduce the implementation surface.</p>
+<p>We don’t apply SSA for tensors in this intermediate representation otherwise some easy operations such as zero out an tensor and accumulate would be very complex.</p>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>Unless <cite>Jittor</cite>, NNC’s implementation doesn’t want to do aggressive JIT. Supporting JIT assumes many details of the architecture where NNC runs, and that will be major departure of NNC’s design philosophy. Unless we introduce something light-weight such as <a class="reference external" href="https://github.com/8l/qbe">QBE</a> or <a class="reference external" href="https://github.com/vnmakarov/mir">MIR</a>, NNC will use micro-ops to generate code to be ahead-of-time compiled. That means we cannot aggressive JIT parameters. These need to be passed into the ahead-of-time generated code. Thus, we support “$param” for reindex and these parameters will be retained when generating the code.</p>
+</div>
+<div class="section" id="simplification">
+<h2>Simplification<a class="headerlink" href="#simplification" title="Permalink to this headline">¶</a></h2>
+<p>We want to performance at least two types of optimizations on top of the intermediate representation such that the generated code will not be horribly slow or memory hungry. Thus, we implemented loop-fusion and variable substitution for our uops.</p>
+</div>
+<div class="section" id="loop-fusion">
+<h2>Loop-Fusion<a class="headerlink" href="#loop-fusion" title="Permalink to this headline">¶</a></h2>
+<p>NNC does very aggressive loop-fusion over the intermediate representation. As we described earlier, the IR is very loop-centric. As such, we were able to match same nested loops (blocks) together even if they are with different orders.</p>
+<p>A loop matches another loop when their start index and end index matches.</p>
+<p>When two nested loops has 1:1 mapping between their loops, it may not mean these nested loops can be matched together. For example:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L1</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L2</span>
+    <span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L3</span>
+      <span class="n">a</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// M1</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// M2</span>
+    <span class="kt">float</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// M3</span>
+      <span class="n">b</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>These two nested loops has 1:1 mapping between L1:M1, L2:M3, L3:M2. However, they cannot be merged otherwise we will end up with wrong code:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L1</span>
+  <span class="kt">float</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L2</span>
+    <span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L3</span>
+      <span class="n">a</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">];</span>
+      <span class="n">b</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">];</span> <span class="c1">// WRONG!</span>
+      <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">// WRONG!</span>
+    <span class="p">}</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that this is only problematic because we use loop-carried variables <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. If instead we simply do:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L1</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L2</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// L3</span>
+      <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">];</span>
+      <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This code will be correct.</p>
+<p>This is another design choice we diverged from <cite>Jittor</cite> because I want to generate more idiomatic code that looks like someone hand-wrote it.</p>
+<p>Thus, to matching two nested loops, we should treat loops with statements or loop-carried variables as pivot points. Anything before this pivot point or after can be reordered, but not the pivot point. We enforced this invariant for our nested loop matching and only merge loops if they can be reordered without violate this invariant. We devised a simle O(n^2) algorithm to do this reordering.</p>
+</div>
+<div class="section" id="variable-substitution">
+<h2>Variable Substitution<a class="headerlink" href="#variable-substitution" title="Permalink to this headline">¶</a></h2>
+<p>After loop-fusion, many intermediate tensors only write once, and used immediately in the next statement. These tensors can be removed entirely and replaced with their right-side values (for their assignment).</p>
+<p>NNC does variable substitution conservatively. We only substitute a tensor if it is only used in one loop. And in that one loop, only if their index accessor is exactly the same. Even very conservatively, after loop-fusion, this can replace many variables as most of them now exist within one loop.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, libnnc.org.
+      
+        <span class="build">
+          <a href="https://github.com/liuliu/ccv">View the project on GitHub</a>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'a deep learning framework from ccv',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-303081-9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-303081-9');
+  </script>
+
+   
+
+</body>
+</html>

@@ -27,3 +27,10 @@ Streams
    :project: libnnc
    :content-only:
    :members:
+
+Micro Ops
+---------
+.. doxygengroup:: level_1_uops
+   :project: libnnc
+   :content-only:
+   :members:

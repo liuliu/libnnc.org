@@ -1,0 +1,12 @@
+The concept of meta-ops in Jittor is amazing
+============================================
+
+NNC will never do JIT. Particularly, I will never do codegen and compile at runtime, especially with static shapes. The reason is pretty simple. JIT would be too much architectural dependent and with that, almost impossible for NNC to be this small embeddable library that you can carry everywhere. However, this shouldn’t prevent NNC to generate proper descriptions of each command so a JIT version can be built if there are architectural support for it. In this way, the core of NNC can be small and embeddable, but a new backend (identified by the backend attribute) can implement more sophisticated JIT mechanism.
+
+More over, I need to generate some code for reference implementations, ideally from some descriptions. This is important because with 90+ ops, having a correctly implemented command turns out to be more challenging than I expected. Especially if I want them to be compliant with the metadata describes it (what shape it accepts, what datatype works, whether it can accept tensor views, and how in-place tensors supported). Many of reference commands are not supporting all datatypes and tensor views, and this has to be rectified because these are “reference commands”, they must be.
+
+Jittor introduced to the world the idea of meta-ops. Basically, it claims every ops (or macro ops) can be break down to 3 types of micro ops (they call them meta-ops): a reindex op that can map tensor from one dimensionality to another, an element-wise op that does element-wise primitive math, and finally, a reduce op that can reduce along particular axis of a tensor with some elementary math. This feels rather limited initially, but when thinking through it, I am convinced it should be enough to describe all commands presented in NNC (this shouldn’t be a surprise actually).
+
+Thus, the plan now is to use the meta-ops idea, implementing new micro commands that can describe other commands in NNC. In this way, I can generate reference implementation from these descriptions and hopefully have better coverage than my existing CPU / GPU reference implementations.
+
+To build on-top what Jittor did, if you need to have my dynamism in the ops, it is essential to index with the provided tensor. With just reindex, binary operands and reduce, you cannot do that. Thus, on top of these 3, we added the 4th micro op (meta-op) that is “select”. This will be sufficient to implement ops such as masking.

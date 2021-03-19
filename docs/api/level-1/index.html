@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="Level 2 API" href="../level-2/" />
+    <link rel="next" title="The concept of meta-ops in Jittor is amazing" href="../level_1/group__level__1__uops_micro_jittor/" />
     <link rel="prev" title="Level 0 API" href="../level-0/" /> 
 
   
@@ -150,6 +150,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-df/#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../tech/nnc-uops/">NNC Micro Ops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#describe-micro-ops">Describe Micro Ops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#simplification">Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#loop-fusion">Loop-Fusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#variable-substitution">Variable Substitution</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">API Reference</a><ul class="current">
@@ -158,9 +166,11 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../level_1/group__level__1__uops_micro_jittor/">The concept of meta-ops in Jittor is amazing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tensors">Tensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#commands">Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#streams">Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#micro-ops">Micro Ops</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../level-2/">Level 2 API</a><ul>
@@ -289,6 +299,10 @@
   <div class="section" id="level-1-api">
 <h1>Level 1 API<a class="headerlink" href="#level-1-api" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Design Comments</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../level_1/group__level__1__uops_micro_jittor/">The concept of meta-ops in Jittor is amazing</a></li>
+</ul>
 </div>
 <div class="section" id="tensors">
 <h2>Tensors<a class="headerlink" href="#tensors" title="Permalink to this headline">¶</a></h2>
@@ -480,72 +494,72 @@
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut2_93">
-<span id="_CPPv3Ut2_93"></span><span class="target" id="group__level__1__cmd_1ga9a3be2d66956bd67c0b66c32d8b30f17"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut2_93" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_105">
+<span id="_CPPv3Ut3_105"></span><span class="target" id="group__level__1__cmd_1ga1f3b6c692395e5007ff47ce5d9304c1c"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_105" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9328CCV_NNC_CMD_ATTR_PASSTHROUGHE">
-<span id="_CPPv3NUt2_9328CCV_NNC_CMD_ATTR_PASSTHROUGHE"></span><span class="target" id="group__level__1__cmd_1gga9a3be2d66956bd67c0b66c32d8b30f17adda45c35378c204358486644d1fa0237"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_CMD_ATTR_PASSTHROUGH</code> = 0x01<a class="headerlink" href="#_CPPv4NUt2_9328CCV_NNC_CMD_ATTR_PASSTHROUGHE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10528CCV_NNC_CMD_ATTR_PASSTHROUGHE">
+<span id="_CPPv3NUt3_10528CCV_NNC_CMD_ATTR_PASSTHROUGHE"></span><span class="target" id="group__level__1__cmd_1gga1f3b6c692395e5007ff47ce5d9304c1cadda45c35378c204358486644d1fa0237"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_CMD_ATTR_PASSTHROUGH</code> = 0x01<a class="headerlink" href="#_CPPv4NUt3_10528CCV_NNC_CMD_ATTR_PASSTHROUGHE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This doesn’t compute anything, but pass the first n tensors to the output (useful for backprop that is identical). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9328CCV_NNC_CMD_ATTR_OUTPUT_ONESE">
-<span id="_CPPv3NUt2_9328CCV_NNC_CMD_ATTR_OUTPUT_ONESE"></span><span class="target" id="group__level__1__cmd_1gga9a3be2d66956bd67c0b66c32d8b30f17a0567260889e6d63e3b55288b091ccd57"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_CMD_ATTR_OUTPUT_ONES</code> = 0x02<a class="headerlink" href="#_CPPv4NUt2_9328CCV_NNC_CMD_ATTR_OUTPUT_ONESE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10528CCV_NNC_CMD_ATTR_OUTPUT_ONESE">
+<span id="_CPPv3NUt3_10528CCV_NNC_CMD_ATTR_OUTPUT_ONESE"></span><span class="target" id="group__level__1__cmd_1gga1f3b6c692395e5007ff47ce5d9304c1ca0567260889e6d63e3b55288b091ccd57"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_CMD_ATTR_OUTPUT_ONES</code> = 0x02<a class="headerlink" href="#_CPPv4NUt3_10528CCV_NNC_CMD_ATTR_OUTPUT_ONESE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>All the output tensors are 1s (unit). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9329CCV_NNC_CMD_ATTR_NULL_IS_ONESE">
-<span id="_CPPv3NUt2_9329CCV_NNC_CMD_ATTR_NULL_IS_ONESE"></span><span class="target" id="group__level__1__cmd_1gga9a3be2d66956bd67c0b66c32d8b30f17a700f6ff1bcd0616fe641616c0a309591"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_CMD_ATTR_NULL_IS_ONES</code> = 0x04<a class="headerlink" href="#_CPPv4NUt2_9329CCV_NNC_CMD_ATTR_NULL_IS_ONESE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10529CCV_NNC_CMD_ATTR_NULL_IS_ONESE">
+<span id="_CPPv3NUt3_10529CCV_NNC_CMD_ATTR_NULL_IS_ONESE"></span><span class="target" id="group__level__1__cmd_1gga1f3b6c692395e5007ff47ce5d9304c1ca700f6ff1bcd0616fe641616c0a309591"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_CMD_ATTR_NULL_IS_ONES</code> = 0x04<a class="headerlink" href="#_CPPv4NUt3_10529CCV_NNC_CMD_ATTR_NULL_IS_ONESE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Accept nullptr input as if these are tensors with 1s (unit). </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut2_94">
-<span id="_CPPv3Ut2_94"></span><span class="target" id="group__level__1__cmd_1ga2dbb833ef0dcc466dd02ee76badaf709"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut2_94" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_106">
+<span id="_CPPv3Ut3_106"></span><span class="target" id="group__level__1__cmd_1ga0ae1e3bf78c960c83e2d437efd802058"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_106" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9425CCV_NNC_ACCUMULATE_OUTPUTE">
-<span id="_CPPv3NUt2_9425CCV_NNC_ACCUMULATE_OUTPUTE"></span><span class="target" id="group__level__1__cmd_1gga2dbb833ef0dcc466dd02ee76badaf709a73aeb25c91e5fdc42e611e0e1a9bcd15"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_ACCUMULATE_OUTPUT</code> = 0x01<a class="headerlink" href="#_CPPv4NUt2_9425CCV_NNC_ACCUMULATE_OUTPUTE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10625CCV_NNC_ACCUMULATE_OUTPUTE">
+<span id="_CPPv3NUt3_10625CCV_NNC_ACCUMULATE_OUTPUTE"></span><span class="target" id="group__level__1__cmd_1gga0ae1e3bf78c960c83e2d437efd802058a73aeb25c91e5fdc42e611e0e1a9bcd15"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_ACCUMULATE_OUTPUT</code> = 0x01<a class="headerlink" href="#_CPPv4NUt3_10625CCV_NNC_ACCUMULATE_OUTPUTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Enable accumulate outputs (unsupported). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9425CCV_NNC_ZERO_MEMORY_ALLOCE">
-<span id="_CPPv3NUt2_9425CCV_NNC_ZERO_MEMORY_ALLOCE"></span><span class="target" id="group__level__1__cmd_1gga2dbb833ef0dcc466dd02ee76badaf709a9e32463443909ff69f0880e79df12a75"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_ZERO_MEMORY_ALLOC</code> = 0x02<a class="headerlink" href="#_CPPv4NUt2_9425CCV_NNC_ZERO_MEMORY_ALLOCE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10625CCV_NNC_ZERO_MEMORY_ALLOCE">
+<span id="_CPPv3NUt3_10625CCV_NNC_ZERO_MEMORY_ALLOCE"></span><span class="target" id="group__level__1__cmd_1gga0ae1e3bf78c960c83e2d437efd802058a9e32463443909ff69f0880e79df12a75"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_ZERO_MEMORY_ALLOC</code> = 0x02<a class="headerlink" href="#_CPPv4NUt3_10625CCV_NNC_ZERO_MEMORY_ALLOCE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Don’t allocate any extra memory for this operation. </p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="cpp enum">
-<dt id="_CPPv4Ut2_95">
-<span id="_CPPv3Ut2_95"></span><span class="target" id="group__level__1__cmd_1gaea33efd5e2c69d615faad5c5965510aa"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut2_95" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_107">
+<span id="_CPPv3Ut3_107"></span><span class="target" id="group__level__1__cmd_1ga01aea4eb01aa6415eee118b5a5ee3dad"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_107" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9520CCV_NNC_EXEC_SUCCESSE">
-<span id="_CPPv3NUt2_9520CCV_NNC_EXEC_SUCCESSE"></span><span class="target" id="group__level__1__cmd_1ggaea33efd5e2c69d615faad5c5965510aaa9687f69559e1f6955b6533446bec448b"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_EXEC_SUCCESS</code> = 0<a class="headerlink" href="#_CPPv4NUt2_9520CCV_NNC_EXEC_SUCCESSE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10720CCV_NNC_EXEC_SUCCESSE">
+<span id="_CPPv3NUt3_10720CCV_NNC_EXEC_SUCCESSE"></span><span class="target" id="group__level__1__cmd_1gga01aea4eb01aa6415eee118b5a5ee3dada9687f69559e1f6955b6533446bec448b"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_EXEC_SUCCESS</code> = 0<a class="headerlink" href="#_CPPv4NUt3_10720CCV_NNC_EXEC_SUCCESSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Successfully executed the command. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9520CCV_NNC_EXEC_INVALIDE">
-<span id="_CPPv3NUt2_9520CCV_NNC_EXEC_INVALIDE"></span><span class="target" id="group__level__1__cmd_1ggaea33efd5e2c69d615faad5c5965510aaae7e8006d01d35d477042c19efb943295"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_EXEC_INVALID</code> = -1<a class="headerlink" href="#_CPPv4NUt2_9520CCV_NNC_EXEC_INVALIDE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10720CCV_NNC_EXEC_INVALIDE">
+<span id="_CPPv3NUt3_10720CCV_NNC_EXEC_INVALIDE"></span><span class="target" id="group__level__1__cmd_1gga01aea4eb01aa6415eee118b5a5ee3dadae7e8006d01d35d477042c19efb943295"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_EXEC_INVALID</code> = -1<a class="headerlink" href="#_CPPv4NUt3_10720CCV_NNC_EXEC_INVALIDE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Invalid inputs. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9522CCV_NNC_EXEC_NO_KERNELE">
-<span id="_CPPv3NUt2_9522CCV_NNC_EXEC_NO_KERNELE"></span><span class="target" id="group__level__1__cmd_1ggaea33efd5e2c69d615faad5c5965510aaa82b81c8a00630cecb0da10a07e832f8f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_EXEC_NO_KERNEL</code> = -2<a class="headerlink" href="#_CPPv4NUt2_9522CCV_NNC_EXEC_NO_KERNELE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10722CCV_NNC_EXEC_NO_KERNELE">
+<span id="_CPPv3NUt3_10722CCV_NNC_EXEC_NO_KERNELE"></span><span class="target" id="group__level__1__cmd_1gga01aea4eb01aa6415eee118b5a5ee3dada82b81c8a00630cecb0da10a07e832f8f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_EXEC_NO_KERNEL</code> = -2<a class="headerlink" href="#_CPPv4NUt3_10722CCV_NNC_EXEC_NO_KERNELE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>No kernel available for a given command / backend. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9516CCV_NNC_EXEC_OOME">
-<span id="_CPPv3NUt2_9516CCV_NNC_EXEC_OOME"></span><span class="target" id="group__level__1__cmd_1ggaea33efd5e2c69d615faad5c5965510aaad2d169284c4f255b58656116b1b73d91"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_EXEC_OOM</code> = -3<a class="headerlink" href="#_CPPv4NUt2_9516CCV_NNC_EXEC_OOME" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_10716CCV_NNC_EXEC_OOME">
+<span id="_CPPv3NUt3_10716CCV_NNC_EXEC_OOME"></span><span class="target" id="group__level__1__cmd_1gga01aea4eb01aa6415eee118b5a5ee3dadad2d169284c4f255b58656116b1b73d91"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_EXEC_OOM</code> = -3<a class="headerlink" href="#_CPPv4NUt3_10716CCV_NNC_EXEC_OOME" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Out of memory error. </p>
 </dd></dl>
 
@@ -1142,18 +1156,18 @@
 <div class="section" id="streams">
 <h2>Streams<a class="headerlink" href="#streams" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut2_96">
-<span id="_CPPv3Ut2_96"></span><span class="target" id="group__level__1__stream_1ga0b887f38fa71033f0904f8e2330b6815"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut2_96" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_111">
+<span id="_CPPv3Ut3_111"></span><span class="target" id="group__level__1__stream_1ga098384b0034af0daa7c9c5c82b563567"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_111" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9622CCV_STREAM_CONTEXT_CPUE">
-<span id="_CPPv3NUt2_9622CCV_STREAM_CONTEXT_CPUE"></span><span class="target" id="group__level__1__stream_1gga0b887f38fa71033f0904f8e2330b6815ab1ad09b2d5a1d647d6ae0c3e10ee0edb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_STREAM_CONTEXT_CPU</code> = 0x1<a class="headerlink" href="#_CPPv4NUt2_9622CCV_STREAM_CONTEXT_CPUE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11122CCV_STREAM_CONTEXT_CPUE">
+<span id="_CPPv3NUt3_11122CCV_STREAM_CONTEXT_CPUE"></span><span class="target" id="group__level__1__stream_1gga098384b0034af0daa7c9c5c82b563567ab1ad09b2d5a1d647d6ae0c3e10ee0edb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_STREAM_CONTEXT_CPU</code> = 0x1<a class="headerlink" href="#_CPPv4NUt3_11122CCV_STREAM_CONTEXT_CPUE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A CPU based stream context (unsupported). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt2_9622CCV_STREAM_CONTEXT_GPUE">
-<span id="_CPPv3NUt2_9622CCV_STREAM_CONTEXT_GPUE"></span><span class="target" id="group__level__1__stream_1gga0b887f38fa71033f0904f8e2330b6815ae51e08d42b70d0ca16d3ef7b58c35113"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_STREAM_CONTEXT_GPU</code> = 0x2<a class="headerlink" href="#_CPPv4NUt2_9622CCV_STREAM_CONTEXT_GPUE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11122CCV_STREAM_CONTEXT_GPUE">
+<span id="_CPPv3NUt3_11122CCV_STREAM_CONTEXT_GPUE"></span><span class="target" id="group__level__1__stream_1gga098384b0034af0daa7c9c5c82b563567ae51e08d42b70d0ca16d3ef7b58c35113"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_STREAM_CONTEXT_GPU</code> = 0x2<a class="headerlink" href="#_CPPv4NUt3_11122CCV_STREAM_CONTEXT_GPUE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A GPU based stream context. </p>
 </dd></dl>
 
@@ -1466,6 +1480,291 @@
 <dd></dd></dl>
 
 </div>
+<div class="section" id="micro-ops">
+<h2>Micro Ops<a class="headerlink" href="#micro-ops" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp enum">
+<dt id="_CPPv4Ut3_108">
+<span id="_CPPv3Ut3_108"></span><span class="target" id="group__level__1__uops_1ga7646ae03981912f97626c39dfe9318da"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_108" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_10826CCV_NNC_MICRO_UNARY_OP_LOGE">
+<span id="_CPPv3NUt3_10826CCV_NNC_MICRO_UNARY_OP_LOGE"></span><span class="target" id="group__level__1__uops_1gga7646ae03981912f97626c39dfe9318daafc4a5f83cef4d83857750141f8ec2c8f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_UNARY_OP_LOG</code><a class="headerlink" href="#_CPPv4NUt3_10826CCV_NNC_MICRO_UNARY_OP_LOGE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_10826CCV_NNC_MICRO_UNARY_OP_EXPE">
+<span id="_CPPv3NUt3_10826CCV_NNC_MICRO_UNARY_OP_EXPE"></span><span class="target" id="group__level__1__uops_1gga7646ae03981912f97626c39dfe9318daab3e4a7d8cb03c999de48395a1f24d99d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_UNARY_OP_EXP</code><a class="headerlink" href="#_CPPv4NUt3_10826CCV_NNC_MICRO_UNARY_OP_EXPE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4Ut3_109">
+<span id="_CPPv3Ut3_109"></span><span class="target" id="group__level__1__uops_1ga29d44341ce767c5dfc737d622fc97ba1"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_109" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_10928CCV_NNC_MICRO_BINARY_OP_PLUSE">
+<span id="_CPPv3NUt3_10928CCV_NNC_MICRO_BINARY_OP_PLUSE"></span><span class="target" id="group__level__1__uops_1gga29d44341ce767c5dfc737d622fc97ba1a8ec1df9cb7e0abb182681adb72f87255"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_PLUS</code><a class="headerlink" href="#_CPPv4NUt3_10928CCV_NNC_MICRO_BINARY_OP_PLUSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_10929CCV_NNC_MICRO_BINARY_OP_MINUSE">
+<span id="_CPPv3NUt3_10929CCV_NNC_MICRO_BINARY_OP_MINUSE"></span><span class="target" id="group__level__1__uops_1gga29d44341ce767c5dfc737d622fc97ba1a3a13f4bf38136ab62e07a6711e57f814"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MINUS</code><a class="headerlink" href="#_CPPv4NUt3_10929CCV_NNC_MICRO_BINARY_OP_MINUSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_10927CCV_NNC_MICRO_BINARY_OP_MULE">
+<span id="_CPPv3NUt3_10927CCV_NNC_MICRO_BINARY_OP_MULE"></span><span class="target" id="group__level__1__uops_1gga29d44341ce767c5dfc737d622fc97ba1aae3ac213f4a01fde43ace12cb62ac210"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MUL</code><a class="headerlink" href="#_CPPv4NUt3_10927CCV_NNC_MICRO_BINARY_OP_MULE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_10927CCV_NNC_MICRO_BINARY_OP_DIVE">
+<span id="_CPPv3NUt3_10927CCV_NNC_MICRO_BINARY_OP_DIVE"></span><span class="target" id="group__level__1__uops_1gga29d44341ce767c5dfc737d622fc97ba1a70f26f7b54c05396373369f844b32843"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_DIV</code><a class="headerlink" href="#_CPPv4NUt3_10927CCV_NNC_MICRO_BINARY_OP_DIVE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_10927CCV_NNC_MICRO_BINARY_OP_MAXE">
+<span id="_CPPv3NUt3_10927CCV_NNC_MICRO_BINARY_OP_MAXE"></span><span class="target" id="group__level__1__uops_1gga29d44341ce767c5dfc737d622fc97ba1a437e8199debd93094c2ff523d747e0e3"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MAX</code><a class="headerlink" href="#_CPPv4NUt3_10927CCV_NNC_MICRO_BINARY_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_10927CCV_NNC_MICRO_BINARY_OP_MINE">
+<span id="_CPPv3NUt3_10927CCV_NNC_MICRO_BINARY_OP_MINE"></span><span class="target" id="group__level__1__uops_1gga29d44341ce767c5dfc737d622fc97ba1a9fe800307d836ff76d2e758334bcb07f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MIN</code><a class="headerlink" href="#_CPPv4NUt3_10927CCV_NNC_MICRO_BINARY_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4Ut3_110">
+<span id="_CPPv3Ut3_110"></span><span class="target" id="group__level__1__uops_1ga1b7b7893d940926615b39239ac05829d"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_110" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11027CCV_NNC_MICRO_REDUCE_OP_MAXE">
+<span id="_CPPv3NUt3_11027CCV_NNC_MICRO_REDUCE_OP_MAXE"></span><span class="target" id="group__level__1__uops_1gga1b7b7893d940926615b39239ac05829dadf07ce55eb69c8fc9311c65535e37e20"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MAX</code><a class="headerlink" href="#_CPPv4NUt3_11027CCV_NNC_MICRO_REDUCE_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11027CCV_NNC_MICRO_REDUCE_OP_MINE">
+<span id="_CPPv3NUt3_11027CCV_NNC_MICRO_REDUCE_OP_MINE"></span><span class="target" id="group__level__1__uops_1gga1b7b7893d940926615b39239ac05829da69b956ed3165610ba8984ac42a91233b"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MIN</code><a class="headerlink" href="#_CPPv4NUt3_11027CCV_NNC_MICRO_REDUCE_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11030CCV_NNC_MICRO_REDUCE_OP_ARGMAXE">
+<span id="_CPPv3NUt3_11030CCV_NNC_MICRO_REDUCE_OP_ARGMAXE"></span><span class="target" id="group__level__1__uops_1gga1b7b7893d940926615b39239ac05829da65903dc8df7ad29f89c55ff015feb087"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_ARGMAX</code><a class="headerlink" href="#_CPPv4NUt3_11030CCV_NNC_MICRO_REDUCE_OP_ARGMAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11030CCV_NNC_MICRO_REDUCE_OP_ARGMINE">
+<span id="_CPPv3NUt3_11030CCV_NNC_MICRO_REDUCE_OP_ARGMINE"></span><span class="target" id="group__level__1__uops_1gga1b7b7893d940926615b39239ac05829da03ea378807f89514abb47e1e8ee953a0"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_ARGMIN</code><a class="headerlink" href="#_CPPv4NUt3_11030CCV_NNC_MICRO_REDUCE_OP_ARGMINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11028CCV_NNC_MICRO_REDUCE_OP_MEANE">
+<span id="_CPPv3NUt3_11028CCV_NNC_MICRO_REDUCE_OP_MEANE"></span><span class="target" id="group__level__1__uops_1gga1b7b7893d940926615b39239ac05829da3e5d141a0a4f972252fa1ae4d0641c4d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MEAN</code><a class="headerlink" href="#_CPPv4NUt3_11028CCV_NNC_MICRO_REDUCE_OP_MEANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11027CCV_NNC_MICRO_REDUCE_OP_SUME">
+<span id="_CPPv3NUt3_11027CCV_NNC_MICRO_REDUCE_OP_SUME"></span><span class="target" id="group__level__1__uops_1gga1b7b7893d940926615b39239ac05829da4cd1cdff9468e3b80c1fa2d66d1fabbf"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_SUM</code><a class="headerlink" href="#_CPPv4NUt3_11027CCV_NNC_MICRO_REDUCE_OP_SUME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11028CCV_NNC_MICRO_REDUCE_OP_PRODE">
+<span id="_CPPv3NUt3_11028CCV_NNC_MICRO_REDUCE_OP_PRODE"></span><span class="target" id="group__level__1__uops_1gga1b7b7893d940926615b39239ac05829da4f294fe38b49d3764865ca8c4fe8bcfb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_PROD</code><a class="headerlink" href="#_CPPv4NUt3_11028CCV_NNC_MICRO_REDUCE_OP_PRODE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv423ccv_nnc_micro_io_vtab_t">
+<span id="_CPPv323ccv_nnc_micro_io_vtab_t"></span><span id="_CPPv223ccv_nnc_micro_io_vtab_t"></span><span id="ccv_nnc_micro_io_vtab_t"></span><span class="target" id="group__level__1__uops_1ga0599b7a6532cc2e1ffedd5c64a54973b"></span><em class="property">typedef </em><em class="property">struct</em> ccv_nnc_micro_io_vtab_s <code class="sig-name descname">ccv_nnc_micro_io_vtab_t</code><a class="headerlink" href="#_CPPv423ccv_nnc_micro_io_vtab_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Abstract vtab for different ccv_nnc_micro_io_t. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv418ccv_nnc_micro_io_t">
+<span id="_CPPv318ccv_nnc_micro_io_t"></span><span id="_CPPv218ccv_nnc_micro_io_t"></span><span id="ccv_nnc_micro_io_t"></span><span class="target" id="group__level__1__uops_1gaf86423c5f032f44c04043c51b83aee67"></span><em class="property">typedef </em><em class="property">struct</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_s" title="ccv_nnc_micro_io_s">ccv_nnc_micro_io_s</a> *<code class="sig-name descname">ccv_nnc_micro_io_t</code><a class="headerlink" href="#_CPPv418ccv_nnc_micro_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Abstract micro op representation. </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt id="_CPPv423ccv_nnc_micro_combine_t">
+<span id="_CPPv323ccv_nnc_micro_combine_t"></span><span id="_CPPv223ccv_nnc_micro_combine_t"></span><span id="ccv_nnc_micro_combine_t"></span><span class="target" id="group__level__1__uops_1gac1aa45b7be24da6ebb155722fc0b7b30"></span><em class="property">typedef </em><em class="property">struct</em> ccv_nnc_micro_combine_s <code class="sig-name descname">ccv_nnc_micro_combine_t</code><a class="headerlink" href="#_CPPv423ccv_nnc_micro_combine_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The combined op from micro ops. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv419ccv_nnc_micro_inputKi">
+<span id="_CPPv319ccv_nnc_micro_inputKi"></span><span id="_CPPv219ccv_nnc_micro_inputKi"></span><span id="ccv_nnc_micro_input__iC"></span><span class="target" id="group__level__1__uops_1ga69a06027178cfe06a917fcccd20eb2cc"></span><code class="sig-name descname">ccv_nnc_micro_input</code><span class="sig-paren">(</span><em class="property">const</em> int <em>dimensions</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_micro_inputKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a free-form input that represent a tensor. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code>: The maximum dimension of the input. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv421ccv_nnc_micro_reindexPCPCKcKiK18ccv_nnc_micro_io_tPCPCKcKiK18ccv_nnc_micro_io_t">
+<span id="_CPPv321ccv_nnc_micro_reindexPCPCKcKiK18ccv_nnc_micro_io_tPCPCKcKiK18ccv_nnc_micro_io_t"></span><span id="_CPPv221ccv_nnc_micro_reindexPCPCKcKiK18ccv_nnc_micro_io_tPCPCKcKiK18ccv_nnc_micro_io_t"></span><span id="ccv_nnc_micro_reindex__cCPCPC.iC.ccv_nnc_micro_io_tC.cCPCPC.iC.ccv_nnc_micro_io_tC"></span><span class="target" id="group__level__1__uops_1gaefacd2621896317d6c2d1711e47acf90"></span><code class="sig-name descname">ccv_nnc_micro_reindex</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> *<em class="property">const</em> <em>shape</em>, <em class="property">const</em> int <em>shape_count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>s</em>, <em class="property">const</em> char *<em class="property">const</em> *<em class="property">const</em> <em>reindex</em>, <em class="property">const</em> int <em>reindex_count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_nnc_micro_reindexPCPCKcKiK18ccv_nnc_micro_io_tPCPCKcKiK18ccv_nnc_micro_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Use shape and reindex expression to reindex the given tensor into a different shape. The expressions can bind integer parameters which starts with $.</p>
+<p>The expression follows specific pattern, integer parameters starts with $. Dimensions are represented as dn, such as d0, d1, d2 … Index into the provided tensor can be represented as i0, i1, i2. These are all 0-indexed.</p>
+<p>Constants are supported, such as 235, 431 etc. Operators supported currently are -, +, /, *.</p>
+<p>Thus, for broadcast a tensor x[w, h] to y[w, h, h], it can be represented as: shape: { “d0”, “d1”, “d1” }, reindex: { “i0”, “i1”, “0” }. For example, transpose can be represented as: shape: { “d1”, “d0” }, reindex: { “i1”, “i0” }</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The reindexed tensor. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shape</span></code>: The shape expressions per axis. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shape_count</span></code>: The dimensions of the output. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: The tensor to reference shape dimensions. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reindex</span></code>: The reindex expressions per axis. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reindex_count</span></code>: The dimensions of the input. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code>: The input for reindex operation. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv419ccv_nnc_micro_unaryK8uint32_tK18ccv_nnc_micro_io_t">
+<span id="_CPPv319ccv_nnc_micro_unaryK8uint32_tK18ccv_nnc_micro_io_t"></span><span id="_CPPv219ccv_nnc_micro_unaryK8uint32_tK18ccv_nnc_micro_io_t"></span><span id="ccv_nnc_micro_unary__uint32_tC.ccv_nnc_micro_io_tC"></span><span class="target" id="group__level__1__uops_1ga3a9ae9976d51ba3390c5deaf3c2d9d8f"></span><code class="sig-name descname">ccv_nnc_micro_unary</code><span class="sig-paren">(</span><em class="property">const</em> uint32_t <em>op</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_micro_unaryK8uint32_tK18ccv_nnc_micro_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Apply element-wise computations with one tensor. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The result tensor. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">op</span></code>: The binary operand. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code>: The input. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv420ccv_nnc_micro_binaryK8uint32_tK18ccv_nnc_micro_io_tK18ccv_nnc_micro_io_t">
+<span id="_CPPv320ccv_nnc_micro_binaryK8uint32_tK18ccv_nnc_micro_io_tK18ccv_nnc_micro_io_t"></span><span id="_CPPv220ccv_nnc_micro_binaryK8uint32_tK18ccv_nnc_micro_io_tK18ccv_nnc_micro_io_t"></span><span id="ccv_nnc_micro_binary__uint32_tC.ccv_nnc_micro_io_tC.ccv_nnc_micro_io_tC"></span><span class="target" id="group__level__1__uops_1ga95c071dd15434890713c8414e7114c15"></span><code class="sig-name descname">ccv_nnc_micro_binary</code><span class="sig-paren">(</span><em class="property">const</em> uint32_t <em>op</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>left</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>right</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_nnc_micro_binaryK8uint32_tK18ccv_nnc_micro_io_tK18ccv_nnc_micro_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Apply pair-wise computations with two tensors. They has to match shape exactly. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The result tensor. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">op</span></code>: The binary operand. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">left</span></code>: The left input. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">right</span></code>: The right input. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv420ccv_nnc_micro_reduceK7uint8_tPCKiKiK18ccv_nnc_micro_io_t">
+<span id="_CPPv320ccv_nnc_micro_reduceK7uint8_tPCKiKiK18ccv_nnc_micro_io_t"></span><span id="_CPPv220ccv_nnc_micro_reduceK7uint8_tPCKiKiK18ccv_nnc_micro_io_t"></span><span id="ccv_nnc_micro_reduce__uint8_tC.iCPC.iC.ccv_nnc_micro_io_tC"></span><span class="target" id="group__level__1__uops_1ga33ebcb2acda17961186bcd6f21094f05"></span><code class="sig-name descname">ccv_nnc_micro_reduce</code><span class="sig-paren">(</span><em class="property">const</em> uint8_t <em>op</em>, <em class="property">const</em> int *<em class="property">const</em> <em>axis</em>, <em class="property">const</em> int <em>axis_count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_nnc_micro_reduceK7uint8_tPCKiKiK18ccv_nnc_micro_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Apply reduction computation against some dimensions and generate the final reduced tensor. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The result tensor after reduction. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">op</span></code>: The reduction operand. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axis</span></code>: The axis to reduce. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">axis_count</span></code>: Number of axes. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code>: The input tensor. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv420ccv_nnc_micro_selectKiK18ccv_nnc_micro_io_tK18ccv_nnc_micro_io_t">
+<span id="_CPPv320ccv_nnc_micro_selectKiK18ccv_nnc_micro_io_tK18ccv_nnc_micro_io_t"></span><span id="_CPPv220ccv_nnc_micro_selectKiK18ccv_nnc_micro_io_tK18ccv_nnc_micro_io_t"></span><span id="ccv_nnc_micro_select__iC.ccv_nnc_micro_io_tC.ccv_nnc_micro_io_tC"></span><span class="target" id="group__level__1__uops_1ga5d5954b4c0f033bc533cb8f9081c2c33"></span><code class="sig-name descname">ccv_nnc_micro_select</code><span class="sig-paren">(</span><em class="property">const</em> int <em>axis</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>x</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_nnc_micro_selectKiK18ccv_nnc_micro_io_tK18ccv_nnc_micro_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Use the index tensor to select one value from the x per axis. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The result tensor with values selected from x with index from index tensor. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">axis</span></code>: The axis to select. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code>: The tensor to be indexed. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index</span></code>: The integer tensor of indexes. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv425ccv_nnc_micro_combine_newPCK18ccv_nnc_micro_io_tKiPCPCKcKiPCK18ccv_nnc_micro_io_tKi">
+<span id="_CPPv325ccv_nnc_micro_combine_newPCK18ccv_nnc_micro_io_tKiPCPCKcKiPCK18ccv_nnc_micro_io_tKi"></span><span id="_CPPv225ccv_nnc_micro_combine_newPCK18ccv_nnc_micro_io_tKiPCPCKcKiPCK18ccv_nnc_micro_io_tKi"></span><span id="ccv_nnc_micro_combine_new__ccv_nnc_micro_io_tCPC.iC.cCPCPC.iC.ccv_nnc_micro_io_tCPC.iC"></span><span class="target" id="group__level__1__uops_1ga8210eb2713b6002c32236e26de574fd2"></span><code class="sig-name descname">ccv_nnc_micro_combine_new</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> char *<em class="property">const</em> *<em class="property">const</em> <em>parameters</em>, <em class="property">const</em> int <em>parameter_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_nnc_micro_combine_newPCK18ccv_nnc_micro_io_tKiPCPCKcKiPCK18ccv_nnc_micro_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Combine micro ops into one, and do some optimization passes. The combined one can be then processed to generate optimized kernels. Particularly, we can processed the combined one into C code and CUDA code as reference implementations. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The inputs for the combined ops. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The number of the inputs. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code>: The name of the parameters, this determines the order of the these parameters. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter_size</span></code>: The number of parameters. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The outputs for the combined ops. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The number of the outputs. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv426ccv_nnc_micro_combine_freePC23ccv_nnc_micro_combine_t">
+<span id="_CPPv326ccv_nnc_micro_combine_freePC23ccv_nnc_micro_combine_t"></span><span id="_CPPv226ccv_nnc_micro_combine_freePC23ccv_nnc_micro_combine_t"></span><span id="ccv_nnc_micro_combine_free__ccv_nnc_micro_combine_tPC"></span><span class="target" id="group__level__1__uops_1ga039cea5dc49bce83557be6c78cf2dfc2"></span>void <code class="sig-name descname">ccv_nnc_micro_combine_free</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_micro_combine_t" title="ccv_nnc_micro_combine_t">ccv_nnc_micro_combine_t</a> *<em class="property">const</em> <em>combine</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ccv_nnc_micro_combine_freePC23ccv_nnc_micro_combine_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Free the combined op. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">combine</span></code>: The op to be freed. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv431ccv_nnc_micro_combine_interpretPC23ccv_nnc_micro_combine_tK8uint32_tPCPC16ccv_nnc_tensor_tKiPCK22ccv_nnc_micro_scalar_tKiPCPC16ccv_nnc_tensor_tKi">
+<span id="_CPPv331ccv_nnc_micro_combine_interpretPC23ccv_nnc_micro_combine_tK8uint32_tPCPC16ccv_nnc_tensor_tKiPCK22ccv_nnc_micro_scalar_tKiPCPC16ccv_nnc_tensor_tKi"></span><span id="_CPPv231ccv_nnc_micro_combine_interpretPC23ccv_nnc_micro_combine_tK8uint32_tPCPC16ccv_nnc_tensor_tKiPCK22ccv_nnc_micro_scalar_tKiPCPC16ccv_nnc_tensor_tKi"></span><span id="ccv_nnc_micro_combine_interpret__ccv_nnc_micro_combine_tPC.uint32_tC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_micro_scalar_tCPC.iC.ccv_nnc_tensor_tPCPC.iC"></span><span class="target" id="group__level__1__uops_1gad418e7ebc4098ecec19254531a6c91ae"></span>void <code class="sig-name descname">ccv_nnc_micro_combine_interpret</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_micro_combine_t" title="ccv_nnc_micro_combine_t">ccv_nnc_micro_combine_t</a> *<em class="property">const</em> <em>combine</em>, <em class="property">const</em> uint32_t <em>cmd</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv422ccv_nnc_micro_scalar_t" title="ccv_nnc_micro_scalar_t">ccv_nnc_micro_scalar_t</a> *<em class="property">const</em> <em>values</em>, <em class="property">const</em> int <em>parameter_size</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431ccv_nnc_micro_combine_interpretPC23ccv_nnc_micro_combine_tK8uint32_tPCPC16ccv_nnc_tensor_tKiPCK22ccv_nnc_micro_scalar_tKiPCPC16ccv_nnc_tensor_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Run combined op in interpret mode. This is only useful for debug internals. Because this is for generic combined op, there is no hint, or flags, or stream context, or cmd. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">combine</span></code>: The op. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: Choice between CMD_CUSTOM_FORWARD and CMD_CUSTOM_BACKWARD. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The input tensors. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The size of input tensors. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code>: The value corresponding to the parameters when call ccv_nnc_micro_combine_new. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter_size</span></code>: How many parameters. It must match when called ccv_nnc_micro_combine_new. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The output tensors. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The size of output tensors. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv423ccv_nnc_micro_combine_cPC23ccv_nnc_micro_combine_t">
+<span id="_CPPv323ccv_nnc_micro_combine_cPC23ccv_nnc_micro_combine_t"></span><span id="_CPPv223ccv_nnc_micro_combine_cPC23ccv_nnc_micro_combine_t"></span><span id="ccv_nnc_micro_combine_c__ccv_nnc_micro_combine_tPC"></span><span class="target" id="group__level__1__uops_1gae96b8a6683a41f2924e0175a5836fc0a"></span>char *<code class="sig-name descname">ccv_nnc_micro_combine_c</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_micro_combine_t" title="ccv_nnc_micro_combine_t">ccv_nnc_micro_combine_t</a> *<em class="property">const</em> <em>combine</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423ccv_nnc_micro_combine_cPC23ccv_nnc_micro_combine_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Generate C code from the combined op. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The generated C code string. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">combine</span></code>: The combined op to generate some C code. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt id="_CPPv418ccv_nnc_micro_io_s">
+<span id="_CPPv318ccv_nnc_micro_io_s"></span><span id="_CPPv218ccv_nnc_micro_io_s"></span><span id="ccv_nnc_micro_io_s"></span><span class="target" id="structccv__nnc__micro__io__s"></span><em class="property">struct </em><code class="sig-name descname">ccv_nnc_micro_io_s</code><a class="headerlink" href="#_CPPv418ccv_nnc_micro_io_s" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp struct">
+<dt id="_CPPv422ccv_nnc_micro_scalar_t">
+<span id="_CPPv322ccv_nnc_micro_scalar_t"></span><span id="_CPPv222ccv_nnc_micro_scalar_t"></span><span id="ccv_nnc_micro_scalar_t"></span><span class="target" id="structccv__nnc__micro__scalar__t"></span><em class="property">struct </em><code class="sig-name descname">ccv_nnc_micro_scalar_t</code><a class="headerlink" href="#_CPPv422ccv_nnc_micro_scalar_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
 </div>
 
 
@@ -1476,7 +1775,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../level-2/" class="btn btn-neutral float-right" title="Level 2 API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../level_1/group__level__1__uops_micro_jittor/" class="btn btn-neutral float-right" title="The concept of meta-ops in Jittor is amazing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../level-0/" class="btn btn-neutral" title="Level 0 API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
