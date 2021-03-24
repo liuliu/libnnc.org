@@ -156,6 +156,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#simplification">Simplification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#loop-fusion">Loop-Fusion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#variable-substitution">Variable Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tech/nnc-uops/#automatic-differentiation">Automatic Differentiation</a></li>
 </ul>
 </li>
 </ul>
@@ -689,30 +690,30 @@
 <div class="section" id="graph-simplification">
 <h2>Graph Simplification<a class="headerlink" href="#graph-simplification" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_120">
-<span id="_CPPv3Ut3_120"></span><span class="target" id="group__level__3__5__simplify_1gae62fccd8cea8f216b24ba625d404c4ae"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_120" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_122">
+<span id="_CPPv3Ut3_122"></span><span class="target" id="group__level__3__5__simplify_1gafeaa6456e370d2eb59f5e139d9f8b00c"></span><em class="property">enum </em><strong>[anonymous]</strong><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_12049CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATIONE">
-<span id="_CPPv3NUt3_12049CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATIONE"></span><span class="target" id="group__level__3__5__simplify_1ggae62fccd8cea8f216b24ba625d404c4aeaf5c2ccabc14562e8ec06bbf311cb4c1e"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATION</code><a class="headerlink" href="#_CPPv4NUt3_12049CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_12249CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATIONE">
+<span id="_CPPv3NUt3_12249CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATIONE"></span><span class="target" id="group__level__3__5__simplify_1ggafeaa6456e370d2eb59f5e139d9f8b00caf5c2ccabc14562e8ec06bbf311cb4c1e"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATION</code><a class="headerlink" href="#_CPPv4NUt3_12249CCV_NNC_SIMPLIFY_COMMON_SUBEXPRESSION_ELIMINATIONE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>If two commands generated the same outputs, all the places where the newer output used will be replaced by the old output. Later on the graph pruning stage, the command that generate the newer output will be eliminated. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_12030CCV_NNC_SIMPLIFY_GRAPH_PRUNINGE">
-<span id="_CPPv3NUt3_12030CCV_NNC_SIMPLIFY_GRAPH_PRUNINGE"></span><span class="target" id="group__level__3__5__simplify_1ggae62fccd8cea8f216b24ba625d404c4aea22ab46ca45088f7df6e5a0ecf36ff277"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SIMPLIFY_GRAPH_PRUNING</code><a class="headerlink" href="#_CPPv4NUt3_12030CCV_NNC_SIMPLIFY_GRAPH_PRUNINGE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_12230CCV_NNC_SIMPLIFY_GRAPH_PRUNINGE">
+<span id="_CPPv3NUt3_12230CCV_NNC_SIMPLIFY_GRAPH_PRUNINGE"></span><span class="target" id="group__level__3__5__simplify_1ggafeaa6456e370d2eb59f5e139d9f8b00ca22ab46ca45088f7df6e5a0ecf36ff277"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SIMPLIFY_GRAPH_PRUNING</code><a class="headerlink" href="#_CPPv4NUt3_12230CCV_NNC_SIMPLIFY_GRAPH_PRUNINGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>For the given outputs, eliminate unused input tensors, and then eliminate graph execs that don’t contribute to the outputs. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_12034CCV_NNC_SIMPLIFY_DATA_TRANSFER_OPTE">
-<span id="_CPPv3NUt3_12034CCV_NNC_SIMPLIFY_DATA_TRANSFER_OPTE"></span><span class="target" id="group__level__3__5__simplify_1ggae62fccd8cea8f216b24ba625d404c4aea96f0721ec3ef4354cf56e763e6e6f066"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SIMPLIFY_DATA_TRANSFER_OPT</code><a class="headerlink" href="#_CPPv4NUt3_12034CCV_NNC_SIMPLIFY_DATA_TRANSFER_OPTE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_12234CCV_NNC_SIMPLIFY_DATA_TRANSFER_OPTE">
+<span id="_CPPv3NUt3_12234CCV_NNC_SIMPLIFY_DATA_TRANSFER_OPTE"></span><span class="target" id="group__level__3__5__simplify_1ggafeaa6456e370d2eb59f5e139d9f8b00ca96f0721ec3ef4354cf56e763e6e6f066"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SIMPLIFY_DATA_TRANSFER_OPT</code><a class="headerlink" href="#_CPPv4NUt3_12234CCV_NNC_SIMPLIFY_DATA_TRANSFER_OPTE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>For CCV_NNC_DATA_TRANSFER, if the input / output is the same (on the same device, no alias), we can skip. Similarly, if it is on the same device, but alias of some, for some cases we can skip as well (if neither are carry overs, bypasses etc.) </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_12027CCV_NNC_SIMPLIFY_OPS_FUSIONE">
-<span id="_CPPv3NUt3_12027CCV_NNC_SIMPLIFY_OPS_FUSIONE"></span><span class="target" id="group__level__3__5__simplify_1ggae62fccd8cea8f216b24ba625d404c4aea44aedc99efce6e2a8da0aaf2033aad55"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SIMPLIFY_OPS_FUSION</code><a class="headerlink" href="#_CPPv4NUt3_12027CCV_NNC_SIMPLIFY_OPS_FUSIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_12227CCV_NNC_SIMPLIFY_OPS_FUSIONE">
+<span id="_CPPv3NUt3_12227CCV_NNC_SIMPLIFY_OPS_FUSIONE"></span><span class="target" id="group__level__3__5__simplify_1ggafeaa6456e370d2eb59f5e139d9f8b00ca44aedc99efce6e2a8da0aaf2033aad55"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_SIMPLIFY_OPS_FUSION</code><a class="headerlink" href="#_CPPv4NUt3_12227CCV_NNC_SIMPLIFY_OPS_FUSIONE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Combine a few smaller ops into bigger one. For now, this functionality is limited. I can only address ops that are sequential. </p>
 </dd></dl>
 
@@ -744,12 +745,12 @@
 <div class="section" id="automatic-graph-parallelization">
 <h2>Automatic Graph Parallelization<a class="headerlink" href="#automatic-graph-parallelization" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_121">
-<span id="_CPPv3Ut3_121"></span><span class="target" id="group__level__3__5__parallel_1gaa94c5fdcac6a4b26211b612c3edc04ff"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_121" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_123">
+<span id="_CPPv3Ut3_123"></span><span class="target" id="group__level__3__5__parallel_1ga26c0312ac66c00f31cf886616c48afa2"></span><em class="property">enum </em><strong>[anonymous]</strong><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_12130CCV_NNC_PARALLEL_REDUCE_OP_SUME">
-<span id="_CPPv3NUt3_12130CCV_NNC_PARALLEL_REDUCE_OP_SUME"></span><span class="target" id="group__level__3__5__parallel_1ggaa94c5fdcac6a4b26211b612c3edc04ffa1f903ea6661799827efe290b0f2aa436"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_PARALLEL_REDUCE_OP_SUM</code><a class="headerlink" href="#_CPPv4NUt3_12130CCV_NNC_PARALLEL_REDUCE_OP_SUME" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_12330CCV_NNC_PARALLEL_REDUCE_OP_SUME">
+<span id="_CPPv3NUt3_12330CCV_NNC_PARALLEL_REDUCE_OP_SUME"></span><span class="target" id="group__level__3__5__parallel_1gga26c0312ac66c00f31cf886616c48afa2a1f903ea6661799827efe290b0f2aa436"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_PARALLEL_REDUCE_OP_SUM</code><a class="headerlink" href="#_CPPv4NUt3_12330CCV_NNC_PARALLEL_REDUCE_OP_SUME" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Op for reducer / allreducer. Currently only supports sum. </p>
 </dd></dl>
 
@@ -869,18 +870,18 @@
 <div class="section" id="while-loop-others">
 <h2>While Loop Others<a class="headerlink" href="#while-loop-others" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_119">
-<span id="_CPPv3Ut3_119"></span><span class="target" id="group__level__3__5__while__others_1ga15b3bbe041870ee299f7e042b0305e3c"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_119" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_121">
+<span id="_CPPv3Ut3_121"></span><span class="target" id="group__level__3__5__while__others_1gaa94c5fdcac6a4b26211b612c3edc04ff"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_121" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11921CCV_NNC_MULTIVIEW_K0NE">
-<span id="_CPPv3NUt3_11921CCV_NNC_MULTIVIEW_K0NE"></span><span class="target" id="group__level__3__5__while__others_1gga15b3bbe041870ee299f7e042b0305e3ca8431d8a911d898705efb74eb35c951fe"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MULTIVIEW_K0N</code> = 0<a class="headerlink" href="#_CPPv4NUt3_11921CCV_NNC_MULTIVIEW_K0NE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_12121CCV_NNC_MULTIVIEW_K0NE">
+<span id="_CPPv3NUt3_12121CCV_NNC_MULTIVIEW_K0NE"></span><span class="target" id="group__level__3__5__while__others_1ggaa94c5fdcac6a4b26211b612c3edc04ffa8431d8a911d898705efb74eb35c951fe"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MULTIVIEW_K0N</code> = 0<a class="headerlink" href="#_CPPv4NUt3_12121CCV_NNC_MULTIVIEW_K0NE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>All of them are repeated. </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11921CCV_NNC_MULTIVIEW_K1NE">
-<span id="_CPPv3NUt3_11921CCV_NNC_MULTIVIEW_K1NE"></span><span class="target" id="group__level__3__5__while__others_1gga15b3bbe041870ee299f7e042b0305e3ca1755463f2d9eb8a0e7e8eabacc033886"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MULTIVIEW_K1N</code> = 1<a class="headerlink" href="#_CPPv4NUt3_11921CCV_NNC_MULTIVIEW_K1NE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_12121CCV_NNC_MULTIVIEW_K1NE">
+<span id="_CPPv3NUt3_12121CCV_NNC_MULTIVIEW_K1NE"></span><span class="target" id="group__level__3__5__while__others_1ggaa94c5fdcac6a4b26211b612c3edc04ffa1755463f2d9eb8a0e7e8eabacc033886"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MULTIVIEW_K1N</code> = 1<a class="headerlink" href="#_CPPv4NUt3_12121CCV_NNC_MULTIVIEW_K1NE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>The first one is the first, the second one starts to repeat. (0111111…) </p>
 </dd></dl>
 

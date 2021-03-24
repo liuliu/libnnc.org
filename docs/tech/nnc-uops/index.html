@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex/" />
-    <link rel="search" title="Search" href="../../search/" /> 
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="next" title="API Reference" href="../../api/" />
+    <link rel="prev" title="NNC Dataframe" href="../nnc-df/" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -83,7 +85,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../overview/">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../overview/#what-s-nnc">What’s NNC?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../overview/#tensors-commands-and-streams">1. Tensors, Commands and Streams</a></li>
@@ -101,7 +103,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../">Technicals</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Technicals</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../nnc-alloc/">The NNC Tensor Allocation Algorithm</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#tensor-representation">Tensor Representation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nnc-alloc/#loop-representation">Loop Representation</a></li>
@@ -146,6 +148,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#reduce">Reduce</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#others">Others</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">NNC Micro Ops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#describe-micro-ops">Describe Micro Ops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simplification">Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loop-fusion">Loop-Fusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variable-substitution">Variable Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-differentiation">Automatic Differentiation</a></li>
 </ul>
 </li>
 </ul>
@@ -265,6 +276,8 @@
     
       <li><a href="../../">Docs</a> &raquo;</li>
         
+          <li><a href="../">Technicals</a> &raquo;</li>
+        
       <li>NNC Micro Ops</li>
     
     
@@ -368,12 +381,38 @@
 </div>
 <p>This code will be correct.</p>
 <p>This is another design choice we diverged from <cite>Jittor</cite> because I want to generate more idiomatic code that looks like someone hand-wrote it.</p>
-<p>Thus, to matching two nested loops, we should treat loops with statements or loop-carried variables as pivot points. Anything before this pivot point or after can be reordered, but not the pivot point. We enforced this invariant for our nested loop matching and only merge loops if they can be reordered without violate this invariant. We devised a simle O(n^2) algorithm to do this reordering.</p>
+<p>Thus, to matching two nested loops, we should treat loops with statements or loop-carried variables as pivot points. Anything before this pivot point or after can be reordered, but not the pivot point. We enforced this invariant for our nested loop matching and only merge loops if they can be reordered without violate this invariant. We devised a simple O(n^2) algorithm to do this reordering.</p>
+<p>Besides find the suitable loops to merge, cares need to be taken for data dependencies. (For terminology sake, we call nested loops that we use to match and merge <cite>blocks</cite>). For example, even if block 1 and block 3 matches, if block 3 reads any variables that was written by block 2, we cannot merge these two blocks.</p>
+<p>Luckily, we generate block-level dependency information for loop fusion, as well as later dead-code elimination. This block-level dependency information gives us which variables we read and write in a given block. For a given variable, it can tell us in which block we read and in which block we write this variable. Armed with this information, we can determine if block 3 has data dependency with block 2, and either refuse to merge block 1 and block 3, or do what we call <cite>merge to right</cite>.</p>
+<p>Normally in our loop fusion, we do <cite>merge to left</cite>. Thus, in above case, statements from block 3 all moved to block 1, and emptied block 3. In this way, we check whether two loops can be merged in O(n^2) fashion. If there are data dependencies between block 3 and block 2, we cannot simply merge block 3 to block 1 (merge to left). However, we can then check whether block 2 has data dependency on block 1. If block 2 has no data dependency on block 1, we can merge block 1 to block 3 instead (hence, <cite>merge to right</cite>). In this case, the final blocks would look like this: [block 2, block 1 &amp; 3].</p>
+<p>This particular optimization technique turns out to be profitable because in our gradient passes, there is often a <cite>reset block</cite> that sets all values in a variable to be 0. This block often has no data dependency on other blocks and can be between two otherwise merge-able blocks. Supporting <cite>merge to right</cite> mechanism moved these reset blocks to the front to merge blocks before and after this reset block.</p>
 </div>
 <div class="section" id="variable-substitution">
 <h2>Variable Substitution<a class="headerlink" href="#variable-substitution" title="Permalink to this headline">¶</a></h2>
 <p>After loop-fusion, many intermediate tensors only write once, and used immediately in the next statement. These tensors can be removed entirely and replaced with their right-side values (for their assignment).</p>
 <p>NNC does variable substitution conservatively. We only substitute a tensor if it is only used in one loop. And in that one loop, only if their index accessor is exactly the same. Even very conservatively, after loop-fusion, this can replace many variables as most of them now exist within one loop.</p>
+</div>
+<div class="section" id="automatic-differentiation">
+<h2>Automatic Differentiation<a class="headerlink" href="#automatic-differentiation" title="Permalink to this headline">¶</a></h2>
+<p>There could be two ways to implement automatic differentiation for uops.</p>
+<ol class="arabic simple">
+<li><p>Automatic differentiation applied to the opcode directly;</p></li>
+<li><p>Automatic differentiation pass implemented per uops, and use these generated opcode directly.</p></li>
+</ol>
+<p>There are pros and cons to both methods. For the first method, once we implemented, we can use that to differentiate any opcode sequence we put in. However, since opcode works with loops, the auto-diff’ed code will be auto-diff’ed within these loops, which may make our opcode more complicated to account for different principled loops usage pattern.</p>
+<p>The second method is easier to implement, but it also limits us to first-order gradients in the beginning. This is not set in stone though. It is possible to have a closed-circle within uops (thus, using other uops to represent the gradient of a given uop). That likely involves adding a bit more uops (index-reduce, broadcast and ternary ops).</p>
+<p>For our particular implementation, we went with the second method. This means we need to expand our optimization passes a tiny little bit more, to include dead-code elimination.</p>
+<p>Our uops are designed as an easy starting point to implement other macro ops. Our macro ops for gradient pass has this particular inputs and outputs format. Given its forward pass has <code class="docutils literal notranslate"><span class="pre">|x|</span> <span class="pre">-&gt;</span> <span class="pre">|y|</span></code>, the gradient pass will have <code class="docutils literal notranslate"><span class="pre">|g(y)|x|y|</span> <span class="pre">-&gt;</span> <span class="pre">|g(x)|</span></code>. Our macro ops has a particular <code class="docutils literal notranslate"><span class="pre">bitmask</span></code> method to denote which exactly inputs are required, and which can be omitted. For example, the gradient pass for <code class="docutils literal notranslate"><span class="pre">exp(x)</span> <span class="pre">-&gt;</span> <span class="pre">y</span></code> doesn’t need to know the <code class="docutils literal notranslate"><span class="pre">y</span></code> value, simply <code class="docutils literal notranslate"><span class="pre">|g(y)|x|-|</span> <span class="pre">-&gt;</span> <span class="pre">|g(x)|</span></code> would be sufficient.</p>
+<p>Thus, when <code class="docutils literal notranslate"><span class="pre">ccv_nnc_micro_combine_new</span></code>, it is helpful for us to specify exactly what’s the inputs (including both inputs / outputs from forward pass and the input gradients) and what’s the expected output gradients. We introduced a simple <code class="docutils literal notranslate"><span class="pre">ccv_nnc_micro_grad</span></code> function to represent the particular gradient for a uop.</p>
+<p>Taking it all in, here are the steps we need to perform automatic differentiation with uops:</p>
+<ol class="arabic simple">
+<li><p>Implement <code class="docutils literal notranslate"><span class="pre">emit_grad</span></code> for each uop to generate their corresponding opcodes for gradient pass;</p></li>
+<li><p>For gradient program, go through topological order to <code class="docutils literal notranslate"><span class="pre">emit</span></code> forward pass opcodes and then go through reverse topological order to <code class="docutils literal notranslate"><span class="pre">emit_grad</span></code> the gradient pass opcodes;</p></li>
+<li><p>Annotate specified inputs in the gradient program as termination points;</p></li>
+<li><p>Go from specified outputs in the gradient program backwards to annotate required blocks, stops if encountered annotated inputs;</p></li>
+<li><p>Perform dead-code elimination based on the liveness analysis;</p></li>
+<li><p>Perform fore-mentioned other optimization passes.</p></li>
+</ol>
 </div>
 </div>
 
@@ -382,6 +421,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../api/" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../nnc-df/" class="btn btn-neutral" title="NNC Dataframe" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
