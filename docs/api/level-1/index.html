@@ -1363,6 +1363,20 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv438ccv_nnc_stream_context_emit_signal_newPC24ccv_nnc_stream_context_t">
+<span id="_CPPv338ccv_nnc_stream_context_emit_signal_newPC24ccv_nnc_stream_context_t"></span><span id="_CPPv238ccv_nnc_stream_context_emit_signal_newPC24ccv_nnc_stream_context_t"></span><span id="ccv_nnc_stream_context_emit_signal_new__ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__1__stream_1ga083929215ed3957f5bd16824eda63e00"></span><a class="reference internal" href="#_CPPv423ccv_nnc_stream_signal_t" title="ccv_nnc_stream_signal_t">ccv_nnc_stream_signal_t</a> *<code class="sig-name descname">ccv_nnc_stream_context_emit_signal_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv438ccv_nnc_stream_context_emit_signal_newPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Emit a signal on a stream directly. It will be managed by the stream. You have to use it immediately after return. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The new signal emitted on the stream context. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">stream</span></code>: The stream context where the signal will be emitted. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv434ccv_nnc_stream_context_wait_signalPCK24ccv_nnc_stream_context_tPCK23ccv_nnc_stream_signal_t">
 <span id="_CPPv334ccv_nnc_stream_context_wait_signalPCK24ccv_nnc_stream_context_tPCK23ccv_nnc_stream_signal_t"></span><span id="_CPPv234ccv_nnc_stream_context_wait_signalPCK24ccv_nnc_stream_context_tPCK23ccv_nnc_stream_signal_t"></span><span id="ccv_nnc_stream_context_wait_signal__ccv_nnc_stream_context_tCPC.ccv_nnc_stream_signal_tCPC"></span><span class="target" id="group__level__1__stream_1ga2044145a69f20f92fb04860fadbbdf72"></span>void <code class="sig-name descname">ccv_nnc_stream_context_wait_signal</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_stream_signal_t" title="ccv_nnc_stream_signal_t">ccv_nnc_stream_signal_t</a> *<em class="property">const</em> <em>signal</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434ccv_nnc_stream_context_wait_signalPCK24ccv_nnc_stream_context_tPCK23ccv_nnc_stream_signal_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Wait a signal on a stream. <dl class="simple">
@@ -1622,19 +1636,20 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv421ccv_nnc_micro_reindexPCPCKcKiK18ccv_nnc_micro_io_tPCPCKcKiK18ccv_nnc_micro_io_t">
-<span id="_CPPv321ccv_nnc_micro_reindexPCPCKcKiK18ccv_nnc_micro_io_tPCPCKcKiK18ccv_nnc_micro_io_t"></span><span id="_CPPv221ccv_nnc_micro_reindexPCPCKcKiK18ccv_nnc_micro_io_tPCPCKcKiK18ccv_nnc_micro_io_t"></span><span id="ccv_nnc_micro_reindex__cCPCPC.iC.ccv_nnc_micro_io_tC.cCPCPC.iC.ccv_nnc_micro_io_tC"></span><span class="target" id="group__level__1__uops_1gaefacd2621896317d6c2d1711e47acf90"></span><code class="sig-name descname">ccv_nnc_micro_reindex</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> *<em class="property">const</em> <em>shape</em>, <em class="property">const</em> int <em>shape_count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>s</em>, <em class="property">const</em> char *<em class="property">const</em> *<em class="property">const</em> <em>reindex</em>, <em class="property">const</em> int <em>reindex_count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_nnc_micro_reindexPCPCKcKiK18ccv_nnc_micro_io_tPCPCKcKiK18ccv_nnc_micro_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv421ccv_nnc_micro_reindexPCPCKcKiPCK18ccv_nnc_micro_io_tKiPCPCKcKiK18ccv_nnc_micro_io_t">
+<span id="_CPPv321ccv_nnc_micro_reindexPCPCKcKiPCK18ccv_nnc_micro_io_tKiPCPCKcKiK18ccv_nnc_micro_io_t"></span><span id="_CPPv221ccv_nnc_micro_reindexPCPCKcKiPCK18ccv_nnc_micro_io_tKiPCPCKcKiK18ccv_nnc_micro_io_t"></span><span id="ccv_nnc_micro_reindex__cCPCPC.iC.ccv_nnc_micro_io_tCPC.iC.cCPCPC.iC.ccv_nnc_micro_io_tC"></span><span class="target" id="group__level__1__uops_1ga2a850e71311ef9b921cce6bdcdc7f484"></span><code class="sig-name descname">ccv_nnc_micro_reindex</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> *<em class="property">const</em> <em>shape</em>, <em class="property">const</em> int <em>shape_count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> *<em class="property">const</em> <em>ss</em>, <em class="property">const</em> int <em>s_count</em>, <em class="property">const</em> char *<em class="property">const</em> *<em class="property">const</em> <em>reindex</em>, <em class="property">const</em> int <em>reindex_count</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv418ccv_nnc_micro_io_t" title="ccv_nnc_micro_io_t">ccv_nnc_micro_io_t</a> <em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_nnc_micro_reindexPCPCKcKiPCK18ccv_nnc_micro_io_tKiPCPCKcKiK18ccv_nnc_micro_io_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Use shape and reindex expression to reindex the given tensor into a different shape. The expressions can bind integer parameters which starts with $.</p>
-<p>The expression follows specific pattern, integer parameters starts with $. Dimensions are represented as dn, such as d0, d1, d2 … Index into the provided tensor can be represented as i0, i1, i2. These are all 0-indexed.</p>
+<p>The expression follows specific pattern, integer parameters starts with $. Dimensions are represented as dXn, such as dA0, dA1, dA2 … Index into the provided tensor can be represented as i0, i1, i2. These are all 0-indexed.</p>
 <p>Constants are supported, such as 235, 431 etc. Operators supported currently are -, +, /, *.</p>
-<p>Thus, for broadcast a tensor x[w, h] to y[w, h, h], it can be represented as: shape: { “d0”, “d1”, “d1” }, reindex: { “i0”, “i1”, “0” }. For example, transpose can be represented as: shape: { “d1”, “d0” }, reindex: { “i1”, “i0” }</p>
+<p>Thus, for broadcast a tensor x[w, h] to y[w, h, h], it can be represented as: shape: { “dA0”, “dA1”, “dA1” }, reindex: { “i0”, “i1”, “0” }. For example, transpose can be represented as: shape: { “dA1”, “dA0” }, reindex: { “i1”, “i0” }</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The reindexed tensor. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">shape</span></code>: The shape expressions per axis. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">shape_count</span></code>: The dimensions of the output. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code>: The tensor to reference shape dimensions. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ss</span></code>: The tensors to reference shape dimensions. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s_count</span></code>: The number of tensors to reference shape dimensions. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindex</span></code>: The reindex expressions per axis. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reindex_count</span></code>: The dimensions of the input. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">x</span></code>: The input for reindex operation. </p></li>
