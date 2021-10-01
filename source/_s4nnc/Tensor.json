@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 37121,
+    "key.length" : 40451,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -1215,8 +1215,8 @@
         "key.annotated_decl" : "<Declaration>@frozen struct Int64 : <Type usr=\"s:s17FixedWidthIntegerP\">FixedWidthInteger<\/Type>, <Type usr=\"s:SZ\">SignedInteger<\/Type>, <Type usr=\"s:s35_ExpressibleByBuiltinIntegerLiteralP\">_ExpressibleByBuiltinIntegerLiteral<\/Type><\/Declaration>",
         "key.bodylength" : 51,
         "key.bodyoffset" : 4303,
-        "key.doc.declaration" : "@frozen struct Int64 : FixedWidthInteger, SignedInteger",
-        "key.doc.full_as_xml" : "<Class><Name>Int64<\/Name><USR>s:s5Int64V<\/USR><Declaration>@frozen struct Int64 : FixedWidthInteger, SignedInteger<\/Declaration><CommentParts><Abstract><Para>A 64-bit signed integer value type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.declaration" : "@frozen struct Int64 : FixedWidthInteger, SignedInteger, _ExpressibleByBuiltinIntegerLiteral",
+        "key.doc.full_as_xml" : "<Class><Name>Int64<\/Name><USR>s:s5Int64V<\/USR><Declaration>@frozen struct Int64 : FixedWidthInteger, SignedInteger, _ExpressibleByBuiltinIntegerLiteral<\/Declaration><CommentParts><Abstract><Para>A 64-bit signed integer value type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
         "key.doc.name" : "Int64",
         "key.doc.type" : "Class",
         "key.elements" : [
@@ -1359,8 +1359,8 @@
         "key.annotated_decl" : "<Declaration>@frozen struct Int32 : <Type usr=\"s:s17FixedWidthIntegerP\">FixedWidthInteger<\/Type>, <Type usr=\"s:SZ\">SignedInteger<\/Type>, <Type usr=\"s:s35_ExpressibleByBuiltinIntegerLiteralP\">_ExpressibleByBuiltinIntegerLiteral<\/Type><\/Declaration>",
         "key.bodylength" : 51,
         "key.bodyoffset" : 4479,
-        "key.doc.declaration" : "@frozen struct Int32 : FixedWidthInteger, SignedInteger",
-        "key.doc.full_as_xml" : "<Class><Name>Int32<\/Name><USR>s:s5Int32V<\/USR><Declaration>@frozen struct Int32 : FixedWidthInteger, SignedInteger<\/Declaration><CommentParts><Abstract><Para>A 32-bit signed integer value type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.declaration" : "@frozen struct Int32 : FixedWidthInteger, SignedInteger, _ExpressibleByBuiltinIntegerLiteral",
+        "key.doc.full_as_xml" : "<Class><Name>Int32<\/Name><USR>s:s5Int32V<\/USR><Declaration>@frozen struct Int32 : FixedWidthInteger, SignedInteger, _ExpressibleByBuiltinIntegerLiteral<\/Declaration><CommentParts><Abstract><Para>A 32-bit signed integer value type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
         "key.doc.name" : "Int32",
         "key.doc.type" : "Class",
         "key.elements" : [
@@ -1503,8 +1503,8 @@
         "key.annotated_decl" : "<Declaration>@frozen struct UInt8 : <Type usr=\"s:s17FixedWidthIntegerP\">FixedWidthInteger<\/Type>, <Type usr=\"s:SU\">UnsignedInteger<\/Type>, <Type usr=\"s:s35_ExpressibleByBuiltinIntegerLiteralP\">_ExpressibleByBuiltinIntegerLiteral<\/Type><\/Declaration>",
         "key.bodylength" : 51,
         "key.bodyoffset" : 4655,
-        "key.doc.declaration" : "@frozen struct UInt8 : FixedWidthInteger, UnsignedInteger",
-        "key.doc.full_as_xml" : "<Class><Name>UInt8<\/Name><USR>s:s5UInt8V<\/USR><Declaration>@frozen struct UInt8 : FixedWidthInteger, UnsignedInteger<\/Declaration><CommentParts><Abstract><Para>An 8-bit unsigned integer value type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.declaration" : "@frozen struct UInt8 : FixedWidthInteger, UnsignedInteger, _ExpressibleByBuiltinIntegerLiteral",
+        "key.doc.full_as_xml" : "<Class><Name>UInt8<\/Name><USR>s:s5UInt8V<\/USR><Declaration>@frozen struct UInt8 : FixedWidthInteger, UnsignedInteger, _ExpressibleByBuiltinIntegerLiteral<\/Declaration><CommentParts><Abstract><Para>An 8-bit unsigned integer value type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
         "key.doc.name" : "UInt8",
         "key.doc.type" : "Class",
         "key.elements" : [
@@ -1840,7 +1840,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>@usableFromInline subscript&lt;Element&gt;(indices: [<Type usr=\"s:Si\">Int<\/Type>], type: <Type usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type>.Type) -&gt; <Type usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type> { get set }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>@usableFromInline subscript&lt;Element&gt;(indices: [<Type usr=\"s:Si\">Int<\/Type>], type: <Type usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type>.Type) -&gt; <Type usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type> where <Type usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type> { get set }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.usableFromInline",
@@ -1851,7 +1851,7 @@
             "key.bodylength" : 877,
             "key.bodyoffset" : 5908,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.name>indices<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.name>indices<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
             "key.kind" : "source.lang.swift.decl.function.subscript",
             "key.length" : 960,
             "key.name" : "subscript(_:_:)",
@@ -1918,11 +1918,6 @@
             "key.parsed_declaration" : "let increments = self.increments",
             "key.parsed_scope.end" : 268,
             "key.parsed_scope.start" : 268,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main16AnyTensorStorageC10incrementsSaySiGvp\">increments<\/RelatedName>"
-              }
-            ],
             "key.typename" : "[Int]",
             "key.typeusr" : "$sSaySiGD",
             "key.usr" : "s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluig10incrementsL_ADvp"
@@ -1991,11 +1986,6 @@
             "key.parsed_declaration" : "let increments = self.increments",
             "key.parsed_scope.end" : 280,
             "key.parsed_scope.start" : 280,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main16AnyTensorStorageC10incrementsSaySiGvp\">increments<\/RelatedName>"
-              }
-            ],
             "key.typename" : "[Int]",
             "key.typeusr" : "$sSaySiGD",
             "key.usr" : "s:4main16AnyTensorStorageCyxSaySiG_xmtcAA0C7NumericRzluis10incrementsL_ADvp"
@@ -2073,7 +2063,7 @@
         "key.parsed_scope.start" : 295,
         "key.substructure" : [
           {
-            "key.annotated_decl" : "<Declaration>@usableFromInline subscript&lt;Element&gt;(ranges: [<Type usr=\"s:Sn\">Range<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;], type: <Type usr=\"s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type>.Type) -&gt; <Type usr=\"s:4main16AnyTensorStorageC\">AnyTensorStorage<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type> { get set }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>@usableFromInline subscript&lt;Element&gt;(ranges: [<Type usr=\"s:Sn\">Range<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;], type: <Type usr=\"s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type>.Type) -&gt; <Type usr=\"s:4main16AnyTensorStorageC\">AnyTensorStorage<\/Type> where <Type usr=\"s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type> { get set }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.usableFromInline",
@@ -2084,7 +2074,7 @@
             "key.bodylength" : 2986,
             "key.bodyoffset" : 6938,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluip7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.name>ranges<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Sn\">Range<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main16AnyTensorStorageC\">AnyTensorStorage<\/ref.class><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluip7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.name>ranges<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Sn\">Range<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main16AnyTensorStorageC\">AnyTensorStorage<\/ref.class><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
             "key.kind" : "source.lang.swift.decl.function.subscript",
             "key.length" : 3084,
             "key.name" : "subscript(_:_:)",
@@ -2201,11 +2191,6 @@
             "key.parsed_declaration" : "let increments = self.increments",
             "key.parsed_scope.end" : 303,
             "key.parsed_scope.start" : 303,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main16AnyTensorStorageC10incrementsSaySiGvp\">increments<\/RelatedName>"
-              }
-            ],
             "key.typename" : "[Int]",
             "key.typeusr" : "$sSaySiGD",
             "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluig10incrementsL_SaySiGvp"
@@ -2245,9 +2230,9 @@
             "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluig10dimensionsL_SaySiGvp"
           },
           {
-            "key.annotated_decl" : "<Declaration>var cOffset: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var cOffset: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cOffset<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cOffset<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 35,
             "key.name" : "cOffset",
@@ -2257,14 +2242,14 @@
             "key.parsed_declaration" : "var cOffset = toCDimensions(offset)",
             "key.parsed_scope.end" : 311,
             "key.parsed_scope.start" : 311,
-            "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
-            "key.typeusr" : "$ss5Int32V_A7BtD",
-            "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluig7cOffsetL_s5Int32V_A7Itvp"
+            "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
+            "key.typeusr" : "$ss5Int32V_A11BtD",
+            "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluig7cOffsetL_s5Int32V_A11Itvp"
           },
           {
-            "key.annotated_decl" : "<Declaration>var cIncrements: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var cIncrements: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cIncrements<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cIncrements<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 43,
             "key.name" : "cIncrements",
@@ -2274,9 +2259,9 @@
             "key.parsed_declaration" : "var cIncrements = toCDimensions(increments)",
             "key.parsed_scope.end" : 312,
             "key.parsed_scope.start" : 312,
-            "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
-            "key.typeusr" : "$ss5Int32V_A7BtD",
-            "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluig11cIncrementsL_s5Int32V_A7Itvp"
+            "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
+            "key.typeusr" : "$ss5Int32V_A11BtD",
+            "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluig11cIncrementsL_s5Int32V_A11Itvp"
           },
           {
             "key.annotated_decl" : "<Declaration>let newt: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -2359,11 +2344,6 @@
             "key.parsed_declaration" : "let increments = self.increments",
             "key.parsed_scope.end" : 331,
             "key.parsed_scope.start" : 331,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main16AnyTensorStorageC10incrementsSaySiGvp\">increments<\/RelatedName>"
-              }
-            ],
             "key.typename" : "[Int]",
             "key.typeusr" : "$sSaySiGD",
             "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluis10incrementsL_SaySiGvp"
@@ -2403,9 +2383,9 @@
             "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluis10dimensionsL_SaySiGvp"
           },
           {
-            "key.annotated_decl" : "<Declaration>var cOffset: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var cOffset: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cOffset<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cOffset<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 35,
             "key.name" : "cOffset",
@@ -2415,14 +2395,14 @@
             "key.parsed_declaration" : "var cOffset = toCDimensions(offset)",
             "key.parsed_scope.end" : 339,
             "key.parsed_scope.start" : 339,
-            "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
-            "key.typeusr" : "$ss5Int32V_A7BtD",
-            "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluis7cOffsetL_s5Int32V_A7Itvp"
+            "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
+            "key.typeusr" : "$ss5Int32V_A11BtD",
+            "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluis7cOffsetL_s5Int32V_A11Itvp"
           },
           {
-            "key.annotated_decl" : "<Declaration>var cIncrements: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var cIncrements: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cIncrements<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cIncrements<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 43,
             "key.name" : "cIncrements",
@@ -2432,9 +2412,9 @@
             "key.parsed_declaration" : "var cIncrements = toCDimensions(increments)",
             "key.parsed_scope.end" : 340,
             "key.parsed_scope.start" : 340,
-            "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
-            "key.typeusr" : "$ss5Int32V_A7BtD",
-            "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluis11cIncrementsL_s5Int32V_A7Itvp"
+            "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
+            "key.typeusr" : "$ss5Int32V_A11BtD",
+            "key.usr" : "s:4main16AnyTensorStorageCyACSaySnySiGG_xmtcAA0C7NumericRzluis11cIncrementsL_s5Int32V_A11Itvp"
           },
           {
             "key.annotated_decl" : "<Declaration>var newt: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -2509,7 +2489,7 @@
         "key.parsed_scope.start" : 367,
         "key.substructure" : [
           {
-            "key.annotated_decl" : "<Declaration>@usableFromInline subscript&lt;Element&gt;(indices: [<Type usr=\"s:Si\">Int<\/Type>], range: <Type usr=\"s:Sn\">Range<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;, type: <Type usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type>.Type) -&gt; [<Type usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type>] where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type> { get set }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>@usableFromInline subscript&lt;Element&gt;(indices: [<Type usr=\"s:Si\">Int<\/Type>], range: <Type usr=\"s:Sn\">Range<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;, type: <Type usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type>.Type) -&gt; [<Type usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type>] where <Type usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type> { get set }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.usableFromInline",
@@ -2520,7 +2500,7 @@
             "key.bodylength" : 1535,
             "key.bodyoffset" : 10089,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.name>indices<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>range<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Sn\">Range<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.name>indices<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>range<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Sn\">Range<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluip7ElementL_xmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
             "key.kind" : "source.lang.swift.decl.function.subscript",
             "key.length" : 1645,
             "key.name" : "subscript(_:_:_:)",
@@ -2586,11 +2566,6 @@
             "key.parsed_declaration" : "let increments = self.increments",
             "key.parsed_scope.end" : 373,
             "key.parsed_scope.start" : 373,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main16AnyTensorStorageC10incrementsSaySiGvp\">increments<\/RelatedName>"
-              }
-            ],
             "key.typename" : "[Int]",
             "key.typeusr" : "$sSaySiGD",
             "key.usr" : "s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluig10incrementsL_AEvp"
@@ -2659,11 +2634,6 @@
             "key.parsed_declaration" : "let increments = self.increments",
             "key.parsed_scope.end" : 389,
             "key.parsed_scope.start" : 389,
-            "key.related_decls" : [
-              {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main16AnyTensorStorageC10incrementsSaySiGvp\">increments<\/RelatedName>"
-              }
-            ],
             "key.typename" : "[Int]",
             "key.typeusr" : "$sSaySiGD",
             "key.usr" : "s:4main16AnyTensorStorageCySayxGSaySiG_SnySiGxmtcAA0C7NumericRzluis10incrementsL_AEvp"
@@ -3063,7 +3033,7 @@
         "key.usr" : "s:4main9AnyTensorP"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 255,
         "key.bodyoffset" : 12672,
         "key.doc.column" : 15,
@@ -3074,7 +3044,7 @@
         "key.doc.name" : "Tensor",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 274,
         "key.name" : "Tensor",
@@ -3160,7 +3130,7 @@
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.public",
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.attributes" : [
           {
             "key.attribute" : "source.decl.attribute.public",
@@ -3188,7 +3158,7 @@
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.inheritedtypes" : [
           {
             "key.name" : "AnyTensor"
@@ -3382,11 +3352,6 @@
                 "key.parsed_declaration" : "let cTensor = ccv_nnc_tensor_new(\n  nil,\n  toCTensorParams(kind, dataType: dataType, format: format, dimensions: dimensions),\n  0)!",
                 "key.parsed_scope.end" : 472,
                 "key.parsed_scope.start" : 472,
-                "key.related_decls" : [
-                  {
-                    "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV01cB0Xevp\">cTensor<\/RelatedName>"
-                  }
-                ],
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main6TensorV_8dataType6format10dimensionsACyxGAA10DeviceKindO_AA04DataD0OAA0B6FormatOSaySiGtc33_C59670EF05D79618B17EDFA5C2551CEDLlfc01cB0L_Xevp"
@@ -3838,7 +3803,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public init&lt;S&gt;(_ sequence: <Type usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/Type>, kind: <Type usr=\"s:4main10DeviceKindO\">DeviceKind<\/Type>, format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>]) where Element == S.Element, S : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public init&lt;S&gt;(_ sequence: <Type usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/Type>, kind: <Type usr=\"s:4main10DeviceKindO\">DeviceKind<\/Type>, format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>]) where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> == <Type usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/Type>.<Type usr=\"s:ST7ElementQa\">Element<\/Type>, <Type usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/Type> : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -3849,7 +3814,7 @@
             "key.bodylength" : 723,
             "key.bodyoffset" : 15466,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\"><decl.generic_type_param.name>S<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>sequence<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>kind<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main10DeviceKindO\">DeviceKind<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element == S.Element<\/decl.generic_type_requirement>, <decl.generic_type_requirement>S : <ref.protocol usr=\"s:ST\">Sequence<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.constructor>",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\"><decl.generic_type_param.name>S<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>sequence<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>kind<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main10DeviceKindO\">DeviceKind<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> == <ref.generic_type_param usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:ST7ElementQa\">Element<\/ref.associatedtype><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/ref.generic_type_param> : <ref.protocol usr=\"s:ST\">Sequence<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 846,
             "key.name" : "init(_:kind:format:dimensions:)",
@@ -3922,9 +3887,9 @@
                 "key.usr" : "s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp"
               },
               {
-                "key.annotated_decl" : "<Declaration>let cArray: <Type usr=\"s:s15ContiguousArrayV\">ContiguousArray<\/Type>&lt;Element&gt;<\/Declaration>",
+                "key.annotated_decl" : "<Declaration>let cArray: <Type usr=\"s:s15ContiguousArrayV\">ContiguousArray<\/Type>&lt;<Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type>&gt;<\/Declaration>",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cArray<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s15ContiguousArrayV\">ContiguousArray<\/ref.struct>&lt;Element&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cArray<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s15ContiguousArrayV\">ContiguousArray<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 38,
                 "key.name" : "cArray",
@@ -3945,7 +3910,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public init&lt;S&gt;(_ sequence: <Type usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/Type>, _ kind: <Type usr=\"s:4main10DeviceKindO\">DeviceKind<\/Type>, _ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>) where Element == S.Element, S : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public init&lt;S&gt;(_ sequence: <Type usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/Type>, _ kind: <Type usr=\"s:4main10DeviceKindO\">DeviceKind<\/Type>, _ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>) where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> == <Type usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/Type>.<Type usr=\"s:ST7ElementQa\">Element<\/Type>, <Type usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/Type> : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -3984,7 +3949,7 @@
             "key.doclength" : 241,
             "key.docoffset" : 16194,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\"><decl.generic_type_param.name>S<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>sequence<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>kind<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main10DeviceKindO\">DeviceKind<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element == S.Element<\/decl.generic_type_requirement>, <decl.generic_type_requirement>S : <ref.protocol usr=\"s:ST\">Sequence<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.constructor>",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>&lt;<decl.generic_type_param usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\"><decl.generic_type_param.name>S<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>sequence<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>kind<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main10DeviceKindO\">DeviceKind<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> == <ref.generic_type_param usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:ST7ElementQa\">Element<\/ref.associatedtype><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc1SL_qd__mfp\">S<\/ref.generic_type_param> : <ref.protocol usr=\"s:ST\">Sequence<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 252,
             "key.name" : "init(_:_:_:)",
@@ -4130,11 +4095,6 @@
                 "key.parsed_declaration" : "let cTensor = ccv_nnc_tensor_new(\n  unsafeMutablePointer,\n  toCTensorParams(kind, dataType: Element.dataType, format: format, dimensions: dimensions),\n  0)!",
                 "key.parsed_scope.end" : 576,
                 "key.parsed_scope.start" : 576,
-                "key.related_decls" : [
-                  {
-                    "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV01cB0Xevp\">cTensor<\/RelatedName>"
-                  }
-                ],
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main6TensorV_6format10dimensions20unsafeMutablePointer9keepAliveACyxGAA10DeviceKindO_AA0B6FormatOSaySiGSpyxGyptcfc01cB0L_Xevp"
@@ -4554,7 +4514,7 @@
         "key.usr" : "s:4main6TensorV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 1564,
         "key.bodyoffset" : 19017,
         "key.doc.column" : 15,
@@ -4565,7 +4525,7 @@
         "key.doc.name" : "Tensor",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1583,
         "key.name" : "Tensor",
@@ -5342,7 +5302,7 @@
         "key.usr" : "s:4main6TensorV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 1605,
         "key.bodyoffset" : 20602,
         "key.doc.column" : 15,
@@ -5353,7 +5313,7 @@
         "key.doc.name" : "Tensor",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1624,
         "key.name" : "Tensor",
@@ -6130,7 +6090,7 @@
         "key.usr" : "s:4main6TensorV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 1601,
         "key.bodyoffset" : 22228,
         "key.doc.column" : 15,
@@ -6141,7 +6101,7 @@
         "key.doc.name" : "Tensor",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1620,
         "key.name" : "Tensor",
@@ -6154,7 +6114,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toGPU(_ ordinal: <Type usr=\"s:Si\">Int<\/Type> = 0, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;Element&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toGPU(_ ordinal: <Type usr=\"s:Si\">Int<\/Type> = 0, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;<Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type>&gt;<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -6198,7 +6158,7 @@
             "key.doclength" : 236,
             "key.docoffset" : 22232,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toGPU<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ordinal<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toGPU<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>ordinal<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 592,
             "key.name" : "toGPU(_:streamContext:)",
@@ -6284,7 +6244,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func toCPU(streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;Element&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func toCPU(streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;<Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type>&gt;<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -6320,7 +6280,7 @@
             "key.doclength" : 180,
             "key.docoffset" : 23074,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCPU<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCPU<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 563,
             "key.name" : "toCPU(streamContext:)",
@@ -6410,7 +6370,7 @@
         "key.usr" : "s:4main6TensorV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 1809,
         "key.bodyoffset" : 23850,
         "key.doc.column" : 15,
@@ -6421,7 +6381,7 @@
         "key.doc.name" : "Tensor",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1828,
         "key.name" : "Tensor",
@@ -6434,7 +6394,7 @@
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>], offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;Element&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func reshaped(format: <Type usr=\"s:4main12TensorFormatO\">TensorFormat<\/Type>, dimensions: [<Type usr=\"s:Si\">Int<\/Type>], offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;<Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type>&gt;<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -6445,7 +6405,7 @@
             "key.bodylength" : 1020,
             "key.bodyoffset" : 23981,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1141,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
@@ -6496,9 +6456,9 @@
                 "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF6deviceL_Xevp"
               },
               {
-                "key.annotated_decl" : "<Declaration>var cOffset: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
+                "key.annotated_decl" : "<Declaration>var cOffset: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cOffset<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cOffset<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 35,
                 "key.name" : "cOffset",
@@ -6508,14 +6468,14 @@
                 "key.parsed_declaration" : "var cOffset = toCDimensions(offset)",
                 "key.parsed_scope.end" : 824,
                 "key.parsed_scope.start" : 824,
-                "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
-                "key.typeusr" : "$ss5Int32V_A7BtD",
-                "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF7cOffsetL_s5Int32V_A7Ptvp"
+                "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
+                "key.typeusr" : "$ss5Int32V_A11BtD",
+                "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF7cOffsetL_s5Int32V_A11Ptvp"
               },
               {
-                "key.annotated_decl" : "<Declaration>var cIncrements: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
+                "key.annotated_decl" : "<Declaration>var cIncrements: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cIncrements<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cIncrements<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 43,
                 "key.name" : "cIncrements",
@@ -6525,9 +6485,9 @@
                 "key.parsed_declaration" : "var cIncrements = toCDimensions(increments)",
                 "key.parsed_scope.end" : 825,
                 "key.parsed_scope.start" : 825,
-                "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
-                "key.typeusr" : "$ss5Int32V_A7BtD",
-                "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF11cIncrementsL_s5Int32V_A7Ptvp"
+                "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
+                "key.typeusr" : "$ss5Int32V_A11BtD",
+                "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF11cIncrementsL_s5Int32V_A11Ptvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let newt: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -6570,7 +6530,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reshaped(_ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>, offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;Element&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func reshaped(_ dimensionFormat: <Type usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/Type>, offset: [<Type usr=\"s:Si\">Int<\/Type>]? = nil, increments: [<Type usr=\"s:Si\">Int<\/Type>]? = nil) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;<Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type>&gt;<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -6622,7 +6582,7 @@
             "key.doclength" : 371,
             "key.docoffset" : 25006,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;Element&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 270,
             "key.name" : "reshaped(_:offset:increments:)",
@@ -8555,7 +8515,7 @@
         "key.usr" : "s:4main16AnyTensorStorageC"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 169,
         "key.bodyoffset" : 32242,
         "key.doc.column" : 15,
@@ -8573,7 +8533,7 @@
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement>Element : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.inheritedtypes" : [
           {
             "key.name" : "CustomStringConvertible"
@@ -8646,7 +8606,7 @@
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.internal",
-        "key.annotated_decl" : "<Declaration>@usableFromInline func toCDimensions(_ dimensions: [<Type usr=\"s:Si\">Int<\/Type>]?) -&gt; (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
+        "key.annotated_decl" : "<Declaration>@usableFromInline func toCDimensions(_ dimensions: [<Type usr=\"s:Si\">Int<\/Type>]?) -&gt; (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
         "key.attributes" : [
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
@@ -8654,25 +8614,25 @@
             "key.offset" : 32414
           }
         ],
-        "key.bodylength" : 1357,
-        "key.bodyoffset" : 32534,
+        "key.bodylength" : 2627,
+        "key.bodyoffset" : 32566,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCDimensions<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensions<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.free>",
+        "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCDimensions<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensions<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
-        "key.length" : 1460,
+        "key.length" : 2762,
         "key.name" : "toCDimensions(_:)",
         "key.namelength" : 35,
         "key.nameoffset" : 32437,
         "key.offset" : 32432,
-        "key.parsed_declaration" : "func toCDimensions(_ dimensions: [Int]?) -> (Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
-        "key.parsed_scope.end" : 1091,
+        "key.parsed_declaration" : "func toCDimensions(_ dimensions: [Int]?) -> (\n  Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32\n)",
+        "key.parsed_scope.end" : 1119,
         "key.parsed_scope.start" : 1050,
         "key.substructure" : [
 
         ],
-        "key.typename" : "([Int]?) -> (Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
-        "key.typeusr" : "$sys5Int32V_A7BtSaySiGSgcD",
-        "key.usr" : "s:4main13toCDimensionsys5Int32V_A7DtSaySiGSgF"
+        "key.typename" : "([Int]?) -> (Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
+        "key.typeusr" : "$sys5Int32V_A11BtSaySiGSgcD",
+        "key.usr" : "s:4main13toCDimensionsys5Int32V_A11DtSaySiGSgF"
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -8681,22 +8641,22 @@
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 33894
+            "key.offset" : 35196
           }
         ],
-        "key.bodylength" : 1362,
-        "key.bodyoffset" : 33970,
+        "key.bodylength" : 2625,
+        "key.bodyoffset" : 35272,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCDimensionsArray<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensions<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct>]<\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
-        "key.length" : 1421,
+        "key.length" : 2684,
         "key.name" : "toCDimensionsArray(_:)",
         "key.namelength" : 40,
-        "key.nameoffset" : 33917,
-        "key.offset" : 33912,
+        "key.nameoffset" : 35219,
+        "key.offset" : 35214,
         "key.parsed_declaration" : "func toCDimensionsArray(_ dimensions: [Int]?) -> [Int32]",
-        "key.parsed_scope.end" : 1134,
-        "key.parsed_scope.start" : 1094,
+        "key.parsed_scope.end" : 1189,
+        "key.parsed_scope.start" : 1122,
         "key.substructure" : [
 
         ],
@@ -8706,33 +8666,33 @@
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.internal",
-        "key.annotated_decl" : "<Declaration>@usableFromInline func fromCDimensions(_ dim: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)) -&gt; [<Type usr=\"s:Si\">Int<\/Type>]<\/Declaration>",
+        "key.annotated_decl" : "<Declaration>@usableFromInline func fromCDimensions(_ dim: (<Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s5Int32V\">Int32<\/Type>)) -&gt; [<Type usr=\"s:Si\">Int<\/Type>]<\/Declaration>",
         "key.attributes" : [
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 35335
+            "key.offset" : 37900
           }
         ],
-        "key.bodylength" : 770,
-        "key.bodyoffset" : 35449,
+        "key.bodylength" : 1503,
+        "key.bodyoffset" : 38046,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>fromCDimensions<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dim<\/decl.var.parameter.name>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.function.returntype><\/decl.function.free>",
+        "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>fromCDimensions<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dim<\/decl.var.parameter.name>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
-        "key.length" : 867,
+        "key.length" : 1632,
         "key.name" : "fromCDimensions(_:)",
-        "key.namelength" : 80,
-        "key.nameoffset" : 35358,
-        "key.offset" : 35353,
-        "key.parsed_declaration" : "func fromCDimensions(_ dim: (Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)) -> [Int]",
-        "key.parsed_scope.end" : 1160,
-        "key.parsed_scope.start" : 1137,
+        "key.namelength" : 112,
+        "key.nameoffset" : 37923,
+        "key.offset" : 37918,
+        "key.parsed_declaration" : "func fromCDimensions(\n  _ dim: (Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)\n) -> [Int]",
+        "key.parsed_scope.end" : 1237,
+        "key.parsed_scope.start" : 1192,
         "key.substructure" : [
 
         ],
-        "key.typename" : "((Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)) -> [Int]",
-        "key.typeusr" : "$sySaySiGs5Int32V_A7Ct_tcD",
-        "key.usr" : "s:4main15fromCDimensionsySaySiGs5Int32V_A7Et_tF"
+        "key.typename" : "((Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)) -> [Int]",
+        "key.typeusr" : "$sySaySiGs5Int32V_A11Ct_tcD",
+        "key.usr" : "s:4main15fromCDimensionsySaySiGs5Int32V_A11Et_tF"
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -8741,22 +8701,22 @@
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 36222
+            "key.offset" : 39552
           }
         ],
         "key.bodylength" : 307,
-        "key.bodyoffset" : 36328,
+        "key.bodyoffset" : 39658,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>fromCTensorIncrements<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>cTensor<\/decl.var.parameter.name>: <decl.var.parameter.type>UnsafeMutablePointer&lt;ccv_nnc_tensor_t&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 396,
         "key.name" : "fromCTensorIncrements(_:)",
         "key.namelength" : 72,
-        "key.nameoffset" : 36245,
-        "key.offset" : 36240,
+        "key.nameoffset" : 39575,
+        "key.offset" : 39570,
         "key.parsed_declaration" : "func fromCTensorIncrements(_ cTensor: UnsafeMutablePointer<ccv_nnc_tensor_t>) -> [Int]",
-        "key.parsed_scope.end" : 1172,
-        "key.parsed_scope.start" : 1163,
+        "key.parsed_scope.end" : 1249,
+        "key.parsed_scope.start" : 1240,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>let type: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -8766,11 +8726,11 @@
             "key.length" : 36,
             "key.name" : "type",
             "key.namelength" : 4,
-            "key.nameoffset" : 36335,
-            "key.offset" : 36331,
+            "key.nameoffset" : 39665,
+            "key.offset" : 39661,
             "key.parsed_declaration" : "let type = Int(cTensor.pointee.type)",
-            "key.parsed_scope.end" : 1164,
-            "key.parsed_scope.start" : 1164,
+            "key.parsed_scope.end" : 1241,
+            "key.parsed_scope.start" : 1241,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:s4type2ofq_x_tr0_lF\">type(of:)<\/RelatedName>"
@@ -8788,11 +8748,11 @@
             "key.length" : 118,
             "key.name" : "inc",
             "key.namelength" : 3,
-            "key.nameoffset" : 36490,
-            "key.offset" : 36486,
+            "key.nameoffset" : 39820,
+            "key.offset" : 39816,
             "key.parsed_declaration" : "let inc = UnsafeMutableRawPointer(cTensor).bindMemory(\n  to: ccv_nnc_tensor_view_t.self, capacity: 1\n).pointee.inc",
-            "key.parsed_scope.end" : 1168,
-            "key.parsed_scope.start" : 1168,
+            "key.parsed_scope.end" : 1245,
+            "key.parsed_scope.start" : 1245,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main21fromCTensorIncrementsyXeXeF3incL_Xevp"
@@ -8809,22 +8769,22 @@
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 36638
+            "key.offset" : 39968
           }
         ],
         "key.bodylength" : 330,
-        "key.bodyoffset" : 36789,
+        "key.bodyoffset" : 40119,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCTensorParams<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>kind<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main10DeviceKindO\">DeviceKind<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dataType<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main8DataTypeO\">DataType<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>ccv_nnc_tensor_param_t<\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 464,
         "key.name" : "toCTensorParams(_:dataType:format:dimensions:)",
         "key.namelength" : 100,
-        "key.nameoffset" : 36661,
-        "key.offset" : 36656,
+        "key.nameoffset" : 39991,
+        "key.offset" : 39986,
         "key.parsed_declaration" : "func toCTensorParams(\n  _ kind: DeviceKind, dataType: DataType, format: TensorFormat, dimensions: [Int]\n) -> ccv_nnc_tensor_param_t",
-        "key.parsed_scope.end" : 1189,
-        "key.parsed_scope.start" : 1175,
+        "key.parsed_scope.end" : 1266,
+        "key.parsed_scope.start" : 1252,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -8834,11 +8794,11 @@
             "key.length" : 37,
             "key.name" : "params",
             "key.namelength" : 6,
-            "key.nameoffset" : 36796,
-            "key.offset" : 36792,
+            "key.nameoffset" : 40126,
+            "key.offset" : 40122,
             "key.parsed_declaration" : "var params = ccv_nnc_tensor_param_t()",
-            "key.parsed_scope.end" : 1178,
-            "key.parsed_scope.start" : 1178,
+            "key.parsed_scope.end" : 1255,
+            "key.parsed_scope.start" : 1255,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main15toCTensorParamsyXeXeF6paramsL_Xevp"
