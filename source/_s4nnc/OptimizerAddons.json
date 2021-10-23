@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 3281,
+    "key.length" : 4903,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -435,7 +435,7 @@
             "key.offset" : 1696
           }
         ],
-        "key.bodylength" : 1526,
+        "key.bodylength" : 1534,
         "key.bodyoffset" : 1753,
         "key.doc.column" : 15,
         "key.doc.comment" : "Adam optimizer.",
@@ -470,7 +470,7 @@
           }
         ],
         "key.kind" : "source.lang.swift.decl.struct",
-        "key.length" : 1577,
+        "key.length" : 1585,
         "key.name" : "AdamOptimizer",
         "key.namelength" : 13,
         "key.nameoffset" : 1710,
@@ -735,7 +735,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public init(_ graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>, rate: <Type usr=\"s:Sf\">Float<\/Type>, step: <Type usr=\"s:Si\">Int<\/Type> = 1, betas: (<Type usr=\"s:Sf\">Float<\/Type>, <Type usr=\"s:Sf\">Float<\/Type>) = (0.9, 0.999), decay: <Type usr=\"s:Sf\">Float<\/Type> = 0, epsilon: <Type usr=\"s:Sf\">Float<\/Type> = 1e-8)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public init(_ graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>, rate: <Type usr=\"s:Sf\">Float<\/Type> = 0.001, step: <Type usr=\"s:Si\">Int<\/Type> = 1, betas: (<Type usr=\"s:Sf\">Float<\/Type>, <Type usr=\"s:Sf\">Float<\/Type>) = (0.9, 0.999), decay: <Type usr=\"s:Sf\">Float<\/Type> = 0, epsilon: <Type usr=\"s:Sf\">Float<\/Type> = 1e-8)<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -744,16 +744,16 @@
               }
             ],
             "key.bodylength" : 141,
-            "key.bodyoffset" : 2915,
+            "key.bodyoffset" : 2923,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>graph<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>rate<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>step<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>betas<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.parameter.type> = (0.9, 0.999)<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>decay<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>epsilon<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 1e-8<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>graph<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>rate<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0.001<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>step<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>betas<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.parameter.type> = (0.9, 0.999)<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>decay<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>epsilon<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 1e-8<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 294,
+            "key.length" : 302,
             "key.name" : "init(_:rate:step:betas:decay:epsilon:)",
-            "key.namelength" : 150,
+            "key.namelength" : 158,
             "key.nameoffset" : 2763,
             "key.offset" : 2763,
-            "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, rate: Float, step: Int = 1, betas: (Float, Float) = (0.9, 0.999),\n  decay: Float = 0,\n  epsilon: Float = 1e-8\n)",
+            "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, rate: Float = 0.001, step: Int = 1, betas: (Float, Float) = (0.9, 0.999),\n  decay: Float = 0,\n  epsilon: Float = 1e-8\n)",
             "key.parsed_scope.end" : 105,
             "key.parsed_scope.start" : 94,
             "key.substructure" : [
@@ -770,16 +770,16 @@
               {
                 "key.attribute" : "source.decl.attribute.mutating",
                 "key.length" : 8,
-                "key.offset" : 3068
+                "key.offset" : 3076
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3061
+                "key.offset" : 3069
               }
             ],
             "key.bodylength" : 158,
-            "key.bodyoffset" : 3119,
+            "key.bodyoffset" : 3127,
             "key.doc.column" : 17,
             "key.doc.declaration" : "mutating func step(streamContext: StreamContext?)",
             "key.doc.discussion" : [
@@ -808,8 +808,8 @@
             "key.length" : 201,
             "key.name" : "step(streamContext:)",
             "key.namelength" : 35,
-            "key.nameoffset" : 3082,
-            "key.offset" : 3077,
+            "key.nameoffset" : 3090,
+            "key.offset" : 3085,
             "key.overrides" : [
               {
                 "key.usr" : "s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF"
@@ -834,6 +834,416 @@
         "key.typename" : "AdamOptimizer.Type",
         "key.typeusr" : "$s4main13AdamOptimizerVmD",
         "key.usr" : "s:4main13AdamOptimizerV"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public struct LAMBOptimizer : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type>, <Type usr=\"s:4main15OptimizerAddonsP\">OptimizerAddons<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 3310
+          }
+        ],
+        "key.bodylength" : 1534,
+        "key.bodyoffset" : 3367,
+        "key.doc.column" : 15,
+        "key.doc.comment" : "LAMB optimizer.",
+        "key.doc.declaration" : "public struct LAMBOptimizer : Optimizer, OptimizerAddons",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift\" line=\"116\" column=\"15\"><Name>LAMBOptimizer<\/Name><USR>s:4main13LAMBOptimizerV<\/USR><Declaration>public struct LAMBOptimizer : Optimizer, OptimizerAddons<\/Declaration><CommentParts><Abstract><Para>LAMB optimizer.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 116,
+        "key.doc.name" : "LAMBOptimizer",
+        "key.doc.type" : "Class",
+        "key.doclength" : 20,
+        "key.docoffset" : 3290,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 9,
+            "key.offset" : 3339
+          },
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 15,
+            "key.offset" : 3350
+          }
+        ],
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>LAMBOptimizer<\/decl.name> : <ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol>, <ref.protocol usr=\"s:4main15OptimizerAddonsP\">OptimizerAddons<\/ref.protocol><\/decl.struct>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Optimizer"
+          },
+          {
+            "key.name" : "OptimizerAddons"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 1585,
+        "key.name" : "LAMBOptimizer",
+        "key.namelength" : 13,
+        "key.nameoffset" : 3324,
+        "key.offset" : 3317,
+        "key.parsed_declaration" : "public struct LAMBOptimizer: Optimizer, OptimizerAddons",
+        "key.parsed_scope.end" : 169,
+        "key.parsed_scope.start" : 116,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public let graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3370
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.name" : "graph",
+            "key.namelength" : 5,
+            "key.nameoffset" : 3381,
+            "key.offset" : 3377,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP5graphAA12DynamicGraphCvp"
+              }
+            ],
+            "key.parsed_declaration" : "public let graph: DynamicGraph",
+            "key.parsed_scope.end" : 117,
+            "key.parsed_scope.start" : 117,
+            "key.typename" : "DynamicGraph",
+            "key.typeusr" : "$s4main12DynamicGraphCD",
+            "key.usr" : "s:4main13LAMBOptimizerV5graphAA12DynamicGraphCvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var step: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3403
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>step<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 13,
+            "key.name" : "step",
+            "key.namelength" : 4,
+            "key.nameoffset" : 3414,
+            "key.offset" : 3410,
+            "key.parsed_declaration" : "public var step: Int",
+            "key.parsed_scope.end" : 118,
+            "key.parsed_scope.start" : 118,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main13LAMBOptimizerV4step13streamContextyAA06StreamE0CSg_tF\">step(streamContext:)<\/RelatedName>"
+              }
+            ],
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:4main13LAMBOptimizerV4stepSivp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var rate: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3426
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rate<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 15,
+            "key.name" : "rate",
+            "key.namelength" : 4,
+            "key.nameoffset" : 3437,
+            "key.offset" : 3433,
+            "key.parsed_declaration" : "public var rate: Float",
+            "key.parsed_scope.end" : 119,
+            "key.parsed_scope.start" : 119,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13LAMBOptimizerV4rateSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var betas: (<Type usr=\"s:Sf\">Float<\/Type>, <Type usr=\"s:Sf\">Float<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3451
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>betas<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 25,
+            "key.name" : "betas",
+            "key.namelength" : 5,
+            "key.nameoffset" : 3462,
+            "key.offset" : 3458,
+            "key.parsed_declaration" : "public var betas: (Float, Float)",
+            "key.parsed_scope.end" : 120,
+            "key.parsed_scope.start" : 120,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "(Float, Float)",
+            "key.typeusr" : "$sSf_SftD",
+            "key.usr" : "s:4main13LAMBOptimizerV5betasSf_Sftvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var decay: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3486
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>decay<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 16,
+            "key.name" : "decay",
+            "key.namelength" : 5,
+            "key.nameoffset" : 3497,
+            "key.offset" : 3493,
+            "key.parsed_declaration" : "public var decay: Float",
+            "key.parsed_scope.end" : 121,
+            "key.parsed_scope.start" : 121,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13LAMBOptimizerV5decaySfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var epsilon: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3512
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>epsilon<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 18,
+            "key.name" : "epsilon",
+            "key.namelength" : 7,
+            "key.nameoffset" : 3523,
+            "key.offset" : 3519,
+            "key.parsed_declaration" : "public var epsilon: Float",
+            "key.parsed_scope.end" : 122,
+            "key.parsed_scope.start" : 122,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13LAMBOptimizerV7epsilonSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3540
+              }
+            ],
+            "key.bodylength" : 387,
+            "key.bodyoffset" : 3596,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 437,
+            "key.name" : "parameters",
+            "key.namelength" : 10,
+            "key.nameoffset" : 3551,
+            "key.offset" : 3547,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
+              }
+            ],
+            "key.parsed_declaration" : "public var parameters = [DynamicGraph_AnyParameters]()",
+            "key.parsed_scope.end" : 136,
+            "key.parsed_scope.start" : 123,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "[DynamicGraph_AnyParameters]",
+            "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
+            "key.usr" : "s:4main13LAMBOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>var savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 35,
+            "key.name" : "savedAux",
+            "key.namelength" : 8,
+            "key.nameoffset" : 3992,
+            "key.offset" : 3988,
+            "key.parsed_declaration" : "var savedAux = [DynamicGraph_Any]()",
+            "key.parsed_scope.end" : 138,
+            "key.parsed_scope.start" : 138,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.typename" : "[DynamicGraph_Any]",
+            "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
+            "key.usr" : "s:4main13LAMBOptimizerV8savedAuxSayAA16DynamicGraph_Any_pGvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>var minimizer: ccv_nnc_cmd_t { get }<\/Declaration>",
+            "key.bodylength" : 309,
+            "key.bodyoffset" : 4056,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>minimizer<\/decl.name>: <decl.var.type>ccv_nnc_cmd_t<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 340,
+            "key.name" : "minimizer",
+            "key.namelength" : 9,
+            "key.nameoffset" : 4030,
+            "key.offset" : 4026,
+            "key.parsed_declaration" : "var minimizer: ccv_nnc_cmd_t",
+            "key.parsed_scope.end" : 148,
+            "key.parsed_scope.start" : 139,
+            "key.typename" : "<<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4main13LAMBOptimizerV9minimizerXevp"
+          },
+          {
+            "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+            "key.kind" : "source.lang.swift.decl.var.local",
+            "key.length" : 49,
+            "key.name" : "params",
+            "key.namelength" : 6,
+            "key.nameoffset" : 4065,
+            "key.offset" : 4061,
+            "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
+            "key.parsed_scope.end" : 140,
+            "key.parsed_scope.start" : 140,
+            "key.typename" : "<<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4main13LAMBOptimizerV9minimizerXevg6paramsL_Xevp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(_ graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>, rate: <Type usr=\"s:Sf\">Float<\/Type> = 0.001, step: <Type usr=\"s:Si\">Int<\/Type> = 1, betas: (<Type usr=\"s:Sf\">Float<\/Type>, <Type usr=\"s:Sf\">Float<\/Type>) = (0.9, 0.999), decay: <Type usr=\"s:Sf\">Float<\/Type> = 0, epsilon: <Type usr=\"s:Sf\">Float<\/Type> = 1e-6)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 4370
+              }
+            ],
+            "key.bodylength" : 141,
+            "key.bodyoffset" : 4537,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>graph<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>rate<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0.001<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>step<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>betas<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.parameter.type> = (0.9, 0.999)<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>decay<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>epsilon<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 1e-6<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 302,
+            "key.name" : "init(_:rate:step:betas:decay:epsilon:)",
+            "key.namelength" : 158,
+            "key.nameoffset" : 4377,
+            "key.offset" : 4377,
+            "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, rate: Float = 0.001, step: Int = 1, betas: (Float, Float) = (0.9, 0.999),\n  decay: Float = 0,\n  epsilon: Float = 1e-6\n)",
+            "key.parsed_scope.end" : 161,
+            "key.parsed_scope.start" : 150,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(LAMBOptimizer.Type) -> (DynamicGraph, Float, Int, (Float, Float), Float, Float) -> LAMBOptimizer",
+            "key.typeusr" : "$s_4rate4step5betas5decay7epsilon4main13LAMBOptimizerVAF12DynamicGraphC_SfSiSf_SftS2ftcD",
+            "key.usr" : "s:4main13LAMBOptimizerV_4rate4step5betas5decay7epsilonAcA12DynamicGraphC_SfSiSf_SftS2ftcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public mutating func step(streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.mutating",
+                "key.length" : 8,
+                "key.offset" : 4690
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 4683
+              }
+            ],
+            "key.bodylength" : 158,
+            "key.bodyoffset" : 4741,
+            "key.doc.column" : 17,
+            "key.doc.declaration" : "mutating func step(streamContext: StreamContext?)",
+            "key.doc.discussion" : [
+              {
+                "Note" : ""
+              }
+            ],
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"12\" column=\"17\"><Name>step(streamContext:)<\/Name><USR>s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF<\/USR><Declaration>mutating func step(streamContext: StreamContext?)<\/Declaration><CommentParts><Abstract><Para>Update parameters.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to execute the update operation.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Note><Para>This documentation comment was inherited from <codeVoice>Optimizer<\/codeVoice>.<\/Para><\/Note><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 12,
+            "key.doc.name" : "step(streamContext:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The stream context to execute the update operation."
+                  }
+                ],
+                "name" : "streamContext"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 201,
+            "key.name" : "step(streamContext:)",
+            "key.namelength" : 35,
+            "key.nameoffset" : 4704,
+            "key.offset" : 4699,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF"
+              }
+            ],
+            "key.parsed_declaration" : "public mutating func step(streamContext: StreamContext?)",
+            "key.parsed_scope.end" : 168,
+            "key.parsed_scope.start" : 163,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main13LAMBOptimizerV4stepSivp\">step<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(inout LAMBOptimizer) -> (StreamContext?) -> ()",
+            "key.typeusr" : "$s13streamContexty4main06StreamB0CSg_tcD",
+            "key.usr" : "s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF"
+          }
+        ],
+        "key.typename" : "LAMBOptimizer.Type",
+        "key.typeusr" : "$s4main13LAMBOptimizerVmD",
+        "key.usr" : "s:4main13LAMBOptimizerV"
       }
     ]
   }

@@ -933,6 +933,7 @@
 <dd><p>[bnorm.epsilon] The epsilon for standard derivation.</p>
 <p>[lnorm.epsilon] The epsilon for standard derivation.</p>
 <p>[adam.epsilon] The epsilon for standard derivation.</p>
+<p>[lamb.epsilon] The epsilon for standard derivation.</p>
 <p>[rmsprop.epsilon] The epsilon for standard derivation. </p>
 </dd></dl>
 
@@ -961,6 +962,7 @@
 <span id="_CPPv3N19ccv_nnc_cmd_param_t4rateE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4rateE"></span><span id="ccv_nnc_cmd_param_t::rate__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a9f25b7296b42dfc4e3a79443796a6428"></span>float <code class="sig-name descname">rate</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4rateE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[sgd.rate] The learning rate.</p>
 <p>[adam.rate] The learning rate.</p>
+<p>[lamb.rate] The learning rate.</p>
 <p>[rmsprop.rate] The learning rate. </p>
 </dd></dl>
 
@@ -975,6 +977,7 @@
 <span id="_CPPv3N19ccv_nnc_cmd_param_t5decayE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5decayE"></span><span id="ccv_nnc_cmd_param_t::decay__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a6ebcff92cb8172501abd01447ef2bbee"></span>float <code class="sig-name descname">decay</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5decayE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[sgd.decay] This is the weight decay parameter, which represents L2 regularization after momentum applied.</p>
 <p>[adam.decay] This is the weight decay parameter, which represents L2 regularization.</p>
+<p>[lamb.decay] This is the weight decay parameter, which represents L2 regularization.</p>
 <p>[rmsprop.decay] This is the weight decay parameter, which represents L2 regularization after momentum applied. </p>
 </dd></dl>
 
@@ -987,19 +990,22 @@
 <dl class="cpp var">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t4stepE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t4stepE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4stepE"></span><span id="ccv_nnc_cmd_param_t::step__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a4aa9d9fdbb5a3c9035fd81e2de4b04b6"></span>int <code class="sig-name descname">step</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4stepE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[adam.step] Step t in adam optimizer. </p>
+<dd><p>[adam.step] Step t in adam optimizer.</p>
+<p>[lamb.step] Step t in lamb optimizer. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t5beta1E">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t5beta1E"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5beta1E"></span><span id="ccv_nnc_cmd_param_t::beta1__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1af1e3ca6d21404c94e692189b5d9eb78a"></span>float <code class="sig-name descname">beta1</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5beta1E" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[adam.beta1] The beta1 hyper-parameter in adam optimizer. </p>
+<dd><p>[adam.beta1] The beta1 hyper-parameter in adam optimizer.</p>
+<p>[lamb.beta1] The beta1 hyper-parameter in lamb optimizer. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t5beta2E">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t5beta2E"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5beta2E"></span><span id="ccv_nnc_cmd_param_t::beta2__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1ac78967ffcb966ebca6cb94737928b196"></span>float <code class="sig-name descname">beta2</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5beta2E" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[adam.beta2] The beta2 hyper-parameter in adam optimizer. </p>
+<dd><p>[adam.beta2] The beta2 hyper-parameter in adam optimizer.</p>
+<p>[lamb.beta2] The beta2 hyper-parameter in lamb optimizer. </p>
 </dd></dl>
 
 <dl class="cpp var">
