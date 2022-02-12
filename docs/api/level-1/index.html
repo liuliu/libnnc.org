@@ -766,6 +766,20 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv415ccv_nnc_cmd_auxK13ccv_nnc_cmd_t">
+<span id="_CPPv315ccv_nnc_cmd_auxK13ccv_nnc_cmd_t"></span><span id="_CPPv215ccv_nnc_cmd_auxK13ccv_nnc_cmd_t"></span><span id="ccv_nnc_cmd_aux__ccv_nnc_cmd_tC"></span><span class="target" id="group__level__1__cmd_1ga4369c8d2be27757ba72d211ee00f3255"></span><code class="sig-name descname">ccv_nnc_cmd_aux</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415ccv_nnc_cmd_auxK13ccv_nnc_cmd_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return auxillary information related to a particular command with a particular backend. A backend is required to be useful for this method. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The auxillary information specific to a particular command with a particular backend. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The wrapped cmmand to check auxillary information. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv416ccv_nnc_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t">
 <span id="_CPPv316ccv_nnc_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t"></span><span id="_CPPv216ccv_nnc_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t"></span><span id="ccv_nnc_cmd_exec__ccv_nnc_cmd_tC.ccv_nnc_hint_tC.iC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_tensor_tPCPC.iC.ccv_nnc_stream_context_tPC"></span><span class="target" id="group__level__1__cmd_1ga202d170fbb2e861cdfa135cc741de361"></span>int <code class="sig-name descname">ccv_nnc_cmd_exec</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> <em>cmd</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>flags</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>inputs</em>, <em class="property">const</em> int <em>input_size</em>, ccv_nnc_tensor_t *<em class="property">const</em> *<em class="property">const</em> <em>outputs</em>, <em class="property">const</em> int <em>output_size</em>, <a class="reference internal" href="#_CPPv424ccv_nnc_stream_context_t" title="ccv_nnc_stream_context_t">ccv_nnc_stream_context_t</a> *<em class="property">const</em> <em>stream_context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ccv_nnc_cmd_execK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Execute a given command. <dl class="simple">
@@ -893,6 +907,55 @@
 </dd></dl>
 
 <dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t11hidden_sizeE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t11hidden_sizeE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t11hidden_sizeE"></span><span id="ccv_nnc_cmd_param_t::hidden_size__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a01d7ba1924f79602bea7a3ffc6a1f1bd"></span>int <code class="sig-name descname">hidden_size</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t11hidden_sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[rnn.hidden_size] The number of features in the hidden state h. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t9proj_sizeE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t9proj_sizeE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t9proj_sizeE"></span><span id="ccv_nnc_cmd_param_t::proj_size__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a3d27e31ddcdf91676df2d62beb559ec2"></span>int <code class="sig-name descname">proj_size</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t9proj_sizeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[rnn.proj_size] The number of features in the hidden state h. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t10num_layersE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t10num_layersE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t10num_layersE"></span><span id="ccv_nnc_cmd_param_t::num_layers__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a6dbb14b6653b9cb73e24b738b55c5bd4"></span>int <code class="sig-name descname">num_layers</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t10num_layersE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[rnn.num_layers] The number of layers for RNN. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t4biasE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t4biasE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4biasE"></span><span id="ccv_nnc_cmd_param_t::bias__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1ae3eec343e8e95ed083afea8ea848dc9e"></span>int <code class="sig-name descname">bias</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4biasE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[rnn.bias] If 0, the layer won’t use bias weights. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t11batch_firstE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t11batch_firstE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t11batch_firstE"></span><span id="ccv_nnc_cmd_param_t::batch_first__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1ae608b02463dab8ac49cb5ce4293f1885"></span>int <code class="sig-name descname">batch_first</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t11batch_firstE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[rnn.batch_first] If 1, will batch before sequence. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t13bidirectionalE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t13bidirectionalE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t13bidirectionalE"></span><span id="ccv_nnc_cmd_param_t::bidirectional__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a243de5136ce13caa17d467655aa91e39"></span>int <code class="sig-name descname">bidirectional</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t13bidirectionalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[rnn.bidrectional] Enable bidirectional mode of RNN. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t7dropoutE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t7dropoutE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t7dropoutE"></span><span id="ccv_nnc_cmd_param_t::dropout__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a80fd0844b50828356a28c65c142522da"></span>float <code class="sig-name descname">dropout</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t7dropoutE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[rnn.dropout] If non-zero, enable dropout at each layer of RNN. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t7is_testE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t7is_testE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t7is_testE"></span><span id="ccv_nnc_cmd_param_t::is_test__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a04a061c458f8b087632d2f66d54007e8"></span>int <code class="sig-name descname">is_test</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t7is_testE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[rnn.is_test] Whether running this kernel in test mode or not.</p>
+<p>[bnorm.is_test] Whether in test mode. </p>
+</dd></dl>
+
+<dl class="cpp var">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t8reservedE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t8reservedE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t8reservedE"></span><span id="ccv_nnc_cmd_param_t::reserved__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1aa33b5acaf404476d1bb3456a50e0a4b7"></span>int <code class="sig-name descname">reserved</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t8reservedE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[pool.reserved] A reserved field. </p>
@@ -935,12 +998,6 @@
 <p>[adam.epsilon] The epsilon for standard derivation.</p>
 <p>[lamb.epsilon] The epsilon for standard derivation.</p>
 <p>[rmsprop.epsilon] The epsilon for standard derivation. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt id="_CPPv4N19ccv_nnc_cmd_param_t7is_testE">
-<span id="_CPPv3N19ccv_nnc_cmd_param_t7is_testE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t7is_testE"></span><span id="ccv_nnc_cmd_param_t::is_test__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a04a061c458f8b087632d2f66d54007e8"></span>int <code class="sig-name descname">is_test</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t7is_testE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[bnorm.is_test] Whether in test mode. </p>
 </dd></dl>
 
 <dl class="cpp var">

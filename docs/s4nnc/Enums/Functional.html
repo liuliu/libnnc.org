@@ -87,10 +87,19 @@
                 <a href="../Classes/DynamicGraph/Store.html">– Store</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Embedding.html">Embedding</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Flatten.html">Flatten</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/IndexSelect.html">IndexSelect</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LSTM.html">LSTM</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/LayerNorm.html">LayerNorm</a>
@@ -892,9 +901,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main10FunctionalO11indexSelect5input0C013streamContextxx_q_AA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzAaKR_r0_lFZ"></a>
+                    <a name="/s:4main10FunctionalO11indexSelect5input0C013streamContextxx_q_AA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzAaKR_03AnyK0Qy_ALRtzs5Int32V14ElementNumericRt_r0_lFZ"></a>
                     <a name="//apple_ref/swift/Method/indexSelect(input:index:streamContext:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main10FunctionalO11indexSelect5input0C013streamContextxx_q_AA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzAaKR_r0_lFZ">indexSelect(input:<wbr>index:<wbr>streamContext:<wbr>)</a>
+                    <a class="token" href="#/s:4main10FunctionalO11indexSelect5input0C013streamContextxx_q_AA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzAaKR_03AnyK0Qy_ALRtzs5Int32V14ElementNumericRt_r0_lFZ">indexSelect(input:<wbr>index:<wbr>streamContext:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -911,7 +920,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">indexSelect</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="p">,</span> <span class="kt">U</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="o">&gt;</span><span class="p">(</span>
   <span class="nv">input</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">U</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">U</span><span class="o">.</span><span class="kt">ElementNumeric</span> <span class="o">==</span> <span class="kt">Int32</span><span class="p">,</span> <span class="kt">T</span><span class="o">.</span><span class="kt"><a href="../Protocols/AnyTensor.html">AnyTensor</a></span> <span class="o">==</span> <span class="kt">U</span><span class="o">.</span><span class="kt"><a href="../Protocols/AnyTensor.html">AnyTensor</a></span></code></pre>
 
                         </div>
                       </div>
@@ -921,9 +930,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main10FunctionalO10maskedFill5input4mask7equalTo8fillWith13streamContextxx_q_S2fAA06StreamL0CSgtAA24DynamicGraph_TensorGroupRzAaMR_r0_lFZ"></a>
+                    <a name="/s:4main10FunctionalO10maskedFill5input4mask7equalTo8fillWith13streamContextxx_q_S2fAA06StreamL0CSgtAA24DynamicGraph_TensorGroupRzAaMR_03AnyP0Qy_ANRtzr0_lFZ"></a>
                     <a name="//apple_ref/swift/Method/maskedFill(input:mask:equalTo:fillWith:streamContext:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main10FunctionalO10maskedFill5input4mask7equalTo8fillWith13streamContextxx_q_S2fAA06StreamL0CSgtAA24DynamicGraph_TensorGroupRzAaMR_r0_lFZ">maskedFill(input:<wbr>mask:<wbr>equalTo:<wbr>fillWith:<wbr>streamContext:<wbr>)</a>
+                    <a class="token" href="#/s:4main10FunctionalO10maskedFill5input4mask7equalTo8fillWith13streamContextxx_q_S2fAA06StreamL0CSgtAA24DynamicGraph_TensorGroupRzAaMR_03AnyP0Qy_ANRtzr0_lFZ">maskedFill(input:<wbr>mask:<wbr>equalTo:<wbr>fillWith:<wbr>streamContext:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -940,7 +949,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">maskedFill</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="p">,</span> <span class="kt">U</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="o">&gt;</span><span class="p">(</span>
   <span class="nv">input</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">mask</span><span class="p">:</span> <span class="kt">U</span><span class="p">,</span> <span class="nv">equalTo</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">fillWith</span><span class="p">:</span> <span class="kt">Float</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span><span class="o">.</span><span class="kt"><a href="../Protocols/AnyTensor.html">AnyTensor</a></span> <span class="o">==</span> <span class="kt">U</span><span class="o">.</span><span class="kt"><a href="../Protocols/AnyTensor.html">AnyTensor</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1091,7 +1100,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-11-16)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-02-11)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

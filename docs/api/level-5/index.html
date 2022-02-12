@@ -2129,9 +2129,23 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv421ccv_cnnp_index_selectKiKiKiPCKc">
-<span id="_CPPv321ccv_cnnp_index_selectKiKiKiPCKc"></span><span id="_CPPv221ccv_cnnp_index_selectKiKiKiPCKc"></span><span id="ccv_cnnp_index_select__iC.iC.iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gacef5d305b90498990d6adfd0e263c7d3"></span><code class="sig-name descname">ccv_cnnp_index_select</code><span class="sig-paren">(</span><em class="property">const</em> int <em>datatype</em>, <em class="property">const</em> int <em>vocab_size</em>, <em class="property">const</em> int <em>embed_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_cnnp_index_selectKiKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv421ccv_cnnp_index_selectPCKc">
+<span id="_CPPv321ccv_cnnp_index_selectPCKc"></span><span id="_CPPv221ccv_cnnp_index_selectPCKc"></span><span id="ccv_cnnp_index_select__cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga34714d6153e6f63e2655d189432819c5"></span><code class="sig-name descname">ccv_cnnp_index_select</code><span class="sig-paren">(</span><em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421ccv_cnnp_index_selectPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A index select model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A index select model. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv418ccv_cnnp_embeddingKiKiKiPCKc">
+<span id="_CPPv318ccv_cnnp_embeddingKiKiKiPCKc"></span><span id="_CPPv218ccv_cnnp_embeddingKiKiKiPCKc"></span><span id="ccv_cnnp_embedding__iC.iC.iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga6d231158b96269cba031cc51aed5ef82"></span><code class="sig-name descname">ccv_cnnp_embedding</code><span class="sig-paren">(</span><em class="property">const</em> int <em>datatype</em>, <em class="property">const</em> int <em>vocab_size</em>, <em class="property">const</em> int <em>embed_size</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ccv_cnnp_embeddingKiKiKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>An dictionary embedding model. This can be thought as index select model but the vocabulary tensor is within this model itself. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>A index select model. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
@@ -2214,6 +2228,28 @@
 <dt><strong>Return</strong></dt><dd><p>A element-wise max model. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv413ccv_cnnp_lstmKiKiKiKiKiKiKiKfPCKc">
+<span id="_CPPv313ccv_cnnp_lstmKiKiKiKiKiKiKiKfPCKc"></span><span id="_CPPv213ccv_cnnp_lstmKiKiKiKiKiKiKiKfPCKc"></span><span id="ccv_cnnp_lstm__iC.iC.iC.iC.iC.iC.iC.floatC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga53eca668c6abf255e4784a4aadf32c56"></span><code class="sig-name descname">ccv_cnnp_lstm</code><span class="sig-paren">(</span><em class="property">const</em> int <em>masked</em>, <em class="property">const</em> int <em>hidden_size</em>, <em class="property">const</em> int <em>proj_size</em>, <em class="property">const</em> int <em>num_layers</em>, <em class="property">const</em> int <em>bias</em>, <em class="property">const</em> int <em>batch_first</em>, <em class="property">const</em> int <em>bidirectional</em>, <em class="property">const</em> float <em>dropout</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413ccv_cnnp_lstmKiKiKiKiKiKiKiKfPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A Long-Short Term Memory model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A LSTM model. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">masked</span></code>: Whether a mask tensor provided. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hidden_size</span></code>: The number of features in the hidden state h. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">proj_size</span></code>: The number of features in the hidden state h. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_layers</span></code>: The number of layers for RNN. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bias</span></code>: If 0, the layer won’t use bias weights. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">batch_first</span></code>: If 1, will batch before sequence. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bidirectional</span></code>: Enable bidirectional mode of RNN. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dropout</span></code>: If non-zero, enable dropout at each layer of RNN. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
 </ul>
 </dd>
