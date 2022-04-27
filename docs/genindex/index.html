@@ -498,10 +498,10 @@
 </li>
       <li><a href="../api/commands/#_CPPv4NUt3_17826CCV_NNC_LAYER_NORM_FORWARDE">[anonymous]::CCV_NNC_LAYER_NORM_FORWARD (C++ enumerator)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/level-2/#_CPPv4NUt3_11422CCV_NNC_LONG_DOT_GRAPHE">[anonymous]::CCV_NNC_LONG_DOT_GRAPH (C++ enumerator)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="../api/commands/#_CPPv4NUt3_17821CCV_NNC_LSTM_BACKWARDE">[anonymous]::CCV_NNC_LSTM_BACKWARD (C++ enumerator)</a>
 </li>
       <li><a href="../api/commands/#_CPPv4NUt3_17820CCV_NNC_LSTM_FORWARDE">[anonymous]::CCV_NNC_LSTM_FORWARD (C++ enumerator)</a>
@@ -591,6 +591,10 @@
       <li><a href="../api/commands/#_CPPv4NUt3_17827CCV_NNC_REDUCE_MAX_BACKWARDE">[anonymous]::CCV_NNC_REDUCE_MAX_BACKWARD (C++ enumerator)</a>
 </li>
       <li><a href="../api/commands/#_CPPv4NUt3_17826CCV_NNC_REDUCE_MAX_FORWARDE">[anonymous]::CCV_NNC_REDUCE_MAX_FORWARD (C++ enumerator)</a>
+</li>
+      <li><a href="../api/commands/#_CPPv4NUt3_17829CCV_NNC_REDUCE_NORM2_BACKWARDE">[anonymous]::CCV_NNC_REDUCE_NORM2_BACKWARD (C++ enumerator)</a>
+</li>
+      <li><a href="../api/commands/#_CPPv4NUt3_17828CCV_NNC_REDUCE_NORM2_FORWARDE">[anonymous]::CCV_NNC_REDUCE_NORM2_FORWARD (C++ enumerator)</a>
 </li>
       <li><a href="../api/commands/#_CPPv4NUt3_17827CCV_NNC_REDUCE_SUM_BACKWARDE">[anonymous]::CCV_NNC_REDUCE_SUM_BACKWARD (C++ enumerator)</a>
 </li>
@@ -910,11 +914,15 @@
 </li>
       <li><a href="../api/level-5/#_CPPv429ccv_cnnp_model_parameter_copyPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tPC16ccv_nnc_tensor_t">ccv_cnnp_model_parameter_copy (C++ function)</a>
 </li>
+      <li><a href="../api/level-5/#_CPPv447ccv_cnnp_model_parameter_gradients_clip_by_normPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tifPC24ccv_nnc_stream_context_t">ccv_cnnp_model_parameter_gradients_clip_by_norm (C++ function)</a>
+</li>
+      <li><a href="../api/level-5/#_CPPv438ccv_cnnp_model_parameter_gradients_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t">ccv_cnnp_model_parameter_gradients_map (C++ function)</a>
+</li>
       <li><a href="../api/level-5/#_CPPv425ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi">ccv_cnnp_model_parameters (C++ function)</a>
 </li>
-      <li><a href="../api/level-5/#_CPPv429ccv_cnnp_model_parameters_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_t">ccv_cnnp_model_parameters_map (C++ function)</a>
+      <li><a href="../api/level-5/#_CPPv429ccv_cnnp_model_parameters_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_t">ccv_cnnp_model_parameters_map (C++ function)</a>
 </li>
-      <li><a href="../api/level-5/#_CPPv433ccv_cnnp_model_parameters_zip_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPC24ccv_nnc_stream_context_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t">ccv_cnnp_model_parameters_zip_map (C++ function)</a>
+      <li><a href="../api/level-5/#_CPPv433ccv_cnnp_model_parameters_zip_mapPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_tK13ccv_nnc_cmd_tK14ccv_nnc_hint_tKiPCPC16ccv_nnc_tensor_tKiPCPC16ccv_nnc_tensor_tKiPC24ccv_nnc_stream_context_tPCK16ccv_cnnp_model_tK19ccv_cnnp_model_io_t">ccv_cnnp_model_parameters_zip_map (C++ function)</a>
 </li>
       <li><a href="../api/level-5/#_CPPv419ccv_cnnp_model_readPCvPCKcPCK16ccv_cnnp_model_t">ccv_cnnp_model_read (C++ function)</a>
 </li>
@@ -1845,6 +1853,10 @@
       <li><a href="../api/commands/#c.CMD_REDUCE_MAX_BACKWARD">CMD_REDUCE_MAX_BACKWARD (C macro)</a>
 </li>
       <li><a href="../api/commands/#c.CMD_REDUCE_MAX_FORWARD">CMD_REDUCE_MAX_FORWARD (C macro)</a>
+</li>
+      <li><a href="../api/commands/#c.CMD_REDUCE_NORM2_BACKWARD">CMD_REDUCE_NORM2_BACKWARD (C macro)</a>
+</li>
+      <li><a href="../api/commands/#c.CMD_REDUCE_NORM2_FORWARD">CMD_REDUCE_NORM2_FORWARD (C macro)</a>
 </li>
       <li><a href="../api/commands/#c.CMD_REDUCE_SUM_BACKWARD">CMD_REDUCE_SUM_BACKWARD (C macro)</a>
 </li>

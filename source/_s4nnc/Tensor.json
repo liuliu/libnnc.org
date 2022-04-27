@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 40451,
+    "key.length" : 41036,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -6890,8 +6890,87 @@
       },
       {
         "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
-        "key.bodylength" : 1809,
+        "key.bodylength" : 564,
         "key.bodyoffset" : 23850,
+        "key.column" : 15,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 15,
+        "key.doc.declaration" : "public struct Tensor<Element> : AnyTensor where Element : main.TensorNumeric",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"463\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 463,
+        "key.doc.name" : "Tensor",
+        "key.doc.type" : "Class",
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 583,
+        "key.line" : 463,
+        "key.name" : "Tensor",
+        "key.namelength" : 6,
+        "key.nameoffset" : 23842,
+        "key.offset" : 23832,
+        "key.parsed_declaration" : "extension Tensor",
+        "key.parsed_scope.end" : 825,
+        "key.parsed_scope.start" : 810,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func copied() -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;<Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type>&gt;<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 24346
+              }
+            ],
+            "key.bodylength" : 35,
+            "key.bodyoffset" : 24376,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc.column" : 15,
+            "key.doc.comment" : " Make an explicit copy of the existing tensor. Raw tensors conforms to copy-on-write\n semantics. But sometimes, it is better to have explicit copy for better memory management\n hygiene. For example, if the tensor is obtained with .rawValue from a DynamicGraph\n variable, keeping that tensor alive would keep the whole computation graph available.\n Making an explicit copy would break that chain.\n\n - Returns: A new tensor copied from the existing one.",
+            "key.doc.declaration" : "public func copied() -> main.Tensor<Element>",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"821\" column=\"15\"><Name>copied()<\/Name><USR>s:4main6TensorV6copiedACyxGyF<\/USR><Declaration>public func copied() -&gt; main.Tensor&lt;Element&gt;<\/Declaration><CommentParts><Abstract><Para>Make an explicit copy of the existing tensor. Raw tensors conforms to copy-on-write semantics. But sometimes, it is better to have explicit copy for better memory management hygiene. For example, if the tensor is obtained with .rawValue from a DynamicGraph variable, keeping that tensor alive would keep the whole computation graph available. Making an explicit copy would break that chain.<\/Para><\/Abstract><ResultDiscussion><Para>A new tensor copied from the existing one.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 821,
+            "key.doc.name" : "copied()",
+            "key.doc.result_discussion" : [
+              {
+                "Para" : "A new tensor copied from the existing one."
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 489,
+            "key.docoffset" : 23854,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>copied<\/decl.name>() -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 59,
+            "key.line" : 821,
+            "key.name" : "copied()",
+            "key.namelength" : 8,
+            "key.nameoffset" : 24358,
+            "key.offset" : 24353,
+            "key.parsed_declaration" : "public func copied() -> Self",
+            "key.parsed_scope.end" : 823,
+            "key.parsed_scope.start" : 821,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>) -> () -> Tensor<Element>",
+            "key.typeusr" : "$s4main6TensorVyxGycD",
+            "key.usr" : "s:4main6TensorV6copiedACyxGyF"
+          }
+        ],
+        "key.typename" : "Tensor<Element>.Type",
+        "key.typeusr" : "$s4main6TensorVyxGmD",
+        "key.usr" : "s:4main6TensorV"
+      },
+      {
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.bodylength" : 1809,
+        "key.bodyoffset" : 24435,
         "key.column" : 15,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 15,
@@ -6908,11 +6987,11 @@
         "key.line" : 463,
         "key.name" : "Tensor",
         "key.namelength" : 6,
-        "key.nameoffset" : 23842,
-        "key.offset" : 23832,
+        "key.nameoffset" : 24427,
+        "key.offset" : 24417,
         "key.parsed_declaration" : "extension Tensor",
-        "key.parsed_scope.end" : 858,
-        "key.parsed_scope.start" : 810,
+        "key.parsed_scope.end" : 875,
+        "key.parsed_scope.start" : 827,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -6921,25 +7000,25 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 23854
+                "key.offset" : 24439
               }
             ],
             "key.bodylength" : 1020,
-            "key.bodyoffset" : 23981,
+            "key.bodyoffset" : 24566,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1141,
-            "key.line" : 812,
+            "key.line" : 829,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
             "key.namelength" : 105,
-            "key.nameoffset" : 23866,
-            "key.offset" : 23861,
+            "key.nameoffset" : 24451,
+            "key.offset" : 24446,
             "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 839,
-            "key.parsed_scope.start" : 812,
+            "key.parsed_scope.end" : 856,
+            "key.parsed_scope.start" : 829,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV8reshaped_6offset10incrementsACyxGAA0B15DimensionFormatO_SaySiGSgAKtF\">reshaped(_:offset:increments:)<\/RelatedName>"
@@ -6954,14 +7033,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cTensorParams<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 40,
-                "key.line" : 815,
+                "key.line" : 832,
                 "key.name" : "cTensorParams",
                 "key.namelength" : 13,
-                "key.nameoffset" : 23990,
-                "key.offset" : 23986,
+                "key.nameoffset" : 24575,
+                "key.offset" : 24571,
                 "key.parsed_declaration" : "let cTensorParams = cTensor.pointee.info",
-                "key.parsed_scope.end" : 815,
-                "key.parsed_scope.start" : 815,
+                "key.parsed_scope.end" : 832,
+                "key.parsed_scope.start" : 832,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF01cB6ParamsL_Xevp"
@@ -6974,14 +7053,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>device<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 58,
-                "key.line" : 816,
+                "key.line" : 833,
                 "key.name" : "device",
                 "key.namelength" : 6,
-                "key.nameoffset" : 24035,
-                "key.offset" : 24031,
+                "key.nameoffset" : 24620,
+                "key.offset" : 24616,
                 "key.parsed_declaration" : "let device = DeviceKind.from(cTensorParams: cTensorParams)",
-                "key.parsed_scope.end" : 816,
-                "key.parsed_scope.start" : 816,
+                "key.parsed_scope.end" : 833,
+                "key.parsed_scope.start" : 833,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF6deviceL_Xevp"
@@ -6994,14 +7073,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cOffset<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 35,
-                "key.line" : 824,
+                "key.line" : 841,
                 "key.name" : "cOffset",
                 "key.namelength" : 7,
-                "key.nameoffset" : 24416,
-                "key.offset" : 24412,
+                "key.nameoffset" : 25001,
+                "key.offset" : 24997,
                 "key.parsed_declaration" : "var cOffset = toCDimensions(offset)",
-                "key.parsed_scope.end" : 824,
-                "key.parsed_scope.start" : 824,
+                "key.parsed_scope.end" : 841,
+                "key.parsed_scope.start" : 841,
                 "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
                 "key.typeusr" : "$ss5Int32V_A11BtD",
                 "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF7cOffsetL_s5Int32V_A11Ptvp"
@@ -7014,14 +7093,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>cIncrements<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 43,
-                "key.line" : 825,
+                "key.line" : 842,
                 "key.name" : "cIncrements",
                 "key.namelength" : 11,
-                "key.nameoffset" : 24456,
-                "key.offset" : 24452,
+                "key.nameoffset" : 25041,
+                "key.offset" : 25037,
                 "key.parsed_declaration" : "var cIncrements = toCDimensions(increments)",
-                "key.parsed_scope.end" : 825,
-                "key.parsed_scope.start" : 825,
+                "key.parsed_scope.end" : 842,
+                "key.parsed_scope.start" : 842,
                 "key.typename" : "(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)",
                 "key.typeusr" : "$ss5Int32V_A11BtD",
                 "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF11cIncrementsL_s5Int32V_A11Ptvp"
@@ -7034,14 +7113,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>newt<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 333,
-                "key.line" : 826,
+                "key.line" : 843,
                 "key.name" : "newt",
                 "key.namelength" : 4,
-                "key.nameoffset" : 24504,
-                "key.offset" : 24500,
+                "key.nameoffset" : 25089,
+                "key.offset" : 25085,
                 "key.parsed_declaration" : "let newt = withUnsafePointer(to: &cOffset.0) { cOffset in\n  withUnsafePointer(to: &cIncrements.0) { cIncrements in\n    ccv_nnc_tensor_view_new(\n      cTensor,\n      toCTensorParams(\n        device, dataType: Element.dataType, format: format, dimensions: dimensions), cOffset,\n      cIncrements)!\n  }\n}",
-                "key.parsed_scope.end" : 826,
-                "key.parsed_scope.start" : 826,
+                "key.parsed_scope.end" : 843,
+                "key.parsed_scope.start" : 843,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF4newtL0_Xevp"
@@ -7054,14 +7133,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>anyTensor<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 133,
-                "key.line" : 835,
+                "key.line" : 852,
                 "key.name" : "anyTensor",
                 "key.namelength" : 9,
-                "key.nameoffset" : 24842,
-                "key.offset" : 24838,
+                "key.nameoffset" : 25427,
+                "key.offset" : 25423,
                 "key.parsed_declaration" : "let anyTensor = newt.withMemoryRebound(to: ccv_nnc_tensor_t.self, capacity: 1) {\n  AnyTensorStorage($0, original: _storage)\n}",
-                "key.parsed_scope.end" : 835,
-                "key.parsed_scope.start" : 835,
+                "key.parsed_scope.end" : 852,
+                "key.parsed_scope.start" : 852,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF03anyB0L_Xevp"
@@ -7078,19 +7157,19 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 25380
+                "key.offset" : 25965
               }
             ],
             "key.bodylength" : 148,
-            "key.bodyoffset" : 25508,
+            "key.bodyoffset" : 26093,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : " Create a new tensor pointing to the same memory region but with different sizes.\n\n - Parameters:\n   - dimensionFormat: New format and dimensions for the tensor.\n   - offset: Whether offset on each dimensions.\n   - increments: The step on each dimensions.\n - Returns: The new tensor with different format but the same memory content.",
             "key.doc.declaration" : "public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -> main.Tensor<Element>",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"850\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:4main6TensorV8reshaped_6offset10incrementsACyxGAA0B15DimensionFormatO_SaySiGSgAKtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; main.Tensor&lt;Element&gt;<\/Declaration><CommentParts><Abstract><Para>Create a new tensor pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensor with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 850,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"867\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:4main6TensorV8reshaped_6offset10incrementsACyxGAA0B15DimensionFormatO_SaySiGSgAKtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; main.Tensor&lt;Element&gt;<\/Declaration><CommentParts><Abstract><Para>Create a new tensor pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensor with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 867,
             "key.doc.name" : "reshaped(_:offset:increments:)",
             "key.doc.parameters" : [
               {
@@ -7125,19 +7204,19 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 371,
-            "key.docoffset" : 25006,
+            "key.docoffset" : 25591,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 270,
-            "key.line" : 850,
+            "key.line" : 867,
             "key.name" : "reshaped(_:offset:increments:)",
             "key.namelength" : 106,
-            "key.nameoffset" : 25392,
-            "key.offset" : 25387,
+            "key.nameoffset" : 25977,
+            "key.offset" : 25972,
             "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> Self",
-            "key.parsed_scope.end" : 856,
-            "key.parsed_scope.start" : 850,
+            "key.parsed_scope.end" : 873,
+            "key.parsed_scope.start" : 867,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV8reshaped6format10dimensions6offset10incrementsACyxGAA0B6FormatO_SaySiGALSgAMtF\">reshaped(format:dimensions:offset:increments:)<\/RelatedName>"
@@ -7158,7 +7237,7 @@
       {
         "key.annotated_decl" : "<Declaration>protocol Collection : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
         "key.bodylength" : 863,
-        "key.bodyoffset" : 25717,
+        "key.bodyoffset" : 26302,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.declaration" : "protocol Collection : Sequence",
         "key.doc.discussion" : [
@@ -7276,11 +7355,11 @@
         "key.modulename" : "Swift",
         "key.name" : "Collection",
         "key.namelength" : 10,
-        "key.nameoffset" : 25672,
-        "key.offset" : 25662,
+        "key.nameoffset" : 26257,
+        "key.offset" : 26247,
         "key.parsed_declaration" : "extension Collection where Element == Tensor<Float64>",
-        "key.parsed_scope.end" : 882,
-        "key.parsed_scope.start" : 860,
+        "key.parsed_scope.end" : 899,
+        "key.parsed_scope.start" : 877,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -7289,11 +7368,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 25720
+                "key.offset" : 26305
               }
             ],
             "key.bodylength" : 124,
-            "key.bodyoffset" : 25852,
+            "key.bodyoffset" : 26437,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
@@ -7301,14 +7380,14 @@
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 250,
-            "key.line" : 861,
+            "key.line" : 878,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
             "key.namelength" : 105,
-            "key.nameoffset" : 25732,
-            "key.offset" : 25727,
+            "key.nameoffset" : 26317,
+            "key.offset" : 26312,
             "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 867,
-            "key.parsed_scope.start" : 861,
+            "key.parsed_scope.end" : 884,
+            "key.parsed_scope.start" : 878,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF\">reshaped(_: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -7358,19 +7437,19 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 26354
+                "key.offset" : 26939
               }
             ],
             "key.bodylength" : 91,
-            "key.bodyoffset" : 26487,
+            "key.bodyoffset" : 27072,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : " Create new tensors pointing to the same memory region but with different sizes.\n\n - Parameters:\n   - dimensionFormat: New format and dimensions for the tensor.\n   - offset: Whether offset on each dimensions.\n   - increments: The step on each dimensions.\n - Returns: The new tensors with different format but the same memory content.",
             "key.doc.declaration" : "public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -> [Element]",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"877\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 877,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"894\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 894,
             "key.doc.name" : "reshaped(_:offset:increments:)",
             "key.doc.parameters" : [
               {
@@ -7405,20 +7484,20 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 371,
-            "key.docoffset" : 25980,
+            "key.docoffset" : 26565,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.associatedtype usr=\"s:Sl7ElementQa\">Element<\/ref.associatedtype>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 218,
-            "key.line" : 877,
+            "key.line" : 894,
             "key.name" : "reshaped(_:offset:increments:)",
             "key.namelength" : 106,
-            "key.nameoffset" : 26366,
-            "key.offset" : 26361,
+            "key.nameoffset" : 26951,
+            "key.offset" : 26946,
             "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 881,
-            "key.parsed_scope.start" : 877,
+            "key.parsed_scope.end" : 898,
+            "key.parsed_scope.start" : 894,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -7469,7 +7548,7 @@
       {
         "key.annotated_decl" : "<Declaration>protocol Collection : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
         "key.bodylength" : 863,
-        "key.bodyoffset" : 26636,
+        "key.bodyoffset" : 27221,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.declaration" : "protocol Collection : Sequence",
         "key.doc.discussion" : [
@@ -7587,11 +7666,11 @@
         "key.modulename" : "Swift",
         "key.name" : "Collection",
         "key.namelength" : 10,
-        "key.nameoffset" : 26593,
-        "key.offset" : 26583,
+        "key.nameoffset" : 27178,
+        "key.offset" : 27168,
         "key.parsed_declaration" : "extension Collection where Element == Tensor<Int64>",
-        "key.parsed_scope.end" : 906,
-        "key.parsed_scope.start" : 884,
+        "key.parsed_scope.end" : 923,
+        "key.parsed_scope.start" : 901,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -7600,11 +7679,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 26639
+                "key.offset" : 27224
               }
             ],
             "key.bodylength" : 124,
-            "key.bodyoffset" : 26771,
+            "key.bodyoffset" : 27356,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
@@ -7612,14 +7691,14 @@
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 250,
-            "key.line" : 885,
+            "key.line" : 902,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
             "key.namelength" : 105,
-            "key.nameoffset" : 26651,
-            "key.offset" : 26646,
+            "key.nameoffset" : 27236,
+            "key.offset" : 27231,
             "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 891,
-            "key.parsed_scope.start" : 885,
+            "key.parsed_scope.end" : 908,
+            "key.parsed_scope.start" : 902,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -7669,19 +7748,19 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 27273
+                "key.offset" : 27858
               }
             ],
             "key.bodylength" : 91,
-            "key.bodyoffset" : 27406,
+            "key.bodyoffset" : 27991,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : " Create new tensors pointing to the same memory region but with different sizes.\n\n - Parameters:\n   - dimensionFormat: New format and dimensions for the tensor.\n   - offset: Whether offset on each dimensions.\n   - increments: The step on each dimensions.\n - Returns: The new tensors with different format but the same memory content.",
             "key.doc.declaration" : "public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -> [Element]",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"901\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 901,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"918\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 918,
             "key.doc.name" : "reshaped(_:offset:increments:)",
             "key.doc.parameters" : [
               {
@@ -7716,20 +7795,20 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 371,
-            "key.docoffset" : 26899,
+            "key.docoffset" : 27484,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.associatedtype usr=\"s:Sl7ElementQa\">Element<\/ref.associatedtype>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 218,
-            "key.line" : 901,
+            "key.line" : 918,
             "key.name" : "reshaped(_:offset:increments:)",
             "key.namelength" : 106,
-            "key.nameoffset" : 27285,
-            "key.offset" : 27280,
+            "key.nameoffset" : 27870,
+            "key.offset" : 27865,
             "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 905,
-            "key.parsed_scope.start" : 901,
+            "key.parsed_scope.end" : 922,
+            "key.parsed_scope.start" : 918,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -7780,7 +7859,7 @@
       {
         "key.annotated_decl" : "<Declaration>protocol Collection : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
         "key.bodylength" : 863,
-        "key.bodyoffset" : 27557,
+        "key.bodyoffset" : 28142,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.declaration" : "protocol Collection : Sequence",
         "key.doc.discussion" : [
@@ -7898,11 +7977,11 @@
         "key.modulename" : "Swift",
         "key.name" : "Collection",
         "key.namelength" : 10,
-        "key.nameoffset" : 27512,
-        "key.offset" : 27502,
+        "key.nameoffset" : 28097,
+        "key.offset" : 28087,
         "key.parsed_declaration" : "extension Collection where Element == Tensor<Float32>",
-        "key.parsed_scope.end" : 930,
-        "key.parsed_scope.start" : 908,
+        "key.parsed_scope.end" : 947,
+        "key.parsed_scope.start" : 925,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -7911,11 +7990,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 27560
+                "key.offset" : 28145
               }
             ],
             "key.bodylength" : 124,
-            "key.bodyoffset" : 27692,
+            "key.bodyoffset" : 28277,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
@@ -7923,14 +8002,14 @@
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 250,
-            "key.line" : 909,
+            "key.line" : 926,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
             "key.namelength" : 105,
-            "key.nameoffset" : 27572,
-            "key.offset" : 27567,
+            "key.nameoffset" : 28157,
+            "key.offset" : 28152,
             "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 915,
-            "key.parsed_scope.start" : 909,
+            "key.parsed_scope.end" : 932,
+            "key.parsed_scope.start" : 926,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -7980,19 +8059,19 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 28194
+                "key.offset" : 28779
               }
             ],
             "key.bodylength" : 91,
-            "key.bodyoffset" : 28327,
+            "key.bodyoffset" : 28912,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : " Create new tensors pointing to the same memory region but with different sizes.\n\n - Parameters:\n   - dimensionFormat: New format and dimensions for the tensor.\n   - offset: Whether offset on each dimensions.\n   - increments: The step on each dimensions.\n - Returns: The new tensors with different format but the same memory content.",
             "key.doc.declaration" : "public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -> [Element]",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"925\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 925,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"942\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 942,
             "key.doc.name" : "reshaped(_:offset:increments:)",
             "key.doc.parameters" : [
               {
@@ -8027,20 +8106,20 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 371,
-            "key.docoffset" : 27820,
+            "key.docoffset" : 28405,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.associatedtype usr=\"s:Sl7ElementQa\">Element<\/ref.associatedtype>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 218,
-            "key.line" : 925,
+            "key.line" : 942,
             "key.name" : "reshaped(_:offset:increments:)",
             "key.namelength" : 106,
-            "key.nameoffset" : 28206,
-            "key.offset" : 28201,
+            "key.nameoffset" : 28791,
+            "key.offset" : 28786,
             "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 929,
-            "key.parsed_scope.start" : 925,
+            "key.parsed_scope.end" : 946,
+            "key.parsed_scope.start" : 942,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -8091,7 +8170,7 @@
       {
         "key.annotated_decl" : "<Declaration>protocol Collection : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
         "key.bodylength" : 863,
-        "key.bodyoffset" : 28476,
+        "key.bodyoffset" : 29061,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.declaration" : "protocol Collection : Sequence",
         "key.doc.discussion" : [
@@ -8209,11 +8288,11 @@
         "key.modulename" : "Swift",
         "key.name" : "Collection",
         "key.namelength" : 10,
-        "key.nameoffset" : 28433,
-        "key.offset" : 28423,
+        "key.nameoffset" : 29018,
+        "key.offset" : 29008,
         "key.parsed_declaration" : "extension Collection where Element == Tensor<Int32>",
-        "key.parsed_scope.end" : 954,
-        "key.parsed_scope.start" : 932,
+        "key.parsed_scope.end" : 971,
+        "key.parsed_scope.start" : 949,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -8222,11 +8301,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 28479
+                "key.offset" : 29064
               }
             ],
             "key.bodylength" : 124,
-            "key.bodyoffset" : 28611,
+            "key.bodyoffset" : 29196,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
@@ -8234,14 +8313,14 @@
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 250,
-            "key.line" : 933,
+            "key.line" : 950,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
             "key.namelength" : 105,
-            "key.nameoffset" : 28491,
-            "key.offset" : 28486,
+            "key.nameoffset" : 29076,
+            "key.offset" : 29071,
             "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 939,
-            "key.parsed_scope.start" : 933,
+            "key.parsed_scope.end" : 956,
+            "key.parsed_scope.start" : 950,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -8291,19 +8370,19 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 29113
+                "key.offset" : 29698
               }
             ],
             "key.bodylength" : 91,
-            "key.bodyoffset" : 29246,
+            "key.bodyoffset" : 29831,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : " Create new tensors pointing to the same memory region but with different sizes.\n\n - Parameters:\n   - dimensionFormat: New format and dimensions for the tensor.\n   - offset: Whether offset on each dimensions.\n   - increments: The step on each dimensions.\n - Returns: The new tensors with different format but the same memory content.",
             "key.doc.declaration" : "public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -> [Element]",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"949\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 949,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"966\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 966,
             "key.doc.name" : "reshaped(_:offset:increments:)",
             "key.doc.parameters" : [
               {
@@ -8338,20 +8417,20 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 371,
-            "key.docoffset" : 28739,
+            "key.docoffset" : 29324,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.associatedtype usr=\"s:Sl7ElementQa\">Element<\/ref.associatedtype>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 218,
-            "key.line" : 949,
+            "key.line" : 966,
             "key.name" : "reshaped(_:offset:increments:)",
             "key.namelength" : 106,
-            "key.nameoffset" : 29125,
-            "key.offset" : 29120,
+            "key.nameoffset" : 29710,
+            "key.offset" : 29705,
             "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 953,
-            "key.parsed_scope.start" : 949,
+            "key.parsed_scope.end" : 970,
+            "key.parsed_scope.start" : 966,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -8402,7 +8481,7 @@
       {
         "key.annotated_decl" : "<Declaration>protocol Collection : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
         "key.bodylength" : 863,
-        "key.bodyoffset" : 29397,
+        "key.bodyoffset" : 29982,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.declaration" : "protocol Collection : Sequence",
         "key.doc.discussion" : [
@@ -8520,11 +8599,11 @@
         "key.modulename" : "Swift",
         "key.name" : "Collection",
         "key.namelength" : 10,
-        "key.nameoffset" : 29352,
-        "key.offset" : 29342,
+        "key.nameoffset" : 29937,
+        "key.offset" : 29927,
         "key.parsed_declaration" : "extension Collection where Element == Tensor<Float16>",
-        "key.parsed_scope.end" : 978,
-        "key.parsed_scope.start" : 956,
+        "key.parsed_scope.end" : 995,
+        "key.parsed_scope.start" : 973,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -8533,11 +8612,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 29400
+                "key.offset" : 29985
               }
             ],
             "key.bodylength" : 124,
-            "key.bodyoffset" : 29532,
+            "key.bodyoffset" : 30117,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
@@ -8545,14 +8624,14 @@
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 250,
-            "key.line" : 957,
+            "key.line" : 974,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
             "key.namelength" : 105,
-            "key.nameoffset" : 29412,
-            "key.offset" : 29407,
+            "key.nameoffset" : 29997,
+            "key.offset" : 29992,
             "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 963,
-            "key.parsed_scope.start" : 957,
+            "key.parsed_scope.end" : 980,
+            "key.parsed_scope.start" : 974,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -8602,19 +8681,19 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 30034
+                "key.offset" : 30619
               }
             ],
             "key.bodylength" : 91,
-            "key.bodyoffset" : 30167,
+            "key.bodyoffset" : 30752,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : " Create new tensors pointing to the same memory region but with different sizes.\n\n - Parameters:\n   - dimensionFormat: New format and dimensions for the tensor.\n   - offset: Whether offset on each dimensions.\n   - increments: The step on each dimensions.\n - Returns: The new tensors with different format but the same memory content.",
             "key.doc.declaration" : "public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -> [Element]",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"973\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 973,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"990\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 990,
             "key.doc.name" : "reshaped(_:offset:increments:)",
             "key.doc.parameters" : [
               {
@@ -8649,20 +8728,20 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 371,
-            "key.docoffset" : 29660,
+            "key.docoffset" : 30245,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.associatedtype usr=\"s:Sl7ElementQa\">Element<\/ref.associatedtype>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 218,
-            "key.line" : 973,
+            "key.line" : 990,
             "key.name" : "reshaped(_:offset:increments:)",
             "key.namelength" : 106,
-            "key.nameoffset" : 30046,
-            "key.offset" : 30041,
+            "key.nameoffset" : 30631,
+            "key.offset" : 30626,
             "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 977,
-            "key.parsed_scope.start" : 973,
+            "key.parsed_scope.end" : 994,
+            "key.parsed_scope.start" : 990,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -8713,7 +8792,7 @@
       {
         "key.annotated_decl" : "<Declaration>protocol Collection : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
         "key.bodylength" : 863,
-        "key.bodyoffset" : 30316,
+        "key.bodyoffset" : 30901,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.declaration" : "protocol Collection : Sequence",
         "key.doc.discussion" : [
@@ -8831,11 +8910,11 @@
         "key.modulename" : "Swift",
         "key.name" : "Collection",
         "key.namelength" : 10,
-        "key.nameoffset" : 30273,
-        "key.offset" : 30263,
+        "key.nameoffset" : 30858,
+        "key.offset" : 30848,
         "key.parsed_declaration" : "extension Collection where Element == Tensor<UInt8>",
-        "key.parsed_scope.end" : 1002,
-        "key.parsed_scope.start" : 980,
+        "key.parsed_scope.end" : 1019,
+        "key.parsed_scope.start" : 997,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -8844,11 +8923,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 30319
+                "key.offset" : 30904
               }
             ],
             "key.bodylength" : 124,
-            "key.bodyoffset" : 30451,
+            "key.bodyoffset" : 31036,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
@@ -8856,14 +8935,14 @@
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 250,
-            "key.line" : 981,
+            "key.line" : 998,
             "key.name" : "reshaped(format:dimensions:offset:increments:)",
             "key.namelength" : 105,
-            "key.nameoffset" : 30331,
-            "key.offset" : 30326,
+            "key.nameoffset" : 30916,
+            "key.offset" : 30911,
             "key.parsed_declaration" : "public func reshaped(\n  format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 987,
-            "key.parsed_scope.start" : 981,
+            "key.parsed_scope.end" : 1004,
+            "key.parsed_scope.start" : 998,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -8913,19 +8992,19 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 30953
+                "key.offset" : 31538
               }
             ],
             "key.bodylength" : 91,
-            "key.bodyoffset" : 31086,
+            "key.bodyoffset" : 31671,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : " Create new tensors pointing to the same memory region but with different sizes.\n\n - Parameters:\n   - dimensionFormat: New format and dimensions for the tensor.\n   - offset: Whether offset on each dimensions.\n   - increments: The step on each dimensions.\n - Returns: The new tensors with different format but the same memory content.",
             "key.doc.declaration" : "public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -> [Element]",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"997\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 997,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"1014\" column=\"15\"><Name>reshaped(_:offset:increments:)<\/Name><USR>s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF<\/USR><Declaration>public func reshaped(_ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/Declaration><CommentParts><Abstract><Para>Create new tensors pointing to the same memory region but with different sizes.<\/Para><\/Abstract><Parameters><Parameter><Name>dimensionFormat<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>New format and dimensions for the tensor.<\/Para><\/Discussion><\/Parameter><Parameter><Name>offset<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether offset on each dimensions.<\/Para><\/Discussion><\/Parameter><Parameter><Name>increments<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The step on each dimensions.<\/Para><\/Discussion><\/Parameter><\/Parameters><ResultDiscussion><Para>The new tensors with different format but the same memory content.<\/Para><\/ResultDiscussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 1014,
             "key.doc.name" : "reshaped(_:offset:increments:)",
             "key.doc.parameters" : [
               {
@@ -8960,20 +9039,20 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 371,
-            "key.docoffset" : 30579,
+            "key.docoffset" : 31164,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reshaped<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensionFormat<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main21TensorDimensionFormatO\">TensorDimensionFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>offset<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>increments<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.associatedtype usr=\"s:Sl7ElementQa\">Element<\/ref.associatedtype>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.groupname" : "Collection",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 218,
-            "key.line" : 997,
+            "key.line" : 1014,
             "key.name" : "reshaped(_:offset:increments:)",
             "key.namelength" : 106,
-            "key.nameoffset" : 30965,
-            "key.offset" : 30960,
+            "key.nameoffset" : 31550,
+            "key.offset" : 31545,
             "key.parsed_declaration" : "public func reshaped(\n  _ dimensionFormat: TensorDimensionFormat, offset: [Int]? = nil, increments: [Int]? = nil\n) -> [Element]",
-            "key.parsed_scope.end" : 1001,
-            "key.parsed_scope.start" : 997,
+            "key.parsed_scope.end" : 1018,
+            "key.parsed_scope.start" : 1014,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF\">reshaped(format: TensorFormat, dimensions: [Int], offset: [Int]? = nil, increments: [Int]? = nil) -&gt; [Element]<\/RelatedName>"
@@ -9024,7 +9103,7 @@
       {
         "key.annotated_decl" : "<Declaration>public final class AnyTensorStorage<\/Declaration>",
         "key.bodylength" : 986,
-        "key.bodyoffset" : 31210,
+        "key.bodyoffset" : 31795,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
@@ -9034,30 +9113,30 @@
         "key.line" : 226,
         "key.name" : "AnyTensorStorage",
         "key.namelength" : 16,
-        "key.nameoffset" : 31192,
-        "key.offset" : 31182,
+        "key.nameoffset" : 31777,
+        "key.offset" : 31767,
         "key.parsed_declaration" : "extension AnyTensorStorage",
-        "key.parsed_scope.end" : 1040,
-        "key.parsed_scope.start" : 1004,
+        "key.parsed_scope.end" : 1057,
+        "key.parsed_scope.start" : 1021,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>func toAnyTensor() -&gt; <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type><\/Declaration>",
             "key.bodylength" : 343,
-            "key.bodyoffset" : 31247,
+            "key.bodyoffset" : 31832,
             "key.column" : 8,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toAnyTensor<\/decl.name>() -&gt; <decl.function.returntype><ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 377,
-            "key.line" : 1006,
+            "key.line" : 1023,
             "key.name" : "toAnyTensor()",
             "key.namelength" : 13,
-            "key.nameoffset" : 31219,
-            "key.offset" : 31214,
+            "key.nameoffset" : 31804,
+            "key.offset" : 31799,
             "key.parsed_declaration" : "func toAnyTensor() -> AnyTensor",
-            "key.parsed_scope.end" : 1021,
-            "key.parsed_scope.start" : 1006,
+            "key.parsed_scope.end" : 1038,
+            "key.parsed_scope.start" : 1023,
             "key.substructure" : [
 
             ],
@@ -9068,21 +9147,21 @@
           {
             "key.annotated_decl" : "<Declaration>func toTensor&lt;Element&gt;(_ type: <Type usr=\"s:4main16AnyTensorStorageC02toC0yxxmlF7ElementL_xmfp\">Element<\/Type>.Type) -&gt; <Type usr=\"s:4main16AnyTensorStorageC02toC0yxxmlF7ElementL_xmfp\">Element<\/Type><\/Declaration>",
             "key.bodylength" : 541,
-            "key.bodyoffset" : 31652,
+            "key.bodyoffset" : 32237,
             "key.column" : 8,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toTensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main16AnyTensorStorageC02toC0yxxmlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main16AnyTensorStorageC02toC0yxxmlF7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main16AnyTensorStorageC02toC0yxxmlF7ElementL_xmfp\">Element<\/ref.generic_type_param><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 599,
-            "key.line" : 1023,
+            "key.line" : 1040,
             "key.name" : "toTensor(_:)",
             "key.namelength" : 39,
-            "key.nameoffset" : 31600,
-            "key.offset" : 31595,
+            "key.nameoffset" : 32185,
+            "key.offset" : 32180,
             "key.parsed_declaration" : "func toTensor<Element>(_ type: Element.Type) -> Element",
-            "key.parsed_scope.end" : 1038,
-            "key.parsed_scope.start" : 1023,
+            "key.parsed_scope.end" : 1055,
+            "key.parsed_scope.start" : 1040,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>Element<\/Declaration>",
@@ -9092,14 +9171,14 @@
                 "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>",
                 "key.kind" : "source.lang.swift.decl.generic_type_param",
                 "key.length" : 7,
-                "key.line" : 1023,
+                "key.line" : 1040,
                 "key.name" : "Element",
                 "key.namelength" : 7,
-                "key.nameoffset" : 31609,
-                "key.offset" : 31609,
+                "key.nameoffset" : 32194,
+                "key.offset" : 32194,
                 "key.parsed_declaration" : "func toTensor<Element",
-                "key.parsed_scope.end" : 1023,
-                "key.parsed_scope.start" : 1023,
+                "key.parsed_scope.end" : 1040,
+                "key.parsed_scope.start" : 1040,
                 "key.typename" : "Element.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main16AnyTensorStorageC02toC0yxxmlF7ElementL_xmfp"
@@ -9117,7 +9196,7 @@
       {
         "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 169,
-        "key.bodyoffset" : 32242,
+        "key.bodyoffset" : 32827,
         "key.column" : 15,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 15,
@@ -9131,7 +9210,7 @@
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 23,
-            "key.offset" : 32217
+            "key.offset" : 32802
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
@@ -9146,11 +9225,11 @@
         "key.line" : 463,
         "key.name" : "Tensor",
         "key.namelength" : 6,
-        "key.nameoffset" : 32209,
-        "key.offset" : 32199,
+        "key.nameoffset" : 32794,
+        "key.offset" : 32784,
         "key.parsed_declaration" : "extension Tensor: CustomStringConvertible",
-        "key.parsed_scope.end" : 1047,
-        "key.parsed_scope.start" : 1042,
+        "key.parsed_scope.end" : 1064,
+        "key.parsed_scope.start" : 1059,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -9159,11 +9238,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 32245
+                "key.offset" : 32830
               }
             ],
             "key.bodylength" : 132,
-            "key.bodyoffset" : 32277,
+            "key.bodyoffset" : 32862,
             "key.column" : 14,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.declaration" : "var description: String { get }",
@@ -9188,19 +9267,19 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>description<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 158,
-            "key.line" : 1043,
+            "key.line" : 1060,
             "key.name" : "description",
             "key.namelength" : 11,
-            "key.nameoffset" : 32256,
-            "key.offset" : 32252,
+            "key.nameoffset" : 32841,
+            "key.offset" : 32837,
             "key.overrides" : [
               {
                 "key.usr" : "s:s23CustomStringConvertibleP11descriptionSSvp"
               }
             ],
             "key.parsed_declaration" : "public var description: String",
-            "key.parsed_scope.end" : 1046,
-            "key.parsed_scope.start" : 1043,
+            "key.parsed_scope.end" : 1063,
+            "key.parsed_scope.start" : 1060,
             "key.typename" : "String",
             "key.typeusr" : "$sSSD",
             "key.usr" : "s:s23CustomStringConvertibleP11descriptionSSvp"
@@ -9217,25 +9296,25 @@
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 32414
+            "key.offset" : 32999
           }
         ],
         "key.bodylength" : 2627,
-        "key.bodyoffset" : 32566,
+        "key.bodyoffset" : 33151,
         "key.column" : 6,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCDimensions<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensions<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 2762,
-        "key.line" : 1050,
+        "key.line" : 1067,
         "key.name" : "toCDimensions(_:)",
         "key.namelength" : 35,
-        "key.nameoffset" : 32437,
-        "key.offset" : 32432,
+        "key.nameoffset" : 33022,
+        "key.offset" : 33017,
         "key.parsed_declaration" : "func toCDimensions(_ dimensions: [Int]?) -> (\n  Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32\n)",
-        "key.parsed_scope.end" : 1119,
-        "key.parsed_scope.start" : 1050,
+        "key.parsed_scope.end" : 1136,
+        "key.parsed_scope.start" : 1067,
         "key.substructure" : [
 
         ],
@@ -9250,25 +9329,25 @@
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 35196
+            "key.offset" : 35781
           }
         ],
         "key.bodylength" : 2625,
-        "key.bodyoffset" : 35272,
+        "key.bodyoffset" : 35857,
         "key.column" : 6,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCDimensionsArray<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dimensions<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct>]<\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 2684,
-        "key.line" : 1122,
+        "key.line" : 1139,
         "key.name" : "toCDimensionsArray(_:)",
         "key.namelength" : 40,
-        "key.nameoffset" : 35219,
-        "key.offset" : 35214,
+        "key.nameoffset" : 35804,
+        "key.offset" : 35799,
         "key.parsed_declaration" : "func toCDimensionsArray(_ dimensions: [Int]?) -> [Int32]",
-        "key.parsed_scope.end" : 1189,
-        "key.parsed_scope.start" : 1122,
+        "key.parsed_scope.end" : 1206,
+        "key.parsed_scope.start" : 1139,
         "key.substructure" : [
 
         ],
@@ -9283,25 +9362,25 @@
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 37900
+            "key.offset" : 38485
           }
         ],
         "key.bodylength" : 1503,
-        "key.bodyoffset" : 38046,
+        "key.bodyoffset" : 38631,
         "key.column" : 6,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>fromCDimensions<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>dim<\/decl.var.parameter.name>: <decl.var.parameter.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 1632,
-        "key.line" : 1192,
+        "key.line" : 1209,
         "key.name" : "fromCDimensions(_:)",
         "key.namelength" : 112,
-        "key.nameoffset" : 37923,
-        "key.offset" : 37918,
+        "key.nameoffset" : 38508,
+        "key.offset" : 38503,
         "key.parsed_declaration" : "func fromCDimensions(\n  _ dim: (Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32)\n) -> [Int]",
-        "key.parsed_scope.end" : 1237,
-        "key.parsed_scope.start" : 1192,
+        "key.parsed_scope.end" : 1254,
+        "key.parsed_scope.start" : 1209,
         "key.substructure" : [
 
         ],
@@ -9316,25 +9395,25 @@
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 39552
+            "key.offset" : 40137
           }
         ],
         "key.bodylength" : 307,
-        "key.bodyoffset" : 39658,
+        "key.bodyoffset" : 40243,
         "key.column" : 6,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>fromCTensorIncrements<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>cTensor<\/decl.var.parameter.name>: <decl.var.parameter.type>UnsafeMutablePointer&lt;ccv_nnc_tensor_t&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 396,
-        "key.line" : 1240,
+        "key.line" : 1257,
         "key.name" : "fromCTensorIncrements(_:)",
         "key.namelength" : 72,
-        "key.nameoffset" : 39575,
-        "key.offset" : 39570,
+        "key.nameoffset" : 40160,
+        "key.offset" : 40155,
         "key.parsed_declaration" : "func fromCTensorIncrements(_ cTensor: UnsafeMutablePointer<ccv_nnc_tensor_t>) -> [Int]",
-        "key.parsed_scope.end" : 1249,
-        "key.parsed_scope.start" : 1240,
+        "key.parsed_scope.end" : 1266,
+        "key.parsed_scope.start" : 1257,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>let type: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -9344,14 +9423,14 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>type<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 36,
-            "key.line" : 1241,
+            "key.line" : 1258,
             "key.name" : "type",
             "key.namelength" : 4,
-            "key.nameoffset" : 39665,
-            "key.offset" : 39661,
+            "key.nameoffset" : 40250,
+            "key.offset" : 40246,
             "key.parsed_declaration" : "let type = Int(cTensor.pointee.type)",
-            "key.parsed_scope.end" : 1241,
-            "key.parsed_scope.start" : 1241,
+            "key.parsed_scope.end" : 1258,
+            "key.parsed_scope.start" : 1258,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:s4type2ofq_x_tr0_lF\">type(of:)<\/RelatedName>"
@@ -9369,14 +9448,14 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>inc<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 118,
-            "key.line" : 1245,
+            "key.line" : 1262,
             "key.name" : "inc",
             "key.namelength" : 3,
-            "key.nameoffset" : 39820,
-            "key.offset" : 39816,
+            "key.nameoffset" : 40405,
+            "key.offset" : 40401,
             "key.parsed_declaration" : "let inc = UnsafeMutableRawPointer(cTensor).bindMemory(\n  to: ccv_nnc_tensor_view_t.self, capacity: 1\n).pointee.inc",
-            "key.parsed_scope.end" : 1245,
-            "key.parsed_scope.start" : 1245,
+            "key.parsed_scope.end" : 1262,
+            "key.parsed_scope.start" : 1262,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main21fromCTensorIncrementsyXeXeF3incL_Xevp"
@@ -9393,25 +9472,25 @@
           {
             "key.attribute" : "source.decl.attribute.usableFromInline",
             "key.length" : 17,
-            "key.offset" : 39968
+            "key.offset" : 40553
           }
         ],
         "key.bodylength" : 330,
-        "key.bodyoffset" : 40119,
+        "key.bodyoffset" : 40704,
         "key.column" : 6,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@usableFromInline<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>toCTensorParams<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>kind<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main10DeviceKindO\">DeviceKind<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dataType<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main8DataTypeO\">DataType<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>format<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main12TensorFormatO\">TensorFormat<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>dimensions<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.struct usr=\"s:Si\">Int<\/ref.struct>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>ccv_nnc_tensor_param_t<\/decl.function.returntype><\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 464,
-        "key.line" : 1252,
+        "key.line" : 1269,
         "key.name" : "toCTensorParams(_:dataType:format:dimensions:)",
         "key.namelength" : 100,
-        "key.nameoffset" : 39991,
-        "key.offset" : 39986,
+        "key.nameoffset" : 40576,
+        "key.offset" : 40571,
         "key.parsed_declaration" : "func toCTensorParams(\n  _ kind: DeviceKind, dataType: DataType, format: TensorFormat, dimensions: [Int]\n) -> ccv_nnc_tensor_param_t",
-        "key.parsed_scope.end" : 1266,
-        "key.parsed_scope.start" : 1252,
+        "key.parsed_scope.end" : 1283,
+        "key.parsed_scope.start" : 1269,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -9421,14 +9500,14 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 37,
-            "key.line" : 1255,
+            "key.line" : 1272,
             "key.name" : "params",
             "key.namelength" : 6,
-            "key.nameoffset" : 40126,
-            "key.offset" : 40122,
+            "key.nameoffset" : 40711,
+            "key.offset" : 40707,
             "key.parsed_declaration" : "var params = ccv_nnc_tensor_param_t()",
-            "key.parsed_scope.end" : 1255,
-            "key.parsed_scope.start" : 1255,
+            "key.parsed_scope.end" : 1272,
+            "key.parsed_scope.start" : 1272,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main15toCTensorParamsyXeXeF6paramsL_Xevp"
