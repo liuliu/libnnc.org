@@ -1,26 +1,26 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 3749,
+    "key.length" : 6423,
     "key.offset" : 0,
     "key.substructure" : [
       {
         "key.annotated_decl" : "<Declaration>public final class <Type usr=\"s:4main5ModelC\">Model<\/Type>.Parameters : <Type usr=\"s:4main5ModelC2IOC\">IO<\/Type><\/Declaration>",
-        "key.bodylength" : 679,
+        "key.bodylength" : 2603,
         "key.bodyoffset" : 42,
         "key.column" : 22,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<decl.name>Parameters<\/decl.name> : <ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 708,
+        "key.length" : 2632,
         "key.line" : 81,
         "key.name" : "Model.Parameters",
         "key.namelength" : 16,
         "key.nameoffset" : 24,
         "key.offset" : 14,
         "key.parsed_declaration" : "extension Model.Parameters",
-        "key.parsed_scope.end" : 25,
+        "key.parsed_scope.end" : 92,
         "key.parsed_scope.start" : 3,
         "key.substructure" : [
           {
@@ -69,12 +69,480 @@
             "key.parsed_declaration" : "public func copy(from parameters: Model.Parameters)",
             "key.parsed_scope.end" : 24,
             "key.parsed_scope.start" : 9,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAA9AnyTensor_p_tF\">copy(from: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF\">copy&lt;Element&gt;(from: DynamicGraph.Tensor&lt;Element&gt;) where Element : TensorNumeric<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy2toyAA9AnyTensor_p_tF\">copy(to: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF\">copy&lt;Element&gt;(to: DynamicGraph.Tensor&lt;Element&gt;) where Element : TensorNumeric<\/RelatedName>"
+              }
+            ],
             "key.substructure" : [
 
             ],
             "key.typename" : "(Model.Parameters) -> (Model.Parameters) -> ()",
             "key.typeusr" : "$s4fromy4main5ModelC10ParametersC_tcD",
             "key.usr" : "s:4main5ModelC10ParametersC4copy4fromyAE_tF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func copy(from tensor: <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 873
+              }
+            ],
+            "key.bodylength" : 201,
+            "key.bodyoffset" : 915,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc.column" : 15,
+            "key.doc.comment" : " Copy parameters from a tensor.\n\n - Parameter tensor: The tensor contains some values, it must match the parameters copy to.",
+            "key.doc.declaration" : "public func copy(from tensor: AnyTensor)",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"31\" column=\"15\"><Name>copy(from:)<\/Name><USR>s:4main5ModelC10ParametersC4copy4fromyAA9AnyTensor_p_tF<\/USR><Declaration>public func copy(from tensor: AnyTensor)<\/Declaration><CommentParts><Abstract><Para>Copy parameters from a tensor.<\/Para><\/Abstract><Parameters><Parameter><Name>tensor<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The tensor contains some values, it must match the parameters copy to.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 31,
+            "key.doc.name" : "copy(from:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The tensor contains some values, it must match the parameters copy to."
+                  }
+                ],
+                "name" : "tensor"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 146,
+            "key.docoffset" : 724,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>copy<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>from<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tensor<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 237,
+            "key.line" : 31,
+            "key.name" : "copy(from:)",
+            "key.namelength" : 28,
+            "key.nameoffset" : 885,
+            "key.offset" : 880,
+            "key.parsed_declaration" : "public func copy(from tensor: AnyTensor)",
+            "key.parsed_scope.end" : 39,
+            "key.parsed_scope.start" : 31,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAE_tF\">copy(from: Model.Parameters)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF\">copy&lt;Element&gt;(from: DynamicGraph.Tensor&lt;Element&gt;) where Element : TensorNumeric<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy2toyAA9AnyTensor_p_tF\">copy(to: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF\">copy&lt;Element&gt;(to: DynamicGraph.Tensor&lt;Element&gt;) where Element : TensorNumeric<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Model.Parameters) -> (AnyTensor) -> ()",
+            "key.typeusr" : "$s4fromy4main9AnyTensor_p_tcD",
+            "key.usr" : "s:4main5ModelC10ParametersC4copy4fromyAA9AnyTensor_p_tF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func copy&lt;Element&gt;(from tensor: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC6TensorC\">Tensor<\/Type>&lt;<Type usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\">Element<\/Type>&gt;) where <Type usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1270
+              }
+            ],
+            "key.bodylength" : 35,
+            "key.bodyoffset" : 1355,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc.column" : 15,
+            "key.doc.comment" : " Copy parameters from a tensor.\n\n - Parameter tensor: The tensor contains some values, it must match the parameters copy to.",
+            "key.doc.declaration" : "public func copy<Element>(from tensor: DynamicGraph.Tensor<Element>) where Element : main.TensorNumeric",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"46\" column=\"15\"><Name>copy(from:)<\/Name><USR>s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF<\/USR><Declaration>public func copy&lt;Element&gt;(from tensor: DynamicGraph.Tensor&lt;Element&gt;) where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Copy parameters from a tensor.<\/Para><\/Abstract><Parameters><Parameter><Name>tensor<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The tensor contains some values, it must match the parameters copy to.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 46,
+            "key.doc.name" : "copy(from:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The tensor contains some values, it must match the parameters copy to."
+                  }
+                ],
+                "name" : "tensor"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 146,
+            "key.docoffset" : 1121,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>copy<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>from<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tensor<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC6TensorC\">Tensor<\/ref.class>&lt;<ref.generic_type_param usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 114,
+            "key.line" : 46,
+            "key.name" : "copy(from:)",
+            "key.namelength" : 71,
+            "key.nameoffset" : 1282,
+            "key.offset" : 1277,
+            "key.parsed_declaration" : "public func copy<Element: TensorNumeric>(from tensor: DynamicGraph.Tensor<Element>)",
+            "key.parsed_scope.end" : 48,
+            "key.parsed_scope.start" : 46,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAE_tF\">copy(from: Model.Parameters)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAA9AnyTensor_p_tF\">copy(from: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy2toyAA9AnyTensor_p_tF\">copy(to: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF\">copy&lt;Element&gt;(to: DynamicGraph.Tensor&lt;Element&gt;) where Element : TensorNumeric<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+                "key.column" : 20,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 13,
+                    "key.offset" : 1296
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>Element<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "TensorNumeric"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 22,
+                "key.line" : 46,
+                "key.name" : "Element",
+                "key.namelength" : 7,
+                "key.nameoffset" : 1287,
+                "key.offset" : 1287,
+                "key.parsed_declaration" : "public func copy<Element: TensorNumeric",
+                "key.parsed_scope.end" : 46,
+                "key.parsed_scope.start" : 46,
+                "key.typename" : "Element.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp"
+              }
+            ],
+            "key.typename" : "<Element where Element : TensorNumeric> (Model.Parameters) -> (DynamicGraph.Tensor<Element>) -> ()",
+            "key.typeusr" : "$s4fromy4main12DynamicGraphC6TensorCy_xG_tcAB0E7NumericRzluD",
+            "key.usr" : "s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func copy(to tensor: <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1534
+              }
+            ],
+            "key.bodylength" : 202,
+            "key.bodyoffset" : 1574,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc.column" : 15,
+            "key.doc.comment" : " Copy parameters to a tensor.\n\n - Parameter tensor: The tensor to copy to, it must match the parameters copy from.",
+            "key.doc.declaration" : "public func copy(to tensor: AnyTensor)",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"55\" column=\"15\"><Name>copy(to:)<\/Name><USR>s:4main5ModelC10ParametersC4copy2toyAA9AnyTensor_p_tF<\/USR><Declaration>public func copy(to tensor: AnyTensor)<\/Declaration><CommentParts><Abstract><Para>Copy parameters to a tensor.<\/Para><\/Abstract><Parameters><Parameter><Name>tensor<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The tensor to copy to, it must match the parameters copy from.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 55,
+            "key.doc.name" : "copy(to:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The tensor to copy to, it must match the parameters copy from."
+                  }
+                ],
+                "name" : "tensor"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 136,
+            "key.docoffset" : 1395,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>copy<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>to<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tensor<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 236,
+            "key.line" : 55,
+            "key.name" : "copy(to:)",
+            "key.namelength" : 26,
+            "key.nameoffset" : 1546,
+            "key.offset" : 1541,
+            "key.parsed_declaration" : "public func copy(to tensor: AnyTensor)",
+            "key.parsed_scope.end" : 63,
+            "key.parsed_scope.start" : 55,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAE_tF\">copy(from: Model.Parameters)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAA9AnyTensor_p_tF\">copy(from: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF\">copy&lt;Element&gt;(from: DynamicGraph.Tensor&lt;Element&gt;) where Element : TensorNumeric<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF\">copy&lt;Element&gt;(to: DynamicGraph.Tensor&lt;Element&gt;) where Element : TensorNumeric<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Model.Parameters) -> (AnyTensor) -> ()",
+            "key.typeusr" : "$s2toy4main9AnyTensor_p_tcD",
+            "key.usr" : "s:4main5ModelC10ParametersC4copy2toyAA9AnyTensor_p_tF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func copied&lt;Element&gt;(_ type: <Type usr=\"s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF7ElementL_xmfp\">Element<\/Type>.Type = Element.self) -&gt; <Type usr=\"s:4main6TensorV\">Tensor<\/Type>&lt;<Type usr=\"s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF7ElementL_xmfp\">Element<\/Type>&gt; where <Type usr=\"s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF7ElementL_xmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1890
+              }
+            ],
+            "key.bodylength" : 391,
+            "key.bodyoffset" : 1992,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc.column" : 15,
+            "key.doc.comment" : " Copy parameter out into a tensor.\n\n - Parameter type: The element type of a tensor.",
+            "key.doc.declaration" : "public func copied<Element>(_ type: Element.Type = Element.self) -> Tensor<Element> where Element : main.TensorNumeric",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"70\" column=\"15\"><Name>copied(_:)<\/Name><USR>s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF<\/USR><Declaration>public func copied&lt;Element&gt;(_ type: Element.Type = Element.self) -&gt; Tensor&lt;Element&gt; where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Copy parameter out into a tensor.<\/Para><\/Abstract><Parameters><Parameter><Name>type<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The element type of a tensor.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 70,
+            "key.doc.name" : "copied(_:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The element type of a tensor."
+                  }
+                ],
+                "name" : "type"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 106,
+            "key.docoffset" : 1781,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>copied<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>type<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>.Type<\/decl.var.parameter.type> = Element.self<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main6TensorV\">Tensor<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 487,
+            "key.line" : 70,
+            "key.name" : "copied(_:)",
+            "key.namelength" : 67,
+            "key.nameoffset" : 1902,
+            "key.offset" : 1897,
+            "key.parsed_declaration" : "public func copied<Element: TensorNumeric>(_ type: Element.Type = Element.self) -> Tensor<Element>",
+            "key.parsed_scope.end" : 82,
+            "key.parsed_scope.start" : 70,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+                "key.column" : 22,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 13,
+                    "key.offset" : 1918
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>Element<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "TensorNumeric"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 22,
+                "key.line" : 70,
+                "key.name" : "Element",
+                "key.namelength" : 7,
+                "key.nameoffset" : 1909,
+                "key.offset" : 1909,
+                "key.parsed_declaration" : "public func copied<Element: TensorNumeric",
+                "key.parsed_scope.end" : 70,
+                "key.parsed_scope.start" : 70,
+                "key.typename" : "Element.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF7ElementL_xmfp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 72,
+                "key.line" : 78,
+                "key.name" : "params",
+                "key.namelength" : 6,
+                "key.nameoffset" : 2129,
+                "key.offset" : 2125,
+                "key.parsed_declaration" : "let params = ccv_cnnp_model_parameter_tensor_params(toModel._model, _io)",
+                "key.parsed_scope.end" : 78,
+                "key.parsed_scope.start" : 78,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF6paramsL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let output: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>output<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 47,
+                "key.line" : 79,
+                "key.name" : "output",
+                "key.namelength" : 6,
+                "key.nameoffset" : 2206,
+                "key.offset" : 2202,
+                "key.parsed_declaration" : "let output = ccv_nnc_tensor_new(nil, params, 0)",
+                "key.parsed_scope.end" : 79,
+                "key.parsed_scope.start" : 79,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF6outputL_Xevp"
+              }
+            ],
+            "key.typename" : "<Element where Element : TensorNumeric> (Model.Parameters) -> (Element.Type) -> Tensor<Element>",
+            "key.typeusr" : "$sy4main6TensorVyxGxmcAA0B7NumericRzluD",
+            "key.usr" : "s:4main5ModelC10ParametersC6copiedyAA6TensorVyxGxmAA0E7NumericRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func copy&lt;Element&gt;(to tensor: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC6TensorC\">Tensor<\/Type>&lt;<Type usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\">Element<\/Type>&gt;) where <Type usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 2527
+              }
+            ],
+            "key.bodylength" : 33,
+            "key.bodyoffset" : 2610,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc.column" : 15,
+            "key.doc.comment" : " Copy parameters to a tensor.\n\n - Parameter tensor: The tensor to copy to, it must match the parameters copy from.",
+            "key.doc.declaration" : "public func copy<Element>(to tensor: DynamicGraph.Tensor<Element>) where Element : main.TensorNumeric",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"89\" column=\"15\"><Name>copy(to:)<\/Name><USR>s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF<\/USR><Declaration>public func copy&lt;Element&gt;(to tensor: DynamicGraph.Tensor&lt;Element&gt;) where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Copy parameters to a tensor.<\/Para><\/Abstract><Parameters><Parameter><Name>tensor<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The tensor to copy to, it must match the parameters copy from.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 89,
+            "key.doc.name" : "copy(to:)",
+            "key.doc.parameters" : [
+              {
+                "discussion" : [
+                  {
+                    "Para" : "The tensor to copy to, it must match the parameters copy from."
+                  }
+                ],
+                "name" : "tensor"
+              }
+            ],
+            "key.doc.type" : "Function",
+            "key.doclength" : 136,
+            "key.docoffset" : 2388,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>copy<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>to<\/decl.var.parameter.argument_label> <decl.var.parameter.name>tensor<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC6TensorC\">Tensor<\/ref.class>&lt;<ref.generic_type_param usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 110,
+            "key.line" : 89,
+            "key.name" : "copy(to:)",
+            "key.namelength" : 69,
+            "key.nameoffset" : 2539,
+            "key.offset" : 2534,
+            "key.parsed_declaration" : "public func copy<Element: TensorNumeric>(to tensor: DynamicGraph.Tensor<Element>)",
+            "key.parsed_scope.end" : 91,
+            "key.parsed_scope.start" : 89,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAE_tF\">copy(from: Model.Parameters)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAA9AnyTensor_p_tF\">copy(from: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy4fromyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF\">copy&lt;Element&gt;(from: DynamicGraph.Tensor&lt;Element&gt;) where Element : TensorNumeric<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC4copy2toyAA9AnyTensor_p_tF\">copy(to: AnyTensor)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>Element : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+                "key.column" : 20,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 13,
+                    "key.offset" : 2553
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>Element<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "TensorNumeric"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 22,
+                "key.line" : 89,
+                "key.name" : "Element",
+                "key.namelength" : 7,
+                "key.nameoffset" : 2544,
+                "key.offset" : 2544,
+                "key.parsed_declaration" : "public func copy<Element: TensorNumeric",
+                "key.parsed_scope.end" : 89,
+                "key.parsed_scope.start" : 89,
+                "key.typename" : "Element.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF7ElementL_xmfp"
+              }
+            ],
+            "key.typename" : "<Element where Element : TensorNumeric> (Model.Parameters) -> (DynamicGraph.Tensor<Element>) -> ()",
+            "key.typeusr" : "$s2toy4main12DynamicGraphC6TensorCy_xG_tcAB0E7NumericRzluD",
+            "key.usr" : "s:4main5ModelC10ParametersC4copy2toyAA12DynamicGraphC6TensorCy_xG_tAA0H7NumericRzlF"
           }
         ],
         "key.typename" : "Model.Parameters.Type",
@@ -83,22 +551,22 @@
       },
       {
         "key.annotated_decl" : "<Declaration>public final class <Type usr=\"s:4main5ModelC\">Model<\/Type>.Parameters : <Type usr=\"s:4main5ModelC2IOC\">IO<\/Type><\/Declaration>",
-        "key.bodylength" : 1418,
-        "key.bodyoffset" : 752,
+        "key.bodylength" : 1440,
+        "key.bodyoffset" : 2676,
         "key.column" : 22,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<decl.name>Parameters<\/decl.name> : <ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 1447,
+        "key.length" : 1469,
         "key.line" : 81,
         "key.name" : "Model.Parameters",
         "key.namelength" : 16,
-        "key.nameoffset" : 734,
-        "key.offset" : 724,
+        "key.nameoffset" : 2658,
+        "key.offset" : 2648,
         "key.parsed_declaration" : "extension Model.Parameters",
-        "key.parsed_scope.end" : 64,
-        "key.parsed_scope.start" : 27,
+        "key.parsed_scope.end" : 132,
+        "key.parsed_scope.start" : 94,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -107,11 +575,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1173
+                "key.offset" : 3097
               }
             ],
-            "key.bodylength" : 882,
-            "key.bodyoffset" : 1286,
+            "key.bodylength" : 904,
+            "key.bodyoffset" : 3210,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
@@ -123,8 +591,8 @@
               }
             ],
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"37\" column=\"15\"><Name>lerp(_:to:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF<\/USR><Declaration>public func lerp(_ weight: Float, to parameters: Model.Parameters, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Interpolate from current parameters to the another.<\/Para><\/Abstract><Parameters><Parameter><Name>weight<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How much the other parameter should weight, it must be between [0, 1].<\/Para><\/Discussion><\/Parameter><Parameter><Name>parameters<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The parameters of another model, it must match the parameters to update.<\/Para><\/Discussion><\/Parameter><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to apply the lerp operation.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>parameters = (1 - weight) * parameters + weight * other<\/Para><\/Discussion><\/CommentParts><\/Function>",
-            "key.doc.line" : 37,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"104\" column=\"15\"><Name>lerp(_:to:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF<\/USR><Declaration>public func lerp(_ weight: Float, to parameters: Model.Parameters, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Interpolate from current parameters to the another.<\/Para><\/Abstract><Parameters><Parameter><Name>weight<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>How much the other parameter should weight, it must be between [0, 1].<\/Para><\/Discussion><\/Parameter><Parameter><Name>parameters<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The parameters of another model, it must match the parameters to update.<\/Para><\/Discussion><\/Parameter><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to apply the lerp operation.<\/Para><\/Discussion><\/Parameter><\/Parameters><Discussion><Para>parameters = (1 - weight) * parameters + weight * other<\/Para><\/Discussion><\/CommentParts><\/Function>",
+            "key.doc.line" : 104,
             "key.doc.name" : "lerp(_:to:streamContext:)",
             "key.doc.parameters" : [
               {
@@ -154,19 +622,19 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 415,
-            "key.docoffset" : 755,
+            "key.docoffset" : 2679,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>lerp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>weight<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>to<\/decl.var.parameter.argument_label> <decl.var.parameter.name>parameters<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 989,
-            "key.line" : 37,
+            "key.length" : 1011,
+            "key.line" : 104,
             "key.name" : "lerp(_:to:streamContext:)",
             "key.namelength" : 99,
-            "key.nameoffset" : 1185,
-            "key.offset" : 1180,
+            "key.nameoffset" : 3109,
+            "key.offset" : 3104,
             "key.parsed_declaration" : "public func lerp(\n  _ weight: Float, to parameters: Model.Parameters, streamContext: StreamContext? = nil\n)",
-            "key.parsed_scope.end" : 63,
-            "key.parsed_scope.start" : 37,
+            "key.parsed_scope.end" : 131,
+            "key.parsed_scope.start" : 104,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -176,14 +644,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 49,
-                "key.line" : 54,
+                "key.line" : 121,
                 "key.name" : "params",
                 "key.namelength" : 6,
-                "key.nameoffset" : 1704,
-                "key.offset" : 1700,
+                "key.nameoffset" : 3628,
+                "key.offset" : 3624,
                 "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
-                "key.parsed_scope.end" : 54,
-                "key.parsed_scope.start" : 54,
+                "key.parsed_scope.end" : 121,
+                "key.parsed_scope.start" : 121,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF6paramsL_Xevp"
@@ -196,14 +664,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cmd<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 58,
-                "key.line" : 57,
+                "key.line" : 124,
                 "key.name" : "cmd",
                 "key.namelength" : 3,
-                "key.nameoffset" : 1861,
-                "key.offset" : 1857,
+                "key.nameoffset" : 3785,
+                "key.offset" : 3781,
                 "key.parsed_declaration" : "let cmd = ccv_nnc_cmd(CCV_NNC_ADD_FORWARD, nil, params, 0)",
-                "key.parsed_scope.end" : 57,
-                "key.parsed_scope.start" : 57,
+                "key.parsed_scope.end" : 124,
+                "key.parsed_scope.start" : 124,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF3cmdL_Xevp"
@@ -216,14 +684,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>?<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 25,
-                "key.line" : 58,
+                "key.line" : 125,
                 "key.name" : "graph",
                 "key.namelength" : 5,
-                "key.nameoffset" : 1924,
-                "key.offset" : 1920,
+                "key.nameoffset" : 3848,
+                "key.offset" : 3844,
                 "key.parsed_declaration" : "let graph = toModel.graph",
-                "key.parsed_scope.end" : 58,
-                "key.parsed_scope.start" : 58,
+                "key.parsed_scope.end" : 125,
+                "key.parsed_scope.start" : 125,
                 "key.typename" : "DynamicGraph?",
                 "key.typeusr" : "$s4main12DynamicGraphCSgD",
                 "key.usr" : "s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF5graphL_AA12DynamicGraphCSgvp"
@@ -236,14 +704,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_streamContext<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct>?<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 69,
-                "key.line" : 59,
+                "key.line" : 126,
                 "key.name" : "_streamContext",
                 "key.namelength" : 14,
-                "key.nameoffset" : 1954,
-                "key.offset" : 1950,
+                "key.nameoffset" : 3878,
+                "key.offset" : 3874,
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph?.streamContext)?._stream",
-                "key.parsed_scope.end" : 59,
-                "key.parsed_scope.start" : 59,
+                "key.parsed_scope.end" : 126,
+                "key.parsed_scope.start" : 126,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main5ModelC10ParametersC4lerp_2to13streamContextySf_AeA06StreamG0CSgtF01_fG0L_s13OpaquePointerVSgvp"
@@ -260,41 +728,41 @@
       },
       {
         "key.annotated_decl" : "<Declaration>public final class <Type usr=\"s:4main5ModelC\">Model<\/Type>.Parameters : <Type usr=\"s:4main5ModelC2IOC\">IO<\/Type><\/Declaration>",
-        "key.bodylength" : 1546,
-        "key.bodyoffset" : 2201,
+        "key.bodylength" : 1562,
+        "key.bodyoffset" : 4147,
         "key.column" : 22,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<decl.name>Parameters<\/decl.name> : <ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 1575,
+        "key.length" : 1591,
         "key.line" : 81,
         "key.name" : "Model.Parameters",
         "key.namelength" : 16,
-        "key.nameoffset" : 2183,
-        "key.offset" : 2173,
+        "key.nameoffset" : 4129,
+        "key.offset" : 4119,
         "key.parsed_declaration" : "extension Model.Parameters",
-        "key.parsed_scope.end" : 108,
-        "key.parsed_scope.start" : 66,
+        "key.parsed_scope.end" : 176,
+        "key.parsed_scope.start" : 134,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>func clamp(min: <Type usr=\"s:Sf\">Float<\/Type>?, max: <Type usr=\"s:Sf\">Float<\/Type>?, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?)<\/Declaration>",
-            "key.bodylength" : 761,
-            "key.bodyoffset" : 2273,
+            "key.bodylength" : 777,
+            "key.bodyoffset" : 4219,
             "key.column" : 8,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>min<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>max<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 831,
-            "key.line" : 67,
+            "key.length" : 847,
+            "key.line" : 135,
             "key.name" : "clamp(min:max:streamContext:)",
             "key.namelength" : 62,
-            "key.nameoffset" : 2209,
-            "key.offset" : 2204,
+            "key.nameoffset" : 4155,
+            "key.offset" : 4150,
             "key.parsed_declaration" : "func clamp(min: Float?, max: Float?, streamContext: StreamContext?)",
-            "key.parsed_scope.end" : 86,
-            "key.parsed_scope.start" : 67,
+            "key.parsed_scope.end" : 154,
+            "key.parsed_scope.start" : 135,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp_13streamContextySNySfG_AA06StreamF0CSgtF\">clamp(_: ClosedRange&lt;Float&gt;, streamContext: StreamContext? = nil)<\/RelatedName>"
@@ -315,14 +783,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 49,
-                "key.line" : 77,
+                "key.line" : 145,
                 "key.name" : "params",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2575,
-                "key.offset" : 2571,
+                "key.nameoffset" : 4521,
+                "key.offset" : 4517,
                 "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
-                "key.parsed_scope.end" : 77,
-                "key.parsed_scope.start" : 77,
+                "key.parsed_scope.end" : 145,
+                "key.parsed_scope.start" : 145,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF6paramsL_Xevp"
@@ -335,14 +803,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cmd<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 60,
-                "key.line" : 81,
+                "key.line" : 149,
                 "key.name" : "cmd",
                 "key.namelength" : 3,
-                "key.nameoffset" : 2768,
-                "key.offset" : 2764,
+                "key.nameoffset" : 4714,
+                "key.offset" : 4710,
                 "key.parsed_declaration" : "let cmd = ccv_nnc_cmd(CCV_NNC_CLAMP_FORWARD, nil, params, 0)",
-                "key.parsed_scope.end" : 81,
-                "key.parsed_scope.start" : 81,
+                "key.parsed_scope.end" : 149,
+                "key.parsed_scope.start" : 149,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF3cmdL_Xevp"
@@ -355,14 +823,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>?<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 25,
-                "key.line" : 82,
+                "key.line" : 150,
                 "key.name" : "graph",
                 "key.namelength" : 5,
-                "key.nameoffset" : 2833,
-                "key.offset" : 2829,
+                "key.nameoffset" : 4779,
+                "key.offset" : 4775,
                 "key.parsed_declaration" : "let graph = toModel.graph",
-                "key.parsed_scope.end" : 82,
-                "key.parsed_scope.start" : 82,
+                "key.parsed_scope.end" : 150,
+                "key.parsed_scope.start" : 150,
                 "key.typename" : "DynamicGraph?",
                 "key.typeusr" : "$s4main12DynamicGraphCSgD",
                 "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF5graphL_AA12DynamicGraphCSgvp"
@@ -375,14 +843,14 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_streamContext<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct>?<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 69,
-                "key.line" : 83,
+                "key.line" : 151,
                 "key.name" : "_streamContext",
                 "key.namelength" : 14,
-                "key.nameoffset" : 2863,
-                "key.offset" : 2859,
+                "key.nameoffset" : 4809,
+                "key.offset" : 4805,
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph?.streamContext)?._stream",
-                "key.parsed_scope.end" : 83,
-                "key.parsed_scope.start" : 83,
+                "key.parsed_scope.end" : 151,
+                "key.parsed_scope.start" : 151,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF01_gH0L_s13OpaquePointerVSgvp"
@@ -399,35 +867,35 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3101
+                "key.offset" : 5063
               }
             ],
             "key.bodylength" : 89,
-            "key.bodyoffset" : 3186,
+            "key.bodyoffset" : 5148,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : "Clamp current parameters between two values.",
             "key.doc.declaration" : "public func clamp(_ range: ClosedRange<Float>, streamContext: StreamContext? = nil)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"91\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextySNySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: ClosedRange&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters between two values.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 91,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"159\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextySNySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: ClosedRange&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters between two values.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 159,
             "key.doc.name" : "clamp(_:streamContext:)",
             "key.doc.type" : "Function",
             "key.doclength" : 59,
-            "key.docoffset" : 3039,
+            "key.docoffset" : 5001,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>range<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 168,
-            "key.line" : 91,
+            "key.line" : 159,
             "key.name" : "clamp(_:streamContext:)",
             "key.namelength" : 71,
-            "key.nameoffset" : 3113,
-            "key.offset" : 3108,
+            "key.nameoffset" : 5075,
+            "key.offset" : 5070,
             "key.parsed_declaration" : "public func clamp(_ range: ClosedRange<Float>, streamContext: StreamContext? = nil)",
-            "key.parsed_scope.end" : 93,
-            "key.parsed_scope.start" : 91,
+            "key.parsed_scope.end" : 161,
+            "key.parsed_scope.start" : 159,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF\">clamp(min:max:streamContext:)<\/RelatedName>"
@@ -453,35 +921,35 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3342
+                "key.offset" : 5304
               }
             ],
             "key.bodylength" : 76,
-            "key.bodyoffset" : 3432,
+            "key.bodyoffset" : 5394,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : "Clamp current parameters with a lower bound.",
             "key.doc.declaration" : "public func clamp(_ range: PartialRangeFrom<Float>, streamContext: StreamContext? = nil)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"98\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextys16PartialRangeFromVySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: PartialRangeFrom&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters with a lower bound.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 98,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"166\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextys16PartialRangeFromVySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: PartialRangeFrom&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters with a lower bound.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 166,
             "key.doc.name" : "clamp(_:streamContext:)",
             "key.doc.type" : "Function",
             "key.doclength" : 59,
-            "key.docoffset" : 3280,
+            "key.docoffset" : 5242,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>range<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s16PartialRangeFromV\">PartialRangeFrom<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 160,
-            "key.line" : 98,
+            "key.line" : 166,
             "key.name" : "clamp(_:streamContext:)",
             "key.namelength" : 76,
-            "key.nameoffset" : 3354,
-            "key.offset" : 3349,
+            "key.nameoffset" : 5316,
+            "key.offset" : 5311,
             "key.parsed_declaration" : "public func clamp(_ range: PartialRangeFrom<Float>, streamContext: StreamContext? = nil)",
-            "key.parsed_scope.end" : 100,
-            "key.parsed_scope.start" : 98,
+            "key.parsed_scope.end" : 168,
+            "key.parsed_scope.start" : 166,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF\">clamp(min:max:streamContext:)<\/RelatedName>"
@@ -507,35 +975,35 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3576
+                "key.offset" : 5538
               }
             ],
             "key.bodylength" : 76,
-            "key.bodyoffset" : 3669,
+            "key.bodyoffset" : 5631,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : "Clamp current parameters with an upper bound.",
             "key.doc.declaration" : "public func clamp(_ range: PartialRangeThrough<Float>, streamContext: StreamContext? = nil)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"105\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextys19PartialRangeThroughVySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: PartialRangeThrough&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters with an upper bound.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 105,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift\" line=\"173\" column=\"15\"><Name>clamp(_:streamContext:)<\/Name><USR>s:4main5ModelC10ParametersC5clamp_13streamContextys19PartialRangeThroughVySfG_AA06StreamF0CSgtF<\/USR><Declaration>public func clamp(_ range: PartialRangeThrough&lt;Float&gt;, streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Clamp current parameters with an upper bound.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 173,
             "key.doc.name" : "clamp(_:streamContext:)",
             "key.doc.type" : "Function",
             "key.doclength" : 60,
-            "key.docoffset" : 3513,
+            "key.docoffset" : 5475,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clamp<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>range<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s19PartialRangeThroughV\">PartialRangeThrough<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 163,
-            "key.line" : 105,
+            "key.line" : 173,
             "key.name" : "clamp(_:streamContext:)",
             "key.namelength" : 79,
-            "key.nameoffset" : 3588,
-            "key.offset" : 3583,
+            "key.nameoffset" : 5550,
+            "key.offset" : 5545,
             "key.parsed_declaration" : "public func clamp(_ range: PartialRangeThrough<Float>, streamContext: StreamContext? = nil)",
-            "key.parsed_scope.end" : 107,
-            "key.parsed_scope.start" : 105,
+            "key.parsed_scope.end" : 175,
+            "key.parsed_scope.start" : 173,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC10ParametersC5clamp3min3max13streamContextySfSg_AjA06StreamH0CSgtF\">clamp(min:max:streamContext:)<\/RelatedName>"
@@ -553,6 +1021,183 @@
             "key.typename" : "(Model.Parameters) -> (PartialRangeThrough<Float>, StreamContext?) -> ()",
             "key.typeusr" : "$s_13streamContextys19PartialRangeThroughVySfG_4main06StreamB0CSgtcD",
             "key.usr" : "s:4main5ModelC10ParametersC5clamp_13streamContextys19PartialRangeThroughVySfG_AA06StreamF0CSgtF"
+          }
+        ],
+        "key.typename" : "Model.Parameters.Type",
+        "key.typeusr" : "$s4main5ModelC10ParametersCmD",
+        "key.usr" : "s:4main5ModelC10ParametersC"
+      },
+      {
+        "key.annotated_decl" : "<Declaration>public final class <Type usr=\"s:4main5ModelC\">Model<\/Type>.Parameters : <Type usr=\"s:4main5ModelC2IOC\">IO<\/Type><\/Declaration>",
+        "key.bodylength" : 681,
+        "key.bodyoffset" : 5740,
+        "key.column" : 22,
+        "key.decl_lang" : "source.lang.swift",
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<decl.name>Parameters<\/decl.name> : <ref.class usr=\"s:4main5ModelC2IOC\">IO<\/ref.class><\/decl.class>",
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 710,
+        "key.line" : 81,
+        "key.name" : "Model.Parameters",
+        "key.namelength" : 16,
+        "key.nameoffset" : 5722,
+        "key.offset" : 5712,
+        "key.parsed_declaration" : "extension Model.Parameters",
+        "key.parsed_scope.end" : 199,
+        "key.parsed_scope.start" : 178,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public enum NormType : <Type usr=\"s:s5Int32V\">Int32<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 5743
+              }
+            ],
+            "key.bodylength" : 22,
+            "key.bodyoffset" : 5772,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.elements" : [
+              {
+                "key.kind" : "source.lang.swift.structure.elem.typeref",
+                "key.length" : 5,
+                "key.offset" : 5765
+              }
+            ],
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <decl.name>NormType<\/decl.name> : <ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.enum>",
+            "key.inheritedtypes" : [
+              {
+                "key.name" : "Int32"
+              }
+            ],
+            "key.kind" : "source.lang.swift.decl.enum",
+            "key.length" : 45,
+            "key.line" : 179,
+            "key.name" : "NormType",
+            "key.namelength" : 8,
+            "key.nameoffset" : 5755,
+            "key.offset" : 5750,
+            "key.parsed_declaration" : "public enum NormType: Int32",
+            "key.parsed_scope.end" : 181,
+            "key.parsed_scope.start" : 179,
+            "key.substructure" : [
+              {
+                "key.kind" : "source.lang.swift.decl.enumcase",
+                "key.length" : 14,
+                "key.namelength" : 0,
+                "key.nameoffset" : 0,
+                "key.offset" : 5777,
+                "key.substructure" : [
+                  {
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case norm2 = 2<\/Declaration>",
+                    "key.column" : 10,
+                    "key.decl_lang" : "source.lang.swift",
+                    "key.elements" : [
+                      {
+                        "key.kind" : "source.lang.swift.structure.elem.init_expr",
+                        "key.length" : 1,
+                        "key.offset" : 5790
+                      }
+                    ],
+                    "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                    "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>norm2<\/decl.name> = <syntaxtype.number>2<\/syntaxtype.number><\/decl.enumelement>",
+                    "key.kind" : "source.lang.swift.decl.enumelement",
+                    "key.length" : 9,
+                    "key.line" : 180,
+                    "key.name" : "norm2",
+                    "key.namelength" : 5,
+                    "key.nameoffset" : 5782,
+                    "key.offset" : 5782,
+                    "key.parsed_declaration" : "case norm2 = 2",
+                    "key.parsed_scope.end" : 180,
+                    "key.parsed_scope.start" : 180,
+                    "key.typename" : "(Model.Parameters.NormType.Type) -> Model.Parameters.NormType",
+                    "key.typeusr" : "$sy4main5ModelC10ParametersC8NormTypeOAGmcD",
+                    "key.usr" : "s:4main5ModelC10ParametersC8NormTypeO5norm2yA2GmF"
+                  }
+                ]
+              }
+            ],
+            "key.typename" : "Model.Parameters.NormType.Type",
+            "key.typeusr" : "$s4main5ModelC10ParametersC8NormTypeOmD",
+            "key.usr" : "s:4main5ModelC10ParametersC8NormTypeO"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func clipGradNorm(maxNorm: <Type usr=\"s:Sf\">Float<\/Type>, normType: <Type usr=\"s:4main5ModelC10ParametersC8NormTypeO\">NormType<\/Type> = .norm2, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 5798
+              }
+            ],
+            "key.bodylength" : 505,
+            "key.bodyoffset" : 5914,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>clipGradNorm<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>maxNorm<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>normType<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.enum usr=\"s:4main5ModelC10ParametersC8NormTypeO\">NormType<\/ref.enum><\/decl.var.parameter.type> = .norm2<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 615,
+            "key.line" : 182,
+            "key.name" : "clipGradNorm(maxNorm:normType:streamContext:)",
+            "key.namelength" : 102,
+            "key.nameoffset" : 5810,
+            "key.offset" : 5805,
+            "key.parsed_declaration" : "public func clipGradNorm(\n  maxNorm: Float, normType: NormType = .norm2, streamContext: StreamContext? = nil\n)",
+            "key.parsed_scope.end" : 198,
+            "key.parsed_scope.start" : 182,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>let graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>?<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>?<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 25,
+                "key.line" : 194,
+                "key.name" : "graph",
+                "key.namelength" : 5,
+                "key.nameoffset" : 6204,
+                "key.offset" : 6200,
+                "key.parsed_declaration" : "let graph = toModel.graph",
+                "key.parsed_scope.end" : 194,
+                "key.parsed_scope.start" : 194,
+                "key.typename" : "DynamicGraph?",
+                "key.typeusr" : "$s4main12DynamicGraphCSgD",
+                "key.usr" : "s:4main5ModelC10ParametersC12clipGradNorm03maxF08normType13streamContextySf_AE0fI0OAA06StreamK0CSgtF5graphL_AA12DynamicGraphCSgvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let _streamContext: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type>?<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelIOAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_streamContext<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct>?<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 69,
+                "key.line" : 195,
+                "key.name" : "_streamContext",
+                "key.namelength" : 14,
+                "key.nameoffset" : 6234,
+                "key.offset" : 6230,
+                "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph?.streamContext)?._stream",
+                "key.parsed_scope.end" : 195,
+                "key.parsed_scope.start" : 195,
+                "key.typename" : "OpaquePointer?",
+                "key.typeusr" : "$ss13OpaquePointerVSgD",
+                "key.usr" : "s:4main5ModelC10ParametersC12clipGradNorm03maxF08normType13streamContextySf_AE0fI0OAA06StreamK0CSgtF01_jK0L_s13OpaquePointerVSgvp"
+              }
+            ],
+            "key.typename" : "(Model.Parameters) -> (Float, Model.Parameters.NormType, StreamContext?) -> ()",
+            "key.typeusr" : "$s7maxNorm8normType13streamContextySf_4main5ModelC10ParametersC0bD0OAD06StreamF0CSgtcD",
+            "key.usr" : "s:4main5ModelC10ParametersC12clipGradNorm03maxF08normType13streamContextySf_AE0fI0OAA06StreamK0CSgtF"
           }
         ],
         "key.typename" : "Model.Parameters.Type",

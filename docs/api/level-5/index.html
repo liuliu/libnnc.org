@@ -1520,8 +1520,23 @@
 <dd><p>Copy a parameter that is specified by the parameter span out of a model. This will override the value in the tensor you provided. The given tensor should match the dimension of the parameter and should already be allocated. It doesn’t matter whether the given tensor is on CPU or GPU. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code>: The parameter that is used to specify which parameter to override. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code>: The parameter that is used to specify which parameter to copy from. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor that receives value. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv438ccv_cnnp_model_parameter_tensor_paramsPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_t">
+<span id="_CPPv338ccv_cnnp_model_parameter_tensor_paramsPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_t"></span><span id="_CPPv238ccv_cnnp_model_parameter_tensor_paramsPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_t"></span><span id="ccv_cnnp_model_parameter_tensor_params__ccv_cnnp_model_tPC.ccv_cnnp_model_io_tC"></span><span class="target" id="group__level__5__model_1ga2399edec8493b14eb928b39afebca852"></span><code class="sig-name descname">ccv_cnnp_model_parameter_tensor_params</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv438ccv_cnnp_model_parameter_tensor_paramsPC16ccv_cnnp_model_tK19ccv_cnnp_model_io_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the ccv_nnc_tensor_param_t for a particular parameter of a model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The ccv_nnc_tensor_param_t structure that specifies a tensor shape. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model</span></code>: The composed model. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code>: The parameter that is used to specify which parameter to retrieve ccv_nnc_tensor_param_t. </p></li>
 </ul>
 </dd>
 </dl>
