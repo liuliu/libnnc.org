@@ -1,0 +1,375 @@
+{
+  "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 2594,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.bodylength" : 724,
+        "key.bodyoffset" : 57,
+        "key.column" : 15,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 15,
+        "key.doc.declaration" : "public struct Tensor<Element> : AnyTensor where Element : main.TensorNumeric",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"508\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 508,
+        "key.doc.name" : "Tensor",
+        "key.doc.type" : "Class",
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : AnyTensor <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 743,
+        "key.line" : 508,
+        "key.modulename" : "main",
+        "key.name" : "Tensor",
+        "key.namelength" : 6,
+        "key.nameoffset" : 49,
+        "key.offset" : 39,
+        "key.parsed_declaration" : "extension Tensor",
+        "key.parsed_scope.end" : 19,
+        "key.parsed_scope.start" : 5,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@inlinable public init(mjArray: MjArray&lt;Element&gt;)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 542
+              },
+              {
+                "key.attribute" : "source.decl.attribute.inlinable",
+                "key.length" : 10,
+                "key.offset" : 529
+              }
+            ],
+            "key.bodylength" : 197,
+            "key.bodyoffset" : 582,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.doc.column" : 10,
+            "key.doc.comment" : "Initialize a tensor from MjArray. This doesn't copy the data over, rather, we simply keep the\noriginal MjArray alive. That's also why we don't support any data conversion. If you want to\nkeep the resulting Tensor for later usage (rather than do the computation right now), you need\nto make your own copies because MjArray **CANNOT** be immutable and can tied to underlying\nMjData updates (through `MjModel.forward` or `MjModel.step`).",
+            "key.doc.declaration" : "@inlinable public init(mjArray: MjArray<Element>)",
+            "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift",
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift\" line=\"13\" column=\"10\"><Name>init(mjArray:)<\/Name><USR>s:4main6TensorVyXeXecfc<\/USR><Declaration>@inlinable public init(mjArray: MjArray&lt;Element&gt;)<\/Declaration><CommentParts><Abstract><Para>Initialize a tensor from MjArray. This doesn’t copy the data over, rather, we simply keep the original MjArray alive. That’s also why we don’t support any data conversion. If you want to keep the resulting Tensor for later usage (rather than do the computation right now), you need to make your own copies because MjArray <bold>CANNOT<\/bold> be immutable and can tied to underlying MjData updates (through <codeVoice>MjModel.forward<\/codeVoice> or <codeVoice>MjModel.step<\/codeVoice>).<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 13,
+            "key.doc.name" : "init(mjArray:)",
+            "key.doc.type" : "Function",
+            "key.doclength" : 466,
+            "key.docoffset" : 60,
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@inlinable<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>mjArray<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>MjArray&lt;Element&gt;<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 231,
+            "key.line" : 13,
+            "key.modulename" : "main",
+            "key.name" : "init(mjArray:)",
+            "key.namelength" : 31,
+            "key.nameoffset" : 549,
+            "key.offset" : 549,
+            "key.parsed_declaration" : "public init(mjArray: MjArray<Element>)",
+            "key.parsed_scope.end" : 18,
+            "key.parsed_scope.start" : 13,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyACyxGAA03AnyB7StorageCcfc\">init(_: AnyTensorStorage)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyACyxGAA03AnyB0_pcfc\">init(_: AnyTensor)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV4fromACyxGAA03AnyB0_p_tcfc\">init(from:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV_6format10dimensionsACyxGAA10DeviceKindO_AA0B6FormatOSaySiGtcfc\">init(_:format:dimensions:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyACyxGAA10DeviceKindO_AA0B15DimensionFormatOtcfc\">init(_:_:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV_4kind6format10dimensionsACyxGqd___AA10DeviceKindOAA0B6FormatOSaySiGtc7ElementQyd__RszSTRd__lufc\">init(_:kind:format:dimensions:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyACyxGqd___AA10DeviceKindOAA0B15DimensionFormatOtc7ElementQyd__RszSTRd__lufc\">init(_:_:_:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV_6format10dimensions20unsafeMutablePointer9keepAliveACyxGAA10DeviceKindO_AA0B6FormatOSaySiGSpyxGyptcfc\">init(_:format:dimensions:unsafeMutablePointer:keepAlive:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorVyXeXecfc\">init(numpy:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV12arrayLiteralACyxGxd_tcfc\">init(arrayLiteral:)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>.Type) -> (<<error type>>) -> Tensor<Element>",
+            "key.typeusr" : "$syXeXecD",
+            "key.usr" : "s:4main6TensorVyXeXecfc"
+          }
+        ],
+        "key.typename" : "Tensor<Element>.Type",
+        "key.typeusr" : "$s4main6TensorVyxGmD",
+        "key.usr" : "s:4main6TensorV"
+      },
+      {
+        "key.bodylength" : 1760,
+        "key.bodyoffset" : 832,
+        "key.internal_diagnostic" : "Unable to resolve cursor info.",
+        "key.kind" : "source.lang.swift.decl.extension",
+        "key.length" : 1809,
+        "key.name" : "MjArray",
+        "key.namelength" : 7,
+        "key.nameoffset" : 794,
+        "key.offset" : 784,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@inlinable public subscript(bounds: <Type usr=\"s:Sn\">Range<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;) -&gt; Tensor&lt;Element&gt; { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 848
+              },
+              {
+                "key.attribute" : "source.decl.attribute.inlinable",
+                "key.length" : 10,
+                "key.offset" : 835
+              }
+            ],
+            "key.bodylength" : 389,
+            "key.bodyoffset" : 905,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@inlinable<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>bounds<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:Sn\">Range<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>Tensor&lt;Element&gt;<\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.kind" : "source.lang.swift.decl.function.subscript",
+            "key.length" : 440,
+            "key.line" : 23,
+            "key.modulename" : "main",
+            "key.name" : "subscript(_:)",
+            "key.namelength" : 29,
+            "key.nameoffset" : 855,
+            "key.offset" : 855,
+            "key.parsed_declaration" : "public subscript(bounds: Range<Int>) -> Tensor<Element>",
+            "key.parsed_scope.end" : 34,
+            "key.parsed_scope.start" : 23,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(Range<Int>) -> <<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4mainXeip"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@inlinable public subscript(bounds: <Type usr=\"s:SN\">ClosedRange<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;) -&gt; Tensor&lt;Element&gt; { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1311
+              },
+              {
+                "key.attribute" : "source.decl.attribute.inlinable",
+                "key.length" : 10,
+                "key.offset" : 1298
+              }
+            ],
+            "key.bodylength" : 165,
+            "key.bodyoffset" : 1374,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@inlinable<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>bounds<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>Tensor&lt;Element&gt;<\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.kind" : "source.lang.swift.decl.function.subscript",
+            "key.length" : 222,
+            "key.line" : 36,
+            "key.modulename" : "main",
+            "key.name" : "subscript(_:)",
+            "key.namelength" : 35,
+            "key.nameoffset" : 1318,
+            "key.offset" : 1318,
+            "key.parsed_declaration" : "public subscript(bounds: ClosedRange<Int>) -> Tensor<Element>",
+            "key.parsed_scope.end" : 43,
+            "key.parsed_scope.start" : 36,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(ClosedRange<Int>) -> <<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4mainXeip"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@inlinable public subscript(bounds: <Type usr=\"s:s16PartialRangeUpToV\">PartialRangeUpTo<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;) -&gt; Tensor&lt;Element&gt; { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1556
+              },
+              {
+                "key.attribute" : "source.decl.attribute.inlinable",
+                "key.length" : 10,
+                "key.offset" : 1543
+              }
+            ],
+            "key.bodylength" : 121,
+            "key.bodyoffset" : 1624,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@inlinable<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>bounds<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s16PartialRangeUpToV\">PartialRangeUpTo<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>Tensor&lt;Element&gt;<\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.kind" : "source.lang.swift.decl.function.subscript",
+            "key.length" : 183,
+            "key.line" : 45,
+            "key.modulename" : "main",
+            "key.name" : "subscript(_:)",
+            "key.namelength" : 40,
+            "key.nameoffset" : 1563,
+            "key.offset" : 1563,
+            "key.parsed_declaration" : "public subscript(bounds: PartialRangeUpTo<Int>) -> Tensor<Element>",
+            "key.parsed_scope.end" : 52,
+            "key.parsed_scope.start" : 45,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(PartialRangeUpTo<Int>) -> <<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4mainXeip"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@inlinable public subscript(bounds: <Type usr=\"s:s19PartialRangeThroughV\">PartialRangeThrough<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;) -&gt; Tensor&lt;Element&gt; { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1762
+              },
+              {
+                "key.attribute" : "source.decl.attribute.inlinable",
+                "key.length" : 10,
+                "key.offset" : 1749
+              }
+            ],
+            "key.bodylength" : 133,
+            "key.bodyoffset" : 1833,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@inlinable<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>bounds<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s19PartialRangeThroughV\">PartialRangeThrough<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>Tensor&lt;Element&gt;<\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.kind" : "source.lang.swift.decl.function.subscript",
+            "key.length" : 198,
+            "key.line" : 54,
+            "key.modulename" : "main",
+            "key.name" : "subscript(_:)",
+            "key.namelength" : 43,
+            "key.nameoffset" : 1769,
+            "key.offset" : 1769,
+            "key.parsed_declaration" : "public subscript(bounds: PartialRangeThrough<Int>) -> Tensor<Element>",
+            "key.parsed_scope.end" : 61,
+            "key.parsed_scope.start" : 54,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(PartialRangeThrough<Int>) -> <<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4mainXeip"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@inlinable public subscript(bounds: <Type usr=\"s:s16PartialRangeFromV\">PartialRangeFrom<\/Type>&lt;<Type usr=\"s:Si\">Int<\/Type>&gt;) -&gt; Tensor&lt;Element&gt; { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1983
+              },
+              {
+                "key.attribute" : "source.decl.attribute.inlinable",
+                "key.length" : 10,
+                "key.offset" : 1970
+              }
+            ],
+            "key.bodylength" : 129,
+            "key.bodyoffset" : 2051,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@inlinable<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>bounds<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s16PartialRangeFromV\">PartialRangeFrom<\/ref.struct>&lt;<ref.struct usr=\"s:Si\">Int<\/ref.struct>&gt;<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>Tensor&lt;Element&gt;<\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.kind" : "source.lang.swift.decl.function.subscript",
+            "key.length" : 191,
+            "key.line" : 63,
+            "key.modulename" : "main",
+            "key.name" : "subscript(_:)",
+            "key.namelength" : 40,
+            "key.nameoffset" : 1990,
+            "key.offset" : 1990,
+            "key.parsed_declaration" : "public subscript(bounds: PartialRangeFrom<Int>) -> Tensor<Element>",
+            "key.parsed_scope.end" : 70,
+            "key.parsed_scope.start" : 63,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(PartialRangeFrom<Int>) -> <<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4mainXeip"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>@inlinable public subscript(x: (<Type usr=\"s:s15UnboundedRange_O\">UnboundedRange_<\/Type>) -&gt; <Type usr=\"s:s4Voida\">Void<\/Type>) -&gt; Tensor&lt;Element&gt; { get set }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 2197
+              },
+              {
+                "key.attribute" : "source.decl.attribute.inlinable",
+                "key.length" : 10,
+                "key.offset" : 2184
+              }
+            ],
+            "key.bodylength" : 326,
+            "key.bodyoffset" : 2264,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/MuJoCoConversion.swift",
+            "key.fully_annotated_decl" : "<decl.function.subscript><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@inlinable<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>subscript<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.name>x<\/decl.var.parameter.name>: <decl.var.parameter.type>(<decl.var.parameter><decl.var.parameter.type><ref.enum usr=\"s:s15UnboundedRange_O\">UnboundedRange_<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.typealias usr=\"s:s4Voida\">Void<\/ref.typealias><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>Tensor&lt;Element&gt;<\/decl.function.returntype> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.function.subscript>",
+            "key.kind" : "source.lang.swift.decl.function.subscript",
+            "key.length" : 387,
+            "key.line" : 72,
+            "key.modulename" : "main",
+            "key.name" : "subscript(_:)",
+            "key.namelength" : 39,
+            "key.nameoffset" : 2204,
+            "key.offset" : 2204,
+            "key.parsed_declaration" : "public subscript(x: (UnboundedRange_) -> Void) -> Tensor<Element>",
+            "key.parsed_scope.end" : 83,
+            "key.parsed_scope.start" : 72,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "((UnboundedRange_) -> ()) -> <<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4mainXeip"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -17,7 +17,7 @@
     <a title="Functional Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Swift for NNC Docs</a> (49% documented)</p>
+        <p><a href="../index.html">Swift for NNC Docs</a> (100% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -82,6 +82,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/DynamicGraph/Statistics.html">– Statistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph.html#/s:4main12DynamicGraphC13WeakAnyTensorV">– WeakAnyTensor</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/DynamicGraph/Store.html">– Store</a>
@@ -223,6 +226,9 @@
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/Collection.html">Collection</a>
               </li>
               <li class="nav-group-task">
@@ -239,6 +245,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MjArray.html">MjArray</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/UInt8.html">UInt8</a>
@@ -295,6 +304,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:4main2zpoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zdoiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zdoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1doiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -422,12 +440,40 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main10FunctionalO3sum_13streamContextxSayxG_AA06StreamE0CSgtAA24DynamicGraph_TensorGroupRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/sum(_:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main10FunctionalO3sum_13streamContextxSayxG_AA06StreamE0CSgtAA24DynamicGraph_TensorGroupRzlFZ">sum(_:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Element-wise addition</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">sum</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="n">_</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -510,6 +556,65 @@
   <span class="nv">left</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">leftScalar</span><span class="p">:</span> <span class="kt">Float32</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">rightScalar</span><span class="p">:</span> <span class="kt">Float32</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
   <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main10FunctionalO3div4left5right13streamContextxx_xAA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/div(left:right:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main10FunctionalO3div4left5right13streamContextxx_xAA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzlFZ">div(left:<wbr>right:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Element-wise division</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">div</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="nv">left</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main10FunctionalO10reciprocal_13streamContextxx_AA06StreamE0CSgtAA24DynamicGraph_TensorGroupRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/reciprocal(_:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main10FunctionalO10reciprocal_13streamContextxx_AA06StreamE0CSgtAA24DynamicGraph_TensorGroupRzlFZ">reciprocal(_:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Element-wise reciprocal</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">reciprocal</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="n">_</span> <span class="nv">one</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
 
                         </div>
                       </div>
@@ -1030,8 +1135,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1057,8 +1161,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1084,8 +1187,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1103,7 +1205,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-05-03)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-06-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

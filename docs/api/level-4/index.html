@@ -341,14 +341,14 @@
 <dl class="cpp function">
 <dt id="_CPPv433ccv_nnc_tensor_variable_alias_newPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiK22ccv_nnc_tensor_param_t">
 <span id="_CPPv333ccv_nnc_tensor_variable_alias_newPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiK22ccv_nnc_tensor_param_t"></span><span id="_CPPv233ccv_nnc_tensor_variable_alias_newPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tACCV_NNC_MAX_DIM_ALLOC_KiACCV_NNC_MAX_DIM_ALLOC_KiK22ccv_nnc_tensor_param_t"></span><span id="ccv_nnc_tensor_variable_alias_new__ccv_nnc_dynamic_graph_tPC.ccv_nnc_tensor_variable_tC.iCA.iCA.ccv_nnc_tensor_param_tC"></span><span class="target" id="group__level__4_1ga7dda8a5ac27f7a73bc0092e32eb1fb1b"></span><code class="sig-name descname">ccv_nnc_tensor_variable_alias_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv425ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t">ccv_nnc_tensor_variable_t</a> <em>tensor_variable</em>, <em class="property">const</em> int <em>ofs</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>inc</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> ccv_nnc_tensor_param_t <em>info</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433ccv_nnc_tensor_variable_alias_newPC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_tA21CCV_NNC_MAX_DIM_ALLOC_KiA21CCV_NNC_MAX_DIM_ALLOC_KiK22ccv_nnc_tensor_param_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Create a new tensor variable that is an alias of a given tensor variable. <dl class="simple">
+<dd><p>Create a new tensor variable that is an alias of a given tensor variable. You can alias any tensor variable that itself not an alias. You can also alias an alias, with some conditions: The tensor variable itself can be alias, but it needs to be contiguous as well. For example, a vector is contiguous. If both conditions satisfied, you can alias an alias. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>New tensor variable that is an alias. </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The dynamic graph. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor_variable</span></code>: The tensor variable we are going to alias from. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ofs</span></code>: The offset on each of the dimension. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inc</span></code>: The line size of each dimension. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inc</span></code>: The line size of each dimension. If all 0, it matches the dimension of the tensor_variable. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">info</span></code>: The tensor parameters for the new alias. </p></li>
 </ul>
 </dd>

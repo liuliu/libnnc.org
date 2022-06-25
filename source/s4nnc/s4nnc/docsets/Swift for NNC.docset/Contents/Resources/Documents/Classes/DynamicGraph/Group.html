@@ -17,7 +17,7 @@
     <a title="Group Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../../index.html">Swift for NNC Docs</a> (49% documented)</p>
+        <p><a href="../../index.html">Swift for NNC Docs</a> (100% documented)</p>
         <p class="header-right">
           <form role="search" action="../../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -82,6 +82,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/DynamicGraph/Statistics.html">– Statistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/DynamicGraph.html#/s:4main12DynamicGraphC13WeakAnyTensorV">– WeakAnyTensor</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/DynamicGraph/Store.html">– Store</a>
@@ -223,6 +226,9 @@
             <a href="../../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Extensions/Collection.html">Collection</a>
               </li>
               <li class="nav-group-task">
@@ -239,6 +245,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/MjArray.html">MjArray</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Extensions/UInt8.html">UInt8</a>
@@ -295,6 +304,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Functions.html#/s:4main2zpoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main2zdoiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main2zdoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1doiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -446,8 +464,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -759,8 +776,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -786,8 +802,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -813,8 +828,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1024,7 +1038,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">randn</span><span class="p">(</span>
-  <span class="nv">std</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">mean</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="nv">std</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">mean</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span></code></pre>
 
                         </div>
@@ -1268,8 +1282,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1471,14 +1484,459 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">ranges</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;...</span><span class="p">,</span> <span class="n">streamContext</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSnySiGcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSnySiGcip">subscript(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_SnySiGtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_SnySiGtcip">subscript(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_SiSnySiGtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_SiSnySiGtcip">subscript(_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S2iSnySiGtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S2iSnySiGtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S3iSnySiGtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S3iSnySiGtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i3</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S4iSnySiGtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S4iSnySiGtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i3</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i4</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span>
+    <span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span>
+  <span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S5iSnySiGtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S5iSnySiGtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i3</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i4</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i5</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S6iSnySiGtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S6iSnySiGtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i3</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i4</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i5</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i6</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGys15UnboundedRange_OXEcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGys15UnboundedRange_OXEcip">subscript(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">range</span><span class="p">:</span> <span class="kt">UnboundedRange</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_ys15UnboundedRange_OXEtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_ys15UnboundedRange_OXEtcip">subscript(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">UnboundedRange</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_Siys15UnboundedRange_OXEtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_Siys15UnboundedRange_OXEtcip">subscript(_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">UnboundedRange</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S2iys15UnboundedRange_OXEtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S2iys15UnboundedRange_OXEtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">UnboundedRange</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S3iys15UnboundedRange_OXEtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S3iys15UnboundedRange_OXEtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i3</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">UnboundedRange</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S4iys15UnboundedRange_OXEtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S4iys15UnboundedRange_OXEtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i3</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i4</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">UnboundedRange</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span>
+    <span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span>
+  <span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S5iys15UnboundedRange_OXEtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S5iys15UnboundedRange_OXEtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i3</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i4</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i5</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">UnboundedRange</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S6iys15UnboundedRange_OXEtcip"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:_:_:_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupVyAEy_xGSi_S6iys15UnboundedRange_OXEtcip">subscript(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">i0</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i3</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i4</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i5</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">i6</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+  <span class="nv">range</span><span class="p">:</span> <span class="kt">UnboundedRange</span>
+<span class="p">)</span>
   <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -1499,8 +1957,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1526,8 +1983,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1553,8 +2009,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1580,15 +2035,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">exec</span><span class="p">(</span>
-  <span class="nv">cmd</span><span class="p">:</span> <span class="n">ccv_nnc_cmd_t</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="n">ccv_nnc_hint_t</span><span class="p">,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">],</span> <span class="nv">outputSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span>
+  <span class="nv">cmd</span><span class="p">:</span> <span class="n">ccv_nnc_cmd_t</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="n">ccv_nnc_hint_t</span><span class="p">,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">?],</span> <span class="nv">outputSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span>
   <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">]</span></code></pre>
 
@@ -1610,15 +2064,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">exec</span><span class="p">(</span>
-  <span class="nv">cmd</span><span class="p">:</span> <span class="n">ccv_nnc_cmd_t</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="n">ccv_nnc_hint_t</span><span class="p">,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">],</span> <span class="nv">outputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">],</span>
+  <span class="nv">cmd</span><span class="p">:</span> <span class="n">ccv_nnc_cmd_t</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="n">ccv_nnc_hint_t</span><span class="p">,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">?],</span> <span class="nv">outputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">],</span>
   <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span>
 <span class="p">)</span></code></pre>
 
@@ -1630,9 +2083,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC5GroupV8evaluate5model6isTest12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzAPs5Int32VAA06StreamO0CSgtFZ"></a>
+                    <a name="/s:4main12DynamicGraphC5GroupV8evaluate5model6isTest12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAOSgGs5Int32VAA06StreamO0CSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/evaluate(model:isTest:dataParallel:inputs:outputSize:streamContext:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV8evaluate5model6isTest12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzAPs5Int32VAA06StreamO0CSgtFZ">evaluate(model:<wbr>isTest:<wbr>dataParallel:<wbr>inputs:<wbr>outputSize:<wbr>streamContext:<wbr>)</a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV8evaluate5model6isTest12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAOSgGs5Int32VAA06StreamO0CSgtFZ">evaluate(model:<wbr>isTest:<wbr>dataParallel:<wbr>inputs:<wbr>outputSize:<wbr>streamContext:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1640,15 +2093,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">evaluate</span><span class="p">(</span>
-  <span class="nv">model</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">,</span> <span class="nv">isTest</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">dataParallel</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">],</span>
+  <span class="nv">model</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">,</span> <span class="nv">isTest</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">dataParallel</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">?],</span>
   <span class="nv">outputSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:4main12DynamicGraphC5GroupV9AnyTensora">AnyTensor</a></span><span class="p">]</span></code></pre>
 
@@ -1683,8 +2135,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1723,8 +2174,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1752,8 +2202,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1773,7 +2222,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-05-03)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-06-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
