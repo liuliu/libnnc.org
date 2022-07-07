@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 4760,
+    "key.length" : 5765,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -1662,6 +1662,386 @@
         "key.typename" : "SmoothL1Loss.Type",
         "key.typeusr" : "$s4main12SmoothL1LossVmD",
         "key.usr" : "s:4main12SmoothL1LossV"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public struct MSELoss : <Type usr=\"s:4main4LossP\">Loss<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 4806
+          }
+        ],
+        "key.bodylength" : 928,
+        "key.bodyoffset" : 4835,
+        "key.column" : 15,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 15,
+        "key.doc.comment" : "MSE loss. Currently it does reduce mean.",
+        "key.doc.declaration" : "public struct MSELoss : Loss",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift\" line=\"122\" column=\"15\"><Name>MSELoss<\/Name><USR>s:4main7MSELossV<\/USR><Declaration>public struct MSELoss : Loss<\/Declaration><CommentParts><Abstract><Para>MSE loss. Currently it does reduce mean.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 122,
+        "key.doc.name" : "MSELoss",
+        "key.doc.type" : "Class",
+        "key.doclength" : 45,
+        "key.docoffset" : 4761,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 4,
+            "key.offset" : 4829
+          }
+        ],
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>MSELoss<\/decl.name> : <ref.protocol usr=\"s:4main4LossP\">Loss<\/ref.protocol><\/decl.struct>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Loss"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 951,
+        "key.line" : 122,
+        "key.modulename" : "main",
+        "key.name" : "MSELoss",
+        "key.namelength" : 7,
+        "key.nameoffset" : 4820,
+        "key.offset" : 4813,
+        "key.parsed_declaration" : "public struct MSELoss: Loss",
+        "key.parsed_scope.end" : 151,
+        "key.parsed_scope.start" : 122,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public enum <Type usr=\"s:4main7MSELossV\">MSELoss<\/Type>.ReduceOp<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 4838
+              }
+            ],
+            "key.bodylength" : 217,
+            "key.bodyoffset" : 4860,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+            "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <ref.struct usr=\"s:4main7MSELossV\">MSELoss<\/ref.struct>.<decl.name>ReduceOp<\/decl.name><\/decl.enum>",
+            "key.kind" : "source.lang.swift.decl.enum",
+            "key.length" : 233,
+            "key.line" : 123,
+            "key.modulename" : "main",
+            "key.name" : "ReduceOp",
+            "key.namelength" : 8,
+            "key.nameoffset" : 4850,
+            "key.offset" : 4845,
+            "key.parsed_declaration" : "public enum ReduceOp",
+            "key.parsed_scope.end" : 135,
+            "key.parsed_scope.start" : 123,
+            "key.substructure" : [
+              {
+                "key.kind" : "source.lang.swift.decl.enumcase",
+                "key.length" : 9,
+                "key.offset" : 4865,
+                "key.substructure" : [
+                  {
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case mean<\/Declaration>",
+                    "key.column" : 10,
+                    "key.decl_lang" : "source.lang.swift",
+                    "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+                    "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>mean<\/decl.name><\/decl.enumelement>",
+                    "key.kind" : "source.lang.swift.decl.enumelement",
+                    "key.length" : 4,
+                    "key.line" : 124,
+                    "key.modulename" : "main",
+                    "key.name" : "mean",
+                    "key.namelength" : 4,
+                    "key.nameoffset" : 4870,
+                    "key.offset" : 4870,
+                    "key.parsed_declaration" : "case mean",
+                    "key.parsed_scope.end" : 124,
+                    "key.parsed_scope.start" : 124,
+                    "key.typename" : "(MSELoss.ReduceOp.Type) -> MSELoss.ReduceOp",
+                    "key.typeusr" : "$sy4main7MSELossV8ReduceOpOAEmcD",
+                    "key.usr" : "s:4main7MSELossV8ReduceOpO4meanyA2EmF"
+                  }
+                ]
+              },
+              {
+                "key.kind" : "source.lang.swift.decl.enumcase",
+                "key.length" : 8,
+                "key.offset" : 4879,
+                "key.substructure" : [
+                  {
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case sum<\/Declaration>",
+                    "key.column" : 10,
+                    "key.decl_lang" : "source.lang.swift",
+                    "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+                    "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>sum<\/decl.name><\/decl.enumelement>",
+                    "key.kind" : "source.lang.swift.decl.enumelement",
+                    "key.length" : 3,
+                    "key.line" : 125,
+                    "key.modulename" : "main",
+                    "key.name" : "sum",
+                    "key.namelength" : 3,
+                    "key.nameoffset" : 4884,
+                    "key.offset" : 4884,
+                    "key.parsed_declaration" : "case sum",
+                    "key.parsed_scope.end" : 125,
+                    "key.parsed_scope.start" : 125,
+                    "key.typename" : "(MSELoss.ReduceOp.Type) -> MSELoss.ReduceOp",
+                    "key.typeusr" : "$sy4main7MSELossV8ReduceOpOAEmcD",
+                    "key.usr" : "s:4main7MSELossV8ReduceOpO3sumyA2EmF"
+                  }
+                ]
+              },
+              {
+                "key.accessibility" : "source.lang.swift.accessibility.internal",
+                "key.annotated_decl" : "<Declaration>var rawValue: <Type usr=\"s:s5Int32V\">Int32<\/Type> { get }<\/Declaration>",
+                "key.bodylength" : 159,
+                "key.bodyoffset" : 4914,
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+                "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rawValue<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+                "key.kind" : "source.lang.swift.decl.var.instance",
+                "key.length" : 181,
+                "key.line" : 127,
+                "key.modulename" : "main",
+                "key.name" : "rawValue",
+                "key.namelength" : 8,
+                "key.nameoffset" : 4897,
+                "key.offset" : 4893,
+                "key.parsed_declaration" : "var rawValue: Int32",
+                "key.parsed_scope.end" : 134,
+                "key.parsed_scope.start" : 127,
+                "key.typename" : "Int32",
+                "key.typeusr" : "$ss5Int32VD",
+                "key.usr" : "s:4main7MSELossV8ReduceOpO8rawValues5Int32Vvp"
+              }
+            ],
+            "key.typename" : "MSELoss.ReduceOp.Type",
+            "key.typeusr" : "$s4main7MSELossV8ReduceOpOmD",
+            "key.usr" : "s:4main7MSELossV8ReduceOpO"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var reduceOp: <Type usr=\"s:4main7MSELossV8ReduceOpO\">ReduceOp<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 5081
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>reduceOp<\/decl.name>: <decl.var.type><ref.enum usr=\"s:4main7MSELossV8ReduceOpO\">ReduceOp<\/ref.enum><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 22,
+            "key.line" : 136,
+            "key.modulename" : "main",
+            "key.name" : "reduceOp",
+            "key.namelength" : 8,
+            "key.nameoffset" : 5092,
+            "key.offset" : 5088,
+            "key.parsed_declaration" : "public var reduceOp: ReduceOp",
+            "key.parsed_scope.end" : 136,
+            "key.parsed_scope.start" : 136,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "MSELoss.ReduceOp",
+            "key.typeusr" : "$s4main7MSELossV8ReduceOpOD",
+            "key.usr" : "s:4main7MSELossV8reduceOpAC06ReduceD0Ovp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(_ reduceOp: <Type usr=\"s:4main7MSELossV8ReduceOpO\">ReduceOp<\/Type> = .mean)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 5113
+              }
+            ],
+            "key.bodylength" : 32,
+            "key.bodyoffset" : 5156,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>reduceOp<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main7MSELossV8ReduceOpO\">ReduceOp<\/ref.enum><\/decl.var.parameter.type> = .mean<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 69,
+            "key.line" : 137,
+            "key.modulename" : "main",
+            "key.name" : "init(_:)",
+            "key.namelength" : 34,
+            "key.nameoffset" : 5120,
+            "key.offset" : 5120,
+            "key.parsed_declaration" : "public init(_ reduceOp: ReduceOp = .mean)",
+            "key.parsed_scope.end" : 139,
+            "key.parsed_scope.start" : 137,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(MSELoss.Type) -> (MSELoss.ReduceOp) -> MSELoss",
+            "key.typeusr" : "$sy4main7MSELossVAC8ReduceOpOcD",
+            "key.usr" : "s:4main7MSELossVyA2C8ReduceOpOcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func callAsFunction&lt;T, U&gt;(_ input: <Type usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/Type>, target: <Type usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/Type>, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?) -&gt; [<Type usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/Type>.<Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/Type>] where <Type usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/Type> : <Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/Type>, <Type usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/Type> : <Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/Type>, <Type usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/Type>.<Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/Type> == <Type usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/Type>.<Type usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 5192
+              }
+            ],
+            "key.bodylength" : 365,
+            "key.bodyoffset" : 5396,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>input<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>target<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp\">T<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype> == <ref.generic_type_param usr=\"s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp\">U<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 563,
+            "key.line" : 140,
+            "key.modulename" : "main",
+            "key.name" : "callAsFunction(_:target:streamContext:)",
+            "key.namelength" : 140,
+            "key.nameoffset" : 5204,
+            "key.offset" : 5199,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main4LossP14callAsFunction_6target13streamContextSay9AnyTensorQyd__Gqd___qd_0_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRd__AaMRd_0_AGQyd_0_AHRSr0_lF"
+              }
+            ],
+            "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.AnyTensorGroup, U: DynamicGraph.AnyTensorGroup>(\n  _ input: T, target: U, streamContext: StreamContext?\n) -> [T.AnyTensor] where T.AnyTensor == U.AnyTensor",
+            "key.parsed_scope.end" : 150,
+            "key.parsed_scope.start" : 140,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
+                "key.column" : 30,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 27,
+                    "key.offset" : 5222
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>T<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/ref.typealias><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "DynamicGraph.AnyTensorGroup"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 30,
+                "key.line" : 140,
+                "key.modulename" : "main",
+                "key.name" : "T",
+                "key.namelength" : 1,
+                "key.nameoffset" : 5219,
+                "key.offset" : 5219,
+                "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.AnyTensorGroup",
+                "key.parsed_scope.end" : 140,
+                "key.parsed_scope.start" : 140,
+                "key.typename" : "T.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1TL_xmfp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>U : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
+                "key.column" : 62,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 27,
+                    "key.offset" : 5254
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>U<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/ref.typealias><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "DynamicGraph.AnyTensorGroup"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 30,
+                "key.line" : 140,
+                "key.modulename" : "main",
+                "key.name" : "U",
+                "key.namelength" : 1,
+                "key.nameoffset" : 5251,
+                "key.offset" : 5251,
+                "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.AnyTensorGroup, U: DynamicGraph.AnyTensorGroup",
+                "key.parsed_scope.end" : 140,
+                "key.parsed_scope.start" : 140,
+                "key.typename" : "U.Type",
+                "key.typeusr" : "$sq_mD",
+                "key.usr" : "s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF1UL_q_mfp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 49,
+                "key.line" : 143,
+                "key.modulename" : "main",
+                "key.name" : "params",
+                "key.namelength" : 6,
+                "key.nameoffset" : 5405,
+                "key.offset" : 5401,
+                "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
+                "key.parsed_scope.end" : 143,
+                "key.parsed_scope.start" : 143,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF6paramsL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let cmd: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Loss.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cmd<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 58,
+                "key.line" : 146,
+                "key.modulename" : "main",
+                "key.name" : "cmd",
+                "key.namelength" : 3,
+                "key.nameoffset" : 5563,
+                "key.offset" : 5559,
+                "key.parsed_declaration" : "let cmd = ccv_nnc_cmd(CCV_NNC_MSE_FORWARD, nil, params, 0)",
+                "key.parsed_scope.end" : 146,
+                "key.parsed_scope.start" : 146,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF3cmdL_Xevp"
+              }
+            ],
+            "key.typename" : "<T, U where T : DynamicGraph_AnyTensorGroup, U : DynamicGraph_AnyTensorGroup, T.AnyTensor == U.AnyTensor> (MSELoss) -> (T, U, StreamContext?) -> [T.AnyTensor]",
+            "key.typeusr" : "$s_6target13streamContextSay9AnyTensorQzGx_q_4main06StreamC0CSgtcAF013DynamicGraph_dE5GroupRzAfJR_ACQy_ADRSr0_luD",
+            "key.usr" : "s:4main7MSELossV14callAsFunction_6target13streamContextSay9AnyTensorQzGx_q_AA06StreamH0CSgtAA013DynamicGraph_iJ5GroupRzAaMR_AGQy_AHRSr0_lF"
+          }
+        ],
+        "key.typename" : "MSELoss.Type",
+        "key.typeusr" : "$s4main7MSELossVmD",
+        "key.usr" : "s:4main7MSELossV"
       }
     ]
   }
