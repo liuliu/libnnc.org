@@ -329,13 +329,10 @@
                 <a href="../../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a>
               </li>
               <li class="nav-group-task">
-                <a href="../../Protocols/DynamicGraph_AnyGroup.html">DynamicGraph_AnyGroup</a>
+                <a href="../../Protocols.html#/s:4main21DynamicGraph_AnyGroupP">DynamicGraph_AnyGroup</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Protocols.html#/s:4main26DynamicGraph_AnyParametersP">DynamicGraph_AnyParameters</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Protocols/DynamicGraph_AnyTensor.html">DynamicGraph_AnyTensor</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Protocols/DynamicGraph_AnyTensorGroup.html">DynamicGraph_AnyTensorGroup</a>
@@ -351,9 +348,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Protocols/TensorNumeric.html">TensorNumeric</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../../Protocols/_DynamicGraph_TensorGroup.html">_DynamicGraph_TensorGroup</a>
               </li>
             </ul>
           </li>
@@ -425,14 +419,6 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="../../Typealiases.html">Type Aliases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../../Typealiases.html#/s:4main5Groupa">Group</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -444,9 +430,8 @@
                   
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AnyTensor</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">AnyTensor</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">AnyTensor</span><span class="p">:</span> <span class="kt"><a href="../../Protocols/DynamicGraph_AnyTensor.html">DynamicGraph_AnyTensor</a></span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">AnyTensor</span><span class="p">:</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt"><a href="../../Classes/DynamicGraph.html#/s:4main12DynamicGraphC14AnyTensorGroupa">AnyTensorGroup</a></span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">AnyTensor</span><span class="p">:</span> <span class="kt"><a href="../../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a></span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">AnyTensor</span><span class="p">:</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt"><a href="../../Classes/DynamicGraph.html#/s:4main12DynamicGraphC14AnyTensorGroupa">AnyTensorGroup</a></span></code></pre>
 
                 </div>
               </div>
@@ -942,9 +927,38 @@ for a constant tensor.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC9AnyTensorC11downcasting4fromAA0bc1_dE0_pAA0bc1_D0_p_tFZ"></a>
-                    <a name="//apple_ref/swift/Method/downcasting(from:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC9AnyTensorC11downcasting4fromAA0bc1_dE0_pAA0bc1_D0_p_tFZ">downcasting(from:<wbr>)</a>
+                    <a name="/s:4main12DynamicGraphC9AnyTensorC2as2ofAC0E0Cy_xGxm_tAA0E7NumericRzlF"></a>
+                    <a name="//apple_ref/swift/Method/as(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC9AnyTensorC2as2ofAC0E0Cy_xGxm_tAA0E7NumericRzlF">as(of:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Explicitly cast the underlying storage to a specific type. It is a helper function than
+doing DynamicGraph.Tensor<SomeType>(something). Less code change required if we change this
+from tensor to group.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="p">`</span><span class="nv">as</span><span class="p">`</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt"><a href="../../Classes/DynamicGraph/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Element</span> <span class="p">:</span> <span class="kt"><a href="../../Protocols/TensorNumeric.html">TensorNumeric</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC9AnyTensorC7untypedSayAEGvp"></a>
+                    <a name="//apple_ref/swift/Property/untyped" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC9AnyTensorC7untypedSayAEGvp">untyped</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -958,7 +972,7 @@ for a constant tensor.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">downcasting</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="kt"><a href="../../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Protocols/DynamicGraph_AnyTensor.html">DynamicGraph_AnyTensor</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">untyped</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt"><a href="../../Classes/DynamicGraph/AnyTensor.html#/s:4main12DynamicGraphC9AnyTensorCADa">AnyTensor</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1011,7 +1025,7 @@ for a constant tensor.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">exec</span><span class="p">(</span>
-  <span class="nv">cmd</span><span class="p">:</span> <span class="n">ccv_nnc_cmd_t</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="n">ccv_nnc_hint_t</span><span class="p">,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/AnyTensor.html#/s:4main12DynamicGraphC9AnyTensorCADa">AnyTensor</a></span><span class="p">?],</span> <span class="nv">outputSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span>
+  <span class="nv">cmd</span><span class="p">:</span> <span class="n">ccv_nnc_cmd_t</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="n">ccv_nnc_hint_t</span><span class="p">,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a></span><span class="p">?],</span> <span class="nv">outputSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span>
   <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/AnyTensor.html#/s:4main12DynamicGraphC9AnyTensorCADa">AnyTensor</a></span><span class="p">]</span></code></pre>
 
@@ -1040,7 +1054,8 @@ for a constant tensor.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">exec</span><span class="p">(</span>
-  <span class="nv">cmd</span><span class="p">:</span> <span class="n">ccv_nnc_cmd_t</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="n">ccv_nnc_hint_t</span><span class="p">,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/AnyTensor.html#/s:4main12DynamicGraphC9AnyTensorCADa">AnyTensor</a></span><span class="p">?],</span> <span class="nv">outputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/AnyTensor.html#/s:4main12DynamicGraphC9AnyTensorCADa">AnyTensor</a></span><span class="p">],</span>
+  <span class="nv">cmd</span><span class="p">:</span> <span class="n">ccv_nnc_cmd_t</span><span class="p">,</span> <span class="nv">hint</span><span class="p">:</span> <span class="n">ccv_nnc_hint_t</span><span class="p">,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a></span><span class="p">?],</span>
+  <span class="nv">outputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a></span><span class="p">],</span>
   <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span>
 <span class="p">)</span></code></pre>
 
@@ -1052,9 +1067,9 @@ for a constant tensor.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC9AnyTensorC8evaluate5model6isTest12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAESgGs5Int32VAA06StreamP0CSgtFZ"></a>
+                    <a name="/s:4main12DynamicGraphC9AnyTensorC8evaluate5model6isTest12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamP0CSgtFZ"></a>
                     <a name="//apple_ref/swift/Method/evaluate(model:isTest:dataParallel:inputs:outputSize:streamContext:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC9AnyTensorC8evaluate5model6isTest12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAESgGs5Int32VAA06StreamP0CSgtFZ">evaluate(model:<wbr>isTest:<wbr>dataParallel:<wbr>inputs:<wbr>outputSize:<wbr>streamContext:<wbr>)</a>
+                    <a class="token" href="#/s:4main12DynamicGraphC9AnyTensorC8evaluate5model6isTest12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamP0CSgtFZ">evaluate(model:<wbr>isTest:<wbr>dataParallel:<wbr>inputs:<wbr>outputSize:<wbr>streamContext:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1069,7 +1084,7 @@ for a constant tensor.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">evaluate</span><span class="p">(</span>
-  <span class="nv">model</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">,</span> <span class="nv">isTest</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">dataParallel</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/AnyTensor.html#/s:4main12DynamicGraphC9AnyTensorCADa">AnyTensor</a></span><span class="p">?],</span>
+  <span class="nv">model</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">,</span> <span class="nv">isTest</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">dataParallel</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">inputs</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a></span><span class="p">?],</span>
   <span class="nv">outputSize</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../../Classes/DynamicGraph/AnyTensor.html#/s:4main12DynamicGraphC9AnyTensorCADa">AnyTensor</a></span><span class="p">]</span></code></pre>
 
@@ -1083,7 +1098,7 @@ for a constant tensor.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-07-06)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-07-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

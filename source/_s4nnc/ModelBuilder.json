@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 5004,
+    "key.length" : 4466,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -14,7 +14,7 @@
             "key.offset" : 47
           }
         ],
-        "key.bodylength" : 3604,
+        "key.bodylength" : 3066,
         "key.bodyoffset" : 77,
         "key.column" : 14,
         "key.decl_lang" : "source.lang.swift",
@@ -31,7 +31,7 @@
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>AnyModelBuilder<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.class",
-        "key.length" : 3628,
+        "key.length" : 3090,
         "key.line" : 4,
         "key.modulename" : "main",
         "key.name" : "AnyModelBuilder",
@@ -39,7 +39,7 @@
         "key.nameoffset" : 60,
         "key.offset" : 54,
         "key.parsed_declaration" : "public class AnyModelBuilder",
-        "key.parsed_scope.end" : 108,
+        "key.parsed_scope.end" : 96,
         "key.parsed_scope.start" : 4,
         "key.substructure" : [
           {
@@ -506,14 +506,14 @@
                 "key.offset" : 2136
               }
             ],
-            "key.bodylength" : 1513,
+            "key.bodylength" : 975,
             "key.bodyoffset" : 2165,
             "key.column" : 16,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>compileModel<\/decl.name>()<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 1535,
+            "key.length" : 997,
             "key.line" : 71,
             "key.modulename" : "main",
             "key.name" : "compileModel()",
@@ -521,7 +521,7 @@
             "key.nameoffset" : 2149,
             "key.offset" : 2144,
             "key.parsed_declaration" : "private func compileModel()",
-            "key.parsed_scope.end" : 106,
+            "key.parsed_scope.end" : 94,
             "key.parsed_scope.start" : 71,
             "key.substructure" : [
               {
@@ -586,6 +586,48 @@
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main15AnyModelBuilderC07compileC033_0A6970657E043EF381F0CBB61845312DLLyyF4noopL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let parallel: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>parallel<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 38,
+                "key.line" : 76,
+                "key.modulename" : "main",
+                "key.name" : "parallel",
+                "key.namelength" : 8,
+                "key.nameoffset" : 2344,
+                "key.offset" : 2340,
+                "key.parsed_declaration" : "let parallel = inputs[0].untyped.count",
+                "key.parsed_scope.end" : 76,
+                "key.parsed_scope.start" : 76,
+                "key.typename" : "Int",
+                "key.typeusr" : "$sSiD",
+                "key.usr" : "s:4main15AnyModelBuilderC07compileC033_0A6970657E043EF381F0CBB61845312DLLyyF8parallelL_Sivp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let inputParams: [ccv_nnc_tensor_param_t]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>inputParams<\/decl.name>: <decl.var.type>[ccv_nnc_tensor_param_t]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 176,
+                "key.line" : 83,
+                "key.modulename" : "main",
+                "key.name" : "inputParams",
+                "key.namelength" : 11,
+                "key.nameoffset" : 2646,
+                "key.offset" : 2642,
+                "key.parsed_declaration" : "let inputParams: [ccv_nnc_tensor_param_t] = inputs.map {\n  let tensor = $0.untyped[0]\n  return ccv_nnc_tensor_variable_params(tensor.graph._graph, tensor._tensor)\n}",
+                "key.parsed_scope.end" : 83,
+                "key.parsed_scope.start" : 83,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main15AnyModelBuilderC07compileC033_0A6970657E043EF381F0CBB61845312DLLyyF11inputParamsL_Xevp"
               }
             ],
             "key.typename" : "(AnyModelBuilder) -> () -> ()",
@@ -604,16 +646,16 @@
           {
             "key.attribute" : "source.decl.attribute.final",
             "key.length" : 5,
-            "key.offset" : 4508
+            "key.offset" : 3970
           },
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 4501
+            "key.offset" : 3963
           }
         ],
         "key.bodylength" : 208,
-        "key.bodyoffset" : 4554,
+        "key.bodyoffset" : 4016,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 20,
@@ -625,17 +667,17 @@
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"122\" column=\"20\"><Name>ModelBuilder<\/Name><USR>s:4main12ModelBuilderC<\/USR><Declaration>public final class ModelBuilder&lt;T&gt; : AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A model builder is a more generic type of model. A model can be quite static, thus, you have to be quite careful to have a model work with dynamic inputs. You cannot use reshape, or anything that can generate fixed tensor outputs from a fixed inputs.<\/Para><\/Abstract><Discussion><Para>A model builder on the other hand doesn’t have that restriction. When input changes, it simply calls the given builder closure to construct a new model. In such way, you can continue to use reshape etc to assume fixed inputs and outputs, it will just work for dynamic inputs. The newly built model will carry over stateful components (parameters) from the old models, thus, it doesn’t reset your training. This also means you need to make sure parameter shape won’t change when input changes, otherwise we will fatal.<\/Para><\/Discussion><\/CommentParts><\/Class>",
-        "key.doc.line" : 122,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"110\" column=\"20\"><Name>ModelBuilder<\/Name><USR>s:4main12ModelBuilderC<\/USR><Declaration>public final class ModelBuilder&lt;T&gt; : AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A model builder is a more generic type of model. A model can be quite static, thus, you have to be quite careful to have a model work with dynamic inputs. You cannot use reshape, or anything that can generate fixed tensor outputs from a fixed inputs.<\/Para><\/Abstract><Discussion><Para>A model builder on the other hand doesn’t have that restriction. When input changes, it simply calls the given builder closure to construct a new model. In such way, you can continue to use reshape etc to assume fixed inputs and outputs, it will just work for dynamic inputs. The newly built model will carry over stateful components (parameters) from the old models, thus, it doesn’t reset your training. This also means you need to make sure parameter shape won’t change when input changes, otherwise we will fatal.<\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 110,
         "key.doc.name" : "ModelBuilder",
         "key.doc.type" : "Class",
         "key.doclength" : 817,
-        "key.docoffset" : 3684,
+        "key.docoffset" : 3146,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 15,
-            "key.offset" : 4537
+            "key.offset" : 3999
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
@@ -647,15 +689,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.class",
         "key.length" : 249,
-        "key.line" : 122,
+        "key.line" : 110,
         "key.modulename" : "main",
         "key.name" : "ModelBuilder",
         "key.namelength" : 12,
-        "key.nameoffset" : 4520,
-        "key.offset" : 4514,
+        "key.nameoffset" : 3982,
+        "key.offset" : 3976,
         "key.parsed_declaration" : "public final class ModelBuilder<T>: AnyModelBuilder",
-        "key.parsed_scope.end" : 129,
-        "key.parsed_scope.start" : 122,
+        "key.parsed_scope.end" : 117,
+        "key.parsed_scope.start" : 110,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>T<\/Declaration>",
@@ -665,15 +707,15 @@
             "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>",
             "key.kind" : "source.lang.swift.decl.generic_type_param",
             "key.length" : 1,
-            "key.line" : 122,
+            "key.line" : 110,
             "key.modulename" : "main",
             "key.name" : "T",
             "key.namelength" : 1,
-            "key.nameoffset" : 4533,
-            "key.offset" : 4533,
+            "key.nameoffset" : 3995,
+            "key.offset" : 3995,
             "key.parsed_declaration" : "public final class ModelBuilder<T",
-            "key.parsed_scope.end" : 122,
-            "key.parsed_scope.start" : 122,
+            "key.parsed_scope.end" : 110,
+            "key.parsed_scope.start" : 110,
             "key.typename" : "T.Type",
             "key.typeusr" : "$sxmD",
             "key.usr" : "s:4main12ModelBuilderC1Txmfp"
@@ -685,26 +727,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4557
+                "key.offset" : 4019
               }
             ],
             "key.bodylength" : 110,
-            "key.bodyoffset" : 4650,
+            "key.bodyoffset" : 4112,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>builder<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12ModelBuilderC1Txmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main5ModelC\">Model<\/ref.class><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;&quot;<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 197,
-            "key.line" : 123,
+            "key.line" : 111,
             "key.modulename" : "main",
             "key.name" : "init(_:name:)",
             "key.namelength" : 84,
-            "key.nameoffset" : 4564,
-            "key.offset" : 4564,
+            "key.nameoffset" : 4026,
+            "key.offset" : 4026,
             "key.parsed_declaration" : "public init(_ builder: @escaping (_: T, _: [DynamicGraph_Any]) -> Model, name: String = \"\")",
-            "key.parsed_scope.end" : 128,
-            "key.parsed_scope.start" : 123,
+            "key.parsed_scope.end" : 116,
+            "key.parsed_scope.start" : 111,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12ModelBuilderCAAytRszlE_4nameACyytGAA0B0CSayAA16DynamicGraph_Any_pGc_SStcfc\">init(_: @escaping ([DynamicGraph_Any]) -&gt; Model, name: String = &quot;&quot;)<\/RelatedName>"
@@ -725,7 +767,7 @@
       {
         "key.annotated_decl" : "<Declaration>public final class ModelBuilder&lt;T&gt; : <Type usr=\"s:4main15AnyModelBuilderC\">AnyModelBuilder<\/Type><\/Declaration>",
         "key.bodylength" : 197,
-        "key.bodyoffset" : 4805,
+        "key.bodyoffset" : 4267,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 20,
@@ -736,23 +778,23 @@
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"122\" column=\"20\"><Name>ModelBuilder<\/Name><USR>s:4main12ModelBuilderC<\/USR><Declaration>public final class ModelBuilder&lt;T&gt; : AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A model builder is a more generic type of model. A model can be quite static, thus, you have to be quite careful to have a model work with dynamic inputs. You cannot use reshape, or anything that can generate fixed tensor outputs from a fixed inputs.<\/Para><\/Abstract><Discussion><Para>A model builder on the other hand doesn’t have that restriction. When input changes, it simply calls the given builder closure to construct a new model. In such way, you can continue to use reshape etc to assume fixed inputs and outputs, it will just work for dynamic inputs. The newly built model will carry over stateful components (parameters) from the old models, thus, it doesn’t reset your training. This also means you need to make sure parameter shape won’t change when input changes, otherwise we will fatal.<\/Para><\/Discussion><\/CommentParts><\/Class>",
-        "key.doc.line" : 122,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"110\" column=\"20\"><Name>ModelBuilder<\/Name><USR>s:4main12ModelBuilderC<\/USR><Declaration>public final class ModelBuilder&lt;T&gt; : AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A model builder is a more generic type of model. A model can be quite static, thus, you have to be quite careful to have a model work with dynamic inputs. You cannot use reshape, or anything that can generate fixed tensor outputs from a fixed inputs.<\/Para><\/Abstract><Discussion><Para>A model builder on the other hand doesn’t have that restriction. When input changes, it simply calls the given builder closure to construct a new model. In such way, you can continue to use reshape etc to assume fixed inputs and outputs, it will just work for dynamic inputs. The newly built model will carry over stateful components (parameters) from the old models, thus, it doesn’t reset your training. This also means you need to make sure parameter shape won’t change when input changes, otherwise we will fatal.<\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 110,
         "key.doc.name" : "ModelBuilder",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>ModelBuilder<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12ModelBuilderC1Txmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.class usr=\"s:4main15AnyModelBuilderC\">AnyModelBuilder<\/ref.class><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 238,
-        "key.line" : 122,
+        "key.line" : 110,
         "key.modulename" : "main",
         "key.name" : "ModelBuilder",
         "key.namelength" : 12,
-        "key.nameoffset" : 4775,
-        "key.offset" : 4765,
+        "key.nameoffset" : 4237,
+        "key.offset" : 4227,
         "key.parsed_declaration" : "extension ModelBuilder where T == Void",
-        "key.parsed_scope.end" : 139,
-        "key.parsed_scope.start" : 131,
+        "key.parsed_scope.end" : 127,
+        "key.parsed_scope.start" : 119,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -761,31 +803,31 @@
               {
                 "key.attribute" : "source.decl.attribute.convenience",
                 "key.length" : 11,
-                "key.offset" : 4815
+                "key.offset" : 4277
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4808
+                "key.offset" : 4270
               }
             ],
             "key.bodylength" : 91,
-            "key.bodyoffset" : 4909,
+            "key.bodyoffset" : 4371,
             "key.column" : 22,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>convenience<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>builder<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.class usr=\"s:4main5ModelC\">Model<\/ref.class><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;&quot;<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 174,
-            "key.line" : 132,
+            "key.line" : 120,
             "key.modulename" : "main",
             "key.name" : "init(_:name:)",
             "key.namelength" : 78,
-            "key.nameoffset" : 4827,
-            "key.offset" : 4827,
+            "key.nameoffset" : 4289,
+            "key.offset" : 4289,
             "key.parsed_declaration" : "public convenience init(_ builder: @escaping (_: [DynamicGraph_Any]) -> Model, name: String = \"\")",
-            "key.parsed_scope.end" : 138,
-            "key.parsed_scope.start" : 132,
+            "key.parsed_scope.end" : 126,
+            "key.parsed_scope.start" : 120,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12ModelBuilderC_4nameACyxGAA0B0Cx_SayAA16DynamicGraph_Any_pGtc_SStcfc\">init(_: @escaping (T, [DynamicGraph_Any]) -&gt; Model, name: String = &quot;&quot;)<\/RelatedName>"

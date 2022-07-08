@@ -329,13 +329,10 @@
                 <a href="Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/DynamicGraph_AnyGroup.html">DynamicGraph_AnyGroup</a>
+                <a href="Protocols.html#/s:4main21DynamicGraph_AnyGroupP">DynamicGraph_AnyGroup</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols.html#/s:4main26DynamicGraph_AnyParametersP">DynamicGraph_AnyParameters</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/DynamicGraph_AnyTensor.html">DynamicGraph_AnyTensor</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/DynamicGraph_AnyTensorGroup.html">DynamicGraph_AnyTensorGroup</a>
@@ -351,9 +348,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/TensorNumeric.html">TensorNumeric</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/_DynamicGraph_TensorGroup.html">_DynamicGraph_TensorGroup</a>
               </li>
             </ul>
           </li>
@@ -425,14 +419,6 @@
               </li>
             </ul>
           </li>
-          <li class="nav-group-name">
-            <a href="Typealiases.html">Type Aliases</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:4main5Groupa">Group</a>
-              </li>
-            </ul>
-          </li>
         </ul>
       </nav>
       <article class="main-content">
@@ -475,9 +461,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main22DynamicGraph_AnyTensorP"></a>
-                    <a name="//apple_ref/swift/Protocol/DynamicGraph_AnyTensor" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main22DynamicGraph_AnyTensorP">DynamicGraph_AnyTensor</a>
+                    <a name="/s:4main27DynamicGraph_AnyTensorGroupP"></a>
+                    <a name="//apple_ref/swift/Protocol/DynamicGraph_AnyTensorGroup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main27DynamicGraph_AnyTensorGroupP">DynamicGraph_AnyTensorGroup</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -489,33 +475,6 @@
 to represent either a collection of tensors from multiple GPUs or one tensor.
 It has a typed version DynamicGraph.TensorGroup to enforce type constraint.</p>
 
-                        <a href="Protocols/DynamicGraph_AnyTensor.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DynamicGraph_AnyTensor</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4main27DynamicGraph_AnyTensorGroupP"></a>
-                    <a name="//apple_ref/swift/Protocol/DynamicGraph_AnyTensorGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main27DynamicGraph_AnyTensorGroupP">DynamicGraph_AnyTensorGroup</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
                         <a href="Protocols/DynamicGraph_AnyTensorGroup.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -523,62 +482,6 @@ It has a typed version DynamicGraph.TensorGroup to enforce type constraint.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DynamicGraph_AnyTensorGroup</span> <span class="p">:</span> <span class="kt"><a href="Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4main24DynamicGraph_TensorGroupP"></a>
-                    <a name="//apple_ref/swift/Protocol/DynamicGraph_TensorGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main24DynamicGraph_TensorGroupP">DynamicGraph_TensorGroup</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Represent a type-checked parameters that encapsulate both tensor and group of tensors.</p>
-
-                        <a href="Protocols/DynamicGraph_TensorGroup.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DynamicGraph_TensorGroup</span> <span class="p">:</span> <span class="kt"><a href="Protocols/DynamicGraph_AnyTensorGroup.html">DynamicGraph_AnyTensorGroup</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4main25_DynamicGraph_TensorGroupP"></a>
-                    <a name="//apple_ref/swift/Protocol/_DynamicGraph_TensorGroup" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main25_DynamicGraph_TensorGroupP">_DynamicGraph_TensorGroup</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Internal type for type-checking purpose.</p>
-
-                        <a href="Protocols/_DynamicGraph_TensorGroup.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="n">_DynamicGraph_TensorGroup</span></code></pre>
 
                         </div>
                       </div>
@@ -655,7 +558,6 @@ It has a typed version DynamicGraph.TensorGroup to enforce type constraint.</p>
                       <div class="abstract">
                         <p>Protocol for group of tensors.</p>
 
-                        <a href="Protocols/DynamicGraph_AnyGroup.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -727,6 +629,34 @@ It has a typed version DynamicGraph.TensorGroup to enforce type constraint.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main24DynamicGraph_TensorGroupP"></a>
+                    <a name="//apple_ref/swift/Protocol/DynamicGraph_TensorGroup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main24DynamicGraph_TensorGroupP">DynamicGraph_TensorGroup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represent a type-checked parameters that encapsulate both tensor and group of tensors.</p>
+
+                        <a href="Protocols/DynamicGraph_TensorGroup.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">DynamicGraph_TensorGroup</span> <span class="p">:</span> <span class="kt"><a href="Protocols/DynamicGraph_AnyTensorGroup.html">DynamicGraph_AnyTensorGroup</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main13TensorNumericP"></a>
                     <a name="//apple_ref/swift/Protocol/TensorNumeric" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main13TensorNumericP">TensorNumeric</a>
@@ -784,7 +714,7 @@ It has a typed version DynamicGraph.TensorGroup to enforce type constraint.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-07-06)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-07-08)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
