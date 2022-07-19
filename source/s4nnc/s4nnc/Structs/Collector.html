@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Collector Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/Collector" class="dashAnchor"></a>
+    <a title="Collector Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Swift for NNC Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Swift for NNC Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Collector Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Add.html">Add</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ant.html">Ant</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AnyModelBuilder.html">AnyModelBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:4main16AnyTensorStorageC">AnyTensorStorage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AveragePool.html">AveragePool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BatchNorm.html">BatchNorm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Concat.html">Concat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Convolution.html">Convolution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Dense.html">Dense</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Dropout.html">Dropout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph.html">DynamicGraph</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph/AnyTensor.html">– AnyTensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph/Tensor.html">– Tensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph/Group.html">– Group</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph/LogLevel.html">– LogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph/Statistics.html">– Statistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph.html#/s:4main12DynamicGraphC13WeakAnyTensorV">– WeakAnyTensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph/Store.html">– Store</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Embedding.html">Embedding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Flatten.html">Flatten</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IndexSelect.html">IndexSelect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LSTM.html">LSTM</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LayerNorm.html">LayerNorm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MaskedFill.html">MaskedFill</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Matmul.html">Matmul</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Max.html">Max</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MaxPool.html">MaxPool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Min.html">Min</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Model/IO.html">– IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Model/Parameters.html">– Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Model/ParametersType.html">– ParametersType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ModelBuilder.html">ModelBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MuJoCoViewer.html">MuJoCoViewer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Mul.html">Mul</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReLU.html">ReLU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReduceMax.html">ReduceMax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReduceNorm2.html">ReduceNorm2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReduceSum.html">ReduceSum</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Reshape.html">Reshape</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Scalmul.html">Scalmul</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sigmoid.html">Sigmoid</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Softmax.html">Softmax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StreamContext.html">StreamContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sum.html">Sum</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Swish.html">Swish</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Tanh.html">Tanh</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TimeLimit.html">TimeLimit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Transpose.html">Transpose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/VecEnv.html">VecEnv</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/DataType.html">DataType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DeviceKind.html">DeviceKind</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/DeviceKind/GPUs.html">– GPUs</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Functional.html">Functional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageJitter.html">ImageJitter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageJitter/Size.html">– Size</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageJitter/Resize.html">– Resize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageJitter/Offset.html">– Offset</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ImageJitter/Normalize.html">– Normalize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ReduceOp.html">ReduceOp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TensorFormat.html">TensorFormat</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float16.html">Float16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float32.html">Float32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float64.html">Float64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MjArray.html">MjArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1moiyAA5ModelC2IOCAF_AFtF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1moiyAA5ModelC2IOCAF_SftF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1moiyAA5ModelC2IOCSf_AFtF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1moiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1moiyxx_SftAA24DynamicGraph_TensorGroupRzlF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1moiyxx_xtAA24DynamicGraph_TensorGroupRzlF">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1poiyAA5ModelC2IOCAF_AFtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1poiyxx_xtAA24DynamicGraph_TensorGroupRzlF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1sopyAA5ModelC2IOCAFF">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1sopyxxAA24DynamicGraph_TensorGroupRzlF">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1soiyAA5ModelC2IOCAF_AFtF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1soiyxx_xtAA24DynamicGraph_TensorGroupRzlF">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zmoiyAA5ModelC2IOCAF_AFtF">.*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zmoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zpoiyAA5ModelC2IOCAF_AFtF">.+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zpoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zdoiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zdoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1doiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AnyTensor.html">AnyTensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DataSeries.html">DataSeries</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DynamicGraph_Any.html">DynamicGraph_Any</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:4main21DynamicGraph_AnyGroupP">DynamicGraph_AnyGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:4main26DynamicGraph_AnyParametersP">DynamicGraph_AnyParameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DynamicGraph_AnyTensorGroup.html">DynamicGraph_AnyTensorGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DynamicGraph_TensorGroup.html">DynamicGraph_TensorGroup</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Env.html">Env</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Loss.html">Loss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MuJoCoEnv.html">MuJoCoEnv</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Optimizer.html">Optimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Renderable.html">Renderable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TensorNumeric.html">TensorNumeric</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AdamOptimizer.html">AdamOptimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/BinaryCrossEntropyLoss.html">BinaryCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CategoricalCrossEntropyLoss.html">CategoricalCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/CollectedData.html">CollectedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collector.html">Collector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Collector/Statistics.html">– Statistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataFrame.html">DataFrame</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataFrame/UntypedSeries.html">– UntypedSeries</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataFrame/TypedSeries.html">– TypedSeries</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataFrame/ManyUntypedSeries.html">– ManyUntypedSeries</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataFrame/ManyUntypedSeriesTensorResult.html">– ManyUntypedSeriesTensorResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataSeriesIterator.html">DataSeriesIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Hint.html">Hint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Hint/Border.html">– Border</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/LAMBOptimizer.html">LAMBOptimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MSELoss.html">MSELoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MSELoss/ReduceOp.html">– ReduceOp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NumericalStatistics.html">NumericalStatistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PPO.html">PPO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PPO/ContinuousActionSpace.html">– ContinuousActionSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PPO/Statistics.html">– Statistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RunningMeanStd.html">RunningMeanStd</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SFMT.html">SFMT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SGDOptimizer.html">SGDOptimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Sequential.html">Sequential</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SigmoidBinaryCrossEntropyLoss.html">SigmoidBinaryCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SmoothL1Loss.html">SmoothL1Loss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SoftmaxCrossEntropyLoss.html">SoftmaxCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Tensor.html">Tensor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Tensor/NumpyScalarCompatibleError.html">– NumpyScalarCompatibleError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Collector</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Collector</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="p">,</span> <span class="kt">OtherType</span><span class="p">,</span> <span class="kt">EnvType</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Env.html">Env</a></span><span class="p">,</span> <span class="kt">EnvElement</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="o">&gt;</span>
+<span class="k">where</span> <span class="kt">EnvType</span><span class="o">.</span><span class="kt">ObsType</span> <span class="o">==</span> <span class="kt"><a href="../Structs/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">EnvElement</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">EnvType</span><span class="o">.</span><span class="kt">ActType</span> <span class="o">==</span> <span class="kt"><a href="../Structs/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">EnvElement</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>The helper to collect data from the given Envs.</p>
+
+<p>The policy is intentional to be flexible as a simple closure. We collect both the action and other
+data the closure provides. There may be some type conversions for what the Env expects and what
+the policy provides, thus, need to specify both. To make this easier to use, the placeholder
+type would be useful: <code>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }</code></p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorV7ObsTypea"></a>
+                    <a name="//apple_ref/swift/Alias/ObsType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorV7ObsTypea">ObsType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ObsType</span> <span class="o">=</span> <span class="kt"><a href="../Structs/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorV7ActTypea"></a>
+                    <a name="//apple_ref/swift/Alias/ActType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorV7ActTypea">ActType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ActType</span> <span class="o">=</span> <span class="kt"><a href="../Structs/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorVyXeXecfc"></a>
+                    <a name="//apple_ref/swift/Method/init(envs:policy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorVyXeXecfc">init(envs:<wbr>policy:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">envs</span><span class="p">:</span> <span class="p">[</span><span class="kt">EnvType</span><span class="p">],</span> <span class="nv">policy</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Collector.html#/s:4main9CollectorV7ObsTypea">ObsType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt"><a href="../Structs/Collector.html#/s:4main9CollectorV7ActTypea">ActType</a></span><span class="p">,</span> <span class="kt">OtherType</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorV10StatisticsV"></a>
+                    <a name="//apple_ref/swift/Struct/Statistics" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorV10StatisticsV">Statistics</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="../Structs/Collector/Statistics.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Statistics</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorV9resetDatayyF"></a>
+                    <a name="//apple_ref/swift/Method/resetData()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorV9resetDatayyF">resetData()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">resetData</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorV5resetyyF"></a>
+                    <a name="//apple_ref/swift/Method/reset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorV5resetyyF">reset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorV4dataSayAA13CollectedDataVyxq_GGvp"></a>
+                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorV4dataSayAA13CollectedDataVyxq_GGvp">data</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/CollectedData.html">CollectedData</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span> <span class="kt">OtherType</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60EnvType.DoneType%60%20%3D%3D%20%60Bool%60%2C%20%60EnvType.RewardType%60%20%3D%3D%20%60Float%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `EnvType.DoneType` == `Bool`, `EnvType.RewardType` == `Float`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60EnvType.DoneType%60%20%3D%3D%20%60Bool%60%2C%20%60EnvType.RewardType%60%20%3D%3D%20%60Float%60"></a>
+                  <h3 class="section-name"><p>Available where <code>EnvType.DoneType</code> == <code>Bool</code>, <code>EnvType.RewardType</code> == <code>Float</code></p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorVAASb8DoneTypeRt0_Sf06RewardD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF"></a>
+                    <a name="//apple_ref/swift/Method/collect(nStep:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorVAASb8DoneTypeRt0_Sf06RewardD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF">collect(nStep:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">collect</span><span class="p">(</span><span class="nv">nStep</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Collector/Statistics.html">Statistics</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-07-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

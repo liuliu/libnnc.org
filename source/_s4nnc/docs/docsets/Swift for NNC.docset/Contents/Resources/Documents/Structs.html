@@ -42,6 +42,9 @@
                 <a href="Classes/Add.html">Add</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/Ant.html">Ant</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/AnyModelBuilder.html">AnyModelBuilder</a>
               </li>
               <li class="nav-group-task">
@@ -138,6 +141,9 @@
                 <a href="Classes/ModelBuilder.html">ModelBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/MuJoCoViewer.html">MuJoCoViewer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Mul.html">Mul</a>
               </li>
               <li class="nav-group-task">
@@ -177,7 +183,13 @@
                 <a href="Classes/Tanh.html">Tanh</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/TimeLimit.html">TimeLimit</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Transpose.html">Transpose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/VecEnv.html">VecEnv</a>
               </li>
             </ul>
           </li>
@@ -341,10 +353,19 @@
                 <a href="Protocols/DynamicGraph_TensorGroup.html">DynamicGraph_TensorGroup</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/Env.html">Env</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/Loss.html">Loss</a>
               </li>
               <li class="nav-group-task">
+                <a href="Protocols/MuJoCoEnv.html">MuJoCoEnv</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Protocols/Optimizer.html">Optimizer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Renderable.html">Renderable</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/TensorNumeric.html">TensorNumeric</a>
@@ -362,6 +383,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/CategoricalCrossEntropyLoss.html">CategoricalCrossEntropyLoss</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CollectedData.html">CollectedData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Collector.html">Collector</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Collector/Statistics.html">– Statistics</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/DataFrame.html">DataFrame</a>
@@ -395,6 +425,24 @@
               </li>
               <li class="nav-group-task">
                 <a href="Structs/MSELoss/ReduceOp.html">– ReduceOp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/NumericalStatistics.html">NumericalStatistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PPO.html">PPO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PPO/ContinuousActionSpace.html">– ContinuousActionSpace</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PPO/Statistics.html">– Statistics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/RunningMeanStd.html">RunningMeanStd</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SFMT.html">SFMT</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/SGDOptimizer.html">SGDOptimizer</a>
@@ -431,6 +479,67 @@
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9CollectorV"></a>
+                    <a name="//apple_ref/swift/Struct/Collector" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9CollectorV">Collector</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The helper to collect data from the given Envs.</p>
+
+<p>The policy is intentional to be flexible as a simple closure. We collect both the action and other
+data the closure provides. There may be some type conversions for what the Env expects and what
+the policy provides, thus, need to specify both. To make this easier to use, the placeholder
+type would be useful: <code>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }</code></p>
+
+                        <a href="Structs/Collector.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Collector</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">:</span> <span class="kt"><a href="Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="p">,</span> <span class="kt">OtherType</span><span class="p">,</span> <span class="kt">EnvType</span><span class="p">:</span> <span class="kt"><a href="Protocols/Env.html">Env</a></span><span class="p">,</span> <span class="kt">EnvElement</span><span class="p">:</span> <span class="kt"><a href="Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="o">&gt;</span>
+<span class="k">where</span> <span class="kt">EnvType</span><span class="o">.</span><span class="kt">ObsType</span> <span class="o">==</span> <span class="kt"><a href="Structs/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">EnvElement</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">EnvType</span><span class="o">.</span><span class="kt">ActType</span> <span class="o">==</span> <span class="kt"><a href="Structs/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">EnvElement</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main13CollectedDataV"></a>
+                    <a name="//apple_ref/swift/Struct/CollectedData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main13CollectedDataV">CollectedData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Structs/CollectedData.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectedData</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span> <span class="kt">OtherType</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -750,6 +859,35 @@ numerical stability.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main19NumericalStatisticsV"></a>
+                    <a name="//apple_ref/swift/Struct/NumericalStatistics" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main19NumericalStatisticsV">NumericalStatistics</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A simple helper to compute numerical statistic properties (mean and standard deviations) from
+a given collection.</p>
+
+                        <a href="Structs/NumericalStatistics.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NumericalStatistics</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main12SGDOptimizerV"></a>
                     <a name="//apple_ref/swift/Struct/SGDOptimizer" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main12SGDOptimizerV">SGDOptimizer</a>
@@ -825,6 +963,87 @@ numerical stability.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LAMBOptimizer</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Optimizer.html">Optimizer</a></span><span class="p">,</span> <span class="kt">OptimizerAddons</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main3PPOV"></a>
+                    <a name="//apple_ref/swift/Struct/PPO" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main3PPOV">PPO</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Structs/PPO.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PPO</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main14RunningMeanStdV"></a>
+                    <a name="//apple_ref/swift/Struct/RunningMeanStd" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main14RunningMeanStdV">RunningMeanStd</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Structs/RunningMeanStd.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RunningMeanStd</span><span class="o">&lt;</span><span class="kt">TensorElement</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main4SFMTV"></a>
+                    <a name="//apple_ref/swift/Struct/SFMT" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main4SFMTV">SFMT</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Structs/SFMT.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SFMT</span> <span class="p">:</span> <span class="kt">RandomNumberGenerator</span></code></pre>
 
                         </div>
                       </div>
