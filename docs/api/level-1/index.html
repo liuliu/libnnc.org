@@ -584,6 +584,30 @@
 
 </dd></dl>
 
+<dl class="cpp enum">
+<dt id="_CPPv4Ut3_111">
+<span id="_CPPv3Ut3_111"></span><span class="target" id="group__level__1__cmd_1ga098384b0034af0daa7c9c5c82b563567"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_111" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11122CCV_NNC_HISTOGRAM_EVENE">
+<span id="_CPPv3NUt3_11122CCV_NNC_HISTOGRAM_EVENE"></span><span class="target" id="group__level__1__cmd_1gga098384b0034af0daa7c9c5c82b563567a5799fa64290e81aa76484488e47590c9"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_HISTOGRAM_EVEN</code> = 0<a class="headerlink" href="#_CPPv4NUt3_11122CCV_NNC_HISTOGRAM_EVENE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The bins are evenly distributed from min to max. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11129CCV_NNC_HISTOGRAM_LOGARITHMICE">
+<span id="_CPPv3NUt3_11129CCV_NNC_HISTOGRAM_LOGARITHMICE"></span><span class="target" id="group__level__1__cmd_1gga098384b0034af0daa7c9c5c82b563567ab29117abb0d3a75f9a29fda383d7e8a8"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_HISTOGRAM_LOGARITHMIC</code> = 1<a class="headerlink" href="#_CPPv4NUt3_11129CCV_NNC_HISTOGRAM_LOGARITHMICE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The bins are distributed follow exponentially curve, growing from min to max with ratio. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11122CCV_NNC_HISTOGRAM_BINSE">
+<span id="_CPPv3NUt3_11122CCV_NNC_HISTOGRAM_BINSE"></span><span class="target" id="group__level__1__cmd_1gga098384b0034af0daa7c9c5c82b563567a7bc51088b577d8c9206d914b22aa9e00"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_HISTOGRAM_BINS</code> = 2<a class="headerlink" href="#_CPPv4NUt3_11122CCV_NNC_HISTOGRAM_BINSE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The bins range will be supplied, such as [0, 2, 3, 10]. For result, [-inf, 0, 2, 3, 10, inf] implied. </p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="cpp type">
 <dt id="_CPPv424ccv_nnc_stream_context_t">
 <span id="_CPPv324ccv_nnc_stream_context_t"></span><span id="_CPPv224ccv_nnc_stream_context_t"></span><span id="ccv_nnc_stream_context_t"></span><span class="target" id="group__level__1__cmd_1ga725cc5eec8e65ae2d59b1ed311ec3712"></span><em class="property">typedef </em><em class="property">struct</em> ccv_nnc_stream_context_s <code class="sig-name descname">ccv_nnc_stream_context_t</code><a class="headerlink" href="#_CPPv424ccv_nnc_stream_context_t" title="Permalink to this definition">¶</a><br /></dt>
@@ -1038,7 +1062,8 @@
 <dd><p>[sgd.rate] The learning rate.</p>
 <p>[adam.rate] The learning rate.</p>
 <p>[lamb.rate] The learning rate.</p>
-<p>[rmsprop.rate] The learning rate. </p>
+<p>[rmsprop.rate] The learning rate.</p>
+<p>[histogram.ratio] The rate from min to max, only applied to logarithmic. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -1152,19 +1177,33 @@
 <dl class="cpp var">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t3minE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t3minE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t3minE"></span><span id="ccv_nnc_cmd_param_t::min__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1ac5c92d7ad8043a6a62a96b9b2458df8a"></span>float <code class="sig-name descname">min</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t3minE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[clamp.min] The minimum, NaN is no min. </p>
+<dd><p>[clamp.min] The minimum, NaN is no min.</p>
+<p>[histogram.min] The minimal number, for even or logarithmic. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t3maxE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t3maxE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t3maxE"></span><span id="ccv_nnc_cmd_param_t::max__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a1ecb22592672084c6d2d9d8cd3255a8e"></span>float <code class="sig-name descname">max</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t3maxE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[clamp.max] The maximum, NaN is no max. </p>
+<dd><p>[clamp.max] The maximum, NaN is no max.</p>
+<p>[histogram.min] The maximal number, for even or logarithmic. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t13iou_thresholdE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t13iou_thresholdE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t13iou_thresholdE"></span><span id="ccv_nnc_cmd_param_t::iou_threshold__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a126d90cfebbc966a5990dc41fbf6636e"></span>float <code class="sig-name descname">iou_threshold</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t13iou_thresholdE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[nms.iou_threshold] Threshold between 0 to 1 for IoU threshold. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t4typeE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t4typeE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4typeE"></span><span id="ccv_nnc_cmd_param_t::type__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1aa9a93e0ab295f95f69149d3d147d4041"></span>int <code class="sig-name descname">type</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[histogram.type] The type, can be even, logarithmic, or bins. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt id="_CPPv4N19ccv_nnc_cmd_param_t4binsE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t4binsE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4binsE"></span><span id="ccv_nnc_cmd_param_t::bins__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a66b6cda17c6c09af0a61e0ac68a135a0"></span>int <code class="sig-name descname">bins</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4binsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[histogram.bins] The number of bins, only applied to even. </p>
 </dd></dl>
 
 </div>
@@ -1244,18 +1283,18 @@
 <div class="section" id="streams">
 <h2>Streams<a class="headerlink" href="#streams" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_114">
-<span id="_CPPv3Ut3_114"></span><span class="target" id="group__level__1__stream_1gaa7df87806f64f3b241c8cde9eb57cad5"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_114" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4Ut3_115">
+<span id="_CPPv3Ut3_115"></span><span class="target" id="group__level__1__stream_1ga2f1398dba5e4a5616b83437528bdb28e"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_115" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11422CCV_STREAM_CONTEXT_CPUE">
-<span id="_CPPv3NUt3_11422CCV_STREAM_CONTEXT_CPUE"></span><span class="target" id="group__level__1__stream_1ggaa7df87806f64f3b241c8cde9eb57cad5ab1ad09b2d5a1d647d6ae0c3e10ee0edb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_STREAM_CONTEXT_CPU</code> = 0x1<a class="headerlink" href="#_CPPv4NUt3_11422CCV_STREAM_CONTEXT_CPUE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11522CCV_STREAM_CONTEXT_CPUE">
+<span id="_CPPv3NUt3_11522CCV_STREAM_CONTEXT_CPUE"></span><span class="target" id="group__level__1__stream_1gga2f1398dba5e4a5616b83437528bdb28eab1ad09b2d5a1d647d6ae0c3e10ee0edb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_STREAM_CONTEXT_CPU</code> = 0x1<a class="headerlink" href="#_CPPv4NUt3_11522CCV_STREAM_CONTEXT_CPUE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A CPU based stream context (unsupported). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11422CCV_STREAM_CONTEXT_GPUE">
-<span id="_CPPv3NUt3_11422CCV_STREAM_CONTEXT_GPUE"></span><span class="target" id="group__level__1__stream_1ggaa7df87806f64f3b241c8cde9eb57cad5ae51e08d42b70d0ca16d3ef7b58c35113"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_STREAM_CONTEXT_GPU</code> = 0x2<a class="headerlink" href="#_CPPv4NUt3_11422CCV_STREAM_CONTEXT_GPUE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11522CCV_STREAM_CONTEXT_GPUE">
+<span id="_CPPv3NUt3_11522CCV_STREAM_CONTEXT_GPUE"></span><span class="target" id="group__level__1__stream_1gga2f1398dba5e4a5616b83437528bdb28eae51e08d42b70d0ca16d3ef7b58c35113"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_STREAM_CONTEXT_GPU</code> = 0x2<a class="headerlink" href="#_CPPv4NUt3_11522CCV_STREAM_CONTEXT_GPUE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A GPU based stream context. </p>
 </dd></dl>
 
@@ -1414,6 +1453,7 @@
 <dd><p>Set random seed for stream context. <dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">stream_context</span></code>: The stream context to set the seed. 0 means use the default stream context. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">seed</span></code>: The seed for the stream context. </p></li>
 </ul>
 </dd>
 </dl>
@@ -1609,68 +1649,22 @@
 <div class="section" id="micro-ops">
 <h2>Micro Ops<a class="headerlink" href="#micro-ops" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
-<dt id="_CPPv4Ut3_111">
-<span id="_CPPv3Ut3_111"></span><span class="target" id="group__level__1__uops_1ga098384b0034af0daa7c9c5c82b563567"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_111" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><em>Values:</em></p>
-<dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11126CCV_NNC_MICRO_UNARY_OP_NEGE">
-<span id="_CPPv3NUt3_11126CCV_NNC_MICRO_UNARY_OP_NEGE"></span><span class="target" id="group__level__1__uops_1gga098384b0034af0daa7c9c5c82b563567a395f72bb5a61a3ae3a1e0377c5ef9948"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_UNARY_OP_NEG</code><a class="headerlink" href="#_CPPv4NUt3_11126CCV_NNC_MICRO_UNARY_OP_NEGE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11126CCV_NNC_MICRO_UNARY_OP_LOGE">
-<span id="_CPPv3NUt3_11126CCV_NNC_MICRO_UNARY_OP_LOGE"></span><span class="target" id="group__level__1__uops_1gga098384b0034af0daa7c9c5c82b563567afc4a5f83cef4d83857750141f8ec2c8f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_UNARY_OP_LOG</code><a class="headerlink" href="#_CPPv4NUt3_11126CCV_NNC_MICRO_UNARY_OP_LOGE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11126CCV_NNC_MICRO_UNARY_OP_EXPE">
-<span id="_CPPv3NUt3_11126CCV_NNC_MICRO_UNARY_OP_EXPE"></span><span class="target" id="group__level__1__uops_1gga098384b0034af0daa7c9c5c82b563567ab3e4a7d8cb03c999de48395a1f24d99d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_UNARY_OP_EXP</code><a class="headerlink" href="#_CPPv4NUt3_11126CCV_NNC_MICRO_UNARY_OP_EXPE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="cpp enum">
 <dt id="_CPPv4Ut3_112">
 <span id="_CPPv3Ut3_112"></span><span class="target" id="group__level__1__uops_1ga92c4bd66c8074c3d126a069275a0a80c"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_112" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11228CCV_NNC_MICRO_BINARY_OP_PLUSE">
-<span id="_CPPv3NUt3_11228CCV_NNC_MICRO_BINARY_OP_PLUSE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80ca8ec1df9cb7e0abb182681adb72f87255"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_PLUS</code><a class="headerlink" href="#_CPPv4NUt3_11228CCV_NNC_MICRO_BINARY_OP_PLUSE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11226CCV_NNC_MICRO_UNARY_OP_NEGE">
+<span id="_CPPv3NUt3_11226CCV_NNC_MICRO_UNARY_OP_NEGE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80ca395f72bb5a61a3ae3a1e0377c5ef9948"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_UNARY_OP_NEG</code><a class="headerlink" href="#_CPPv4NUt3_11226CCV_NNC_MICRO_UNARY_OP_NEGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11229CCV_NNC_MICRO_BINARY_OP_MINUSE">
-<span id="_CPPv3NUt3_11229CCV_NNC_MICRO_BINARY_OP_MINUSE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80ca3a13f4bf38136ab62e07a6711e57f814"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MINUS</code><a class="headerlink" href="#_CPPv4NUt3_11229CCV_NNC_MICRO_BINARY_OP_MINUSE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11226CCV_NNC_MICRO_UNARY_OP_LOGE">
+<span id="_CPPv3NUt3_11226CCV_NNC_MICRO_UNARY_OP_LOGE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80cafc4a5f83cef4d83857750141f8ec2c8f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_UNARY_OP_LOG</code><a class="headerlink" href="#_CPPv4NUt3_11226CCV_NNC_MICRO_UNARY_OP_LOGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11227CCV_NNC_MICRO_BINARY_OP_MULE">
-<span id="_CPPv3NUt3_11227CCV_NNC_MICRO_BINARY_OP_MULE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80caae3ac213f4a01fde43ace12cb62ac210"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MUL</code><a class="headerlink" href="#_CPPv4NUt3_11227CCV_NNC_MICRO_BINARY_OP_MULE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11227CCV_NNC_MICRO_BINARY_OP_DIVE">
-<span id="_CPPv3NUt3_11227CCV_NNC_MICRO_BINARY_OP_DIVE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80ca70f26f7b54c05396373369f844b32843"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_DIV</code><a class="headerlink" href="#_CPPv4NUt3_11227CCV_NNC_MICRO_BINARY_OP_DIVE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11227CCV_NNC_MICRO_BINARY_OP_MAXE">
-<span id="_CPPv3NUt3_11227CCV_NNC_MICRO_BINARY_OP_MAXE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80ca437e8199debd93094c2ff523d747e0e3"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MAX</code><a class="headerlink" href="#_CPPv4NUt3_11227CCV_NNC_MICRO_BINARY_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11227CCV_NNC_MICRO_BINARY_OP_MINE">
-<span id="_CPPv3NUt3_11227CCV_NNC_MICRO_BINARY_OP_MINE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80ca9fe800307d836ff76d2e758334bcb07f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MIN</code><a class="headerlink" href="#_CPPv4NUt3_11227CCV_NNC_MICRO_BINARY_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11232CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE">
-<span id="_CPPv3NUt3_11232CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80ca88e4cae3ca2f3b653fdad7ef9fafcbc6"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_EQUAL_TO</code><a class="headerlink" href="#_CPPv4NUt3_11232CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11233CCV_NNC_MICRO_BINARY_OP_LESS_THANE">
-<span id="_CPPv3NUt3_11233CCV_NNC_MICRO_BINARY_OP_LESS_THANE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80caab7992e77d79d55821d539c677dece2d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_LESS_THAN</code><a class="headerlink" href="#_CPPv4NUt3_11233CCV_NNC_MICRO_BINARY_OP_LESS_THANE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11226CCV_NNC_MICRO_UNARY_OP_EXPE">
+<span id="_CPPv3NUt3_11226CCV_NNC_MICRO_UNARY_OP_EXPE"></span><span class="target" id="group__level__1__uops_1gga92c4bd66c8074c3d126a069275a0a80cab3e4a7d8cb03c999de48395a1f24d99d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_UNARY_OP_EXP</code><a class="headerlink" href="#_CPPv4NUt3_11226CCV_NNC_MICRO_UNARY_OP_EXPE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1680,38 +1674,84 @@
 <span id="_CPPv3Ut3_113"></span><span class="target" id="group__level__1__uops_1ga2ee507fea44084259042ff7bb45ecabf"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_113" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11327CCV_NNC_MICRO_REDUCE_OP_MAXE">
-<span id="_CPPv3NUt3_11327CCV_NNC_MICRO_REDUCE_OP_MAXE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfadf07ce55eb69c8fc9311c65535e37e20"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MAX</code><a class="headerlink" href="#_CPPv4NUt3_11327CCV_NNC_MICRO_REDUCE_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11328CCV_NNC_MICRO_BINARY_OP_PLUSE">
+<span id="_CPPv3NUt3_11328CCV_NNC_MICRO_BINARY_OP_PLUSE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa8ec1df9cb7e0abb182681adb72f87255"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_PLUS</code><a class="headerlink" href="#_CPPv4NUt3_11328CCV_NNC_MICRO_BINARY_OP_PLUSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11327CCV_NNC_MICRO_REDUCE_OP_MINE">
-<span id="_CPPv3NUt3_11327CCV_NNC_MICRO_REDUCE_OP_MINE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa69b956ed3165610ba8984ac42a91233b"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MIN</code><a class="headerlink" href="#_CPPv4NUt3_11327CCV_NNC_MICRO_REDUCE_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11329CCV_NNC_MICRO_BINARY_OP_MINUSE">
+<span id="_CPPv3NUt3_11329CCV_NNC_MICRO_BINARY_OP_MINUSE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa3a13f4bf38136ab62e07a6711e57f814"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MINUS</code><a class="headerlink" href="#_CPPv4NUt3_11329CCV_NNC_MICRO_BINARY_OP_MINUSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11330CCV_NNC_MICRO_REDUCE_OP_ARGMAXE">
-<span id="_CPPv3NUt3_11330CCV_NNC_MICRO_REDUCE_OP_ARGMAXE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa65903dc8df7ad29f89c55ff015feb087"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_ARGMAX</code><a class="headerlink" href="#_CPPv4NUt3_11330CCV_NNC_MICRO_REDUCE_OP_ARGMAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11327CCV_NNC_MICRO_BINARY_OP_MULE">
+<span id="_CPPv3NUt3_11327CCV_NNC_MICRO_BINARY_OP_MULE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfaae3ac213f4a01fde43ace12cb62ac210"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MUL</code><a class="headerlink" href="#_CPPv4NUt3_11327CCV_NNC_MICRO_BINARY_OP_MULE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11330CCV_NNC_MICRO_REDUCE_OP_ARGMINE">
-<span id="_CPPv3NUt3_11330CCV_NNC_MICRO_REDUCE_OP_ARGMINE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa03ea378807f89514abb47e1e8ee953a0"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_ARGMIN</code><a class="headerlink" href="#_CPPv4NUt3_11330CCV_NNC_MICRO_REDUCE_OP_ARGMINE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11327CCV_NNC_MICRO_BINARY_OP_DIVE">
+<span id="_CPPv3NUt3_11327CCV_NNC_MICRO_BINARY_OP_DIVE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa70f26f7b54c05396373369f844b32843"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_DIV</code><a class="headerlink" href="#_CPPv4NUt3_11327CCV_NNC_MICRO_BINARY_OP_DIVE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11328CCV_NNC_MICRO_REDUCE_OP_MEANE">
-<span id="_CPPv3NUt3_11328CCV_NNC_MICRO_REDUCE_OP_MEANE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa3e5d141a0a4f972252fa1ae4d0641c4d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MEAN</code><a class="headerlink" href="#_CPPv4NUt3_11328CCV_NNC_MICRO_REDUCE_OP_MEANE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11327CCV_NNC_MICRO_BINARY_OP_MAXE">
+<span id="_CPPv3NUt3_11327CCV_NNC_MICRO_BINARY_OP_MAXE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa437e8199debd93094c2ff523d747e0e3"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MAX</code><a class="headerlink" href="#_CPPv4NUt3_11327CCV_NNC_MICRO_BINARY_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11327CCV_NNC_MICRO_REDUCE_OP_SUME">
-<span id="_CPPv3NUt3_11327CCV_NNC_MICRO_REDUCE_OP_SUME"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa4cd1cdff9468e3b80c1fa2d66d1fabbf"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_SUM</code><a class="headerlink" href="#_CPPv4NUt3_11327CCV_NNC_MICRO_REDUCE_OP_SUME" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11327CCV_NNC_MICRO_BINARY_OP_MINE">
+<span id="_CPPv3NUt3_11327CCV_NNC_MICRO_BINARY_OP_MINE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa9fe800307d836ff76d2e758334bcb07f"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_MIN</code><a class="headerlink" href="#_CPPv4NUt3_11327CCV_NNC_MICRO_BINARY_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt id="_CPPv4NUt3_11328CCV_NNC_MICRO_REDUCE_OP_PRODE">
-<span id="_CPPv3NUt3_11328CCV_NNC_MICRO_REDUCE_OP_PRODE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa4f294fe38b49d3764865ca8c4fe8bcfb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_PROD</code><a class="headerlink" href="#_CPPv4NUt3_11328CCV_NNC_MICRO_REDUCE_OP_PRODE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NUt3_11332CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE">
+<span id="_CPPv3NUt3_11332CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfa88e4cae3ca2f3b653fdad7ef9fafcbc6"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_EQUAL_TO</code><a class="headerlink" href="#_CPPv4NUt3_11332CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11333CCV_NNC_MICRO_BINARY_OP_LESS_THANE">
+<span id="_CPPv3NUt3_11333CCV_NNC_MICRO_BINARY_OP_LESS_THANE"></span><span class="target" id="group__level__1__uops_1gga2ee507fea44084259042ff7bb45ecabfaab7992e77d79d55821d539c677dece2d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_BINARY_OP_LESS_THAN</code><a class="headerlink" href="#_CPPv4NUt3_11333CCV_NNC_MICRO_BINARY_OP_LESS_THANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt id="_CPPv4Ut3_114">
+<span id="_CPPv3Ut3_114"></span><span class="target" id="group__level__1__uops_1gaa7df87806f64f3b241c8cde9eb57cad5"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_114" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11427CCV_NNC_MICRO_REDUCE_OP_MAXE">
+<span id="_CPPv3NUt3_11427CCV_NNC_MICRO_REDUCE_OP_MAXE"></span><span class="target" id="group__level__1__uops_1ggaa7df87806f64f3b241c8cde9eb57cad5adf07ce55eb69c8fc9311c65535e37e20"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MAX</code><a class="headerlink" href="#_CPPv4NUt3_11427CCV_NNC_MICRO_REDUCE_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11427CCV_NNC_MICRO_REDUCE_OP_MINE">
+<span id="_CPPv3NUt3_11427CCV_NNC_MICRO_REDUCE_OP_MINE"></span><span class="target" id="group__level__1__uops_1ggaa7df87806f64f3b241c8cde9eb57cad5a69b956ed3165610ba8984ac42a91233b"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MIN</code><a class="headerlink" href="#_CPPv4NUt3_11427CCV_NNC_MICRO_REDUCE_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11430CCV_NNC_MICRO_REDUCE_OP_ARGMAXE">
+<span id="_CPPv3NUt3_11430CCV_NNC_MICRO_REDUCE_OP_ARGMAXE"></span><span class="target" id="group__level__1__uops_1ggaa7df87806f64f3b241c8cde9eb57cad5a65903dc8df7ad29f89c55ff015feb087"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_ARGMAX</code><a class="headerlink" href="#_CPPv4NUt3_11430CCV_NNC_MICRO_REDUCE_OP_ARGMAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11430CCV_NNC_MICRO_REDUCE_OP_ARGMINE">
+<span id="_CPPv3NUt3_11430CCV_NNC_MICRO_REDUCE_OP_ARGMINE"></span><span class="target" id="group__level__1__uops_1ggaa7df87806f64f3b241c8cde9eb57cad5a03ea378807f89514abb47e1e8ee953a0"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_ARGMIN</code><a class="headerlink" href="#_CPPv4NUt3_11430CCV_NNC_MICRO_REDUCE_OP_ARGMINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11428CCV_NNC_MICRO_REDUCE_OP_MEANE">
+<span id="_CPPv3NUt3_11428CCV_NNC_MICRO_REDUCE_OP_MEANE"></span><span class="target" id="group__level__1__uops_1ggaa7df87806f64f3b241c8cde9eb57cad5a3e5d141a0a4f972252fa1ae4d0641c4d"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_MEAN</code><a class="headerlink" href="#_CPPv4NUt3_11428CCV_NNC_MICRO_REDUCE_OP_MEANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11427CCV_NNC_MICRO_REDUCE_OP_SUME">
+<span id="_CPPv3NUt3_11427CCV_NNC_MICRO_REDUCE_OP_SUME"></span><span class="target" id="group__level__1__uops_1ggaa7df87806f64f3b241c8cde9eb57cad5a4cd1cdff9468e3b80c1fa2d66d1fabbf"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_SUM</code><a class="headerlink" href="#_CPPv4NUt3_11427CCV_NNC_MICRO_REDUCE_OP_SUME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt id="_CPPv4NUt3_11428CCV_NNC_MICRO_REDUCE_OP_PRODE">
+<span id="_CPPv3NUt3_11428CCV_NNC_MICRO_REDUCE_OP_PRODE"></span><span class="target" id="group__level__1__uops_1ggaa7df87806f64f3b241c8cde9eb57cad5a4f294fe38b49d3764865ca8c4fe8bcfb"></span><em class="property">enumerator </em><code class="sig-name descname">CCV_NNC_MICRO_REDUCE_OP_PROD</code><a class="headerlink" href="#_CPPv4NUt3_11428CCV_NNC_MICRO_REDUCE_OP_PRODE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
