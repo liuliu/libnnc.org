@@ -447,6 +447,30 @@
 <dd><p>Opaque pointer to an arena of allocated execs. </p>
 </dd></dl>
 
+<dl class="cpp type">
+<dt id="_CPPv431ccv_nnc_symbolic_graph_format_f">
+<span id="_CPPv331ccv_nnc_symbolic_graph_format_f"></span><span id="_CPPv231ccv_nnc_symbolic_graph_format_f"></span><span id="ccv_nnc_symbolic_graph_format_f"></span><span class="target" id="group__level__3__essentials_1ga4da3cea63be8139000e60956bccc518a"></span><em class="property">typedef </em>void (*<code class="sig-name descname">ccv_nnc_symbolic_graph_format_f</code>)<span class="sig-paren">(</span><em class="property">const</em> int node, <em class="property">const</em> char *<em class="property">const</em> name, <em class="property">const</em> <a class="reference internal" href="../level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t">ccv_nnc_cmd_t</a> cmd, <em class="property">const</em> int flags, <em class="property">const</em> int *<em class="property">const</em> incomings, <em class="property">const</em> int incoming_size, <em class="property">const</em> int *<em class="property">const</em> outgoings, <em class="property">const</em> int outgoing_size, <em class="property">const</em> int *<em class="property">const</em> inputs, <em class="property">const</em> int input_size, <em class="property">const</em> int *<em class="property">const</em> outputs, <em class="property">const</em> int output_size, void *<em class="property">const</em> context<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431ccv_nnc_symbolic_graph_format_f" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The format callback function. Note that these are all integer ids. They can be filled to ccv_nnc_graph_exec_symbol_t.d or ccv_nnc_tensor_symbol_t.d. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code>: The id for the node. It is unique in the graph. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name for the node. It is either NULL or \0 terminated string. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span></code>: The associated command for this node. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code>: The flag that help to identify if it is a sub-graph, which type it is (P_WHILE or CASE_OF) </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">incomings</span></code>: The incoming nodes for execution. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">incoming_size</span></code>: The number of incoming nodes for execution. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outgoings</span></code>: The outgoing nodes for execution. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outgoing_size</span></code>: The number of outgoing nodes for execution. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inputs</span></code>: The input tensor symbols. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">input_size</span></code>: The number of the input tensor symbols. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: The output tensor symbols. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output_size</span></code>: The number of the output tensor symbols. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context passed through ccv_nnc_symbolic_graph_format. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
 <dl class="cpp function">
 <dt id="_CPPv426ccv_nnc_symbolic_graph_newv">
 <span id="_CPPv326ccv_nnc_symbolic_graph_newv"></span><span id="_CPPv226ccv_nnc_symbolic_graph_newv"></span><span id="ccv_nnc_symbolic_graph_new__void"></span><span class="target" id="group__level__3__essentials_1ga9a78a0cf676553ef7930e36cbcf1896a"></span><code class="sig-name descname">ccv_nnc_symbolic_graph_new</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ccv_nnc_symbolic_graph_newv" title="Permalink to this definition">¶</a><br /></dt>
@@ -869,6 +893,24 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">graph_ref</span></code>: The pointer to store symbolic graph. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor_binds_ref</span></code>: The pointer to store the binding array. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tensor_bind_size_ref</span></code>: The pointer to store the size of the binding array. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv429ccv_nnc_symbolic_graph_formatPCK24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKiK31ccv_nnc_symbolic_graph_format_fPCv">
+<span id="_CPPv329ccv_nnc_symbolic_graph_formatPCK24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKiK31ccv_nnc_symbolic_graph_format_fPCv"></span><span id="_CPPv229ccv_nnc_symbolic_graph_formatPCK24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKiK31ccv_nnc_symbolic_graph_format_fPCv"></span><span id="ccv_nnc_symbolic_graph_format__ccv_nnc_symbolic_graph_tCPC.ccv_nnc_graph_exec_symbol_tCPC.iC.ccv_nnc_graph_exec_symbol_tCPC.iC.ccv_nnc_symbolic_graph_format_fC.voidPC"></span><span class="target" id="group__level__3__essentials_1ga6cfe1278561fffa65103e58f6afa8aec"></span>void <code class="sig-name descname">ccv_nnc_symbolic_graph_format</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv424ccv_nnc_symbolic_graph_t" title="ccv_nnc_symbolic_graph_t">ccv_nnc_symbolic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>sources</em>, <em class="property">const</em> int <em>source_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv427ccv_nnc_graph_exec_symbol_t" title="ccv_nnc_graph_exec_symbol_t">ccv_nnc_graph_exec_symbol_t</a> *<em class="property">const</em> <em>destinations</em>, <em class="property">const</em> int <em>destination_size</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv431ccv_nnc_symbolic_graph_format_f" title="ccv_nnc_symbolic_graph_format_f">ccv_nnc_symbolic_graph_format_f</a> <em>format_fn</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429ccv_nnc_symbolic_graph_formatPCK24ccv_nnc_symbolic_graph_tPCK27ccv_nnc_graph_exec_symbol_tKiPCK27ccv_nnc_graph_exec_symbol_tKiK31ccv_nnc_symbolic_graph_format_fPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provide a hook for upper level to do custom formatting of a given symbolic graph. You can implement logic to format the graph into protobuf, or json, or doing persistence. However, this is not the method for you to visit the graph, and do mutations on it. This function doesn’t recurse into sub-graphs. You need to inspect each node to know if these are sub-graphs and handle accordingly. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The symbolic graph. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sources</span></code>: The sources for the graph. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source_size</span></code>: The size of the sources array. 0 to use default sources. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinations</span></code>: The destinations for the graph. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_size</span></code>: The size of the destinations array. 0 to use default destinations. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format_fn</span></code>: The format callback to be called on every node. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context that will be passed to the callback. </p></li>
 </ul>
 </dd>
 </dl>

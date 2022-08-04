@@ -625,6 +625,20 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv428ccv_nnc_dynamic_graph_formatPCK23ccv_nnc_dynamic_graph_tK31ccv_nnc_symbolic_graph_format_fPCv">
+<span id="_CPPv328ccv_nnc_dynamic_graph_formatPCK23ccv_nnc_dynamic_graph_tK31ccv_nnc_symbolic_graph_format_fPCv"></span><span id="_CPPv228ccv_nnc_dynamic_graph_formatPCK23ccv_nnc_dynamic_graph_tK31ccv_nnc_symbolic_graph_format_fPCv"></span><span id="ccv_nnc_dynamic_graph_format__ccv_nnc_dynamic_graph_tCPC.ccv_nnc_symbolic_graph_format_fC.voidPC"></span><span class="target" id="group__level__4_1ga087f807f5a834bb59d829c9903fb70b8"></span>void <code class="sig-name descname">ccv_nnc_dynamic_graph_format</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em>, <em class="property">const</em> <a class="reference internal" href="../level-3/#_CPPv431ccv_nnc_symbolic_graph_format_f" title="ccv_nnc_symbolic_graph_format_f">ccv_nnc_symbolic_graph_format_f</a> <em>format_fn</em>, void *<em class="property">const</em> <em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_nnc_dynamic_graph_formatPCK23ccv_nnc_dynamic_graph_tK31ccv_nnc_symbolic_graph_format_fPCv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provide a hook for upper level to do custom formatting of a given dynamic graph for whatever inside. You can implement logic to format the graph into protobuf, or json. However, this is not the method for you to visit the graph, and do mutations on it. If ops are not needed for gradient computation, likely these are not kept on the dynamic graph at all. You probably will get an empty graph. What’s still available can be checked with the ccv_nnc_dynamic_graph_bookkeeping_count. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">graph</span></code>: The dynamic graph. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format_fn</span></code>: The format callback to be called on every node. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">context</span></code>: The context that will be passed to the callback. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv427ccv_nnc_tensor_variable_newPC23ccv_nnc_dynamic_graph_t">
 <span id="_CPPv327ccv_nnc_tensor_variable_newPC23ccv_nnc_dynamic_graph_t"></span><span id="_CPPv227ccv_nnc_tensor_variable_newPC23ccv_nnc_dynamic_graph_t"></span><span id="ccv_nnc_tensor_variable_new__ccv_nnc_dynamic_graph_tPC"></span><span class="target" id="group__level__4_1ga906a1d3d70bf97bb690dfe75a1dde48b"></span><code class="sig-name descname">ccv_nnc_tensor_variable_new</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv423ccv_nnc_dynamic_graph_t" title="ccv_nnc_dynamic_graph_t">ccv_nnc_dynamic_graph_t</a> *<em class="property">const</em> <em>graph</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427ccv_nnc_tensor_variable_newPC23ccv_nnc_dynamic_graph_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Create a new tensor variable without specified dimensions. Most likely this will be used as output, therefore, its shape can be derived. <dl class="simple">
