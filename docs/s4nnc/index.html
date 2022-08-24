@@ -104,10 +104,25 @@
                 <a href="Classes/HTTPRenderServer.html">HTTPRenderServer</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/HalfCheetah.html">HalfCheetah</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Hopper.html">Hopper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Humanoid.html">Humanoid</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/IndexSelect.html">IndexSelect</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/InvertedDoublePendulum.html">InvertedDoublePendulum</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/InvertedPendulum.html">InvertedPendulum</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/LSTM.html">LSTM</a>
@@ -146,6 +161,9 @@
                 <a href="Classes/ModelBuilder.html">ModelBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/MuJoCoVideo.html">MuJoCoVideo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/MuJoCoViewer.html">MuJoCoViewer</a>
               </li>
               <li class="nav-group-task">
@@ -156,6 +174,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ReduceMax.html">ReduceMax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ReduceMean.html">ReduceMean</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ReduceNorm2.html">ReduceNorm2</a>
@@ -182,6 +203,9 @@
                 <a href="Classes/Sum.html">Sum</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/Swimmer.html">Swimmer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Swish.html">Swish</a>
               </li>
               <li class="nav-group-task">
@@ -195,6 +219,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/VecEnv.html">VecEnv</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Walker2D.html">Walker2D</a>
               </li>
             </ul>
           </li>
@@ -232,10 +259,10 @@
                 <a href="Enums/ReduceOp.html">ReduceOp</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/TensorDimensionFormat.html">TensorDimensionFormat</a>
+                <a href="Enums/TensorFormat.html">TensorFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/TensorFormat.html">TensorFormat</a>
+                <a href="Enums/TensorShapeFormat.html">TensorShapeFormat</a>
               </li>
             </ul>
           </li>
@@ -969,7 +996,7 @@
                 <a href="Structs/PPO.html">PPO</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/PPO/ContinuousActionSpace.html">– ContinuousActionSpace</a>
+                <a href="Structs/PPO/ContinuousState.html">– ContinuousState</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/PPO/Statistics.html">– Statistics</a>
@@ -1007,6 +1034,9 @@
               <li class="nav-group-task">
                 <a href="Structs/Tensor/NumpyScalarCompatibleError.html">– NumpyScalarCompatibleError</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Structs/TensorShape.html">TensorShape</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -1032,8 +1062,8 @@
 <p>Currently, s4nnc works better under Linux with CUDA 11, CuDNN and NCCL. The API for s4nnc wraps around <a href="https://libnnc.org/api/level-4/">Level-4</a> and <a href="https://libnnc.org/api/level-5/">Level-5</a> C APIs.</p>
 <h3 id='tensor' class='heading'>Tensor</h3>
 <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Tensor</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">{</span>
-  <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">DeviceKind</span><span class="p">,</span> <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt">TensorDimensionFormat</span><span class="p">)</span>
-  <span class="kd">init</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">Sequence</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">sequence</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">DeviceKind</span><span class="p">,</span> <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt">TensorDimensionFormat</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Element</span>
+  <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">DeviceKind</span><span class="p">,</span> <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt">TensorShapeFormat</span><span class="p">)</span>
+  <span class="kd">init</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">Sequence</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">sequence</span><span class="p">:</span> <span class="kt">S</span><span class="p">,</span> <span class="n">_</span> <span class="nv">kind</span><span class="p">:</span> <span class="kt">DeviceKind</span><span class="p">,</span> <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt">TensorShapeFormat</span><span class="p">)</span> <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Element</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -1247,7 +1277,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-04)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

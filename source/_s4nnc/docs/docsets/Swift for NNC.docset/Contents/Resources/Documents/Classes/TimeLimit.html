@@ -105,10 +105,25 @@
                 <a href="../Classes/HTTPRenderServer.html">HTTPRenderServer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/HalfCheetah.html">HalfCheetah</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Hopper.html">Hopper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Humanoid.html">Humanoid</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/IndexSelect.html">IndexSelect</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InvertedDoublePendulum.html">InvertedDoublePendulum</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InvertedPendulum.html">InvertedPendulum</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/LSTM.html">LSTM</a>
@@ -147,6 +162,9 @@
                 <a href="../Classes/ModelBuilder.html">ModelBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MuJoCoVideo.html">MuJoCoVideo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MuJoCoViewer.html">MuJoCoViewer</a>
               </li>
               <li class="nav-group-task">
@@ -157,6 +175,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReduceMax.html">ReduceMax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReduceMean.html">ReduceMean</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReduceNorm2.html">ReduceNorm2</a>
@@ -183,6 +204,9 @@
                 <a href="../Classes/Sum.html">Sum</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Swimmer.html">Swimmer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Swish.html">Swish</a>
               </li>
               <li class="nav-group-task">
@@ -196,6 +220,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/VecEnv.html">VecEnv</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Walker2D.html">Walker2D</a>
               </li>
             </ul>
           </li>
@@ -233,10 +260,10 @@
                 <a href="../Enums/ReduceOp.html">ReduceOp</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a>
+                <a href="../Enums/TensorFormat.html">TensorFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TensorFormat.html">TensorFormat</a>
+                <a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a>
               </li>
             </ul>
           </li>
@@ -970,7 +997,7 @@
                 <a href="../Structs/PPO.html">PPO</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PPO/ContinuousActionSpace.html">– ContinuousActionSpace</a>
+                <a href="../Structs/PPO/ContinuousState.html">– ContinuousState</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/PPO/Statistics.html">– Statistics</a>
@@ -1008,6 +1035,9 @@
               <li class="nav-group-task">
                 <a href="../Structs/Tensor/NumpyScalarCompatibleError.html">– NumpyScalarCompatibleError</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TensorShape.html">TensorShape</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -1020,7 +1050,7 @@
                 <div class="language">
                   
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">TimeLimit</span><span class="o">&lt;</span><span class="kt">EnvType</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">EnvType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Env.html">Env</a></span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">TimeLimit</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Env.html">Env</a></span> <span class="k">where</span> <span class="kt">EnvType</span><span class="o">.</span><span class="kt">DoneType</span> <span class="o">==</span> <span class="kt">Bool</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">TimeLimit</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Env.html">Env</a></span> <span class="k">where</span> <span class="kt">EnvType</span><span class="o">.</span><span class="kt">TerminatedType</span> <span class="o">==</span> <span class="kt">Bool</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">TimeLimit</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MuJoCoEnv.html">MuJoCoEnv</a></span> <span class="k">where</span> <span class="kt">EnvType</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MuJoCoEnv.html">MuJoCoEnv</a></span></code></pre>
 
                 </div>
@@ -1060,11 +1090,11 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Available%20where%20%60EnvType.DoneType%60%20%3D%3D%20%60Bool%60"></a>
-                <a name="//apple_ref/swift/Section/Available where `EnvType.DoneType` == `Bool`" class="dashAnchor"></a>
+                <a name="/Available%20where%20%60EnvType.TerminatedType%60%20%3D%3D%20%60Bool%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `EnvType.TerminatedType` == `Bool`" class="dashAnchor"></a>
                 <div class="section-name-container">
-                  <a class="section-name-link" href="#/Available%20where%20%60EnvType.DoneType%60%20%3D%3D%20%60Bool%60"></a>
-                  <h3 class="section-name"><p>Available where <code>EnvType.DoneType</code> == <code>Bool</code></p>
+                  <a class="section-name-link" href="#/Available%20where%20%60EnvType.TerminatedType%60%20%3D%3D%20%60Bool%60"></a>
+                  <h3 class="section-name"><p>Available where <code>EnvType.TerminatedType</code> == <code>Bool</code></p>
 </h3>
                 </div>
               </div>
@@ -1072,9 +1102,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main9TimeLimitCAASb8DoneTypeRtzrlE03ActE0a"></a>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ActE0a"></a>
                     <a name="//apple_ref/swift/Alias/ActType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE03ActE0a">ActType</a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ActE0a">ActType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1098,9 +1128,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main9TimeLimitCAASb8DoneTypeRtzrlE03ObsE0a"></a>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ObsE0a"></a>
                     <a name="//apple_ref/swift/Alias/ObsType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE03ObsE0a">ObsType</a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ObsE0a">ObsType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1124,9 +1154,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main9TimeLimitCAASb8DoneTypeRtzrlE06RewardE0a"></a>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE06RewardE0a"></a>
                     <a name="//apple_ref/swift/Alias/RewardType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE06RewardE0a">RewardType</a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE06RewardE0a">RewardType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1150,9 +1180,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main9TimeLimitCAASb8DoneTypeRtzrlEADa"></a>
-                    <a name="//apple_ref/swift/Alias/DoneType" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main9TimeLimitCAASb8DoneTypeRtzrlEADa">DoneType</a>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlEADa"></a>
+                    <a name="//apple_ref/swift/Alias/TerminatedType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlEADa">TerminatedType</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1166,7 +1196,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">DoneType</span> <span class="o">=</span> <span class="kt">EnvType</span><span class="o">.</span><span class="kt">DoneType</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">TerminatedType</span> <span class="o">=</span> <span class="kt">EnvType</span><span class="o">.</span><span class="kt">TerminatedType</span></code></pre>
 
                         </div>
                       </div>
@@ -1176,9 +1206,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main9TimeLimitCAASb8DoneTypeRtzrlE4step6action03ObsE0Qz_06RewardE0QzSbSDySSypGt03ActE0Qz_tF"></a>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE4step6action03ObsE0Qz_06RewardE0QzSbSDySSypGt03ActE0Qz_tF"></a>
                     <a name="//apple_ref/swift/Method/step(action:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE4step6action03ObsE0Qz_06RewardE0QzSbSDySSypGt03ActE0Qz_tF">step(action:<wbr>)</a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE4step6action03ObsE0Qz_06RewardE0QzSbSDySSypGt03ActE0Qz_tF">step(action:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1192,7 +1222,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">step</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE03ActE0a">ActType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE03ObsE0a">ObsType</a></span><span class="p">,</span> <span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE06RewardE0a">RewardType</a></span><span class="p">,</span> <span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb8DoneTypeRtzrlEADa">DoneType</a></span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">step</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ActE0a">ActType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ObsE0a">ObsType</a></span><span class="p">,</span> <span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE06RewardE0a">RewardType</a></span><span class="p">,</span> <span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlEADa">TerminatedType</a></span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -1202,9 +1232,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main9TimeLimitCAASb8DoneTypeRtzrlE5reset4seed03ObsE0Qz_SDySSypGtSiSg_tF"></a>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE5reset4seed03ObsE0Qz_SDySSypGtSiSg_tF"></a>
                     <a name="//apple_ref/swift/Method/reset(seed:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE5reset4seed03ObsE0Qz_SDySSypGtSiSg_tF">reset(seed:<wbr>)</a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE5reset4seed03ObsE0Qz_SDySSypGtSiSg_tF">reset(seed:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1218,7 +1248,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">(</span><span class="nv">seed</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE03ObsE0a">ObsType</a></span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">(</span><span class="nv">seed</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt"><a href="../Classes/TimeLimit.html#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ObsE0a">ObsType</a></span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -1228,9 +1258,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main9TimeLimitCAASb8DoneTypeRtzrlE15rewardThresholdSfvp"></a>
-                    <a name="//apple_ref/swift/Property/rewardThreshold" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main9TimeLimitCAASb8DoneTypeRtzrlE15rewardThresholdSfvp">rewardThreshold</a>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE15rewardThresholdSfvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/rewardThreshold" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE15rewardThresholdSfvpZ">rewardThreshold</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1244,7 +1274,59 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">rewardThreshold</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">rewardThreshold</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE11actionSpaceSaySNySfGGvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/actionSpace" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE11actionSpaceSaySNySfGGvpZ">actionSpace</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">actionSpace</span><span class="p">:</span> <span class="p">[</span><span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Float</span><span class="o">&gt;</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE9stateSizeSivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/stateSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE9stateSizeSivpZ">stateSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">stateSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1321,7 +1403,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-04)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

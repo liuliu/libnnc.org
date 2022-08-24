@@ -105,10 +105,25 @@
                 <a href="../Classes/HTTPRenderServer.html">HTTPRenderServer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/HalfCheetah.html">HalfCheetah</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Hopper.html">Hopper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Humanoid.html">Humanoid</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/IndexSelect.html">IndexSelect</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InvertedDoublePendulum.html">InvertedDoublePendulum</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InvertedPendulum.html">InvertedPendulum</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/LSTM.html">LSTM</a>
@@ -147,6 +162,9 @@
                 <a href="../Classes/ModelBuilder.html">ModelBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MuJoCoVideo.html">MuJoCoVideo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MuJoCoViewer.html">MuJoCoViewer</a>
               </li>
               <li class="nav-group-task">
@@ -157,6 +175,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReduceMax.html">ReduceMax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReduceMean.html">ReduceMean</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReduceNorm2.html">ReduceNorm2</a>
@@ -183,6 +204,9 @@
                 <a href="../Classes/Sum.html">Sum</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Swimmer.html">Swimmer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Swish.html">Swish</a>
               </li>
               <li class="nav-group-task">
@@ -196,6 +220,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/VecEnv.html">VecEnv</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Walker2D.html">Walker2D</a>
               </li>
             </ul>
           </li>
@@ -233,10 +260,10 @@
                 <a href="../Enums/ReduceOp.html">ReduceOp</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a>
+                <a href="../Enums/TensorFormat.html">TensorFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TensorFormat.html">TensorFormat</a>
+                <a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a>
               </li>
             </ul>
           </li>
@@ -970,7 +997,7 @@
                 <a href="../Structs/PPO.html">PPO</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PPO/ContinuousActionSpace.html">– ContinuousActionSpace</a>
+                <a href="../Structs/PPO/ContinuousState.html">– ContinuousState</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/PPO/Statistics.html">– Statistics</a>
@@ -1007,6 +1034,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Tensor/NumpyScalarCompatibleError.html">– NumpyScalarCompatibleError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TensorShape.html">TensorShape</a>
               </li>
             </ul>
           </li>
@@ -1497,9 +1527,9 @@ be used as output.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC8variable_6format10dimensions2ofAC6TensorCy_xGAA10DeviceKindO_AA0H6FormatOSaySiGxmtAA0H7NumericRzlF"></a>
-                    <a name="//apple_ref/swift/Method/variable(_:format:dimensions:of:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC8variable_6format10dimensions2ofAC6TensorCy_xGAA10DeviceKindO_AA0H6FormatOSaySiGxmtAA0H7NumericRzlF">variable(_:<wbr>format:<wbr>dimensions:<wbr>of:<wbr>)</a>
+                    <a name="/s:4main12DynamicGraphC8variable_6format5shape2ofAC6TensorCy_xGAA10DeviceKindO_AA0H6FormatOAA0H5ShapeVxmtAA0H7NumericRzlF"></a>
+                    <a name="//apple_ref/swift/Method/variable(_:format:shape:of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC8variable_6format5shape2ofAC6TensorCy_xGAA10DeviceKindO_AA0H6FormatOAA0H5ShapeVxmtAA0H7NumericRzlF">variable(_:<wbr>format:<wbr>shape:<wbr>of:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1514,7 +1544,7 @@ be used as output.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">variable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="o">&gt;</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Element</span><span class="o">.</span><span class="k">self</span>
+  <span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Element</span><span class="o">.</span><span class="k">self</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DynamicGraph/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -1525,9 +1555,9 @@ be used as output.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC8constant_6format10dimensions2ofAC6TensorCy_xGAA10DeviceKindO_AA0H6FormatOSaySiGxmtAA0H7NumericRzlF"></a>
-                    <a name="//apple_ref/swift/Method/constant(_:format:dimensions:of:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC8constant_6format10dimensions2ofAC6TensorCy_xGAA10DeviceKindO_AA0H6FormatOSaySiGxmtAA0H7NumericRzlF">constant(_:<wbr>format:<wbr>dimensions:<wbr>of:<wbr>)</a>
+                    <a name="/s:4main12DynamicGraphC8constant_6format5shape2ofAC6TensorCy_xGAA10DeviceKindO_AA0H6FormatOAA0H5ShapeVxmtAA0H7NumericRzlF"></a>
+                    <a name="//apple_ref/swift/Method/constant(_:format:shape:of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC8constant_6format5shape2ofAC6TensorCy_xGAA10DeviceKindO_AA0H6FormatOAA0H5ShapeVxmtAA0H7NumericRzlF">constant(_:<wbr>format:<wbr>shape:<wbr>of:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1542,7 +1572,7 @@ be used as output.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="o">&gt;</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Element</span><span class="o">.</span><span class="k">self</span>
+  <span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Element</span><span class="o">.</span><span class="k">self</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DynamicGraph/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -1553,9 +1583,9 @@ be used as output.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC8variable__2ofAC6TensorCy_xGAA10DeviceKindO_AA0F15DimensionFormatOxmtAA0F7NumericRzlF"></a>
+                    <a name="/s:4main12DynamicGraphC8variable__2ofAC6TensorCy_xGAA10DeviceKindO_AA0F11ShapeFormatOxmtAA0F7NumericRzlF"></a>
                     <a name="//apple_ref/swift/Method/variable(_:_:of:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC8variable__2ofAC6TensorCy_xGAA10DeviceKindO_AA0F15DimensionFormatOxmtAA0F7NumericRzlF">variable(_:<wbr>_:<wbr>of:<wbr>)</a>
+                    <a class="token" href="#/s:4main12DynamicGraphC8variable__2ofAC6TensorCy_xGAA10DeviceKindO_AA0F11ShapeFormatOxmtAA0F7NumericRzlF">variable(_:<wbr>_:<wbr>of:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1570,7 +1600,7 @@ be used as output.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">variable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="o">&gt;</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Element</span><span class="o">.</span><span class="k">self</span>
+  <span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Element</span><span class="o">.</span><span class="k">self</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DynamicGraph/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -1581,9 +1611,9 @@ be used as output.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC8constant__2ofAC6TensorCy_xGAA10DeviceKindO_AA0F15DimensionFormatOxmtAA0F7NumericRzlF"></a>
+                    <a name="/s:4main12DynamicGraphC8constant__2ofAC6TensorCy_xGAA10DeviceKindO_AA0F11ShapeFormatOxmtAA0F7NumericRzlF"></a>
                     <a name="//apple_ref/swift/Method/constant(_:_:of:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC8constant__2ofAC6TensorCy_xGAA10DeviceKindO_AA0F15DimensionFormatOxmtAA0F7NumericRzlF">constant(_:<wbr>_:<wbr>of:<wbr>)</a>
+                    <a class="token" href="#/s:4main12DynamicGraphC8constant__2ofAC6TensorCy_xGAA10DeviceKindO_AA0F11ShapeFormatOxmtAA0F7NumericRzlF">constant(_:<wbr>_:<wbr>of:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1598,7 +1628,7 @@ be used as output.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">constant</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TensorNumeric.html">TensorNumeric</a></span><span class="o">&gt;</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Element</span><span class="o">.</span><span class="k">self</span>
+  <span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Enums/DeviceKind.html">DeviceKind</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">of</span><span class="p">:</span> <span class="kt">Element</span><span class="o">.</span><span class="k">Type</span> <span class="o">=</span> <span class="kt">Element</span><span class="o">.</span><span class="k">self</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DynamicGraph/Tensor.html">Tensor</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -1710,6 +1740,34 @@ will be dispatched to the given stream context, making it easier to organize.</p
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">withStream</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">closure</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="p">)</span>
   <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Result</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC14garbageCollectyyF"></a>
+                    <a name="//apple_ref/swift/Method/garbageCollect()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC14garbageCollectyyF">garbageCollect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform garbage collection. This will be done automatically when GPU memory at pressure. Do
+it manually helps to identify actual memory leaks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">garbageCollect</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1890,7 +1948,7 @@ will be dispatched to the given stream context, making it easier to organize.</p
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-04)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

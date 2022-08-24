@@ -105,10 +105,25 @@
                 <a href="../Classes/HTTPRenderServer.html">HTTPRenderServer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/HalfCheetah.html">HalfCheetah</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Hopper.html">Hopper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Humanoid.html">Humanoid</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/IndexSelect.html">IndexSelect</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InvertedDoublePendulum.html">InvertedDoublePendulum</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InvertedPendulum.html">InvertedPendulum</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/LSTM.html">LSTM</a>
@@ -147,6 +162,9 @@
                 <a href="../Classes/ModelBuilder.html">ModelBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MuJoCoVideo.html">MuJoCoVideo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MuJoCoViewer.html">MuJoCoViewer</a>
               </li>
               <li class="nav-group-task">
@@ -157,6 +175,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReduceMax.html">ReduceMax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReduceMean.html">ReduceMean</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReduceNorm2.html">ReduceNorm2</a>
@@ -183,6 +204,9 @@
                 <a href="../Classes/Sum.html">Sum</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Swimmer.html">Swimmer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Swish.html">Swish</a>
               </li>
               <li class="nav-group-task">
@@ -196,6 +220,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/VecEnv.html">VecEnv</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Walker2D.html">Walker2D</a>
               </li>
             </ul>
           </li>
@@ -233,10 +260,10 @@
                 <a href="../Enums/ReduceOp.html">ReduceOp</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a>
+                <a href="../Enums/TensorFormat.html">TensorFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TensorFormat.html">TensorFormat</a>
+                <a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a>
               </li>
             </ul>
           </li>
@@ -970,7 +997,7 @@
                 <a href="../Structs/PPO.html">PPO</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PPO/ContinuousActionSpace.html">– ContinuousActionSpace</a>
+                <a href="../Structs/PPO/ContinuousState.html">– ContinuousState</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/PPO/Statistics.html">– Statistics</a>
@@ -1007,6 +1034,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Tensor/NumpyScalarCompatibleError.html">– NumpyScalarCompatibleError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TensorShape.html">TensorShape</a>
               </li>
             </ul>
           </li>
@@ -1369,9 +1399,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(format:dimensions:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF">reshaped(format:<wbr>dimensions:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format5shape6offset4stepSayADGAA0B6FormatO_AA0B5ShapeVAPSgAQtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(format:shape:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped6format5shape6offset4stepSayADGAA0B6FormatO_AA0B5ShapeVAPSgAQtF">reshaped(format:<wbr>shape:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1386,7 +1416,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1397,9 +1427,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF">reshaped(_:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped_6offset4stepSayADGAA0B11ShapeFormatO_AA0bG0VSgAOtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(_:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVySdG7ElementRtzrlE8reshaped_6offset4stepSayADGAA0B11ShapeFormatO_AA0bG0VSgAOtF">reshaped(_:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1415,7 +1445,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1427,12 +1457,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>dimensionFormat</em>
+                                <em>shapeFormat</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>New format and dimensions for the tensor.</p>
+                                  <p>New format and shape for the tensor.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1444,19 +1474,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Whether offset on each dimensions.</p>
+                                  <p>Whether offset on each shape.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>increments</em>
+                                <em>step</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The step on each dimensions.</p>
+                                  <p>The step on each shape.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1486,9 +1516,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayAFGAA0B6FormatO_SaySiGAQSgARtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(format:dimensions:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayAFGAA0B6FormatO_SaySiGAQSgARtF">reshaped(format:<wbr>dimensions:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped6format5shape6offset4stepSayAFGAA0B6FormatO_AA0B5ShapeVARSgAStF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(format:shape:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped6format5shape6offset4stepSayAFGAA0B6FormatO_AA0B5ShapeVARSgAStF">reshaped(format:<wbr>shape:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1503,7 +1533,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1514,9 +1544,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF">reshaped(_:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped_6offset4stepSayAFGAA0B11ShapeFormatO_AA0bH0VSgAQtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(_:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVys5Int64VG7ElementRtzrlE8reshaped_6offset4stepSayAFGAA0B11ShapeFormatO_AA0bH0VSgAQtF">reshaped(_:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1532,7 +1562,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1544,12 +1574,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>dimensionFormat</em>
+                                <em>shapeFormat</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>New format and dimensions for the tensor.</p>
+                                  <p>New format and shape for the tensor.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1561,19 +1591,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Whether offset on each dimensions.</p>
+                                  <p>Whether offset on each shape.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>increments</em>
+                                <em>step</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The step on each dimensions.</p>
+                                  <p>The step on each shape.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1603,9 +1633,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(format:dimensions:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayADGAA0B6FormatO_SaySiGAOSgAPtF">reshaped(format:<wbr>dimensions:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped6format5shape6offset4stepSayADGAA0B6FormatO_AA0B5ShapeVAPSgAQtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(format:shape:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped6format5shape6offset4stepSayADGAA0B6FormatO_AA0B5ShapeVAPSgAQtF">reshaped(format:<wbr>shape:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1620,7 +1650,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1631,9 +1661,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped_6offset10incrementsSayADGAA0B15DimensionFormatO_SaySiGSgANtF">reshaped(_:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped_6offset4stepSayADGAA0B11ShapeFormatO_AA0bG0VSgAOtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(_:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVySfG7ElementRtzrlE8reshaped_6offset4stepSayADGAA0B11ShapeFormatO_AA0bG0VSgAOtF">reshaped(_:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1649,7 +1679,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1666,7 +1696,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>New format and dimensions for the tensor.</p>
+                                  <p>New format and shape for the tensor.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1678,19 +1708,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Whether offset on each dimensions.</p>
+                                  <p>Whether offset on each shape.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>increments</em>
+                                <em>step</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The step on each dimensions.</p>
+                                  <p>The step on each shape.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1720,9 +1750,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayAFGAA0B6FormatO_SaySiGAQSgARtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(format:dimensions:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayAFGAA0B6FormatO_SaySiGAQSgARtF">reshaped(format:<wbr>dimensions:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped6format5shape6offset4stepSayAFGAA0B6FormatO_AA0B5ShapeVARSgAStF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(format:shape:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped6format5shape6offset4stepSayAFGAA0B6FormatO_AA0B5ShapeVARSgAStF">reshaped(format:<wbr>shape:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1737,7 +1767,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1748,9 +1778,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF">reshaped(_:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped_6offset4stepSayAFGAA0B11ShapeFormatO_AA0bH0VSgAQtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(_:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVys5Int32VG7ElementRtzrlE8reshaped_6offset4stepSayAFGAA0B11ShapeFormatO_AA0bH0VSgAQtF">reshaped(_:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1766,7 +1796,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1778,12 +1808,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>dimensionFormat</em>
+                                <em>shapeFormat</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>New format and dimensions for the tensor.</p>
+                                  <p>New format and shape for the tensor.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1795,19 +1825,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Whether offset on each dimensions.</p>
+                                  <p>Whether offset on each shape.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>increments</em>
+                                <em>step</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The step on each dimensions.</p>
+                                  <p>The step on each shape.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1837,9 +1867,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayAFGAA0B6FormatO_SaySiGAQSgARtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(format:dimensions:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayAFGAA0B6FormatO_SaySiGAQSgARtF">reshaped(format:<wbr>dimensions:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped6format5shape6offset4stepSayAFGAA0B6FormatO_AA0B5ShapeVARSgAStF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(format:shape:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped6format5shape6offset4stepSayAFGAA0B6FormatO_AA0B5ShapeVARSgAStF">reshaped(format:<wbr>shape:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1854,7 +1884,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1865,9 +1895,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF">reshaped(_:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped_6offset4stepSayAFGAA0B11ShapeFormatO_AA0bH0VSgAQtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(_:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVys7Float16VG7ElementRtzrlE8reshaped_6offset4stepSayAFGAA0B11ShapeFormatO_AA0bH0VSgAQtF">reshaped(_:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1883,7 +1913,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1895,12 +1925,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>dimensionFormat</em>
+                                <em>shapeFormat</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>New format and dimensions for the tensor.</p>
+                                  <p>New format and shape for the tensor.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1912,19 +1942,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Whether offset on each dimensions.</p>
+                                  <p>Whether offset on each shape.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>increments</em>
+                                <em>step</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The step on each dimensions.</p>
+                                  <p>The step on each shape.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1954,9 +1984,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayAFGAA0B6FormatO_SaySiGAQSgARtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(format:dimensions:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped6format10dimensions6offset10incrementsSayAFGAA0B6FormatO_SaySiGAQSgARtF">reshaped(format:<wbr>dimensions:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped6format5shape6offset4stepSayAFGAA0B6FormatO_AA0B5ShapeVARSgAStF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(format:shape:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped6format5shape6offset4stepSayAFGAA0B6FormatO_AA0B5ShapeVARSgAStF">reshaped(format:<wbr>shape:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1971,7 +2001,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -1982,9 +2012,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped_6offset10incrementsSayAFGAA0B15DimensionFormatO_SaySiGSgAPtF">reshaped(_:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped_6offset4stepSayAFGAA0B11ShapeFormatO_AA0bH0VSgAQtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(_:offset:step:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:Sl4mainAA6TensorVys5UInt8VG7ElementRtzrlE8reshaped_6offset4stepSayAFGAA0B11ShapeFormatO_AA0bH0VSgAQtF">reshaped(_:<wbr>offset:<wbr>step:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2000,7 +2030,7 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">dimensionFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
 
                         </div>
@@ -2012,12 +2042,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>dimensionFormat</em>
+                                <em>shapeFormat</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>New format and dimensions for the tensor.</p>
+                                  <p>New format and shape for the tensor.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2029,19 +2059,19 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Whether offset on each dimensions.</p>
+                                  <p>Whether offset on each shape.</p>
                                 </div>
                               </td>
                             </tr>
                             <tr>
                               <td>
                                 <code>
-                                <em>increments</em>
+                                <em>step</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The step on each dimensions.</p>
+                                  <p>The step on each shape.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2060,7 +2090,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-04)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

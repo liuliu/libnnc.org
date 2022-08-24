@@ -1,12 +1,12 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 4009,
+    "key.length" : 4269,
     "key.offset" : 0,
     "key.substructure" : [
       {
         "key.accessibility" : "source.lang.swift.accessibility.public",
-        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, OtherType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
         "key.attributes" : [
           {
             "key.attribute" : "source.decl.attribute.public",
@@ -19,22 +19,22 @@
         "key.column" : 15,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 15,
-        "key.doc.comment" : "The helper to collect data from the given Envs.\n\nThe policy is intentional to be flexible as a simple closure. We collect both the action and other\ndata the closure provides. There may be some type conversions for what the Env expects and what\nthe policy provides, thus, need to specify both. To make this easier to use, the placeholder\ntype would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`",
-        "key.doc.declaration" : "public struct Collector<Element, OtherType, EnvType, EnvElement> where EnvType : main.Env",
+        "key.doc.comment" : "The helper to collect data from the given Envs.\n\nThe policy is intentional to be flexible as a simple closure. We collect both the action and state\ndata the closure provides. There may be some type conversions for what the Env expects and what\nthe policy provides, thus, need to specify both. To make this easier to use, the placeholder\ntype would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`",
+        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env",
         "key.doc.discussion" : [
           {
-            "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and other data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
+            "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, OtherType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and other data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
         "key.doc.line" : 9,
         "key.doc.name" : "Collector",
         "key.doc.type" : "Class",
         "key.doclength" : 431,
         "key.docoffset" : 12,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\"><decl.generic_type_param.name>OtherType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.struct",
         "key.length" : 783,
         "key.line" : 9,
@@ -43,7 +43,7 @@
         "key.namelength" : 9,
         "key.nameoffset" : 457,
         "key.offset" : 450,
-        "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, OtherType, EnvType: Env, EnvElement: TensorNumeric>\nwhere EnvType.ObsType == Tensor<EnvElement>, EnvType.ActType == Tensor<EnvElement>",
+        "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, StateType, EnvType: Env, EnvElement: TensorNumeric>\nwhere EnvType.ObsType == Tensor<EnvElement>, EnvType.ActType == Tensor<EnvElement>",
         "key.parsed_scope.end" : 27,
         "key.parsed_scope.start" : 9,
         "key.substructure" : [
@@ -81,25 +81,25 @@
             "key.usr" : "s:4main9CollectorV7Elementxmfp"
           },
           {
-            "key.annotated_decl" : "<Declaration>OtherType<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>StateType<\/Declaration>",
             "key.column" : 49,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>OtherType<\/decl.generic_type_param.name><\/decl.generic_type_param>",
+            "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>",
             "key.kind" : "source.lang.swift.decl.generic_type_param",
             "key.length" : 9,
             "key.line" : 9,
             "key.modulename" : "main",
-            "key.name" : "OtherType",
+            "key.name" : "StateType",
             "key.namelength" : 9,
             "key.nameoffset" : 491,
             "key.offset" : 491,
-            "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, OtherType",
+            "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, StateType",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
-            "key.typename" : "OtherType.Type",
+            "key.typename" : "StateType.Type",
             "key.typeusr" : "$sq_mD",
-            "key.usr" : "s:4main9CollectorV9OtherTypeq_mfp"
+            "key.usr" : "s:4main9CollectorV9StateTypeq_mfp"
           },
           {
             "key.annotated_decl" : "<Declaration>EnvType : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
@@ -127,7 +127,7 @@
             "key.namelength" : 7,
             "key.nameoffset" : 502,
             "key.offset" : 502,
-            "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, OtherType, EnvType: Env",
+            "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, StateType, EnvType: Env",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
             "key.typename" : "EnvType.Type",
@@ -160,7 +160,7 @@
             "key.namelength" : 10,
             "key.nameoffset" : 516,
             "key.offset" : 516,
-            "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, OtherType, EnvType: Env, EnvElement: TensorNumeric",
+            "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, StateType, EnvType: Env, EnvElement: TensorNumeric",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
             "key.typename" : "EnvElement.Type",
@@ -169,7 +169,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias <Type usr=\"s:4main9CollectorV\">Collector<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/Type>, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>, <Type usr=\"s:4main9CollectorV10EnvElementq1_mfp\">EnvElement<\/Type>&gt;.ObsType = Tensor&lt;Element&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias <Type usr=\"s:4main9CollectorV\">Collector<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/Type>, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>, <Type usr=\"s:4main9CollectorV10EnvElementq1_mfp\">EnvElement<\/Type>&gt;.ObsType = Tensor&lt;Element&gt;<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -180,7 +180,7 @@
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:4main9CollectorV\">Collector<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\">EnvElement<\/ref.generic_type_param>&gt;.<decl.name>ObsType<\/decl.name> = Tensor&lt;Element&gt;<\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:4main9CollectorV\">Collector<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\">EnvElement<\/ref.generic_type_param>&gt;.<decl.name>ObsType<\/decl.name> = Tensor&lt;Element&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
             "key.line" : 11,
@@ -198,7 +198,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias <Type usr=\"s:4main9CollectorV\">Collector<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/Type>, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>, <Type usr=\"s:4main9CollectorV10EnvElementq1_mfp\">EnvElement<\/Type>&gt;.ActType = Tensor&lt;Element&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias <Type usr=\"s:4main9CollectorV\">Collector<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/Type>, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>, <Type usr=\"s:4main9CollectorV10EnvElementq1_mfp\">EnvElement<\/Type>&gt;.ActType = Tensor&lt;Element&gt;<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -209,7 +209,7 @@
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:4main9CollectorV\">Collector<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\">EnvElement<\/ref.generic_type_param>&gt;.<decl.name>ActType<\/decl.name> = Tensor&lt;Element&gt;<\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:4main9CollectorV\">Collector<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\">EnvElement<\/ref.generic_type_param>&gt;.<decl.name>ActType<\/decl.name> = Tensor&lt;Element&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
             "key.line" : 12,
@@ -250,11 +250,11 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>var batch: [<Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/Type>&gt;]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var batch: [<Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/Type>&gt;]<\/Declaration>",
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>batch<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param>&gt;]<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>batch<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/ref.generic_type_param>&gt;]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 46,
             "key.line" : 14,
@@ -263,21 +263,21 @@
             "key.namelength" : 5,
             "key.nameoffset" : 746,
             "key.offset" : 742,
-            "key.parsed_declaration" : "var batch: [CollectedData<Element, OtherType>]",
+            "key.parsed_declaration" : "var batch: [CollectedData<Element, StateType>]",
             "key.parsed_scope.end" : 14,
             "key.parsed_scope.start" : 14,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
-            "key.typename" : "[CollectedData<Element, OtherType>]",
+            "key.typename" : "[CollectedData<Element, StateType>]",
             "key.typeusr" : "$sSay4main13CollectedDataVyxq_GGD",
             "key.usr" : "s:4main9CollectorV5batchSayAA13CollectedDataVyxq_GGvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>var finalizedBatch: [<Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/Type>&gt;]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var finalizedBatch: [<Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/Type>&gt;]<\/Declaration>",
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>finalizedBatch<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param>&gt;]<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>finalizedBatch<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/ref.generic_type_param>&gt;]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 55,
             "key.line" : 15,
@@ -286,21 +286,21 @@
             "key.namelength" : 14,
             "key.nameoffset" : 795,
             "key.offset" : 791,
-            "key.parsed_declaration" : "var finalizedBatch: [CollectedData<Element, OtherType>]",
+            "key.parsed_declaration" : "var finalizedBatch: [CollectedData<Element, StateType>]",
             "key.parsed_scope.end" : 15,
             "key.parsed_scope.start" : 15,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
-            "key.typename" : "[CollectedData<Element, OtherType>]",
+            "key.typename" : "[CollectedData<Element, StateType>]",
             "key.typeusr" : "$sSay4main13CollectedDataVyxq_GGD",
             "key.usr" : "s:4main9CollectorV14finalizedBatchSayAA13CollectedDataVyxq_GGvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>let policy: (ObsType) -&gt; (ActType, <Type usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/Type>)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>let policy: (ObsType) -&gt; (ActType, <Type usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/Type>)<\/Declaration>",
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>policy<\/decl.name>: <decl.var.type>(<decl.var.parameter><decl.var.parameter.type>ObsType<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ActType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>policy<\/decl.name>: <decl.var.type>(<decl.var.parameter><decl.var.parameter.type>ObsType<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ActType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 48,
             "key.line" : 16,
@@ -309,7 +309,7 @@
             "key.namelength" : 6,
             "key.nameoffset" : 853,
             "key.offset" : 849,
-            "key.parsed_declaration" : "let policy: (_: ObsType) -> (ActType, OtherType)",
+            "key.parsed_declaration" : "let policy: (_: ObsType) -> (ActType, StateType)",
             "key.parsed_scope.end" : 16,
             "key.parsed_scope.start" : 16,
             "key.typename" : "<<error type>>",
@@ -318,7 +318,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public init(envs: [<Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>], policy: @escaping (ObsType) -&gt; (ActType, <Type usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/Type>))<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public init(envs: [<Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>], policy: @escaping (ObsType) -&gt; (ActType, <Type usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/Type>))<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -331,7 +331,7 @@
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>envs<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>policy<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>ObsType<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ActType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>envs<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>policy<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>ObsType<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ActType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/ref.generic_type_param><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 324,
             "key.line" : 17,
@@ -340,24 +340,24 @@
             "key.namelength" : 77,
             "key.nameoffset" : 907,
             "key.offset" : 907,
-            "key.parsed_declaration" : "public init(envs: [EnvType], policy: @escaping (_: ObsType) -> (ActType, OtherType))",
+            "key.parsed_declaration" : "public init(envs: [EnvType], policy: @escaping (_: ObsType) -> (ActType, StateType))",
             "key.parsed_scope.end" : 26,
             "key.parsed_scope.start" : 17,
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element, OtherType, EnvType, EnvElement where EnvType : Env> (Collector<Element, OtherType, EnvType, EnvElement>.Type) -> ([EnvType], <<error type>>) -> Collector<Element, OtherType, EnvType, EnvElement>",
+            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env> (Collector<Element, StateType, EnvType, EnvElement>.Type) -> ([EnvType], <<error type>>) -> Collector<Element, StateType, EnvType, EnvElement>",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main9CollectorVyXeXecfc"
           }
         ],
-        "key.typename" : "Collector<Element, OtherType, EnvType, EnvElement>.Type",
+        "key.typename" : "Collector<Element, StateType, EnvType, EnvElement>.Type",
         "key.typeusr" : "$s4main9CollectorVyxq_q0_q1_GmD",
         "key.usr" : "s:4main9CollectorV"
       },
       {
         "key.accessibility" : "source.lang.swift.accessibility.public",
-        "key.annotated_decl" : "<Declaration>public struct CollectedData&lt;Element, OtherType&gt;<\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct CollectedData&lt;Element, StateType&gt;<\/Declaration>",
         "key.attributes" : [
           {
             "key.attribute" : "source.decl.attribute.public",
@@ -365,22 +365,22 @@
             "key.offset" : 1235
           }
         ],
-        "key.bodylength" : 464,
+        "key.bodylength" : 503,
         "key.bodyoffset" : 1299,
         "key.column" : 15,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>CollectedData<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main13CollectedDataV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main13CollectedDataV9OtherTypeq_mfp\"><decl.generic_type_param.name>OtherType<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;<\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>CollectedData<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main13CollectedDataV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main13CollectedDataV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;<\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.struct",
-        "key.length" : 522,
+        "key.length" : 561,
         "key.line" : 29,
         "key.modulename" : "main",
         "key.name" : "CollectedData",
         "key.namelength" : 13,
         "key.nameoffset" : 1249,
         "key.offset" : 1242,
-        "key.parsed_declaration" : "public struct CollectedData<Element: TensorNumeric, OtherType>",
-        "key.parsed_scope.end" : 47,
+        "key.parsed_declaration" : "public struct CollectedData<Element: TensorNumeric, StateType>",
+        "key.parsed_scope.end" : 48,
         "key.parsed_scope.start" : 29,
         "key.substructure" : [
           {
@@ -417,29 +417,29 @@
             "key.usr" : "s:4main13CollectedDataV7Elementxmfp"
           },
           {
-            "key.annotated_decl" : "<Declaration>OtherType<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>StateType<\/Declaration>",
             "key.column" : 53,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>OtherType<\/decl.generic_type_param.name><\/decl.generic_type_param>",
+            "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>",
             "key.kind" : "source.lang.swift.decl.generic_type_param",
             "key.length" : 9,
             "key.line" : 29,
             "key.modulename" : "main",
-            "key.name" : "OtherType",
+            "key.name" : "StateType",
             "key.namelength" : 9,
             "key.nameoffset" : 1287,
             "key.offset" : 1287,
-            "key.parsed_declaration" : "public struct CollectedData<Element: TensorNumeric, OtherType",
+            "key.parsed_declaration" : "public struct CollectedData<Element: TensorNumeric, StateType",
             "key.parsed_scope.end" : 29,
             "key.parsed_scope.start" : 29,
-            "key.typename" : "OtherType.Type",
+            "key.typename" : "StateType.Type",
             "key.typeusr" : "$sq_mD",
-            "key.usr" : "s:4main13CollectedDataV9OtherTypeq_mfp"
+            "key.usr" : "s:4main13CollectedDataV9StateTypeq_mfp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias <Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main13CollectedDataV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main13CollectedDataV9OtherTypeq_mfp\">OtherType<\/Type>&gt;.ObsType = Tensor&lt;Element&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias <Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main13CollectedDataV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main13CollectedDataV9StateTypeq_mfp\">StateType<\/Type>&gt;.ObsType = Tensor&lt;Element&gt;<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -450,7 +450,7 @@
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main13CollectedDataV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main13CollectedDataV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param>&gt;.<decl.name>ObsType<\/decl.name> = Tensor&lt;Element&gt;<\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main13CollectedDataV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main13CollectedDataV9StateTypeq_mfp\">StateType<\/ref.generic_type_param>&gt;.<decl.name>ObsType<\/decl.name> = Tensor&lt;Element&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
             "key.line" : 30,
@@ -468,7 +468,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias <Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main13CollectedDataV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main13CollectedDataV9OtherTypeq_mfp\">OtherType<\/Type>&gt;.ActType = Tensor&lt;Element&gt;<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias <Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main13CollectedDataV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main13CollectedDataV9StateTypeq_mfp\">StateType<\/Type>&gt;.ActType = Tensor&lt;Element&gt;<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -479,7 +479,7 @@
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main13CollectedDataV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main13CollectedDataV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param>&gt;.<decl.name>ActType<\/decl.name> = Tensor&lt;Element&gt;<\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main13CollectedDataV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main13CollectedDataV9StateTypeq_mfp\">StateType<\/ref.generic_type_param>&gt;.<decl.name>ActType<\/decl.name> = Tensor&lt;Element&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
             "key.line" : 31,
@@ -497,7 +497,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var lastObservation: ObsType<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var lastObservation: ObsType?<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -508,16 +508,16 @@
             "key.column" : 14,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>lastObservation<\/decl.name>: <decl.var.type>ObsType<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>lastObservation<\/decl.name>: <decl.var.type>ObsType?<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
-            "key.length" : 28,
+            "key.length" : 29,
             "key.line" : 32,
             "key.modulename" : "main",
             "key.name" : "lastObservation",
             "key.namelength" : 15,
             "key.nameoffset" : 1403,
             "key.offset" : 1399,
-            "key.parsed_declaration" : "public var lastObservation: ObsType",
+            "key.parsed_declaration" : "public var lastObservation: ObsType?",
             "key.parsed_scope.end" : 32,
             "key.parsed_scope.start" : 32,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
@@ -527,42 +527,12 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var actions: [ActType]<\/Declaration>",
-            "key.attributes" : [
-              {
-                "key.attribute" : "source.decl.attribute.public",
-                "key.length" : 6,
-                "key.offset" : 1430
-              }
-            ],
-            "key.column" : 14,
-            "key.decl_lang" : "source.lang.swift",
-            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>actions<\/decl.name>: <decl.var.type>[ActType]<\/decl.var.type><\/decl.var.instance>",
-            "key.kind" : "source.lang.swift.decl.var.instance",
-            "key.length" : 22,
-            "key.line" : 33,
-            "key.modulename" : "main",
-            "key.name" : "actions",
-            "key.namelength" : 7,
-            "key.nameoffset" : 1441,
-            "key.offset" : 1437,
-            "key.parsed_declaration" : "public var actions: [ActType]",
-            "key.parsed_scope.end" : 33,
-            "key.parsed_scope.start" : 33,
-            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
-            "key.typename" : "<<error type>>",
-            "key.typeusr" : "$sXeD",
-            "key.usr" : "s:4main13CollectedDataV7actionsXevp"
-          },
-          {
-            "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>public var rewards: [<Type usr=\"s:Sf\">Float<\/Type>]<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1462
+                "key.offset" : 1431
               }
             ],
             "key.column" : 14,
@@ -571,15 +541,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rewards<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Sf\">Float<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 20,
-            "key.line" : 34,
+            "key.line" : 33,
             "key.modulename" : "main",
             "key.name" : "rewards",
             "key.namelength" : 7,
-            "key.nameoffset" : 1473,
-            "key.offset" : 1469,
+            "key.nameoffset" : 1442,
+            "key.offset" : 1438,
             "key.parsed_declaration" : "public var rewards: [Float]",
-            "key.parsed_scope.end" : 34,
-            "key.parsed_scope.start" : 34,
+            "key.parsed_scope.end" : 33,
+            "key.parsed_scope.start" : 33,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "[Float]",
             "key.typeusr" : "$sSaySfGD",
@@ -587,65 +557,125 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var others: [<Type usr=\"s:4main13CollectedDataV9OtherTypeq_mfp\">OtherType<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var states: [<Type usr=\"s:4main13CollectedDataV9StateTypeq_mfp\">StateType<\/Type>]<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1492
+                "key.offset" : 1461
               }
             ],
             "key.column" : 14,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>others<\/decl.name>: <decl.var.type>[<ref.generic_type_param usr=\"s:4main13CollectedDataV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param>]<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>states<\/decl.name>: <decl.var.type>[<ref.generic_type_param usr=\"s:4main13CollectedDataV9StateTypeq_mfp\">StateType<\/ref.generic_type_param>]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 23,
-            "key.line" : 35,
+            "key.line" : 34,
             "key.modulename" : "main",
-            "key.name" : "others",
+            "key.name" : "states",
             "key.namelength" : 6,
-            "key.nameoffset" : 1503,
-            "key.offset" : 1499,
-            "key.parsed_declaration" : "public var others: [OtherType]",
-            "key.parsed_scope.end" : 35,
-            "key.parsed_scope.start" : 35,
+            "key.nameoffset" : 1472,
+            "key.offset" : 1468,
+            "key.parsed_declaration" : "public var states: [StateType]",
+            "key.parsed_scope.end" : 34,
+            "key.parsed_scope.start" : 34,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
-            "key.typename" : "[OtherType]",
+            "key.typename" : "[StateType]",
             "key.typeusr" : "$sSayq_GD",
-            "key.usr" : "s:4main13CollectedDataV6othersSayq_Gvp"
+            "key.usr" : "s:4main13CollectedDataV6statesSayq_Gvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public init(lastObservation: ObsType)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var episodeReward: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1525
+                "key.offset" : 1494
               }
             ],
-            "key.bodylength" : 96,
-            "key.bodyoffset" : 1564,
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>episodeReward<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 24,
+            "key.line" : 35,
+            "key.modulename" : "main",
+            "key.name" : "episodeReward",
+            "key.namelength" : 13,
+            "key.nameoffset" : 1505,
+            "key.offset" : 1501,
+            "key.parsed_declaration" : "public var episodeReward: Float",
+            "key.parsed_scope.end" : 35,
+            "key.parsed_scope.start" : 35,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main13CollectedDataV13episodeRewardSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var episodeLength: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1528
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>episodeLength<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 22,
+            "key.line" : 36,
+            "key.modulename" : "main",
+            "key.name" : "episodeLength",
+            "key.namelength" : 13,
+            "key.nameoffset" : 1539,
+            "key.offset" : 1535,
+            "key.parsed_declaration" : "public var episodeLength: Int",
+            "key.parsed_scope.end" : 36,
+            "key.parsed_scope.start" : 36,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:4main13CollectedDataV13episodeLengthSivp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(lastObservation: ObsType?)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 1560
+              }
+            ],
+            "key.bodylength" : 123,
+            "key.bodyoffset" : 1600,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>lastObservation<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ObsType<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>lastObservation<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ObsType?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 129,
-            "key.line" : 36,
+            "key.length" : 157,
+            "key.line" : 37,
             "key.modulename" : "main",
             "key.name" : "init(lastObservation:)",
-            "key.namelength" : 30,
-            "key.nameoffset" : 1532,
-            "key.offset" : 1532,
-            "key.parsed_declaration" : "public init(lastObservation: ObsType)",
-            "key.parsed_scope.end" : 41,
-            "key.parsed_scope.start" : 36,
+            "key.namelength" : 31,
+            "key.nameoffset" : 1567,
+            "key.offset" : 1567,
+            "key.parsed_declaration" : "public init(lastObservation: ObsType?)",
+            "key.parsed_scope.end" : 43,
+            "key.parsed_scope.start" : 37,
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element, OtherType> (CollectedData<Element, OtherType>.Type) -> (<<error type>>) -> CollectedData<Element, OtherType>",
+            "key.typename" : "<Element, StateType> (CollectedData<Element, StateType>.Type) -> (<<error type>>) -> CollectedData<Element, StateType>",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main13CollectedDataVyXeXecfc"
           },
@@ -656,69 +686,69 @@
               {
                 "key.attribute" : "source.decl.attribute.mutating",
                 "key.length" : 8,
-                "key.offset" : 1664
+                "key.offset" : 1727
               }
             ],
-            "key.bodylength" : 74,
-            "key.bodyoffset" : 1687,
+            "key.bodylength" : 50,
+            "key.bodyoffset" : 1750,
             "key.column" : 17,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reset<\/decl.name>()<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 89,
-            "key.line" : 42,
+            "key.length" : 65,
+            "key.line" : 44,
             "key.modulename" : "main",
             "key.name" : "reset()",
             "key.namelength" : 7,
-            "key.nameoffset" : 1678,
-            "key.offset" : 1673,
+            "key.nameoffset" : 1741,
+            "key.offset" : 1736,
             "key.parsed_declaration" : "mutating func reset()",
-            "key.parsed_scope.end" : 46,
-            "key.parsed_scope.start" : 42,
+            "key.parsed_scope.end" : 47,
+            "key.parsed_scope.start" : 44,
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element, OtherType> (inout CollectedData<Element, OtherType>) -> () -> ()",
+            "key.typename" : "<Element, StateType> (inout CollectedData<Element, StateType>) -> () -> ()",
             "key.typeusr" : "$syycD",
             "key.usr" : "s:4main13CollectedDataV5resetyyF"
           }
         ],
-        "key.typename" : "CollectedData<Element, OtherType>.Type",
+        "key.typename" : "CollectedData<Element, StateType>.Type",
         "key.typeusr" : "$s4main13CollectedDataVyxq_GmD",
         "key.usr" : "s:4main13CollectedDataV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, OtherType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
         "key.bodylength" : 939,
-        "key.bodyoffset" : 1787,
+        "key.bodyoffset" : 1826,
         "key.column" : 15,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 15,
-        "key.doc.declaration" : "public struct Collector<Element, OtherType, EnvType, EnvElement> where EnvType : main.Env",
+        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env",
         "key.doc.discussion" : [
           {
-            "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and other data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
+            "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, OtherType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and other data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
         "key.doc.line" : 9,
         "key.doc.name" : "Collector",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\"><decl.generic_type_param.name>OtherType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 961,
         "key.line" : 9,
         "key.modulename" : "main",
         "key.name" : "Collector",
         "key.namelength" : 9,
-        "key.nameoffset" : 1776,
-        "key.offset" : 1766,
+        "key.nameoffset" : 1815,
+        "key.offset" : 1805,
         "key.parsed_declaration" : "extension Collector",
-        "key.parsed_scope.end" : 84,
-        "key.parsed_scope.start" : 49,
+        "key.parsed_scope.end" : 85,
+        "key.parsed_scope.start" : 50,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -727,26 +757,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1790
+                "key.offset" : 1829
               }
             ],
             "key.bodylength" : 462,
-            "key.bodyoffset" : 1816,
+            "key.bodyoffset" : 1855,
             "key.column" : 17,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
             "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Statistics<\/decl.name><\/decl.struct>",
             "key.kind" : "source.lang.swift.decl.struct",
             "key.length" : 482,
-            "key.line" : 50,
+            "key.line" : 51,
             "key.modulename" : "main",
             "key.name" : "Statistics",
             "key.namelength" : 10,
-            "key.nameoffset" : 1804,
-            "key.offset" : 1797,
+            "key.nameoffset" : 1843,
+            "key.offset" : 1836,
             "key.parsed_declaration" : "public struct Statistics",
-            "key.parsed_scope.end" : 64,
-            "key.parsed_scope.start" : 50,
+            "key.parsed_scope.end" : 65,
+            "key.parsed_scope.start" : 51,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -755,7 +785,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1821
+                    "key.offset" : 1860
                   }
                 ],
                 "key.column" : 16,
@@ -764,15 +794,15 @@
                 "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>episodeCount<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
                 "key.kind" : "source.lang.swift.decl.var.instance",
                 "key.length" : 21,
-                "key.line" : 51,
+                "key.line" : 52,
                 "key.modulename" : "main",
                 "key.name" : "episodeCount",
                 "key.namelength" : 12,
-                "key.nameoffset" : 1832,
-                "key.offset" : 1828,
+                "key.nameoffset" : 1871,
+                "key.offset" : 1867,
                 "key.parsed_declaration" : "public var episodeCount: Int",
-                "key.parsed_scope.end" : 51,
-                "key.parsed_scope.start" : 51,
+                "key.parsed_scope.end" : 52,
+                "key.parsed_scope.start" : 52,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
@@ -785,7 +815,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1854
+                    "key.offset" : 1893
                   }
                 ],
                 "key.column" : 16,
@@ -794,15 +824,15 @@
                 "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>stepCount<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
                 "key.kind" : "source.lang.swift.decl.var.instance",
                 "key.length" : 18,
-                "key.line" : 52,
+                "key.line" : 53,
                 "key.modulename" : "main",
                 "key.name" : "stepCount",
                 "key.namelength" : 9,
-                "key.nameoffset" : 1865,
-                "key.offset" : 1861,
+                "key.nameoffset" : 1904,
+                "key.offset" : 1900,
                 "key.parsed_declaration" : "public var stepCount: Int",
-                "key.parsed_scope.end" : 52,
-                "key.parsed_scope.start" : 52,
+                "key.parsed_scope.end" : 53,
+                "key.parsed_scope.start" : 53,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
@@ -815,7 +845,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1884
+                    "key.offset" : 1923
                   }
                 ],
                 "key.column" : 16,
@@ -824,15 +854,15 @@
                 "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>episodeReward<\/decl.name>: <decl.var.type><ref.struct usr=\"s:4main19NumericalStatisticsV\">NumericalStatistics<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
                 "key.kind" : "source.lang.swift.decl.var.instance",
                 "key.length" : 38,
-                "key.line" : 53,
+                "key.line" : 54,
                 "key.modulename" : "main",
                 "key.name" : "episodeReward",
                 "key.namelength" : 13,
-                "key.nameoffset" : 1895,
-                "key.offset" : 1891,
+                "key.nameoffset" : 1934,
+                "key.offset" : 1930,
                 "key.parsed_declaration" : "public var episodeReward: NumericalStatistics",
-                "key.parsed_scope.end" : 53,
-                "key.parsed_scope.start" : 53,
+                "key.parsed_scope.end" : 54,
+                "key.parsed_scope.start" : 54,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "NumericalStatistics",
                 "key.typeusr" : "$s4main19NumericalStatisticsVD",
@@ -845,7 +875,7 @@
                   {
                     "key.attribute" : "source.decl.attribute.public",
                     "key.length" : 6,
-                    "key.offset" : 1934
+                    "key.offset" : 1973
                   }
                 ],
                 "key.column" : 16,
@@ -854,15 +884,15 @@
                 "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>episodeLength<\/decl.name>: <decl.var.type><ref.struct usr=\"s:4main19NumericalStatisticsV\">NumericalStatistics<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
                 "key.kind" : "source.lang.swift.decl.var.instance",
                 "key.length" : 38,
-                "key.line" : 54,
+                "key.line" : 55,
                 "key.modulename" : "main",
                 "key.name" : "episodeLength",
                 "key.namelength" : 13,
-                "key.nameoffset" : 1945,
-                "key.offset" : 1941,
+                "key.nameoffset" : 1984,
+                "key.offset" : 1980,
                 "key.parsed_declaration" : "public var episodeLength: NumericalStatistics",
-                "key.parsed_scope.end" : 54,
-                "key.parsed_scope.start" : 54,
+                "key.parsed_scope.end" : 55,
+                "key.parsed_scope.start" : 55,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "NumericalStatistics",
                 "key.typeusr" : "$s4main19NumericalStatisticsVD",
@@ -872,31 +902,31 @@
                 "key.accessibility" : "source.lang.swift.accessibility.internal",
                 "key.annotated_decl" : "<Declaration>init(episodeCount: <Type usr=\"s:Si\">Int<\/Type>, stepCount: <Type usr=\"s:Si\">Int<\/Type>, episodeReward: <Type usr=\"s:4main19NumericalStatisticsV\">NumericalStatistics<\/Type>, episodeLength: <Type usr=\"s:4main19NumericalStatisticsV\">NumericalStatistics<\/Type>)<\/Declaration>",
                 "key.bodylength" : 159,
-                "key.bodyoffset" : 2115,
+                "key.bodyoffset" : 2154,
                 "key.column" : 5,
                 "key.decl_lang" : "source.lang.swift",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
                 "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>episodeCount<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>stepCount<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>episodeReward<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:4main19NumericalStatisticsV\">NumericalStatistics<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>episodeLength<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:4main19NumericalStatisticsV\">NumericalStatistics<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
                 "key.kind" : "source.lang.swift.decl.function.method.instance",
                 "key.length" : 291,
-                "key.line" : 55,
+                "key.line" : 56,
                 "key.modulename" : "main",
                 "key.name" : "init(episodeCount:stepCount:episodeReward:episodeLength:)",
                 "key.namelength" : 129,
-                "key.nameoffset" : 1984,
-                "key.offset" : 1984,
+                "key.nameoffset" : 2023,
+                "key.offset" : 2023,
                 "key.parsed_declaration" : "init(\n  episodeCount: Int, stepCount: Int, episodeReward: NumericalStatistics,\n  episodeLength: NumericalStatistics\n)",
-                "key.parsed_scope.end" : 63,
-                "key.parsed_scope.start" : 55,
+                "key.parsed_scope.end" : 64,
+                "key.parsed_scope.start" : 56,
                 "key.substructure" : [
 
                 ],
-                "key.typename" : "<Element, OtherType, EnvType, EnvElement where EnvType : Env> (Collector<Element, OtherType, EnvType, EnvElement>.Statistics.Type) -> (Int, Int, NumericalStatistics, NumericalStatistics) -> Collector<Element, OtherType, EnvType, EnvElement>.Statistics",
+                "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env> (Collector<Element, StateType, EnvType, EnvElement>.Statistics.Type) -> (Int, Int, NumericalStatistics, NumericalStatistics) -> Collector<Element, StateType, EnvType, EnvElement>.Statistics",
                 "key.typeusr" : "$s12episodeCount04stepB00A6Reward0A6Length4main9CollectorV10StatisticsVyxq_q0_q1__GSi_SiAE09NumericalH0VALtcD",
                 "key.usr" : "s:4main9CollectorV10StatisticsV12episodeCount04stepE00D6Reward0D6LengthAEyxq_q0_q1__GSi_SiAA09NumericalC0VALtcfc"
               }
             ],
-            "key.typename" : "Collector<Element, OtherType, EnvType, EnvElement>.Statistics.Type",
+            "key.typename" : "Collector<Element, StateType, EnvType, EnvElement>.Statistics.Type",
             "key.typeusr" : "$s4main9CollectorV10StatisticsVyxq_q0_q1__GmD",
             "key.usr" : "s:4main9CollectorV10StatisticsV"
           },
@@ -907,35 +937,35 @@
               {
                 "key.attribute" : "source.decl.attribute.mutating",
                 "key.length" : 8,
-                "key.offset" : 2290
+                "key.offset" : 2329
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2283
+                "key.offset" : 2322
               }
             ],
             "key.bodylength" : 94,
-            "key.bodyoffset" : 2317,
+            "key.bodyoffset" : 2356,
             "key.column" : 24,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>resetData<\/decl.name>()<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 113,
-            "key.line" : 66,
+            "key.line" : 67,
             "key.modulename" : "main",
             "key.name" : "resetData()",
             "key.namelength" : 11,
-            "key.nameoffset" : 2304,
-            "key.offset" : 2299,
+            "key.nameoffset" : 2343,
+            "key.offset" : 2338,
             "key.parsed_declaration" : "public mutating func resetData()",
-            "key.parsed_scope.end" : 71,
-            "key.parsed_scope.start" : 66,
+            "key.parsed_scope.end" : 72,
+            "key.parsed_scope.start" : 67,
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element, OtherType, EnvType, EnvElement where EnvType : Env> (inout Collector<Element, OtherType, EnvType, EnvElement>) -> () -> ()",
+            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env> (inout Collector<Element, StateType, EnvType, EnvElement>) -> () -> ()",
             "key.typeusr" : "$syycD",
             "key.usr" : "s:4main9CollectorV9resetDatayyF"
           },
@@ -946,105 +976,105 @@
               {
                 "key.attribute" : "source.decl.attribute.mutating",
                 "key.length" : 8,
-                "key.offset" : 2423
+                "key.offset" : 2462
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2416
+                "key.offset" : 2455
               }
             ],
             "key.bodylength" : 157,
-            "key.bodyoffset" : 2446,
+            "key.bodyoffset" : 2485,
             "key.column" : 24,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reset<\/decl.name>()<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 172,
-            "key.line" : 73,
+            "key.line" : 74,
             "key.modulename" : "main",
             "key.name" : "reset()",
             "key.namelength" : 7,
-            "key.nameoffset" : 2437,
-            "key.offset" : 2432,
+            "key.nameoffset" : 2476,
+            "key.offset" : 2471,
             "key.parsed_declaration" : "public mutating func reset()",
-            "key.parsed_scope.end" : 79,
-            "key.parsed_scope.start" : 73,
+            "key.parsed_scope.end" : 80,
+            "key.parsed_scope.start" : 74,
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element, OtherType, EnvType, EnvElement where EnvType : Env> (inout Collector<Element, OtherType, EnvType, EnvElement>) -> () -> ()",
+            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env> (inout Collector<Element, StateType, EnvType, EnvElement>) -> () -> ()",
             "key.typeusr" : "$syycD",
             "key.usr" : "s:4main9CollectorV5resetyyF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var data: [<Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/Type>&gt;] { get }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var data: [<Type usr=\"s:4main13CollectedDataV\">CollectedData<\/Type>&lt;<Type usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/Type>, <Type usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/Type>&gt;] { get }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2608
+                "key.offset" : 2647
               }
             ],
             "key.bodylength" : 62,
-            "key.bodyoffset" : 2662,
+            "key.bodyoffset" : 2701,
             "key.column" : 14,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>data<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\">OtherType<\/ref.generic_type_param>&gt;]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>data<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13CollectedDataV\">CollectedData<\/ref.struct>&lt;<ref.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\">Element<\/ref.generic_type_param>, <ref.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\">StateType<\/ref.generic_type_param>&gt;]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 110,
-            "key.line" : 81,
+            "key.line" : 82,
             "key.modulename" : "main",
             "key.name" : "data",
             "key.namelength" : 4,
-            "key.nameoffset" : 2619,
-            "key.offset" : 2615,
-            "key.parsed_declaration" : "public var data: [CollectedData<Element, OtherType>]",
-            "key.parsed_scope.end" : 83,
-            "key.parsed_scope.start" : 81,
-            "key.typename" : "[CollectedData<Element, OtherType>]",
+            "key.nameoffset" : 2658,
+            "key.offset" : 2654,
+            "key.parsed_declaration" : "public var data: [CollectedData<Element, StateType>]",
+            "key.parsed_scope.end" : 84,
+            "key.parsed_scope.start" : 82,
+            "key.typename" : "[CollectedData<Element, StateType>]",
             "key.typeusr" : "$sSay4main13CollectedDataVyxq_GGD",
             "key.usr" : "s:4main9CollectorV4dataSayAA13CollectedDataVyxq_GGvp"
           }
         ],
-        "key.typename" : "Collector<Element, OtherType, EnvType, EnvElement>.Type",
+        "key.typename" : "Collector<Element, StateType, EnvType, EnvElement>.Type",
         "key.typeusr" : "$s4main9CollectorVyxq_q0_q1_GmD",
         "key.usr" : "s:4main9CollectorV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, OtherType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
-        "key.bodylength" : 1197,
-        "key.bodyoffset" : 2810,
+        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
+        "key.bodylength" : 1412,
+        "key.bodyoffset" : 2855,
         "key.column" : 15,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 15,
-        "key.doc.declaration" : "public struct Collector<Element, OtherType, EnvType, EnvElement> where EnvType : main.Env",
+        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env",
         "key.doc.discussion" : [
           {
-            "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and other data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
+            "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, OtherType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and other data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
         "key.doc.line" : 9,
         "key.doc.name" : "Collector",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9OtherTypeq_mfp\"><decl.generic_type_param.name>OtherType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 1279,
+        "key.length" : 1500,
         "key.line" : 9,
         "key.modulename" : "main",
         "key.name" : "Collector",
         "key.namelength" : 9,
-        "key.nameoffset" : 2739,
-        "key.offset" : 2729,
-        "key.parsed_declaration" : "extension Collector where EnvType.DoneType == Bool, EnvType.RewardType == Float",
-        "key.parsed_scope.end" : 118,
-        "key.parsed_scope.start" : 86,
+        "key.nameoffset" : 2778,
+        "key.offset" : 2768,
+        "key.parsed_declaration" : "extension Collector where EnvType.TerminatedType == Bool, EnvType.RewardType == Float",
+        "key.parsed_scope.end" : 125,
+        "key.parsed_scope.start" : 87,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1053,31 +1083,31 @@
               {
                 "key.attribute" : "source.decl.attribute.mutating",
                 "key.length" : 8,
-                "key.offset" : 2820
+                "key.offset" : 2865
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2813
+                "key.offset" : 2858
               }
             ],
-            "key.bodylength" : 1136,
-            "key.bodyoffset" : 2869,
+            "key.bodylength" : 1351,
+            "key.bodyoffset" : 2914,
             "key.column" : 24,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>collect<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>nStep<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:4main9CollectorV10StatisticsV\">Statistics<\/ref.struct><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 1177,
-            "key.line" : 87,
+            "key.length" : 1392,
+            "key.line" : 88,
             "key.modulename" : "main",
             "key.name" : "collect(nStep:)",
             "key.namelength" : 19,
-            "key.nameoffset" : 2834,
-            "key.offset" : 2829,
+            "key.nameoffset" : 2879,
+            "key.offset" : 2874,
             "key.parsed_declaration" : "public mutating func collect(nStep: Int) -> Statistics",
-            "key.parsed_scope.end" : 117,
-            "key.parsed_scope.start" : 87,
+            "key.parsed_scope.end" : 124,
+            "key.parsed_scope.start" : 88,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var episodeCount: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
@@ -1087,18 +1117,18 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>episodeCount<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 88,
+                "key.line" : 89,
                 "key.modulename" : "main",
                 "key.name" : "episodeCount",
                 "key.namelength" : 12,
-                "key.nameoffset" : 2878,
-                "key.offset" : 2874,
+                "key.nameoffset" : 2923,
+                "key.offset" : 2919,
                 "key.parsed_declaration" : "var episodeCount = 0",
-                "key.parsed_scope.end" : 88,
-                "key.parsed_scope.start" : 88,
+                "key.parsed_scope.end" : 89,
+                "key.parsed_scope.start" : 89,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
-                "key.usr" : "s:4main9CollectorVAASb8DoneTypeRt0_Sf06RewardD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF12episodeCountL_Sivp"
+                "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF12episodeCountL_Sivp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var stepCount: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
@@ -1108,18 +1138,18 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>stepCount<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 17,
-                "key.line" : 89,
+                "key.line" : 90,
                 "key.modulename" : "main",
                 "key.name" : "stepCount",
                 "key.namelength" : 9,
-                "key.nameoffset" : 2903,
-                "key.offset" : 2899,
+                "key.nameoffset" : 2948,
+                "key.offset" : 2944,
                 "key.parsed_declaration" : "var stepCount = 0",
-                "key.parsed_scope.end" : 89,
-                "key.parsed_scope.start" : 89,
+                "key.parsed_scope.end" : 90,
+                "key.parsed_scope.start" : 90,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
-                "key.usr" : "s:4main9CollectorVAASb8DoneTypeRt0_Sf06RewardD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF9stepCountL_Sivp"
+                "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF9stepCountL_Sivp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var episodeRewards: [<Type usr=\"s:Sf\">Float<\/Type>]<\/Declaration>",
@@ -1129,18 +1159,18 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>episodeRewards<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Sf\">Float<\/ref.struct>]<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 30,
-                "key.line" : 90,
+                "key.line" : 91,
                 "key.modulename" : "main",
                 "key.name" : "episodeRewards",
                 "key.namelength" : 14,
-                "key.nameoffset" : 2925,
-                "key.offset" : 2921,
+                "key.nameoffset" : 2970,
+                "key.offset" : 2966,
                 "key.parsed_declaration" : "var episodeRewards = [Float]()",
-                "key.parsed_scope.end" : 90,
-                "key.parsed_scope.start" : 90,
+                "key.parsed_scope.end" : 91,
+                "key.parsed_scope.start" : 91,
                 "key.typename" : "[Float]",
                 "key.typeusr" : "$sSaySfGD",
-                "key.usr" : "s:4main9CollectorVAASb8DoneTypeRt0_Sf06RewardD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeRewardsL_SaySfGvp"
+                "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeRewardsL_SaySfGvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var episodeLengths: [<Type usr=\"s:Sf\">Float<\/Type>]<\/Declaration>",
@@ -1150,26 +1180,26 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>episodeLengths<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Sf\">Float<\/ref.struct>]<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 30,
-                "key.line" : 91,
+                "key.line" : 92,
                 "key.modulename" : "main",
                 "key.name" : "episodeLengths",
                 "key.namelength" : 14,
-                "key.nameoffset" : 2960,
-                "key.offset" : 2956,
+                "key.nameoffset" : 3005,
+                "key.offset" : 3001,
                 "key.parsed_declaration" : "var episodeLengths = [Float]()",
-                "key.parsed_scope.end" : 91,
-                "key.parsed_scope.start" : 91,
+                "key.parsed_scope.end" : 92,
+                "key.parsed_scope.start" : 92,
                 "key.typename" : "[Float]",
                 "key.typeusr" : "$sSaySfGD",
-                "key.usr" : "s:4main9CollectorVAASb8DoneTypeRt0_Sf06RewardD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeLengthsL_SaySfGvp"
+                "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeLengthsL_SaySfGvp"
               }
             ],
-            "key.typename" : "<Element, OtherType, EnvType, EnvElement where EnvType : Env, EnvType.DoneType == Bool, EnvType.RewardType == Float> (inout Collector<Element, OtherType, EnvType, EnvElement>) -> (Int) -> Collector<Element, OtherType, EnvType, EnvElement>.Statistics",
+            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env, EnvType.RewardType == Float, EnvType.TerminatedType == Bool> (inout Collector<Element, StateType, EnvType, EnvElement>) -> (Int) -> Collector<Element, StateType, EnvType, EnvElement>.Statistics",
             "key.typeusr" : "$s5nStep4main9CollectorV10StatisticsVyxq_q0_q1__GSi_tcD",
-            "key.usr" : "s:4main9CollectorVAASb8DoneTypeRt0_Sf06RewardD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF"
+            "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF"
           }
         ],
-        "key.typename" : "Collector<Element, OtherType, EnvType, EnvElement>.Type",
+        "key.typename" : "Collector<Element, StateType, EnvType, EnvElement>.Type",
         "key.typeusr" : "$s4main9CollectorVyxq_q0_q1_GmD",
         "key.usr" : "s:4main9CollectorV"
       }

@@ -105,10 +105,25 @@
                 <a href="../Classes/HTTPRenderServer.html">HTTPRenderServer</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/HalfCheetah.html">HalfCheetah</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Hopper.html">Hopper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Humanoid.html">Humanoid</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/IndexSelect.html">IndexSelect</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InvertedDoublePendulum.html">InvertedDoublePendulum</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/InvertedPendulum.html">InvertedPendulum</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/LSTM.html">LSTM</a>
@@ -147,6 +162,9 @@
                 <a href="../Classes/ModelBuilder.html">ModelBuilder</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/MuJoCoVideo.html">MuJoCoVideo</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/MuJoCoViewer.html">MuJoCoViewer</a>
               </li>
               <li class="nav-group-task">
@@ -157,6 +175,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReduceMax.html">ReduceMax</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ReduceMean.html">ReduceMean</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReduceNorm2.html">ReduceNorm2</a>
@@ -183,6 +204,9 @@
                 <a href="../Classes/Sum.html">Sum</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Swimmer.html">Swimmer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Swish.html">Swish</a>
               </li>
               <li class="nav-group-task">
@@ -196,6 +220,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/VecEnv.html">VecEnv</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Walker2D.html">Walker2D</a>
               </li>
             </ul>
           </li>
@@ -233,10 +260,10 @@
                 <a href="../Enums/ReduceOp.html">ReduceOp</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TensorDimensionFormat.html">TensorDimensionFormat</a>
+                <a href="../Enums/TensorFormat.html">TensorFormat</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/TensorFormat.html">TensorFormat</a>
+                <a href="../Enums/TensorShapeFormat.html">TensorShapeFormat</a>
               </li>
             </ul>
           </li>
@@ -970,7 +997,7 @@
                 <a href="../Structs/PPO.html">PPO</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PPO/ContinuousActionSpace.html">– ContinuousActionSpace</a>
+                <a href="../Structs/PPO/ContinuousState.html">– ContinuousState</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/PPO/Statistics.html">– Statistics</a>
@@ -1008,6 +1035,9 @@
               <li class="nav-group-task">
                 <a href="../Structs/Tensor/NumpyScalarCompatibleError.html">– NumpyScalarCompatibleError</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TensorShape.html">TensorShape</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -1019,7 +1049,7 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectedData</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span> <span class="kt">OtherType</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CollectedData</span><span class="o">&lt;</span><span class="kt">Element</span><span class="p">,</span> <span class="kt">StateType</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1099,33 +1129,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastObservation</span><span class="p">:</span> <span class="kt"><a href="../Structs/CollectedData.html#/s:4main13CollectedDataV7ObsTypea">ObsType</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4main13CollectedDataV7actionsXevp"></a>
-                    <a name="//apple_ref/swift/Property/actions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main13CollectedDataV7actionsXevp">actions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">actions</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/CollectedData.html#/s:4main13CollectedDataV7ActTypea">ActType</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastObservation</span><span class="p">:</span> <span class="kt"><a href="../Structs/CollectedData.html#/s:4main13CollectedDataV7ObsTypea">ObsType</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1161,9 +1165,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main13CollectedDataV6othersSayq_Gvp"></a>
-                    <a name="//apple_ref/swift/Property/others" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main13CollectedDataV6othersSayq_Gvp">others</a>
+                    <a name="/s:4main13CollectedDataV6statesSayq_Gvp"></a>
+                    <a name="//apple_ref/swift/Property/states" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main13CollectedDataV6statesSayq_Gvp">states</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1177,7 +1181,59 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">others</span><span class="p">:</span> <span class="p">[</span><span class="kt">OtherType</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">states</span><span class="p">:</span> <span class="p">[</span><span class="kt">StateType</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main13CollectedDataV13episodeRewardSfvp"></a>
+                    <a name="//apple_ref/swift/Property/episodeReward" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main13CollectedDataV13episodeRewardSfvp">episodeReward</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">episodeReward</span><span class="p">:</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main13CollectedDataV13episodeLengthSivp"></a>
+                    <a name="//apple_ref/swift/Property/episodeLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main13CollectedDataV13episodeLengthSivp">episodeLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">episodeLength</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -1203,7 +1259,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">lastObservation</span><span class="p">:</span> <span class="kt"><a href="../Structs/CollectedData.html#/s:4main13CollectedDataV7ObsTypea">ObsType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">lastObservation</span><span class="p">:</span> <span class="kt"><a href="../Structs/CollectedData.html#/s:4main13CollectedDataV7ObsTypea">ObsType</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1215,7 +1271,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-04)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

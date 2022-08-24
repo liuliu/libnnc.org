@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 3185,
+    "key.length" : 3397,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -19,14 +19,14 @@
             "key.offset" : 28
           }
         ],
-        "key.bodylength" : 377,
+        "key.bodylength" : 395,
         "key.bodyoffset" : 170,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>VecEnv<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6VecEnvC0C4Typexmfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main6VecEnvC7Elementq_mfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6VecEnvC0C4Typexmfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.class",
-        "key.length" : 507,
+        "key.length" : 525,
         "key.line" : 4,
         "key.modulename" : "main",
         "key.name" : "VecEnv",
@@ -135,7 +135,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.private",
-            "key.annotated_decl" : "<Declaration>private var done: [<Type usr=\"s:Sb\">Bool<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>private var terminated: [<Type usr=\"s:Sb\">Bool<\/Type>]<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.private",
@@ -146,22 +146,22 @@
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>done<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Sb\">Bool<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>terminated<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:Sb\">Bool<\/ref.struct>]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
-            "key.length" : 19,
+            "key.length" : 25,
             "key.line" : 7,
             "key.modulename" : "main",
-            "key.name" : "done",
-            "key.namelength" : 4,
+            "key.name" : "terminated",
+            "key.namelength" : 10,
             "key.nameoffset" : 218,
             "key.offset" : 214,
-            "key.parsed_declaration" : "private var done = [Bool]()",
+            "key.parsed_declaration" : "private var terminated = [Bool]()",
             "key.parsed_scope.end" : 7,
             "key.parsed_scope.start" : 7,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "[Bool]",
             "key.typeusr" : "$sSaySbGD",
-            "key.usr" : "s:4main6VecEnvC4done33_8A1B87FD50232D68AE2B1552273F2065LLSaySbGvp"
+            "key.usr" : "s:4main6VecEnvC10terminated33_8A1B87FD50232D68AE2B1552273F2065LLSaySbGvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.private",
@@ -170,7 +170,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 236
+                "key.offset" : 242
               }
             ],
             "key.column" : 15,
@@ -183,8 +183,8 @@
             "key.modulename" : "main",
             "key.name" : "obs",
             "key.namelength" : 3,
-            "key.nameoffset" : 248,
-            "key.offset" : 244,
+            "key.nameoffset" : 254,
+            "key.offset" : 250,
             "key.parsed_declaration" : "private var obs = [EnvType.ObsType]()",
             "key.parsed_scope.end" : 8,
             "key.parsed_scope.start" : 8,
@@ -200,7 +200,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 276
+                "key.offset" : 282
               }
             ],
             "key.column" : 15,
@@ -213,8 +213,8 @@
             "key.modulename" : "main",
             "key.name" : "rewards",
             "key.namelength" : 7,
-            "key.nameoffset" : 288,
-            "key.offset" : 284,
+            "key.nameoffset" : 294,
+            "key.offset" : 290,
             "key.parsed_declaration" : "private var rewards = [EnvType.RewardType]()",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
@@ -230,28 +230,28 @@
               {
                 "key.attribute" : "source.decl.attribute.rethrows",
                 "key.length" : 8,
-                "key.offset" : 386
+                "key.offset" : 392
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 323
+                "key.offset" : 329
               }
             ],
-            "key.bodylength" : 149,
-            "key.bodyoffset" : 396,
+            "key.bodylength" : 161,
+            "key.bodyoffset" : 402,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>count<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>closure<\/decl.var.parameter.name>: <decl.var.parameter.type>(<decl.var.parameter><decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword> -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main6VecEnvC0C4Typexmfp\">EnvType<\/ref.generic_type_param><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>) <syntaxtype.keyword>rethrows<\/syntaxtype.keyword><\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 216,
+            "key.length" : 228,
             "key.line" : 10,
             "key.modulename" : "main",
             "key.name" : "init(count:_:)",
             "key.namelength" : 55,
-            "key.nameoffset" : 330,
-            "key.offset" : 330,
+            "key.nameoffset" : 336,
+            "key.offset" : 336,
             "key.parsed_declaration" : "public init(count: Int, _ closure: (_: Int) throws -> EnvType) rethrows",
             "key.parsed_scope.end" : 18,
             "key.parsed_scope.start" : 10,
@@ -269,15 +269,15 @@
       },
       {
         "key.annotated_decl" : "<Declaration>public final class VecEnv&lt;EnvType, Element&gt; where <Type usr=\"s:4main6VecEnvC0C4Typexmfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
-        "key.bodylength" : 2579,
-        "key.bodyoffset" : 604,
+        "key.bodylength" : 2767,
+        "key.bodyoffset" : 628,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 3,
-            "key.offset" : 568
+            "key.offset" : 586
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
@@ -288,39 +288,39 @@
           }
         ],
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 2634,
+        "key.length" : 2828,
         "key.line" : 4,
         "key.modulename" : "main",
         "key.name" : "VecEnv",
         "key.namelength" : 6,
-        "key.nameoffset" : 560,
-        "key.offset" : 550,
-        "key.parsed_declaration" : "extension VecEnv: Env where EnvType.DoneType == Bool",
-        "key.parsed_scope.end" : 93,
+        "key.nameoffset" : 578,
+        "key.offset" : 568,
+        "key.parsed_declaration" : "extension VecEnv: Env where EnvType.TerminatedType == Bool",
+        "key.parsed_scope.end" : 95,
         "key.parsed_scope.start" : 21,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias ActType = <Type usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias ActType = <Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 607
+                "key.offset" : 631
               }
             ],
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ActType<\/decl.name> = <ref.generic_type_param usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/ref.associatedtype><\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ActType<\/decl.name> = <ref.generic_type_param usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/ref.associatedtype><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
             "key.line" : 22,
             "key.modulename" : "main",
             "key.name" : "ActType",
             "key.namelength" : 7,
-            "key.nameoffset" : 624,
-            "key.offset" : 614,
+            "key.nameoffset" : 648,
+            "key.offset" : 638,
             "key.overrides" : [
               {
                 "key.usr" : "s:4main3EnvP7ActTypeQa"
@@ -331,30 +331,30 @@
             "key.parsed_scope.start" : 22,
             "key.typename" : "EnvType.ActType.Type",
             "key.typeusr" : "$s7ActTypeQzmD",
-            "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlE03ActE0a"
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ActE0a"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias ObsType = <Type usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias ObsType = <Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 652
+                "key.offset" : 676
               }
             ],
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ObsType<\/decl.name> = <ref.generic_type_param usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype><\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ObsType<\/decl.name> = <ref.generic_type_param usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
             "key.line" : 23,
             "key.modulename" : "main",
             "key.name" : "ObsType",
             "key.namelength" : 7,
-            "key.nameoffset" : 669,
-            "key.offset" : 659,
+            "key.nameoffset" : 693,
+            "key.offset" : 683,
             "key.overrides" : [
               {
                 "key.usr" : "s:4main3EnvP7ObsTypeQa"
@@ -365,30 +365,30 @@
             "key.parsed_scope.start" : 23,
             "key.typename" : "EnvType.ObsType.Type",
             "key.typeusr" : "$s7ObsTypeQzmD",
-            "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlE03ObsE0a"
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ObsE0a"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias RewardType = [<Type usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias RewardType = [<Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/Type>]<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 697
+                "key.offset" : 721
               }
             ],
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>RewardType<\/decl.name> = [<ref.generic_type_param usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/ref.associatedtype>]<\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>RewardType<\/decl.name> = [<ref.generic_type_param usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/ref.associatedtype>]<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 43,
             "key.line" : 24,
             "key.modulename" : "main",
             "key.name" : "RewardType",
             "key.namelength" : 10,
-            "key.nameoffset" : 714,
-            "key.offset" : 704,
+            "key.nameoffset" : 738,
+            "key.offset" : 728,
             "key.overrides" : [
               {
                 "key.usr" : "s:4main3EnvP10RewardTypeQa"
@@ -399,72 +399,72 @@
             "key.parsed_scope.start" : 24,
             "key.typename" : "[EnvType.RewardType].Type",
             "key.typeusr" : "$sSay10RewardTypeQzGmD",
-            "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlE06RewardE0a"
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE06RewardE0a"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias DoneType = [<Type usr=\"s:Sb\">Bool<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias TerminatedType = [<Type usr=\"s:Sb\">Bool<\/Type>]<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 750
+                "key.offset" : 774
               }
             ],
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>DoneType<\/decl.name> = [<ref.struct usr=\"s:Sb\">Bool<\/ref.struct>]<\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>TerminatedType<\/decl.name> = [<ref.struct usr=\"s:Sb\">Bool<\/ref.struct>]<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
-            "key.length" : 27,
+            "key.length" : 33,
             "key.line" : 25,
             "key.modulename" : "main",
-            "key.name" : "DoneType",
-            "key.namelength" : 8,
-            "key.nameoffset" : 767,
-            "key.offset" : 757,
+            "key.name" : "TerminatedType",
+            "key.namelength" : 14,
+            "key.nameoffset" : 791,
+            "key.offset" : 781,
             "key.overrides" : [
               {
-                "key.usr" : "s:4main3EnvP8DoneTypeQa"
+                "key.usr" : "s:4main3EnvP14TerminatedTypeQa"
               }
             ],
-            "key.parsed_declaration" : "public typealias DoneType = [Bool]",
+            "key.parsed_declaration" : "public typealias TerminatedType = [Bool]",
             "key.parsed_scope.end" : 25,
             "key.parsed_scope.start" : 25,
             "key.typename" : "[Bool].Type",
             "key.typeusr" : "$sSaySbGmD",
-            "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlEADa"
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlEADa"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func step(action: <Type usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE03ActE0a\">ActType<\/Type>) -&gt; (<Type usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE03ObsE0a\">ObsType<\/Type>, <Type usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE06RewardE0a\">RewardType<\/Type>, <Type usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlEADa\">DoneType<\/Type>, [<Type usr=\"s:SS\">String<\/Type> : Any])<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func step(action: <Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ActE0a\">ActType<\/Type>) -&gt; (<Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ObsE0a\">ObsType<\/Type>, <Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE06RewardE0a\">RewardType<\/Type>, <Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlEADa\">TerminatedType<\/Type>, [<Type usr=\"s:SS\">String<\/Type> : Any])<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 787
+                "key.offset" : 817
               }
             ],
-            "key.bodylength" : 1029,
-            "key.bodyoffset" : 872,
+            "key.bodylength" : 1067,
+            "key.bodyoffset" : 908,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>action<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE03ActE0a\">ActType<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.typealias usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE03ObsE0a\">ObsType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE06RewardE0a\">RewardType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlEADa\">DoneType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>action<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.typealias usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ActE0a\">ActType<\/ref.typealias><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.typealias usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ObsE0a\">ObsType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE06RewardE0a\">RewardType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlEADa\">TerminatedType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 1108,
+            "key.length" : 1152,
             "key.line" : 26,
             "key.modulename" : "main",
             "key.name" : "step(action:)",
             "key.namelength" : 21,
-            "key.nameoffset" : 799,
-            "key.offset" : 794,
+            "key.nameoffset" : 829,
+            "key.offset" : 824,
             "key.overrides" : [
               {
-                "key.usr" : "s:4main3EnvP4step6action7ObsTypeQz_06RewardF0Qz04DoneF0QzSDySSypGt03ActF0Qz_tF"
+                "key.usr" : "s:4main3EnvP4step6action7ObsTypeQz_06RewardF0Qz010TerminatedF0QzSDySSypGt03ActF0Qz_tF"
               }
             ],
-            "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, DoneType, [String: Any])",
+            "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, TerminatedType, [String: Any])",
             "key.parsed_scope.end" : 52,
             "key.parsed_scope.start" : 26,
             "key.substructure" : [
@@ -475,49 +475,49 @@
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
-                "key.length" : 137,
+                "key.length" : 127,
                 "key.line" : 45,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 1660,
-                "key.offset" : 1656,
-                "key.parsed_declaration" : "var obs = Tensor<Element>(\n  self.obs[0].kind, format: self.obs[0].format,\n  dimensions: [envs.count, self.obs[0].dimensions[0]])",
+                "key.nameoffset" : 1738,
+                "key.offset" : 1734,
+                "key.parsed_declaration" : "var obs = Tensor<Element>(\n  self.obs[0].kind, format: self.obs[0].format,\n  shape: [envs.count, self.obs[0].shape[0]])",
                 "key.parsed_scope.end" : 45,
                 "key.parsed_scope.start" : 45,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlE4step6action03ObsE0Qz_Say06RewardE0QzGSaySbGSDySSypGt03ActE0Qz_tF3obsL0_Xevp"
+                "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE4step6action03ObsE0Qz_Say06RewardE0QzGSaySbGSDySSypGt03ActE0Qz_tF3obsL0_Xevp"
               }
             ],
-            "key.typename" : "<EnvType, Element where EnvType : Env, EnvType.DoneType == Bool> (VecEnv<EnvType, Element>) -> (EnvType.ActType) -> (EnvType.ObsType, [EnvType.RewardType], [Bool], [String : Any])",
+            "key.typename" : "<EnvType, Element where EnvType : Env, EnvType.TerminatedType == Bool> (VecEnv<EnvType, Element>) -> (EnvType.ActType) -> (EnvType.ObsType, [EnvType.RewardType], [Bool], [String : Any])",
             "key.typeusr" : "$s6action7ObsTypeQz_Say06RewardC0QzGSaySbGSDySSypGt03ActC0Qz_tcD",
-            "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlE4step6action03ObsE0Qz_Say06RewardE0QzGSaySbGSDySSypGt03ActE0Qz_tF"
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE4step6action03ObsE0Qz_Say06RewardE0QzGSaySbGSDySSypGt03ActE0Qz_tF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func reset(seed: <Type usr=\"s:Si\">Int<\/Type>?) -&gt; (<Type usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE03ObsE0a\">ObsType<\/Type>, [<Type usr=\"s:SS\">String<\/Type> : Any])<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public func reset(seed: <Type usr=\"s:Si\">Int<\/Type>?) -&gt; (<Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ObsE0a\">ObsType<\/Type>, [<Type usr=\"s:SS\">String<\/Type> : Any])<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1906
+                "key.offset" : 1980
               }
             ],
-            "key.bodylength" : 1151,
-            "key.bodyoffset" : 1965,
+            "key.bodylength" : 1147,
+            "key.bodyoffset" : 2039,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reset<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.typealias usr=\"s:4main6VecEnvCAASb8DoneTypeRtzrlE03ObsE0a\">ObsType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reset<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.typealias usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ObsE0a\">ObsType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 1204,
+            "key.length" : 1200,
             "key.line" : 54,
             "key.modulename" : "main",
             "key.name" : "reset(seed:)",
             "key.namelength" : 17,
-            "key.nameoffset" : 1918,
-            "key.offset" : 1913,
+            "key.nameoffset" : 1992,
+            "key.offset" : 1987,
             "key.overrides" : [
               {
                 "key.usr" : "s:4main3EnvP5reset4seed7ObsTypeQz_SDySSypGtSiSg_tF"
@@ -534,60 +534,132 @@
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
-                "key.length" : 137,
+                "key.length" : 127,
                 "key.line" : 82,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 2868,
-                "key.offset" : 2864,
-                "key.parsed_declaration" : "var obs = Tensor<Element>(\n  self.obs[0].kind, format: self.obs[0].format,\n  dimensions: [envs.count, self.obs[0].dimensions[0]])",
+                "key.nameoffset" : 2942,
+                "key.offset" : 2938,
+                "key.parsed_declaration" : "var obs = Tensor<Element>(\n  self.obs[0].kind, format: self.obs[0].format,\n  shape: [envs.count, self.obs[0].shape[0]])",
                 "key.parsed_scope.end" : 82,
                 "key.parsed_scope.start" : 82,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlE5reset4seed03ObsE0Qz_SDySSypGtSiSg_tF3obsL1_Xevp"
+                "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE5reset4seed03ObsE0Qz_SDySSypGtSiSg_tF3obsL1_Xevp"
               }
             ],
-            "key.typename" : "<EnvType, Element where EnvType : Env, EnvType.DoneType == Bool> (VecEnv<EnvType, Element>) -> (Int?) -> (EnvType.ObsType, [String : Any])",
+            "key.typename" : "<EnvType, Element where EnvType : Env, EnvType.TerminatedType == Bool> (VecEnv<EnvType, Element>) -> (Int?) -> (EnvType.ObsType, [String : Any])",
             "key.typeusr" : "$s4seed7ObsTypeQz_SDySSypGtSiSg_tcD",
-            "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlE5reset4seed03ObsE0Qz_SDySSypGtSiSg_tF"
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE5reset4seed03ObsE0Qz_SDySSypGtSiSg_tF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var rewardThreshold: <Type usr=\"s:Sf\">Float<\/Type> { get }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public static var rewardThreshold: <Type usr=\"s:Sf\">Float<\/Type> { get }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3121
+                "key.offset" : 3191
               }
             ],
             "key.bodylength" : 25,
-            "key.bodyoffset" : 3156,
-            "key.column" : 14,
+            "key.bodyoffset" : 3233,
+            "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rewardThreshold<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
-            "key.kind" : "source.lang.swift.decl.var.instance",
-            "key.length" : 54,
+            "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rewardThreshold<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
+            "key.kind" : "source.lang.swift.decl.var.static",
+            "key.length" : 61,
             "key.line" : 92,
             "key.modulename" : "main",
             "key.name" : "rewardThreshold",
             "key.namelength" : 15,
-            "key.nameoffset" : 3132,
-            "key.offset" : 3128,
+            "key.nameoffset" : 3209,
+            "key.offset" : 3198,
             "key.overrides" : [
               {
-                "key.usr" : "s:4main3EnvP15rewardThresholdSfvp"
+                "key.usr" : "s:4main3EnvP15rewardThresholdSfvpZ"
               }
             ],
-            "key.parsed_declaration" : "public var rewardThreshold: Float",
+            "key.parsed_declaration" : "public static var rewardThreshold: Float",
             "key.parsed_scope.end" : 92,
             "key.parsed_scope.start" : 92,
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
-            "key.usr" : "s:4main6VecEnvCAASb8DoneTypeRtzrlE15rewardThresholdSfvp"
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE15rewardThresholdSfvpZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public static var actionSpace: [<Type usr=\"s:SN\">ClosedRange<\/Type>&lt;<Type usr=\"s:Sf\">Float<\/Type>&gt;] { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3262
+              }
+            ],
+            "key.bodylength" : 21,
+            "key.bodyoffset" : 3315,
+            "key.column" : 21,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
+            "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>actionSpace<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
+            "key.kind" : "source.lang.swift.decl.var.static",
+            "key.length" : 68,
+            "key.line" : 93,
+            "key.modulename" : "main",
+            "key.name" : "actionSpace",
+            "key.namelength" : 11,
+            "key.nameoffset" : 3280,
+            "key.offset" : 3269,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main3EnvP11actionSpaceSaySNySfGGvpZ"
+              }
+            ],
+            "key.parsed_declaration" : "public static var actionSpace: [ClosedRange<Float>]",
+            "key.parsed_scope.end" : 93,
+            "key.parsed_scope.start" : 93,
+            "key.typename" : "[ClosedRange<Float>]",
+            "key.typeusr" : "$sSaySNySfGGD",
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE11actionSpaceSaySNySfGGvpZ"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public static var stateSize: <Type usr=\"s:Si\">Int<\/Type> { get }<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3340
+              }
+            ],
+            "key.bodylength" : 19,
+            "key.bodyoffset" : 3374,
+            "key.column" : 21,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
+            "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>stateSize<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
+            "key.kind" : "source.lang.swift.decl.var.static",
+            "key.length" : 47,
+            "key.line" : 94,
+            "key.modulename" : "main",
+            "key.name" : "stateSize",
+            "key.namelength" : 9,
+            "key.nameoffset" : 3358,
+            "key.offset" : 3347,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main3EnvP9stateSizeSivpZ"
+              }
+            ],
+            "key.parsed_declaration" : "public static var stateSize: Int",
+            "key.parsed_scope.end" : 94,
+            "key.parsed_scope.start" : 94,
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE9stateSizeSivpZ"
           }
         ],
         "key.typename" : "VecEnv<EnvType, Element>.Type",
