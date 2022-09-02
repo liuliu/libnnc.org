@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 4334,
+    "key.length" : 15925,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -11,23 +11,77 @@
           {
             "key.attribute" : "source.decl.attribute.final",
             "key.length" : 5,
-            "key.offset" : 94
+            "key.offset" : 11685
           },
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 87
+            "key.offset" : 11678
           }
         ],
         "key.bodylength" : 1443,
-        "key.bodyoffset" : 127,
+        "key.bodyoffset" : 11718,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.comment" : "### Description\nThis environment builds on the hopper environment based on the work done by Erez, Tassa, and Todorov\nin [\"Infinite Horizon Model Predictive Control for Nonlinear Periodic Tasks\"](http:\/\/www.roboticsproceedings.org\/rss07\/p10.pdf)\nby adding another set of legs making it possible for the robot to walker forward instead of\nhop. Like other Mujoco environments, this environment aims to increase the number of independent state\nand control variables as compared to the classic control environments. The walker is a\ntwo-dimensional two-legged figure that consist of four main body parts - a single torso at the top\n(with the two legs splitting after the torso), two thighs in the middle below the torso, two legs\nin the bottom below the thighs, and two feet attached to the legs on which the entire body rests.\nThe goal is to make coordinate both sets of feet, legs, and thighs to move in the forward (right)\ndirection by applying torques on the six hinges connecting the six body parts.\n### Action Space\nThe action space is a `Box(-1, 1, (6,), float32)`. An action represents the torques applied at the hinge joints.\n| Num | Action                                 | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         |\n|-----|----------------------------------------|-------------|-------------|----------------------------------|-------|--------------|\n| 0   | Torque applied on the thigh rotor      | -1          | 1           | thigh_joint                      | hinge | torque (N m) |\n| 1   | Torque applied on the leg rotor        | -1          | 1           | leg_joint                        | hinge | torque (N m) |\n| 2   | Torque applied on the foot rotor       | -1          | 1           | foot_joint                       | hinge | torque (N m) |\n| 3   | Torque applied on the left thigh rotor | -1          | 1           | thigh_left_joint                 | hinge | torque (N m) |\n| 4   | Torque applied on the left leg rotor   | -1          | 1           | leg_left_joint                   | hinge | torque (N m) |\n| 5   | Torque applied on the left foot rotor  | -1          | 1           | foot_left_joint                  | hinge | torque (N m) |\n### Observation Space\nObservations consist of positional values of different body parts of the walker,\nfollowed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities.\nBy default, observations do not include the x-coordinate of the top. It may\nbe included by passing `exclude_current_positions_from_observation=False` during construction.\nIn that case, the observation space will have 18 dimensions where the first dimension\nrepresent the x-coordinates of the top of the walker.\nRegardless of whether `exclude_current_positions_from_observation` was set to true or false, the x-coordinate\nof the top will be returned in `info` with key `\"x_position\"`.\nBy default, observation is a `ndarray` with shape `(17,)` where the elements correspond to the following:\n| Num | Observation                                      | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     |\n| --- | ------------------------------------------------ | ---- | --- | -------------------------------- | ----- | ------------------------ |\n| 0   | z-coordinate of the top (height of hopper)       | -Inf | Inf | rootz (torso)                    | slide | position (m)             |\n| 1   | angle of the top                                 | -Inf | Inf | rooty (torso)                    | hinge | angle (rad)              |\n| 2   | angle of the thigh joint                         | -Inf | Inf | thigh_joint                      | hinge | angle (rad)              |\n| 3   | angle of the leg joint                           | -Inf | Inf | leg_joint                        | hinge | angle (rad)              |\n| 4   | angle of the foot joint                          | -Inf | Inf | foot_joint                       | hinge | angle (rad)              |\n| 5   | angle of the left thigh joint                    | -Inf | Inf | thigh_left_joint                 | hinge | angle (rad)              |\n| 6   | angle of the left leg joint                      | -Inf | Inf | leg_left_joint                   | hinge | angle (rad)              |\n| 7   | angle of the left foot joint                     | -Inf | Inf | foot_left_joint                  | hinge | angle (rad)              |\n| 8   | velocity of the x-coordinate of the top          | -Inf | Inf | rootx                            | slide | velocity (m\/s)           |\n| 9   | velocity of the z-coordinate (height) of the top | -Inf | Inf | rootz                            | slide | velocity (m\/s)           |\n| 10  | angular velocity of the angle of the top         | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) |\n| 11  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_joint                      | hinge | angular velocity (rad\/s) |\n| 12  | angular velocity of the leg hinge                | -Inf | Inf | leg_joint                        | hinge | angular velocity (rad\/s) |\n| 13  | angular velocity of the foot hinge               | -Inf | Inf | foot_joint                       | hinge | angular velocity (rad\/s) |\n| 14  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_left_joint                 | hinge | angular velocity (rad\/s) |\n| 15  | angular velocity of the leg hinge                | -Inf | Inf | leg_left_joint                   | hinge | angular velocity (rad\/s) |\n| 16  | angular velocity of the foot hinge               | -Inf | Inf | foot_left_joint                  | hinge | angular velocity (rad\/s) |\n### Rewards\nThe reward consists of three parts:\n- *healthy_reward*: Every timestep that the walker is alive, it receives a fixed reward of value `healthy_reward`,\n- *forward_reward*: A reward of walking forward which is measured as\n*`forward_reward_weight` * (x-coordinate before action - x-coordinate after action)\/dt*.\n*dt* is the time between actions and is dependeent on the frame_skip parameter\n(default is 4), where the frametime is 0.002 - making the default\n*dt = 4 * 0.002 = 0.008*. This reward would be positive if the walker walks forward (right) desired.\n- *ctrl_cost*: A cost for penalising the walker if it\ntakes actions that are too large. It is measured as\n*`ctrl_cost_weight` * sum(action<sup>2<\/sup>)* where *`ctrl_cost_weight`* is\na parameter set for the control and has a default value of 0.001\nThe total reward returned is ***reward*** *=* *healthy_reward bonus + forward_reward - ctrl_cost* and `info` will also contain the individual reward terms\n### Starting State\nAll observations start in state\n(0.0, 1.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)\nwith a uniform noise in the range of [-`reset_noise_scale`, `reset_noise_scale`] added to the values for stochasticity.\n### Episode End\nThe walker is said to be unhealthy if any of the following happens:\n1. Any of the state space values is no longer finite\n2. The height of the walker is ***not*** in the closed interval specified by `healthy_z_range`\n3. The absolute value of the angle (`observation[1]` if `exclude_current_positions_from_observation=False`, else `observation[2]`) is ***not*** in the closed interval specified by `healthy_angle_range`\nIf `terminate_when_unhealthy=True` is passed during construction (which is the default),\nthe episode ends when any of the following happens:\n1. Truncation: The episode duration reaches a 1000 timesteps\n2. Termination: The walker is unhealthy\nIf `terminate_when_unhealthy=False` is passed, the episode is ended only when 1000 timesteps are exceeded.\n### Arguments\nNo additional arguments are currently supported in v2 and lower.\n```\nenv = gym.make('Walker2d-v4')\n```\nv3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.\n```\nenv = gym.make('Walker2d-v4', ctrl_cost_weight=0.1, ....)\n```\n| Parameter                                    | Type      | Default          | Description                                                                                                                                                       |\n| -------------------------------------------- | --------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `xml_file`                                   | **str**   | `\"walker2d.xml\"` | Path to a MuJoCo model                                                                                                                                            |\n| `forward_reward_weight`                      | **float** | `1.0`            | Weight for _forward_reward_ term (see section on reward)                                                                                                          |\n| `ctrl_cost_weight`                           | **float** | `1e-3`           | Weight for _ctr_cost_ term (see section on reward)                                                                                                                |\n| `healthy_reward`                             | **float** | `1.0`            | Constant reward given if the ant is \"healthy\" after timestep                                                                                                      |\n| `terminate_when_unhealthy`                   | **bool**  | `True`           | If true, issue a done signal if the z-coordinate of the walker is no longer healthy                                                                               |\n| `healthy_z_range`                            | **tuple** | `(0.8, 2)`       | The z-coordinate of the top of the walker must be in this range to be considered healthy                                                                          |\n| `healthy_angle_range`                        | **tuple** | `(-1, 1)`        | The angle must be in this range to be considered healthy                                                                                                          |\n| `reset_noise_scale`                          | **float** | `5e-3`           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    |\n| `exclude_current_positions_from_observation` | **bool**  | `True`           | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |\n### Version History\n* v4: all mujoco environments now use the mujoco bindings in mujoco>=2.1.3\n* v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)\n* v2: All continuous control environments now use mujoco_py >= 1.50\n* v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.\n* v0: Initial versions release (1.0.0)",
+        "key.doc.declaration" : "public final class Walker2D : MuJoCoEnv",
+        "key.doc.discussion" : [
+          {
+            "Para" : "This environment builds on the hopper environment based on the work done by Erez, Tassa, and Todorov in  by adding another set of legs making it possible for the robot to walker forward instead of hop. Like other Mujoco environments, this environment aims to increase the number of independent state and control variables as compared to the classic control environments. The walker is a two-dimensional two-legged figure that consist of four main body parts - a single torso at the top (with the two legs splitting after the torso), two thighs in the middle below the torso, two legs in the bottom below the thighs, and two feet attached to the legs on which the entire body rests. The goal is to make coordinate both sets of feet, legs, and thighs to move in the forward (right) direction by applying torques on the six hinges connecting the six body parts."
+          },
+          {
+            "Para" : "The action space is a `Box(-1, 1, (6,), float32)`. An action represents the torques applied at the hinge joints. | Num | Action                                 | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | |—–|––––––––––––––––––––|———––|———––|–––––––––––––––––|—––|–––––––| | 0   | Torque applied on the thigh rotor      | -1          | 1           | thigh_joint                      | hinge | torque (N m) | | 1   | Torque applied on the leg rotor        | -1          | 1           | leg_joint                        | hinge | torque (N m) | | 2   | Torque applied on the foot rotor       | -1          | 1           | foot_joint                       | hinge | torque (N m) | | 3   | Torque applied on the left thigh rotor | -1          | 1           | thigh_left_joint                 | hinge | torque (N m) | | 4   | Torque applied on the left leg rotor   | -1          | 1           | leg_left_joint                   | hinge | torque (N m) | | 5   | Torque applied on the left foot rotor  | -1          | 1           | foot_left_joint                  | hinge | torque (N m) |"
+          },
+          {
+            "Para" : "Observations consist of positional values of different body parts of the walker, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x-coordinate of the top. It may be included by passing `exclude_current_positions_from_observation=False` during construction. In that case, the observation space will have 18 dimensions where the first dimension represent the x-coordinates of the top of the walker. Regardless of whether `exclude_current_positions_from_observation` was set to true or false, the x-coordinate of the top will be returned in `info` with key `\"x_position\"`. By default, observation is a `ndarray` with shape `(17,)` where the elements correspond to the following: | Num | Observation                                      | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | z-coordinate of the top (height of hopper)       | -Inf | Inf | rootz (torso)                    | slide | position (m)             | | 1   | angle of the top                                 | -Inf | Inf | rooty (torso)                    | hinge | angle (rad)              | | 2   | angle of the thigh joint                         | -Inf | Inf | thigh_joint                      | hinge | angle (rad)              | | 3   | angle of the leg joint                           | -Inf | Inf | leg_joint                        | hinge | angle (rad)              | | 4   | angle of the foot joint                          | -Inf | Inf | foot_joint                       | hinge | angle (rad)              | | 5   | angle of the left thigh joint                    | -Inf | Inf | thigh_left_joint                 | hinge | angle (rad)              | | 6   | angle of the left leg joint                      | -Inf | Inf | leg_left_joint                   | hinge | angle (rad)              | | 7   | angle of the left foot joint                     | -Inf | Inf | foot_left_joint                  | hinge | angle (rad)              | | 8   | velocity of the x-coordinate of the top          | -Inf | Inf | rootx                            | slide | velocity (m\/s)           | | 9   | velocity of the z-coordinate (height) of the top | -Inf | Inf | rootz                            | slide | velocity (m\/s)           | | 10  | angular velocity of the angle of the top         | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) | | 11  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_joint                      | hinge | angular velocity (rad\/s) | | 12  | angular velocity of the leg hinge                | -Inf | Inf | leg_joint                        | hinge | angular velocity (rad\/s) | | 13  | angular velocity of the foot hinge               | -Inf | Inf | foot_joint                       | hinge | angular velocity (rad\/s) | | 14  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_left_joint                 | hinge | angular velocity (rad\/s) | | 15  | angular velocity of the leg hinge                | -Inf | Inf | leg_left_joint                   | hinge | angular velocity (rad\/s) | | 16  | angular velocity of the foot hinge               | -Inf | Inf | foot_left_joint                  | hinge | angular velocity (rad\/s) |"
+          },
+          {
+            "Para" : "The reward consists of three parts:"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "All observations start in state (0.0, 1.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range of [-`reset_noise_scale`, `reset_noise_scale`] added to the values for stochasticity."
+          },
+          {
+            "Para" : "The walker is said to be unhealthy if any of the following happens:"
+          },
+          {
+            "List-Number" : ""
+          },
+          {
+            "Para" : "No additional arguments are currently supported in v2 and lower."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "| Parameter                                    | Type      | Default          | Description                                                                                                                                                       | | –––––––––––––––––––––– | ——— | –––––––– | —————————————————————————————————————————————————————– | | `xml_file`                                   |    | `\"walker2d.xml\"` | Path to a MuJoCo model                                                                                                                                            | | `forward_reward_weight`                      |  | `1.0`            | Weight for  term (see section on reward)                                                                                                          | | `ctrl_cost_weight`                           |  | `1e-3`           | Weight for  term (see section on reward)                                                                                                                | | `healthy_reward`                             |  | `1.0`            | Constant reward given if the ant is “healthy” after timestep                                                                                                      | | `terminate_when_unhealthy`                   |   | `True`           | If true, issue a done signal if the z-coordinate of the walker is no longer healthy                                                                               | | `healthy_z_range`                            |  | `(0.8, 2)`       | The z-coordinate of the top of the walker must be in this range to be considered healthy                                                                          | | `healthy_angle_range`                        |  | `(-1, 1)`        | The angle must be in this range to be considered healthy                                                                                                          | | `reset_noise_scale`                          |  | `5e-3`           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    | | `exclude_current_positions_from_observation` |   | `True`           | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |"
+          },
+          {
+            "List-Bullet" : ""
+          }
+        ],
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift\" line=\"110\" column=\"20\"><Name>Walker2D<\/Name><USR>s:4main8Walker2DC<\/USR><Declaration>public final class Walker2D : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment builds on the hopper environment based on the work done by Erez, Tassa, and Todorov in <Link href=\"http:\/\/www.roboticsproceedings.org\/rss07\/p10.pdf\">“Infinite Horizon Model Predictive Control for Nonlinear Periodic Tasks”<\/Link> by adding another set of legs making it possible for the robot to walker forward instead of hop. Like other Mujoco environments, this environment aims to increase the number of independent state and control variables as compared to the classic control environments. The walker is a two-dimensional two-legged figure that consist of four main body parts - a single torso at the top (with the two legs splitting after the torso), two thighs in the middle below the torso, two legs in the bottom below the thighs, and two feet attached to the legs on which the entire body rests. The goal is to make coordinate both sets of feet, legs, and thighs to move in the forward (right) direction by applying torques on the six hinges connecting the six body parts.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (6,), float32)<\/codeVoice>. An action represents the torques applied at the hinge joints. | Num | Action                                 | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | |—–|––––––––––––––––––––|———––|———––|–––––––––––––––––|—––|–––––––| | 0   | Torque applied on the thigh rotor      | -1          | 1           | thigh_joint                      | hinge | torque (N m) | | 1   | Torque applied on the leg rotor        | -1          | 1           | leg_joint                        | hinge | torque (N m) | | 2   | Torque applied on the foot rotor       | -1          | 1           | foot_joint                       | hinge | torque (N m) | | 3   | Torque applied on the left thigh rotor | -1          | 1           | thigh_left_joint                 | hinge | torque (N m) | | 4   | Torque applied on the left leg rotor   | -1          | 1           | leg_left_joint                   | hinge | torque (N m) | | 5   | Torque applied on the left foot rotor  | -1          | 1           | foot_left_joint                  | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>Observations consist of positional values of different body parts of the walker, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x-coordinate of the top. It may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. In that case, the observation space will have 18 dimensions where the first dimension represent the x-coordinates of the top of the walker. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x-coordinate of the top will be returned in <codeVoice>info<\/codeVoice> with key <codeVoice>&quot;x_position&quot;<\/codeVoice>. By default, observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(17,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                                      | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | z-coordinate of the top (height of hopper)       | -Inf | Inf | rootz (torso)                    | slide | position (m)             | | 1   | angle of the top                                 | -Inf | Inf | rooty (torso)                    | hinge | angle (rad)              | | 2   | angle of the thigh joint                         | -Inf | Inf | thigh_joint                      | hinge | angle (rad)              | | 3   | angle of the leg joint                           | -Inf | Inf | leg_joint                        | hinge | angle (rad)              | | 4   | angle of the foot joint                          | -Inf | Inf | foot_joint                       | hinge | angle (rad)              | | 5   | angle of the left thigh joint                    | -Inf | Inf | thigh_left_joint                 | hinge | angle (rad)              | | 6   | angle of the left leg joint                      | -Inf | Inf | leg_left_joint                   | hinge | angle (rad)              | | 7   | angle of the left foot joint                     | -Inf | Inf | foot_left_joint                  | hinge | angle (rad)              | | 8   | velocity of the x-coordinate of the top          | -Inf | Inf | rootx                            | slide | velocity (m\/s)           | | 9   | velocity of the z-coordinate (height) of the top | -Inf | Inf | rootz                            | slide | velocity (m\/s)           | | 10  | angular velocity of the angle of the top         | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) | | 11  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_joint                      | hinge | angular velocity (rad\/s) | | 12  | angular velocity of the leg hinge                | -Inf | Inf | leg_joint                        | hinge | angular velocity (rad\/s) | | 13  | angular velocity of the foot hinge               | -Inf | Inf | foot_joint                       | hinge | angular velocity (rad\/s) | | 14  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_left_joint                 | hinge | angular velocity (rad\/s) | | 15  | angular velocity of the leg hinge                | -Inf | Inf | leg_left_joint                   | hinge | angular velocity (rad\/s) | | 16  | angular velocity of the foot hinge               | -Inf | Inf | foot_left_joint                  | hinge | angular velocity (rad\/s) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of three parts:<\/Para><List-Bullet><Item><Para><emphasis>healthy_reward<\/emphasis>: Every timestep that the walker is alive, it receives a fixed reward of value <codeVoice>healthy_reward<\/codeVoice>,<\/Para><\/Item><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of walking forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (x-coordinate before action - x-coordinate after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependeent on the frame_skip parameter (default is 4), where the frametime is 0.002 - making the default <emphasis>dt = 4 * 0.002 = 0.008<\/emphasis>. This reward would be positive if the walker walks forward (right) desired.<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A cost for penalising the walker if it takes actions that are too large. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(action<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> where <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice><\/emphasis> is a parameter set for the control and has a default value of 0.001 The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>healthy_reward bonus + forward_reward - ctrl_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0.0, 1.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] added to the values for stochasticity.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The walker is said to be unhealthy if any of the following happens:<\/Para><List-Number><Item><Para>Any of the state space values is no longer finite<\/Para><\/Item><Item><Para>The height of the walker is <emphasis><bold>not<\/bold><\/emphasis> in the closed interval specified by <codeVoice>healthy_z_range<\/codeVoice><\/Para><\/Item><Item><Para>The absolute value of the angle (<codeVoice>observation[1]<\/codeVoice> if <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice>, else <codeVoice>observation[2]<\/codeVoice>) is <emphasis><bold>not<\/bold><\/emphasis> in the closed interval specified by <codeVoice>healthy_angle_range<\/codeVoice> If <codeVoice>terminate_when_unhealthy=True<\/codeVoice> is passed during construction (which is the default), the episode ends when any of the following happens:<\/Para><\/Item><Item><Para>Truncation: The episode duration reaches a 1000 timesteps<\/Para><\/Item><Item><Para>Termination: The walker is unhealthy If <codeVoice>terminate_when_unhealthy=False<\/codeVoice> is passed, the episode is ended only when 1000 timesteps are exceeded.<\/Para><\/Item><\/List-Number><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Walker2d-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Walker2d-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default          | Description                                                                                                                                                       | | –––––––––––––––––––––– | ——— | –––––––– | —————————————————————————————————————————————————————– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;walker2d.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                            | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>            | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                          | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>1e-3<\/codeVoice>           | Weight for <emphasis>ctr_cost<\/emphasis> term (see section on reward)                                                                                                                | | <codeVoice>healthy_reward<\/codeVoice>                             | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>            | Constant reward given if the ant is “healthy” after timestep                                                                                                      | | <codeVoice>terminate_when_unhealthy<\/codeVoice>                   | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>           | If true, issue a done signal if the z-coordinate of the walker is no longer healthy                                                                               | | <codeVoice>healthy_z_range<\/codeVoice>                            | <bold>tuple<\/bold> | <codeVoice>(0.8, 2)<\/codeVoice>       | The z-coordinate of the top of the walker must be in this range to be considered healthy                                                                          | | <codeVoice>healthy_angle_range<\/codeVoice>                        | <bold>tuple<\/bold> | <codeVoice>(-1, 1)<\/codeVoice>        | The angle must be in this range to be considered healthy                                                                                                          | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>5e-3<\/codeVoice>           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>           | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 110,
+        "key.doc.name" : "Walker2D",
+        "key.doc.type" : "Class",
+        "key.doclength" : 11591,
+        "key.docoffset" : 87,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 9,
-            "key.offset" : 116
+            "key.offset" : 11707
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
@@ -39,15 +93,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.class",
         "key.length" : 1471,
-        "key.line" : 7,
+        "key.line" : 110,
         "key.modulename" : "main",
         "key.name" : "Walker2D",
         "key.namelength" : 8,
-        "key.nameoffset" : 106,
-        "key.offset" : 100,
+        "key.nameoffset" : 11697,
+        "key.offset" : 11691,
         "key.parsed_declaration" : "public final class Walker2D: MuJoCoEnv",
-        "key.parsed_scope.end" : 45,
-        "key.parsed_scope.start" : 7,
+        "key.parsed_scope.end" : 148,
+        "key.parsed_scope.start" : 110,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -56,7 +110,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 130
+                "key.offset" : 11721
               }
             ],
             "key.column" : 14,
@@ -65,15 +119,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>model<\/decl.name>: <decl.var.type>MjModel<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 18,
-            "key.line" : 8,
+            "key.line" : 111,
             "key.modulename" : "main",
             "key.name" : "model",
             "key.namelength" : 5,
-            "key.nameoffset" : 141,
-            "key.offset" : 137,
+            "key.nameoffset" : 11732,
+            "key.offset" : 11728,
             "key.parsed_declaration" : "public let model: MjModel",
-            "key.parsed_scope.end" : 8,
-            "key.parsed_scope.start" : 8,
+            "key.parsed_scope.end" : 111,
+            "key.parsed_scope.start" : 111,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8Walker2DC5modelXevp"
@@ -85,7 +139,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 158
+                "key.offset" : 11749
               }
             ],
             "key.column" : 14,
@@ -94,15 +148,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>data<\/decl.name>: <decl.var.type>MjData<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 16,
-            "key.line" : 9,
+            "key.line" : 112,
             "key.modulename" : "main",
             "key.name" : "data",
             "key.namelength" : 4,
-            "key.nameoffset" : 169,
-            "key.offset" : 165,
+            "key.nameoffset" : 11760,
+            "key.offset" : 11756,
             "key.parsed_declaration" : "public var data: MjData",
-            "key.parsed_scope.end" : 9,
-            "key.parsed_scope.start" : 9,
+            "key.parsed_scope.end" : 112,
+            "key.parsed_scope.start" : 112,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -115,7 +169,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 185
+                "key.offset" : 11776
               }
             ],
             "key.column" : 15,
@@ -124,15 +178,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initData<\/decl.name>: <decl.var.type>MjData<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 20,
-            "key.line" : 11,
+            "key.line" : 114,
             "key.modulename" : "main",
             "key.name" : "initData",
             "key.namelength" : 8,
-            "key.nameoffset" : 197,
-            "key.offset" : 193,
+            "key.nameoffset" : 11788,
+            "key.offset" : 11784,
             "key.parsed_declaration" : "private let initData: MjData",
-            "key.parsed_scope.end" : 11,
-            "key.parsed_scope.start" : 11,
+            "key.parsed_scope.end" : 114,
+            "key.parsed_scope.start" : 114,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8Walker2DC8initData33_364E08B86CB59CA772F324DD24ECD237LLXevp"
@@ -144,7 +198,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 216
+                "key.offset" : 11807
               }
             ],
             "key.column" : 15,
@@ -153,15 +207,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>forwardRewardWeight<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 31,
-            "key.line" : 12,
+            "key.line" : 115,
             "key.modulename" : "main",
             "key.name" : "forwardRewardWeight",
             "key.namelength" : 19,
-            "key.nameoffset" : 228,
-            "key.offset" : 224,
+            "key.nameoffset" : 11819,
+            "key.offset" : 11815,
             "key.parsed_declaration" : "private let forwardRewardWeight: Double",
-            "key.parsed_scope.end" : 12,
-            "key.parsed_scope.start" : 12,
+            "key.parsed_scope.end" : 115,
+            "key.parsed_scope.start" : 115,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main8Walker2DC19forwardRewardWeight33_364E08B86CB59CA772F324DD24ECD237LLSdvp"
@@ -173,7 +227,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 258
+                "key.offset" : 11849
               }
             ],
             "key.column" : 15,
@@ -182,15 +236,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>ctrlCostWeight<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 26,
-            "key.line" : 13,
+            "key.line" : 116,
             "key.modulename" : "main",
             "key.name" : "ctrlCostWeight",
             "key.namelength" : 14,
-            "key.nameoffset" : 270,
-            "key.offset" : 266,
+            "key.nameoffset" : 11861,
+            "key.offset" : 11857,
             "key.parsed_declaration" : "private let ctrlCostWeight: Double",
-            "key.parsed_scope.end" : 13,
-            "key.parsed_scope.start" : 13,
+            "key.parsed_scope.end" : 116,
+            "key.parsed_scope.start" : 116,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main8Walker2DC14ctrlCostWeight33_364E08B86CB59CA772F324DD24ECD237LLSdvp"
@@ -202,7 +256,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 295
+                "key.offset" : 11886
               }
             ],
             "key.column" : 15,
@@ -211,15 +265,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>healthyReward<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 25,
-            "key.line" : 14,
+            "key.line" : 117,
             "key.modulename" : "main",
             "key.name" : "healthyReward",
             "key.namelength" : 13,
-            "key.nameoffset" : 307,
-            "key.offset" : 303,
+            "key.nameoffset" : 11898,
+            "key.offset" : 11894,
             "key.parsed_declaration" : "private let healthyReward: Double",
-            "key.parsed_scope.end" : 14,
-            "key.parsed_scope.start" : 14,
+            "key.parsed_scope.end" : 117,
+            "key.parsed_scope.start" : 117,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main8Walker2DC13healthyReward33_364E08B86CB59CA772F324DD24ECD237LLSdvp"
@@ -231,7 +285,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 331
+                "key.offset" : 11922
               }
             ],
             "key.column" : 15,
@@ -240,15 +294,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>terminateWhenUnhealthy<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 32,
-            "key.line" : 15,
+            "key.line" : 118,
             "key.modulename" : "main",
             "key.name" : "terminateWhenUnhealthy",
             "key.namelength" : 22,
-            "key.nameoffset" : 343,
-            "key.offset" : 339,
+            "key.nameoffset" : 11934,
+            "key.offset" : 11930,
             "key.parsed_declaration" : "private let terminateWhenUnhealthy: Bool",
-            "key.parsed_scope.end" : 15,
-            "key.parsed_scope.start" : 15,
+            "key.parsed_scope.end" : 118,
+            "key.parsed_scope.start" : 118,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main8Walker2DC22terminateWhenUnhealthy33_364E08B86CB59CA772F324DD24ECD237LLSbvp"
@@ -260,7 +314,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 374
+                "key.offset" : 11965
               }
             ],
             "key.column" : 15,
@@ -269,15 +323,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>healthyZRange<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sd\">Double<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 38,
-            "key.line" : 16,
+            "key.line" : 119,
             "key.modulename" : "main",
             "key.name" : "healthyZRange",
             "key.namelength" : 13,
-            "key.nameoffset" : 386,
-            "key.offset" : 382,
+            "key.nameoffset" : 11977,
+            "key.offset" : 11973,
             "key.parsed_declaration" : "private let healthyZRange: ClosedRange<Double>",
-            "key.parsed_scope.end" : 16,
-            "key.parsed_scope.start" : 16,
+            "key.parsed_scope.end" : 119,
+            "key.parsed_scope.start" : 119,
             "key.typename" : "ClosedRange<Double>",
             "key.typeusr" : "$sSNySdGD",
             "key.usr" : "s:4main8Walker2DC13healthyZRange33_364E08B86CB59CA772F324DD24ECD237LLSNySdGvp"
@@ -289,7 +343,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 423
+                "key.offset" : 12014
               }
             ],
             "key.column" : 15,
@@ -298,15 +352,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>healthyAngleRange<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sd\">Double<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 42,
-            "key.line" : 17,
+            "key.line" : 120,
             "key.modulename" : "main",
             "key.name" : "healthyAngleRange",
             "key.namelength" : 17,
-            "key.nameoffset" : 435,
-            "key.offset" : 431,
+            "key.nameoffset" : 12026,
+            "key.offset" : 12022,
             "key.parsed_declaration" : "private let healthyAngleRange: ClosedRange<Double>",
-            "key.parsed_scope.end" : 17,
-            "key.parsed_scope.start" : 17,
+            "key.parsed_scope.end" : 120,
+            "key.parsed_scope.start" : 120,
             "key.typename" : "ClosedRange<Double>",
             "key.typeusr" : "$sSNySdGD",
             "key.usr" : "s:4main8Walker2DC17healthyAngleRange33_364E08B86CB59CA772F324DD24ECD237LLSNySdGvp"
@@ -318,7 +372,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 476
+                "key.offset" : 12067
               }
             ],
             "key.column" : 15,
@@ -327,15 +381,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>resetNoiseScale<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 27,
-            "key.line" : 18,
+            "key.line" : 121,
             "key.modulename" : "main",
             "key.name" : "resetNoiseScale",
             "key.namelength" : 15,
-            "key.nameoffset" : 488,
-            "key.offset" : 484,
+            "key.nameoffset" : 12079,
+            "key.offset" : 12075,
             "key.parsed_declaration" : "private let resetNoiseScale: Double",
-            "key.parsed_scope.end" : 18,
-            "key.parsed_scope.start" : 18,
+            "key.parsed_scope.end" : 121,
+            "key.parsed_scope.start" : 121,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main8Walker2DC15resetNoiseScale33_364E08B86CB59CA772F324DD24ECD237LLSdvp"
@@ -347,7 +401,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 515
+                "key.offset" : 12106
               }
             ],
             "key.column" : 15,
@@ -356,15 +410,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>sfmt<\/decl.name>: <decl.var.type><ref.struct usr=\"s:4main4SFMTV\">SFMT<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 14,
-            "key.line" : 20,
+            "key.line" : 123,
             "key.modulename" : "main",
             "key.name" : "sfmt",
             "key.namelength" : 4,
-            "key.nameoffset" : 527,
-            "key.offset" : 523,
+            "key.nameoffset" : 12118,
+            "key.offset" : 12114,
             "key.parsed_declaration" : "private var sfmt: SFMT",
-            "key.parsed_scope.end" : 20,
-            "key.parsed_scope.start" : 20,
+            "key.parsed_scope.end" : 123,
+            "key.parsed_scope.start" : 123,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "SFMT",
             "key.typeusr" : "$s4main4SFMTVD",
@@ -377,26 +431,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 541
+                "key.offset" : 12132
               }
             ],
             "key.bodylength" : 732,
-            "key.bodyoffset" : 836,
+            "key.bodyoffset" : 12427,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>forwardRewardWeight<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 1.0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>ctrlCostWeight<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 1e-3<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>healthyReward<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 1.0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>terminateWhenUnhealthy<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = true<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>healthyZRange<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sd\">Double<\/ref.struct>&gt;<\/decl.var.parameter.type> = 0.8...2<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>healthyAngleRange<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sd\">Double<\/ref.struct>&gt;<\/decl.var.parameter.type> = -1...1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>resetNoiseScale<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 5e-3<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1021,
-            "key.line" : 22,
+            "key.line" : 125,
             "key.modulename" : "main",
             "key.name" : "init(forwardRewardWeight:ctrlCostWeight:healthyReward:terminateWhenUnhealthy:healthyZRange:healthyAngleRange:resetNoiseScale:)",
             "key.namelength" : 279,
-            "key.nameoffset" : 548,
-            "key.offset" : 548,
+            "key.nameoffset" : 12139,
+            "key.offset" : 12139,
             "key.parsed_declaration" : "public init(\n  forwardRewardWeight: Double = 1.0, ctrlCostWeight: Double = 1e-3, healthyReward: Double = 1.0,\n  terminateWhenUnhealthy: Bool = true, healthyZRange: ClosedRange<Double> = 0.8...2,\n  healthyAngleRange: ClosedRange<Double> = -1...1, resetNoiseScale: Double = 5e-3\n) throws",
-            "key.parsed_scope.end" : 44,
-            "key.parsed_scope.start" : 22,
+            "key.parsed_scope.end" : 147,
+            "key.parsed_scope.start" : 125,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var g: <Type usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/Type><\/Declaration>",
@@ -406,15 +460,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>g<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 37,
-                "key.line" : 35,
+                "key.line" : 138,
                 "key.modulename" : "main",
                 "key.name" : "g",
                 "key.namelength" : 1,
-                "key.nameoffset" : 1183,
-                "key.offset" : 1179,
+                "key.nameoffset" : 12774,
+                "key.offset" : 12770,
                 "key.parsed_declaration" : "var g = SystemRandomNumberGenerator()",
-                "key.parsed_scope.end" : 35,
-                "key.parsed_scope.start" : 35,
+                "key.parsed_scope.end" : 138,
+                "key.parsed_scope.start" : 138,
                 "key.typename" : "SystemRandomNumberGenerator",
                 "key.typeusr" : "$ss27SystemRandomNumberGeneratorVD",
                 "key.usr" : "s:4main8Walker2DC19forwardRewardWeight08ctrlCostE007healthyD022terminateWhenUnhealthy0H6ZRange0H10AngleRange15resetNoiseScaleACSd_S2dSbSNySdGAKSdtKcfc1gL_s27SystemRandomNumberGeneratorVvp"
@@ -432,14 +486,65 @@
       {
         "key.annotated_decl" : "<Declaration>public final class Walker2D : <Type usr=\"s:4main9MuJoCoEnvP\">MuJoCoEnv<\/Type><\/Declaration>",
         "key.bodylength" : 2734,
-        "key.bodyoffset" : 1598,
+        "key.bodyoffset" : 13189,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.declaration" : "public final class Walker2D : MuJoCoEnv",
+        "key.doc.discussion" : [
+          {
+            "Para" : "This environment builds on the hopper environment based on the work done by Erez, Tassa, and Todorov in  by adding another set of legs making it possible for the robot to walker forward instead of hop. Like other Mujoco environments, this environment aims to increase the number of independent state and control variables as compared to the classic control environments. The walker is a two-dimensional two-legged figure that consist of four main body parts - a single torso at the top (with the two legs splitting after the torso), two thighs in the middle below the torso, two legs in the bottom below the thighs, and two feet attached to the legs on which the entire body rests. The goal is to make coordinate both sets of feet, legs, and thighs to move in the forward (right) direction by applying torques on the six hinges connecting the six body parts."
+          },
+          {
+            "Para" : "The action space is a `Box(-1, 1, (6,), float32)`. An action represents the torques applied at the hinge joints. | Num | Action                                 | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | |—–|––––––––––––––––––––|———––|———––|–––––––––––––––––|—––|–––––––| | 0   | Torque applied on the thigh rotor      | -1          | 1           | thigh_joint                      | hinge | torque (N m) | | 1   | Torque applied on the leg rotor        | -1          | 1           | leg_joint                        | hinge | torque (N m) | | 2   | Torque applied on the foot rotor       | -1          | 1           | foot_joint                       | hinge | torque (N m) | | 3   | Torque applied on the left thigh rotor | -1          | 1           | thigh_left_joint                 | hinge | torque (N m) | | 4   | Torque applied on the left leg rotor   | -1          | 1           | leg_left_joint                   | hinge | torque (N m) | | 5   | Torque applied on the left foot rotor  | -1          | 1           | foot_left_joint                  | hinge | torque (N m) |"
+          },
+          {
+            "Para" : "Observations consist of positional values of different body parts of the walker, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x-coordinate of the top. It may be included by passing `exclude_current_positions_from_observation=False` during construction. In that case, the observation space will have 18 dimensions where the first dimension represent the x-coordinates of the top of the walker. Regardless of whether `exclude_current_positions_from_observation` was set to true or false, the x-coordinate of the top will be returned in `info` with key `\"x_position\"`. By default, observation is a `ndarray` with shape `(17,)` where the elements correspond to the following: | Num | Observation                                      | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | z-coordinate of the top (height of hopper)       | -Inf | Inf | rootz (torso)                    | slide | position (m)             | | 1   | angle of the top                                 | -Inf | Inf | rooty (torso)                    | hinge | angle (rad)              | | 2   | angle of the thigh joint                         | -Inf | Inf | thigh_joint                      | hinge | angle (rad)              | | 3   | angle of the leg joint                           | -Inf | Inf | leg_joint                        | hinge | angle (rad)              | | 4   | angle of the foot joint                          | -Inf | Inf | foot_joint                       | hinge | angle (rad)              | | 5   | angle of the left thigh joint                    | -Inf | Inf | thigh_left_joint                 | hinge | angle (rad)              | | 6   | angle of the left leg joint                      | -Inf | Inf | leg_left_joint                   | hinge | angle (rad)              | | 7   | angle of the left foot joint                     | -Inf | Inf | foot_left_joint                  | hinge | angle (rad)              | | 8   | velocity of the x-coordinate of the top          | -Inf | Inf | rootx                            | slide | velocity (m\/s)           | | 9   | velocity of the z-coordinate (height) of the top | -Inf | Inf | rootz                            | slide | velocity (m\/s)           | | 10  | angular velocity of the angle of the top         | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) | | 11  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_joint                      | hinge | angular velocity (rad\/s) | | 12  | angular velocity of the leg hinge                | -Inf | Inf | leg_joint                        | hinge | angular velocity (rad\/s) | | 13  | angular velocity of the foot hinge               | -Inf | Inf | foot_joint                       | hinge | angular velocity (rad\/s) | | 14  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_left_joint                 | hinge | angular velocity (rad\/s) | | 15  | angular velocity of the leg hinge                | -Inf | Inf | leg_left_joint                   | hinge | angular velocity (rad\/s) | | 16  | angular velocity of the foot hinge               | -Inf | Inf | foot_left_joint                  | hinge | angular velocity (rad\/s) |"
+          },
+          {
+            "Para" : "The reward consists of three parts:"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "All observations start in state (0.0, 1.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range of [-`reset_noise_scale`, `reset_noise_scale`] added to the values for stochasticity."
+          },
+          {
+            "Para" : "The walker is said to be unhealthy if any of the following happens:"
+          },
+          {
+            "List-Number" : ""
+          },
+          {
+            "Para" : "No additional arguments are currently supported in v2 and lower."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "| Parameter                                    | Type      | Default          | Description                                                                                                                                                       | | –––––––––––––––––––––– | ——— | –––––––– | —————————————————————————————————————————————————————– | | `xml_file`                                   |    | `\"walker2d.xml\"` | Path to a MuJoCo model                                                                                                                                            | | `forward_reward_weight`                      |  | `1.0`            | Weight for  term (see section on reward)                                                                                                          | | `ctrl_cost_weight`                           |  | `1e-3`           | Weight for  term (see section on reward)                                                                                                                | | `healthy_reward`                             |  | `1.0`            | Constant reward given if the ant is “healthy” after timestep                                                                                                      | | `terminate_when_unhealthy`                   |   | `True`           | If true, issue a done signal if the z-coordinate of the walker is no longer healthy                                                                               | | `healthy_z_range`                            |  | `(0.8, 2)`       | The z-coordinate of the top of the walker must be in this range to be considered healthy                                                                          | | `healthy_angle_range`                        |  | `(-1, 1)`        | The angle must be in this range to be considered healthy                                                                                                          | | `reset_noise_scale`                          |  | `5e-3`           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    | | `exclude_current_positions_from_observation` |   | `True`           | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |"
+          },
+          {
+            "List-Bullet" : ""
+          }
+        ],
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift\" line=\"110\" column=\"20\"><Name>Walker2D<\/Name><USR>s:4main8Walker2DC<\/USR><Declaration>public final class Walker2D : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment builds on the hopper environment based on the work done by Erez, Tassa, and Todorov in <Link href=\"http:\/\/www.roboticsproceedings.org\/rss07\/p10.pdf\">“Infinite Horizon Model Predictive Control for Nonlinear Periodic Tasks”<\/Link> by adding another set of legs making it possible for the robot to walker forward instead of hop. Like other Mujoco environments, this environment aims to increase the number of independent state and control variables as compared to the classic control environments. The walker is a two-dimensional two-legged figure that consist of four main body parts - a single torso at the top (with the two legs splitting after the torso), two thighs in the middle below the torso, two legs in the bottom below the thighs, and two feet attached to the legs on which the entire body rests. The goal is to make coordinate both sets of feet, legs, and thighs to move in the forward (right) direction by applying torques on the six hinges connecting the six body parts.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (6,), float32)<\/codeVoice>. An action represents the torques applied at the hinge joints. | Num | Action                                 | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | |—–|––––––––––––––––––––|———––|———––|–––––––––––––––––|—––|–––––––| | 0   | Torque applied on the thigh rotor      | -1          | 1           | thigh_joint                      | hinge | torque (N m) | | 1   | Torque applied on the leg rotor        | -1          | 1           | leg_joint                        | hinge | torque (N m) | | 2   | Torque applied on the foot rotor       | -1          | 1           | foot_joint                       | hinge | torque (N m) | | 3   | Torque applied on the left thigh rotor | -1          | 1           | thigh_left_joint                 | hinge | torque (N m) | | 4   | Torque applied on the left leg rotor   | -1          | 1           | leg_left_joint                   | hinge | torque (N m) | | 5   | Torque applied on the left foot rotor  | -1          | 1           | foot_left_joint                  | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>Observations consist of positional values of different body parts of the walker, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x-coordinate of the top. It may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. In that case, the observation space will have 18 dimensions where the first dimension represent the x-coordinates of the top of the walker. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x-coordinate of the top will be returned in <codeVoice>info<\/codeVoice> with key <codeVoice>&quot;x_position&quot;<\/codeVoice>. By default, observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(17,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                                      | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | z-coordinate of the top (height of hopper)       | -Inf | Inf | rootz (torso)                    | slide | position (m)             | | 1   | angle of the top                                 | -Inf | Inf | rooty (torso)                    | hinge | angle (rad)              | | 2   | angle of the thigh joint                         | -Inf | Inf | thigh_joint                      | hinge | angle (rad)              | | 3   | angle of the leg joint                           | -Inf | Inf | leg_joint                        | hinge | angle (rad)              | | 4   | angle of the foot joint                          | -Inf | Inf | foot_joint                       | hinge | angle (rad)              | | 5   | angle of the left thigh joint                    | -Inf | Inf | thigh_left_joint                 | hinge | angle (rad)              | | 6   | angle of the left leg joint                      | -Inf | Inf | leg_left_joint                   | hinge | angle (rad)              | | 7   | angle of the left foot joint                     | -Inf | Inf | foot_left_joint                  | hinge | angle (rad)              | | 8   | velocity of the x-coordinate of the top          | -Inf | Inf | rootx                            | slide | velocity (m\/s)           | | 9   | velocity of the z-coordinate (height) of the top | -Inf | Inf | rootz                            | slide | velocity (m\/s)           | | 10  | angular velocity of the angle of the top         | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) | | 11  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_joint                      | hinge | angular velocity (rad\/s) | | 12  | angular velocity of the leg hinge                | -Inf | Inf | leg_joint                        | hinge | angular velocity (rad\/s) | | 13  | angular velocity of the foot hinge               | -Inf | Inf | foot_joint                       | hinge | angular velocity (rad\/s) | | 14  | angular velocity of the thigh hinge              | -Inf | Inf | thigh_left_joint                 | hinge | angular velocity (rad\/s) | | 15  | angular velocity of the leg hinge                | -Inf | Inf | leg_left_joint                   | hinge | angular velocity (rad\/s) | | 16  | angular velocity of the foot hinge               | -Inf | Inf | foot_left_joint                  | hinge | angular velocity (rad\/s) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of three parts:<\/Para><List-Bullet><Item><Para><emphasis>healthy_reward<\/emphasis>: Every timestep that the walker is alive, it receives a fixed reward of value <codeVoice>healthy_reward<\/codeVoice>,<\/Para><\/Item><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of walking forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (x-coordinate before action - x-coordinate after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependeent on the frame_skip parameter (default is 4), where the frametime is 0.002 - making the default <emphasis>dt = 4 * 0.002 = 0.008<\/emphasis>. This reward would be positive if the walker walks forward (right) desired.<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A cost for penalising the walker if it takes actions that are too large. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(action<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> where <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice><\/emphasis> is a parameter set for the control and has a default value of 0.001 The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>healthy_reward bonus + forward_reward - ctrl_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0.0, 1.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] added to the values for stochasticity.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The walker is said to be unhealthy if any of the following happens:<\/Para><List-Number><Item><Para>Any of the state space values is no longer finite<\/Para><\/Item><Item><Para>The height of the walker is <emphasis><bold>not<\/bold><\/emphasis> in the closed interval specified by <codeVoice>healthy_z_range<\/codeVoice><\/Para><\/Item><Item><Para>The absolute value of the angle (<codeVoice>observation[1]<\/codeVoice> if <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice>, else <codeVoice>observation[2]<\/codeVoice>) is <emphasis><bold>not<\/bold><\/emphasis> in the closed interval specified by <codeVoice>healthy_angle_range<\/codeVoice> If <codeVoice>terminate_when_unhealthy=True<\/codeVoice> is passed during construction (which is the default), the episode ends when any of the following happens:<\/Para><\/Item><Item><Para>Truncation: The episode duration reaches a 1000 timesteps<\/Para><\/Item><Item><Para>Termination: The walker is unhealthy If <codeVoice>terminate_when_unhealthy=False<\/codeVoice> is passed, the episode is ended only when 1000 timesteps are exceeded.<\/Para><\/Item><\/List-Number><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Walker2d-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Walker2d-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default          | Description                                                                                                                                                       | | –––––––––––––––––––––– | ——— | –––––––– | —————————————————————————————————————————————————————– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;walker2d.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                            | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>            | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                          | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>1e-3<\/codeVoice>           | Weight for <emphasis>ctr_cost<\/emphasis> term (see section on reward)                                                                                                                | | <codeVoice>healthy_reward<\/codeVoice>                             | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>            | Constant reward given if the ant is “healthy” after timestep                                                                                                      | | <codeVoice>terminate_when_unhealthy<\/codeVoice>                   | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>           | If true, issue a done signal if the z-coordinate of the walker is no longer healthy                                                                               | | <codeVoice>healthy_z_range<\/codeVoice>                            | <bold>tuple<\/bold> | <codeVoice>(0.8, 2)<\/codeVoice>       | The z-coordinate of the top of the walker must be in this range to be considered healthy                                                                          | | <codeVoice>healthy_angle_range<\/codeVoice>                        | <bold>tuple<\/bold> | <codeVoice>(-1, 1)<\/codeVoice>        | The angle must be in this range to be considered healthy                                                                                                          | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>5e-3<\/codeVoice>           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>           | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 110,
+        "key.doc.name" : "Walker2D",
+        "key.doc.type" : "Class",
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 3,
-            "key.offset" : 1593
+            "key.offset" : 13184
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
@@ -451,15 +556,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 2760,
-        "key.line" : 7,
+        "key.line" : 110,
         "key.modulename" : "main",
         "key.name" : "Walker2D",
         "key.namelength" : 8,
-        "key.nameoffset" : 1583,
-        "key.offset" : 1573,
+        "key.nameoffset" : 13174,
+        "key.offset" : 13164,
         "key.parsed_declaration" : "extension Walker2D: Env",
-        "key.parsed_scope.end" : 129,
-        "key.parsed_scope.start" : 47,
+        "key.parsed_scope.end" : 232,
+        "key.parsed_scope.start" : 150,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -468,7 +573,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1601
+                "key.offset" : 13192
               }
             ],
             "key.column" : 20,
@@ -477,15 +582,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ActType<\/decl.name> = Tensor&lt;Float64&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
-            "key.line" : 48,
+            "key.line" : 151,
             "key.modulename" : "main",
             "key.name" : "ActType",
             "key.namelength" : 7,
-            "key.nameoffset" : 1618,
-            "key.offset" : 1608,
+            "key.nameoffset" : 13209,
+            "key.offset" : 13199,
             "key.parsed_declaration" : "public typealias ActType = Tensor<Float64>",
-            "key.parsed_scope.end" : 48,
-            "key.parsed_scope.start" : 48,
+            "key.parsed_scope.end" : 151,
+            "key.parsed_scope.start" : 151,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main8Walker2DC7ActTypea\">ActType<\/RelatedName>"
@@ -502,7 +607,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1646
+                "key.offset" : 13237
               }
             ],
             "key.column" : 20,
@@ -511,15 +616,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ObsType<\/decl.name> = Tensor&lt;Float64&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
-            "key.line" : 49,
+            "key.line" : 152,
             "key.modulename" : "main",
             "key.name" : "ObsType",
             "key.namelength" : 7,
-            "key.nameoffset" : 1663,
-            "key.offset" : 1653,
+            "key.nameoffset" : 13254,
+            "key.offset" : 13244,
             "key.parsed_declaration" : "public typealias ObsType = Tensor<Float64>",
-            "key.parsed_scope.end" : 49,
-            "key.parsed_scope.start" : 49,
+            "key.parsed_scope.end" : 152,
+            "key.parsed_scope.start" : 152,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main8Walker2DC7ObsTypea\">ObsType<\/RelatedName>"
@@ -536,7 +641,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1691
+                "key.offset" : 13282
               }
             ],
             "key.column" : 20,
@@ -545,15 +650,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>RewardType<\/decl.name> = <ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 28,
-            "key.line" : 50,
+            "key.line" : 153,
             "key.modulename" : "main",
             "key.name" : "RewardType",
             "key.namelength" : 10,
-            "key.nameoffset" : 1708,
-            "key.offset" : 1698,
+            "key.nameoffset" : 13299,
+            "key.offset" : 13289,
             "key.parsed_declaration" : "public typealias RewardType = Float",
-            "key.parsed_scope.end" : 50,
-            "key.parsed_scope.start" : 50,
+            "key.parsed_scope.end" : 153,
+            "key.parsed_scope.start" : 153,
             "key.typename" : "Float.Type",
             "key.typeusr" : "$sSfmD",
             "key.usr" : "s:4main8Walker2DC10RewardTypea"
@@ -565,7 +670,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1729
+                "key.offset" : 13320
               }
             ],
             "key.column" : 20,
@@ -574,15 +679,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>TerminatedType<\/decl.name> = <ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 31,
-            "key.line" : 51,
+            "key.line" : 154,
             "key.modulename" : "main",
             "key.name" : "TerminatedType",
             "key.namelength" : 14,
-            "key.nameoffset" : 1746,
-            "key.offset" : 1736,
+            "key.nameoffset" : 13337,
+            "key.offset" : 13327,
             "key.parsed_declaration" : "public typealias TerminatedType = Bool",
-            "key.parsed_scope.end" : 51,
-            "key.parsed_scope.start" : 51,
+            "key.parsed_scope.end" : 154,
+            "key.parsed_scope.start" : 154,
             "key.typename" : "Bool.Type",
             "key.typeusr" : "$sSbmD",
             "key.usr" : "s:4main8Walker2DC14TerminatedTypea"
@@ -594,26 +699,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 1771
+                "key.offset" : 13362
               }
             ],
             "key.bodylength" : 146,
-            "key.bodyoffset" : 1800,
+            "key.bodyoffset" : 13391,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>isHealthy<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 168,
-            "key.line" : 53,
+            "key.line" : 156,
             "key.modulename" : "main",
             "key.name" : "isHealthy",
             "key.namelength" : 9,
-            "key.nameoffset" : 1783,
-            "key.offset" : 1779,
+            "key.nameoffset" : 13374,
+            "key.offset" : 13370,
             "key.parsed_declaration" : "private var isHealthy: Bool",
-            "key.parsed_scope.end" : 58,
-            "key.parsed_scope.start" : 53,
+            "key.parsed_scope.end" : 161,
+            "key.parsed_scope.start" : 156,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main8Walker2DC9isHealthy33_364E08B86CB59CA772F324DD24ECD237LLSbvp"
@@ -626,15 +731,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 20,
-            "key.line" : 54,
+            "key.line" : 157,
             "key.modulename" : "main",
             "key.name" : "qpos",
             "key.namelength" : 4,
-            "key.nameoffset" : 1809,
-            "key.offset" : 1805,
+            "key.nameoffset" : 13400,
+            "key.offset" : 13396,
             "key.parsed_declaration" : "let qpos = data.qpos",
-            "key.parsed_scope.end" : 54,
-            "key.parsed_scope.start" : 54,
+            "key.parsed_scope.end" : 157,
+            "key.parsed_scope.start" : 157,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8Walker2DC9isHealthy33_364E08B86CB59CA772F324DD24ECD237LLSbvg4qposL_Xevp"
@@ -647,15 +752,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>z<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 15,
-            "key.line" : 55,
+            "key.line" : 158,
             "key.modulename" : "main",
             "key.name" : "z",
             "key.namelength" : 1,
-            "key.nameoffset" : 1834,
-            "key.offset" : 1830,
+            "key.nameoffset" : 13425,
+            "key.offset" : 13421,
             "key.parsed_declaration" : "let z = qpos[1]",
-            "key.parsed_scope.end" : 55,
-            "key.parsed_scope.start" : 55,
+            "key.parsed_scope.end" : 158,
+            "key.parsed_scope.start" : 158,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8Walker2DC9isHealthy33_364E08B86CB59CA772F324DD24ECD237LLSbvg1zL_Xevp"
@@ -668,15 +773,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>angle<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 19,
-            "key.line" : 56,
+            "key.line" : 159,
             "key.modulename" : "main",
             "key.name" : "angle",
             "key.namelength" : 5,
-            "key.nameoffset" : 1854,
-            "key.offset" : 1850,
+            "key.nameoffset" : 13445,
+            "key.offset" : 13441,
             "key.parsed_declaration" : "let angle = qpos[2]",
-            "key.parsed_scope.end" : 56,
-            "key.parsed_scope.start" : 56,
+            "key.parsed_scope.end" : 159,
+            "key.parsed_scope.start" : 159,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8Walker2DC9isHealthy33_364E08B86CB59CA772F324DD24ECD237LLSbvg5angleL_Xevp"
@@ -688,26 +793,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 1951
+                "key.offset" : 13542
               }
             ],
             "key.bodylength" : 58,
-            "key.bodyoffset" : 1981,
+            "key.bodyoffset" : 13572,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>terminated<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 81,
-            "key.line" : 60,
+            "key.line" : 163,
             "key.modulename" : "main",
             "key.name" : "terminated",
             "key.namelength" : 10,
-            "key.nameoffset" : 1963,
-            "key.offset" : 1959,
+            "key.nameoffset" : 13554,
+            "key.offset" : 13550,
             "key.parsed_declaration" : "private var terminated: Bool",
-            "key.parsed_scope.end" : 62,
-            "key.parsed_scope.start" : 60,
+            "key.parsed_scope.end" : 165,
+            "key.parsed_scope.start" : 163,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main8Walker2DC10terminated33_364E08B86CB59CA772F324DD24ECD237LLSbvp"
@@ -719,26 +824,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 2044
+                "key.offset" : 13635
               }
             ],
             "key.bodylength" : 234,
-            "key.bodyoffset" : 2092,
+            "key.bodyoffset" : 13683,
             "key.column" : 16,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>observations<\/decl.name>() -&gt; <decl.function.returntype>Tensor&lt;Float64&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 275,
-            "key.line" : 64,
+            "key.line" : 167,
             "key.modulename" : "main",
             "key.name" : "observations()",
             "key.namelength" : 14,
-            "key.nameoffset" : 2057,
-            "key.offset" : 2052,
+            "key.nameoffset" : 13648,
+            "key.offset" : 13643,
             "key.parsed_declaration" : "private func observations() -> Tensor<Float64>",
-            "key.parsed_scope.end" : 73,
-            "key.parsed_scope.start" : 64,
+            "key.parsed_scope.end" : 176,
+            "key.parsed_scope.start" : 167,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let qpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -748,15 +853,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 65,
+                "key.line" : 168,
                 "key.modulename" : "main",
                 "key.name" : "qpos",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2101,
-                "key.offset" : 2097,
+                "key.nameoffset" : 13692,
+                "key.offset" : 13688,
                 "key.parsed_declaration" : "let qpos = data.qpos",
-                "key.parsed_scope.end" : 65,
-                "key.parsed_scope.start" : 65,
+                "key.parsed_scope.end" : 168,
+                "key.parsed_scope.start" : 168,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC12observations33_364E08B86CB59CA772F324DD24ECD237LLyXeXeF4qposL_Xevp"
@@ -769,15 +874,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 66,
+                "key.line" : 169,
                 "key.modulename" : "main",
                 "key.name" : "qvel",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2126,
-                "key.offset" : 2122,
+                "key.nameoffset" : 13717,
+                "key.offset" : 13713,
                 "key.parsed_declaration" : "let qvel = data.qvel",
-                "key.parsed_scope.end" : 66,
-                "key.parsed_scope.start" : 66,
+                "key.parsed_scope.end" : 169,
+                "key.parsed_scope.start" : 169,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC12observations33_364E08B86CB59CA772F324DD24ECD237LLyXeXeF4qvelL_Xevp"
@@ -790,15 +895,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>tensor<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 42,
-                "key.line" : 67,
+                "key.line" : 170,
                 "key.modulename" : "main",
                 "key.name" : "tensor",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2151,
-                "key.offset" : 2147,
+                "key.nameoffset" : 13742,
+                "key.offset" : 13738,
                 "key.parsed_declaration" : "var tensor = Tensor<Float64>(.CPU, .C(17))",
-                "key.parsed_scope.end" : 67,
-                "key.parsed_scope.start" : 67,
+                "key.parsed_scope.end" : 170,
+                "key.parsed_scope.start" : 170,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC12observations33_364E08B86CB59CA772F324DD24ECD237LLyXeXeF6tensorL_Xevp"
@@ -815,26 +920,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2331
+                "key.offset" : 13922
               }
             ],
             "key.bodylength" : 1049,
-            "key.bodyoffset" : 2422,
+            "key.bodyoffset" : 14013,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>action<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ActType<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ObsType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main8Walker2DC10RewardTypea\">RewardType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main8Walker2DC14TerminatedTypea\">TerminatedType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1134,
-            "key.line" : 75,
+            "key.line" : 178,
             "key.modulename" : "main",
             "key.name" : "step(action:)",
             "key.namelength" : 21,
-            "key.nameoffset" : 2343,
-            "key.offset" : 2338,
+            "key.nameoffset" : 13934,
+            "key.offset" : 13929,
             "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, TerminatedType, [String: Any])",
-            "key.parsed_scope.end" : 104,
-            "key.parsed_scope.start" : 75,
+            "key.parsed_scope.end" : 207,
+            "key.parsed_scope.start" : 178,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let xPositionBefore: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -844,15 +949,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xPositionBefore<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 34,
-                "key.line" : 77,
+                "key.line" : 180,
                 "key.modulename" : "main",
                 "key.name" : "xPositionBefore",
                 "key.namelength" : 15,
-                "key.nameoffset" : 2459,
-                "key.offset" : 2455,
+                "key.nameoffset" : 14050,
+                "key.offset" : 14046,
                 "key.parsed_declaration" : "let xPositionBefore = data.qpos[0]",
-                "key.parsed_scope.end" : 77,
-                "key.parsed_scope.start" : 77,
+                "key.parsed_scope.end" : 180,
+                "key.parsed_scope.start" : 180,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF15xPositionBeforeL_Xevp"
@@ -865,15 +970,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xPositionAfter<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 33,
-                "key.line" : 85,
+                "key.line" : 188,
                 "key.modulename" : "main",
                 "key.name" : "xPositionAfter",
                 "key.namelength" : 14,
-                "key.nameoffset" : 2777,
-                "key.offset" : 2773,
+                "key.nameoffset" : 14368,
+                "key.offset" : 14364,
                 "key.parsed_declaration" : "let xPositionAfter = data.qpos[0]",
-                "key.parsed_scope.end" : 85,
-                "key.parsed_scope.start" : 85,
+                "key.parsed_scope.end" : 188,
+                "key.parsed_scope.start" : 188,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF14xPositionAfterL_Xevp"
@@ -886,15 +991,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>dt<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 31,
-                "key.line" : 86,
+                "key.line" : 189,
                 "key.modulename" : "main",
                 "key.name" : "dt",
                 "key.namelength" : 2,
-                "key.nameoffset" : 2815,
-                "key.offset" : 2811,
+                "key.nameoffset" : 14406,
+                "key.offset" : 14402,
                 "key.parsed_declaration" : "let dt = model.opt.timestep * 4",
-                "key.parsed_scope.end" : 86,
-                "key.parsed_scope.start" : 86,
+                "key.parsed_scope.end" : 189,
+                "key.parsed_scope.start" : 189,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF2dtL_Xevp"
@@ -907,15 +1012,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xVelocity<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 55,
-                "key.line" : 87,
+                "key.line" : 190,
                 "key.modulename" : "main",
                 "key.name" : "xVelocity",
                 "key.namelength" : 9,
-                "key.nameoffset" : 2851,
-                "key.offset" : 2847,
+                "key.nameoffset" : 14442,
+                "key.offset" : 14438,
                 "key.parsed_declaration" : "let xVelocity = (xPositionAfter - xPositionBefore) \/ dt",
-                "key.parsed_scope.end" : 87,
-                "key.parsed_scope.start" : 87,
+                "key.parsed_scope.end" : 190,
+                "key.parsed_scope.start" : 190,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF9xVelocityL_Xevp"
@@ -928,15 +1033,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>ctrlCost<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 88,
+                "key.line" : 191,
                 "key.modulename" : "main",
                 "key.name" : "ctrlCost",
                 "key.namelength" : 8,
-                "key.nameoffset" : 2911,
-                "key.offset" : 2907,
+                "key.nameoffset" : 14502,
+                "key.offset" : 14498,
                 "key.parsed_declaration" : "var ctrlCost: Double = 0",
-                "key.parsed_scope.end" : 88,
-                "key.parsed_scope.start" : 88,
+                "key.parsed_scope.end" : 191,
+                "key.parsed_scope.start" : 191,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF8ctrlCostL_Sdvp"
@@ -949,15 +1054,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>forwardReward<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 51,
-                "key.line" : 93,
+                "key.line" : 196,
                 "key.modulename" : "main",
                 "key.name" : "forwardReward",
                 "key.namelength" : 13,
-                "key.nameoffset" : 3046,
-                "key.offset" : 3042,
+                "key.nameoffset" : 14637,
+                "key.offset" : 14633,
                 "key.parsed_declaration" : "let forwardReward = forwardRewardWeight * xVelocity",
-                "key.parsed_scope.end" : 93,
-                "key.parsed_scope.start" : 93,
+                "key.parsed_scope.end" : 196,
+                "key.parsed_scope.start" : 196,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF13forwardRewardL_Xevp"
@@ -970,15 +1075,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>healthyReward<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 80,
-                "key.line" : 94,
+                "key.line" : 197,
                 "key.modulename" : "main",
                 "key.name" : "healthyReward",
                 "key.namelength" : 13,
-                "key.nameoffset" : 3102,
-                "key.offset" : 3098,
+                "key.nameoffset" : 14693,
+                "key.offset" : 14689,
                 "key.parsed_declaration" : "let healthyReward = terminateWhenUnhealthy || isHealthy ? self.healthyReward : 0",
-                "key.parsed_scope.end" : 94,
-                "key.parsed_scope.start" : 94,
+                "key.parsed_scope.end" : 197,
+                "key.parsed_scope.start" : 197,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF13healthyRewardL_Sdvp"
@@ -991,15 +1096,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>rewards<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 43,
-                "key.line" : 95,
+                "key.line" : 198,
                 "key.modulename" : "main",
                 "key.name" : "rewards",
                 "key.namelength" : 7,
-                "key.nameoffset" : 3187,
-                "key.offset" : 3183,
+                "key.nameoffset" : 14778,
+                "key.offset" : 14774,
                 "key.parsed_declaration" : "let rewards = forwardReward + healthyReward",
-                "key.parsed_scope.end" : 95,
-                "key.parsed_scope.start" : 95,
+                "key.parsed_scope.end" : 198,
+                "key.parsed_scope.start" : 198,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF7rewardsL_Xevp"
@@ -1012,15 +1117,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>costs<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 96,
+                "key.line" : 199,
                 "key.modulename" : "main",
                 "key.name" : "costs",
                 "key.namelength" : 5,
-                "key.nameoffset" : 3235,
-                "key.offset" : 3231,
+                "key.nameoffset" : 14826,
+                "key.offset" : 14822,
                 "key.parsed_declaration" : "let costs = ctrlCost",
-                "key.parsed_scope.end" : 96,
-                "key.parsed_scope.start" : 96,
+                "key.parsed_scope.end" : 199,
+                "key.parsed_scope.start" : 199,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF5costsL_Sdvp"
@@ -1033,15 +1138,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 97,
+                "key.line" : 200,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 3260,
-                "key.offset" : 3256,
+                "key.nameoffset" : 14851,
+                "key.offset" : 14847,
                 "key.parsed_declaration" : "let obs = observations()",
-                "key.parsed_scope.end" : 97,
-                "key.parsed_scope.start" : 97,
+                "key.parsed_scope.end" : 200,
+                "key.parsed_scope.start" : 200,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF3obsL_Xevp"
@@ -1054,15 +1159,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>reward<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 35,
-                "key.line" : 98,
+                "key.line" : 201,
                 "key.modulename" : "main",
                 "key.name" : "reward",
                 "key.namelength" : 6,
-                "key.nameoffset" : 3289,
-                "key.offset" : 3285,
+                "key.nameoffset" : 14880,
+                "key.offset" : 14876,
                 "key.parsed_declaration" : "let reward = Float(rewards - costs)",
-                "key.parsed_scope.end" : 98,
-                "key.parsed_scope.start" : 98,
+                "key.parsed_scope.end" : 201,
+                "key.parsed_scope.start" : 201,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF6rewardL_Xevp"
@@ -1075,15 +1180,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>info<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 100,
-                "key.line" : 99,
+                "key.line" : 202,
                 "key.modulename" : "main",
                 "key.name" : "info",
                 "key.namelength" : 4,
-                "key.nameoffset" : 3329,
-                "key.offset" : 3325,
+                "key.nameoffset" : 14920,
+                "key.offset" : 14916,
                 "key.parsed_declaration" : "let info: [String: Any] = [\n  \"x_position\": xPositionAfter,\n  \"x_velocity\": xVelocity,\n]",
-                "key.parsed_scope.end" : 99,
-                "key.parsed_scope.start" : 99,
+                "key.parsed_scope.end" : 202,
+                "key.parsed_scope.start" : 202,
                 "key.typename" : "[String : Any]",
                 "key.typeusr" : "$sSDySSypGD",
                 "key.usr" : "s:4main8Walker2DC4stepyXeXeF4infoL_SDySSypGvp"
@@ -1100,26 +1205,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3476
+                "key.offset" : 15067
               }
             ],
             "key.bodylength" : 606,
-            "key.bodyoffset" : 3535,
+            "key.bodyoffset" : 15126,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reset<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ObsType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 659,
-            "key.line" : 106,
+            "key.line" : 209,
             "key.modulename" : "main",
             "key.name" : "reset(seed:)",
             "key.namelength" : 17,
-            "key.nameoffset" : 3488,
-            "key.offset" : 3483,
+            "key.nameoffset" : 15079,
+            "key.offset" : 15074,
             "key.parsed_declaration" : "public func reset(seed: Int?) -> (ObsType, [String: Any])",
-            "key.parsed_scope.end" : 124,
-            "key.parsed_scope.start" : 106,
+            "key.parsed_scope.end" : 227,
+            "key.parsed_scope.start" : 209,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let initQpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -1129,15 +1234,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initQpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 28,
-                "key.line" : 107,
+                "key.line" : 210,
                 "key.modulename" : "main",
                 "key.name" : "initQpos",
                 "key.namelength" : 8,
-                "key.nameoffset" : 3544,
-                "key.offset" : 3540,
+                "key.nameoffset" : 15135,
+                "key.offset" : 15131,
                 "key.parsed_declaration" : "let initQpos = initData.qpos",
-                "key.parsed_scope.end" : 107,
-                "key.parsed_scope.start" : 107,
+                "key.parsed_scope.end" : 210,
+                "key.parsed_scope.start" : 210,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC5resetyXeXeF8initQposL_Xevp"
@@ -1150,15 +1255,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initQvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 28,
-                "key.line" : 108,
+                "key.line" : 211,
                 "key.modulename" : "main",
                 "key.name" : "initQvel",
                 "key.namelength" : 8,
-                "key.nameoffset" : 3577,
-                "key.offset" : 3573,
+                "key.nameoffset" : 15168,
+                "key.offset" : 15164,
                 "key.parsed_declaration" : "let initQvel = initData.qvel",
-                "key.parsed_scope.end" : 108,
-                "key.parsed_scope.start" : 108,
+                "key.parsed_scope.end" : 211,
+                "key.parsed_scope.start" : 211,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC5resetyXeXeF8initQvelL_Xevp"
@@ -1171,15 +1276,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 109,
+                "key.line" : 212,
                 "key.modulename" : "main",
                 "key.name" : "qpos",
                 "key.namelength" : 4,
-                "key.nameoffset" : 3610,
-                "key.offset" : 3606,
+                "key.nameoffset" : 15201,
+                "key.offset" : 15197,
                 "key.parsed_declaration" : "var qpos = data.qpos",
-                "key.parsed_scope.end" : 109,
-                "key.parsed_scope.start" : 109,
+                "key.parsed_scope.end" : 212,
+                "key.parsed_scope.start" : 212,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC5resetyXeXeF4qposL_Xevp"
@@ -1192,15 +1297,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>qvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 110,
+                "key.line" : 213,
                 "key.modulename" : "main",
                 "key.name" : "qvel",
                 "key.namelength" : 4,
-                "key.nameoffset" : 3635,
-                "key.offset" : 3631,
+                "key.nameoffset" : 15226,
+                "key.offset" : 15222,
                 "key.parsed_declaration" : "var qvel = data.qvel",
-                "key.parsed_scope.end" : 110,
-                "key.parsed_scope.start" : 110,
+                "key.parsed_scope.end" : 213,
+                "key.parsed_scope.start" : 213,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC5resetyXeXeF4qvelL_Xevp"
@@ -1213,15 +1318,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 122,
+                "key.line" : 225,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 4096,
-                "key.offset" : 4092,
+                "key.nameoffset" : 15687,
+                "key.offset" : 15683,
                 "key.parsed_declaration" : "let obs = observations()",
-                "key.parsed_scope.end" : 122,
-                "key.parsed_scope.start" : 122,
+                "key.parsed_scope.end" : 225,
+                "key.parsed_scope.start" : 225,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8Walker2DC5resetyXeXeF3obsL_Xevp"
@@ -1238,26 +1343,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4146
+                "key.offset" : 15737
               }
             ],
             "key.bodylength" : 7,
-            "key.bodyoffset" : 4188,
+            "key.bodyoffset" : 15779,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rewardThreshold<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 43,
-            "key.line" : 126,
+            "key.line" : 229,
             "key.modulename" : "main",
             "key.name" : "rewardThreshold",
             "key.namelength" : 15,
-            "key.nameoffset" : 4164,
-            "key.offset" : 4153,
+            "key.nameoffset" : 15755,
+            "key.offset" : 15744,
             "key.parsed_declaration" : "public static var rewardThreshold: Float",
-            "key.parsed_scope.end" : 126,
-            "key.parsed_scope.start" : 126,
+            "key.parsed_scope.end" : 229,
+            "key.parsed_scope.start" : 229,
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
             "key.usr" : "s:4main8Walker2DC15rewardThresholdSfvpZ"
@@ -1269,26 +1374,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4199
+                "key.offset" : 15790
               }
             ],
             "key.bodylength" : 36,
-            "key.bodyoffset" : 4252,
+            "key.bodyoffset" : 15843,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>actionSpace<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 83,
-            "key.line" : 127,
+            "key.line" : 230,
             "key.modulename" : "main",
             "key.name" : "actionSpace",
             "key.namelength" : 11,
-            "key.nameoffset" : 4217,
-            "key.offset" : 4206,
+            "key.nameoffset" : 15808,
+            "key.offset" : 15797,
             "key.parsed_declaration" : "public static var actionSpace: [ClosedRange<Float>]",
-            "key.parsed_scope.end" : 127,
-            "key.parsed_scope.start" : 127,
+            "key.parsed_scope.end" : 230,
+            "key.parsed_scope.start" : 230,
             "key.typename" : "[ClosedRange<Float>]",
             "key.typeusr" : "$sSaySNySfGGD",
             "key.usr" : "s:4main8Walker2DC11actionSpaceSaySNySfGGvpZ"
@@ -1300,26 +1405,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4292
+                "key.offset" : 15883
               }
             ],
             "key.bodylength" : 4,
-            "key.bodyoffset" : 4326,
+            "key.bodyoffset" : 15917,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Walker2D.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>stateSize<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 32,
-            "key.line" : 128,
+            "key.line" : 231,
             "key.modulename" : "main",
             "key.name" : "stateSize",
             "key.namelength" : 9,
-            "key.nameoffset" : 4310,
-            "key.offset" : 4299,
+            "key.nameoffset" : 15901,
+            "key.offset" : 15890,
             "key.parsed_declaration" : "public static var stateSize: Int",
-            "key.parsed_scope.end" : 128,
-            "key.parsed_scope.start" : 128,
+            "key.parsed_scope.end" : 231,
+            "key.parsed_scope.start" : 231,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main8Walker2DC9stateSizeSivpZ"

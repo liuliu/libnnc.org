@@ -952,6 +952,9 @@
                 <a href="../Structs/CollectedData.html">CollectedData</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/CollectedData/EnvState.html">– EnvState</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Collector.html">Collector</a>
               </li>
               <li class="nav-group-task">
@@ -1054,7 +1057,109 @@
 
                 </div>
               </div>
-            
+            <h3 id='description' class='heading'>Description</h3>
+
+<p>This environment is based on the work by P. Wawrzyński in
+<a href="http://staff.elka.pw.edu.pl/%7Epwawrzyn/pub-s/0812_LSCLRR.pdf">&ldquo;A Cat-Like Robot Real-Time Learning to Run&rdquo;</a>.
+The HalfCheetah is a 2-dimensional robot consisting of 9 links and 8
+joints connecting them (including two paws). The goal is to apply a torque
+on the joints to make the cheetah run forward (right) as fast as possible,
+with a positive reward allocated based on the distance moved forward and a
+negative reward allocated for moving backward. The torso and head of the
+cheetah are fixed, and the torque can only be applied on the other 6 joints
+over the front and back thighs (connecting to the torso), shins
+(connecting to the thighs) and feet (connecting to the shins).</p>
+<h3 id='action-space' class='heading'>Action Space</h3>
+
+<p>The action space is a <code>Box(-1, 1, (6,), float32)</code>. An action represents the torques applied between <em>links</em>.
+| Num | Action                                  | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         |
+| &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &mdash;&mdash;&mdash;&mdash; |
+| 0   | Torque applied on the back thigh rotor  | -1          | 1           | bthigh                           | hinge | torque (N m) |
+| 1   | Torque applied on the back shin rotor   | -1          | 1           | bshin                            | hinge | torque (N m) |
+| 2   | Torque applied on the back foot rotor   | -1          | 1           | bfoot                            | hinge | torque (N m) |
+| 3   | Torque applied on the front thigh rotor | -1          | 1           | fthigh                           | hinge | torque (N m) |
+| 4   | Torque applied on the front shin rotor  | -1          | 1           | fshin                            | hinge | torque (N m) |
+| 5   | Torque applied on the front foot rotor  | -1          | 1           | ffoot                            | hinge | torque (N m) |</p>
+<h3 id='observation-space' class='heading'>Observation Space</h3>
+
+<p>Observations consist of positional values of different body parts of the
+cheetah, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities.
+By default, observations do not include the x-coordinate of the cheetah&rsquo;s center of mass. It may
+be included by passing <code>exclude_current_positions_from_observation=False</code> during construction.
+In that case, the observation space will have 18 dimensions where the first dimension
+represents the x-coordinate of the cheetah&rsquo;s center of mass.
+Regardless of whether <code>exclude_current_positions_from_observation</code> was set to true or false, the x-coordinate
+will be returned in <code>info</code> with key <code>&quot;x_position&quot;</code>.
+However, by default, the observation is a <code>ndarray</code> with shape <code>(17,)</code> where the elements correspond to the following:
+| Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     |
+| &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;- | &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
+| 0   | z-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | position (m)             |
+| 1   | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angle (rad)              |
+| 2   | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angle (rad)              |
+| 3   | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angle (rad)              |
+| 4   | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angle (rad)              |
+| 5   | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angle (rad)              |
+| 6   | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angle (rad)              |
+| 7   | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angle (rad)              |
+| 8   | x-coordinate of the front tip        | -Inf | Inf | rootx                            | slide | velocity (m/s)           |
+| 9   | y-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | velocity (m/s)           |
+| 10  | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angular velocity (rad/s) |
+| 11  | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angular velocity (rad/s) |
+| 12  | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angular velocity (rad/s) |
+| 13  | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angular velocity (rad/s) |
+| 14  | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angular velocity (rad/s) |
+| 15  | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angular velocity (rad/s) |
+| 16  | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angular velocity (rad/s) |</p>
+<h3 id='rewards' class='heading'>Rewards</h3>
+
+<p>The reward consists of two parts:</p>
+
+<ul>
+<li><em>forward_reward</em>: A reward of moving forward which is measured
+as <em><code>forward_reward_weight</code> * (x-coordinate before action - x-coordinate after action)/dt</em>. <em>dt</em> is
+the time between actions and is dependent on the frame_skip parameter
+(fixed to 5), where the frametime is 0.01 - making the
+default <em>dt = 5 * 0.01 = 0.05</em>. This reward would be positive if the cheetah
+runs forward (right).</li>
+<li><em>ctrl_cost</em>: A cost for penalising the cheetah if it takes
+actions that are too large. It is measured as <em><code>ctrl_cost_weight</code> *
+sum(action<sup>2</sup>)</em> where <em><code>ctrl_cost_weight</code></em> is a parameter set for the
+control and has a default value of 0.1
+The total reward returned is <strong><em>reward</em></strong> <em>=</em> <em>forward_reward - ctrl_cost</em> and <code>info</code> will also contain the individual reward terms
+### Starting State
+All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,) with a noise added to the
+initial state for stochasticity. As seen before, the first 8 values in the
+state are positional and the last 9 values are velocity. A uniform noise in
+the range of [-<code>reset_noise_scale</code>, <code>reset_noise_scale</code>] is added to the positional values while a standard
+normal noise with a mean of 0 and standard deviation of <code>reset_noise_scale</code> is added to the
+initial velocity values of all zeros.
+### Episode End
+The episode truncates when the episode length is greater than 1000.
+### Arguments
+No additional arguments are currently supported in v2 and lower.
+<code>
+env = gym.make(&#39;HalfCheetah-v2&#39;)
+</code>
+v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.
+<code>
+env = gym.make(&#39;HalfCheetah-v4&#39;, ctrl_cost_weight=0.1, ....)
+</code>
+| Parameter                                    | Type      | Default              | Description                                                                                                                                                       |
+| &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; |
+| <code>xml_file</code>                                   | <strong>str</strong>   | <code>&quot;half_cheetah.xml&quot;</code> | Path to a MuJoCo model                                                                                                                                            |
+| <code>forward_reward_weight</code>                      | <strong>float</strong> | <code>1.0</code>                | Weight for <em>forward_reward</em> term (see section on reward)                                                                                                          |
+| <code>ctrl_cost_weight</code>                           | <strong>float</strong> | <code>0.1</code>                | Weight for <em>ctrl_cost</em> weight (see section on reward)                                                                                                             |
+| <code>reset_noise_scale</code>                          | <strong>float</strong> | <code>0.1</code>                | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    |
+| <code>exclude_current_positions_from_observation</code> | <strong>bool</strong>  | <code>True</code>               | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |
+### Version History</li>
+<li>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3</li>
+<li>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)</li>
+<li>v2: All continuous control environments now use mujoco_py &gt;= 1.50</li>
+<li>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.</li>
+<li>v0: Initial versions release (1.0.0)</li>
+</ul>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -1378,7 +1483,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-24)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-09-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

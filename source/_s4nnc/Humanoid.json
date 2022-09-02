@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 5067,
+    "key.length" : 27461,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -11,23 +11,80 @@
           {
             "key.attribute" : "source.decl.attribute.final",
             "key.length" : 5,
-            "key.offset" : 94
+            "key.offset" : 22488
           },
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 87
+            "key.offset" : 22481
           }
         ],
         "key.bodylength" : 1287,
-        "key.bodyoffset" : 127,
+        "key.bodyoffset" : 22521,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.comment" : "### Description\nThis environment is based on the environment introduced by Tassa, Erez and Todorov\nin [\"Synthesis and stabilization of complex behaviors through online trajectory optimization\"](https:\/\/ieeexplore.ieee.org\/document\/6386025).\nThe 3D bipedal robot is designed to simulate a human. It has a torso (abdomen) with a pair of\nlegs and arms. The legs each consist of two links, and so the arms (representing the knees and\nelbows respectively). The goal of the environment is to walk forward as fast as possible without falling over.\n### Action Space\nThe action space is a `Box(-1, 1, (17,), float32)`. An action represents the torques applied at the hinge joints.\n| Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit |\n|-----|----------------------|---------------|----------------|---------------------------------------|-------|------|\n| 0   | Torque applied on the hinge in the y-coordinate of the abdomen                     | -0.4 | 0.4 | hip_1 (front_left_leg)      | hinge | torque (N m) |\n| 1   | Torque applied on the hinge in the z-coordinate of the abdomen                     | -0.4 | 0.4 | angle_1 (front_left_leg)    | hinge | torque (N m) |\n| 2   | Torque applied on the hinge in the x-coordinate of the abdomen                     | -0.4 | 0.4 | hip_2 (front_right_leg)     | hinge | torque (N m) |\n| 3   | Torque applied on the rotor between torso\/abdomen and the right hip (x-coordinate) | -0.4 | 0.4 | right_hip_x (right_thigh)   | hinge | torque (N m) |\n| 4   | Torque applied on the rotor between torso\/abdomen and the right hip (z-coordinate) | -0.4 | 0.4 | right_hip_z (right_thigh)   | hinge | torque (N m) |\n| 5   | Torque applied on the rotor between torso\/abdomen and the right hip (y-coordinate) | -0.4 | 0.4 | right_hip_y (right_thigh)   | hinge | torque (N m) |\n| 6   | Torque applied on the rotor between the right hip\/thigh and the right shin         | -0.4 | 0.4 | right_knee                  | hinge | torque (N m) |\n| 7   | Torque applied on the rotor between torso\/abdomen and the left hip (x-coordinate)  | -0.4 | 0.4 | left_hip_x (left_thigh)     | hinge | torque (N m) |\n| 8   | Torque applied on the rotor between torso\/abdomen and the left hip (z-coordinate)  | -0.4 | 0.4 | left_hip_z (left_thigh)     | hinge | torque (N m) |\n| 9   | Torque applied on the rotor between torso\/abdomen and the left hip (y-coordinate)  | -0.4 | 0.4 | left_hip_y (left_thigh)     | hinge | torque (N m) |\n| 10   | Torque applied on the rotor between the left hip\/thigh and the left shin          | -0.4 | 0.4 | left_knee                   | hinge | torque (N m) |\n| 11   | Torque applied on the rotor between the torso and right upper arm (coordinate -1) | -0.4 | 0.4 | right_shoulder1             | hinge | torque (N m) |\n| 12   | Torque applied on the rotor between the torso and right upper arm (coordinate -2) | -0.4 | 0.4 | right_shoulder2             | hinge | torque (N m) |\n| 13   | Torque applied on the rotor between the right upper arm and right lower arm       | -0.4 | 0.4 | right_elbow                 | hinge | torque (N m) |\n| 14   | Torque applied on the rotor between the torso and left upper arm (coordinate -1)  | -0.4 | 0.4 | left_shoulder1              | hinge | torque (N m) |\n| 15   | Torque applied on the rotor between the torso and left upper arm (coordinate -2)  | -0.4 | 0.4 | left_shoulder2              | hinge | torque (N m) |\n| 16   | Torque applied on the rotor between the left upper arm and left lower arm         | -0.4 | 0.4 | left_elbow                  | hinge | torque (N m) |\n### Observation Space\nObservations consist of positional values of different body parts of the Humanoid,\n followed by the velocities of those individual parts (their derivatives) with all the\n positions ordered before all the velocities.\nBy default, observations do not include the x- and y-coordinates of the torso. These may\nbe included by passing `exclude_current_positions_from_observation=False` during construction.\nIn that case, the observation space will have 378 dimensions where the first two dimensions\nrepresent the x- and y-coordinates of the torso.\nRegardless of whether `exclude_current_positions_from_observation` was set to true or false, the x- and y-coordinates\nwill be returned in `info` with keys `\"x_position\"` and `\"y_position\"`, respectively.\nHowever, by default, the observation is a `ndarray` with shape `(376,)` where the elements correspond to the following:\n| Num | Observation                                                                                                     | Min  | Max | Name (in corresponding XML file) | Joint | Unit                       |\n| --- | --------------------------------------------------------------------------------------------------------------- | ---- | --- | -------------------------------- | ----- | -------------------------- |\n| 0   | z-coordinate of the torso (centre)                                                                              | -Inf | Inf | root                             | free  | position (m)               |\n| 1   | x-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                |\n| 2   | y-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                |\n| 3   | z-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                |\n| 4   | w-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                |\n| 5   | z-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_z                        | hinge | angle (rad)                |\n| 6   | y-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_y                        | hinge | angle (rad)                |\n| 7   | x-angle of the abdomen (in pelvis)                                                                              | -Inf | Inf | abdomen_x                        | hinge | angle (rad)                |\n| 8   | x-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_x                      | hinge | angle (rad)                |\n| 9   | z-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_z                      | hinge | angle (rad)                |\n| 19  | y-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_y                      | hinge | angle (rad)                |\n| 11  | angle between right hip and the right shin (in right_knee)                                                      | -Inf | Inf | right_knee                       | hinge | angle (rad)                |\n| 12  | x-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_x                       | hinge | angle (rad)                |\n| 13  | z-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_z                       | hinge | angle (rad)                |\n| 14  | y-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_y                       | hinge | angle (rad)                |\n| 15  | angle between left hip and the left shin (in left_knee)                                                         | -Inf | Inf | left_knee                        | hinge | angle (rad)                |\n| 16  | coordinate-1 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder1                  | hinge | angle (rad)                |\n| 17  | coordinate-2 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder2                  | hinge | angle (rad)                |\n| 18  | angle between right upper arm and right_lower_arm                                                               | -Inf | Inf | right_elbow                      | hinge | angle (rad)                |\n| 19  | coordinate-1 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder1                   | hinge | angle (rad)                |\n| 20  | coordinate-2 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder2                   | hinge | angle (rad)                |\n| 21  | angle between left upper arm and left_lower_arm                                                                 | -Inf | Inf | left_elbow                       | hinge | angle (rad)                |\n| 22  | x-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             |\n| 23  | y-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             |\n| 24  | z-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             |\n| 25  | x-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  |\n| 26  | y-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  |\n| 27  | z-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  |\n| 28  | z-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_z                        | hinge | anglular velocity (rad\/s)  |\n| 29  | y-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_y                        | hinge | anglular velocity (rad\/s)  |\n| 30  | x-coordinate of angular velocity of the abdomen (in pelvis)                                                     | -Inf | Inf | abdomen_x                        | hinge | aanglular velocity (rad\/s) |\n| 31  | x-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_x                      | hinge | anglular velocity (rad\/s)  |\n| 32  | z-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_z                      | hinge | anglular velocity (rad\/s)  |\n| 33  | y-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_y                      | hinge | anglular velocity (rad\/s)  |\n| 34  | angular velocity of the angle between right hip and the right shin (in right_knee)                              | -Inf | Inf | right_knee                       | hinge | anglular velocity (rad\/s)  |\n| 35  | x-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_x                       | hinge | anglular velocity (rad\/s)  |\n| 36  | z-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_z                       | hinge | anglular velocity (rad\/s)  |\n| 37  | y-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_y                       | hinge | anglular velocity (rad\/s)  |\n| 38  | angular velocity of the angle between left hip and the left shin (in left_knee)                                 | -Inf | Inf | left_knee                        | hinge | anglular velocity (rad\/s)  |\n| 39  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder1                  | hinge | anglular velocity (rad\/s)  |\n| 40  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder2                  | hinge | anglular velocity (rad\/s)  |\n| 41  | angular velocity of the angle between right upper arm and right_lower_arm                                       | -Inf | Inf | right_elbow                      | hinge | anglular velocity (rad\/s)  |\n| 42  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder1                   | hinge | anglular velocity (rad\/s)  |\n| 43  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder2                   | hinge | anglular velocity (rad\/s)  |\n| 44  | angular velocitty of the angle between left upper arm and left_lower_arm                                        | -Inf | Inf | left_elbow                       | hinge | anglular velocity (rad\/s)  |\nAdditionally, after all the positional and velocity based values in the table,\nthe observation contains (in order):\n- *cinert:* Mass and inertia of a single rigid body relative to the center of mass\n(this is an intermediate result of transition). It has shape 14*10 (*nbody * 10*)\nand hence adds to another 140 elements in the state space.\n- *cvel:* Center of mass based velocity. It has shape 14 * 6 (*nbody * 6*) and hence\nadds another 84 elements in the state space\n- *qfrc_actuator:* Constraint force generated as the actuator force. This has shape\n`(23,)`  *(nv * 1)* and hence adds another 23 elements to the state space.\n- *cfrc_ext:* This is the center of mass based external force on the body.  It has shape\n14 * 6 (*nbody * 6*) and hence adds to another 84 elements in the state space.\nwhere *nbody* stands for the number of bodies in the robot and *nv* stands for the\nnumber of degrees of freedom (*= dim(qvel)*)\nThe (x,y,z) coordinates are translational DOFs while the orientations are rotational\nDOFs expressed as quaternions. One can read more about free joints on the\n[Mujoco Documentation](https:\/\/mujoco.readthedocs.io\/en\/latest\/XMLreference.html).\n**Note:** Humanoid-v4 environment no longer has the following contact forces issue.\nIf using previous Humanoid versions from v4, there have been reported issues that using a Mujoco-Py version > 2.0\nresults in the contact forces always being 0. As such we recommend to use a Mujoco-Py\nversion < 2.0 when using the Humanoid environment if you would like to report results\nwith contact forces (if contact forces are not used in your experiments, you can use\nversion > 2.0).\n### Rewards\nThe reward consists of three parts:\n- *healthy_reward*: Every timestep that the humanoid is alive (see section Episode Termination for definition), it gets a reward of fixed value `healthy_reward`\n- *forward_reward*: A reward of walking forward which is measured as *`forward_reward_weight` *\n(average center of mass before action - average center of mass after action)\/dt*.\n*dt* is the time between actions and is dependent on the frame_skip parameter\n(default is 5), where the frametime is 0.003 - making the default *dt = 5 * 0.003 = 0.015*.\nThis reward would be positive if the humanoid walks forward (in positive x-direction). The calculation\nfor the center of mass is defined in the `.py` file for the Humanoid.\n- *ctrl_cost*: A negative reward for penalising the humanoid if it has too\nlarge of a control force. If there are *nu* actuators\/controls, then the control has\nshape  `nu x 1`. It is measured as *`ctrl_cost_weight` * sum(control<sup>2<\/sup>)*.\n- *contact_cost*: A negative reward for penalising the humanoid if the external\ncontact force is too large. It is calculated by clipping\n*`contact_cost_weight` * sum(external contact force<sup>2<\/sup>)* to the interval specified by `contact_cost_range`.\nThe total reward returned is ***reward*** *=* *healthy_reward + forward_reward - ctrl_cost - contact_cost* and `info` will also contain the individual reward terms\n### Starting State\nAll observations start in state\n(0.0, 0.0,  1.4, 1.0, 0.0  ... 0.0) with a uniform noise in the range\nof [-`reset_noise_scale`, `reset_noise_scale`] added to the positional and velocity values (values in the table)\nfor stochasticity. Note that the initial z coordinate is intentionally\nselected to be high, thereby indicating a standing up humanoid. The initial\norientation is designed to make it face forward as well.\n### Episode End\nThe humanoid is said to be unhealthy if the z-position of the torso is no longer contained in the\nclosed interval specified by the argument `healthy_z_range`.\nIf `terminate_when_unhealthy=True` is passed during construction (which is the default),\nthe episode ends when any of the following happens:\n1. Truncation: The episode duration reaches a 1000 timesteps\n3. Termination: The humanoid is unhealthy\nIf `terminate_when_unhealthy=False` is passed, the episode is ended only when 1000 timesteps are exceeded.\n### Arguments\nNo additional arguments are currently supported in v2 and lower.\n```\nenv = gym.make('Humanoid-v4')\n```\nv3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.\n```\nenv = gym.make('Humanoid-v4', ctrl_cost_weight=0.1, ....)\n```\n| Parameter                                    | Type      | Default          | Description                                                                                                                                                               |\n| -------------------------------------------- | --------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `xml_file`                                   | **str**   | `\"humanoid.xml\"` | Path to a MuJoCo model                                                                                                                                                    |\n| `forward_reward_weight`                      | **float** | `1.25`           | Weight for _forward_reward_ term (see section on reward)                                                                                                                  |\n| `ctrl_cost_weight`                           | **float** | `0.1`            | Weight for _ctrl_cost_ term (see section on reward)                                                                                                                       |\n| `contact_cost_weight`                        | **float** | `5e-7`           | Weight for _contact_cost_ term (see section on reward)                                                                                                                    |\n| `healthy_reward`                             | **float** | `5.0`            | Constant reward given if the humanoid is \"healthy\" after timestep                                                                                                         |\n| `terminate_when_unhealthy`                   | **bool**  | `True`           | If true, issue a done signal if the z-coordinate of the torso is no longer in the `healthy_z_range`                                                                       |\n| `healthy_z_range`                            | **tuple** | `(1.0, 2.0)`     | The humanoid is considered healthy if the z-coordinate of the torso is in this range                                                                                      |\n| `reset_noise_scale`                          | **float** | `1e-2`           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            |\n| `exclude_current_positions_from_observation` | **bool**  | `True`           | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |\n### Version History\n* v4: all mujoco environments now use the mujoco bindings in mujoco>=2.1.3\n* v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)\n* v2: All continuous control environments now use mujoco_py >= 1.50\n* v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.\n* v0: Initial versions release (1.0.0)",
+        "key.doc.declaration" : "public final class Humanoid : MuJoCoEnv",
+        "key.doc.discussion" : [
+          {
+            "Para" : "This environment is based on the environment introduced by Tassa, Erez and Todorov in . The 3D bipedal robot is designed to simulate a human. It has a torso (abdomen) with a pair of legs and arms. The legs each consist of two links, and so the arms (representing the knees and elbows respectively). The goal of the environment is to walk forward as fast as possible without falling over."
+          },
+          {
+            "Para" : "The action space is a `Box(-1, 1, (17,), float32)`. An action represents the torques applied at the hinge joints. | Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit | |—–|–––––––––––|—————|––––––––|—————————————|—––|——| | 0   | Torque applied on the hinge in the y-coordinate of the abdomen                     | -0.4 | 0.4 | hip_1 (front_left_leg)      | hinge | torque (N m) | | 1   | Torque applied on the hinge in the z-coordinate of the abdomen                     | -0.4 | 0.4 | angle_1 (front_left_leg)    | hinge | torque (N m) | | 2   | Torque applied on the hinge in the x-coordinate of the abdomen                     | -0.4 | 0.4 | hip_2 (front_right_leg)     | hinge | torque (N m) | | 3   | Torque applied on the rotor between torso\/abdomen and the right hip (x-coordinate) | -0.4 | 0.4 | right_hip_x (right_thigh)   | hinge | torque (N m) | | 4   | Torque applied on the rotor between torso\/abdomen and the right hip (z-coordinate) | -0.4 | 0.4 | right_hip_z (right_thigh)   | hinge | torque (N m) | | 5   | Torque applied on the rotor between torso\/abdomen and the right hip (y-coordinate) | -0.4 | 0.4 | right_hip_y (right_thigh)   | hinge | torque (N m) | | 6   | Torque applied on the rotor between the right hip\/thigh and the right shin         | -0.4 | 0.4 | right_knee                  | hinge | torque (N m) | | 7   | Torque applied on the rotor between torso\/abdomen and the left hip (x-coordinate)  | -0.4 | 0.4 | left_hip_x (left_thigh)     | hinge | torque (N m) | | 8   | Torque applied on the rotor between torso\/abdomen and the left hip (z-coordinate)  | -0.4 | 0.4 | left_hip_z (left_thigh)     | hinge | torque (N m) | | 9   | Torque applied on the rotor between torso\/abdomen and the left hip (y-coordinate)  | -0.4 | 0.4 | left_hip_y (left_thigh)     | hinge | torque (N m) | | 10   | Torque applied on the rotor between the left hip\/thigh and the left shin          | -0.4 | 0.4 | left_knee                   | hinge | torque (N m) | | 11   | Torque applied on the rotor between the torso and right upper arm (coordinate -1) | -0.4 | 0.4 | right_shoulder1             | hinge | torque (N m) | | 12   | Torque applied on the rotor between the torso and right upper arm (coordinate -2) | -0.4 | 0.4 | right_shoulder2             | hinge | torque (N m) | | 13   | Torque applied on the rotor between the right upper arm and right lower arm       | -0.4 | 0.4 | right_elbow                 | hinge | torque (N m) | | 14   | Torque applied on the rotor between the torso and left upper arm (coordinate -1)  | -0.4 | 0.4 | left_shoulder1              | hinge | torque (N m) | | 15   | Torque applied on the rotor between the torso and left upper arm (coordinate -2)  | -0.4 | 0.4 | left_shoulder2              | hinge | torque (N m) | | 16   | Torque applied on the rotor between the left upper arm and left lower arm         | -0.4 | 0.4 | left_elbow                  | hinge | torque (N m) |"
+          },
+          {
+            "Para" : "Observations consist of positional values of different body parts of the Humanoid, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x- and y-coordinates of the torso. These may be included by passing `exclude_current_positions_from_observation=False` during construction. In that case, the observation space will have 378 dimensions where the first two dimensions represent the x- and y-coordinates of the torso. Regardless of whether `exclude_current_positions_from_observation` was set to true or false, the x- and y-coordinates will be returned in `info` with keys `\"x_position\"` and `\"y_position\"`, respectively. However, by default, the observation is a `ndarray` with shape `(376,)` where the elements correspond to the following: | Num | Observation                                                                                                     | Min  | Max | Name (in corresponding XML file) | Joint | Unit                       | | — | ————————————————————————————————————— | –– | — | –––––––––––––––– | —– | ––––––––––––– | | 0   | z-coordinate of the torso (centre)                                                                              | -Inf | Inf | root                             | free  | position (m)               | | 1   | x-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 2   | y-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 3   | z-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 4   | w-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 5   | z-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_z                        | hinge | angle (rad)                | | 6   | y-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_y                        | hinge | angle (rad)                | | 7   | x-angle of the abdomen (in pelvis)                                                                              | -Inf | Inf | abdomen_x                        | hinge | angle (rad)                | | 8   | x-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_x                      | hinge | angle (rad)                | | 9   | z-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_z                      | hinge | angle (rad)                | | 19  | y-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_y                      | hinge | angle (rad)                | | 11  | angle between right hip and the right shin (in right_knee)                                                      | -Inf | Inf | right_knee                       | hinge | angle (rad)                | | 12  | x-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_x                       | hinge | angle (rad)                | | 13  | z-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_z                       | hinge | angle (rad)                | | 14  | y-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_y                       | hinge | angle (rad)                | | 15  | angle between left hip and the left shin (in left_knee)                                                         | -Inf | Inf | left_knee                        | hinge | angle (rad)                | | 16  | coordinate-1 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder1                  | hinge | angle (rad)                | | 17  | coordinate-2 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder2                  | hinge | angle (rad)                | | 18  | angle between right upper arm and right_lower_arm                                                               | -Inf | Inf | right_elbow                      | hinge | angle (rad)                | | 19  | coordinate-1 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder1                   | hinge | angle (rad)                | | 20  | coordinate-2 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder2                   | hinge | angle (rad)                | | 21  | angle between left upper arm and left_lower_arm                                                                 | -Inf | Inf | left_elbow                       | hinge | angle (rad)                | | 22  | x-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 23  | y-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 24  | z-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 25  | x-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 26  | y-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 27  | z-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 28  | z-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_z                        | hinge | anglular velocity (rad\/s)  | | 29  | y-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_y                        | hinge | anglular velocity (rad\/s)  | | 30  | x-coordinate of angular velocity of the abdomen (in pelvis)                                                     | -Inf | Inf | abdomen_x                        | hinge | aanglular velocity (rad\/s) | | 31  | x-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_x                      | hinge | anglular velocity (rad\/s)  | | 32  | z-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_z                      | hinge | anglular velocity (rad\/s)  | | 33  | y-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_y                      | hinge | anglular velocity (rad\/s)  | | 34  | angular velocity of the angle between right hip and the right shin (in right_knee)                              | -Inf | Inf | right_knee                       | hinge | anglular velocity (rad\/s)  | | 35  | x-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_x                       | hinge | anglular velocity (rad\/s)  | | 36  | z-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_z                       | hinge | anglular velocity (rad\/s)  | | 37  | y-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_y                       | hinge | anglular velocity (rad\/s)  | | 38  | angular velocity of the angle between left hip and the left shin (in left_knee)                                 | -Inf | Inf | left_knee                        | hinge | anglular velocity (rad\/s)  | | 39  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder1                  | hinge | anglular velocity (rad\/s)  | | 40  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder2                  | hinge | anglular velocity (rad\/s)  | | 41  | angular velocity of the angle between right upper arm and right_lower_arm                                       | -Inf | Inf | right_elbow                      | hinge | anglular velocity (rad\/s)  | | 42  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder1                   | hinge | anglular velocity (rad\/s)  | | 43  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder2                   | hinge | anglular velocity (rad\/s)  | | 44  | angular velocitty of the angle between left upper arm and left_lower_arm                                        | -Inf | Inf | left_elbow                       | hinge | anglular velocity (rad\/s)  | Additionally, after all the positional and velocity based values in the table, the observation contains (in order):"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "The reward consists of three parts:"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "All observations start in state (0.0, 0.0,  1.4, 1.0, 0.0  … 0.0) with a uniform noise in the range of [-`reset_noise_scale`, `reset_noise_scale`] added to the positional and velocity values (values in the table) for stochasticity. Note that the initial z coordinate is intentionally selected to be high, thereby indicating a standing up humanoid. The initial orientation is designed to make it face forward as well."
+          },
+          {
+            "Para" : "The humanoid is said to be unhealthy if the z-position of the torso is no longer contained in the closed interval specified by the argument `healthy_z_range`. If `terminate_when_unhealthy=True` is passed during construction (which is the default), the episode ends when any of the following happens:"
+          },
+          {
+            "List-Number" : ""
+          },
+          {
+            "Para" : "No additional arguments are currently supported in v2 and lower."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "| Parameter                                    | Type      | Default          | Description                                                                                                                                                               | | –––––––––––––––––––––– | ——— | –––––––– | ———————————————————————————————————————————————————————–– | | `xml_file`                                   |    | `\"humanoid.xml\"` | Path to a MuJoCo model                                                                                                                                                    | | `forward_reward_weight`                      |  | `1.25`           | Weight for  term (see section on reward)                                                                                                                  | | `ctrl_cost_weight`                           |  | `0.1`            | Weight for  term (see section on reward)                                                                                                                       | | `contact_cost_weight`                        |  | `5e-7`           | Weight for  term (see section on reward)                                                                                                                    | | `healthy_reward`                             |  | `5.0`            | Constant reward given if the humanoid is “healthy” after timestep                                                                                                         | | `terminate_when_unhealthy`                   |   | `True`           | If true, issue a done signal if the z-coordinate of the torso is no longer in the `healthy_z_range`                                                                       | | `healthy_z_range`                            |  | `(1.0, 2.0)`     | The humanoid is considered healthy if the z-coordinate of the torso is in this range                                                                                      | | `reset_noise_scale`                          |  | `1e-2`           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            | | `exclude_current_positions_from_observation` |   | `True`           | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |"
+          },
+          {
+            "List-Bullet" : ""
+          }
+        ],
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift\" line=\"171\" column=\"20\"><Name>Humanoid<\/Name><USR>s:4main8HumanoidC<\/USR><Declaration>public final class Humanoid : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment is based on the environment introduced by Tassa, Erez and Todorov in <Link href=\"https:\/\/ieeexplore.ieee.org\/document\/6386025\">“Synthesis and stabilization of complex behaviors through online trajectory optimization”<\/Link>. The 3D bipedal robot is designed to simulate a human. It has a torso (abdomen) with a pair of legs and arms. The legs each consist of two links, and so the arms (representing the knees and elbows respectively). The goal of the environment is to walk forward as fast as possible without falling over.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (17,), float32)<\/codeVoice>. An action represents the torques applied at the hinge joints. | Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit | |—–|–––––––––––|—————|––––––––|—————————————|—––|——| | 0   | Torque applied on the hinge in the y-coordinate of the abdomen                     | -0.4 | 0.4 | hip_1 (front_left_leg)      | hinge | torque (N m) | | 1   | Torque applied on the hinge in the z-coordinate of the abdomen                     | -0.4 | 0.4 | angle_1 (front_left_leg)    | hinge | torque (N m) | | 2   | Torque applied on the hinge in the x-coordinate of the abdomen                     | -0.4 | 0.4 | hip_2 (front_right_leg)     | hinge | torque (N m) | | 3   | Torque applied on the rotor between torso\/abdomen and the right hip (x-coordinate) | -0.4 | 0.4 | right_hip_x (right_thigh)   | hinge | torque (N m) | | 4   | Torque applied on the rotor between torso\/abdomen and the right hip (z-coordinate) | -0.4 | 0.4 | right_hip_z (right_thigh)   | hinge | torque (N m) | | 5   | Torque applied on the rotor between torso\/abdomen and the right hip (y-coordinate) | -0.4 | 0.4 | right_hip_y (right_thigh)   | hinge | torque (N m) | | 6   | Torque applied on the rotor between the right hip\/thigh and the right shin         | -0.4 | 0.4 | right_knee                  | hinge | torque (N m) | | 7   | Torque applied on the rotor between torso\/abdomen and the left hip (x-coordinate)  | -0.4 | 0.4 | left_hip_x (left_thigh)     | hinge | torque (N m) | | 8   | Torque applied on the rotor between torso\/abdomen and the left hip (z-coordinate)  | -0.4 | 0.4 | left_hip_z (left_thigh)     | hinge | torque (N m) | | 9   | Torque applied on the rotor between torso\/abdomen and the left hip (y-coordinate)  | -0.4 | 0.4 | left_hip_y (left_thigh)     | hinge | torque (N m) | | 10   | Torque applied on the rotor between the left hip\/thigh and the left shin          | -0.4 | 0.4 | left_knee                   | hinge | torque (N m) | | 11   | Torque applied on the rotor between the torso and right upper arm (coordinate -1) | -0.4 | 0.4 | right_shoulder1             | hinge | torque (N m) | | 12   | Torque applied on the rotor between the torso and right upper arm (coordinate -2) | -0.4 | 0.4 | right_shoulder2             | hinge | torque (N m) | | 13   | Torque applied on the rotor between the right upper arm and right lower arm       | -0.4 | 0.4 | right_elbow                 | hinge | torque (N m) | | 14   | Torque applied on the rotor between the torso and left upper arm (coordinate -1)  | -0.4 | 0.4 | left_shoulder1              | hinge | torque (N m) | | 15   | Torque applied on the rotor between the torso and left upper arm (coordinate -2)  | -0.4 | 0.4 | left_shoulder2              | hinge | torque (N m) | | 16   | Torque applied on the rotor between the left upper arm and left lower arm         | -0.4 | 0.4 | left_elbow                  | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>Observations consist of positional values of different body parts of the Humanoid, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x- and y-coordinates of the torso. These may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. In that case, the observation space will have 378 dimensions where the first two dimensions represent the x- and y-coordinates of the torso. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x- and y-coordinates will be returned in <codeVoice>info<\/codeVoice> with keys <codeVoice>&quot;x_position&quot;<\/codeVoice> and <codeVoice>&quot;y_position&quot;<\/codeVoice>, respectively. However, by default, the observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(376,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                                                                                                     | Min  | Max | Name (in corresponding XML file) | Joint | Unit                       | | — | ————————————————————————————————————— | –– | — | –––––––––––––––– | —– | ––––––––––––– | | 0   | z-coordinate of the torso (centre)                                                                              | -Inf | Inf | root                             | free  | position (m)               | | 1   | x-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 2   | y-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 3   | z-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 4   | w-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 5   | z-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_z                        | hinge | angle (rad)                | | 6   | y-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_y                        | hinge | angle (rad)                | | 7   | x-angle of the abdomen (in pelvis)                                                                              | -Inf | Inf | abdomen_x                        | hinge | angle (rad)                | | 8   | x-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_x                      | hinge | angle (rad)                | | 9   | z-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_z                      | hinge | angle (rad)                | | 19  | y-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_y                      | hinge | angle (rad)                | | 11  | angle between right hip and the right shin (in right_knee)                                                      | -Inf | Inf | right_knee                       | hinge | angle (rad)                | | 12  | x-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_x                       | hinge | angle (rad)                | | 13  | z-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_z                       | hinge | angle (rad)                | | 14  | y-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_y                       | hinge | angle (rad)                | | 15  | angle between left hip and the left shin (in left_knee)                                                         | -Inf | Inf | left_knee                        | hinge | angle (rad)                | | 16  | coordinate-1 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder1                  | hinge | angle (rad)                | | 17  | coordinate-2 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder2                  | hinge | angle (rad)                | | 18  | angle between right upper arm and right_lower_arm                                                               | -Inf | Inf | right_elbow                      | hinge | angle (rad)                | | 19  | coordinate-1 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder1                   | hinge | angle (rad)                | | 20  | coordinate-2 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder2                   | hinge | angle (rad)                | | 21  | angle between left upper arm and left_lower_arm                                                                 | -Inf | Inf | left_elbow                       | hinge | angle (rad)                | | 22  | x-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 23  | y-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 24  | z-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 25  | x-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 26  | y-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 27  | z-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 28  | z-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_z                        | hinge | anglular velocity (rad\/s)  | | 29  | y-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_y                        | hinge | anglular velocity (rad\/s)  | | 30  | x-coordinate of angular velocity of the abdomen (in pelvis)                                                     | -Inf | Inf | abdomen_x                        | hinge | aanglular velocity (rad\/s) | | 31  | x-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_x                      | hinge | anglular velocity (rad\/s)  | | 32  | z-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_z                      | hinge | anglular velocity (rad\/s)  | | 33  | y-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_y                      | hinge | anglular velocity (rad\/s)  | | 34  | angular velocity of the angle between right hip and the right shin (in right_knee)                              | -Inf | Inf | right_knee                       | hinge | anglular velocity (rad\/s)  | | 35  | x-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_x                       | hinge | anglular velocity (rad\/s)  | | 36  | z-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_z                       | hinge | anglular velocity (rad\/s)  | | 37  | y-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_y                       | hinge | anglular velocity (rad\/s)  | | 38  | angular velocity of the angle between left hip and the left shin (in left_knee)                                 | -Inf | Inf | left_knee                        | hinge | anglular velocity (rad\/s)  | | 39  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder1                  | hinge | anglular velocity (rad\/s)  | | 40  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder2                  | hinge | anglular velocity (rad\/s)  | | 41  | angular velocity of the angle between right upper arm and right_lower_arm                                       | -Inf | Inf | right_elbow                      | hinge | anglular velocity (rad\/s)  | | 42  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder1                   | hinge | anglular velocity (rad\/s)  | | 43  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder2                   | hinge | anglular velocity (rad\/s)  | | 44  | angular velocitty of the angle between left upper arm and left_lower_arm                                        | -Inf | Inf | left_elbow                       | hinge | anglular velocity (rad\/s)  | Additionally, after all the positional and velocity based values in the table, the observation contains (in order):<\/Para><List-Bullet><Item><Para><emphasis>cinert:<\/emphasis> Mass and inertia of a single rigid body relative to the center of mass (this is an intermediate result of transition). It has shape 14*10 (<emphasis>nbody * 10<\/emphasis>) and hence adds to another 140 elements in the state space.<\/Para><\/Item><Item><Para><emphasis>cvel:<\/emphasis> Center of mass based velocity. It has shape 14 * 6 (<emphasis>nbody * 6<\/emphasis>) and hence adds another 84 elements in the state space<\/Para><\/Item><Item><Para><emphasis>qfrc_actuator:<\/emphasis> Constraint force generated as the actuator force. This has shape <codeVoice>(23,)<\/codeVoice>  <emphasis>(nv * 1)<\/emphasis> and hence adds another 23 elements to the state space.<\/Para><\/Item><Item><Para><emphasis>cfrc_ext:<\/emphasis> This is the center of mass based external force on the body.  It has shape 14 * 6 (<emphasis>nbody * 6<\/emphasis>) and hence adds to another 84 elements in the state space. where <emphasis>nbody<\/emphasis> stands for the number of bodies in the robot and <emphasis>nv<\/emphasis> stands for the number of degrees of freedom (<emphasis>= dim(qvel)<\/emphasis>) The (x,y,z) coordinates are translational DOFs while the orientations are rotational DOFs expressed as quaternions. One can read more about free joints on the <Link href=\"https:\/\/mujoco.readthedocs.io\/en\/latest\/XMLreference.html\">Mujoco Documentation<\/Link>. <bold>Note:<\/bold> Humanoid-v4 environment no longer has the following contact forces issue. If using previous Humanoid versions from v4, there have been reported issues that using a Mujoco-Py version &gt; 2.0 results in the contact forces always being 0. As such we recommend to use a Mujoco-Py version &lt; 2.0 when using the Humanoid environment if you would like to report results with contact forces (if contact forces are not used in your experiments, you can use version &gt; 2.0).<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of three parts:<\/Para><List-Bullet><Item><Para><emphasis>healthy_reward<\/emphasis>: Every timestep that the humanoid is alive (see section Episode Termination for definition), it gets a reward of fixed value <codeVoice>healthy_reward<\/codeVoice><\/Para><\/Item><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of walking forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (average center of mass before action - average center of mass after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependent on the frame_skip parameter (default is 5), where the frametime is 0.003 - making the default <emphasis>dt = 5 * 0.003 = 0.015<\/emphasis>. This reward would be positive if the humanoid walks forward (in positive x-direction). The calculation for the center of mass is defined in the <codeVoice>.py<\/codeVoice> file for the Humanoid.<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A negative reward for penalising the humanoid if it has too large of a control force. If there are <emphasis>nu<\/emphasis> actuators\/controls, then the control has shape  <codeVoice>nu x 1<\/codeVoice>. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(control<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis>.<\/Para><\/Item><Item><Para><emphasis>contact_cost<\/emphasis>: A negative reward for penalising the humanoid if the external contact force is too large. It is calculated by clipping <emphasis><codeVoice>contact_cost_weight<\/codeVoice> * sum(external contact force<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> to the interval specified by <codeVoice>contact_cost_range<\/codeVoice>. The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>healthy_reward + forward_reward - ctrl_cost - contact_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0.0, 0.0,  1.4, 1.0, 0.0  … 0.0) with a uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] added to the positional and velocity values (values in the table) for stochasticity. Note that the initial z coordinate is intentionally selected to be high, thereby indicating a standing up humanoid. The initial orientation is designed to make it face forward as well.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The humanoid is said to be unhealthy if the z-position of the torso is no longer contained in the closed interval specified by the argument <codeVoice>healthy_z_range<\/codeVoice>. If <codeVoice>terminate_when_unhealthy=True<\/codeVoice> is passed during construction (which is the default), the episode ends when any of the following happens:<\/Para><List-Number><Item><Para>Truncation: The episode duration reaches a 1000 timesteps<\/Para><\/Item><Item><Para>Termination: The humanoid is unhealthy If <codeVoice>terminate_when_unhealthy=False<\/codeVoice> is passed, the episode is ended only when 1000 timesteps are exceeded.<\/Para><\/Item><\/List-Number><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Humanoid-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Humanoid-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default          | Description                                                                                                                                                               | | –––––––––––––––––––––– | ——— | –––––––– | ———————————————————————————————————————————————————————–– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;humanoid.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                                    | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.25<\/codeVoice>           | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                                  | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>            | Weight for <emphasis>ctrl_cost<\/emphasis> term (see section on reward)                                                                                                                       | | <codeVoice>contact_cost_weight<\/codeVoice>                        | <bold>float<\/bold> | <codeVoice>5e-7<\/codeVoice>           | Weight for <emphasis>contact_cost<\/emphasis> term (see section on reward)                                                                                                                    | | <codeVoice>healthy_reward<\/codeVoice>                             | <bold>float<\/bold> | <codeVoice>5.0<\/codeVoice>            | Constant reward given if the humanoid is “healthy” after timestep                                                                                                         | | <codeVoice>terminate_when_unhealthy<\/codeVoice>                   | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>           | If true, issue a done signal if the z-coordinate of the torso is no longer in the <codeVoice>healthy_z_range<\/codeVoice>                                                                       | | <codeVoice>healthy_z_range<\/codeVoice>                            | <bold>tuple<\/bold> | <codeVoice>(1.0, 2.0)<\/codeVoice>     | The humanoid is considered healthy if the z-coordinate of the torso is in this range                                                                                      | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>1e-2<\/codeVoice>           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>           | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 171,
+        "key.doc.name" : "Humanoid",
+        "key.doc.type" : "Class",
+        "key.doclength" : 22394,
+        "key.docoffset" : 87,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 9,
-            "key.offset" : 116
+            "key.offset" : 22510
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
@@ -39,15 +96,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.class",
         "key.length" : 1315,
-        "key.line" : 7,
+        "key.line" : 171,
         "key.modulename" : "main",
         "key.name" : "Humanoid",
         "key.namelength" : 8,
-        "key.nameoffset" : 106,
-        "key.offset" : 100,
+        "key.nameoffset" : 22500,
+        "key.offset" : 22494,
         "key.parsed_declaration" : "public final class Humanoid: MuJoCoEnv",
-        "key.parsed_scope.end" : 42,
-        "key.parsed_scope.start" : 7,
+        "key.parsed_scope.end" : 206,
+        "key.parsed_scope.start" : 171,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -56,7 +113,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 130
+                "key.offset" : 22524
               }
             ],
             "key.column" : 14,
@@ -65,15 +122,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>model<\/decl.name>: <decl.var.type>MjModel<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 18,
-            "key.line" : 8,
+            "key.line" : 172,
             "key.modulename" : "main",
             "key.name" : "model",
             "key.namelength" : 5,
-            "key.nameoffset" : 141,
-            "key.offset" : 137,
+            "key.nameoffset" : 22535,
+            "key.offset" : 22531,
             "key.parsed_declaration" : "public let model: MjModel",
-            "key.parsed_scope.end" : 8,
-            "key.parsed_scope.start" : 8,
+            "key.parsed_scope.end" : 172,
+            "key.parsed_scope.start" : 172,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8HumanoidC5modelXevp"
@@ -85,7 +142,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 158
+                "key.offset" : 22552
               }
             ],
             "key.column" : 14,
@@ -94,15 +151,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>data<\/decl.name>: <decl.var.type>MjData<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 16,
-            "key.line" : 9,
+            "key.line" : 173,
             "key.modulename" : "main",
             "key.name" : "data",
             "key.namelength" : 4,
-            "key.nameoffset" : 169,
-            "key.offset" : 165,
+            "key.nameoffset" : 22563,
+            "key.offset" : 22559,
             "key.parsed_declaration" : "public var data: MjData",
-            "key.parsed_scope.end" : 9,
-            "key.parsed_scope.start" : 9,
+            "key.parsed_scope.end" : 173,
+            "key.parsed_scope.start" : 173,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -115,7 +172,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 185
+                "key.offset" : 22579
               }
             ],
             "key.column" : 15,
@@ -124,15 +181,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initData<\/decl.name>: <decl.var.type>MjData<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 20,
-            "key.line" : 11,
+            "key.line" : 175,
             "key.modulename" : "main",
             "key.name" : "initData",
             "key.namelength" : 8,
-            "key.nameoffset" : 197,
-            "key.offset" : 193,
+            "key.nameoffset" : 22591,
+            "key.offset" : 22587,
             "key.parsed_declaration" : "private let initData: MjData",
-            "key.parsed_scope.end" : 11,
-            "key.parsed_scope.start" : 11,
+            "key.parsed_scope.end" : 175,
+            "key.parsed_scope.start" : 175,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8HumanoidC8initData33_3977D529158F1D181FE5B0BF78044087LLXevp"
@@ -144,7 +201,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 216
+                "key.offset" : 22610
               }
             ],
             "key.column" : 15,
@@ -153,15 +210,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>forwardRewardWeight<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 31,
-            "key.line" : 12,
+            "key.line" : 176,
             "key.modulename" : "main",
             "key.name" : "forwardRewardWeight",
             "key.namelength" : 19,
-            "key.nameoffset" : 228,
-            "key.offset" : 224,
+            "key.nameoffset" : 22622,
+            "key.offset" : 22618,
             "key.parsed_declaration" : "private let forwardRewardWeight: Double",
-            "key.parsed_scope.end" : 12,
-            "key.parsed_scope.start" : 12,
+            "key.parsed_scope.end" : 176,
+            "key.parsed_scope.start" : 176,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main8HumanoidC19forwardRewardWeight33_3977D529158F1D181FE5B0BF78044087LLSdvp"
@@ -173,7 +230,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 258
+                "key.offset" : 22652
               }
             ],
             "key.column" : 15,
@@ -182,15 +239,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>ctrlCostWeight<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 26,
-            "key.line" : 13,
+            "key.line" : 177,
             "key.modulename" : "main",
             "key.name" : "ctrlCostWeight",
             "key.namelength" : 14,
-            "key.nameoffset" : 270,
-            "key.offset" : 266,
+            "key.nameoffset" : 22664,
+            "key.offset" : 22660,
             "key.parsed_declaration" : "private let ctrlCostWeight: Double",
-            "key.parsed_scope.end" : 13,
-            "key.parsed_scope.start" : 13,
+            "key.parsed_scope.end" : 177,
+            "key.parsed_scope.start" : 177,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main8HumanoidC14ctrlCostWeight33_3977D529158F1D181FE5B0BF78044087LLSdvp"
@@ -202,7 +259,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 295
+                "key.offset" : 22689
               }
             ],
             "key.column" : 15,
@@ -211,15 +268,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>healthyReward<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 25,
-            "key.line" : 14,
+            "key.line" : 178,
             "key.modulename" : "main",
             "key.name" : "healthyReward",
             "key.namelength" : 13,
-            "key.nameoffset" : 307,
-            "key.offset" : 303,
+            "key.nameoffset" : 22701,
+            "key.offset" : 22697,
             "key.parsed_declaration" : "private let healthyReward: Double",
-            "key.parsed_scope.end" : 14,
-            "key.parsed_scope.start" : 14,
+            "key.parsed_scope.end" : 178,
+            "key.parsed_scope.start" : 178,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main8HumanoidC13healthyReward33_3977D529158F1D181FE5B0BF78044087LLSdvp"
@@ -231,7 +288,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 331
+                "key.offset" : 22725
               }
             ],
             "key.column" : 15,
@@ -240,15 +297,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>terminateWhenUnhealthy<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 32,
-            "key.line" : 15,
+            "key.line" : 179,
             "key.modulename" : "main",
             "key.name" : "terminateWhenUnhealthy",
             "key.namelength" : 22,
-            "key.nameoffset" : 343,
-            "key.offset" : 339,
+            "key.nameoffset" : 22737,
+            "key.offset" : 22733,
             "key.parsed_declaration" : "private let terminateWhenUnhealthy: Bool",
-            "key.parsed_scope.end" : 15,
-            "key.parsed_scope.start" : 15,
+            "key.parsed_scope.end" : 179,
+            "key.parsed_scope.start" : 179,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main8HumanoidC22terminateWhenUnhealthy33_3977D529158F1D181FE5B0BF78044087LLSbvp"
@@ -260,7 +317,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 374
+                "key.offset" : 22768
               }
             ],
             "key.column" : 15,
@@ -269,15 +326,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>healthyZRange<\/decl.name>: <decl.var.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sd\">Double<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 38,
-            "key.line" : 16,
+            "key.line" : 180,
             "key.modulename" : "main",
             "key.name" : "healthyZRange",
             "key.namelength" : 13,
-            "key.nameoffset" : 386,
-            "key.offset" : 382,
+            "key.nameoffset" : 22780,
+            "key.offset" : 22776,
             "key.parsed_declaration" : "private let healthyZRange: ClosedRange<Double>",
-            "key.parsed_scope.end" : 16,
-            "key.parsed_scope.start" : 16,
+            "key.parsed_scope.end" : 180,
+            "key.parsed_scope.start" : 180,
             "key.typename" : "ClosedRange<Double>",
             "key.typeusr" : "$sSNySdGD",
             "key.usr" : "s:4main8HumanoidC13healthyZRange33_3977D529158F1D181FE5B0BF78044087LLSNySdGvp"
@@ -289,7 +346,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 423
+                "key.offset" : 22817
               }
             ],
             "key.column" : 15,
@@ -298,15 +355,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>resetNoiseScale<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 27,
-            "key.line" : 17,
+            "key.line" : 181,
             "key.modulename" : "main",
             "key.name" : "resetNoiseScale",
             "key.namelength" : 15,
-            "key.nameoffset" : 435,
-            "key.offset" : 431,
+            "key.nameoffset" : 22829,
+            "key.offset" : 22825,
             "key.parsed_declaration" : "private let resetNoiseScale: Double",
-            "key.parsed_scope.end" : 17,
-            "key.parsed_scope.start" : 17,
+            "key.parsed_scope.end" : 181,
+            "key.parsed_scope.start" : 181,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main8HumanoidC15resetNoiseScale33_3977D529158F1D181FE5B0BF78044087LLSdvp"
@@ -318,7 +375,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 462
+                "key.offset" : 22856
               }
             ],
             "key.column" : 15,
@@ -327,15 +384,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>sfmt<\/decl.name>: <decl.var.type><ref.struct usr=\"s:4main4SFMTV\">SFMT<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 14,
-            "key.line" : 19,
+            "key.line" : 183,
             "key.modulename" : "main",
             "key.name" : "sfmt",
             "key.namelength" : 4,
-            "key.nameoffset" : 474,
-            "key.offset" : 470,
+            "key.nameoffset" : 22868,
+            "key.offset" : 22864,
             "key.parsed_declaration" : "private var sfmt: SFMT",
-            "key.parsed_scope.end" : 19,
-            "key.parsed_scope.start" : 19,
+            "key.parsed_scope.end" : 183,
+            "key.parsed_scope.start" : 183,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "SFMT",
             "key.typeusr" : "$s4main4SFMTVD",
@@ -348,26 +405,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 488
+                "key.offset" : 22882
               }
             ],
             "key.bodylength" : 676,
-            "key.bodyoffset" : 736,
+            "key.bodyoffset" : 23130,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>forwardRewardWeight<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 1.25<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>ctrlCostWeight<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 0.1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>healthyReward<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 5.0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>terminateWhenUnhealthy<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = true<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>healthyZRange<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sd\">Double<\/ref.struct>&gt;<\/decl.var.parameter.type> = 1.0...2.0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>resetNoiseScale<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 0.01<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 918,
-            "key.line" : 21,
+            "key.line" : 185,
             "key.modulename" : "main",
             "key.name" : "init(forwardRewardWeight:ctrlCostWeight:healthyReward:terminateWhenUnhealthy:healthyZRange:resetNoiseScale:)",
             "key.namelength" : 232,
-            "key.nameoffset" : 495,
-            "key.offset" : 495,
+            "key.nameoffset" : 22889,
+            "key.offset" : 22889,
             "key.parsed_declaration" : "public init(\n  forwardRewardWeight: Double = 1.25,\n  ctrlCostWeight: Double = 0.1, healthyReward: Double = 5.0, terminateWhenUnhealthy: Bool = true,\n  healthyZRange: ClosedRange<Double> = 1.0...2.0, resetNoiseScale: Double = 0.01\n) throws",
-            "key.parsed_scope.end" : 41,
-            "key.parsed_scope.start" : 21,
+            "key.parsed_scope.end" : 205,
+            "key.parsed_scope.start" : 185,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var g: <Type usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/Type><\/Declaration>",
@@ -377,15 +434,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>g<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 37,
-                "key.line" : 33,
+                "key.line" : 197,
                 "key.modulename" : "main",
                 "key.name" : "g",
                 "key.namelength" : 1,
-                "key.nameoffset" : 1074,
-                "key.offset" : 1070,
+                "key.nameoffset" : 23468,
+                "key.offset" : 23464,
                 "key.parsed_declaration" : "var g = SystemRandomNumberGenerator()",
-                "key.parsed_scope.end" : 33,
-                "key.parsed_scope.start" : 33,
+                "key.parsed_scope.end" : 197,
+                "key.parsed_scope.start" : 197,
                 "key.typename" : "SystemRandomNumberGenerator",
                 "key.typeusr" : "$ss27SystemRandomNumberGeneratorVD",
                 "key.usr" : "s:4main8HumanoidC19forwardRewardWeight08ctrlCostE007healthyD022terminateWhenUnhealthy0H6ZRange15resetNoiseScaleACSd_S2dSbSNySdGSdtKcfc1gL_s27SystemRandomNumberGeneratorVvp"
@@ -403,14 +460,68 @@
       {
         "key.annotated_decl" : "<Declaration>public final class Humanoid : <Type usr=\"s:4main9MuJoCoEnvP\">MuJoCoEnv<\/Type><\/Declaration>",
         "key.bodylength" : 3623,
-        "key.bodyoffset" : 1442,
+        "key.bodyoffset" : 23836,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.declaration" : "public final class Humanoid : MuJoCoEnv",
+        "key.doc.discussion" : [
+          {
+            "Para" : "This environment is based on the environment introduced by Tassa, Erez and Todorov in . The 3D bipedal robot is designed to simulate a human. It has a torso (abdomen) with a pair of legs and arms. The legs each consist of two links, and so the arms (representing the knees and elbows respectively). The goal of the environment is to walk forward as fast as possible without falling over."
+          },
+          {
+            "Para" : "The action space is a `Box(-1, 1, (17,), float32)`. An action represents the torques applied at the hinge joints. | Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit | |—–|–––––––––––|—————|––––––––|—————————————|—––|——| | 0   | Torque applied on the hinge in the y-coordinate of the abdomen                     | -0.4 | 0.4 | hip_1 (front_left_leg)      | hinge | torque (N m) | | 1   | Torque applied on the hinge in the z-coordinate of the abdomen                     | -0.4 | 0.4 | angle_1 (front_left_leg)    | hinge | torque (N m) | | 2   | Torque applied on the hinge in the x-coordinate of the abdomen                     | -0.4 | 0.4 | hip_2 (front_right_leg)     | hinge | torque (N m) | | 3   | Torque applied on the rotor between torso\/abdomen and the right hip (x-coordinate) | -0.4 | 0.4 | right_hip_x (right_thigh)   | hinge | torque (N m) | | 4   | Torque applied on the rotor between torso\/abdomen and the right hip (z-coordinate) | -0.4 | 0.4 | right_hip_z (right_thigh)   | hinge | torque (N m) | | 5   | Torque applied on the rotor between torso\/abdomen and the right hip (y-coordinate) | -0.4 | 0.4 | right_hip_y (right_thigh)   | hinge | torque (N m) | | 6   | Torque applied on the rotor between the right hip\/thigh and the right shin         | -0.4 | 0.4 | right_knee                  | hinge | torque (N m) | | 7   | Torque applied on the rotor between torso\/abdomen and the left hip (x-coordinate)  | -0.4 | 0.4 | left_hip_x (left_thigh)     | hinge | torque (N m) | | 8   | Torque applied on the rotor between torso\/abdomen and the left hip (z-coordinate)  | -0.4 | 0.4 | left_hip_z (left_thigh)     | hinge | torque (N m) | | 9   | Torque applied on the rotor between torso\/abdomen and the left hip (y-coordinate)  | -0.4 | 0.4 | left_hip_y (left_thigh)     | hinge | torque (N m) | | 10   | Torque applied on the rotor between the left hip\/thigh and the left shin          | -0.4 | 0.4 | left_knee                   | hinge | torque (N m) | | 11   | Torque applied on the rotor between the torso and right upper arm (coordinate -1) | -0.4 | 0.4 | right_shoulder1             | hinge | torque (N m) | | 12   | Torque applied on the rotor between the torso and right upper arm (coordinate -2) | -0.4 | 0.4 | right_shoulder2             | hinge | torque (N m) | | 13   | Torque applied on the rotor between the right upper arm and right lower arm       | -0.4 | 0.4 | right_elbow                 | hinge | torque (N m) | | 14   | Torque applied on the rotor between the torso and left upper arm (coordinate -1)  | -0.4 | 0.4 | left_shoulder1              | hinge | torque (N m) | | 15   | Torque applied on the rotor between the torso and left upper arm (coordinate -2)  | -0.4 | 0.4 | left_shoulder2              | hinge | torque (N m) | | 16   | Torque applied on the rotor between the left upper arm and left lower arm         | -0.4 | 0.4 | left_elbow                  | hinge | torque (N m) |"
+          },
+          {
+            "Para" : "Observations consist of positional values of different body parts of the Humanoid, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x- and y-coordinates of the torso. These may be included by passing `exclude_current_positions_from_observation=False` during construction. In that case, the observation space will have 378 dimensions where the first two dimensions represent the x- and y-coordinates of the torso. Regardless of whether `exclude_current_positions_from_observation` was set to true or false, the x- and y-coordinates will be returned in `info` with keys `\"x_position\"` and `\"y_position\"`, respectively. However, by default, the observation is a `ndarray` with shape `(376,)` where the elements correspond to the following: | Num | Observation                                                                                                     | Min  | Max | Name (in corresponding XML file) | Joint | Unit                       | | — | ————————————————————————————————————— | –– | — | –––––––––––––––– | —– | ––––––––––––– | | 0   | z-coordinate of the torso (centre)                                                                              | -Inf | Inf | root                             | free  | position (m)               | | 1   | x-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 2   | y-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 3   | z-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 4   | w-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 5   | z-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_z                        | hinge | angle (rad)                | | 6   | y-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_y                        | hinge | angle (rad)                | | 7   | x-angle of the abdomen (in pelvis)                                                                              | -Inf | Inf | abdomen_x                        | hinge | angle (rad)                | | 8   | x-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_x                      | hinge | angle (rad)                | | 9   | z-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_z                      | hinge | angle (rad)                | | 19  | y-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_y                      | hinge | angle (rad)                | | 11  | angle between right hip and the right shin (in right_knee)                                                      | -Inf | Inf | right_knee                       | hinge | angle (rad)                | | 12  | x-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_x                       | hinge | angle (rad)                | | 13  | z-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_z                       | hinge | angle (rad)                | | 14  | y-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_y                       | hinge | angle (rad)                | | 15  | angle between left hip and the left shin (in left_knee)                                                         | -Inf | Inf | left_knee                        | hinge | angle (rad)                | | 16  | coordinate-1 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder1                  | hinge | angle (rad)                | | 17  | coordinate-2 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder2                  | hinge | angle (rad)                | | 18  | angle between right upper arm and right_lower_arm                                                               | -Inf | Inf | right_elbow                      | hinge | angle (rad)                | | 19  | coordinate-1 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder1                   | hinge | angle (rad)                | | 20  | coordinate-2 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder2                   | hinge | angle (rad)                | | 21  | angle between left upper arm and left_lower_arm                                                                 | -Inf | Inf | left_elbow                       | hinge | angle (rad)                | | 22  | x-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 23  | y-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 24  | z-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 25  | x-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 26  | y-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 27  | z-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 28  | z-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_z                        | hinge | anglular velocity (rad\/s)  | | 29  | y-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_y                        | hinge | anglular velocity (rad\/s)  | | 30  | x-coordinate of angular velocity of the abdomen (in pelvis)                                                     | -Inf | Inf | abdomen_x                        | hinge | aanglular velocity (rad\/s) | | 31  | x-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_x                      | hinge | anglular velocity (rad\/s)  | | 32  | z-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_z                      | hinge | anglular velocity (rad\/s)  | | 33  | y-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_y                      | hinge | anglular velocity (rad\/s)  | | 34  | angular velocity of the angle between right hip and the right shin (in right_knee)                              | -Inf | Inf | right_knee                       | hinge | anglular velocity (rad\/s)  | | 35  | x-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_x                       | hinge | anglular velocity (rad\/s)  | | 36  | z-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_z                       | hinge | anglular velocity (rad\/s)  | | 37  | y-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_y                       | hinge | anglular velocity (rad\/s)  | | 38  | angular velocity of the angle between left hip and the left shin (in left_knee)                                 | -Inf | Inf | left_knee                        | hinge | anglular velocity (rad\/s)  | | 39  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder1                  | hinge | anglular velocity (rad\/s)  | | 40  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder2                  | hinge | anglular velocity (rad\/s)  | | 41  | angular velocity of the angle between right upper arm and right_lower_arm                                       | -Inf | Inf | right_elbow                      | hinge | anglular velocity (rad\/s)  | | 42  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder1                   | hinge | anglular velocity (rad\/s)  | | 43  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder2                   | hinge | anglular velocity (rad\/s)  | | 44  | angular velocitty of the angle between left upper arm and left_lower_arm                                        | -Inf | Inf | left_elbow                       | hinge | anglular velocity (rad\/s)  | Additionally, after all the positional and velocity based values in the table, the observation contains (in order):"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "The reward consists of three parts:"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "All observations start in state (0.0, 0.0,  1.4, 1.0, 0.0  … 0.0) with a uniform noise in the range of [-`reset_noise_scale`, `reset_noise_scale`] added to the positional and velocity values (values in the table) for stochasticity. Note that the initial z coordinate is intentionally selected to be high, thereby indicating a standing up humanoid. The initial orientation is designed to make it face forward as well."
+          },
+          {
+            "Para" : "The humanoid is said to be unhealthy if the z-position of the torso is no longer contained in the closed interval specified by the argument `healthy_z_range`. If `terminate_when_unhealthy=True` is passed during construction (which is the default), the episode ends when any of the following happens:"
+          },
+          {
+            "List-Number" : ""
+          },
+          {
+            "Para" : "No additional arguments are currently supported in v2 and lower."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "| Parameter                                    | Type      | Default          | Description                                                                                                                                                               | | –––––––––––––––––––––– | ——— | –––––––– | ———————————————————————————————————————————————————————–– | | `xml_file`                                   |    | `\"humanoid.xml\"` | Path to a MuJoCo model                                                                                                                                                    | | `forward_reward_weight`                      |  | `1.25`           | Weight for  term (see section on reward)                                                                                                                  | | `ctrl_cost_weight`                           |  | `0.1`            | Weight for  term (see section on reward)                                                                                                                       | | `contact_cost_weight`                        |  | `5e-7`           | Weight for  term (see section on reward)                                                                                                                    | | `healthy_reward`                             |  | `5.0`            | Constant reward given if the humanoid is “healthy” after timestep                                                                                                         | | `terminate_when_unhealthy`                   |   | `True`           | If true, issue a done signal if the z-coordinate of the torso is no longer in the `healthy_z_range`                                                                       | | `healthy_z_range`                            |  | `(1.0, 2.0)`     | The humanoid is considered healthy if the z-coordinate of the torso is in this range                                                                                      | | `reset_noise_scale`                          |  | `1e-2`           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            | | `exclude_current_positions_from_observation` |   | `True`           | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |"
+          },
+          {
+            "List-Bullet" : ""
+          }
+        ],
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift\" line=\"171\" column=\"20\"><Name>Humanoid<\/Name><USR>s:4main8HumanoidC<\/USR><Declaration>public final class Humanoid : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment is based on the environment introduced by Tassa, Erez and Todorov in <Link href=\"https:\/\/ieeexplore.ieee.org\/document\/6386025\">“Synthesis and stabilization of complex behaviors through online trajectory optimization”<\/Link>. The 3D bipedal robot is designed to simulate a human. It has a torso (abdomen) with a pair of legs and arms. The legs each consist of two links, and so the arms (representing the knees and elbows respectively). The goal of the environment is to walk forward as fast as possible without falling over.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (17,), float32)<\/codeVoice>. An action represents the torques applied at the hinge joints. | Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit | |—–|–––––––––––|—————|––––––––|—————————————|—––|——| | 0   | Torque applied on the hinge in the y-coordinate of the abdomen                     | -0.4 | 0.4 | hip_1 (front_left_leg)      | hinge | torque (N m) | | 1   | Torque applied on the hinge in the z-coordinate of the abdomen                     | -0.4 | 0.4 | angle_1 (front_left_leg)    | hinge | torque (N m) | | 2   | Torque applied on the hinge in the x-coordinate of the abdomen                     | -0.4 | 0.4 | hip_2 (front_right_leg)     | hinge | torque (N m) | | 3   | Torque applied on the rotor between torso\/abdomen and the right hip (x-coordinate) | -0.4 | 0.4 | right_hip_x (right_thigh)   | hinge | torque (N m) | | 4   | Torque applied on the rotor between torso\/abdomen and the right hip (z-coordinate) | -0.4 | 0.4 | right_hip_z (right_thigh)   | hinge | torque (N m) | | 5   | Torque applied on the rotor between torso\/abdomen and the right hip (y-coordinate) | -0.4 | 0.4 | right_hip_y (right_thigh)   | hinge | torque (N m) | | 6   | Torque applied on the rotor between the right hip\/thigh and the right shin         | -0.4 | 0.4 | right_knee                  | hinge | torque (N m) | | 7   | Torque applied on the rotor between torso\/abdomen and the left hip (x-coordinate)  | -0.4 | 0.4 | left_hip_x (left_thigh)     | hinge | torque (N m) | | 8   | Torque applied on the rotor between torso\/abdomen and the left hip (z-coordinate)  | -0.4 | 0.4 | left_hip_z (left_thigh)     | hinge | torque (N m) | | 9   | Torque applied on the rotor between torso\/abdomen and the left hip (y-coordinate)  | -0.4 | 0.4 | left_hip_y (left_thigh)     | hinge | torque (N m) | | 10   | Torque applied on the rotor between the left hip\/thigh and the left shin          | -0.4 | 0.4 | left_knee                   | hinge | torque (N m) | | 11   | Torque applied on the rotor between the torso and right upper arm (coordinate -1) | -0.4 | 0.4 | right_shoulder1             | hinge | torque (N m) | | 12   | Torque applied on the rotor between the torso and right upper arm (coordinate -2) | -0.4 | 0.4 | right_shoulder2             | hinge | torque (N m) | | 13   | Torque applied on the rotor between the right upper arm and right lower arm       | -0.4 | 0.4 | right_elbow                 | hinge | torque (N m) | | 14   | Torque applied on the rotor between the torso and left upper arm (coordinate -1)  | -0.4 | 0.4 | left_shoulder1              | hinge | torque (N m) | | 15   | Torque applied on the rotor between the torso and left upper arm (coordinate -2)  | -0.4 | 0.4 | left_shoulder2              | hinge | torque (N m) | | 16   | Torque applied on the rotor between the left upper arm and left lower arm         | -0.4 | 0.4 | left_elbow                  | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>Observations consist of positional values of different body parts of the Humanoid, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x- and y-coordinates of the torso. These may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. In that case, the observation space will have 378 dimensions where the first two dimensions represent the x- and y-coordinates of the torso. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x- and y-coordinates will be returned in <codeVoice>info<\/codeVoice> with keys <codeVoice>&quot;x_position&quot;<\/codeVoice> and <codeVoice>&quot;y_position&quot;<\/codeVoice>, respectively. However, by default, the observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(376,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                                                                                                     | Min  | Max | Name (in corresponding XML file) | Joint | Unit                       | | — | ————————————————————————————————————— | –– | — | –––––––––––––––– | —– | ––––––––––––– | | 0   | z-coordinate of the torso (centre)                                                                              | -Inf | Inf | root                             | free  | position (m)               | | 1   | x-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 2   | y-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 3   | z-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 4   | w-orientation of the torso (centre)                                                                             | -Inf | Inf | root                             | free  | angle (rad)                | | 5   | z-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_z                        | hinge | angle (rad)                | | 6   | y-angle of the abdomen (in lower_waist)                                                                         | -Inf | Inf | abdomen_y                        | hinge | angle (rad)                | | 7   | x-angle of the abdomen (in pelvis)                                                                              | -Inf | Inf | abdomen_x                        | hinge | angle (rad)                | | 8   | x-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_x                      | hinge | angle (rad)                | | 9   | z-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_z                      | hinge | angle (rad)                | | 19  | y-coordinate of angle between pelvis and right hip (in right_thigh)                                             | -Inf | Inf | right_hip_y                      | hinge | angle (rad)                | | 11  | angle between right hip and the right shin (in right_knee)                                                      | -Inf | Inf | right_knee                       | hinge | angle (rad)                | | 12  | x-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_x                       | hinge | angle (rad)                | | 13  | z-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_z                       | hinge | angle (rad)                | | 14  | y-coordinate of angle between pelvis and left hip (in left_thigh)                                               | -Inf | Inf | left_hip_y                       | hinge | angle (rad)                | | 15  | angle between left hip and the left shin (in left_knee)                                                         | -Inf | Inf | left_knee                        | hinge | angle (rad)                | | 16  | coordinate-1 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder1                  | hinge | angle (rad)                | | 17  | coordinate-2 (multi-axis) angle between torso and right arm (in right_upper_arm)                                | -Inf | Inf | right_shoulder2                  | hinge | angle (rad)                | | 18  | angle between right upper arm and right_lower_arm                                                               | -Inf | Inf | right_elbow                      | hinge | angle (rad)                | | 19  | coordinate-1 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder1                   | hinge | angle (rad)                | | 20  | coordinate-2 (multi-axis) angle between torso and left arm (in left_upper_arm)                                  | -Inf | Inf | left_shoulder2                   | hinge | angle (rad)                | | 21  | angle between left upper arm and left_lower_arm                                                                 | -Inf | Inf | left_elbow                       | hinge | angle (rad)                | | 22  | x-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 23  | y-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 24  | z-coordinate velocity of the torso (centre)                                                                     | -Inf | Inf | root                             | free  | velocity (m\/s)             | | 25  | x-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 26  | y-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 27  | z-coordinate angular velocity of the torso (centre)                                                             | -Inf | Inf | root                             | free  | anglular velocity (rad\/s)  | | 28  | z-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_z                        | hinge | anglular velocity (rad\/s)  | | 29  | y-coordinate of angular velocity of the abdomen (in lower_waist)                                                | -Inf | Inf | abdomen_y                        | hinge | anglular velocity (rad\/s)  | | 30  | x-coordinate of angular velocity of the abdomen (in pelvis)                                                     | -Inf | Inf | abdomen_x                        | hinge | aanglular velocity (rad\/s) | | 31  | x-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_x                      | hinge | anglular velocity (rad\/s)  | | 32  | z-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_z                      | hinge | anglular velocity (rad\/s)  | | 33  | y-coordinate of the angular velocity of the angle between pelvis and right hip (in right_thigh)                 | -Inf | Inf | right_hip_y                      | hinge | anglular velocity (rad\/s)  | | 34  | angular velocity of the angle between right hip and the right shin (in right_knee)                              | -Inf | Inf | right_knee                       | hinge | anglular velocity (rad\/s)  | | 35  | x-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_x                       | hinge | anglular velocity (rad\/s)  | | 36  | z-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_z                       | hinge | anglular velocity (rad\/s)  | | 37  | y-coordinate of the angular velocity of the angle between pelvis and left hip (in left_thigh)                   | -Inf | Inf | left_hip_y                       | hinge | anglular velocity (rad\/s)  | | 38  | angular velocity of the angle between left hip and the left shin (in left_knee)                                 | -Inf | Inf | left_knee                        | hinge | anglular velocity (rad\/s)  | | 39  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder1                  | hinge | anglular velocity (rad\/s)  | | 40  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and right arm (in right_upper_arm) | -Inf | Inf | right_shoulder2                  | hinge | anglular velocity (rad\/s)  | | 41  | angular velocity of the angle between right upper arm and right_lower_arm                                       | -Inf | Inf | right_elbow                      | hinge | anglular velocity (rad\/s)  | | 42  | coordinate-1 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder1                   | hinge | anglular velocity (rad\/s)  | | 43  | coordinate-2 (multi-axis) of the angular velocity of the angle between torso and left arm (in left_upper_arm)   | -Inf | Inf | left_shoulder2                   | hinge | anglular velocity (rad\/s)  | | 44  | angular velocitty of the angle between left upper arm and left_lower_arm                                        | -Inf | Inf | left_elbow                       | hinge | anglular velocity (rad\/s)  | Additionally, after all the positional and velocity based values in the table, the observation contains (in order):<\/Para><List-Bullet><Item><Para><emphasis>cinert:<\/emphasis> Mass and inertia of a single rigid body relative to the center of mass (this is an intermediate result of transition). It has shape 14*10 (<emphasis>nbody * 10<\/emphasis>) and hence adds to another 140 elements in the state space.<\/Para><\/Item><Item><Para><emphasis>cvel:<\/emphasis> Center of mass based velocity. It has shape 14 * 6 (<emphasis>nbody * 6<\/emphasis>) and hence adds another 84 elements in the state space<\/Para><\/Item><Item><Para><emphasis>qfrc_actuator:<\/emphasis> Constraint force generated as the actuator force. This has shape <codeVoice>(23,)<\/codeVoice>  <emphasis>(nv * 1)<\/emphasis> and hence adds another 23 elements to the state space.<\/Para><\/Item><Item><Para><emphasis>cfrc_ext:<\/emphasis> This is the center of mass based external force on the body.  It has shape 14 * 6 (<emphasis>nbody * 6<\/emphasis>) and hence adds to another 84 elements in the state space. where <emphasis>nbody<\/emphasis> stands for the number of bodies in the robot and <emphasis>nv<\/emphasis> stands for the number of degrees of freedom (<emphasis>= dim(qvel)<\/emphasis>) The (x,y,z) coordinates are translational DOFs while the orientations are rotational DOFs expressed as quaternions. One can read more about free joints on the <Link href=\"https:\/\/mujoco.readthedocs.io\/en\/latest\/XMLreference.html\">Mujoco Documentation<\/Link>. <bold>Note:<\/bold> Humanoid-v4 environment no longer has the following contact forces issue. If using previous Humanoid versions from v4, there have been reported issues that using a Mujoco-Py version &gt; 2.0 results in the contact forces always being 0. As such we recommend to use a Mujoco-Py version &lt; 2.0 when using the Humanoid environment if you would like to report results with contact forces (if contact forces are not used in your experiments, you can use version &gt; 2.0).<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of three parts:<\/Para><List-Bullet><Item><Para><emphasis>healthy_reward<\/emphasis>: Every timestep that the humanoid is alive (see section Episode Termination for definition), it gets a reward of fixed value <codeVoice>healthy_reward<\/codeVoice><\/Para><\/Item><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of walking forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (average center of mass before action - average center of mass after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependent on the frame_skip parameter (default is 5), where the frametime is 0.003 - making the default <emphasis>dt = 5 * 0.003 = 0.015<\/emphasis>. This reward would be positive if the humanoid walks forward (in positive x-direction). The calculation for the center of mass is defined in the <codeVoice>.py<\/codeVoice> file for the Humanoid.<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A negative reward for penalising the humanoid if it has too large of a control force. If there are <emphasis>nu<\/emphasis> actuators\/controls, then the control has shape  <codeVoice>nu x 1<\/codeVoice>. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(control<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis>.<\/Para><\/Item><Item><Para><emphasis>contact_cost<\/emphasis>: A negative reward for penalising the humanoid if the external contact force is too large. It is calculated by clipping <emphasis><codeVoice>contact_cost_weight<\/codeVoice> * sum(external contact force<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> to the interval specified by <codeVoice>contact_cost_range<\/codeVoice>. The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>healthy_reward + forward_reward - ctrl_cost - contact_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0.0, 0.0,  1.4, 1.0, 0.0  … 0.0) with a uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] added to the positional and velocity values (values in the table) for stochasticity. Note that the initial z coordinate is intentionally selected to be high, thereby indicating a standing up humanoid. The initial orientation is designed to make it face forward as well.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The humanoid is said to be unhealthy if the z-position of the torso is no longer contained in the closed interval specified by the argument <codeVoice>healthy_z_range<\/codeVoice>. If <codeVoice>terminate_when_unhealthy=True<\/codeVoice> is passed during construction (which is the default), the episode ends when any of the following happens:<\/Para><List-Number><Item><Para>Truncation: The episode duration reaches a 1000 timesteps<\/Para><\/Item><Item><Para>Termination: The humanoid is unhealthy If <codeVoice>terminate_when_unhealthy=False<\/codeVoice> is passed, the episode is ended only when 1000 timesteps are exceeded.<\/Para><\/Item><\/List-Number><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Humanoid-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Humanoid-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default          | Description                                                                                                                                                               | | –––––––––––––––––––––– | ——— | –––––––– | ———————————————————————————————————————————————————————–– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;humanoid.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                                    | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.25<\/codeVoice>           | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                                  | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>            | Weight for <emphasis>ctrl_cost<\/emphasis> term (see section on reward)                                                                                                                       | | <codeVoice>contact_cost_weight<\/codeVoice>                        | <bold>float<\/bold> | <codeVoice>5e-7<\/codeVoice>           | Weight for <emphasis>contact_cost<\/emphasis> term (see section on reward)                                                                                                                    | | <codeVoice>healthy_reward<\/codeVoice>                             | <bold>float<\/bold> | <codeVoice>5.0<\/codeVoice>            | Constant reward given if the humanoid is “healthy” after timestep                                                                                                         | | <codeVoice>terminate_when_unhealthy<\/codeVoice>                   | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>           | If true, issue a done signal if the z-coordinate of the torso is no longer in the <codeVoice>healthy_z_range<\/codeVoice>                                                                       | | <codeVoice>healthy_z_range<\/codeVoice>                            | <bold>tuple<\/bold> | <codeVoice>(1.0, 2.0)<\/codeVoice>     | The humanoid is considered healthy if the z-coordinate of the torso is in this range                                                                                      | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>1e-2<\/codeVoice>           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>           | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 171,
+        "key.doc.name" : "Humanoid",
+        "key.doc.type" : "Class",
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 3,
-            "key.offset" : 1437
+            "key.offset" : 23831
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
@@ -422,15 +533,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 3649,
-        "key.line" : 7,
+        "key.line" : 171,
         "key.modulename" : "main",
         "key.name" : "Humanoid",
         "key.namelength" : 8,
-        "key.nameoffset" : 1427,
-        "key.offset" : 1417,
+        "key.nameoffset" : 23821,
+        "key.offset" : 23811,
         "key.parsed_declaration" : "extension Humanoid: Env",
-        "key.parsed_scope.end" : 151,
-        "key.parsed_scope.start" : 44,
+        "key.parsed_scope.end" : 315,
+        "key.parsed_scope.start" : 208,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -439,7 +550,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1445
+                "key.offset" : 23839
               }
             ],
             "key.column" : 20,
@@ -448,15 +559,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ActType<\/decl.name> = Tensor&lt;Float64&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
-            "key.line" : 45,
+            "key.line" : 209,
             "key.modulename" : "main",
             "key.name" : "ActType",
             "key.namelength" : 7,
-            "key.nameoffset" : 1462,
-            "key.offset" : 1452,
+            "key.nameoffset" : 23856,
+            "key.offset" : 23846,
             "key.parsed_declaration" : "public typealias ActType = Tensor<Float64>",
-            "key.parsed_scope.end" : 45,
-            "key.parsed_scope.start" : 45,
+            "key.parsed_scope.end" : 209,
+            "key.parsed_scope.start" : 209,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main8HumanoidC7ActTypea\">ActType<\/RelatedName>"
@@ -473,7 +584,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1490
+                "key.offset" : 23884
               }
             ],
             "key.column" : 20,
@@ -482,15 +593,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ObsType<\/decl.name> = Tensor&lt;Float64&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
-            "key.line" : 46,
+            "key.line" : 210,
             "key.modulename" : "main",
             "key.name" : "ObsType",
             "key.namelength" : 7,
-            "key.nameoffset" : 1507,
-            "key.offset" : 1497,
+            "key.nameoffset" : 23901,
+            "key.offset" : 23891,
             "key.parsed_declaration" : "public typealias ObsType = Tensor<Float64>",
-            "key.parsed_scope.end" : 46,
-            "key.parsed_scope.start" : 46,
+            "key.parsed_scope.end" : 210,
+            "key.parsed_scope.start" : 210,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main8HumanoidC7ObsTypea\">ObsType<\/RelatedName>"
@@ -507,7 +618,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1535
+                "key.offset" : 23929
               }
             ],
             "key.column" : 20,
@@ -516,15 +627,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>RewardType<\/decl.name> = <ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 28,
-            "key.line" : 47,
+            "key.line" : 211,
             "key.modulename" : "main",
             "key.name" : "RewardType",
             "key.namelength" : 10,
-            "key.nameoffset" : 1552,
-            "key.offset" : 1542,
+            "key.nameoffset" : 23946,
+            "key.offset" : 23936,
             "key.parsed_declaration" : "public typealias RewardType = Float",
-            "key.parsed_scope.end" : 47,
-            "key.parsed_scope.start" : 47,
+            "key.parsed_scope.end" : 211,
+            "key.parsed_scope.start" : 211,
             "key.typename" : "Float.Type",
             "key.typeusr" : "$sSfmD",
             "key.usr" : "s:4main8HumanoidC10RewardTypea"
@@ -536,7 +647,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1573
+                "key.offset" : 23967
               }
             ],
             "key.column" : 20,
@@ -545,15 +656,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>TerminatedType<\/decl.name> = <ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 31,
-            "key.line" : 48,
+            "key.line" : 212,
             "key.modulename" : "main",
             "key.name" : "TerminatedType",
             "key.namelength" : 14,
-            "key.nameoffset" : 1590,
-            "key.offset" : 1580,
+            "key.nameoffset" : 23984,
+            "key.offset" : 23974,
             "key.parsed_declaration" : "public typealias TerminatedType = Bool",
-            "key.parsed_scope.end" : 48,
-            "key.parsed_scope.start" : 48,
+            "key.parsed_scope.end" : 212,
+            "key.parsed_scope.start" : 212,
             "key.typename" : "Bool.Type",
             "key.typeusr" : "$sSbmD",
             "key.usr" : "s:4main8HumanoidC14TerminatedTypea"
@@ -565,26 +676,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 1615
+                "key.offset" : 24009
               }
             ],
             "key.bodylength" : 85,
-            "key.bodyoffset" : 1644,
+            "key.bodyoffset" : 24038,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>isHealthy<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 107,
-            "key.line" : 50,
+            "key.line" : 214,
             "key.modulename" : "main",
             "key.name" : "isHealthy",
             "key.namelength" : 9,
-            "key.nameoffset" : 1627,
-            "key.offset" : 1623,
+            "key.nameoffset" : 24021,
+            "key.offset" : 24017,
             "key.parsed_declaration" : "private var isHealthy: Bool",
-            "key.parsed_scope.end" : 54,
-            "key.parsed_scope.start" : 50,
+            "key.parsed_scope.end" : 218,
+            "key.parsed_scope.start" : 214,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main8HumanoidC9isHealthy33_3977D529158F1D181FE5B0BF78044087LLSbvp"
@@ -597,15 +708,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 20,
-            "key.line" : 51,
+            "key.line" : 215,
             "key.modulename" : "main",
             "key.name" : "qpos",
             "key.namelength" : 4,
-            "key.nameoffset" : 1653,
-            "key.offset" : 1649,
+            "key.nameoffset" : 24047,
+            "key.offset" : 24043,
             "key.parsed_declaration" : "let qpos = data.qpos",
-            "key.parsed_scope.end" : 51,
-            "key.parsed_scope.start" : 51,
+            "key.parsed_scope.end" : 215,
+            "key.parsed_scope.start" : 215,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8HumanoidC9isHealthy33_3977D529158F1D181FE5B0BF78044087LLSbvg4qposL_Xevp"
@@ -618,15 +729,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>z<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 15,
-            "key.line" : 52,
+            "key.line" : 216,
             "key.modulename" : "main",
             "key.name" : "z",
             "key.namelength" : 1,
-            "key.nameoffset" : 1678,
-            "key.offset" : 1674,
+            "key.nameoffset" : 24072,
+            "key.offset" : 24068,
             "key.parsed_declaration" : "let z = qpos[2]",
-            "key.parsed_scope.end" : 52,
-            "key.parsed_scope.start" : 52,
+            "key.parsed_scope.end" : 216,
+            "key.parsed_scope.start" : 216,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main8HumanoidC9isHealthy33_3977D529158F1D181FE5B0BF78044087LLSbvg1zL_Xevp"
@@ -638,26 +749,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 1734
+                "key.offset" : 24128
               }
             ],
             "key.bodylength" : 58,
-            "key.bodyoffset" : 1764,
+            "key.bodyoffset" : 24158,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>terminated<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 81,
-            "key.line" : 56,
+            "key.line" : 220,
             "key.modulename" : "main",
             "key.name" : "terminated",
             "key.namelength" : 10,
-            "key.nameoffset" : 1746,
-            "key.offset" : 1742,
+            "key.nameoffset" : 24140,
+            "key.offset" : 24136,
             "key.parsed_declaration" : "private var terminated: Bool",
-            "key.parsed_scope.end" : 58,
-            "key.parsed_scope.start" : 56,
+            "key.parsed_scope.end" : 222,
+            "key.parsed_scope.start" : 220,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main8HumanoidC10terminated33_3977D529158F1D181FE5B0BF78044087LLSbvp"
@@ -669,26 +780,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 1827
+                "key.offset" : 24221
               }
             ],
             "key.bodylength" : 311,
-            "key.bodyoffset" : 1875,
+            "key.bodyoffset" : 24269,
             "key.column" : 16,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>observations<\/decl.name>() -&gt; <decl.function.returntype>Tensor&lt;Float64&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 352,
-            "key.line" : 60,
+            "key.line" : 224,
             "key.modulename" : "main",
             "key.name" : "observations()",
             "key.namelength" : 14,
-            "key.nameoffset" : 1840,
-            "key.offset" : 1835,
+            "key.nameoffset" : 24234,
+            "key.offset" : 24229,
             "key.parsed_declaration" : "private func observations() -> Tensor<Float64>",
-            "key.parsed_scope.end" : 69,
-            "key.parsed_scope.start" : 60,
+            "key.parsed_scope.end" : 233,
+            "key.parsed_scope.start" : 224,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var tensor: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -698,15 +809,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>tensor<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 43,
-                "key.line" : 61,
+                "key.line" : 225,
                 "key.modulename" : "main",
                 "key.name" : "tensor",
                 "key.namelength" : 6,
-                "key.nameoffset" : 1884,
-                "key.offset" : 1880,
+                "key.nameoffset" : 24278,
+                "key.offset" : 24274,
                 "key.parsed_declaration" : "var tensor = Tensor<Float64>(.CPU, .C(376))",
-                "key.parsed_scope.end" : 61,
-                "key.parsed_scope.start" : 61,
+                "key.parsed_scope.end" : 225,
+                "key.parsed_scope.start" : 225,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC12observations33_3977D529158F1D181FE5B0BF78044087LLyXeXeF6tensorL_Xevp"
@@ -723,26 +834,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 2191
+                "key.offset" : 24585
               }
             ],
             "key.bodylength" : 327,
-            "key.bodyoffset" : 2238,
+            "key.bodyoffset" : 24632,
             "key.column" : 16,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>massCenter<\/decl.name>() -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 367,
-            "key.line" : 71,
+            "key.line" : 235,
             "key.modulename" : "main",
             "key.name" : "massCenter()",
             "key.namelength" : 12,
-            "key.nameoffset" : 2204,
-            "key.offset" : 2199,
+            "key.nameoffset" : 24598,
+            "key.offset" : 24593,
             "key.parsed_declaration" : "private func massCenter() -> (Double, Double)",
-            "key.parsed_scope.end" : 83,
-            "key.parsed_scope.start" : 71,
+            "key.parsed_scope.end" : 247,
+            "key.parsed_scope.start" : 235,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let bodyMass: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -752,15 +863,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>bodyMass<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 29,
-                "key.line" : 72,
+                "key.line" : 236,
                 "key.modulename" : "main",
                 "key.name" : "bodyMass",
                 "key.namelength" : 8,
-                "key.nameoffset" : 2247,
-                "key.offset" : 2243,
+                "key.nameoffset" : 24641,
+                "key.offset" : 24637,
                 "key.parsed_declaration" : "let bodyMass = model.bodyMass",
-                "key.parsed_scope.end" : 72,
-                "key.parsed_scope.start" : 72,
+                "key.parsed_scope.end" : 236,
+                "key.parsed_scope.start" : 236,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC10massCenter33_3977D529158F1D181FE5B0BF78044087LLSd_SdtyF8bodyMassL_Xevp"
@@ -773,15 +884,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xipos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 22,
-                "key.line" : 73,
+                "key.line" : 237,
                 "key.modulename" : "main",
                 "key.name" : "xipos",
                 "key.namelength" : 5,
-                "key.nameoffset" : 2281,
-                "key.offset" : 2277,
+                "key.nameoffset" : 24675,
+                "key.offset" : 24671,
                 "key.parsed_declaration" : "let xipos = data.xipos",
-                "key.parsed_scope.end" : 73,
-                "key.parsed_scope.start" : 73,
+                "key.parsed_scope.end" : 237,
+                "key.parsed_scope.start" : 237,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC10massCenter33_3977D529158F1D181FE5B0BF78044087LLSd_SdtyF5xiposL_Xevp"
@@ -794,15 +905,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>xSum<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 74,
+                "key.line" : 238,
                 "key.modulename" : "main",
                 "key.name" : "xSum",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2308,
-                "key.offset" : 2304,
+                "key.nameoffset" : 24702,
+                "key.offset" : 24698,
                 "key.parsed_declaration" : "var xSum: Double = 0",
-                "key.parsed_scope.end" : 74,
-                "key.parsed_scope.start" : 74,
+                "key.parsed_scope.end" : 238,
+                "key.parsed_scope.start" : 238,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8HumanoidC10massCenter33_3977D529158F1D181FE5B0BF78044087LLSd_SdtyF4xSumL_Sdvp"
@@ -815,15 +926,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>ySum<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 75,
+                "key.line" : 239,
                 "key.modulename" : "main",
                 "key.name" : "ySum",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2333,
-                "key.offset" : 2329,
+                "key.nameoffset" : 24727,
+                "key.offset" : 24723,
                 "key.parsed_declaration" : "var ySum: Double = 0",
-                "key.parsed_scope.end" : 75,
-                "key.parsed_scope.start" : 75,
+                "key.parsed_scope.end" : 239,
+                "key.parsed_scope.start" : 239,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8HumanoidC10massCenter33_3977D529158F1D181FE5B0BF78044087LLSd_SdtyF4ySumL_Sdvp"
@@ -836,15 +947,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>sum<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 19,
-                "key.line" : 76,
+                "key.line" : 240,
                 "key.modulename" : "main",
                 "key.name" : "sum",
                 "key.namelength" : 3,
-                "key.nameoffset" : 2358,
-                "key.offset" : 2354,
+                "key.nameoffset" : 24752,
+                "key.offset" : 24748,
                 "key.parsed_declaration" : "var sum: Double = 0",
-                "key.parsed_scope.end" : 76,
-                "key.parsed_scope.start" : 76,
+                "key.parsed_scope.end" : 240,
+                "key.parsed_scope.start" : 240,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8HumanoidC10massCenter33_3977D529158F1D181FE5B0BF78044087LLSd_SdtyF3sumL_Sdvp"
@@ -861,26 +972,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2570
+                "key.offset" : 24964
               }
             ],
             "key.bodylength" : 1537,
-            "key.bodyoffset" : 2661,
+            "key.bodyoffset" : 25055,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>action<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ActType<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ObsType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main8HumanoidC10RewardTypea\">RewardType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main8HumanoidC14TerminatedTypea\">TerminatedType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1622,
-            "key.line" : 85,
+            "key.line" : 249,
             "key.modulename" : "main",
             "key.name" : "step(action:)",
             "key.namelength" : 21,
-            "key.nameoffset" : 2582,
-            "key.offset" : 2577,
+            "key.nameoffset" : 24976,
+            "key.offset" : 24971,
             "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, TerminatedType, [String: Any])",
-            "key.parsed_scope.end" : 126,
-            "key.parsed_scope.start" : 85,
+            "key.parsed_scope.end" : 290,
+            "key.parsed_scope.start" : 249,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let id: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -890,15 +1001,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>id<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 50,
-                "key.line" : 86,
+                "key.line" : 250,
                 "key.modulename" : "main",
                 "key.name" : "id",
                 "key.namelength" : 2,
-                "key.nameoffset" : 2670,
-                "key.offset" : 2666,
+                "key.nameoffset" : 25064,
+                "key.offset" : 25060,
                 "key.parsed_declaration" : "let id = model.name2id(type: .body, name: \"torso\")",
-                "key.parsed_scope.end" : 86,
-                "key.parsed_scope.start" : 86,
+                "key.parsed_scope.end" : 250,
+                "key.parsed_scope.start" : 250,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF2idL_Xevp"
@@ -911,15 +1022,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xyPositionBefore<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 35,
-                "key.line" : 88,
+                "key.line" : 252,
                 "key.modulename" : "main",
                 "key.name" : "xyPositionBefore",
                 "key.namelength" : 16,
-                "key.nameoffset" : 2751,
-                "key.offset" : 2747,
+                "key.nameoffset" : 25145,
+                "key.offset" : 25141,
                 "key.parsed_declaration" : "let xyPositionBefore = massCenter()",
-                "key.parsed_scope.end" : 88,
-                "key.parsed_scope.start" : 88,
+                "key.parsed_scope.end" : 252,
+                "key.parsed_scope.start" : 252,
                 "key.typename" : "(Double, Double)",
                 "key.typeusr" : "$sSd_SdtD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF16xyPositionBeforeL_Sd_Sdtvp"
@@ -932,15 +1043,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xyPositionAfter<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 34,
-                "key.line" : 97,
+                "key.line" : 261,
                 "key.modulename" : "main",
                 "key.name" : "xyPositionAfter",
                 "key.namelength" : 15,
-                "key.nameoffset" : 3098,
-                "key.offset" : 3094,
+                "key.nameoffset" : 25492,
+                "key.offset" : 25488,
                 "key.parsed_declaration" : "let xyPositionAfter = massCenter()",
-                "key.parsed_scope.end" : 97,
-                "key.parsed_scope.start" : 97,
+                "key.parsed_scope.end" : 261,
+                "key.parsed_scope.start" : 261,
                 "key.typename" : "(Double, Double)",
                 "key.typeusr" : "$sSd_SdtD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF15xyPositionAfterL_Sd_Sdtvp"
@@ -953,15 +1064,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>dt<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 31,
-                "key.line" : 98,
+                "key.line" : 262,
                 "key.modulename" : "main",
                 "key.name" : "dt",
                 "key.namelength" : 2,
-                "key.nameoffset" : 3137,
-                "key.offset" : 3133,
+                "key.nameoffset" : 25531,
+                "key.offset" : 25527,
                 "key.parsed_declaration" : "let dt = model.opt.timestep * 5",
-                "key.parsed_scope.end" : 98,
-                "key.parsed_scope.start" : 98,
+                "key.parsed_scope.end" : 262,
+                "key.parsed_scope.start" : 262,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF2dtL_Xevp"
@@ -974,15 +1085,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xyVelocity<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 123,
-                "key.line" : 99,
+                "key.line" : 263,
                 "key.modulename" : "main",
                 "key.name" : "xyVelocity",
                 "key.namelength" : 10,
-                "key.nameoffset" : 3173,
-                "key.offset" : 3169,
+                "key.nameoffset" : 25567,
+                "key.offset" : 25563,
                 "key.parsed_declaration" : "let xyVelocity = (\n  (xyPositionAfter.0 - xyPositionBefore.0) \/ dt, (xyPositionAfter.1 - xyPositionBefore.1) \/ dt\n)",
-                "key.parsed_scope.end" : 99,
-                "key.parsed_scope.start" : 99,
+                "key.parsed_scope.end" : 263,
+                "key.parsed_scope.start" : 263,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF10xyVelocityL_Xevp"
@@ -995,15 +1106,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>forwardReward<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 59,
-                "key.line" : 102,
+                "key.line" : 266,
                 "key.modulename" : "main",
                 "key.name" : "forwardReward",
                 "key.namelength" : 13,
-                "key.nameoffset" : 3301,
-                "key.offset" : 3297,
+                "key.nameoffset" : 25695,
+                "key.offset" : 25691,
                 "key.parsed_declaration" : "let forwardReward = self.forwardRewardWeight * xyVelocity.0",
-                "key.parsed_scope.end" : 102,
-                "key.parsed_scope.start" : 102,
+                "key.parsed_scope.end" : 266,
+                "key.parsed_scope.start" : 266,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF13forwardRewardL_Xevp"
@@ -1016,15 +1127,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>healthyReward<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 80,
-                "key.line" : 103,
+                "key.line" : 267,
                 "key.modulename" : "main",
                 "key.name" : "healthyReward",
                 "key.namelength" : 13,
-                "key.nameoffset" : 3365,
-                "key.offset" : 3361,
+                "key.nameoffset" : 25759,
+                "key.offset" : 25755,
                 "key.parsed_declaration" : "let healthyReward = terminateWhenUnhealthy || isHealthy ? self.healthyReward : 0",
-                "key.parsed_scope.end" : 103,
-                "key.parsed_scope.start" : 103,
+                "key.parsed_scope.end" : 267,
+                "key.parsed_scope.start" : 267,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF13healthyRewardL_Sdvp"
@@ -1037,15 +1148,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>ctrlCost<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 104,
+                "key.line" : 268,
                 "key.modulename" : "main",
                 "key.name" : "ctrlCost",
                 "key.namelength" : 8,
-                "key.nameoffset" : 3450,
-                "key.offset" : 3446,
+                "key.nameoffset" : 25844,
+                "key.offset" : 25840,
                 "key.parsed_declaration" : "var ctrlCost: Double = 0",
-                "key.parsed_scope.end" : 104,
-                "key.parsed_scope.start" : 104,
+                "key.parsed_scope.end" : 268,
+                "key.parsed_scope.start" : 268,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF8ctrlCostL_Sdvp"
@@ -1058,15 +1169,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>rewards<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 43,
-                "key.line" : 109,
+                "key.line" : 273,
                 "key.modulename" : "main",
                 "key.name" : "rewards",
                 "key.namelength" : 7,
-                "key.nameoffset" : 3586,
-                "key.offset" : 3582,
+                "key.nameoffset" : 25980,
+                "key.offset" : 25976,
                 "key.parsed_declaration" : "let rewards = forwardReward + healthyReward",
-                "key.parsed_scope.end" : 109,
-                "key.parsed_scope.start" : 109,
+                "key.parsed_scope.end" : 273,
+                "key.parsed_scope.start" : 273,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF7rewardsL_Xevp"
@@ -1079,15 +1190,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>costs<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 110,
+                "key.line" : 274,
                 "key.modulename" : "main",
                 "key.name" : "costs",
                 "key.namelength" : 5,
-                "key.nameoffset" : 3634,
-                "key.offset" : 3630,
+                "key.nameoffset" : 26028,
+                "key.offset" : 26024,
                 "key.parsed_declaration" : "let costs = ctrlCost",
-                "key.parsed_scope.end" : 110,
-                "key.parsed_scope.start" : 110,
+                "key.parsed_scope.end" : 274,
+                "key.parsed_scope.start" : 274,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF5costsL_Sdvp"
@@ -1100,15 +1211,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 111,
+                "key.line" : 275,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 3659,
-                "key.offset" : 3655,
+                "key.nameoffset" : 26053,
+                "key.offset" : 26049,
                 "key.parsed_declaration" : "let obs = observations()",
-                "key.parsed_scope.end" : 111,
-                "key.parsed_scope.start" : 111,
+                "key.parsed_scope.end" : 275,
+                "key.parsed_scope.start" : 275,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF3obsL_Xevp"
@@ -1121,15 +1232,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>reward<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 35,
-                "key.line" : 112,
+                "key.line" : 276,
                 "key.modulename" : "main",
                 "key.name" : "reward",
                 "key.namelength" : 6,
-                "key.nameoffset" : 3688,
-                "key.offset" : 3684,
+                "key.nameoffset" : 26082,
+                "key.offset" : 26078,
                 "key.parsed_declaration" : "let reward = Float(rewards - costs)",
-                "key.parsed_scope.end" : 112,
-                "key.parsed_scope.start" : 112,
+                "key.parsed_scope.end" : 276,
+                "key.parsed_scope.start" : 276,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF6rewardL_Xevp"
@@ -1142,15 +1253,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>info<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 428,
-                "key.line" : 113,
+                "key.line" : 277,
                 "key.modulename" : "main",
                 "key.name" : "info",
                 "key.namelength" : 4,
-                "key.nameoffset" : 3728,
-                "key.offset" : 3724,
+                "key.nameoffset" : 26122,
+                "key.offset" : 26118,
                 "key.parsed_declaration" : "let info: [String: Any] = [\n  \"reward_forward\": forwardReward,\n  \"reward_ctrl\": -ctrlCost,\n  \"reward_alive\": healthyReward,\n  \"x_position\": xyPositionAfter.0,\n  \"y_position\": xyPositionAfter.1,\n  \"distance_from_origin\":\n    (xyPositionAfter.0 * xyPositionAfter.0 + xyPositionAfter.1 * xyPositionAfter.1)\n    .squareRoot(),\n  \"x_velocity\": xyVelocity.0,\n  \"y_velocity\": xyVelocity.1,\n]",
-                "key.parsed_scope.end" : 113,
-                "key.parsed_scope.start" : 113,
+                "key.parsed_scope.end" : 277,
+                "key.parsed_scope.start" : 277,
                 "key.typename" : "[String : Any]",
                 "key.typeusr" : "$sSDySSypGD",
                 "key.usr" : "s:4main8HumanoidC4stepyXeXeF4infoL_SDySSypGvp"
@@ -1167,26 +1278,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4203
+                "key.offset" : 26597
               }
             ],
             "key.bodylength" : 606,
-            "key.bodyoffset" : 4262,
+            "key.bodyoffset" : 26656,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reset<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ObsType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 659,
-            "key.line" : 128,
+            "key.line" : 292,
             "key.modulename" : "main",
             "key.name" : "reset(seed:)",
             "key.namelength" : 17,
-            "key.nameoffset" : 4215,
-            "key.offset" : 4210,
+            "key.nameoffset" : 26609,
+            "key.offset" : 26604,
             "key.parsed_declaration" : "public func reset(seed: Int?) -> (ObsType, [String: Any])",
-            "key.parsed_scope.end" : 146,
-            "key.parsed_scope.start" : 128,
+            "key.parsed_scope.end" : 310,
+            "key.parsed_scope.start" : 292,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let initQpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -1196,15 +1307,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initQpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 28,
-                "key.line" : 129,
+                "key.line" : 293,
                 "key.modulename" : "main",
                 "key.name" : "initQpos",
                 "key.namelength" : 8,
-                "key.nameoffset" : 4271,
-                "key.offset" : 4267,
+                "key.nameoffset" : 26665,
+                "key.offset" : 26661,
                 "key.parsed_declaration" : "let initQpos = initData.qpos",
-                "key.parsed_scope.end" : 129,
-                "key.parsed_scope.start" : 129,
+                "key.parsed_scope.end" : 293,
+                "key.parsed_scope.start" : 293,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC5resetyXeXeF8initQposL_Xevp"
@@ -1217,15 +1328,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initQvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 28,
-                "key.line" : 130,
+                "key.line" : 294,
                 "key.modulename" : "main",
                 "key.name" : "initQvel",
                 "key.namelength" : 8,
-                "key.nameoffset" : 4304,
-                "key.offset" : 4300,
+                "key.nameoffset" : 26698,
+                "key.offset" : 26694,
                 "key.parsed_declaration" : "let initQvel = initData.qvel",
-                "key.parsed_scope.end" : 130,
-                "key.parsed_scope.start" : 130,
+                "key.parsed_scope.end" : 294,
+                "key.parsed_scope.start" : 294,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC5resetyXeXeF8initQvelL_Xevp"
@@ -1238,15 +1349,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 131,
+                "key.line" : 295,
                 "key.modulename" : "main",
                 "key.name" : "qpos",
                 "key.namelength" : 4,
-                "key.nameoffset" : 4337,
-                "key.offset" : 4333,
+                "key.nameoffset" : 26731,
+                "key.offset" : 26727,
                 "key.parsed_declaration" : "var qpos = data.qpos",
-                "key.parsed_scope.end" : 131,
-                "key.parsed_scope.start" : 131,
+                "key.parsed_scope.end" : 295,
+                "key.parsed_scope.start" : 295,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC5resetyXeXeF4qposL_Xevp"
@@ -1259,15 +1370,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>qvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 132,
+                "key.line" : 296,
                 "key.modulename" : "main",
                 "key.name" : "qvel",
                 "key.namelength" : 4,
-                "key.nameoffset" : 4362,
-                "key.offset" : 4358,
+                "key.nameoffset" : 26756,
+                "key.offset" : 26752,
                 "key.parsed_declaration" : "var qvel = data.qvel",
-                "key.parsed_scope.end" : 132,
-                "key.parsed_scope.start" : 132,
+                "key.parsed_scope.end" : 296,
+                "key.parsed_scope.start" : 296,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC5resetyXeXeF4qvelL_Xevp"
@@ -1280,15 +1391,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 144,
+                "key.line" : 308,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 4823,
-                "key.offset" : 4819,
+                "key.nameoffset" : 27217,
+                "key.offset" : 27213,
                 "key.parsed_declaration" : "let obs = observations()",
-                "key.parsed_scope.end" : 144,
-                "key.parsed_scope.start" : 144,
+                "key.parsed_scope.end" : 308,
+                "key.parsed_scope.start" : 308,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main8HumanoidC5resetyXeXeF3obsL_Xevp"
@@ -1305,26 +1416,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4873
+                "key.offset" : 27267
               }
             ],
             "key.bodylength" : 7,
-            "key.bodyoffset" : 4915,
+            "key.bodyoffset" : 27309,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rewardThreshold<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 43,
-            "key.line" : 148,
+            "key.line" : 312,
             "key.modulename" : "main",
             "key.name" : "rewardThreshold",
             "key.namelength" : 15,
-            "key.nameoffset" : 4891,
-            "key.offset" : 4880,
+            "key.nameoffset" : 27285,
+            "key.offset" : 27274,
             "key.parsed_declaration" : "public static var rewardThreshold: Float",
-            "key.parsed_scope.end" : 148,
-            "key.parsed_scope.start" : 148,
+            "key.parsed_scope.end" : 312,
+            "key.parsed_scope.start" : 312,
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
             "key.usr" : "s:4main8HumanoidC15rewardThresholdSfvpZ"
@@ -1336,26 +1447,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 4926
+                "key.offset" : 27320
               }
             ],
             "key.bodylength" : 41,
-            "key.bodyoffset" : 4979,
+            "key.bodyoffset" : 27373,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>actionSpace<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 88,
-            "key.line" : 149,
+            "key.line" : 313,
             "key.modulename" : "main",
             "key.name" : "actionSpace",
             "key.namelength" : 11,
-            "key.nameoffset" : 4944,
-            "key.offset" : 4933,
+            "key.nameoffset" : 27338,
+            "key.offset" : 27327,
             "key.parsed_declaration" : "public static var actionSpace: [ClosedRange<Float>]",
-            "key.parsed_scope.end" : 149,
-            "key.parsed_scope.start" : 149,
+            "key.parsed_scope.end" : 313,
+            "key.parsed_scope.start" : 313,
             "key.typename" : "[ClosedRange<Float>]",
             "key.typeusr" : "$sSaySNySfGGD",
             "key.usr" : "s:4main8HumanoidC11actionSpaceSaySNySfGGvpZ"
@@ -1367,26 +1478,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 5024
+                "key.offset" : 27418
               }
             ],
             "key.bodylength" : 5,
-            "key.bodyoffset" : 5058,
+            "key.bodyoffset" : 27452,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Humanoid.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>stateSize<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 33,
-            "key.line" : 150,
+            "key.line" : 314,
             "key.modulename" : "main",
             "key.name" : "stateSize",
             "key.namelength" : 9,
-            "key.nameoffset" : 5042,
-            "key.offset" : 5031,
+            "key.nameoffset" : 27436,
+            "key.offset" : 27425,
             "key.parsed_declaration" : "public static var stateSize: Int",
-            "key.parsed_scope.end" : 150,
-            "key.parsed_scope.start" : 150,
+            "key.parsed_scope.end" : 314,
+            "key.parsed_scope.start" : 314,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main8HumanoidC9stateSizeSivpZ"

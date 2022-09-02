@@ -952,6 +952,9 @@
                 <a href="../Structs/CollectedData.html">CollectedData</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/CollectedData/EnvState.html">– EnvState</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Collector.html">Collector</a>
               </li>
               <li class="nav-group-task">
@@ -1054,7 +1057,70 @@
 
                 </div>
               </div>
-            
+            <h3 id='description' class='heading'>Description</h3>
+
+<p>This environment is the cartpole environment based on the work done by
+Barto, Sutton, and Anderson in <a href="https://ieeexplore.ieee.org/document/6313077">&ldquo;Neuronlike adaptive elements that can
+solve difficult learning control problems&rdquo;</a>,
+just like in the classic environments but now powered by the Mujoco physics simulator -
+allowing for more complex experiments (such as varying the effects of gravity).
+This environment involves a cart that can moved linearly, with a pole fixed on it
+at one end and having another end free. The cart can be pushed left or right, and the
+goal is to balance the pole on the top of the cart by applying forces on the cart.</p>
+<h3 id='action-space' class='heading'>Action Space</h3>
+
+<p>The agent take a 1-element vector for actions.
+The action space is a continuous <code>(action)</code> in <code>[-3, 3]</code>, where <code>action</code> represents
+the numerical force applied to the cart (with magnitude representing the amount of
+force and sign representing the direction)
+| Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit      |
+|&mdash;&ndash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;-|&mdash;&mdash;&mdash;&ndash;|
+| 0   | Force applied on the cart | -3          | 3           | slider                           | slide | Force (N) |</p>
+<h3 id='observation-space' class='heading'>Observation Space</h3>
+
+<p>The state space consists of positional values of different body parts of
+the pendulum system, followed by the velocities of those individual parts (their derivatives)
+with all the positions ordered before all the velocities.
+The observation is a <code>ndarray</code> with shape <code>(4,)</code> where the elements correspond to the following:
+| Num | Observation                                   | Min  | Max | Name (in corresponding XML file) | Joint | Unit                      |
+| &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;- | &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;- |
+| 0   | position of the cart along the linear surface | -Inf | Inf | slider                           | slide | position (m)              |
+| 1   | vertical angle of the pole on the cart        | -Inf | Inf | hinge                            | hinge | angle (rad)               |
+| 2   | linear velocity of the cart                   | -Inf | Inf | slider                           | slide | velocity (m/s)            |
+| 3   | angular velocity of the pole on the cart      | -Inf | Inf | hinge                            | hinge | anglular velocity (rad/s) |</p>
+<h3 id='rewards' class='heading'>Rewards</h3>
+
+<p>The goal is to make the inverted pendulum stand upright (within a certain angle limit)
+as long as possible - as such a reward of +1 is awarded for each timestep that
+the pole is upright.</p>
+<h3 id='starting-state' class='heading'>Starting State</h3>
+
+<p>All observations start in state
+(0.0, 0.0, 0.0, 0.0) with a uniform noise in the range
+of [-0.01, 0.01] added to the values for stochasticity.</p>
+<h3 id='episode-end' class='heading'>Episode End</h3>
+
+<p>The episode ends when any of the following happens:</p>
+
+<ol>
+<li>Truncation: The episode duration reaches 1000 timesteps.</li>
+<li>Termination: Any of the state space values is no longer finite.</li>
+<li>Termination: The absolutely value of the vertical angle between the pole and the cart is greater than 0.2 radian.
+### Arguments
+No additional arguments are currently supported.
+<code>
+env = gym.make(&#39;InvertedPendulum-v4&#39;)
+</code>
+There is no v3 for InvertedPendulum, unlike the robot environments where a
+v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.
+### Version History</li>
+<li>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3</li>
+<li>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)</li>
+<li>v2: All continuous control environments now use mujoco_py &gt;= 1.50</li>
+<li>v1: max_time_steps raised to 1000 for robot based tasks (including inverted pendulum)</li>
+<li>v0: Initial versions release (1.0.0)</li>
+</ol>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -1376,7 +1442,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-24)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-09-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

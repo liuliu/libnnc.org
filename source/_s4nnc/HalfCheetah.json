@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 3369,
+    "key.length" : 12984,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -11,23 +11,74 @@
           {
             "key.attribute" : "source.decl.attribute.final",
             "key.length" : 5,
-            "key.offset" : 94
+            "key.offset" : 9709
           },
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 87
+            "key.offset" : 9702
           }
         ],
         "key.bodylength" : 917,
-        "key.bodyoffset" : 130,
+        "key.bodyoffset" : 9745,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.comment" : "### Description\nThis environment is based on the work by P. Wawrzyński in\n[\"A Cat-Like Robot Real-Time Learning to Run\"](http:\/\/staff.elka.pw.edu.pl\/~pwawrzyn\/pub-s\/0812_LSCLRR.pdf).\nThe HalfCheetah is a 2-dimensional robot consisting of 9 links and 8\njoints connecting them (including two paws). The goal is to apply a torque\non the joints to make the cheetah run forward (right) as fast as possible,\nwith a positive reward allocated based on the distance moved forward and a\nnegative reward allocated for moving backward. The torso and head of the\ncheetah are fixed, and the torque can only be applied on the other 6 joints\nover the front and back thighs (connecting to the torso), shins\n(connecting to the thighs) and feet (connecting to the shins).\n### Action Space\nThe action space is a `Box(-1, 1, (6,), float32)`. An action represents the torques applied between *links*.\n| Num | Action                                  | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         |\n| --- | --------------------------------------- | ----------- | ----------- | -------------------------------- | ----- | ------------ |\n| 0   | Torque applied on the back thigh rotor  | -1          | 1           | bthigh                           | hinge | torque (N m) |\n| 1   | Torque applied on the back shin rotor   | -1          | 1           | bshin                            | hinge | torque (N m) |\n| 2   | Torque applied on the back foot rotor   | -1          | 1           | bfoot                            | hinge | torque (N m) |\n| 3   | Torque applied on the front thigh rotor | -1          | 1           | fthigh                           | hinge | torque (N m) |\n| 4   | Torque applied on the front shin rotor  | -1          | 1           | fshin                            | hinge | torque (N m) |\n| 5   | Torque applied on the front foot rotor  | -1          | 1           | ffoot                            | hinge | torque (N m) |\n### Observation Space\nObservations consist of positional values of different body parts of the\ncheetah, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities.\nBy default, observations do not include the x-coordinate of the cheetah's center of mass. It may\nbe included by passing `exclude_current_positions_from_observation=False` during construction.\nIn that case, the observation space will have 18 dimensions where the first dimension\nrepresents the x-coordinate of the cheetah's center of mass.\nRegardless of whether `exclude_current_positions_from_observation` was set to true or false, the x-coordinate\nwill be returned in `info` with key `\"x_position\"`.\nHowever, by default, the observation is a `ndarray` with shape `(17,)` where the elements correspond to the following:\n| Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     |\n| --- | ------------------------------------ | ---- | --- | -------------------------------- | ----- | ------------------------ |\n| 0   | z-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | position (m)             |\n| 1   | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angle (rad)              |\n| 2   | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angle (rad)              |\n| 3   | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angle (rad)              |\n| 4   | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angle (rad)              |\n| 5   | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angle (rad)              |\n| 6   | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angle (rad)              |\n| 7   | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angle (rad)              |\n| 8   | x-coordinate of the front tip        | -Inf | Inf | rootx                            | slide | velocity (m\/s)           |\n| 9   | y-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | velocity (m\/s)           |\n| 10  | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) |\n| 11  | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angular velocity (rad\/s) |\n| 12  | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angular velocity (rad\/s) |\n| 13  | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angular velocity (rad\/s) |\n| 14  | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angular velocity (rad\/s) |\n| 15  | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angular velocity (rad\/s) |\n| 16  | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angular velocity (rad\/s) |\n### Rewards\nThe reward consists of two parts:\n- *forward_reward*: A reward of moving forward which is measured\nas *`forward_reward_weight` * (x-coordinate before action - x-coordinate after action)\/dt*. *dt* is\nthe time between actions and is dependent on the frame_skip parameter\n(fixed to 5), where the frametime is 0.01 - making the\ndefault *dt = 5 * 0.01 = 0.05*. This reward would be positive if the cheetah\nruns forward (right).\n- *ctrl_cost*: A cost for penalising the cheetah if it takes\nactions that are too large. It is measured as *`ctrl_cost_weight` *\nsum(action<sup>2<\/sup>)* where *`ctrl_cost_weight`* is a parameter set for the\ncontrol and has a default value of 0.1\nThe total reward returned is ***reward*** *=* *forward_reward - ctrl_cost* and `info` will also contain the individual reward terms\n### Starting State\nAll observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,\n0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,) with a noise added to the\ninitial state for stochasticity. As seen before, the first 8 values in the\nstate are positional and the last 9 values are velocity. A uniform noise in\nthe range of [-`reset_noise_scale`, `reset_noise_scale`] is added to the positional values while a standard\nnormal noise with a mean of 0 and standard deviation of `reset_noise_scale` is added to the\ninitial velocity values of all zeros.\n### Episode End\nThe episode truncates when the episode length is greater than 1000.\n### Arguments\nNo additional arguments are currently supported in v2 and lower.\n```\nenv = gym.make('HalfCheetah-v2')\n```\nv3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.\n```\nenv = gym.make('HalfCheetah-v4', ctrl_cost_weight=0.1, ....)\n```\n| Parameter                                    | Type      | Default              | Description                                                                                                                                                       |\n| -------------------------------------------- | --------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| `xml_file`                                   | **str**   | `\"half_cheetah.xml\"` | Path to a MuJoCo model                                                                                                                                            |\n| `forward_reward_weight`                      | **float** | `1.0`                | Weight for _forward_reward_ term (see section on reward)                                                                                                          |\n| `ctrl_cost_weight`                           | **float** | `0.1`                | Weight for _ctrl_cost_ weight (see section on reward)                                                                                                             |\n| `reset_noise_scale`                          | **float** | `0.1`                | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    |\n| `exclude_current_positions_from_observation` | **bool**  | `True`               | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |\n### Version History\n* v4: all mujoco environments now use the mujoco bindings in mujoco>=2.1.3\n* v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)\n* v2: All continuous control environments now use mujoco_py >= 1.50\n* v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.\n* v0: Initial versions release (1.0.0)",
+        "key.doc.declaration" : "public final class HalfCheetah : MuJoCoEnv",
+        "key.doc.discussion" : [
+          {
+            "Para" : "This environment is based on the work by P. Wawrzyński in . The HalfCheetah is a 2-dimensional robot consisting of 9 links and 8 joints connecting them (including two paws). The goal is to apply a torque on the joints to make the cheetah run forward (right) as fast as possible, with a positive reward allocated based on the distance moved forward and a negative reward allocated for moving backward. The torso and head of the cheetah are fixed, and the torque can only be applied on the other 6 joints over the front and back thighs (connecting to the torso), shins (connecting to the thighs) and feet (connecting to the shins)."
+          },
+          {
+            "Para" : "The action space is a `Box(-1, 1, (6,), float32)`. An action represents the torques applied between . | Num | Action                                  | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | | — | ————————————— | ———– | ———– | –––––––––––––––– | —– | ———— | | 0   | Torque applied on the back thigh rotor  | -1          | 1           | bthigh                           | hinge | torque (N m) | | 1   | Torque applied on the back shin rotor   | -1          | 1           | bshin                            | hinge | torque (N m) | | 2   | Torque applied on the back foot rotor   | -1          | 1           | bfoot                            | hinge | torque (N m) | | 3   | Torque applied on the front thigh rotor | -1          | 1           | fthigh                           | hinge | torque (N m) | | 4   | Torque applied on the front shin rotor  | -1          | 1           | fshin                            | hinge | torque (N m) | | 5   | Torque applied on the front foot rotor  | -1          | 1           | ffoot                            | hinge | torque (N m) |"
+          },
+          {
+            "Para" : "Observations consist of positional values of different body parts of the cheetah, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x-coordinate of the cheetah’s center of mass. It may be included by passing `exclude_current_positions_from_observation=False` during construction. In that case, the observation space will have 18 dimensions where the first dimension represents the x-coordinate of the cheetah’s center of mass. Regardless of whether `exclude_current_positions_from_observation` was set to true or false, the x-coordinate will be returned in `info` with key `\"x_position\"`. However, by default, the observation is a `ndarray` with shape `(17,)` where the elements correspond to the following: | Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | z-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | position (m)             | | 1   | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angle (rad)              | | 2   | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angle (rad)              | | 3   | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angle (rad)              | | 4   | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angle (rad)              | | 5   | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angle (rad)              | | 6   | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angle (rad)              | | 7   | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angle (rad)              | | 8   | x-coordinate of the front tip        | -Inf | Inf | rootx                            | slide | velocity (m\/s)           | | 9   | y-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | velocity (m\/s)           | | 10  | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) | | 11  | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angular velocity (rad\/s) | | 12  | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angular velocity (rad\/s) | | 13  | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angular velocity (rad\/s) | | 14  | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angular velocity (rad\/s) | | 15  | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angular velocity (rad\/s) | | 16  | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angular velocity (rad\/s) |"
+          },
+          {
+            "Para" : "The reward consists of two parts:"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,) with a noise added to the initial state for stochasticity. As seen before, the first 8 values in the state are positional and the last 9 values are velocity. A uniform noise in the range of [-`reset_noise_scale`, `reset_noise_scale`] is added to the positional values while a standard normal noise with a mean of 0 and standard deviation of `reset_noise_scale` is added to the initial velocity values of all zeros."
+          },
+          {
+            "Para" : "The episode truncates when the episode length is greater than 1000."
+          },
+          {
+            "Para" : "No additional arguments are currently supported in v2 and lower."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "| Parameter                                    | Type      | Default              | Description                                                                                                                                                       | | –––––––––––––––––––––– | ——— | –––––––––– | —————————————————————————————————————————————————————– | | `xml_file`                                   |    | `\"half_cheetah.xml\"` | Path to a MuJoCo model                                                                                                                                            | | `forward_reward_weight`                      |  | `1.0`                | Weight for  term (see section on reward)                                                                                                          | | `ctrl_cost_weight`                           |  | `0.1`                | Weight for  weight (see section on reward)                                                                                                             | | `reset_noise_scale`                          |  | `0.1`                | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    | | `exclude_current_positions_from_observation` |   | `True`               | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |"
+          },
+          {
+            "List-Bullet" : ""
+          }
+        ],
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift\" line=\"102\" column=\"20\"><Name>HalfCheetah<\/Name><USR>s:4main11HalfCheetahC<\/USR><Declaration>public final class HalfCheetah : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment is based on the work by P. Wawrzyński in <Link href=\"http:\/\/staff.elka.pw.edu.pl\/~pwawrzyn\/pub-s\/0812_LSCLRR.pdf\">“A Cat-Like Robot Real-Time Learning to Run”<\/Link>. The HalfCheetah is a 2-dimensional robot consisting of 9 links and 8 joints connecting them (including two paws). The goal is to apply a torque on the joints to make the cheetah run forward (right) as fast as possible, with a positive reward allocated based on the distance moved forward and a negative reward allocated for moving backward. The torso and head of the cheetah are fixed, and the torque can only be applied on the other 6 joints over the front and back thighs (connecting to the torso), shins (connecting to the thighs) and feet (connecting to the shins).<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (6,), float32)<\/codeVoice>. An action represents the torques applied between <emphasis>links<\/emphasis>. | Num | Action                                  | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | | — | ————————————— | ———– | ———– | –––––––––––––––– | —– | ———— | | 0   | Torque applied on the back thigh rotor  | -1          | 1           | bthigh                           | hinge | torque (N m) | | 1   | Torque applied on the back shin rotor   | -1          | 1           | bshin                            | hinge | torque (N m) | | 2   | Torque applied on the back foot rotor   | -1          | 1           | bfoot                            | hinge | torque (N m) | | 3   | Torque applied on the front thigh rotor | -1          | 1           | fthigh                           | hinge | torque (N m) | | 4   | Torque applied on the front shin rotor  | -1          | 1           | fshin                            | hinge | torque (N m) | | 5   | Torque applied on the front foot rotor  | -1          | 1           | ffoot                            | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>Observations consist of positional values of different body parts of the cheetah, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x-coordinate of the cheetah’s center of mass. It may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. In that case, the observation space will have 18 dimensions where the first dimension represents the x-coordinate of the cheetah’s center of mass. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x-coordinate will be returned in <codeVoice>info<\/codeVoice> with key <codeVoice>&quot;x_position&quot;<\/codeVoice>. However, by default, the observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(17,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | z-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | position (m)             | | 1   | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angle (rad)              | | 2   | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angle (rad)              | | 3   | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angle (rad)              | | 4   | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angle (rad)              | | 5   | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angle (rad)              | | 6   | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angle (rad)              | | 7   | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angle (rad)              | | 8   | x-coordinate of the front tip        | -Inf | Inf | rootx                            | slide | velocity (m\/s)           | | 9   | y-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | velocity (m\/s)           | | 10  | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) | | 11  | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angular velocity (rad\/s) | | 12  | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angular velocity (rad\/s) | | 13  | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angular velocity (rad\/s) | | 14  | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angular velocity (rad\/s) | | 15  | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angular velocity (rad\/s) | | 16  | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angular velocity (rad\/s) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of two parts:<\/Para><List-Bullet><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of moving forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (x-coordinate before action - x-coordinate after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependent on the frame_skip parameter (fixed to 5), where the frametime is 0.01 - making the default <emphasis>dt = 5 * 0.01 = 0.05<\/emphasis>. This reward would be positive if the cheetah runs forward (right).<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A cost for penalising the cheetah if it takes actions that are too large. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(action<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> where <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice><\/emphasis> is a parameter set for the control and has a default value of 0.1 The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>forward_reward - ctrl_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,) with a noise added to the initial state for stochasticity. As seen before, the first 8 values in the state are positional and the last 9 values are velocity. A uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] is added to the positional values while a standard normal noise with a mean of 0 and standard deviation of <codeVoice>reset_noise_scale<\/codeVoice> is added to the initial velocity values of all zeros.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The episode truncates when the episode length is greater than 1000.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('HalfCheetah-v2')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('HalfCheetah-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default              | Description                                                                                                                                                       | | –––––––––––––––––––––– | ——— | –––––––––– | —————————————————————————————————————————————————————– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;half_cheetah.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                            | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>                | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                          | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>                | Weight for <emphasis>ctrl_cost<\/emphasis> weight (see section on reward)                                                                                                             | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>                | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>               | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 102,
+        "key.doc.name" : "HalfCheetah",
+        "key.doc.type" : "Class",
+        "key.doclength" : 9615,
+        "key.docoffset" : 87,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 9,
-            "key.offset" : 119
+            "key.offset" : 9734
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
@@ -39,15 +90,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.class",
         "key.length" : 948,
-        "key.line" : 7,
+        "key.line" : 102,
         "key.modulename" : "main",
         "key.name" : "HalfCheetah",
         "key.namelength" : 11,
-        "key.nameoffset" : 106,
-        "key.offset" : 100,
+        "key.nameoffset" : 9721,
+        "key.offset" : 9715,
         "key.parsed_declaration" : "public final class HalfCheetah: MuJoCoEnv",
-        "key.parsed_scope.end" : 35,
-        "key.parsed_scope.start" : 7,
+        "key.parsed_scope.end" : 130,
+        "key.parsed_scope.start" : 102,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -56,7 +107,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 133
+                "key.offset" : 9748
               }
             ],
             "key.column" : 14,
@@ -65,15 +116,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>model<\/decl.name>: <decl.var.type>MjModel<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 18,
-            "key.line" : 8,
+            "key.line" : 103,
             "key.modulename" : "main",
             "key.name" : "model",
             "key.namelength" : 5,
-            "key.nameoffset" : 144,
-            "key.offset" : 140,
+            "key.nameoffset" : 9759,
+            "key.offset" : 9755,
             "key.parsed_declaration" : "public let model: MjModel",
-            "key.parsed_scope.end" : 8,
-            "key.parsed_scope.start" : 8,
+            "key.parsed_scope.end" : 103,
+            "key.parsed_scope.start" : 103,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main11HalfCheetahC5modelXevp"
@@ -85,7 +136,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 161
+                "key.offset" : 9776
               }
             ],
             "key.column" : 14,
@@ -94,15 +145,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>data<\/decl.name>: <decl.var.type>MjData<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 16,
-            "key.line" : 9,
+            "key.line" : 104,
             "key.modulename" : "main",
             "key.name" : "data",
             "key.namelength" : 4,
-            "key.nameoffset" : 172,
-            "key.offset" : 168,
+            "key.nameoffset" : 9787,
+            "key.offset" : 9783,
             "key.parsed_declaration" : "public var data: MjData",
-            "key.parsed_scope.end" : 9,
-            "key.parsed_scope.start" : 9,
+            "key.parsed_scope.end" : 104,
+            "key.parsed_scope.start" : 104,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -115,7 +166,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 188
+                "key.offset" : 9803
               }
             ],
             "key.column" : 15,
@@ -124,15 +175,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initData<\/decl.name>: <decl.var.type>MjData<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 20,
-            "key.line" : 11,
+            "key.line" : 106,
             "key.modulename" : "main",
             "key.name" : "initData",
             "key.namelength" : 8,
-            "key.nameoffset" : 200,
-            "key.offset" : 196,
+            "key.nameoffset" : 9815,
+            "key.offset" : 9811,
             "key.parsed_declaration" : "private let initData: MjData",
-            "key.parsed_scope.end" : 11,
-            "key.parsed_scope.start" : 11,
+            "key.parsed_scope.end" : 106,
+            "key.parsed_scope.start" : 106,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main11HalfCheetahC8initData33_401B58A4C816D6EF7D7BD87DF27FBE93LLXevp"
@@ -144,7 +195,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 219
+                "key.offset" : 9834
               }
             ],
             "key.column" : 15,
@@ -153,15 +204,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>forwardRewardWeight<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 31,
-            "key.line" : 12,
+            "key.line" : 107,
             "key.modulename" : "main",
             "key.name" : "forwardRewardWeight",
             "key.namelength" : 19,
-            "key.nameoffset" : 231,
-            "key.offset" : 227,
+            "key.nameoffset" : 9846,
+            "key.offset" : 9842,
             "key.parsed_declaration" : "private let forwardRewardWeight: Double",
-            "key.parsed_scope.end" : 12,
-            "key.parsed_scope.start" : 12,
+            "key.parsed_scope.end" : 107,
+            "key.parsed_scope.start" : 107,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main11HalfCheetahC19forwardRewardWeight33_401B58A4C816D6EF7D7BD87DF27FBE93LLSdvp"
@@ -173,7 +224,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 261
+                "key.offset" : 9876
               }
             ],
             "key.column" : 15,
@@ -182,15 +233,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>ctrlCostWeight<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 26,
-            "key.line" : 13,
+            "key.line" : 108,
             "key.modulename" : "main",
             "key.name" : "ctrlCostWeight",
             "key.namelength" : 14,
-            "key.nameoffset" : 273,
-            "key.offset" : 269,
+            "key.nameoffset" : 9888,
+            "key.offset" : 9884,
             "key.parsed_declaration" : "private let ctrlCostWeight: Double",
-            "key.parsed_scope.end" : 13,
-            "key.parsed_scope.start" : 13,
+            "key.parsed_scope.end" : 108,
+            "key.parsed_scope.start" : 108,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main11HalfCheetahC14ctrlCostWeight33_401B58A4C816D6EF7D7BD87DF27FBE93LLSdvp"
@@ -202,7 +253,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 298
+                "key.offset" : 9913
               }
             ],
             "key.column" : 15,
@@ -211,15 +262,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>resetNoiseScale<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 27,
-            "key.line" : 14,
+            "key.line" : 109,
             "key.modulename" : "main",
             "key.name" : "resetNoiseScale",
             "key.namelength" : 15,
-            "key.nameoffset" : 310,
-            "key.offset" : 306,
+            "key.nameoffset" : 9925,
+            "key.offset" : 9921,
             "key.parsed_declaration" : "private let resetNoiseScale: Double",
-            "key.parsed_scope.end" : 14,
-            "key.parsed_scope.start" : 14,
+            "key.parsed_scope.end" : 109,
+            "key.parsed_scope.start" : 109,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main11HalfCheetahC15resetNoiseScale33_401B58A4C816D6EF7D7BD87DF27FBE93LLSdvp"
@@ -231,7 +282,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 337
+                "key.offset" : 9952
               }
             ],
             "key.column" : 15,
@@ -240,15 +291,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>sfmt<\/decl.name>: <decl.var.type><ref.struct usr=\"s:4main4SFMTV\">SFMT<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 14,
-            "key.line" : 16,
+            "key.line" : 111,
             "key.modulename" : "main",
             "key.name" : "sfmt",
             "key.namelength" : 4,
-            "key.nameoffset" : 349,
-            "key.offset" : 345,
+            "key.nameoffset" : 9964,
+            "key.offset" : 9960,
             "key.parsed_declaration" : "private var sfmt: SFMT",
-            "key.parsed_scope.end" : 16,
-            "key.parsed_scope.start" : 16,
+            "key.parsed_scope.end" : 111,
+            "key.parsed_scope.start" : 111,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "SFMT",
             "key.typeusr" : "$s4main4SFMTVD",
@@ -261,26 +312,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 363
+                "key.offset" : 9978
               }
             ],
             "key.bodylength" : 558,
-            "key.bodyoffset" : 487,
+            "key.bodyoffset" : 10102,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>forwardRewardWeight<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 1.0<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>ctrlCostWeight<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 0.1<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>resetNoiseScale<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.parameter.type> = 0.1<\/decl.var.parameter>) <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 676,
-            "key.line" : 18,
+            "key.line" : 113,
             "key.modulename" : "main",
             "key.name" : "init(forwardRewardWeight:ctrlCostWeight:resetNoiseScale:)",
             "key.namelength" : 108,
-            "key.nameoffset" : 370,
-            "key.offset" : 370,
+            "key.nameoffset" : 9985,
+            "key.offset" : 9985,
             "key.parsed_declaration" : "public init(\n  forwardRewardWeight: Double = 1.0, ctrlCostWeight: Double = 0.1, resetNoiseScale: Double = 0.1\n) throws",
-            "key.parsed_scope.end" : 34,
-            "key.parsed_scope.start" : 18,
+            "key.parsed_scope.end" : 129,
+            "key.parsed_scope.start" : 113,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var g: <Type usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/Type><\/Declaration>",
@@ -290,15 +341,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>g<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 37,
-                "key.line" : 29,
+                "key.line" : 124,
                 "key.modulename" : "main",
                 "key.name" : "g",
                 "key.namelength" : 1,
-                "key.nameoffset" : 842,
-                "key.offset" : 838,
+                "key.nameoffset" : 10457,
+                "key.offset" : 10453,
                 "key.parsed_declaration" : "var g = SystemRandomNumberGenerator()",
-                "key.parsed_scope.end" : 29,
-                "key.parsed_scope.start" : 29,
+                "key.parsed_scope.end" : 124,
+                "key.parsed_scope.start" : 124,
                 "key.typename" : "SystemRandomNumberGenerator",
                 "key.typeusr" : "$ss27SystemRandomNumberGeneratorVD",
                 "key.usr" : "s:4main11HalfCheetahC19forwardRewardWeight08ctrlCostF015resetNoiseScaleACSd_S2dtKcfc1gL_s27SystemRandomNumberGeneratorVvp"
@@ -316,14 +367,62 @@
       {
         "key.annotated_decl" : "<Declaration>public final class HalfCheetah : <Type usr=\"s:4main9MuJoCoEnvP\">MuJoCoEnv<\/Type><\/Declaration>",
         "key.bodylength" : 2289,
-        "key.bodyoffset" : 1078,
+        "key.bodyoffset" : 10693,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.declaration" : "public final class HalfCheetah : MuJoCoEnv",
+        "key.doc.discussion" : [
+          {
+            "Para" : "This environment is based on the work by P. Wawrzyński in . The HalfCheetah is a 2-dimensional robot consisting of 9 links and 8 joints connecting them (including two paws). The goal is to apply a torque on the joints to make the cheetah run forward (right) as fast as possible, with a positive reward allocated based on the distance moved forward and a negative reward allocated for moving backward. The torso and head of the cheetah are fixed, and the torque can only be applied on the other 6 joints over the front and back thighs (connecting to the torso), shins (connecting to the thighs) and feet (connecting to the shins)."
+          },
+          {
+            "Para" : "The action space is a `Box(-1, 1, (6,), float32)`. An action represents the torques applied between . | Num | Action                                  | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | | — | ————————————— | ———– | ———– | –––––––––––––––– | —– | ———— | | 0   | Torque applied on the back thigh rotor  | -1          | 1           | bthigh                           | hinge | torque (N m) | | 1   | Torque applied on the back shin rotor   | -1          | 1           | bshin                            | hinge | torque (N m) | | 2   | Torque applied on the back foot rotor   | -1          | 1           | bfoot                            | hinge | torque (N m) | | 3   | Torque applied on the front thigh rotor | -1          | 1           | fthigh                           | hinge | torque (N m) | | 4   | Torque applied on the front shin rotor  | -1          | 1           | fshin                            | hinge | torque (N m) | | 5   | Torque applied on the front foot rotor  | -1          | 1           | ffoot                            | hinge | torque (N m) |"
+          },
+          {
+            "Para" : "Observations consist of positional values of different body parts of the cheetah, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x-coordinate of the cheetah’s center of mass. It may be included by passing `exclude_current_positions_from_observation=False` during construction. In that case, the observation space will have 18 dimensions where the first dimension represents the x-coordinate of the cheetah’s center of mass. Regardless of whether `exclude_current_positions_from_observation` was set to true or false, the x-coordinate will be returned in `info` with key `\"x_position\"`. However, by default, the observation is a `ndarray` with shape `(17,)` where the elements correspond to the following: | Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | z-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | position (m)             | | 1   | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angle (rad)              | | 2   | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angle (rad)              | | 3   | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angle (rad)              | | 4   | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angle (rad)              | | 5   | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angle (rad)              | | 6   | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angle (rad)              | | 7   | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angle (rad)              | | 8   | x-coordinate of the front tip        | -Inf | Inf | rootx                            | slide | velocity (m\/s)           | | 9   | y-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | velocity (m\/s)           | | 10  | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) | | 11  | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angular velocity (rad\/s) | | 12  | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angular velocity (rad\/s) | | 13  | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angular velocity (rad\/s) | | 14  | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angular velocity (rad\/s) | | 15  | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angular velocity (rad\/s) | | 16  | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angular velocity (rad\/s) |"
+          },
+          {
+            "Para" : "The reward consists of two parts:"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,) with a noise added to the initial state for stochasticity. As seen before, the first 8 values in the state are positional and the last 9 values are velocity. A uniform noise in the range of [-`reset_noise_scale`, `reset_noise_scale`] is added to the positional values while a standard normal noise with a mean of 0 and standard deviation of `reset_noise_scale` is added to the initial velocity values of all zeros."
+          },
+          {
+            "Para" : "The episode truncates when the episode length is greater than 1000."
+          },
+          {
+            "Para" : "No additional arguments are currently supported in v2 and lower."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "| Parameter                                    | Type      | Default              | Description                                                                                                                                                       | | –––––––––––––––––––––– | ——— | –––––––––– | —————————————————————————————————————————————————————– | | `xml_file`                                   |    | `\"half_cheetah.xml\"` | Path to a MuJoCo model                                                                                                                                            | | `forward_reward_weight`                      |  | `1.0`                | Weight for  term (see section on reward)                                                                                                          | | `ctrl_cost_weight`                           |  | `0.1`                | Weight for  weight (see section on reward)                                                                                                             | | `reset_noise_scale`                          |  | `0.1`                | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    | | `exclude_current_positions_from_observation` |   | `True`               | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |"
+          },
+          {
+            "List-Bullet" : ""
+          }
+        ],
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift\" line=\"102\" column=\"20\"><Name>HalfCheetah<\/Name><USR>s:4main11HalfCheetahC<\/USR><Declaration>public final class HalfCheetah : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment is based on the work by P. Wawrzyński in <Link href=\"http:\/\/staff.elka.pw.edu.pl\/~pwawrzyn\/pub-s\/0812_LSCLRR.pdf\">“A Cat-Like Robot Real-Time Learning to Run”<\/Link>. The HalfCheetah is a 2-dimensional robot consisting of 9 links and 8 joints connecting them (including two paws). The goal is to apply a torque on the joints to make the cheetah run forward (right) as fast as possible, with a positive reward allocated based on the distance moved forward and a negative reward allocated for moving backward. The torso and head of the cheetah are fixed, and the torque can only be applied on the other 6 joints over the front and back thighs (connecting to the torso), shins (connecting to the thighs) and feet (connecting to the shins).<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (6,), float32)<\/codeVoice>. An action represents the torques applied between <emphasis>links<\/emphasis>. | Num | Action                                  | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | | — | ————————————— | ———– | ———– | –––––––––––––––– | —– | ———— | | 0   | Torque applied on the back thigh rotor  | -1          | 1           | bthigh                           | hinge | torque (N m) | | 1   | Torque applied on the back shin rotor   | -1          | 1           | bshin                            | hinge | torque (N m) | | 2   | Torque applied on the back foot rotor   | -1          | 1           | bfoot                            | hinge | torque (N m) | | 3   | Torque applied on the front thigh rotor | -1          | 1           | fthigh                           | hinge | torque (N m) | | 4   | Torque applied on the front shin rotor  | -1          | 1           | fshin                            | hinge | torque (N m) | | 5   | Torque applied on the front foot rotor  | -1          | 1           | ffoot                            | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>Observations consist of positional values of different body parts of the cheetah, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. By default, observations do not include the x-coordinate of the cheetah’s center of mass. It may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. In that case, the observation space will have 18 dimensions where the first dimension represents the x-coordinate of the cheetah’s center of mass. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x-coordinate will be returned in <codeVoice>info<\/codeVoice> with key <codeVoice>&quot;x_position&quot;<\/codeVoice>. However, by default, the observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(17,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | z-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | position (m)             | | 1   | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angle (rad)              | | 2   | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angle (rad)              | | 3   | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angle (rad)              | | 4   | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angle (rad)              | | 5   | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angle (rad)              | | 6   | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angle (rad)              | | 7   | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angle (rad)              | | 8   | x-coordinate of the front tip        | -Inf | Inf | rootx                            | slide | velocity (m\/s)           | | 9   | y-coordinate of the front tip        | -Inf | Inf | rootz                            | slide | velocity (m\/s)           | | 10  | angle of the front tip               | -Inf | Inf | rooty                            | hinge | angular velocity (rad\/s) | | 11  | angle of the second rotor            | -Inf | Inf | bthigh                           | hinge | angular velocity (rad\/s) | | 12  | angle of the second rotor            | -Inf | Inf | bshin                            | hinge | angular velocity (rad\/s) | | 13  | velocity of the tip along the x-axis | -Inf | Inf | bfoot                            | hinge | angular velocity (rad\/s) | | 14  | velocity of the tip along the y-axis | -Inf | Inf | fthigh                           | hinge | angular velocity (rad\/s) | | 15  | angular velocity of front tip        | -Inf | Inf | fshin                            | hinge | angular velocity (rad\/s) | | 16  | angular velocity of second rotor     | -Inf | Inf | ffoot                            | hinge | angular velocity (rad\/s) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of two parts:<\/Para><List-Bullet><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of moving forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (x-coordinate before action - x-coordinate after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependent on the frame_skip parameter (fixed to 5), where the frametime is 0.01 - making the default <emphasis>dt = 5 * 0.01 = 0.05<\/emphasis>. This reward would be positive if the cheetah runs forward (right).<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A cost for penalising the cheetah if it takes actions that are too large. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(action<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> where <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice><\/emphasis> is a parameter set for the control and has a default value of 0.1 The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>forward_reward - ctrl_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,) with a noise added to the initial state for stochasticity. As seen before, the first 8 values in the state are positional and the last 9 values are velocity. A uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] is added to the positional values while a standard normal noise with a mean of 0 and standard deviation of <codeVoice>reset_noise_scale<\/codeVoice> is added to the initial velocity values of all zeros.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The episode truncates when the episode length is greater than 1000.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('HalfCheetah-v2')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('HalfCheetah-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default              | Description                                                                                                                                                       | | –––––––––––––––––––––– | ——— | –––––––––– | —————————————————————————————————————————————————————– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;half_cheetah.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                            | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>                | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                          | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>                | Weight for <emphasis>ctrl_cost<\/emphasis> weight (see section on reward)                                                                                                             | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>                | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                    | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>               | Whether or not to omit the x-coordinate from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 102,
+        "key.doc.name" : "HalfCheetah",
+        "key.doc.type" : "Class",
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 3,
-            "key.offset" : 1073
+            "key.offset" : 10688
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
@@ -335,15 +434,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 2318,
-        "key.line" : 7,
+        "key.line" : 102,
         "key.modulename" : "main",
         "key.name" : "HalfCheetah",
         "key.namelength" : 11,
-        "key.nameoffset" : 1060,
-        "key.offset" : 1050,
+        "key.nameoffset" : 10675,
+        "key.offset" : 10665,
         "key.parsed_declaration" : "extension HalfCheetah: Env",
-        "key.parsed_scope.end" : 105,
-        "key.parsed_scope.start" : 37,
+        "key.parsed_scope.end" : 200,
+        "key.parsed_scope.start" : 132,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -352,7 +451,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1081
+                "key.offset" : 10696
               }
             ],
             "key.column" : 20,
@@ -361,15 +460,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ActType<\/decl.name> = Tensor&lt;Float64&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
-            "key.line" : 38,
+            "key.line" : 133,
             "key.modulename" : "main",
             "key.name" : "ActType",
             "key.namelength" : 7,
-            "key.nameoffset" : 1098,
-            "key.offset" : 1088,
+            "key.nameoffset" : 10713,
+            "key.offset" : 10703,
             "key.parsed_declaration" : "public typealias ActType = Tensor<Float64>",
-            "key.parsed_scope.end" : 38,
-            "key.parsed_scope.start" : 38,
+            "key.parsed_scope.end" : 133,
+            "key.parsed_scope.start" : 133,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main11HalfCheetahC7ActTypea\">ActType<\/RelatedName>"
@@ -386,7 +485,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1126
+                "key.offset" : 10741
               }
             ],
             "key.column" : 20,
@@ -395,15 +494,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ObsType<\/decl.name> = Tensor&lt;Float64&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
-            "key.line" : 39,
+            "key.line" : 134,
             "key.modulename" : "main",
             "key.name" : "ObsType",
             "key.namelength" : 7,
-            "key.nameoffset" : 1143,
-            "key.offset" : 1133,
+            "key.nameoffset" : 10758,
+            "key.offset" : 10748,
             "key.parsed_declaration" : "public typealias ObsType = Tensor<Float64>",
-            "key.parsed_scope.end" : 39,
-            "key.parsed_scope.start" : 39,
+            "key.parsed_scope.end" : 134,
+            "key.parsed_scope.start" : 134,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main11HalfCheetahC7ObsTypea\">ObsType<\/RelatedName>"
@@ -420,7 +519,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1171
+                "key.offset" : 10786
               }
             ],
             "key.column" : 20,
@@ -429,15 +528,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>RewardType<\/decl.name> = <ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 28,
-            "key.line" : 40,
+            "key.line" : 135,
             "key.modulename" : "main",
             "key.name" : "RewardType",
             "key.namelength" : 10,
-            "key.nameoffset" : 1188,
-            "key.offset" : 1178,
+            "key.nameoffset" : 10803,
+            "key.offset" : 10793,
             "key.parsed_declaration" : "public typealias RewardType = Float",
-            "key.parsed_scope.end" : 40,
-            "key.parsed_scope.start" : 40,
+            "key.parsed_scope.end" : 135,
+            "key.parsed_scope.start" : 135,
             "key.typename" : "Float.Type",
             "key.typeusr" : "$sSfmD",
             "key.usr" : "s:4main11HalfCheetahC10RewardTypea"
@@ -449,7 +548,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1209
+                "key.offset" : 10824
               }
             ],
             "key.column" : 20,
@@ -458,15 +557,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>TerminatedType<\/decl.name> = <ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 31,
-            "key.line" : 41,
+            "key.line" : 136,
             "key.modulename" : "main",
             "key.name" : "TerminatedType",
             "key.namelength" : 14,
-            "key.nameoffset" : 1226,
-            "key.offset" : 1216,
+            "key.nameoffset" : 10841,
+            "key.offset" : 10831,
             "key.parsed_declaration" : "public typealias TerminatedType = Bool",
-            "key.parsed_scope.end" : 41,
-            "key.parsed_scope.start" : 41,
+            "key.parsed_scope.end" : 136,
+            "key.parsed_scope.start" : 136,
             "key.typename" : "Bool.Type",
             "key.typeusr" : "$sSbmD",
             "key.usr" : "s:4main11HalfCheetahC14TerminatedTypea"
@@ -478,26 +577,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 1251
+                "key.offset" : 10866
               }
             ],
             "key.bodylength" : 180,
-            "key.bodyoffset" : 1299,
+            "key.bodyoffset" : 10914,
             "key.column" : 16,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>observations<\/decl.name>() -&gt; <decl.function.returntype>Tensor&lt;Float64&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 221,
-            "key.line" : 43,
+            "key.line" : 138,
             "key.modulename" : "main",
             "key.name" : "observations()",
             "key.namelength" : 14,
-            "key.nameoffset" : 1264,
-            "key.offset" : 1259,
+            "key.nameoffset" : 10879,
+            "key.offset" : 10874,
             "key.parsed_declaration" : "private func observations() -> Tensor<Float64>",
-            "key.parsed_scope.end" : 50,
-            "key.parsed_scope.start" : 43,
+            "key.parsed_scope.end" : 145,
+            "key.parsed_scope.start" : 138,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let qpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -507,15 +606,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 44,
+                "key.line" : 139,
                 "key.modulename" : "main",
                 "key.name" : "qpos",
                 "key.namelength" : 4,
-                "key.nameoffset" : 1308,
-                "key.offset" : 1304,
+                "key.nameoffset" : 10923,
+                "key.offset" : 10919,
                 "key.parsed_declaration" : "let qpos = data.qpos",
-                "key.parsed_scope.end" : 44,
-                "key.parsed_scope.start" : 44,
+                "key.parsed_scope.end" : 139,
+                "key.parsed_scope.start" : 139,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC12observations33_401B58A4C816D6EF7D7BD87DF27FBE93LLyXeXeF4qposL_Xevp"
@@ -528,15 +627,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 45,
+                "key.line" : 140,
                 "key.modulename" : "main",
                 "key.name" : "qvel",
                 "key.namelength" : 4,
-                "key.nameoffset" : 1333,
-                "key.offset" : 1329,
+                "key.nameoffset" : 10948,
+                "key.offset" : 10944,
                 "key.parsed_declaration" : "let qvel = data.qvel",
-                "key.parsed_scope.end" : 45,
-                "key.parsed_scope.start" : 45,
+                "key.parsed_scope.end" : 140,
+                "key.parsed_scope.start" : 140,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC12observations33_401B58A4C816D6EF7D7BD87DF27FBE93LLyXeXeF4qvelL_Xevp"
@@ -549,15 +648,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>tensor<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 42,
-                "key.line" : 46,
+                "key.line" : 141,
                 "key.modulename" : "main",
                 "key.name" : "tensor",
                 "key.namelength" : 6,
-                "key.nameoffset" : 1358,
-                "key.offset" : 1354,
+                "key.nameoffset" : 10973,
+                "key.offset" : 10969,
                 "key.parsed_declaration" : "var tensor = Tensor<Float64>(.CPU, .C(17))",
-                "key.parsed_scope.end" : 46,
-                "key.parsed_scope.start" : 46,
+                "key.parsed_scope.end" : 141,
+                "key.parsed_scope.start" : 141,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC12observations33_401B58A4C816D6EF7D7BD87DF27FBE93LLyXeXeF6tensorL_Xevp"
@@ -574,26 +673,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1484
+                "key.offset" : 11099
               }
             ],
             "key.bodylength" : 962,
-            "key.bodyoffset" : 1575,
+            "key.bodyoffset" : 11190,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>action<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ActType<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ObsType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main11HalfCheetahC10RewardTypea\">RewardType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main11HalfCheetahC14TerminatedTypea\">TerminatedType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1047,
-            "key.line" : 52,
+            "key.line" : 147,
             "key.modulename" : "main",
             "key.name" : "step(action:)",
             "key.namelength" : 21,
-            "key.nameoffset" : 1496,
-            "key.offset" : 1491,
+            "key.nameoffset" : 11111,
+            "key.offset" : 11106,
             "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, TerminatedType, [String: Any])",
-            "key.parsed_scope.end" : 80,
-            "key.parsed_scope.start" : 52,
+            "key.parsed_scope.end" : 175,
+            "key.parsed_scope.start" : 147,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let xPositionBefore: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -603,15 +702,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xPositionBefore<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 34,
-                "key.line" : 54,
+                "key.line" : 149,
                 "key.modulename" : "main",
                 "key.name" : "xPositionBefore",
                 "key.namelength" : 15,
-                "key.nameoffset" : 1612,
-                "key.offset" : 1608,
+                "key.nameoffset" : 11227,
+                "key.offset" : 11223,
                 "key.parsed_declaration" : "let xPositionBefore = data.qpos[0]",
-                "key.parsed_scope.end" : 54,
-                "key.parsed_scope.start" : 54,
+                "key.parsed_scope.end" : 149,
+                "key.parsed_scope.start" : 149,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF15xPositionBeforeL_Xevp"
@@ -624,15 +723,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xPositionAfter<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 33,
-                "key.line" : 62,
+                "key.line" : 157,
                 "key.modulename" : "main",
                 "key.name" : "xPositionAfter",
                 "key.namelength" : 14,
-                "key.nameoffset" : 1930,
-                "key.offset" : 1926,
+                "key.nameoffset" : 11545,
+                "key.offset" : 11541,
                 "key.parsed_declaration" : "let xPositionAfter = data.qpos[0]",
-                "key.parsed_scope.end" : 62,
-                "key.parsed_scope.start" : 62,
+                "key.parsed_scope.end" : 157,
+                "key.parsed_scope.start" : 157,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF14xPositionAfterL_Xevp"
@@ -645,15 +744,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>dt<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 31,
-                "key.line" : 63,
+                "key.line" : 158,
                 "key.modulename" : "main",
                 "key.name" : "dt",
                 "key.namelength" : 2,
-                "key.nameoffset" : 1968,
-                "key.offset" : 1964,
+                "key.nameoffset" : 11583,
+                "key.offset" : 11579,
                 "key.parsed_declaration" : "let dt = model.opt.timestep * 5",
-                "key.parsed_scope.end" : 63,
-                "key.parsed_scope.start" : 63,
+                "key.parsed_scope.end" : 158,
+                "key.parsed_scope.start" : 158,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF2dtL_Xevp"
@@ -666,15 +765,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>xVelocity<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 55,
-                "key.line" : 64,
+                "key.line" : 159,
                 "key.modulename" : "main",
                 "key.name" : "xVelocity",
                 "key.namelength" : 9,
-                "key.nameoffset" : 2004,
-                "key.offset" : 2000,
+                "key.nameoffset" : 11619,
+                "key.offset" : 11615,
                 "key.parsed_declaration" : "let xVelocity = (xPositionAfter - xPositionBefore) \/ dt",
-                "key.parsed_scope.end" : 64,
-                "key.parsed_scope.start" : 64,
+                "key.parsed_scope.end" : 159,
+                "key.parsed_scope.start" : 159,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF9xVelocityL_Xevp"
@@ -687,15 +786,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>ctrlCost<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sd\">Double<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 65,
+                "key.line" : 160,
                 "key.modulename" : "main",
                 "key.name" : "ctrlCost",
                 "key.namelength" : 8,
-                "key.nameoffset" : 2064,
-                "key.offset" : 2060,
+                "key.nameoffset" : 11679,
+                "key.offset" : 11675,
                 "key.parsed_declaration" : "var ctrlCost: Double = 0",
-                "key.parsed_scope.end" : 65,
-                "key.parsed_scope.start" : 65,
+                "key.parsed_scope.end" : 160,
+                "key.parsed_scope.start" : 160,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF8ctrlCostL_Sdvp"
@@ -708,15 +807,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>forwardReward<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 51,
-                "key.line" : 70,
+                "key.line" : 165,
                 "key.modulename" : "main",
                 "key.name" : "forwardReward",
                 "key.namelength" : 13,
-                "key.nameoffset" : 2199,
-                "key.offset" : 2195,
+                "key.nameoffset" : 11814,
+                "key.offset" : 11810,
                 "key.parsed_declaration" : "let forwardReward = forwardRewardWeight * xVelocity",
-                "key.parsed_scope.end" : 70,
-                "key.parsed_scope.start" : 70,
+                "key.parsed_scope.end" : 165,
+                "key.parsed_scope.start" : 165,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF13forwardRewardL_Xevp"
@@ -729,15 +828,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 71,
+                "key.line" : 166,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 2255,
-                "key.offset" : 2251,
+                "key.nameoffset" : 11870,
+                "key.offset" : 11866,
                 "key.parsed_declaration" : "let obs = observations()",
-                "key.parsed_scope.end" : 71,
-                "key.parsed_scope.start" : 71,
+                "key.parsed_scope.end" : 166,
+                "key.parsed_scope.start" : 166,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF3obsL_Xevp"
@@ -750,15 +849,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>reward<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 44,
-                "key.line" : 72,
+                "key.line" : 167,
                 "key.modulename" : "main",
                 "key.name" : "reward",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2284,
-                "key.offset" : 2280,
+                "key.nameoffset" : 11899,
+                "key.offset" : 11895,
                 "key.parsed_declaration" : "let reward = Float(forwardReward - ctrlCost)",
-                "key.parsed_scope.end" : 72,
-                "key.parsed_scope.start" : 72,
+                "key.parsed_scope.end" : 167,
+                "key.parsed_scope.start" : 167,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF6rewardL_Xevp"
@@ -771,15 +870,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>info<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 167,
-                "key.line" : 73,
+                "key.line" : 168,
                 "key.modulename" : "main",
                 "key.name" : "info",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2333,
-                "key.offset" : 2329,
+                "key.nameoffset" : 11948,
+                "key.offset" : 11944,
                 "key.parsed_declaration" : "let info: [String: Any] = [\n  \"x_position\": xPositionAfter,\n  \"x_velocity\": xVelocity,\n  \"reward_run\": forwardReward,\n  \"reward_ctrl\": -ctrlCost,\n]",
-                "key.parsed_scope.end" : 73,
-                "key.parsed_scope.start" : 73,
+                "key.parsed_scope.end" : 168,
+                "key.parsed_scope.start" : 168,
                 "key.typename" : "[String : Any]",
                 "key.typeusr" : "$sSDySSypGD",
                 "key.usr" : "s:4main11HalfCheetahC4stepyXeXeF4infoL_SDySSypGvp"
@@ -796,26 +895,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2542
+                "key.offset" : 12157
               }
             ],
             "key.bodylength" : 575,
-            "key.bodyoffset" : 2601,
+            "key.bodyoffset" : 12216,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reset<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ObsType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 628,
-            "key.line" : 82,
+            "key.line" : 177,
             "key.modulename" : "main",
             "key.name" : "reset(seed:)",
             "key.namelength" : 17,
-            "key.nameoffset" : 2554,
-            "key.offset" : 2549,
+            "key.nameoffset" : 12169,
+            "key.offset" : 12164,
             "key.parsed_declaration" : "public func reset(seed: Int?) -> (ObsType, [String: Any])",
-            "key.parsed_scope.end" : 100,
-            "key.parsed_scope.start" : 82,
+            "key.parsed_scope.end" : 195,
+            "key.parsed_scope.start" : 177,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let initQpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -825,15 +924,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initQpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 28,
-                "key.line" : 83,
+                "key.line" : 178,
                 "key.modulename" : "main",
                 "key.name" : "initQpos",
                 "key.namelength" : 8,
-                "key.nameoffset" : 2610,
-                "key.offset" : 2606,
+                "key.nameoffset" : 12225,
+                "key.offset" : 12221,
                 "key.parsed_declaration" : "let initQpos = initData.qpos",
-                "key.parsed_scope.end" : 83,
-                "key.parsed_scope.start" : 83,
+                "key.parsed_scope.end" : 178,
+                "key.parsed_scope.start" : 178,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC5resetyXeXeF8initQposL_Xevp"
@@ -846,15 +945,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initQvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 28,
-                "key.line" : 84,
+                "key.line" : 179,
                 "key.modulename" : "main",
                 "key.name" : "initQvel",
                 "key.namelength" : 8,
-                "key.nameoffset" : 2643,
-                "key.offset" : 2639,
+                "key.nameoffset" : 12258,
+                "key.offset" : 12254,
                 "key.parsed_declaration" : "let initQvel = initData.qvel",
-                "key.parsed_scope.end" : 84,
-                "key.parsed_scope.start" : 84,
+                "key.parsed_scope.end" : 179,
+                "key.parsed_scope.start" : 179,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC5resetyXeXeF8initQvelL_Xevp"
@@ -867,15 +966,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 85,
+                "key.line" : 180,
                 "key.modulename" : "main",
                 "key.name" : "qpos",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2676,
-                "key.offset" : 2672,
+                "key.nameoffset" : 12291,
+                "key.offset" : 12287,
                 "key.parsed_declaration" : "var qpos = data.qpos",
-                "key.parsed_scope.end" : 85,
-                "key.parsed_scope.start" : 85,
+                "key.parsed_scope.end" : 180,
+                "key.parsed_scope.start" : 180,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC5resetyXeXeF4qposL_Xevp"
@@ -888,15 +987,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>qvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 86,
+                "key.line" : 181,
                 "key.modulename" : "main",
                 "key.name" : "qvel",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2701,
-                "key.offset" : 2697,
+                "key.nameoffset" : 12316,
+                "key.offset" : 12312,
                 "key.parsed_declaration" : "var qvel = data.qvel",
-                "key.parsed_scope.end" : 86,
-                "key.parsed_scope.start" : 86,
+                "key.parsed_scope.end" : 181,
+                "key.parsed_scope.start" : 181,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC5resetyXeXeF4qvelL_Xevp"
@@ -909,15 +1008,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 98,
+                "key.line" : 193,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 3131,
-                "key.offset" : 3127,
+                "key.nameoffset" : 12746,
+                "key.offset" : 12742,
                 "key.parsed_declaration" : "let obs = observations()",
-                "key.parsed_scope.end" : 98,
-                "key.parsed_scope.start" : 98,
+                "key.parsed_scope.end" : 193,
+                "key.parsed_scope.start" : 193,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main11HalfCheetahC5resetyXeXeF3obsL_Xevp"
@@ -934,26 +1033,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3181
+                "key.offset" : 12796
               }
             ],
             "key.bodylength" : 7,
-            "key.bodyoffset" : 3223,
+            "key.bodyoffset" : 12838,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rewardThreshold<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 43,
-            "key.line" : 102,
+            "key.line" : 197,
             "key.modulename" : "main",
             "key.name" : "rewardThreshold",
             "key.namelength" : 15,
-            "key.nameoffset" : 3199,
-            "key.offset" : 3188,
+            "key.nameoffset" : 12814,
+            "key.offset" : 12803,
             "key.parsed_declaration" : "public static var rewardThreshold: Float",
-            "key.parsed_scope.end" : 102,
-            "key.parsed_scope.start" : 102,
+            "key.parsed_scope.end" : 197,
+            "key.parsed_scope.start" : 197,
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
             "key.usr" : "s:4main11HalfCheetahC15rewardThresholdSfvpZ"
@@ -965,26 +1064,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3234
+                "key.offset" : 12849
               }
             ],
             "key.bodylength" : 36,
-            "key.bodyoffset" : 3287,
+            "key.bodyoffset" : 12902,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>actionSpace<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 83,
-            "key.line" : 103,
+            "key.line" : 198,
             "key.modulename" : "main",
             "key.name" : "actionSpace",
             "key.namelength" : 11,
-            "key.nameoffset" : 3252,
-            "key.offset" : 3241,
+            "key.nameoffset" : 12867,
+            "key.offset" : 12856,
             "key.parsed_declaration" : "public static var actionSpace: [ClosedRange<Float>]",
-            "key.parsed_scope.end" : 103,
-            "key.parsed_scope.start" : 103,
+            "key.parsed_scope.end" : 198,
+            "key.parsed_scope.start" : 198,
             "key.typename" : "[ClosedRange<Float>]",
             "key.typeusr" : "$sSaySNySfGGD",
             "key.usr" : "s:4main11HalfCheetahC11actionSpaceSaySNySfGGvpZ"
@@ -996,26 +1095,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3327
+                "key.offset" : 12942
               }
             ],
             "key.bodylength" : 4,
-            "key.bodyoffset" : 3361,
+            "key.bodyoffset" : 12976,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/HalfCheetah.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>stateSize<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 32,
-            "key.line" : 104,
+            "key.line" : 199,
             "key.modulename" : "main",
             "key.name" : "stateSize",
             "key.namelength" : 9,
-            "key.nameoffset" : 3345,
-            "key.offset" : 3334,
+            "key.nameoffset" : 12960,
+            "key.offset" : 12949,
             "key.parsed_declaration" : "public static var stateSize: Int",
-            "key.parsed_scope.end" : 104,
-            "key.parsed_scope.start" : 104,
+            "key.parsed_scope.end" : 199,
+            "key.parsed_scope.start" : 199,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main11HalfCheetahC9stateSizeSivpZ"

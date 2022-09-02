@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 3275,
+    "key.length" : 10478,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -11,23 +11,68 @@
           {
             "key.attribute" : "source.decl.attribute.final",
             "key.length" : 5,
-            "key.offset" : 94
+            "key.offset" : 7297
           },
           {
             "key.attribute" : "source.decl.attribute.public",
             "key.length" : 6,
-            "key.offset" : 87
+            "key.offset" : 7290
           }
         ],
         "key.bodylength" : 587,
-        "key.bodyoffset" : 141,
+        "key.bodyoffset" : 7344,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.comment" : "### Description\nThis environment originates from control theory and builds on the cartpole\nenvironment based on the work done by Barto, Sutton, and Anderson in\n[\"Neuronlike adaptive elements that can solve difficult learning control problems\"](https:\/\/ieeexplore.ieee.org\/document\/6313077),\npowered by the Mujoco physics simulator - allowing for more complex experiments\n(such as varying the effects of gravity or constraints). This environment involves a cart that can\nmoved linearly, with a pole fixed on it and a second pole fixed on the other end of the first one\n(leaving the second pole as the only one with one free end). The cart can be pushed left or right,\nand the goal is to balance the second pole on top of the first pole, which is in turn on top of the\ncart, by applying continuous forces on the cart.\n### Action Space\nThe agent take a 1-element vector for actions.\nThe action space is a continuous `(action)` in `[-1, 1]`, where `action` represents the\nnumerical force applied to the cart (with magnitude representing the amount of force and\nsign representing the direction)\n| Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit      |\n|-----|---------------------------|-------------|-------------|----------------------------------|-------|-----------|\n| 0   | Force applied on the cart | -1          | 1           | slider                           | slide | Force (N) |\n### Observation Space\nThe state space consists of positional values of different body parts of the pendulum system,\nfollowed by the velocities of those individual parts (their derivatives) with all the\npositions ordered before all the velocities.\nThe observation is a `ndarray` with shape `(11,)` where the elements correspond to the following:\n| Num | Observation                                                       | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     |\n| --- | ----------------------------------------------------------------- | ---- | --- | -------------------------------- | ----- | ------------------------ |\n| 0   | position of the cart along the linear surface                     | -Inf | Inf | slider                           | slide | position (m)             |\n| 1   | sine of the angle between the cart and the first pole             | -Inf | Inf | sin(hinge)                       | hinge | unitless                 |\n| 2   | sine of the angle between the two poles                           | -Inf | Inf | sin(hinge2)                      | hinge | unitless                 |\n| 3   | cosine of the angle between the cart and the first pole           | -Inf | Inf | cos(hinge)                       | hinge | unitless                 |\n| 4   | cosine of the angle between the two poles                         | -Inf | Inf | cos(hinge2)                      | hinge | unitless                 |\n| 5   | velocity of the cart                                              | -Inf | Inf | slider                           | slide | velocity (m\/s)           |\n| 6   | angular velocity of the angle between the cart and the first pole | -Inf | Inf | hinge                            | hinge | angular velocity (rad\/s) |\n| 7   | angular velocity of the angle between the two poles               | -Inf | Inf | hinge2                           | hinge | angular velocity (rad\/s) |\n| 8   | constraint force - 1                                              | -Inf | Inf |                                  |       | Force (N)                |\n| 9   | constraint force - 2                                              | -Inf | Inf |                                  |       | Force (N)                |\n| 10  | constraint force - 3                                              | -Inf | Inf |                                  |       | Force (N)                |\nThere is physical contact between the robots and their environment - and Mujoco\nattempts at getting realisitic physics simulations for the possible physical contact\ndynamics by aiming for physical accuracy and computational efficiency.\nThere is one constraint force for contacts for each degree of freedom (3).\nThe approach and handling of constraints by Mujoco is unique to the simulator\nand is based on their research. Once can find more information in their\n[*documentation*](https:\/\/mujoco.readthedocs.io\/en\/latest\/computation.html)\nor in their paper\n[\"Analytically-invertible dynamics with contacts and constraints: Theory and implementation in MuJoCo\"](https:\/\/homes.cs.washington.edu\/~todorov\/papers\/TodorovICRA14.pdf).\n### Rewards\nThe reward consists of two parts:\n- *alive_bonus*: The goal is to make the second inverted pendulum stand upright\n(within a certain angle limit) as long as possible - as such a reward of +10 is awarded\n for each timestep that the second pole is upright.\n- *distance_penalty*: This reward is a measure of how far the *tip* of the second pendulum\n(the only free end) moves, and it is calculated as\n*0.01 * x<sup>2<\/sup> + (y - 2)<sup>2<\/sup>*, where *x* is the x-coordinate of the tip\nand *y* is the y-coordinate of the tip of the second pole.\n- *velocity_penalty*: A negative reward for penalising the agent if it moves too\nfast *0.001 *  v<sub>1<\/sub><sup>2<\/sup> + 0.005 * v<sub>2<\/sub> <sup>2<\/sup>*\nThe total reward returned is ***reward*** *=* *alive_bonus - distance_penalty - velocity_penalty*\n### Starting State\nAll observations start in state\n(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range\nof [-0.1, 0.1] added to the positional values (cart position and pole angles) and standard\nnormal force with a standard deviation of 0.1 added to the velocity values for stochasticity.\n### Episode End\nThe episode ends when any of the following happens:\n1.Truncation:  The episode duration reaches 1000 timesteps.\n2.Termination: Any of the state space values is no longer finite.\n3.Termination: The y_coordinate of the tip of the second pole *is less than or equal* to 1. The maximum standing height of the system is 1.196 m when all the parts are perpendicularly vertical on top of each other).\n### Arguments\nNo additional arguments are currently supported.\n```\nenv = gym.make('InvertedDoublePendulum-v4')\n```\nThere is no v3 for InvertedPendulum, unlike the robot environments where a v3 and\nbeyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.\n### Version History\n* v4: all mujoco environments now use the mujoco bindings in mujoco>=2.1.3\n* v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)\n* v2: All continuous control environments now use mujoco_py >= 1.50\n* v1: max_time_steps raised to 1000 for robot based tasks (including inverted pendulum)\n* v0: Initial versions release (1.0.0)",
+        "key.doc.declaration" : "public final class InvertedDoublePendulum : MuJoCoEnv",
+        "key.doc.discussion" : [
+          {
+            "Para" : "This environment originates from control theory and builds on the cartpole environment based on the work done by Barto, Sutton, and Anderson in , powered by the Mujoco physics simulator - allowing for more complex experiments (such as varying the effects of gravity or constraints). This environment involves a cart that can moved linearly, with a pole fixed on it and a second pole fixed on the other end of the first one (leaving the second pole as the only one with one free end). The cart can be pushed left or right, and the goal is to balance the second pole on top of the first pole, which is in turn on top of the cart, by applying continuous forces on the cart."
+          },
+          {
+            "Para" : "The agent take a 1-element vector for actions. The action space is a continuous `(action)` in `[-1, 1]`, where `action` represents the numerical force applied to the cart (with magnitude representing the amount of force and sign representing the direction) | Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit      | |—–|—————————|———––|———––|–––––––––––––––––|—––|———–| | 0   | Force applied on the cart | -1          | 1           | slider                           | slide | Force (N) |"
+          },
+          {
+            "Para" : "The state space consists of positional values of different body parts of the pendulum system, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. The observation is a `ndarray` with shape `(11,)` where the elements correspond to the following: | Num | Observation                                                       | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | —————————————————————– | –– | — | –––––––––––––––– | —– | ———————— | | 0   | position of the cart along the linear surface                     | -Inf | Inf | slider                           | slide | position (m)             | | 1   | sine of the angle between the cart and the first pole             | -Inf | Inf | sin(hinge)                       | hinge | unitless                 | | 2   | sine of the angle between the two poles                           | -Inf | Inf | sin(hinge2)                      | hinge | unitless                 | | 3   | cosine of the angle between the cart and the first pole           | -Inf | Inf | cos(hinge)                       | hinge | unitless                 | | 4   | cosine of the angle between the two poles                         | -Inf | Inf | cos(hinge2)                      | hinge | unitless                 | | 5   | velocity of the cart                                              | -Inf | Inf | slider                           | slide | velocity (m\/s)           | | 6   | angular velocity of the angle between the cart and the first pole | -Inf | Inf | hinge                            | hinge | angular velocity (rad\/s) | | 7   | angular velocity of the angle between the two poles               | -Inf | Inf | hinge2                           | hinge | angular velocity (rad\/s) | | 8   | constraint force - 1                                              | -Inf | Inf |                                  |       | Force (N)                | | 9   | constraint force - 2                                              | -Inf | Inf |                                  |       | Force (N)                | | 10  | constraint force - 3                                              | -Inf | Inf |                                  |       | Force (N)                | There is physical contact between the robots and their environment - and Mujoco attempts at getting realisitic physics simulations for the possible physical contact dynamics by aiming for physical accuracy and computational efficiency. There is one constraint force for contacts for each degree of freedom (3). The approach and handling of constraints by Mujoco is unique to the simulator and is based on their research. Once can find more information in their  or in their paper ."
+          },
+          {
+            "Para" : "The reward consists of two parts:"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range of [-0.1, 0.1] added to the positional values (cart position and pole angles) and standard normal force with a standard deviation of 0.1 added to the velocity values for stochasticity."
+          },
+          {
+            "Para" : "The episode ends when any of the following happens: 1.Truncation:  The episode duration reaches 1000 timesteps. 2.Termination: Any of the state space values is no longer finite. 3.Termination: The y_coordinate of the tip of the second pole  to 1. The maximum standing height of the system is 1.196 m when all the parts are perpendicularly vertical on top of each other)."
+          },
+          {
+            "Para" : "No additional arguments are currently supported."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "There is no v3 for InvertedPendulum, unlike the robot environments where a v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc."
+          },
+          {
+            "List-Bullet" : ""
+          }
+        ],
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift\" line=\"87\" column=\"20\"><Name>InvertedDoublePendulum<\/Name><USR>s:4main22InvertedDoublePendulumC<\/USR><Declaration>public final class InvertedDoublePendulum : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment originates from control theory and builds on the cartpole environment based on the work done by Barto, Sutton, and Anderson in <Link href=\"https:\/\/ieeexplore.ieee.org\/document\/6313077\">“Neuronlike adaptive elements that can solve difficult learning control problems”<\/Link>, powered by the Mujoco physics simulator - allowing for more complex experiments (such as varying the effects of gravity or constraints). This environment involves a cart that can moved linearly, with a pole fixed on it and a second pole fixed on the other end of the first one (leaving the second pole as the only one with one free end). The cart can be pushed left or right, and the goal is to balance the second pole on top of the first pole, which is in turn on top of the cart, by applying continuous forces on the cart.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The agent take a 1-element vector for actions. The action space is a continuous <codeVoice>(action)<\/codeVoice> in <codeVoice>[-1, 1]<\/codeVoice>, where <codeVoice>action<\/codeVoice> represents the numerical force applied to the cart (with magnitude representing the amount of force and sign representing the direction) | Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit      | |—–|—————————|———––|———––|–––––––––––––––––|—––|———–| | 0   | Force applied on the cart | -1          | 1           | slider                           | slide | Force (N) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The state space consists of positional values of different body parts of the pendulum system, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. The observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(11,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                                                       | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | —————————————————————– | –– | — | –––––––––––––––– | —– | ———————— | | 0   | position of the cart along the linear surface                     | -Inf | Inf | slider                           | slide | position (m)             | | 1   | sine of the angle between the cart and the first pole             | -Inf | Inf | sin(hinge)                       | hinge | unitless                 | | 2   | sine of the angle between the two poles                           | -Inf | Inf | sin(hinge2)                      | hinge | unitless                 | | 3   | cosine of the angle between the cart and the first pole           | -Inf | Inf | cos(hinge)                       | hinge | unitless                 | | 4   | cosine of the angle between the two poles                         | -Inf | Inf | cos(hinge2)                      | hinge | unitless                 | | 5   | velocity of the cart                                              | -Inf | Inf | slider                           | slide | velocity (m\/s)           | | 6   | angular velocity of the angle between the cart and the first pole | -Inf | Inf | hinge                            | hinge | angular velocity (rad\/s) | | 7   | angular velocity of the angle between the two poles               | -Inf | Inf | hinge2                           | hinge | angular velocity (rad\/s) | | 8   | constraint force - 1                                              | -Inf | Inf |                                  |       | Force (N)                | | 9   | constraint force - 2                                              | -Inf | Inf |                                  |       | Force (N)                | | 10  | constraint force - 3                                              | -Inf | Inf |                                  |       | Force (N)                | There is physical contact between the robots and their environment - and Mujoco attempts at getting realisitic physics simulations for the possible physical contact dynamics by aiming for physical accuracy and computational efficiency. There is one constraint force for contacts for each degree of freedom (3). The approach and handling of constraints by Mujoco is unique to the simulator and is based on their research. Once can find more information in their <Link href=\"https:\/\/mujoco.readthedocs.io\/en\/latest\/computation.html\"><emphasis>documentation<\/emphasis><\/Link> or in their paper <Link href=\"https:\/\/homes.cs.washington.edu\/~todorov\/papers\/TodorovICRA14.pdf\">“Analytically-invertible dynamics with contacts and constraints: Theory and implementation in MuJoCo”<\/Link>.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of two parts:<\/Para><List-Bullet><Item><Para><emphasis>alive_bonus<\/emphasis>: The goal is to make the second inverted pendulum stand upright (within a certain angle limit) as long as possible - as such a reward of +10 is awarded for each timestep that the second pole is upright.<\/Para><\/Item><Item><Para><emphasis>distance_penalty<\/emphasis>: This reward is a measure of how far the <emphasis>tip<\/emphasis> of the second pendulum (the only free end) moves, and it is calculated as <emphasis>0.01 * x<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML> + (y - 2)<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML><\/emphasis>, where <emphasis>x<\/emphasis> is the x-coordinate of the tip and <emphasis>y<\/emphasis> is the y-coordinate of the tip of the second pole.<\/Para><\/Item><Item><Para><emphasis>velocity_penalty<\/emphasis>: A negative reward for penalising the agent if it moves too fast <emphasis>0.001 *  v<rawHTML><![CDATA[<sub>]]><\/rawHTML>1<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML> + 0.005 * v<rawHTML><![CDATA[<sub>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sub>]]><\/rawHTML> <rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML><\/emphasis> The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>alive_bonus - distance_penalty - velocity_penalty<\/emphasis><\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range of [-0.1, 0.1] added to the positional values (cart position and pole angles) and standard normal force with a standard deviation of 0.1 added to the velocity values for stochasticity.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The episode ends when any of the following happens: 1.Truncation:  The episode duration reaches 1000 timesteps. 2.Termination: Any of the state space values is no longer finite. 3.Termination: The y_coordinate of the tip of the second pole <emphasis>is less than or equal<\/emphasis> to 1. The maximum standing height of the system is 1.196 m when all the parts are perpendicularly vertical on top of each other).<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('InvertedDoublePendulum-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>There is no v3 for InvertedPendulum, unlike the robot environments where a v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks (including inverted pendulum)<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 87,
+        "key.doc.name" : "InvertedDoublePendulum",
+        "key.doc.type" : "Class",
+        "key.doclength" : 7203,
+        "key.docoffset" : 87,
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 9,
-            "key.offset" : 130
+            "key.offset" : 7333
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
@@ -39,15 +84,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.class",
         "key.length" : 629,
-        "key.line" : 7,
+        "key.line" : 87,
         "key.modulename" : "main",
         "key.name" : "InvertedDoublePendulum",
         "key.namelength" : 22,
-        "key.nameoffset" : 106,
-        "key.offset" : 100,
+        "key.nameoffset" : 7309,
+        "key.offset" : 7303,
         "key.parsed_declaration" : "public final class InvertedDoublePendulum: MuJoCoEnv",
-        "key.parsed_scope.end" : 27,
-        "key.parsed_scope.start" : 7,
+        "key.parsed_scope.end" : 107,
+        "key.parsed_scope.start" : 87,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -56,7 +101,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 144
+                "key.offset" : 7347
               }
             ],
             "key.column" : 14,
@@ -65,15 +110,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>model<\/decl.name>: <decl.var.type>MjModel<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 18,
-            "key.line" : 8,
+            "key.line" : 88,
             "key.modulename" : "main",
             "key.name" : "model",
             "key.namelength" : 5,
-            "key.nameoffset" : 155,
-            "key.offset" : 151,
+            "key.nameoffset" : 7358,
+            "key.offset" : 7354,
             "key.parsed_declaration" : "public let model: MjModel",
-            "key.parsed_scope.end" : 8,
-            "key.parsed_scope.start" : 8,
+            "key.parsed_scope.end" : 88,
+            "key.parsed_scope.start" : 88,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main22InvertedDoublePendulumC5modelXevp"
@@ -85,7 +130,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 172
+                "key.offset" : 7375
               }
             ],
             "key.column" : 14,
@@ -94,15 +139,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>data<\/decl.name>: <decl.var.type>MjData<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 16,
-            "key.line" : 9,
+            "key.line" : 89,
             "key.modulename" : "main",
             "key.name" : "data",
             "key.namelength" : 4,
-            "key.nameoffset" : 183,
-            "key.offset" : 179,
+            "key.nameoffset" : 7386,
+            "key.offset" : 7382,
             "key.parsed_declaration" : "public var data: MjData",
-            "key.parsed_scope.end" : 9,
-            "key.parsed_scope.start" : 9,
+            "key.parsed_scope.end" : 89,
+            "key.parsed_scope.start" : 89,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -115,7 +160,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 199
+                "key.offset" : 7402
               }
             ],
             "key.column" : 15,
@@ -124,15 +169,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initData<\/decl.name>: <decl.var.type>MjData<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 20,
-            "key.line" : 11,
+            "key.line" : 91,
             "key.modulename" : "main",
             "key.name" : "initData",
             "key.namelength" : 8,
-            "key.nameoffset" : 211,
-            "key.offset" : 207,
+            "key.nameoffset" : 7414,
+            "key.offset" : 7410,
             "key.parsed_declaration" : "private let initData: MjData",
-            "key.parsed_scope.end" : 11,
-            "key.parsed_scope.start" : 11,
+            "key.parsed_scope.end" : 91,
+            "key.parsed_scope.start" : 91,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main22InvertedDoublePendulumC8initData33_F75D19AB053AB573A3F95D154297AC87LLXevp"
@@ -144,7 +189,7 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 231
+                "key.offset" : 7434
               }
             ],
             "key.column" : 15,
@@ -153,15 +198,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>sfmt<\/decl.name>: <decl.var.type><ref.struct usr=\"s:4main4SFMTV\">SFMT<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 14,
-            "key.line" : 13,
+            "key.line" : 93,
             "key.modulename" : "main",
             "key.name" : "sfmt",
             "key.namelength" : 4,
-            "key.nameoffset" : 243,
-            "key.offset" : 239,
+            "key.nameoffset" : 7446,
+            "key.offset" : 7442,
             "key.parsed_declaration" : "private var sfmt: SFMT",
-            "key.parsed_scope.end" : 13,
-            "key.parsed_scope.start" : 13,
+            "key.parsed_scope.end" : 93,
+            "key.parsed_scope.start" : 93,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "SFMT",
             "key.typeusr" : "$s4main4SFMTVD",
@@ -174,26 +219,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 257
+                "key.offset" : 7460
               }
             ],
             "key.bodylength" : 447,
-            "key.bodyoffset" : 279,
+            "key.bodyoffset" : 7482,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>() <syntaxtype.keyword>throws<\/syntaxtype.keyword><\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 463,
-            "key.line" : 15,
+            "key.line" : 95,
             "key.modulename" : "main",
             "key.name" : "init()",
             "key.namelength" : 6,
-            "key.nameoffset" : 264,
-            "key.offset" : 264,
+            "key.nameoffset" : 7467,
+            "key.offset" : 7467,
             "key.parsed_declaration" : "public init() throws",
-            "key.parsed_scope.end" : 26,
-            "key.parsed_scope.start" : 15,
+            "key.parsed_scope.end" : 106,
+            "key.parsed_scope.start" : 95,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var g: <Type usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/Type><\/Declaration>",
@@ -203,15 +248,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>g<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 37,
-                "key.line" : 24,
+                "key.line" : 104,
                 "key.modulename" : "main",
                 "key.name" : "g",
                 "key.namelength" : 1,
-                "key.nameoffset" : 658,
-                "key.offset" : 654,
+                "key.nameoffset" : 7861,
+                "key.offset" : 7857,
                 "key.parsed_declaration" : "var g = SystemRandomNumberGenerator()",
-                "key.parsed_scope.end" : 24,
-                "key.parsed_scope.start" : 24,
+                "key.parsed_scope.end" : 104,
+                "key.parsed_scope.start" : 104,
                 "key.typename" : "SystemRandomNumberGenerator",
                 "key.typeusr" : "$ss27SystemRandomNumberGeneratorVD",
                 "key.usr" : "s:4main22InvertedDoublePendulumCACyKcfc1gL_s27SystemRandomNumberGeneratorVvp"
@@ -229,14 +274,56 @@
       {
         "key.annotated_decl" : "<Declaration>public final class InvertedDoublePendulum : <Type usr=\"s:4main9MuJoCoEnvP\">MuJoCoEnv<\/Type><\/Declaration>",
         "key.bodylength" : 2503,
-        "key.bodyoffset" : 770,
+        "key.bodyoffset" : 7973,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.declaration" : "public final class InvertedDoublePendulum : MuJoCoEnv",
+        "key.doc.discussion" : [
+          {
+            "Para" : "This environment originates from control theory and builds on the cartpole environment based on the work done by Barto, Sutton, and Anderson in , powered by the Mujoco physics simulator - allowing for more complex experiments (such as varying the effects of gravity or constraints). This environment involves a cart that can moved linearly, with a pole fixed on it and a second pole fixed on the other end of the first one (leaving the second pole as the only one with one free end). The cart can be pushed left or right, and the goal is to balance the second pole on top of the first pole, which is in turn on top of the cart, by applying continuous forces on the cart."
+          },
+          {
+            "Para" : "The agent take a 1-element vector for actions. The action space is a continuous `(action)` in `[-1, 1]`, where `action` represents the numerical force applied to the cart (with magnitude representing the amount of force and sign representing the direction) | Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit      | |—–|—————————|———––|———––|–––––––––––––––––|—––|———–| | 0   | Force applied on the cart | -1          | 1           | slider                           | slide | Force (N) |"
+          },
+          {
+            "Para" : "The state space consists of positional values of different body parts of the pendulum system, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. The observation is a `ndarray` with shape `(11,)` where the elements correspond to the following: | Num | Observation                                                       | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | —————————————————————– | –– | — | –––––––––––––––– | —– | ———————— | | 0   | position of the cart along the linear surface                     | -Inf | Inf | slider                           | slide | position (m)             | | 1   | sine of the angle between the cart and the first pole             | -Inf | Inf | sin(hinge)                       | hinge | unitless                 | | 2   | sine of the angle between the two poles                           | -Inf | Inf | sin(hinge2)                      | hinge | unitless                 | | 3   | cosine of the angle between the cart and the first pole           | -Inf | Inf | cos(hinge)                       | hinge | unitless                 | | 4   | cosine of the angle between the two poles                         | -Inf | Inf | cos(hinge2)                      | hinge | unitless                 | | 5   | velocity of the cart                                              | -Inf | Inf | slider                           | slide | velocity (m\/s)           | | 6   | angular velocity of the angle between the cart and the first pole | -Inf | Inf | hinge                            | hinge | angular velocity (rad\/s) | | 7   | angular velocity of the angle between the two poles               | -Inf | Inf | hinge2                           | hinge | angular velocity (rad\/s) | | 8   | constraint force - 1                                              | -Inf | Inf |                                  |       | Force (N)                | | 9   | constraint force - 2                                              | -Inf | Inf |                                  |       | Force (N)                | | 10  | constraint force - 3                                              | -Inf | Inf |                                  |       | Force (N)                | There is physical contact between the robots and their environment - and Mujoco attempts at getting realisitic physics simulations for the possible physical contact dynamics by aiming for physical accuracy and computational efficiency. There is one constraint force for contacts for each degree of freedom (3). The approach and handling of constraints by Mujoco is unique to the simulator and is based on their research. Once can find more information in their  or in their paper ."
+          },
+          {
+            "Para" : "The reward consists of two parts:"
+          },
+          {
+            "List-Bullet" : ""
+          },
+          {
+            "Para" : "All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range of [-0.1, 0.1] added to the positional values (cart position and pole angles) and standard normal force with a standard deviation of 0.1 added to the velocity values for stochasticity."
+          },
+          {
+            "Para" : "The episode ends when any of the following happens: 1.Truncation:  The episode duration reaches 1000 timesteps. 2.Termination: Any of the state space values is no longer finite. 3.Termination: The y_coordinate of the tip of the second pole  to 1. The maximum standing height of the system is 1.196 m when all the parts are perpendicularly vertical on top of each other)."
+          },
+          {
+            "Para" : "No additional arguments are currently supported."
+          },
+          {
+            "CodeListing" : ""
+          },
+          {
+            "Para" : "There is no v3 for InvertedPendulum, unlike the robot environments where a v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc."
+          },
+          {
+            "List-Bullet" : ""
+          }
+        ],
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift\" line=\"87\" column=\"20\"><Name>InvertedDoublePendulum<\/Name><USR>s:4main22InvertedDoublePendulumC<\/USR><Declaration>public final class InvertedDoublePendulum : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment originates from control theory and builds on the cartpole environment based on the work done by Barto, Sutton, and Anderson in <Link href=\"https:\/\/ieeexplore.ieee.org\/document\/6313077\">“Neuronlike adaptive elements that can solve difficult learning control problems”<\/Link>, powered by the Mujoco physics simulator - allowing for more complex experiments (such as varying the effects of gravity or constraints). This environment involves a cart that can moved linearly, with a pole fixed on it and a second pole fixed on the other end of the first one (leaving the second pole as the only one with one free end). The cart can be pushed left or right, and the goal is to balance the second pole on top of the first pole, which is in turn on top of the cart, by applying continuous forces on the cart.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The agent take a 1-element vector for actions. The action space is a continuous <codeVoice>(action)<\/codeVoice> in <codeVoice>[-1, 1]<\/codeVoice>, where <codeVoice>action<\/codeVoice> represents the numerical force applied to the cart (with magnitude representing the amount of force and sign representing the direction) | Num | Action                    | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit      | |—–|—————————|———––|———––|–––––––––––––––––|—––|———–| | 0   | Force applied on the cart | -1          | 1           | slider                           | slide | Force (N) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The state space consists of positional values of different body parts of the pendulum system, followed by the velocities of those individual parts (their derivatives) with all the positions ordered before all the velocities. The observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(11,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                                                       | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | —————————————————————– | –– | — | –––––––––––––––– | —– | ———————— | | 0   | position of the cart along the linear surface                     | -Inf | Inf | slider                           | slide | position (m)             | | 1   | sine of the angle between the cart and the first pole             | -Inf | Inf | sin(hinge)                       | hinge | unitless                 | | 2   | sine of the angle between the two poles                           | -Inf | Inf | sin(hinge2)                      | hinge | unitless                 | | 3   | cosine of the angle between the cart and the first pole           | -Inf | Inf | cos(hinge)                       | hinge | unitless                 | | 4   | cosine of the angle between the two poles                         | -Inf | Inf | cos(hinge2)                      | hinge | unitless                 | | 5   | velocity of the cart                                              | -Inf | Inf | slider                           | slide | velocity (m\/s)           | | 6   | angular velocity of the angle between the cart and the first pole | -Inf | Inf | hinge                            | hinge | angular velocity (rad\/s) | | 7   | angular velocity of the angle between the two poles               | -Inf | Inf | hinge2                           | hinge | angular velocity (rad\/s) | | 8   | constraint force - 1                                              | -Inf | Inf |                                  |       | Force (N)                | | 9   | constraint force - 2                                              | -Inf | Inf |                                  |       | Force (N)                | | 10  | constraint force - 3                                              | -Inf | Inf |                                  |       | Force (N)                | There is physical contact between the robots and their environment - and Mujoco attempts at getting realisitic physics simulations for the possible physical contact dynamics by aiming for physical accuracy and computational efficiency. There is one constraint force for contacts for each degree of freedom (3). The approach and handling of constraints by Mujoco is unique to the simulator and is based on their research. Once can find more information in their <Link href=\"https:\/\/mujoco.readthedocs.io\/en\/latest\/computation.html\"><emphasis>documentation<\/emphasis><\/Link> or in their paper <Link href=\"https:\/\/homes.cs.washington.edu\/~todorov\/papers\/TodorovICRA14.pdf\">“Analytically-invertible dynamics with contacts and constraints: Theory and implementation in MuJoCo”<\/Link>.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of two parts:<\/Para><List-Bullet><Item><Para><emphasis>alive_bonus<\/emphasis>: The goal is to make the second inverted pendulum stand upright (within a certain angle limit) as long as possible - as such a reward of +10 is awarded for each timestep that the second pole is upright.<\/Para><\/Item><Item><Para><emphasis>distance_penalty<\/emphasis>: This reward is a measure of how far the <emphasis>tip<\/emphasis> of the second pendulum (the only free end) moves, and it is calculated as <emphasis>0.01 * x<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML> + (y - 2)<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML><\/emphasis>, where <emphasis>x<\/emphasis> is the x-coordinate of the tip and <emphasis>y<\/emphasis> is the y-coordinate of the tip of the second pole.<\/Para><\/Item><Item><Para><emphasis>velocity_penalty<\/emphasis>: A negative reward for penalising the agent if it moves too fast <emphasis>0.001 *  v<rawHTML><![CDATA[<sub>]]><\/rawHTML>1<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML> + 0.005 * v<rawHTML><![CDATA[<sub>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sub>]]><\/rawHTML> <rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML><\/emphasis> The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>alive_bonus - distance_penalty - velocity_penalty<\/emphasis><\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0) with a uniform noise in the range of [-0.1, 0.1] added to the positional values (cart position and pole angles) and standard normal force with a standard deviation of 0.1 added to the velocity values for stochasticity.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The episode ends when any of the following happens: 1.Truncation:  The episode duration reaches 1000 timesteps. 2.Termination: Any of the state space values is no longer finite. 3.Termination: The y_coordinate of the tip of the second pole <emphasis>is less than or equal<\/emphasis> to 1. The maximum standing height of the system is 1.196 m when all the parts are perpendicularly vertical on top of each other).<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('InvertedDoublePendulum-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>There is no v3 for InvertedPendulum, unlike the robot environments where a v3 and beyond take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks (including inverted pendulum)<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 87,
+        "key.doc.name" : "InvertedDoublePendulum",
+        "key.doc.type" : "Class",
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 3,
-            "key.offset" : 765
+            "key.offset" : 7968
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
@@ -248,15 +335,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 2543,
-        "key.line" : 7,
+        "key.line" : 87,
         "key.modulename" : "main",
         "key.name" : "InvertedDoublePendulum",
         "key.namelength" : 22,
-        "key.nameoffset" : 741,
-        "key.offset" : 731,
+        "key.nameoffset" : 7944,
+        "key.offset" : 7934,
         "key.parsed_declaration" : "extension InvertedDoublePendulum: Env",
-        "key.parsed_scope.end" : 106,
-        "key.parsed_scope.start" : 29,
+        "key.parsed_scope.end" : 186,
+        "key.parsed_scope.start" : 109,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -265,7 +352,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 773
+                "key.offset" : 7976
               }
             ],
             "key.column" : 20,
@@ -274,15 +361,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ActType<\/decl.name> = Tensor&lt;Float64&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
-            "key.line" : 30,
+            "key.line" : 110,
             "key.modulename" : "main",
             "key.name" : "ActType",
             "key.namelength" : 7,
-            "key.nameoffset" : 790,
-            "key.offset" : 780,
+            "key.nameoffset" : 7993,
+            "key.offset" : 7983,
             "key.parsed_declaration" : "public typealias ActType = Tensor<Float64>",
-            "key.parsed_scope.end" : 30,
-            "key.parsed_scope.start" : 30,
+            "key.parsed_scope.end" : 110,
+            "key.parsed_scope.start" : 110,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main22InvertedDoublePendulumC7ActTypea\">ActType<\/RelatedName>"
@@ -299,7 +386,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 818
+                "key.offset" : 8021
               }
             ],
             "key.column" : 20,
@@ -308,15 +395,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ObsType<\/decl.name> = Tensor&lt;Float64&gt;<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
-            "key.line" : 31,
+            "key.line" : 111,
             "key.modulename" : "main",
             "key.name" : "ObsType",
             "key.namelength" : 7,
-            "key.nameoffset" : 835,
-            "key.offset" : 825,
+            "key.nameoffset" : 8038,
+            "key.offset" : 8028,
             "key.parsed_declaration" : "public typealias ObsType = Tensor<Float64>",
-            "key.parsed_scope.end" : 31,
-            "key.parsed_scope.start" : 31,
+            "key.parsed_scope.end" : 111,
+            "key.parsed_scope.start" : 111,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main22InvertedDoublePendulumC7ObsTypea\">ObsType<\/RelatedName>"
@@ -333,7 +420,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 863
+                "key.offset" : 8066
               }
             ],
             "key.column" : 20,
@@ -342,15 +429,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>RewardType<\/decl.name> = <ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 28,
-            "key.line" : 32,
+            "key.line" : 112,
             "key.modulename" : "main",
             "key.name" : "RewardType",
             "key.namelength" : 10,
-            "key.nameoffset" : 880,
-            "key.offset" : 870,
+            "key.nameoffset" : 8083,
+            "key.offset" : 8073,
             "key.parsed_declaration" : "public typealias RewardType = Float",
-            "key.parsed_scope.end" : 32,
-            "key.parsed_scope.start" : 32,
+            "key.parsed_scope.end" : 112,
+            "key.parsed_scope.start" : 112,
             "key.typename" : "Float.Type",
             "key.typeusr" : "$sSfmD",
             "key.usr" : "s:4main22InvertedDoublePendulumC10RewardTypea"
@@ -362,7 +449,7 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 901
+                "key.offset" : 8104
               }
             ],
             "key.column" : 20,
@@ -371,15 +458,15 @@
             "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>TerminatedType<\/decl.name> = <ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 31,
-            "key.line" : 33,
+            "key.line" : 113,
             "key.modulename" : "main",
             "key.name" : "TerminatedType",
             "key.namelength" : 14,
-            "key.nameoffset" : 918,
-            "key.offset" : 908,
+            "key.nameoffset" : 8121,
+            "key.offset" : 8111,
             "key.parsed_declaration" : "public typealias TerminatedType = Bool",
-            "key.parsed_scope.end" : 33,
-            "key.parsed_scope.start" : 33,
+            "key.parsed_scope.end" : 113,
+            "key.parsed_scope.start" : 113,
             "key.typename" : "Bool.Type",
             "key.typeusr" : "$sSbmD",
             "key.usr" : "s:4main22InvertedDoublePendulumC14TerminatedTypea"
@@ -391,26 +478,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 943
+                "key.offset" : 8146
               }
             ],
             "key.bodylength" : 49,
-            "key.bodyoffset" : 972,
+            "key.bodyoffset" : 8175,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>isHealthy<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 71,
-            "key.line" : 35,
+            "key.line" : 115,
             "key.modulename" : "main",
             "key.name" : "isHealthy",
             "key.namelength" : 9,
-            "key.nameoffset" : 955,
-            "key.offset" : 951,
+            "key.nameoffset" : 8158,
+            "key.offset" : 8154,
             "key.parsed_declaration" : "private var isHealthy: Bool",
-            "key.parsed_scope.end" : 38,
-            "key.parsed_scope.start" : 35,
+            "key.parsed_scope.end" : 118,
+            "key.parsed_scope.start" : 115,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main22InvertedDoublePendulumC9isHealthy33_F75D19AB053AB573A3F95D154297AC87LLSbvp"
@@ -423,15 +510,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>y<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 24,
-            "key.line" : 36,
+            "key.line" : 116,
             "key.modulename" : "main",
             "key.name" : "y",
             "key.namelength" : 1,
-            "key.nameoffset" : 981,
-            "key.offset" : 977,
+            "key.nameoffset" : 8184,
+            "key.offset" : 8180,
             "key.parsed_declaration" : "let y = data.siteXpos[2]",
-            "key.parsed_scope.end" : 36,
-            "key.parsed_scope.start" : 36,
+            "key.parsed_scope.end" : 116,
+            "key.parsed_scope.start" : 116,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main22InvertedDoublePendulumC9isHealthy33_F75D19AB053AB573A3F95D154297AC87LLSbvg1yL_Xevp"
@@ -443,26 +530,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 1026
+                "key.offset" : 8229
               }
             ],
             "key.bodylength" : 25,
-            "key.bodyoffset" : 1056,
+            "key.bodyoffset" : 8259,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>terminated<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 48,
-            "key.line" : 40,
+            "key.line" : 120,
             "key.modulename" : "main",
             "key.name" : "terminated",
             "key.namelength" : 10,
-            "key.nameoffset" : 1038,
-            "key.offset" : 1034,
+            "key.nameoffset" : 8241,
+            "key.offset" : 8237,
             "key.parsed_declaration" : "private var terminated: Bool",
-            "key.parsed_scope.end" : 42,
-            "key.parsed_scope.start" : 40,
+            "key.parsed_scope.end" : 122,
+            "key.parsed_scope.start" : 120,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main22InvertedDoublePendulumC10terminated33_F75D19AB053AB573A3F95D154297AC87LLSbvp"
@@ -474,26 +561,26 @@
               {
                 "key.attribute" : "source.decl.attribute.private",
                 "key.length" : 7,
-                "key.offset" : 1086
+                "key.offset" : 8289
               }
             ],
             "key.bodylength" : 592,
-            "key.bodyoffset" : 1134,
+            "key.bodyoffset" : 8337,
             "key.column" : 16,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>observations<\/decl.name>() -&gt; <decl.function.returntype>Tensor&lt;Float64&gt;<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 633,
-            "key.line" : 44,
+            "key.line" : 124,
             "key.modulename" : "main",
             "key.name" : "observations()",
             "key.namelength" : 14,
-            "key.nameoffset" : 1099,
-            "key.offset" : 1094,
+            "key.nameoffset" : 8302,
+            "key.offset" : 8297,
             "key.parsed_declaration" : "private func observations() -> Tensor<Float64>",
-            "key.parsed_scope.end" : 61,
-            "key.parsed_scope.start" : 44,
+            "key.parsed_scope.end" : 141,
+            "key.parsed_scope.start" : 124,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let qpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -503,15 +590,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 45,
+                "key.line" : 125,
                 "key.modulename" : "main",
                 "key.name" : "qpos",
                 "key.namelength" : 4,
-                "key.nameoffset" : 1143,
-                "key.offset" : 1139,
+                "key.nameoffset" : 8346,
+                "key.offset" : 8342,
                 "key.parsed_declaration" : "let qpos = data.qpos",
-                "key.parsed_scope.end" : 45,
-                "key.parsed_scope.start" : 45,
+                "key.parsed_scope.end" : 125,
+                "key.parsed_scope.start" : 125,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC12observations33_F75D19AB053AB573A3F95D154297AC87LLyXeXeF4qposL_Xevp"
@@ -524,15 +611,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 46,
+                "key.line" : 126,
                 "key.modulename" : "main",
                 "key.name" : "qvel",
                 "key.namelength" : 4,
-                "key.nameoffset" : 1168,
-                "key.offset" : 1164,
+                "key.nameoffset" : 8371,
+                "key.offset" : 8367,
                 "key.parsed_declaration" : "let qvel = data.qvel",
-                "key.parsed_scope.end" : 46,
-                "key.parsed_scope.start" : 46,
+                "key.parsed_scope.end" : 126,
+                "key.parsed_scope.start" : 126,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC12observations33_F75D19AB053AB573A3F95D154297AC87LLyXeXeF4qvelL_Xevp"
@@ -545,15 +632,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>qfrcConstraint<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 40,
-                "key.line" : 47,
+                "key.line" : 127,
                 "key.modulename" : "main",
                 "key.name" : "qfrcConstraint",
                 "key.namelength" : 14,
-                "key.nameoffset" : 1193,
-                "key.offset" : 1189,
+                "key.nameoffset" : 8396,
+                "key.offset" : 8392,
                 "key.parsed_declaration" : "let qfrcConstraint = data.qfrcConstraint",
-                "key.parsed_scope.end" : 47,
-                "key.parsed_scope.start" : 47,
+                "key.parsed_scope.end" : 127,
+                "key.parsed_scope.start" : 127,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC12observations33_F75D19AB053AB573A3F95D154297AC87LLyXeXeF14qfrcConstraintL_Xevp"
@@ -566,15 +653,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>tensor<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 42,
-                "key.line" : 48,
+                "key.line" : 128,
                 "key.modulename" : "main",
                 "key.name" : "tensor",
                 "key.namelength" : 6,
-                "key.nameoffset" : 1238,
-                "key.offset" : 1234,
+                "key.nameoffset" : 8441,
+                "key.offset" : 8437,
                 "key.parsed_declaration" : "var tensor = Tensor<Float64>(.CPU, .C(11))",
-                "key.parsed_scope.end" : 48,
-                "key.parsed_scope.start" : 48,
+                "key.parsed_scope.end" : 128,
+                "key.parsed_scope.start" : 128,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC12observations33_F75D19AB053AB573A3F95D154297AC87LLyXeXeF6tensorL_Xevp"
@@ -591,26 +678,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1731
+                "key.offset" : 8934
               }
             ],
             "key.bodylength" : 657,
-            "key.bodyoffset" : 1822,
+            "key.bodyoffset" : 9025,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>action<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ActType<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ObsType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main22InvertedDoublePendulumC10RewardTypea\">RewardType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.typealias usr=\"s:4main22InvertedDoublePendulumC14TerminatedTypea\">TerminatedType<\/ref.typealias><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 742,
-            "key.line" : 63,
+            "key.line" : 143,
             "key.modulename" : "main",
             "key.name" : "step(action:)",
             "key.namelength" : 21,
-            "key.nameoffset" : 1743,
-            "key.offset" : 1738,
+            "key.nameoffset" : 8946,
+            "key.offset" : 8941,
             "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, TerminatedType, [String: Any])",
-            "key.parsed_scope.end" : 81,
-            "key.parsed_scope.start" : 63,
+            "key.parsed_scope.end" : 161,
+            "key.parsed_scope.start" : 143,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let obs: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -620,15 +707,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 72,
+                "key.line" : 152,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 2138,
-                "key.offset" : 2134,
+                "key.nameoffset" : 9341,
+                "key.offset" : 9337,
                 "key.parsed_declaration" : "let obs = observations()",
-                "key.parsed_scope.end" : 72,
-                "key.parsed_scope.start" : 72,
+                "key.parsed_scope.end" : 152,
+                "key.parsed_scope.start" : 152,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC4stepyXeXeF3obsL_Xevp"
@@ -641,15 +728,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>x<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 73,
+                "key.line" : 153,
                 "key.modulename" : "main",
                 "key.name" : "x",
                 "key.namelength" : 1,
-                "key.nameoffset" : 2167,
-                "key.offset" : 2163,
+                "key.nameoffset" : 9370,
+                "key.offset" : 9366,
                 "key.parsed_declaration" : "let x = data.siteXpos[0]",
-                "key.parsed_scope.end" : 73,
-                "key.parsed_scope.start" : 73,
+                "key.parsed_scope.end" : 153,
+                "key.parsed_scope.start" : 153,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC4stepyXeXeF1xL_Xevp"
@@ -662,15 +749,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>y<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 74,
+                "key.line" : 154,
                 "key.modulename" : "main",
                 "key.name" : "y",
                 "key.namelength" : 1,
-                "key.nameoffset" : 2196,
-                "key.offset" : 2192,
+                "key.nameoffset" : 9399,
+                "key.offset" : 9395,
                 "key.parsed_declaration" : "let y = data.siteXpos[2]",
-                "key.parsed_scope.end" : 74,
-                "key.parsed_scope.start" : 74,
+                "key.parsed_scope.end" : 154,
+                "key.parsed_scope.start" : 154,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC4stepyXeXeF1yL_Xevp"
@@ -683,15 +770,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>distPenality<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 51,
-                "key.line" : 75,
+                "key.line" : 155,
                 "key.modulename" : "main",
                 "key.name" : "distPenality",
                 "key.namelength" : 12,
-                "key.nameoffset" : 2225,
-                "key.offset" : 2221,
+                "key.nameoffset" : 9428,
+                "key.offset" : 9424,
                 "key.parsed_declaration" : "let distPenality = 0.01 * x * x + (y - 2) * (y - 2)",
-                "key.parsed_scope.end" : 75,
-                "key.parsed_scope.start" : 75,
+                "key.parsed_scope.end" : 155,
+                "key.parsed_scope.start" : 155,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC4stepyXeXeF12distPenalityL_Xevp"
@@ -704,15 +791,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>v1<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 21,
-                "key.line" : 76,
+                "key.line" : 156,
                 "key.modulename" : "main",
                 "key.name" : "v1",
                 "key.namelength" : 2,
-                "key.nameoffset" : 2281,
-                "key.offset" : 2277,
+                "key.nameoffset" : 9484,
+                "key.offset" : 9480,
                 "key.parsed_declaration" : "let v1 = data.qvel[1]",
-                "key.parsed_scope.end" : 76,
-                "key.parsed_scope.start" : 76,
+                "key.parsed_scope.end" : 156,
+                "key.parsed_scope.start" : 156,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC4stepyXeXeF2v1L_Xevp"
@@ -725,15 +812,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>v2<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 21,
-                "key.line" : 77,
+                "key.line" : 157,
                 "key.modulename" : "main",
                 "key.name" : "v2",
                 "key.namelength" : 2,
-                "key.nameoffset" : 2307,
-                "key.offset" : 2303,
+                "key.nameoffset" : 9510,
+                "key.offset" : 9506,
                 "key.parsed_declaration" : "let v2 = data.qvel[2]",
-                "key.parsed_scope.end" : 77,
-                "key.parsed_scope.start" : 77,
+                "key.parsed_scope.end" : 157,
+                "key.parsed_scope.start" : 157,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC4stepyXeXeF2v2L_Xevp"
@@ -746,15 +833,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>velPenality<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 49,
-                "key.line" : 78,
+                "key.line" : 158,
                 "key.modulename" : "main",
                 "key.name" : "velPenality",
                 "key.namelength" : 11,
-                "key.nameoffset" : 2333,
-                "key.offset" : 2329,
+                "key.nameoffset" : 9536,
+                "key.offset" : 9532,
                 "key.parsed_declaration" : "let velPenality = 1e-3 * v1 * v1 + 5e-3 * v2 * v2",
-                "key.parsed_scope.end" : 78,
-                "key.parsed_scope.start" : 78,
+                "key.parsed_scope.end" : 158,
+                "key.parsed_scope.start" : 158,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC4stepyXeXeF11velPenalityL_Xevp"
@@ -767,15 +854,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>reward<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 51,
-                "key.line" : 79,
+                "key.line" : 159,
                 "key.modulename" : "main",
                 "key.name" : "reward",
                 "key.namelength" : 6,
-                "key.nameoffset" : 2387,
-                "key.offset" : 2383,
+                "key.nameoffset" : 9590,
+                "key.offset" : 9586,
                 "key.parsed_declaration" : "let reward = Float(10 - distPenality - velPenality)",
-                "key.parsed_scope.end" : 79,
-                "key.parsed_scope.start" : 79,
+                "key.parsed_scope.end" : 159,
+                "key.parsed_scope.start" : 159,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC4stepyXeXeF6rewardL_Xevp"
@@ -792,26 +879,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2484
+                "key.offset" : 9687
               }
             ],
             "key.bodylength" : 539,
-            "key.bodyoffset" : 2543,
+            "key.bodyoffset" : 9746,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>reset<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>seed<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><tuple>(<tuple.element><tuple.element.type>ObsType<\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 592,
-            "key.line" : 83,
+            "key.line" : 163,
             "key.modulename" : "main",
             "key.name" : "reset(seed:)",
             "key.namelength" : 17,
-            "key.nameoffset" : 2496,
-            "key.offset" : 2491,
+            "key.nameoffset" : 9699,
+            "key.offset" : 9694,
             "key.parsed_declaration" : "public func reset(seed: Int?) -> (ObsType, [String: Any])",
-            "key.parsed_scope.end" : 101,
-            "key.parsed_scope.start" : 83,
+            "key.parsed_scope.end" : 181,
+            "key.parsed_scope.start" : 163,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let initQpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -821,15 +908,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initQpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 28,
-                "key.line" : 84,
+                "key.line" : 164,
                 "key.modulename" : "main",
                 "key.name" : "initQpos",
                 "key.namelength" : 8,
-                "key.nameoffset" : 2552,
-                "key.offset" : 2548,
+                "key.nameoffset" : 9755,
+                "key.offset" : 9751,
                 "key.parsed_declaration" : "let initQpos = initData.qpos",
-                "key.parsed_scope.end" : 84,
-                "key.parsed_scope.start" : 84,
+                "key.parsed_scope.end" : 164,
+                "key.parsed_scope.start" : 164,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC5resetyXeXeF8initQposL_Xevp"
@@ -842,15 +929,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>initQvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 28,
-                "key.line" : 85,
+                "key.line" : 165,
                 "key.modulename" : "main",
                 "key.name" : "initQvel",
                 "key.namelength" : 8,
-                "key.nameoffset" : 2585,
-                "key.offset" : 2581,
+                "key.nameoffset" : 9788,
+                "key.offset" : 9784,
                 "key.parsed_declaration" : "let initQvel = initData.qvel",
-                "key.parsed_scope.end" : 85,
-                "key.parsed_scope.start" : 85,
+                "key.parsed_scope.end" : 165,
+                "key.parsed_scope.start" : 165,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC5resetyXeXeF8initQvelL_Xevp"
@@ -863,15 +950,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>qpos<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 86,
+                "key.line" : 166,
                 "key.modulename" : "main",
                 "key.name" : "qpos",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2618,
-                "key.offset" : 2614,
+                "key.nameoffset" : 9821,
+                "key.offset" : 9817,
                 "key.parsed_declaration" : "var qpos = data.qpos",
-                "key.parsed_scope.end" : 86,
-                "key.parsed_scope.start" : 86,
+                "key.parsed_scope.end" : 166,
+                "key.parsed_scope.start" : 166,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC5resetyXeXeF4qposL_Xevp"
@@ -884,15 +971,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>qvel<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 20,
-                "key.line" : 87,
+                "key.line" : 167,
                 "key.modulename" : "main",
                 "key.name" : "qvel",
                 "key.namelength" : 4,
-                "key.nameoffset" : 2643,
-                "key.offset" : 2639,
+                "key.nameoffset" : 9846,
+                "key.offset" : 9842,
                 "key.parsed_declaration" : "var qvel = data.qvel",
-                "key.parsed_scope.end" : 87,
-                "key.parsed_scope.start" : 87,
+                "key.parsed_scope.end" : 167,
+                "key.parsed_scope.start" : 167,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC5resetyXeXeF4qvelL_Xevp"
@@ -905,15 +992,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>obs<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 24,
-                "key.line" : 99,
+                "key.line" : 179,
                 "key.modulename" : "main",
                 "key.name" : "obs",
                 "key.namelength" : 3,
-                "key.nameoffset" : 3037,
-                "key.offset" : 3033,
+                "key.nameoffset" : 10240,
+                "key.offset" : 10236,
                 "key.parsed_declaration" : "let obs = observations()",
-                "key.parsed_scope.end" : 99,
-                "key.parsed_scope.start" : 99,
+                "key.parsed_scope.end" : 179,
+                "key.parsed_scope.start" : 179,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main22InvertedDoublePendulumC5resetyXeXeF3obsL_Xevp"
@@ -930,26 +1017,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3087
+                "key.offset" : 10290
               }
             ],
             "key.bodylength" : 7,
-            "key.bodyoffset" : 3129,
+            "key.bodyoffset" : 10332,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>rewardThreshold<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 43,
-            "key.line" : 103,
+            "key.line" : 183,
             "key.modulename" : "main",
             "key.name" : "rewardThreshold",
             "key.namelength" : 15,
-            "key.nameoffset" : 3105,
-            "key.offset" : 3094,
+            "key.nameoffset" : 10308,
+            "key.offset" : 10297,
             "key.parsed_declaration" : "public static var rewardThreshold: Float",
-            "key.parsed_scope.end" : 103,
-            "key.parsed_scope.start" : 103,
+            "key.parsed_scope.end" : 183,
+            "key.parsed_scope.start" : 183,
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
             "key.usr" : "s:4main22InvertedDoublePendulumC15rewardThresholdSfvpZ"
@@ -961,26 +1048,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3140
+                "key.offset" : 10343
               }
             ],
             "key.bodylength" : 36,
-            "key.bodyoffset" : 3193,
+            "key.bodyoffset" : 10396,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>actionSpace<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:SN\">ClosedRange<\/ref.struct>&lt;<ref.struct usr=\"s:Sf\">Float<\/ref.struct>&gt;]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 83,
-            "key.line" : 104,
+            "key.line" : 184,
             "key.modulename" : "main",
             "key.name" : "actionSpace",
             "key.namelength" : 11,
-            "key.nameoffset" : 3158,
-            "key.offset" : 3147,
+            "key.nameoffset" : 10361,
+            "key.offset" : 10350,
             "key.parsed_declaration" : "public static var actionSpace: [ClosedRange<Float>]",
-            "key.parsed_scope.end" : 104,
-            "key.parsed_scope.start" : 104,
+            "key.parsed_scope.end" : 184,
+            "key.parsed_scope.start" : 184,
             "key.typename" : "[ClosedRange<Float>]",
             "key.typeusr" : "$sSaySNySfGGD",
             "key.usr" : "s:4main22InvertedDoublePendulumC11actionSpaceSaySNySfGGvpZ"
@@ -992,26 +1079,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 3233
+                "key.offset" : 10436
               }
             ],
             "key.bodylength" : 4,
-            "key.bodyoffset" : 3267,
+            "key.bodyoffset" : 10470,
             "key.column" : 21,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/InvertedDoublePendulum.swift",
             "key.fully_annotated_decl" : "<decl.var.static><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>stateSize<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.static>",
             "key.kind" : "source.lang.swift.decl.var.static",
             "key.length" : 32,
-            "key.line" : 105,
+            "key.line" : 185,
             "key.modulename" : "main",
             "key.name" : "stateSize",
             "key.namelength" : 9,
-            "key.nameoffset" : 3251,
-            "key.offset" : 3240,
+            "key.nameoffset" : 10454,
+            "key.offset" : 10443,
             "key.parsed_declaration" : "public static var stateSize: Int",
-            "key.parsed_scope.end" : 105,
-            "key.parsed_scope.start" : 105,
+            "key.parsed_scope.end" : 185,
+            "key.parsed_scope.start" : 185,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main22InvertedDoublePendulumC9stateSizeSivpZ"

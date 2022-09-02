@@ -952,6 +952,9 @@
                 <a href="../Structs/CollectedData.html">CollectedData</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Structs/CollectedData/EnvState.html">– EnvState</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Collector.html">Collector</a>
               </li>
               <li class="nav-group-task">
@@ -1054,7 +1057,145 @@
 
                 </div>
               </div>
-            
+            <h3 id='description' class='heading'>Description</h3>
+
+<p>This environment is based on the environment introduced by Schulman,
+Moritz, Levine, Jordan and Abbeel in <a href="https://arxiv.org/abs/1506.02438">&ldquo;High-Dimensional Continuous Control
+Using Generalized Advantage Estimation&rdquo;</a>.
+The ant is a 3D robot consisting of one torso (free rotational body) with
+four legs attached to it with each leg having two links. The goal is to
+coordinate the four legs to move in the forward (right) direction by applying
+torques on the eight hinges connecting the two links of each leg and the torso
+(nine parts and eight hinges).</p>
+<h3 id='action-space' class='heading'>Action Space</h3>
+
+<p>The action space is a <code>Box(-1, 1, (8,), float32)</code>. An action represents the torques applied at the hinge joints.
+| Num | Action                                                            | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         |
+| &mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&ndash; | &mdash;&mdash;&mdash;&mdash; |
+| 0   | Torque applied on the rotor between the torso and front left hip  | -1          | 1           | hip_1 (front_left_leg)           | hinge | torque (N m) |
+| 1   | Torque applied on the rotor between the front left two links      | -1          | 1           | angle_1 (front_left_leg)         | hinge | torque (N m) |
+| 2   | Torque applied on the rotor between the torso and front right hip | -1          | 1           | hip_2 (front_right_leg)          | hinge | torque (N m) |
+| 3   | Torque applied on the rotor between the front right two links     | -1          | 1           | angle_2 (front_right_leg)        | hinge | torque (N m) |
+| 4   | Torque applied on the rotor between the torso and back left hip   | -1          | 1           | hip_3 (back_leg)                 | hinge | torque (N m) |
+| 5   | Torque applied on the rotor between the back left two links       | -1          | 1           | angle_3 (back_leg)               | hinge | torque (N m) |
+| 6   | Torque applied on the rotor between the torso and back right hip  | -1          | 1           | hip_4 (right_back_leg)           | hinge | torque (N m) |
+| 7   | Torque applied on the rotor between the back right two links      | -1          | 1           | angle_4 (right_back_leg)         | hinge | torque (N m) |</p>
+<h3 id='observation-space' class='heading'>Observation Space</h3>
+
+<p>Observations consist of positional values of different body parts of the ant,
+followed by the velocities of those individual parts (their derivatives) with all
+the positions ordered before all the velocities.
+By default, observations do not include the x- and y-coordinates of the ant&rsquo;s torso. These may
+be included by passing <code>exclude_current_positions_from_observation=False</code> during construction.
+In that case, the observation space will have 113 dimensions where the first two dimensions
+represent the x- and y- coordinates of the ant&rsquo;s torso.
+Regardless of whether <code>exclude_current_positions_from_observation</code> was set to true or false, the x- and y-coordinates
+of the torso will be returned in <code>info</code> with keys <code>&quot;x_position&quot;</code> and <code>&quot;y_position&quot;</code>, respectively.
+However, by default, an observation is a <code>ndarray</code> with shape <code>(111,)</code>
+where the elements correspond to the following:
+| Num | Observation                                                  | Min    | Max    | Name (in corresponding XML file)       | Joint | Unit                     |
+|&mdash;&ndash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;&ndash;|&mdash;&mdash;&ndash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|
+| 0   | z-coordinate of the torso (centre)                           | -Inf   | Inf    | torso                                  | free  | position (m)             |
+| 1   | x-orientation of the torso (centre)                          | -Inf   | Inf    | torso                                  | free  | angle (rad)              |
+| 2   | y-orientation of the torso (centre)                          | -Inf   | Inf    | torso                                  | free  | angle (rad)              |
+| 3   | z-orientation of the torso (centre)                          | -Inf   | Inf    | torso                                  | free  | angle (rad)              |
+| 4   | w-orientation of the torso (centre)                          | -Inf   | Inf    | torso                                  | free  | angle (rad)              |
+| 5   | angle between torso and first link on front left             | -Inf   | Inf    | hip_1 (front_left_leg)                 | hinge | angle (rad)              |
+| 6   | angle between the two links on the front left                | -Inf   | Inf    | ankle_1 (front_left_leg)               | hinge | angle (rad)              |
+| 7   | angle between torso and first link on front right            | -Inf   | Inf    | hip_2 (front_right_leg)                | hinge | angle (rad)              |
+| 8   | angle between the two links on the front right               | -Inf   | Inf    | ankle_2 (front_right_leg)              | hinge | angle (rad)              |
+| 9   | angle between torso and first link on back left              | -Inf   | Inf    | hip_3 (back_leg)                       | hinge | angle (rad)              |
+| 10  | angle between the two links on the back left                 | -Inf   | Inf    | ankle_3 (back_leg)                     | hinge | angle (rad)              |
+| 11  | angle between torso and first link on back right             | -Inf   | Inf    | hip_4 (right_back_leg)                 | hinge | angle (rad)              |
+| 12  | angle between the two links on the back right                | -Inf   | Inf    | ankle_4 (right_back_leg)               | hinge | angle (rad)              |
+| 13  | x-coordinate velocity of the torso                           | -Inf   | Inf    | torso                                  | free  | velocity (m/s)           |
+| 14  | y-coordinate velocity of the torso                           | -Inf   | Inf    | torso                                  | free  | velocity (m/s)           |
+| 15  | z-coordinate velocity of the torso                           | -Inf   | Inf    | torso                                  | free  | velocity (m/s)           |
+| 16  | x-coordinate angular velocity of the torso                   | -Inf   | Inf    | torso                                  | free  | angular velocity (rad/s) |
+| 17  | y-coordinate angular velocity of the torso                   | -Inf   | Inf    | torso                                  | free  | angular velocity (rad/s) |
+| 18  | z-coordinate angular velocity of the torso                   | -Inf   | Inf    | torso                                  | free  | angular velocity (rad/s) |
+| 19  | angular velocity of angle between torso and front left link  | -Inf   | Inf    | hip_1 (front_left_leg)                 | hinge | angle (rad)              |
+| 20  | angular velocity of the angle between front left links       | -Inf   | Inf    | ankle_1 (front_left_leg)               | hinge | angle (rad)              |
+| 21  | angular velocity of angle between torso and front right link | -Inf   | Inf    | hip_2 (front_right_leg)                | hinge | angle (rad)              |
+| 22  | angular velocity of the angle between front right links      | -Inf   | Inf    | ankle_2 (front_right_leg)              | hinge | angle (rad)              |
+| 23  | angular velocity of angle between torso and back left link   | -Inf   | Inf    | hip_3 (back_leg)                       | hinge | angle (rad)              |
+| 24  | angular velocity of the angle between back left links        | -Inf   | Inf    | ankle_3 (back_leg)                     | hinge | angle (rad)              |
+| 25  | angular velocity of angle between torso and back right link  | -Inf   | Inf    | hip_4 (right_back_leg)                 | hinge | angle (rad)              |
+| 26  |angular velocity of the angle between back right links        | -Inf   | Inf    | ankle_4 (right_back_leg)               | hinge | angle (rad)              |
+The remaining 14*6 = 84 elements of the observation are contact forces
+(external forces - force x, y, z and torque x, y, z) applied to the
+center of mass of each of the links. The 14 links are: the ground link,
+the torso link, and 3 links for each leg (1 + 1 + 12) with the 6 external forces.
+The (x,y,z) coordinates are translational DOFs while the orientations are rotational
+DOFs expressed as quaternions. One can read more about free joints on the <a href="https://mujoco.readthedocs.io/en/latest/XMLreference.html">Mujoco Documentation</a>.
+<strong>Note:</strong> Ant-v4 environment no longer has the following contact forces issue.
+If using previous Humanoid versions from v4, there have been reported issues that using a Mujoco-Py version &gt; 2.0 results
+in the contact forces always being 0. As such we recommend to use a Mujoco-Py version &lt; 2.0
+when using the Ant environment if you would like to report results with contact forces (if
+contact forces are not used in your experiments, you can use version &gt; 2.0).</p>
+<h3 id='rewards' class='heading'>Rewards</h3>
+
+<p>The reward consists of three parts:</p>
+
+<ul>
+<li><em>healthy_reward</em>: Every timestep that the ant is healthy (see definition in section &ldquo;Episode Termination&rdquo;), it gets a reward of fixed value <code>healthy_reward</code></li>
+<li><em>forward_reward</em>: A reward of moving forward which is measured as
+<em>(x-coordinate before action - x-coordinate after action)/dt</em>. <em>dt</em> is the time
+between actions and is dependent on the <code>frame_skip</code> parameter (default is 5),
+where the frametime is 0.01 - making the default <em>dt = 5 * 0.01 = 0.05</em>.
+This reward would be positive if the ant moves forward (in positive x direction).</li>
+<li><em>ctrl_cost</em>: A negative reward for penalising the ant if it takes actions
+that are too large. It is measured as <em><code>ctrl_cost_weight</code> * sum(action<sup>2</sup>)</em>
+where <em><code>ctr_cost_weight</code></em> is a parameter set for the control and has a default value of 0.5.</li>
+<li><em>contact_cost</em>: A negative reward for penalising the ant if the external contact
+force is too large. It is calculated <em><code>contact_cost_weight</code> * sum(clip(external contact
+force to <code>contact_force_range</code>)<sup>2</sup>)</em>.
+The total reward returned is <strong><em>reward</em></strong> <em>=</em> <em>healthy_reward + forward_reward - ctrl_cost - contact_cost</em> and <code>info</code> will also contain the individual reward terms.
+### Starting State
+All observations start in state
+(0.0, 0.0,  0.75, 1.0, 0.0  &hellip; 0.0) with a uniform noise in the range
+of [-<code>reset_noise_scale</code>, <code>reset_noise_scale</code>] added to the positional values and standard normal noise
+with mean 0 and standard deviation <code>reset_noise_scale</code> added to the velocity values for
+stochasticity. Note that the initial z coordinate is intentionally selected
+to be slightly high, thereby indicating a standing up ant. The initial orientation
+is designed to make it face forward as well.
+### Episode End
+The ant is said to be unhealthy if any of the following happens:</li>
+<li>Any of the state space values is no longer finite</li>
+<li>The z-coordinate of the torso is <strong>not</strong> in the closed interval given by <code>healthy_z_range</code> (defaults to [0.2, 1.0])
+If <code>terminate_when_unhealthy=True</code> is passed during construction (which is the default),
+the episode ends when any of the following happens:</li>
+<li>Truncation: The episode duration reaches a 1000 timesteps</li>
+<li>Termination: The ant is unhealthy
+If <code>terminate_when_unhealthy=False</code> is passed, the episode is ended only when 1000 timesteps are exceeded.
+### Arguments
+No additional arguments are currently supported in v2 and lower.
+<code>
+env = gym.make(&#39;Ant-v2&#39;)
+</code>
+v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.
+<code>
+env = gym.make(&#39;Ant-v4&#39;, ctrl_cost_weight=0.1, ...)
+</code>
+| Parameter               | Type       | Default      |Description                    |
+|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-|
+| <code>xml_file</code>              | <strong>str</strong>    | <code>&quot;ant.xml&quot;</code>  | Path to a MuJoCo model |
+| <code>ctrl_cost_weight</code>      | <strong>float</strong>  | <code>0.5</code>        | Weight for <em>ctrl_cost</em> term (see section on reward) |
+| <code>contact_cost_weight</code>   | <strong>float</strong>  | <code>5e-4</code>       | Weight for <em>contact_cost</em> term (see section on reward) |
+| <code>healthy_reward</code>        | <strong>float</strong>  | <code>1</code>          | Constant reward given if the ant is &ldquo;healthy&rdquo; after timestep |
+| <code>terminate_when_unhealthy</code> | <strong>bool</strong>| <code>True</code>       | If true, issue a done signal if the z-coordinate of the torso is no longer in the <code>healthy_z_range</code> |
+| <code>healthy_z_range</code>       | <strong>tuple</strong>  | <code>(0.2, 1)</code>   | The ant is considered healthy if the z-coordinate of the torso is in this range |
+| <code>contact_force_range</code>   | <strong>tuple</strong>  | <code>(-1, 1)</code>    | Contact forces are clipped to this range in the computation of <em>contact_cost</em> |
+| <code>reset_noise_scale</code>     | <strong>float</strong>  | <code>0.1</code>        | Scale of random perturbations of initial position and velocity (see section on Starting State) |
+| <code>exclude_current_positions_from_observation</code>| <strong>bool</strong> | <code>True</code>| Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |
+### Version History</li>
+<li>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3</li>
+<li>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)</li>
+<li>v2: All continuous control environments now use mujoco_py &gt;= 1.50</li>
+<li>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.</li>
+<li>v0: Initial versions release (1.0.0)</li>
+</ul>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -1379,7 +1520,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-08-24)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-09-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

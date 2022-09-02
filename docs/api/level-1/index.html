@@ -945,7 +945,8 @@
 <dl class="cpp var">
 <dt id="_CPPv4N19ccv_nnc_cmd_param_t6groupsE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t6groupsE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t6groupsE"></span><span id="ccv_nnc_cmd_param_t::groups__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a0302a689cd024a687c3333600c0c986f"></span>int <code class="sig-name descname">groups</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t6groupsE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>[convolution.groups] The number of groups for convolutional layer. </p>
+<dd><p>[convolution.groups] The number of groups for convolutional layer.</p>
+<p>[gnorm.group] The number of groups that separates channels. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -1028,6 +1029,7 @@
 <span id="_CPPv3N19ccv_nnc_cmd_param_t4axisE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4axisE"></span><span id="ccv_nnc_cmd_param_t::axis__iA"></span><span class="target" id="structccv__nnc__cmd__param__t_1a18856fdc04fd7f3cc94f6e4a3367a66b"></span>int <code class="sig-name descname">axis</code>[<code class="sig-name descname">CCV_NNC_MAX_DIM_ALLOC</code>]<a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4axisE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[bnorm.axis[]] The axis selected to compute mean / variance.</p>
 <p>[lnorm.axis[]] The axis selected to compute mean / variance.</p>
+<p>[gnorm.axis] The axis selected to be grouped.</p>
 <p>[reduce.axis[]] The axis selected to reduce.</p>
 <p>[transpose.axis[2]] The axis we’d like to transpose for input. </p>
 </dd></dl>
@@ -1037,6 +1039,7 @@
 <span id="_CPPv3N19ccv_nnc_cmd_param_t7epsilonE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t7epsilonE"></span><span id="ccv_nnc_cmd_param_t::epsilon__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1a45c4f746e902fda1731592aa21f25588"></span>float <code class="sig-name descname">epsilon</code><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t7epsilonE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[bnorm.epsilon] The epsilon for standard derivation.</p>
 <p>[lnorm.epsilon] The epsilon for standard derivation.</p>
+<p>[gnorm.epsilon] The epsilon for standard derivation.</p>
 <p>[adam.epsilon] The epsilon for standard derivation.</p>
 <p>[lamb.epsilon] The epsilon for standard derivation.</p>
 <p>[rmsprop.epsilon] The epsilon for standard derivation. </p>
