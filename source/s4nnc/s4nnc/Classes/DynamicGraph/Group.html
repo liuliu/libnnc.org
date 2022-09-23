@@ -180,6 +180,9 @@
                 <a href="../../Classes/Mul.html">Mul</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes/Permute.html">Permute</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Classes/ReLU.html">ReLU</a>
               </li>
               <li class="nav-group-task">
@@ -226,6 +229,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/Transpose.html">Transpose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Upsample.html">Upsample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Upsample/Mode.html">– Mode</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/VecEnv.html">VecEnv</a>
@@ -888,13 +897,13 @@
                 <a href="../../Functions.html#/s:4main2zpoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.+(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../../Functions.html#/s:4main2zdoiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../../Functions.html#/s:4main2zdoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Functions.html#/s:4main1doiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1doiyxx_SftAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -1896,6 +1905,34 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main12DynamicGraphC5GroupV6copied13streamContextAEy_xGAA06StreamG0CSg_tF"></a>
+                    <a name="//apple_ref/swift/Method/copied(streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV6copied13streamContextAEy_xGAA06StreamG0CSg_tF">copied(streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reduce along a given dimension.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">copied</span><span class="p">(</span><span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../../Classes/StreamContext.html">StreamContext</a></span><span class="p">?)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">Group</span><span class="o">&lt;</span><span class="kt"><a href="../../Classes/DynamicGraph/Group.html#/s:ST7ElementQa">Element</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main12DynamicGraphC5GroupV7reduced_4axis13streamContextAEy_xGAA8ReduceOpO_SaySiGAA06StreamH0CSgtF"></a>
                     <a name="//apple_ref/swift/Method/reduced(_:axis:streamContext:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main12DynamicGraphC5GroupV7reduced_4axis13streamContextAEy_xGAA8ReduceOpO_SaySiGAA06StreamH0CSgtF">reduced(_:<wbr>axis:<wbr>streamContext:<wbr>)</a>
@@ -2216,9 +2253,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC5GroupV4stepAA11TensorShapeVvp"></a>
-                    <a name="//apple_ref/swift/Property/step" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV4stepAA11TensorShapeVvp">step</a>
+                    <a name="/s:4main12DynamicGraphC5GroupV7stridesAA11TensorShapeVvp"></a>
+                    <a name="//apple_ref/swift/Property/strides" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV7stridesAA11TensorShapeVvp">strides</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2232,7 +2269,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">strides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -3002,9 +3039,9 @@ if we change this from group to tensor.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC5GroupV8reshaped6format5shape6offset4stepAEy_xGAA12TensorFormatO_AA0J5ShapeVAOSgAPtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(format:shape:offset:step:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV8reshaped6format5shape6offset4stepAEy_xGAA12TensorFormatO_AA0J5ShapeVAOSgAPtF">reshaped(format:<wbr>shape:<wbr>offset:<wbr>step:<wbr>)</a>
+                    <a name="/s:4main12DynamicGraphC5GroupV8reshaped6format5shape6offset7stridesAEy_xGAA12TensorFormatO_AA0J5ShapeVAOSgAPtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(format:shape:offset:strides:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV8reshaped6format5shape6offset7stridesAEy_xGAA12TensorFormatO_AA0J5ShapeVAOSgAPtF">reshaped(format:<wbr>shape:<wbr>offset:<wbr>strides:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -3019,7 +3056,8 @@ if we change this from group to tensor.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="nv">format</span><span class="p">:</span> <span class="kt"><a href="../../Enums/TensorFormat.html">TensorFormat</a></span><span class="p">,</span> <span class="nv">shape</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+  <span class="nv">strides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
@@ -3030,9 +3068,9 @@ if we change this from group to tensor.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC5GroupV8reshaped_6offset4stepAEy_xGAA17TensorShapeFormatO_AA0hI0VSgANtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:step:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV8reshaped_6offset4stepAEy_xGAA17TensorShapeFormatO_AA0hI0VSgANtF">reshaped(_:<wbr>offset:<wbr>step:<wbr>)</a>
+                    <a name="/s:4main12DynamicGraphC5GroupV8reshaped_6offset7stridesAEy_xGAA17TensorShapeFormatO_AA0hI0VSgANtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(_:offset:strides:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5GroupV8reshaped_6offset7stridesAEy_xGAA17TensorShapeFormatO_AA0hI0VSgANtF">reshaped(_:<wbr>offset:<wbr>strides:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -3047,7 +3085,7 @@ if we change this from group to tensor.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
-  <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+  <span class="n">_</span> <span class="nv">shapeFormat</span><span class="p">:</span> <span class="kt"><a href="../../Enums/TensorShapeFormat.html">TensorShapeFormat</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">strides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
@@ -3099,7 +3137,7 @@ if we change this from group to tensor.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-09-02)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-09-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

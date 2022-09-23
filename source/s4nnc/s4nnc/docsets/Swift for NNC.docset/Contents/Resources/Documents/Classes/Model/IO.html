@@ -180,6 +180,9 @@
                 <a href="../../Classes/Mul.html">Mul</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes/Permute.html">Permute</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Classes/ReLU.html">ReLU</a>
               </li>
               <li class="nav-group-task">
@@ -226,6 +229,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/Transpose.html">Transpose</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Upsample.html">Upsample</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/Upsample/Mode.html">– Mode</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/VecEnv.html">VecEnv</a>
@@ -888,13 +897,13 @@
                 <a href="../../Functions.html#/s:4main2zpoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.+(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../../Functions.html#/s:4main2zdoiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../../Functions.html#/s:4main2zdoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Functions.html#/s:4main1doiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Functions.html#/s:4main1doiyxx_SftAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -1075,9 +1084,9 @@ to one or more tensors when the model is materialized.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main5ModelC2IOC8reshaped_6offset10incrementsAESaySiG_AISgAJtF"></a>
-                    <a name="//apple_ref/swift/Method/reshaped(_:offset:increments:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main5ModelC2IOC8reshaped_6offset10incrementsAESaySiG_AISgAJtF">reshaped(_:<wbr>offset:<wbr>increments:<wbr>)</a>
+                    <a name="/s:4main5ModelC2IOC8reshaped_6offset7stridesAeA11TensorShapeV_AJSgAKtF"></a>
+                    <a name="//apple_ref/swift/Method/reshaped(_:offset:strides:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main5ModelC2IOC8reshaped_6offset7stridesAeA11TensorShapeV_AJSgAKtF">reshaped(_:<wbr>offset:<wbr>strides:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1092,7 +1101,9 @@ to one or more tensors when the model is materialized.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span><span class="n">_</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">],</span> <span class="nv">offset</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">increments</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reshaped</span><span class="p">(</span>
+  <span class="n">_</span> <span class="nv">dimensions</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">strides</span><span class="p">:</span> <span class="kt"><a href="../../Structs/TensorShape.html">TensorShape</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span>
   <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/Model.html">Model</a></span><span class="o">.</span><span class="kt">IO</span></code></pre>
 
                         </div>
@@ -1128,12 +1139,59 @@ to one or more tensors when the model is materialized.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>increments</em>
+                                <em>strides</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>What&rsquo;s the step size for each dimension.</p>
+                                  <p>What&rsquo;s the stride for each dimension.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main5ModelC2IOC8permutedyAESid_tF"></a>
+                    <a name="//apple_ref/swift/Method/permuted(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main5ModelC2IOC8permutedyAESid_tF">permuted(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Permute an IO according to the indices.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">permuted</span><span class="p">(</span><span class="n">_</span> <span class="nv">indices</span><span class="p">:</span> <span class="kt">Int</span><span class="o">...</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/Model.html">Model</a></span><span class="o">.</span><span class="kt">IO</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>indices</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The dimensions to pick from the input.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1362,7 +1420,7 @@ to one or more tensors when the model is materialized.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-09-02)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2022-09-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
