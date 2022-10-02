@@ -460,6 +460,20 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv425ccv_nnc_tensor_format_newPCK16ccv_nnc_tensor_t">
+<span id="_CPPv325ccv_nnc_tensor_format_newPCK16ccv_nnc_tensor_t"></span><span id="_CPPv225ccv_nnc_tensor_format_newPCK16ccv_nnc_tensor_t"></span><span id="ccv_nnc_tensor_format_new__ccv_nnc_tensor_tCPC"></span><span class="target" id="group__level__1__tensor_1ga5cfe0eb4e65a31b87c00a8bb4261d19a"></span><code class="sig-name descname">ccv_nnc_tensor_format_new</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_nnc_tensor_format_newPCK16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Format a tensor output to string so that it can be used as debug output for other languages. This will look like: [ 0.13, 0.44, 0.24, 0.24 ] And format closely to what numpy looks like. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>An allocated string that you can call ccfree to free it. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code>: The input tensor, it can be a tensor or a tensor view. It has to be accessible on CPU. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv420ccv_nnc_tensor_writePCK16ccv_nnc_tensor_tPCvPCKc">
 <span id="_CPPv320ccv_nnc_tensor_writePCK16ccv_nnc_tensor_tPCvPCKc"></span><span id="_CPPv220ccv_nnc_tensor_writePCK16ccv_nnc_tensor_tPCvPCKc"></span><span id="ccv_nnc_tensor_write__ccv_nnc_tensor_tCPC.voidPC.cCPC"></span><span class="target" id="group__level__1__tensor_1gad81f0cef23c0c2d931c394e6d723e261"></span>int <code class="sig-name descname">ccv_nnc_tensor_write</code><span class="sig-paren">(</span><em class="property">const</em> ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, void *<em class="property">const</em> <em>handle</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_nnc_tensor_writePCK16ccv_nnc_tensor_tPCvPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Write tensor to a SQLite database with a given name. <dl class="simple">
@@ -1341,7 +1355,7 @@
 <h2>Streams<a class="headerlink" href="#streams" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
 <dt id="_CPPv4Ut3_116">
-<span id="_CPPv3Ut3_116"></span><span class="target" id="group__level__1__stream_1gaeac2de18c0ed342a690b3e2ba3c52426"></span><em class="property">enum </em><strong>[anonymous]</strong><br /></dt>
+<span id="_CPPv3Ut3_116"></span><span class="target" id="group__level__1__stream_1gaeac2de18c0ed342a690b3e2ba3c52426"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_116" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4NUt3_11622CCV_STREAM_CONTEXT_CPUE">
