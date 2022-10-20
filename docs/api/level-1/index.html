@@ -965,6 +965,18 @@
 </p>
 </dd></dl>
 
+<dl class="cpp function">
+<dt id="_CPPv428ccv_nnc_set_memory_efficienti">
+<span id="_CPPv328ccv_nnc_set_memory_efficienti"></span><span id="_CPPv228ccv_nnc_set_memory_efficienti"></span><span id="ccv_nnc_set_memory_efficient__i"></span><span class="target" id="group__level__1__cmd_1gad53e4f0936cec7bbe74084c5cdc27568"></span>void <code class="sig-name descname">ccv_nnc_set_memory_efficient</code><span class="sig-paren">(</span>int <em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_nnc_set_memory_efficienti" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>When have choices between doing things, prefer to be more memory efficient and take performance hit. This is relevant to MPSGraph because if we dispatch all command buffers at full speed, we risk of holding a lot of resources up until all of them executed. Alternatively, we can wait previous one done before proceed, with obvious performance penalties. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">state</span></code>: 1 is on, 0 is off. Default to off. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
 <dl class="cpp struct">
 <dt id="_CPPv419ccv_nnc_cmd_param_t">
 <span id="_CPPv319ccv_nnc_cmd_param_t"></span><span id="_CPPv219ccv_nnc_cmd_param_t"></span><span id="ccv_nnc_cmd_param_t"></span><span class="target" id="structccv__nnc__cmd__param__t"></span><em class="property">struct </em><code class="sig-name descname">ccv_nnc_cmd_param_t</code><a class="headerlink" href="#_CPPv419ccv_nnc_cmd_param_t" title="Permalink to this definition">¶</a><br /></dt>

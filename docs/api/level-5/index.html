@@ -1924,8 +1924,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv420ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiKi14ccv_nnc_hint_tPCKc">
-<span id="_CPPv320ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiKi14ccv_nnc_hint_tPCKc"></span><span id="_CPPv220ccv_cnnp_convolutionKiKiACCV_NNC_MAX_DIM_ALLOC_KiKi14ccv_nnc_hint_tPCKc"></span><span id="ccv_cnnp_convolution__iC.iC.iCA.iC.ccv_nnc_hint_t.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gadba65244f45ddb7ec8d6162e3b8602bf"></span><code class="sig-name descname">ccv_cnnp_convolution</code><span class="sig-paren">(</span><em class="property">const</em> int <em>groups</em>, <em class="property">const</em> int <em>filters</em>, <em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>no_bias</em>, <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiKi14ccv_nnc_hint_tPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv420ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiKi14ccv_nnc_hint_tKiPCKc">
+<span id="_CPPv320ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiKi14ccv_nnc_hint_tKiPCKc"></span><span id="_CPPv220ccv_cnnp_convolutionKiKiACCV_NNC_MAX_DIM_ALLOC_KiKi14ccv_nnc_hint_tKiPCKc"></span><span id="ccv_cnnp_convolution__iC.iC.iCA.iC.ccv_nnc_hint_t.iC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1ga49a591e2d85ad7e6fd4ddc0b1468ca2d"></span><code class="sig-name descname">ccv_cnnp_convolution</code><span class="sig-paren">(</span><em class="property">const</em> int <em>groups</em>, <em class="property">const</em> int <em>filters</em>, <em class="property">const</em> int <em>kdim</em>[<em>CCV_NNC_MAX_DIM_ALLOC</em>], <em class="property">const</em> int <em>no_bias</em>, <a class="reference internal" href="../level-1/#_CPPv414ccv_nnc_hint_t" title="ccv_nnc_hint_t">ccv_nnc_hint_t</a> <em>hint</em>, <em class="property">const</em> int <em>format</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420ccv_cnnp_convolutionKiKiA21CCV_NNC_MAX_DIM_ALLOC_KiKi14ccv_nnc_hint_tKiPCKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A convolution model. <dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>A convolution model. </p>
 </dd>
@@ -1935,6 +1935,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">kdim</span></code>: The dimensions of the kernel. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">no_bias</span></code>: Whether has bias term or not. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hint</span></code>: The hint for alignment. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code>: The format for weights. If 0, it will have the same format as the input. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
 </ul>
 </dd>
