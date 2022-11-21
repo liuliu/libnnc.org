@@ -1153,6 +1153,20 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt id="_CPPv431ccv_cnnp_model_add_dependencies19ccv_cnnp_model_io_tPCK19ccv_cnnp_model_io_tKi">
+<span id="_CPPv331ccv_cnnp_model_add_dependencies19ccv_cnnp_model_io_tPCK19ccv_cnnp_model_io_tKi"></span><span id="_CPPv231ccv_cnnp_model_add_dependencies19ccv_cnnp_model_io_tPCK19ccv_cnnp_model_io_tKi"></span><span id="ccv_cnnp_model_add_dependencies__ccv_cnnp_model_io_t.ccv_cnnp_model_io_tCPC.iC"></span><span class="target" id="group__level__5__model_1ga5cbc24de3ec6f1fbd92f33373a505bfd"></span>void <code class="sig-name descname">ccv_cnnp_model_add_dependencies</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> <em>model_io</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv419ccv_cnnp_model_io_t" title="ccv_cnnp_model_io_t">ccv_cnnp_model_io_t</a> *<em class="property">const</em> <em>dependencies</em>, <em class="property">const</em> int <em>dependency_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431ccv_cnnp_model_add_dependencies19ccv_cnnp_model_io_tPCK19ccv_cnnp_model_io_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This method adds non-functional dependencies for a model IO. “Non-functional dependencies” means their outputs are not used for this IO, however, their existence establishes a partial ordering for the execution. In that way, they act as “inputs” but not functional. <dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model_io</span></code>: A model IO for which we will add additional non-functional dependencies. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dependencies</span></code>: The set of dependencies. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dependency_size</span></code>: The size of dependencies array. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt id="_CPPv425ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi">
 <span id="_CPPv325ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi"></span><span id="_CPPv225ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi"></span><span id="ccv_cnnp_model_parameters__ccv_cnnp_model_tPC.iC.iC"></span><span class="target" id="group__level__5__model_1ga879740dc8d3d0616094853f0499d2c50"></span><code class="sig-name descname">ccv_cnnp_model_parameters</code><span class="sig-paren">(</span><a class="reference internal" href="../level-4/#_CPPv416ccv_cnnp_model_t" title="ccv_cnnp_model_t">ccv_cnnp_model_t</a> *<em class="property">const</em> <em>model</em>, <em class="property">const</em> int <em>selector</em>, <em class="property">const</em> int <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425ccv_cnnp_model_parametersPC16ccv_cnnp_model_tKiKi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This method exposes parameter for a model out as a potential input for another model. Since it is a ccv_cnnp_model_io_t, it can also be used by other methods. <dl class="simple">
@@ -2039,6 +2053,21 @@
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tanh</span></code>: Whether enable fast approximate GELU. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv419ccv_cnnp_leaky_reluKfPCKc">
+<span id="_CPPv319ccv_cnnp_leaky_reluKfPCKc"></span><span id="_CPPv219ccv_cnnp_leaky_reluKfPCKc"></span><span id="ccv_cnnp_leaky_relu__floatC.cCPC"></span><span class="target" id="group__level__5__model__add__ons_1gac89b9832e12a3b5910dbd791001f9541"></span><code class="sig-name descname">ccv_cnnp_leaky_relu</code><span class="sig-paren">(</span><em class="property">const</em> float <em>negative_slope</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_cnnp_leaky_reluKfPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A leaky ReLU activation layer model. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A leaky ReLU activation layer model. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">negative_slope</span></code>: The coefficient to be applied when it is negative. </p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The unique name of the model. </p></li>
 </ul>
 </dd>
