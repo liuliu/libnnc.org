@@ -6,7 +6,7 @@
     "key.substructure" : [
       {
         "key.accessibility" : "source.lang.swift.accessibility.public",
-        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type>, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/Type> == &lt;&lt;error type&gt;&gt;, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type> == &lt;&lt;error type&gt;&gt;<\/Declaration>",
         "key.attributes" : [
           {
             "key.attribute" : "source.decl.attribute.public",
@@ -20,21 +20,21 @@
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 15,
         "key.doc.comment" : "The helper to collect data from the given Envs.\n\nThe policy is intentional to be flexible as a simple closure. We collect both the action and state\ndata the closure provides. There may be some type conversions for what the Env expects and what\nthe policy provides, thus, need to specify both. To make this easier to use, the placeholder\ntype would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`",
-        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env",
+        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>",
         "key.doc.discussion" : [
           {
             "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env, EnvType.ActType == &lt;&lt;error type&gt;&gt;, EnvType.ObsType == &lt;&lt;error type&gt;&gt;<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
         "key.doc.line" : 9,
         "key.doc.name" : "Collector",
         "key.doc.type" : "Class",
         "key.doclength" : 431,
         "key.docoffset" : 12,
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/ref.associatedtype> == &lt;&lt;error type&gt;&gt;<\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype> == &lt;&lt;error type&gt;&gt;<\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.struct",
         "key.length" : 783,
         "key.line" : 9,
@@ -346,7 +346,7 @@
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env> (Collector<Element, StateType, EnvType, EnvElement>.Type) -> ([EnvType], <<error type>>) -> Collector<Element, StateType, EnvType, EnvElement>",
+            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>> (Collector<Element, StateType, EnvType, EnvElement>.Type) -> ([EnvType], <<error type>>) -> Collector<Element, StateType, EnvType, EnvElement>",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main9CollectorVyXeXecfc"
           }
@@ -869,25 +869,25 @@
         "key.usr" : "s:4main13CollectedDataV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type>, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/Type> == &lt;&lt;error type&gt;&gt;, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type> == &lt;&lt;error type&gt;&gt;<\/Declaration>",
         "key.bodylength" : 1076,
         "key.bodyoffset" : 2185,
         "key.column" : 15,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 15,
-        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env",
+        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>",
         "key.doc.discussion" : [
           {
             "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env, EnvType.ActType == &lt;&lt;error type&gt;&gt;, EnvType.ObsType == &lt;&lt;error type&gt;&gt;<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
         "key.doc.line" : 9,
         "key.doc.name" : "Collector",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/ref.associatedtype> == &lt;&lt;error type&gt;&gt;<\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype> == &lt;&lt;error type&gt;&gt;<\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1098,
         "key.line" : 9,
@@ -1071,7 +1071,7 @@
                 "key.substructure" : [
 
                 ],
-                "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env> (Collector<Element, StateType, EnvType, EnvElement>.Statistics.Type) -> (Int, Int, NumericalStatistics, NumericalStatistics) -> Collector<Element, StateType, EnvType, EnvElement>.Statistics",
+                "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>> (Collector<Element, StateType, EnvType, EnvElement>.Statistics.Type) -> (Int, Int, NumericalStatistics, NumericalStatistics) -> Collector<Element, StateType, EnvType, EnvElement>.Statistics",
                 "key.typeusr" : "$s12episodeCount04stepB00A6Reward0A6Length4main9CollectorV10StatisticsVyxq_q0_q1__GSi_SiAE09NumericalH0VALtcD",
                 "key.usr" : "s:4main9CollectorV10StatisticsV12episodeCount04stepE00D6Reward0D6LengthAEyxq_q0_q1__GSi_SiAA09NumericalC0VALtcfc"
               }
@@ -1115,7 +1115,7 @@
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env> (inout Collector<Element, StateType, EnvType, EnvElement>) -> (Int) -> ()",
+            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>> (inout Collector<Element, StateType, EnvType, EnvElement>) -> (Int) -> ()",
             "key.typeusr" : "$s9keepLastNySi_tcD",
             "key.usr" : "s:4main9CollectorV9resetData9keepLastNySi_tF"
           },
@@ -1154,7 +1154,7 @@
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env> (inout Collector<Element, StateType, EnvType, EnvElement>) -> () -> ()",
+            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>> (inout Collector<Element, StateType, EnvType, EnvElement>) -> () -> ()",
             "key.typeusr" : "$syycD",
             "key.usr" : "s:4main9CollectorV5resetyyF"
           },
@@ -1195,25 +1195,25 @@
         "key.usr" : "s:4main9CollectorV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type> : <Type usr=\"s:4main3EnvP\">Env<\/Type>, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/Type> == &lt;&lt;error type&gt;&gt;, <Type usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type> == &lt;&lt;error type&gt;&gt;<\/Declaration>",
         "key.bodylength" : 1511,
         "key.bodyoffset" : 3351,
         "key.column" : 15,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 15,
-        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env",
+        "key.doc.declaration" : "public struct Collector<Element, StateType, EnvType, EnvElement> where EnvType : main.Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>",
         "key.doc.discussion" : [
           {
             "Para" : "The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: `Collector<Float, (), _, _>(envs: envs) { ... }`"
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift\" line=\"9\" column=\"15\"><Name>Collector<\/Name><USR>s:4main9CollectorV<\/USR><Declaration>public struct Collector&lt;Element, StateType, EnvType, EnvElement&gt; where EnvType : main.Env, EnvType.ActType == &lt;&lt;error type&gt;&gt;, EnvType.ObsType == &lt;&lt;error type&gt;&gt;<\/Declaration><CommentParts><Abstract><Para>The helper to collect data from the given Envs.<\/Para><\/Abstract><Discussion><Para>The policy is intentional to be flexible as a simple closure. We collect both the action and state data the closure provides. There may be some type conversions for what the Env expects and what the policy provides, thus, need to specify both. To make this easier to use, the placeholder type would be useful: <codeVoice>Collector&lt;Float, (), _, _&gt;(envs: envs) { ... }<\/codeVoice><\/Para><\/Discussion><\/CommentParts><\/Class>",
         "key.doc.line" : 9,
         "key.doc.name" : "Collector",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/Collector.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Collector<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main9CollectorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV9StateTypeq_mfp\"><decl.generic_type_param.name>StateType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\"><decl.generic_type_param.name>EnvType<\/decl.generic_type_param.name><\/decl.generic_type_param>, <decl.generic_type_param usr=\"s:4main9CollectorV10EnvElementq1_mfp\"><decl.generic_type_param.name>EnvElement<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main3EnvP\">Env<\/ref.protocol><\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/ref.associatedtype> == &lt;&lt;error type&gt;&gt;<\/decl.generic_type_requirement>, <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main9CollectorV7EnvTypeq0_mfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype> == &lt;&lt;error type&gt;&gt;<\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1599,
         "key.line" : 9,
@@ -1344,7 +1344,7 @@
                 "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeLengthsL_SaySfGvp"
               }
             ],
-            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env, EnvType.RewardType == Float, EnvType.TerminatedType == Bool> (inout Collector<Element, StateType, EnvType, EnvElement>) -> (Int) -> Collector<Element, StateType, EnvType, EnvElement>.Statistics",
+            "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>, EnvType.RewardType == Float, EnvType.TerminatedType == Bool> (inout Collector<Element, StateType, EnvType, EnvElement>) -> (Int) -> Collector<Element, StateType, EnvType, EnvElement>.Statistics",
             "key.typeusr" : "$s5nStep4main9CollectorV10StatisticsVyxq_q0_q1__GSi_tcD",
             "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF"
           }
