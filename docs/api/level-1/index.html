@@ -506,6 +506,24 @@
 </p>
 </dd></dl>
 
+<dl class="cpp function">
+<dt id="_CPPv419ccv_nnc_tensor_swapPC16ccv_nnc_tensor_tPCKcPCKcPCKvK6size_t">
+<span id="_CPPv319ccv_nnc_tensor_swapPC16ccv_nnc_tensor_tPCKcPCKcPCKvK6size_t"></span><span id="_CPPv219ccv_nnc_tensor_swapPC16ccv_nnc_tensor_tPCKcPCKcPCKvK6size_t"></span><span id="ccv_nnc_tensor_swap__ccv_nnc_tensor_tPC.cCPC.cCPC.voidCPC.sC"></span><span class="target" id="group__level__1__tensor_1gac5bdc2da88b037c68e770ef406750219"></span>int <code class="sig-name descname">ccv_nnc_tensor_swap</code><span class="sig-paren">(</span>ccv_nnc_tensor_t *<em class="property">const</em> <em>tensor</em>, <em class="property">const</em> char *<em class="property">const</em> <em>name</em>, <em class="property">const</em> char *<em class="property">const</em> <em>dir</em>, <em class="property">const</em> void *<em class="property">const</em> <em>data</em>, <em class="property">const</em> size_t <em>data_size</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_tensor_swapPC16ccv_nnc_tensor_tPCKcPCKcPCKvK6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Swap a tensor to be backed by a file instead. Currently, once swapped, there is no way to swap back. <dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>0 for success. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tensor</span></code>: The tensor. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: The name for the tensor when swapping to disk. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dir</span></code>: The directory for the tensor to be swapped on a file at this path if possible (depending on underlying implementation, right now only MPS backend supported this feature). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>: If provided, the content of the tensor will be filled with the data pointer. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_size</span></code>: The size of the data content. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
 </div>
 <div class="section" id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
@@ -1374,7 +1392,7 @@
 <h2>Streams<a class="headerlink" href="#streams" title="Permalink to this headline">¶</a></h2>
 <dl class="cpp enum">
 <dt id="_CPPv4Ut3_118">
-<span id="_CPPv3Ut3_118"></span><span class="target" id="group__level__1__stream_1ga5bea799269f02f5b3395d6b2c068b618"></span><em class="property">enum </em><strong>[anonymous]</strong><br /></dt>
+<span id="_CPPv3Ut3_118"></span><span class="target" id="group__level__1__stream_1ga5bea799269f02f5b3395d6b2c068b618"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_118" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4NUt3_11822CCV_STREAM_CONTEXT_CPUE">
@@ -1807,7 +1825,7 @@
 
 <dl class="cpp enum">
 <dt id="_CPPv4Ut3_117">
-<span id="_CPPv3Ut3_117"></span><span class="target" id="group__level__1__uops_1ga0ac0b7994a7d738aa77d2c1cfe8d6d13"></span><em class="property">enum </em><strong>[anonymous]</strong><br /></dt>
+<span id="_CPPv3Ut3_117"></span><span class="target" id="group__level__1__uops_1ga0ac0b7994a7d738aa77d2c1cfe8d6d13"></span><em class="property">enum </em><strong>[anonymous]</strong><a class="headerlink" href="#_CPPv4Ut3_117" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
 <dt id="_CPPv4NUt3_11727CCV_NNC_MICRO_REDUCE_OP_MAXE">
