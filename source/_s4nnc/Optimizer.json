@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 8932,
+    "key.length" : 9255,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -14,7 +14,7 @@
             "key.offset" : 106
           }
         ],
-        "key.bodylength" : 271,
+        "key.bodylength" : 302,
         "key.bodyoffset" : 133,
         "key.column" : 17,
         "key.decl_lang" : "source.lang.swift",
@@ -31,7 +31,7 @@
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
         "key.fully_annotated_decl" : "<decl.protocol><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>protocol<\/syntaxtype.keyword> <decl.name>Optimizer<\/decl.name><\/decl.protocol>",
         "key.kind" : "source.lang.swift.decl.protocol",
-        "key.length" : 292,
+        "key.length" : 323,
         "key.line" : 4,
         "key.modulename" : "main",
         "key.name" : "Optimizer",
@@ -39,7 +39,7 @@
         "key.nameoffset" : 122,
         "key.offset" : 113,
         "key.parsed_declaration" : "public protocol Optimizer",
-        "key.parsed_scope.end" : 13,
+        "key.parsed_scope.end" : 14,
         "key.parsed_scope.start" : 4,
         "key.substructure" : [
           {
@@ -93,12 +93,37 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>var scale: <Type usr=\"s:Sf\">Float<\/Type> { get set }<\/Declaration>",
+            "key.bodylength" : 9,
+            "key.bodyoffset" : 247,
+            "key.column" : 7,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>scale<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 28,
+            "key.line" : 7,
+            "key.modulename" : "main",
+            "key.name" : "scale",
+            "key.namelength" : 5,
+            "key.nameoffset" : 233,
+            "key.offset" : 229,
+            "key.parsed_declaration" : "var scale: Float",
+            "key.parsed_scope.end" : 7,
+            "key.parsed_scope.start" : 7,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main9OptimizerP5scaleSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>mutating func step(streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?)<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.mutating",
                 "key.length" : 8,
-                "key.offset" : 354
+                "key.offset" : 385
               }
             ],
             "key.column" : 17,
@@ -107,8 +132,8 @@
             "key.doc.comment" : " Update parameters.\n\n - Parameter streamContext: The stream context to execute the update operation.",
             "key.doc.declaration" : "mutating func step(streamContext: StreamContext?)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"12\" column=\"17\"><Name>step(streamContext:)<\/Name><USR>s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF<\/USR><Declaration>mutating func step(streamContext: StreamContext?)<\/Declaration><CommentParts><Abstract><Para>Update parameters.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to execute the update operation.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
-            "key.doc.line" : 12,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"13\" column=\"17\"><Name>step(streamContext:)<\/Name><USR>s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF<\/USR><Declaration>mutating func step(streamContext: StreamContext?)<\/Declaration><CommentParts><Abstract><Para>Update parameters.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to execute the update operation.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 13,
             "key.doc.name" : "step(streamContext:)",
             "key.doc.parameters" : [
               {
@@ -122,20 +147,20 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 122,
-            "key.docoffset" : 229,
+            "key.docoffset" : 260,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 40,
-            "key.line" : 12,
+            "key.line" : 13,
             "key.modulename" : "main",
             "key.name" : "step(streamContext:)",
             "key.namelength" : 35,
-            "key.nameoffset" : 368,
-            "key.offset" : 363,
+            "key.nameoffset" : 399,
+            "key.offset" : 394,
             "key.parsed_declaration" : "mutating func step(streamContext: StreamContext?)",
-            "key.parsed_scope.end" : 12,
-            "key.parsed_scope.start" : 12,
+            "key.parsed_scope.end" : 13,
+            "key.parsed_scope.start" : 13,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main9OptimizerPAAE4stepyyF\">step()<\/RelatedName>"
@@ -157,43 +182,43 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>protocol OptimizerAddons<\/Declaration>",
         "key.bodylength" : 83,
-        "key.bodyoffset" : 433,
+        "key.bodyoffset" : 464,
         "key.column" : 10,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
         "key.fully_annotated_decl" : "<decl.protocol><syntaxtype.keyword>protocol<\/syntaxtype.keyword> <decl.name>OptimizerAddons<\/decl.name><\/decl.protocol>",
         "key.kind" : "source.lang.swift.decl.protocol",
         "key.length" : 110,
-        "key.line" : 15,
+        "key.line" : 16,
         "key.modulename" : "main",
         "key.name" : "OptimizerAddons",
         "key.namelength" : 15,
-        "key.nameoffset" : 416,
-        "key.offset" : 407,
+        "key.nameoffset" : 447,
+        "key.offset" : 438,
         "key.parsed_declaration" : "protocol OptimizerAddons",
-        "key.parsed_scope.end" : 18,
-        "key.parsed_scope.start" : 15,
+        "key.parsed_scope.end" : 19,
+        "key.parsed_scope.start" : 16,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
             "key.annotated_decl" : "<Declaration>var savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>] { get }<\/Declaration>",
             "key.bodylength" : 5,
-            "key.bodyoffset" : 470,
+            "key.bodyoffset" : 501,
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 40,
-            "key.line" : 16,
+            "key.line" : 17,
             "key.modulename" : "main",
             "key.name" : "savedAux",
             "key.namelength" : 8,
-            "key.nameoffset" : 440,
-            "key.offset" : 436,
+            "key.nameoffset" : 471,
+            "key.offset" : 467,
             "key.parsed_declaration" : "var savedAux: [DynamicGraph_Any]",
-            "key.parsed_scope.end" : 16,
-            "key.parsed_scope.start" : 16,
+            "key.parsed_scope.end" : 17,
+            "key.parsed_scope.start" : 17,
             "key.typename" : "[DynamicGraph_Any]",
             "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
             "key.usr" : "s:4main15OptimizerAddonsP8savedAuxSayAA16DynamicGraph_Any_pGvp"
@@ -202,22 +227,22 @@
             "key.accessibility" : "source.lang.swift.accessibility.internal",
             "key.annotated_decl" : "<Declaration>var minimizer: ccv_nnc_cmd_t { get }<\/Declaration>",
             "key.bodylength" : 5,
-            "key.bodyoffset" : 509,
+            "key.bodyoffset" : 540,
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>minimizer<\/decl.name>: <decl.var.type>ccv_nnc_cmd_t<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 36,
-            "key.line" : 17,
+            "key.line" : 18,
             "key.modulename" : "main",
             "key.name" : "minimizer",
             "key.namelength" : 9,
-            "key.nameoffset" : 483,
-            "key.offset" : 479,
+            "key.nameoffset" : 514,
+            "key.offset" : 510,
             "key.parsed_declaration" : "var minimizer: ccv_nnc_cmd_t",
-            "key.parsed_scope.end" : 17,
-            "key.parsed_scope.start" : 17,
+            "key.parsed_scope.end" : 18,
+            "key.parsed_scope.start" : 18,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main15OptimizerAddonsP9minimizerXevp"
@@ -228,9 +253,60 @@
         "key.usr" : "s:4main15OptimizerAddonsP"
       },
       {
+        "key.accessibility" : "source.lang.swift.accessibility.internal",
+        "key.annotated_decl" : "<Declaration>protocol OptimizerTrackSteps<\/Declaration>",
+        "key.bodylength" : 29,
+        "key.bodyoffset" : 580,
+        "key.column" : 10,
+        "key.decl_lang" : "source.lang.swift",
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+        "key.fully_annotated_decl" : "<decl.protocol><syntaxtype.keyword>protocol<\/syntaxtype.keyword> <decl.name>OptimizerTrackSteps<\/decl.name><\/decl.protocol>",
+        "key.kind" : "source.lang.swift.decl.protocol",
+        "key.length" : 60,
+        "key.line" : 21,
+        "key.modulename" : "main",
+        "key.name" : "OptimizerTrackSteps",
+        "key.namelength" : 19,
+        "key.nameoffset" : 559,
+        "key.offset" : 550,
+        "key.parsed_declaration" : "protocol OptimizerTrackSteps",
+        "key.parsed_scope.end" : 23,
+        "key.parsed_scope.start" : 21,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>var step: <Type usr=\"s:Si\">Int<\/Type> { get set }<\/Declaration>",
+            "key.bodylength" : 9,
+            "key.bodyoffset" : 598,
+            "key.column" : 7,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>step<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 25,
+            "key.line" : 22,
+            "key.modulename" : "main",
+            "key.name" : "step",
+            "key.namelength" : 4,
+            "key.nameoffset" : 587,
+            "key.offset" : 583,
+            "key.parsed_declaration" : "var step: Int",
+            "key.parsed_scope.end" : 22,
+            "key.parsed_scope.start" : 22,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:4main19OptimizerTrackStepsP4stepSivp"
+          }
+        ],
+        "key.typename" : "OptimizerTrackSteps.Protocol",
+        "key.typeusr" : "$s4main19OptimizerTrackSteps_pmD",
+        "key.usr" : "s:4main19OptimizerTrackStepsP"
+      },
+      {
         "key.annotated_decl" : "<Declaration>public protocol Optimizer<\/Declaration>",
         "key.bodylength" : 102,
-        "key.bodyoffset" : 540,
+        "key.bodyoffset" : 633,
         "key.column" : 17,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 17,
@@ -248,11 +324,11 @@
         "key.modulename" : "main",
         "key.name" : "Optimizer",
         "key.namelength" : 9,
-        "key.nameoffset" : 529,
-        "key.offset" : 519,
+        "key.nameoffset" : 622,
+        "key.offset" : 612,
         "key.parsed_declaration" : "extension Optimizer",
-        "key.parsed_scope.end" : 27,
-        "key.parsed_scope.start" : 20,
+        "key.parsed_scope.end" : 32,
+        "key.parsed_scope.start" : 25,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -261,41 +337,41 @@
               {
                 "key.attribute" : "source.decl.attribute.mutating",
                 "key.length" : 8,
-                "key.offset" : 586
+                "key.offset" : 679
               },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 579
+                "key.offset" : 672
               }
             ],
             "key.bodylength" : 32,
-            "key.bodyoffset" : 608,
+            "key.bodyoffset" : 701,
             "key.column" : 24,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 24,
             "key.doc.comment" : "Update parameters.",
             "key.doc.declaration" : "public mutating func step()",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"24\" column=\"24\"><Name>step()<\/Name><USR>s:4main9OptimizerPAAE4stepyyF<\/USR><Declaration>public mutating func step()<\/Declaration><CommentParts><Abstract><Para>Update parameters.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 24,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"29\" column=\"24\"><Name>step()<\/Name><USR>s:4main9OptimizerPAAE4stepyyF<\/USR><Declaration>public mutating func step()<\/Declaration><CommentParts><Abstract><Para>Update parameters.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 29,
             "key.doc.name" : "step()",
             "key.doc.type" : "Function",
             "key.doclength" : 33,
-            "key.docoffset" : 543,
+            "key.docoffset" : 636,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>()<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 46,
-            "key.line" : 24,
+            "key.line" : 29,
             "key.modulename" : "main",
             "key.name" : "step()",
             "key.namelength" : 6,
-            "key.nameoffset" : 600,
-            "key.offset" : 595,
+            "key.nameoffset" : 693,
+            "key.offset" : 688,
             "key.parsed_declaration" : "public mutating func step()",
-            "key.parsed_scope.end" : 26,
-            "key.parsed_scope.start" : 24,
+            "key.parsed_scope.end" : 31,
+            "key.parsed_scope.start" : 29,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main9OptimizerP4step13streamContextyAA06StreamE0CSg_tF\">step(streamContext:)<\/RelatedName>"
@@ -320,26 +396,26 @@
           {
             "key.attribute" : "source.decl.attribute.fileprivate",
             "key.length" : 11,
-            "key.offset" : 645
+            "key.offset" : 738
           }
         ],
         "key.bodylength" : 1625,
-        "key.bodyoffset" : 815,
+        "key.bodyoffset" : 908,
         "key.column" : 18,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>fileprivate<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>_step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>graph<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>minimizer<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>parameters<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>savedAux<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 1784,
-        "key.line" : 29,
+        "key.line" : 34,
         "key.modulename" : "main",
         "key.name" : "_step(graph:minimizer:parameters:savedAux:streamContext:)",
         "key.namelength" : 151,
-        "key.nameoffset" : 662,
-        "key.offset" : 657,
+        "key.nameoffset" : 755,
+        "key.offset" : 750,
         "key.parsed_declaration" : "fileprivate func _step(\n  graph: DynamicGraph, minimizer: ccv_nnc_cmd_t, parameters: [DynamicGraph_Any],\n  savedAux: [DynamicGraph_Any], streamContext: StreamContext?\n)",
-        "key.parsed_scope.end" : 76,
-        "key.parsed_scope.start" : 29,
+        "key.parsed_scope.end" : 81,
+        "key.parsed_scope.start" : 34,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>let parallel: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
@@ -349,15 +425,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>parallel<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 42,
-            "key.line" : 34,
+            "key.line" : 39,
             "key.modulename" : "main",
             "key.name" : "parallel",
             "key.namelength" : 8,
-            "key.nameoffset" : 859,
-            "key.offset" : 855,
+            "key.nameoffset" : 952,
+            "key.offset" : 948,
             "key.parsed_declaration" : "let parallel = parameters[0].untyped.count",
-            "key.parsed_scope.end" : 34,
-            "key.parsed_scope.start" : 34,
+            "key.parsed_scope.end" : 39,
+            "key.parsed_scope.start" : 39,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main5_step33_1605229D63BC75EF9830D149A7E4F86ELLyXeXeF8parallelL_Sivp"
@@ -370,15 +446,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>parameterSize<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 36,
-            "key.line" : 46,
+            "key.line" : 51,
             "key.modulename" : "main",
             "key.name" : "parameterSize",
             "key.namelength" : 13,
-            "key.nameoffset" : 1149,
-            "key.offset" : 1145,
+            "key.nameoffset" : 1242,
+            "key.offset" : 1238,
             "key.parsed_declaration" : "let parameterSize = parameters.count",
-            "key.parsed_scope.end" : 46,
-            "key.parsed_scope.start" : 46,
+            "key.parsed_scope.end" : 51,
+            "key.parsed_scope.start" : 51,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main5_step33_1605229D63BC75EF9830D149A7E4F86ELLyXeXeF13parameterSizeL_Sivp"
@@ -391,15 +467,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>_gradients<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 94,
-            "key.line" : 47,
+            "key.line" : 52,
             "key.modulename" : "main",
             "key.name" : "_gradients",
             "key.namelength" : 10,
-            "key.nameoffset" : 1188,
-            "key.offset" : 1184,
+            "key.nameoffset" : 1281,
+            "key.offset" : 1277,
             "key.parsed_declaration" : "var _gradients = [ccv_nnc_tensor_variable_t?](repeating: nil, count: parallel * parameterSize)",
-            "key.parsed_scope.end" : 47,
-            "key.parsed_scope.start" : 47,
+            "key.parsed_scope.end" : 52,
+            "key.parsed_scope.start" : 52,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main5_step33_1605229D63BC75EF9830D149A7E4F86ELLyXeXeF10_gradientsL_Xevp"
@@ -412,15 +488,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_parameters<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 116,
-            "key.line" : 48,
+            "key.line" : 53,
             "key.modulename" : "main",
             "key.name" : "_parameters",
             "key.namelength" : 11,
-            "key.nameoffset" : 1285,
-            "key.offset" : 1281,
+            "key.nameoffset" : 1378,
+            "key.offset" : 1374,
             "key.parsed_declaration" : "let _parameters = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: parameterSize * parallel)",
-            "key.parsed_scope.end" : 48,
-            "key.parsed_scope.start" : 48,
+            "key.parsed_scope.end" : 53,
+            "key.parsed_scope.start" : 53,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main5_step33_1605229D63BC75EF9830D149A7E4F86ELLyXeXeF11_parametersL_Xevp"
@@ -433,15 +509,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>savedAuxSize<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 33,
-            "key.line" : 56,
+            "key.line" : 61,
             "key.modulename" : "main",
             "key.name" : "savedAuxSize",
             "key.namelength" : 12,
-            "key.nameoffset" : 1656,
-            "key.offset" : 1652,
+            "key.nameoffset" : 1749,
+            "key.offset" : 1745,
             "key.parsed_declaration" : "let savedAuxSize = savedAux.count",
-            "key.parsed_scope.end" : 56,
-            "key.parsed_scope.start" : 56,
+            "key.parsed_scope.end" : 61,
+            "key.parsed_scope.start" : 61,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main5_step33_1605229D63BC75EF9830D149A7E4F86ELLyXeXeF12savedAuxSizeL_Sivp"
@@ -454,15 +530,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_savedAux<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 113,
-            "key.line" : 57,
+            "key.line" : 62,
             "key.modulename" : "main",
             "key.name" : "_savedAux",
             "key.namelength" : 9,
-            "key.nameoffset" : 1692,
-            "key.offset" : 1688,
+            "key.nameoffset" : 1785,
+            "key.offset" : 1781,
             "key.parsed_declaration" : "let _savedAux = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: savedAuxSize * parallel)",
-            "key.parsed_scope.end" : 57,
-            "key.parsed_scope.start" : 57,
+            "key.parsed_scope.end" : 62,
+            "key.parsed_scope.start" : 62,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main5_step33_1605229D63BC75EF9830D149A7E4F86ELLyXeXeF9_savedAuxL_Xevp"
@@ -475,15 +551,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_graph<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct><\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 25,
-            "key.line" : 64,
+            "key.line" : 69,
             "key.modulename" : "main",
             "key.name" : "_graph",
             "key.namelength" : 6,
-            "key.nameoffset" : 1990,
-            "key.offset" : 1986,
+            "key.nameoffset" : 2083,
+            "key.offset" : 2079,
             "key.parsed_declaration" : "let _graph = graph.cGraph",
-            "key.parsed_scope.end" : 64,
-            "key.parsed_scope.start" : 64,
+            "key.parsed_scope.end" : 69,
+            "key.parsed_scope.start" : 69,
             "key.typename" : "OpaquePointer",
             "key.typeusr" : "$ss13OpaquePointerVD",
             "key.usr" : "s:4main5_step33_1605229D63BC75EF9830D149A7E4F86ELLyXeXeF6_graphL_s13OpaquePointerVvp"
@@ -496,15 +572,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_streamContext<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct>?<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 68,
-            "key.line" : 65,
+            "key.line" : 70,
             "key.modulename" : "main",
             "key.name" : "_streamContext",
             "key.namelength" : 14,
-            "key.nameoffset" : 2018,
-            "key.offset" : 2014,
+            "key.nameoffset" : 2111,
+            "key.offset" : 2107,
             "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
-            "key.parsed_scope.end" : 65,
-            "key.parsed_scope.start" : 65,
+            "key.parsed_scope.end" : 70,
+            "key.parsed_scope.start" : 70,
             "key.typename" : "OpaquePointer?",
             "key.typeusr" : "$ss13OpaquePointerVSgD",
             "key.usr" : "s:4main5_step33_1605229D63BC75EF9830D149A7E4F86ELLyXeXeF14_streamContextL_s13OpaquePointerVSgvp"
@@ -518,14 +594,14 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>struct HashableModel : <Type usr=\"s:SH\">Hashable<\/Type><\/Declaration>",
         "key.bodylength" : 231,
-        "key.bodyoffset" : 2475,
+        "key.bodyoffset" : 2568,
         "key.column" : 8,
         "key.decl_lang" : "source.lang.swift",
         "key.elements" : [
           {
             "key.kind" : "source.lang.swift.structure.elem.typeref",
             "key.length" : 8,
-            "key.offset" : 2465
+            "key.offset" : 2558
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
@@ -537,15 +613,15 @@
         ],
         "key.kind" : "source.lang.swift.decl.struct",
         "key.length" : 264,
-        "key.line" : 78,
+        "key.line" : 83,
         "key.modulename" : "main",
         "key.name" : "HashableModel",
         "key.namelength" : 13,
-        "key.nameoffset" : 2450,
-        "key.offset" : 2443,
+        "key.nameoffset" : 2543,
+        "key.offset" : 2536,
         "key.parsed_declaration" : "struct HashableModel: Hashable",
-        "key.parsed_scope.end" : 87,
-        "key.parsed_scope.start" : 78,
+        "key.parsed_scope.end" : 92,
+        "key.parsed_scope.start" : 83,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -556,15 +632,15 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>model<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main5ModelC\">Model<\/ref.class><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 16,
-            "key.line" : 79,
+            "key.line" : 84,
             "key.modulename" : "main",
             "key.name" : "model",
             "key.namelength" : 5,
-            "key.nameoffset" : 2482,
-            "key.offset" : 2478,
+            "key.nameoffset" : 2575,
+            "key.offset" : 2571,
             "key.parsed_declaration" : "var model: Model",
-            "key.parsed_scope.end" : 79,
-            "key.parsed_scope.start" : 79,
+            "key.parsed_scope.end" : 84,
+            "key.parsed_scope.start" : 84,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
             "key.typename" : "Model",
             "key.typeusr" : "$s4main5ModelCD",
@@ -577,11 +653,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2497
+                "key.offset" : 2590
               }
             ],
             "key.bodylength" : 38,
-            "key.bodyoffset" : 2569,
+            "key.bodyoffset" : 2662,
             "key.column" : 22,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.declaration" : "static func == (lhs: Self, rhs: Self) -> Bool",
@@ -618,20 +694,20 @@
             "key.fully_annotated_decl" : "<decl.function.operator.infix><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>== <\/decl.name>(<decl.var.parameter><decl.var.parameter.name>lhs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.name>rhs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.function.returntype><\/decl.function.operator.infix>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 104,
-            "key.line" : 80,
+            "key.line" : 85,
             "key.modulename" : "main",
             "key.name" : "==(_:_:)",
             "key.namelength" : 43,
-            "key.nameoffset" : 2516,
-            "key.offset" : 2504,
+            "key.nameoffset" : 2609,
+            "key.offset" : 2597,
             "key.overrides" : [
               {
                 "key.usr" : "s:SQ2eeoiySbx_xtFZ"
               }
             ],
             "key.parsed_declaration" : "public static func == (lhs: HashableModel, rhs: HashableModel) -> Bool",
-            "key.parsed_scope.end" : 82,
-            "key.parsed_scope.start" : 80,
+            "key.parsed_scope.end" : 87,
+            "key.parsed_scope.start" : 85,
             "key.substructure" : [
 
             ],
@@ -646,11 +722,11 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 2612
+                "key.offset" : 2705
               }
             ],
             "key.bodylength" : 47,
-            "key.bodyoffset" : 2657,
+            "key.bodyoffset" : 2750,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.declaration" : "func hash(into hasher: inout Hasher)",
@@ -682,20 +758,20 @@
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>hash<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>into<\/decl.var.parameter.argument_label> <decl.var.parameter.name>hasher<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.keyword>inout<\/syntaxtype.keyword> <ref.struct usr=\"s:s6HasherV\">Hasher<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 86,
-            "key.line" : 84,
+            "key.line" : 89,
             "key.modulename" : "main",
             "key.name" : "hash(into:)",
             "key.namelength" : 31,
-            "key.nameoffset" : 2624,
-            "key.offset" : 2619,
+            "key.nameoffset" : 2717,
+            "key.offset" : 2712,
             "key.overrides" : [
               {
                 "key.usr" : "s:SH4hash4intoys6HasherVz_tF"
               }
             ],
             "key.parsed_declaration" : "public func hash(into hasher: inout Hasher)",
-            "key.parsed_scope.end" : 86,
-            "key.parsed_scope.start" : 84,
+            "key.parsed_scope.end" : 91,
+            "key.parsed_scope.start" : 89,
             "key.substructure" : [
 
             ],
@@ -712,22 +788,22 @@
         "key.accessibility" : "source.lang.swift.accessibility.internal",
         "key.annotated_decl" : "<Declaration>func optimizerStep(graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>, minimizer: ccv_nnc_cmd_t, parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>], savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>], streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>?)<\/Declaration>",
         "key.bodylength" : 2003,
-        "key.bodyoffset" : 2885,
+        "key.bodyoffset" : 2978,
         "key.column" : 6,
         "key.decl_lang" : "source.lang.swift",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
         "key.fully_annotated_decl" : "<decl.function.free><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>optimizerStep<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>graph<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>minimizer<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>parameters<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>savedAux<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.free>",
         "key.kind" : "source.lang.swift.decl.function.free",
         "key.length" : 2180,
-        "key.line" : 89,
+        "key.line" : 94,
         "key.modulename" : "main",
         "key.name" : "optimizerStep(graph:minimizer:parameters:savedAux:streamContext:)",
         "key.namelength" : 169,
-        "key.nameoffset" : 2714,
-        "key.offset" : 2709,
+        "key.nameoffset" : 2807,
+        "key.offset" : 2802,
         "key.parsed_declaration" : "func optimizerStep(\n  graph: DynamicGraph, minimizer: ccv_nnc_cmd_t, parameters: [DynamicGraph_AnyParameters],\n  savedAux: [DynamicGraph_Any], streamContext: StreamContext?\n)",
-        "key.parsed_scope.end" : 134,
-        "key.parsed_scope.start" : 89,
+        "key.parsed_scope.end" : 139,
+        "key.parsed_scope.start" : 94,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>let modelParameters: [<Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>]<\/Declaration>",
@@ -737,15 +813,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>modelParameters<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class>]<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 71,
-            "key.line" : 93,
+            "key.line" : 98,
             "key.modulename" : "main",
             "key.name" : "modelParameters",
             "key.namelength" : 15,
-            "key.nameoffset" : 2892,
-            "key.offset" : 2888,
+            "key.nameoffset" : 2985,
+            "key.offset" : 2981,
             "key.parsed_declaration" : "let modelParameters = parameters.compactMap { $0 as? Model.Parameters }",
-            "key.parsed_scope.end" : 93,
-            "key.parsed_scope.start" : 93,
+            "key.parsed_scope.end" : 98,
+            "key.parsed_scope.start" : 98,
             "key.typename" : "[Model.Parameters]",
             "key.typeusr" : "$sSay4main5ModelC10ParametersCGD",
             "key.usr" : "s:4main13optimizerStepyXeXeF15modelParametersL_SayAA5ModelC0E0CGvp"
@@ -758,15 +834,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>primaryModelParameters<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 119,
-            "key.line" : 94,
+            "key.line" : 99,
             "key.modulename" : "main",
             "key.name" : "primaryModelParameters",
             "key.namelength" : 22,
-            "key.nameoffset" : 2966,
-            "key.offset" : 2962,
+            "key.nameoffset" : 3059,
+            "key.offset" : 3055,
             "key.parsed_declaration" : "let primaryModelParameters = modelParameters.filter {\n  $0._io == $0.model!._parameters && $0.model!.owner == nil\n}",
-            "key.parsed_scope.end" : 94,
-            "key.parsed_scope.start" : 94,
+            "key.parsed_scope.end" : 99,
+            "key.parsed_scope.start" : 99,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13optimizerStepyXeXeF22primaryModelParametersL_Xevp"
@@ -779,15 +855,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>models<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sh\">Set<\/ref.struct>&lt;<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 92,
-            "key.line" : 97,
+            "key.line" : 102,
             "key.modulename" : "main",
             "key.name" : "models",
             "key.namelength" : 6,
-            "key.nameoffset" : 3088,
-            "key.offset" : 3084,
+            "key.nameoffset" : 3181,
+            "key.offset" : 3177,
             "key.parsed_declaration" : "var models = Set(modelParameters.map { HashableModel(model: $0.model!.owner ?? $0.model!) })",
-            "key.parsed_scope.end" : 97,
-            "key.parsed_scope.start" : 97,
+            "key.parsed_scope.end" : 102,
+            "key.parsed_scope.start" : 102,
             "key.typename" : "Set<HashableModel>",
             "key.typeusr" : "$sShy4main13HashableModelVGD",
             "key.usr" : "s:4main13optimizerStepyXeXeF6modelsL_ShyAA13HashableModelVGvp"
@@ -800,15 +876,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 49,
-            "key.line" : 105,
+            "key.line" : 110,
             "key.modulename" : "main",
             "key.name" : "params",
             "key.namelength" : 6,
-            "key.nameoffset" : 3489,
-            "key.offset" : 3485,
+            "key.nameoffset" : 3582,
+            "key.offset" : 3578,
             "key.parsed_declaration" : "let params = CmdParamsFactory.factory.newParams()",
-            "key.parsed_scope.end" : 105,
-            "key.parsed_scope.start" : 105,
+            "key.parsed_scope.end" : 110,
+            "key.parsed_scope.start" : 110,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13optimizerStepyXeXeF6paramsL_Xevp"
@@ -821,15 +897,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>noop<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 52,
-            "key.line" : 106,
+            "key.line" : 111,
             "key.modulename" : "main",
             "key.name" : "noop",
             "key.namelength" : 4,
-            "key.nameoffset" : 3541,
-            "key.offset" : 3537,
+            "key.nameoffset" : 3634,
+            "key.offset" : 3630,
             "key.parsed_declaration" : "let noop = ccv_nnc_cmd(CCV_NNC_NOOP, nil, params, 0)",
-            "key.parsed_scope.end" : 106,
-            "key.parsed_scope.start" : 106,
+            "key.parsed_scope.end" : 111,
+            "key.parsed_scope.start" : 111,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13optimizerStepyXeXeF4noopL_Xevp"
@@ -842,15 +918,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>modelParametersMap<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct> : [<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class>]]<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 62,
-            "key.line" : 111,
+            "key.line" : 116,
             "key.modulename" : "main",
             "key.name" : "modelParametersMap",
             "key.namelength" : 18,
-            "key.nameoffset" : 3727,
-            "key.offset" : 3723,
+            "key.nameoffset" : 3820,
+            "key.offset" : 3816,
             "key.parsed_declaration" : "var modelParametersMap = [HashableModel: [Model.Parameters]]()",
-            "key.parsed_scope.end" : 111,
-            "key.parsed_scope.start" : 111,
+            "key.parsed_scope.end" : 116,
+            "key.parsed_scope.start" : 116,
             "key.typename" : "[HashableModel : [Model.Parameters]]",
             "key.typeusr" : "$sSDy4main13HashableModelVSayAA0C0C10ParametersCGGD",
             "key.usr" : "s:4main13optimizerStepyXeXeF18modelParametersMapL_SDyAA13HashableModelVSayAA0H0C0E0CGGvp"
@@ -863,15 +939,15 @@
             "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>tensorParameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.local>",
             "key.kind" : "source.lang.swift.decl.var.local",
             "key.length" : 72,
-            "key.line" : 123,
+            "key.line" : 128,
             "key.modulename" : "main",
             "key.name" : "tensorParameters",
             "key.namelength" : 16,
-            "key.nameoffset" : 4348,
-            "key.offset" : 4344,
+            "key.nameoffset" : 4441,
+            "key.offset" : 4437,
             "key.parsed_declaration" : "let tensorParameters = parameters.compactMap { $0 as? DynamicGraph_Any }",
-            "key.parsed_scope.end" : 123,
-            "key.parsed_scope.start" : 123,
+            "key.parsed_scope.end" : 128,
+            "key.parsed_scope.start" : 128,
             "key.typename" : "[DynamicGraph_Any]",
             "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
             "key.usr" : "s:4main13optimizerStepyXeXeF16tensorParametersL_SayAA16DynamicGraph_Any_pGvp"
@@ -884,7 +960,7 @@
       {
         "key.annotated_decl" : "<Declaration>public protocol Optimizer<\/Declaration>",
         "key.bodylength" : 1004,
-        "key.bodyoffset" : 4912,
+        "key.bodyoffset" : 5005,
         "key.column" : 17,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 17,
@@ -902,31 +978,31 @@
         "key.modulename" : "main",
         "key.name" : "Optimizer",
         "key.namelength" : 9,
-        "key.nameoffset" : 4901,
-        "key.offset" : 4891,
+        "key.nameoffset" : 4994,
+        "key.offset" : 4984,
         "key.parsed_declaration" : "extension Optimizer",
-        "key.parsed_scope.end" : 162,
-        "key.parsed_scope.start" : 136,
+        "key.parsed_scope.end" : 167,
+        "key.parsed_scope.start" : 141,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>func savedAux(minimizer: ccv_nnc_cmd_t) -&gt; [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
             "key.bodylength" : 936,
-            "key.bodyoffset" : 4978,
+            "key.bodyoffset" : 5071,
             "key.column" : 8,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>minimizer<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.function.returntype><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 1000,
-            "key.line" : 137,
+            "key.line" : 142,
             "key.modulename" : "main",
             "key.name" : "savedAux(minimizer:)",
             "key.namelength" : 34,
-            "key.nameoffset" : 4920,
-            "key.offset" : 4915,
+            "key.nameoffset" : 5013,
+            "key.offset" : 5008,
             "key.parsed_declaration" : "func savedAux(minimizer: ccv_nnc_cmd_t) -> [DynamicGraph_Any]",
-            "key.parsed_scope.end" : 161,
-            "key.parsed_scope.start" : 137,
+            "key.parsed_scope.end" : 166,
+            "key.parsed_scope.start" : 142,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let parameters: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
@@ -936,15 +1012,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 71,
-                "key.line" : 138,
+                "key.line" : 143,
                 "key.modulename" : "main",
                 "key.name" : "parameters",
                 "key.namelength" : 10,
-                "key.nameoffset" : 4987,
-                "key.offset" : 4983,
+                "key.nameoffset" : 5080,
+                "key.offset" : 5076,
                 "key.parsed_declaration" : "let parameters = self.parameters.compactMap { $0 as? DynamicGraph_Any }",
-                "key.parsed_scope.end" : 138,
-                "key.parsed_scope.start" : 138,
+                "key.parsed_scope.end" : 143,
+                "key.parsed_scope.start" : 143,
                 "key.typename" : "[DynamicGraph_Any]",
                 "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
                 "key.usr" : "s:4main9OptimizerPAAE8savedAuxyXeXeF10parametersL_SayAA16DynamicGraph_Any_pGvp"
@@ -957,15 +1033,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>parallel<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 42,
-                "key.line" : 140,
+                "key.line" : 145,
                 "key.modulename" : "main",
                 "key.name" : "parallel",
                 "key.namelength" : 8,
-                "key.nameoffset" : 5113,
-                "key.offset" : 5109,
+                "key.nameoffset" : 5206,
+                "key.offset" : 5202,
                 "key.parsed_declaration" : "let parallel = parameters[0].untyped.count",
-                "key.parsed_scope.end" : 140,
-                "key.parsed_scope.start" : 140,
+                "key.parsed_scope.end" : 145,
+                "key.parsed_scope.start" : 145,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main9OptimizerPAAE8savedAuxyXeXeF8parallelL_Sivp"
@@ -978,15 +1054,15 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 31,
-                "key.line" : 142,
+                "key.line" : 147,
                 "key.modulename" : "main",
                 "key.name" : "graph",
                 "key.namelength" : 5,
-                "key.nameoffset" : 5191,
-                "key.offset" : 5187,
+                "key.nameoffset" : 5284,
+                "key.offset" : 5280,
                 "key.parsed_declaration" : "let graph = parameters[0].graph",
-                "key.parsed_scope.end" : 142,
-                "key.parsed_scope.start" : 142,
+                "key.parsed_scope.end" : 147,
+                "key.parsed_scope.start" : 147,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:4main9OptimizerPAAE8savedAuxyXeXeF5graphL_AA12DynamicGraphCvp"
@@ -1002,152 +1078,79 @@
         "key.usr" : "s:4main9OptimizerP"
       },
       {
-        "key.annotated_decl" : "<Declaration>protocol Collection&lt;<Type usr=\"s:Sl7ElementQa\">Element<\/Type>&gt; : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
-        "key.bodylength" : 2964,
-        "key.bodyoffset" : 5966,
+        "key.annotated_decl" : "<Declaration>protocol MutableCollection&lt;<Type usr=\"s:SM7ElementQa\">Element<\/Type>&gt; : <Type usr=\"s:Sl\">Collection<\/Type> where <Type usr=\"s:SM4Selfxmfp\">Self<\/Type>.<Type usr=\"s:Sl11SubSequenceQa\">SubSequence<\/Type> : <Type usr=\"s:SM\">MutableCollection<\/Type><\/Declaration>",
+        "key.bodylength" : 3187,
+        "key.bodyoffset" : 6066,
         "key.decl_lang" : "source.lang.swift",
-        "key.doc.declaration" : "protocol Collection<Element> : Sequence",
+        "key.doc.declaration" : "protocol MutableCollection<Element> : Collection where Self.SubSequence : MutableCollection",
         "key.doc.discussion" : [
           {
-            "Para" : "Collections are used extensively throughout the standard library. When you use arrays, dictionaries, and other collections, you benefit from the operations that the `Collection` protocol declares and implements. In addition to the operations that collections inherit from the `Sequence` protocol, you gain access to methods that depend on accessing an element at a specific position in a collection."
-          },
-          {
-            "Para" : "For example, if you want to print only the first word in a string, you can search for the index of the first space, and then create a substring up to that position."
+            "Para" : "Collections that conform to `MutableCollection` gain the ability to change the value of their elements. This example shows how you can modify one of the names in an array of students."
           },
           {
             "CodeListing" : ""
           },
           {
-            "Para" : "The `firstSpace` constant is an index into the `text` string—the position of the first space in the string. You can store indices in variables, and pass them to collection algorithms or use them later to access the corresponding element. In the example above, `firstSpace` is used to extract the prefix that contains elements up to that index."
-          },
-          {
-            "Para" : "You can access an element of a collection through its subscript by using any valid index except the collection’s `endIndex` property. This property is a “past the end” index that does not correspond with any element of the collection."
-          },
-          {
-            "Para" : "Here’s an example of accessing the first character in a string through its subscript:"
+            "Para" : "In addition to changing the value of an individual element, you can also change the values of a slice of elements in a mutable collection. For example, you can sort  of a mutable collection by calling the mutable `sort()` method on a subscripted subsequence. Here’s an example that sorts the first half of an array of integers:"
           },
           {
             "CodeListing" : ""
           },
           {
-            "Para" : "The `Collection` protocol declares and provides default implementations for many operations that depend on elements being accessible by their subscript. For example, you can also access the first character of `text` using the `first` property, which has the value of the first element of the collection, or `nil` if the collection is empty."
+            "Para" : "The `MutableCollection` protocol allows changing the values of a collection’s elements but not the length of the collection itself. For operations that require adding or removing elements, see the `RangeReplaceableCollection` protocol instead."
+          },
+          {
+            "Para" : "To add conformance to the `MutableCollection` protocol to your own custom collection, upgrade your type’s subscript to support both read and write access."
+          },
+          {
+            "Para" : "A value stored into a subscript of a `MutableCollection` instance must subsequently be accessible at that same position. That is, for a mutable collection instance `a`, index `i`, and value `x`, the two sets of assignments in the following code sample must be equivalent:"
           },
           {
             "CodeListing" : ""
-          },
-          {
-            "Para" : "You can pass only valid indices to collection operations. You can find a complete set of a collection’s valid indices by starting with the collection’s `startIndex` property and finding every successor up to, and including, the `endIndex` property. All other values of the `Index` type, such as the `startIndex` property of a different collection, are invalid indices for this collection."
-          },
-          {
-            "Para" : "Saved indices may become invalid as a result of mutating operations. For more information about index invalidation in mutable collections, see the reference for the `MutableCollection` and `RangeReplaceableCollection` protocols, as well as for the specific type you’re using."
-          },
-          {
-            "Para" : "You can access a slice of a collection through its ranged subscript or by calling methods like `prefix(while:)` or `suffix(_:)`. A slice of a collection can contain zero or more of the original collection’s elements and shares the original collection’s semantics."
-          },
-          {
-            "Para" : "The following example creates a `firstWord` constant by using the `prefix(while:)` method to get a slice of the `text` string."
-          },
-          {
-            "CodeListing" : ""
-          },
-          {
-            "Para" : "You can retrieve the same slice using the string’s ranged subscript, which takes a range expression."
-          },
-          {
-            "CodeListing" : ""
-          },
-          {
-            "Para" : "The retrieved slice of `text` is equivalent in each of these cases."
-          },
-          {
-            "Para" : "A collection and its slices share the same indices. An element of a collection is located under the same index in a slice as in the base collection, as long as neither the collection nor the slice has been mutated since the slice was created."
-          },
-          {
-            "Para" : "For example, suppose you have an array holding the number of absences from each class during a session."
-          },
-          {
-            "CodeListing" : ""
-          },
-          {
-            "Para" : "You’re tasked with finding the day with the most absences in the second half of the session. To find the index of the day in question, follow these steps:"
-          },
-          {
-            "List-Number" : ""
-          },
-          {
-            "Para" : "Here’s an implementation of those steps:"
-          },
-          {
-            "CodeListing" : ""
-          },
-          {
-            "Para" : "A slice inherits the value or reference semantics of its base collection. That is, when working with a slice of a mutable collection that has value semantics, such as an array, mutating the original collection triggers a copy of that collection and does not affect the contents of the slice."
-          },
-          {
-            "Para" : "For example, if you update the last element of the `absences` array from `0` to `2`, the `secondHalf` slice is unchanged."
-          },
-          {
-            "CodeListing" : ""
-          },
-          {
-            "Para" : "Although a sequence can be consumed as it is traversed, a collection is guaranteed to be : Any element can be repeatedly accessed by saving its index. Moreover, a collection’s indices form a finite range of the positions of the collection’s elements. The fact that all collections are finite guarantees the safety of many sequence operations, such as using the `contains(_:)` method to test whether a collection includes an element."
-          },
-          {
-            "Para" : "Iterating over the elements of a collection by their positions yields the same elements in the same order as iterating over that collection using its iterator. This example demonstrates that the `characters` view of a string returns the same characters in the same order whether the view’s indices or the view itself is being iterated."
-          },
-          {
-            "CodeListing" : ""
-          },
-          {
-            "Para" : "If you create a custom sequence that can provide repeated access to its elements, make sure that its type conforms to the `Collection` protocol in order to give a more useful and more efficient interface for sequence and collection operations. To add `Collection` conformance to your type, you must declare at least the following requirements:"
-          },
-          {
-            "List-Bullet" : ""
-          },
-          {
-            "Para" : "Types that conform to `Collection` are expected to provide the `startIndex` and `endIndex` properties and subscript access to elements as O(1) operations. Types that are not able to guarantee this performance must document the departure, because many collection operations depend on O(1) subscripting performance for their own performance guarantees."
-          },
-          {
-            "Para" : "The performance of some collection operations depends on the type of index that the collection provides. For example, a random-access collection, which can measure the distance between two indices in O(1) time, can calculate its `count` property in O(1) time. Conversely, because a forward or bidirectional collection must traverse the entire collection to count the number of contained elements, accessing its `count` property is an O() operation."
           }
         ],
-        "key.doc.full_as_xml" : "<Class><Name>Collection<\/Name><USR>s:Sl<\/USR><Declaration>protocol Collection&lt;Element&gt; : Sequence<\/Declaration><CommentParts><Abstract><Para>A sequence whose elements can be traversed multiple times, nondestructively, and accessed by an indexed subscript.<\/Para><\/Abstract><Discussion><Para>Collections are used extensively throughout the standard library. When you use arrays, dictionaries, and other collections, you benefit from the operations that the <codeVoice>Collection<\/codeVoice> protocol declares and implements. In addition to the operations that collections inherit from the <codeVoice>Sequence<\/codeVoice> protocol, you gain access to methods that depend on accessing an element at a specific position in a collection.<\/Para><Para>For example, if you want to print only the first word in a string, you can search for the index of the first space, and then create a substring up to that position.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let text = \"Buffalo buffalo buffalo buffalo.\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[if let firstSpace = text.firstIndex(of: \" \") {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(text[..<firstSpace])]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Buffalo\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>firstSpace<\/codeVoice> constant is an index into the <codeVoice>text<\/codeVoice> string—the position of the first space in the string. You can store indices in variables, and pass them to collection algorithms or use them later to access the corresponding element. In the example above, <codeVoice>firstSpace<\/codeVoice> is used to extract the prefix that contains elements up to that index.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Accessing Individual Elements<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>You can access an element of a collection through its subscript by using any valid index except the collection’s <codeVoice>endIndex<\/codeVoice> property. This property is a “past the end” index that does not correspond with any element of the collection.<\/Para><Para>Here’s an example of accessing the first character in a string through its subscript:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let firstChar = text[text.startIndex]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(firstChar)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"B\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>Collection<\/codeVoice> protocol declares and provides default implementations for many operations that depend on elements being accessible by their subscript. For example, you can also access the first character of <codeVoice>text<\/codeVoice> using the <codeVoice>first<\/codeVoice> property, which has the value of the first element of the collection, or <codeVoice>nil<\/codeVoice> if the collection is empty.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[print(text.first)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Optional(\"B\")\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>You can pass only valid indices to collection operations. You can find a complete set of a collection’s valid indices by starting with the collection’s <codeVoice>startIndex<\/codeVoice> property and finding every successor up to, and including, the <codeVoice>endIndex<\/codeVoice> property. All other values of the <codeVoice>Index<\/codeVoice> type, such as the <codeVoice>startIndex<\/codeVoice> property of a different collection, are invalid indices for this collection.<\/Para><Para>Saved indices may become invalid as a result of mutating operations. For more information about index invalidation in mutable collections, see the reference for the <codeVoice>MutableCollection<\/codeVoice> and <codeVoice>RangeReplaceableCollection<\/codeVoice> protocols, as well as for the specific type you’re using.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Accessing Slices of a Collection<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>You can access a slice of a collection through its ranged subscript or by calling methods like <codeVoice>prefix(while:)<\/codeVoice> or <codeVoice>suffix(_:)<\/codeVoice>. A slice of a collection can contain zero or more of the original collection’s elements and shares the original collection’s semantics.<\/Para><Para>The following example creates a <codeVoice>firstWord<\/codeVoice> constant by using the <codeVoice>prefix(while:)<\/codeVoice> method to get a slice of the <codeVoice>text<\/codeVoice> string.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let firstWord = text.prefix(while: { $0 != \" \" })]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(firstWord)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Buffalo\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>You can retrieve the same slice using the string’s ranged subscript, which takes a range expression.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[if let firstSpace = text.firstIndex(of: \" \") {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(text[..<firstSpace]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    \/\/ Prints \"Buffalo\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The retrieved slice of <codeVoice>text<\/codeVoice> is equivalent in each of these cases.<\/Para><rawHTML><![CDATA[<h2>]]><\/rawHTML>Slices Share Indices<rawHTML><![CDATA[<\/h2>]]><\/rawHTML><Para>A collection and its slices share the same indices. An element of a collection is located under the same index in a slice as in the base collection, as long as neither the collection nor the slice has been mutated since the slice was created.<\/Para><Para>For example, suppose you have an array holding the number of absences from each class during a session.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[var absences = [0, 2, 0, 4, 0, 3, 1, 0]]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>You’re tasked with finding the day with the most absences in the second half of the session. To find the index of the day in question, follow these steps:<\/Para><List-Number><Item><Para>Create a slice of the <codeVoice>absences<\/codeVoice> array that holds the second half of the days.<\/Para><\/Item><Item><Para>Use the <codeVoice>max(by:)<\/codeVoice> method to determine the index of the day with the most absences.<\/Para><\/Item><Item><Para>Print the result using the index found in step 2 on the original <codeVoice>absences<\/codeVoice> array.<\/Para><\/Item><\/List-Number><Para>Here’s an implementation of those steps:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let secondHalf = absences.suffix(absences.count \/ 2)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[if let i = secondHalf.indices.max(by: { secondHalf[$0] < secondHalf[$1] }) {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(\"Highest second-half absences: \\(absences[i])\")]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"Highest second-half absences: 3\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h2>]]><\/rawHTML>Slices Inherit Collection Semantics<rawHTML><![CDATA[<\/h2>]]><\/rawHTML><Para>A slice inherits the value or reference semantics of its base collection. That is, when working with a slice of a mutable collection that has value semantics, such as an array, mutating the original collection triggers a copy of that collection and does not affect the contents of the slice.<\/Para><Para>For example, if you update the last element of the <codeVoice>absences<\/codeVoice> array from <codeVoice>0<\/codeVoice> to <codeVoice>2<\/codeVoice>, the <codeVoice>secondHalf<\/codeVoice> slice is unchanged.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[absences[7] = 2]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(absences)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[0, 2, 0, 4, 0, 3, 1, 2]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(secondHalf)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[0, 3, 1, 0]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Traversing a Collection<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>Although a sequence can be consumed as it is traversed, a collection is guaranteed to be <emphasis>multipass<\/emphasis>: Any element can be repeatedly accessed by saving its index. Moreover, a collection’s indices form a finite range of the positions of the collection’s elements. The fact that all collections are finite guarantees the safety of many sequence operations, such as using the <codeVoice>contains(_:)<\/codeVoice> method to test whether a collection includes an element.<\/Para><Para>Iterating over the elements of a collection by their positions yields the same elements in the same order as iterating over that collection using its iterator. This example demonstrates that the <codeVoice>characters<\/codeVoice> view of a string returns the same characters in the same order whether the view’s indices or the view itself is being iterated.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[let word = \"Swift\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[for character in word {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(character)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"S\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"w\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"i\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"f\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"t\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[for i in word.indices {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    print(word[i])]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"S\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"w\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"i\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"f\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"t\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><rawHTML><![CDATA[<h1>]]><\/rawHTML>Conforming to the Collection Protocol<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>If you create a custom sequence that can provide repeated access to its elements, make sure that its type conforms to the <codeVoice>Collection<\/codeVoice> protocol in order to give a more useful and more efficient interface for sequence and collection operations. To add <codeVoice>Collection<\/codeVoice> conformance to your type, you must declare at least the following requirements:<\/Para><List-Bullet><Item><Para>The <codeVoice>startIndex<\/codeVoice> and <codeVoice>endIndex<\/codeVoice> properties<\/Para><\/Item><Item><Para>A subscript that provides at least read-only access to your type’s elements<\/Para><\/Item><Item><Para>The <codeVoice>index(after:)<\/codeVoice> method for advancing an index into your collection<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h1>]]><\/rawHTML>Expected Performance<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>Types that conform to <codeVoice>Collection<\/codeVoice> are expected to provide the <codeVoice>startIndex<\/codeVoice> and <codeVoice>endIndex<\/codeVoice> properties and subscript access to elements as O(1) operations. Types that are not able to guarantee this performance must document the departure, because many collection operations depend on O(1) subscripting performance for their own performance guarantees.<\/Para><Para>The performance of some collection operations depends on the type of index that the collection provides. For example, a random-access collection, which can measure the distance between two indices in O(1) time, can calculate its <codeVoice>count<\/codeVoice> property in O(1) time. Conversely, because a forward or bidirectional collection must traverse the entire collection to count the number of contained elements, accessing its <codeVoice>count<\/codeVoice> property is an O(<emphasis>n<\/emphasis>) operation.<\/Para><\/Discussion><\/CommentParts><\/Class>",
-        "key.doc.name" : "Collection",
+        "key.doc.full_as_xml" : "<Class><Name>MutableCollection<\/Name><USR>s:SM<\/USR><Declaration>protocol MutableCollection&lt;Element&gt; : Collection where Self.SubSequence : MutableCollection<\/Declaration><CommentParts><Abstract><Para>A collection that supports subscript assignment.<\/Para><\/Abstract><Discussion><Para>Collections that conform to <codeVoice>MutableCollection<\/codeVoice> gain the ability to change the value of their elements. This example shows how you can modify one of the names in an array of students.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[var students = [\"Ben\", \"Ivy\", \"Jordell\", \"Maxime\"]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[if let i = students.firstIndex(of: \"Maxime\") {]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[    students[i] = \"Max\"]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[}]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(students)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[\"Ben\", \"Ivy\", \"Jordell\", \"Max\"]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>In addition to changing the value of an individual element, you can also change the values of a slice of elements in a mutable collection. For example, you can sort <emphasis>part<\/emphasis> of a mutable collection by calling the mutable <codeVoice>sort()<\/codeVoice> method on a subscripted subsequence. Here’s an example that sorts the first half of an array of integers:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[var numbers = [15, 40, 10, 30, 60, 25, 5, 100]]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[numbers[0..<4].sort()]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[print(numbers)]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Prints \"[10, 15, 30, 40, 60, 25, 5, 100]\"]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>The <codeVoice>MutableCollection<\/codeVoice> protocol allows changing the values of a collection’s elements but not the length of the collection itself. For operations that require adding or removing elements, see the <codeVoice>RangeReplaceableCollection<\/codeVoice> protocol instead.<\/Para><rawHTML><![CDATA[<h1>]]><\/rawHTML>Conforming to the MutableCollection Protocol<rawHTML><![CDATA[<\/h1>]]><\/rawHTML><Para>To add conformance to the <codeVoice>MutableCollection<\/codeVoice> protocol to your own custom collection, upgrade your type’s subscript to support both read and write access.<\/Para><Para>A value stored into a subscript of a <codeVoice>MutableCollection<\/codeVoice> instance must subsequently be accessible at that same position. That is, for a mutable collection instance <codeVoice>a<\/codeVoice>, index <codeVoice>i<\/codeVoice>, and value <codeVoice>x<\/codeVoice>, the two sets of assignments in the following code sample must be equivalent:<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[a[i] = x]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let y = a[i]]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[\/\/ Must be equivalent to:]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[a[i] = x]]><\/zCodeLineNumbered><zCodeLineNumbered><![CDATA[let y = x]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.name" : "MutableCollection",
         "key.doc.type" : "Class",
-        "key.fully_annotated_decl" : "<decl.protocol><syntaxtype.keyword>protocol<\/syntaxtype.keyword> <decl.name>Collection<\/decl.name>&lt;<decl.generic_type_param usr=\"s:Sl7ElementQa\"><ref.associatedtype usr=\"s:Sl7ElementQa\">Element<\/ref.associatedtype><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:ST\">Sequence<\/ref.protocol><\/decl.protocol>",
+        "key.fully_annotated_decl" : "<decl.protocol><syntaxtype.keyword>protocol<\/syntaxtype.keyword> <decl.name>MutableCollection<\/decl.name>&lt;<decl.generic_type_param usr=\"s:SM7ElementQa\"><ref.associatedtype usr=\"s:SM7ElementQa\">Element<\/ref.associatedtype><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sl\">Collection<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:SM4Selfxmfp\">Self<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:Sl11SubSequenceQa\">SubSequence<\/ref.associatedtype> : <ref.protocol usr=\"s:SM\">MutableCollection<\/ref.protocol><\/decl.generic_type_requirement><\/decl.protocol>",
         "key.groupname" : "Collection",
         "key.is_system" : true,
         "key.kind" : "source.lang.swift.decl.extension",
-        "key.length" : 3012,
+        "key.length" : 3242,
         "key.modulename" : "Swift",
-        "key.name" : "Collection",
-        "key.namelength" : 10,
-        "key.nameoffset" : 5929,
-        "key.offset" : 5919,
-        "key.parsed_declaration" : "extension Collection where Element: Optimizer",
-        "key.parsed_scope.end" : 228,
-        "key.parsed_scope.start" : 164,
+        "key.name" : "MutableCollection",
+        "key.namelength" : 17,
+        "key.nameoffset" : 6022,
+        "key.offset" : 6012,
+        "key.parsed_declaration" : "extension MutableCollection where Element: Optimizer",
+        "key.parsed_scope.end" : 240,
+        "key.parsed_scope.start" : 169,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public func step(streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public mutating func step(streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil)<\/Declaration>",
             "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.mutating",
+                "key.length" : 8,
+                "key.offset" : 6237
+              },
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 6130
+                "key.offset" : 6230
               }
             ],
-            "key.bodylength" : 2743,
-            "key.bodyoffset" : 6185,
-            "key.column" : 15,
+            "key.bodylength" : 2957,
+            "key.bodyoffset" : 6294,
+            "key.column" : 24,
             "key.decl_lang" : "source.lang.swift",
-            "key.doc.column" : 15,
+            "key.doc.column" : 24,
             "key.doc.comment" : " Update parameters together for a collection of optimizers.\n\n - Parameter streamContext: The stream context to have update operation on.",
-            "key.doc.declaration" : "public func step(streamContext: StreamContext? = nil)",
+            "key.doc.declaration" : "public mutating func step(streamContext: StreamContext? = nil)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"170\" column=\"15\"><Name>step(streamContext:)<\/Name><USR>s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF<\/USR><Declaration>public func step(streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Update parameters together for a collection of optimizers.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to have update operation on.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
-            "key.doc.line" : 170,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift\" line=\"175\" column=\"24\"><Name>step(streamContext:)<\/Name><USR>s:SM4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF<\/USR><Declaration>public mutating func step(streamContext: StreamContext? = nil)<\/Declaration><CommentParts><Abstract><Para>Update parameters together for a collection of optimizers.<\/Para><\/Abstract><Parameters><Parameter><Name>streamContext<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>The stream context to have update operation on.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 175,
             "key.doc.name" : "step(streamContext:)",
             "key.doc.parameters" : [
               {
@@ -1161,20 +1164,20 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 158,
-            "key.docoffset" : 5969,
+            "key.docoffset" : 6069,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 2792,
-            "key.line" : 170,
+            "key.length" : 3006,
+            "key.line" : 175,
             "key.modulename" : "main",
             "key.name" : "step(streamContext:)",
             "key.namelength" : 41,
-            "key.nameoffset" : 6142,
-            "key.offset" : 6137,
-            "key.parsed_declaration" : "public func step(streamContext: StreamContext? = nil)",
-            "key.parsed_scope.end" : 227,
-            "key.parsed_scope.start" : 170,
+            "key.nameoffset" : 6251,
+            "key.offset" : 6246,
+            "key.parsed_declaration" : "public mutating func step(streamContext: StreamContext? = nil)",
+            "key.parsed_scope.end" : 239,
+            "key.parsed_scope.start" : 175,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var models: <Type usr=\"s:Sh\">Set<\/Type>&lt;<Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type>&gt;<\/Declaration>",
@@ -1184,18 +1187,18 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>models<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sh\">Set<\/ref.struct>&lt;<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 33,
-                "key.line" : 174,
+                "key.line" : 179,
                 "key.modulename" : "main",
                 "key.name" : "models",
                 "key.namelength" : 6,
-                "key.nameoffset" : 6454,
-                "key.offset" : 6450,
+                "key.nameoffset" : 6563,
+                "key.offset" : 6559,
                 "key.parsed_declaration" : "var models = Set<HashableModel>()",
-                "key.parsed_scope.end" : 174,
-                "key.parsed_scope.start" : 174,
+                "key.parsed_scope.end" : 179,
+                "key.parsed_scope.start" : 179,
                 "key.typename" : "Set<HashableModel>",
                 "key.typeusr" : "$sShy4main13HashableModelVGD",
-                "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF6modelsL_ShyAA13HashableModelVGvp"
+                "key.usr" : "s:SM4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF6modelsL_ShyAA13HashableModelVGvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var primaries: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -1205,18 +1208,18 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>primaries<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 55,
-                "key.line" : 175,
+                "key.line" : 180,
                 "key.modulename" : "main",
                 "key.name" : "primaries",
                 "key.namelength" : 9,
-                "key.nameoffset" : 6492,
-                "key.offset" : 6488,
+                "key.nameoffset" : 6601,
+                "key.offset" : 6597,
                 "key.parsed_declaration" : "var primaries = [(ccv_nnc_cmd_t, [Model.Parameters])]()",
-                "key.parsed_scope.end" : 175,
-                "key.parsed_scope.start" : 175,
+                "key.parsed_scope.end" : 180,
+                "key.parsed_scope.start" : 180,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF9primariesL_Xevp"
+                "key.usr" : "s:SM4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF9primariesL_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var secondaries: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -1226,18 +1229,18 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>secondaries<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 57,
-                "key.line" : 176,
+                "key.line" : 181,
                 "key.modulename" : "main",
                 "key.name" : "secondaries",
                 "key.namelength" : 11,
-                "key.nameoffset" : 6552,
-                "key.offset" : 6548,
+                "key.nameoffset" : 6661,
+                "key.offset" : 6657,
                 "key.parsed_declaration" : "var secondaries = [(ccv_nnc_cmd_t, [Model.Parameters])]()",
-                "key.parsed_scope.end" : 176,
-                "key.parsed_scope.start" : 176,
+                "key.parsed_scope.end" : 181,
+                "key.parsed_scope.start" : 181,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF11secondariesL_Xevp"
+                "key.usr" : "s:SM4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF11secondariesL_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -1247,18 +1250,18 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 49,
-                "key.line" : 201,
+                "key.line" : 206,
                 "key.modulename" : "main",
                 "key.name" : "params",
                 "key.namelength" : 6,
-                "key.nameoffset" : 7716,
-                "key.offset" : 7712,
+                "key.nameoffset" : 7825,
+                "key.offset" : 7821,
                 "key.parsed_declaration" : "let params = CmdParamsFactory.factory.newParams()",
-                "key.parsed_scope.end" : 201,
-                "key.parsed_scope.start" : 201,
+                "key.parsed_scope.end" : 206,
+                "key.parsed_scope.start" : 206,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF6paramsL_Xevp"
+                "key.usr" : "s:SM4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF6paramsL_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let noop: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -1268,28 +1271,49 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>noop<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 52,
-                "key.line" : 202,
+                "key.line" : 207,
                 "key.modulename" : "main",
                 "key.name" : "noop",
                 "key.namelength" : 4,
-                "key.nameoffset" : 7770,
-                "key.offset" : 7766,
+                "key.nameoffset" : 7879,
+                "key.offset" : 7875,
                 "key.parsed_declaration" : "let noop = ccv_nnc_cmd(CCV_NNC_NOOP, nil, params, 0)",
-                "key.parsed_scope.end" : 202,
-                "key.parsed_scope.start" : 202,
+                "key.parsed_scope.end" : 207,
+                "key.parsed_scope.start" : 207,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF4noopL_Xevp"
+                "key.usr" : "s:SM4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF4noopL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var i: <Type usr=\"s:SM4mainAA9Optimizer7ElementRpzrlE4Selfxmfp\">Self<\/Type>.<Type usr=\"s:Sl5IndexQa\">Index<\/Type><\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Optimizer.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>i<\/decl.name>: <decl.var.type><ref.generic_type_param usr=\"s:SM4mainAA9Optimizer7ElementRpzrlE4Selfxmfp\">Self<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:Sl5IndexQa\">Index<\/ref.associatedtype><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 18,
+                "key.line" : 225,
+                "key.modulename" : "main",
+                "key.name" : "i",
+                "key.namelength" : 1,
+                "key.nameoffset" : 8692,
+                "key.offset" : 8688,
+                "key.parsed_declaration" : "var i = startIndex",
+                "key.parsed_scope.end" : 225,
+                "key.parsed_scope.start" : 225,
+                "key.typename" : "Self.Index",
+                "key.typeusr" : "$s5IndexQzD",
+                "key.usr" : "s:SM4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF1iL_5IndexQzvp"
               }
             ],
-            "key.typename" : "<Self where Self : Collection, Self.Element : Optimizer> (Self) -> (StreamContext?) -> ()",
+            "key.typename" : "<Self where Self : MutableCollection, Self.Element : Optimizer> (inout Self) -> (StreamContext?) -> ()",
             "key.typeusr" : "$s13streamContexty4main06StreamB0CSg_tcD",
-            "key.usr" : "s:Sl4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF"
+            "key.usr" : "s:SM4mainAA9Optimizer7ElementRpzrlE4step13streamContextyAA06StreamF0CSg_tF"
           }
         ],
-        "key.typename" : "Collection.Protocol",
-        "key.typeusr" : "$sSl_pmD",
-        "key.usr" : "s:Sl"
+        "key.typename" : "MutableCollection.Protocol",
+        "key.typeusr" : "$sSM_pmD",
+        "key.usr" : "s:SM"
       }
     ]
   }

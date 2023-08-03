@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>NNC Dynamic Graph Execution &mdash; nnc, a deep learning framework from ccv</title>
@@ -26,6 +27,8 @@
 
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="NNC Common Neural Network Primitives" href="../nnc-cnnp/" />
@@ -48,12 +51,9 @@
           
 
           
-            <a href="../../">
+            <a href="../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -150,6 +150,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-uops/">NNC Micro Ops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#describe-micro-ops">Describe Micro Ops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#simplification">Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#loop-fusion">Loop-Fusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#variable-substitution">Variable Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#automatic-differentiation">Automatic Differentiation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API Reference</a><ul>
@@ -158,9 +167,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/level-1/">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_1/group__level__1__uops_micro_jittor/">The concept of meta-ops in Jittor is amazing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#tensors">Tensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#commands">Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#streams">Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#micro-ops">Micro Ops</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/level-2/">Level 2 API</a><ul>
@@ -227,12 +238,9 @@
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           
-            <a href="../../">
+            <a href="../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
         
@@ -286,8 +294,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="nnc-dynamic-graph-execution">
-<h1>NNC Dynamic Graph Execution<a class="headerlink" href="#nnc-dynamic-graph-execution" title="Permalink to this headline">¶</a></h1>
+  <section id="nnc-dynamic-graph-execution">
+<h1>NNC Dynamic Graph Execution<a class="headerlink" href="#nnc-dynamic-graph-execution" title="Permalink to this heading">¶</a></h1>
 <p>Frameworks such as <strong>PyTorch</strong> or <strong>TensorFlow Eager</strong> nowadays have dynamic graph support, which is a fancy word to describe when a computation is carried out while constructing the computation graph.</p>
 <p>If <strong>dynamic graph execution</strong> is just about executing a command when issuing it, this is not interesting. <strong>Dynamic graph execution</strong> by these frameworks also supports <em>automatic differentiation</em>. A good <strong>dynamic graph execution</strong> framework such as <strong>PyTorch</strong> enables easier debugging, more intuitive coding thus quicker experimentation cycle.</p>
 <p>That has been said, there are a few drawbacks when you support <strong>dynamic graph execution</strong> naively.</p>
@@ -297,37 +305,37 @@
 </ol>
 <p>To work-around 1., mixing <strong>static graph execution</strong> with <strong>dynamic graph execution</strong> is desirable. However, that imposes its own set of problems: when a <strong>static graph</strong> contains a <strong>dynamic graph</strong>, and if the <strong>static graph</strong> contains a loop structure, the tape for the <strong>static graph</strong> need to cross into the <strong>dynamic graph</strong> to continue work. When a <strong>dynamic graph</strong> contains a <strong>static graph</strong>, the Wengert list (the tape) of the <strong>dynamic graph</strong> need to not only store the tensors, but also the <strong>static graph</strong> as a whole.</p>
 <p>NNC’s <strong>dynamic graph execution</strong> design will attempt to address above problems with reasonable compromises. It borrows some good ideas from 10 years ago when I first started to implement ccv.</p>
-<div class="section" id="naming-the-variable">
-<h2>Naming The Variable<a class="headerlink" href="#naming-the-variable" title="Permalink to this headline">¶</a></h2>
+<section id="naming-the-variable">
+<h2>Naming The Variable<a class="headerlink" href="#naming-the-variable" title="Permalink to this heading">¶</a></h2>
 <p>Like in most frameworks, <strong>dynamic graph execution</strong> in NNC operates at variables. <strong>Dynamic graph</strong> executes command on a set of input variables, writes the result to a set of output variables. Variables can be inspected anytime with <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_tensor_from_variable</span></code>. The underlying tensor may not be allocated when the variable is created. <a class="reference internal" href="../../api/level-4/#_CPPv425ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_t"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">ccv_nnc_tensor_variable_t</span></code></a> is an opaque structure and its inner work shouldn’t be of an interest to users.</p>
-</div>
-<div class="section" id="tracing-the-operation">
-<h2>Tracing The Operation<a class="headerlink" href="#tracing-the-operation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tracing-the-operation">
+<h2>Tracing The Operation<a class="headerlink" href="#tracing-the-operation" title="Permalink to this heading">¶</a></h2>
 <p>Frameworks such as <strong>PyTorch</strong> or <strong>TensorFlow Eager</strong> use the tape to record which operations are executed, and record the inputs / outputs along the way. <em>automatic differentiation</em> was implemented (its reverse mode) by walking back on the tape. This is simple to implement, and easier to support higher order gradients (by record another tape while walking back on the existing tape). This also makes optimizations on the <em>automatic differentiation</em> pass difficult because no data dependencies are specified. It is definitely possible to infer the data dependencies from the tape, and then employ optimizations or automatic parallelization. For mature framework such as <strong>TensorFlow</strong>, that kind of work is to reimplement some of the fundamental pieces of the software.</p>
 <p>NNC uses its <strong>symbolic graph</strong> (Level-3 APIs) to trace the operation. When a command executed on a <strong>dynamic graph</strong>, we can figure out data dependencies with input variables (each input variable has a unique tensor symbol assigned). Even though the variables in the <strong>dynamic graph</strong> don’t follow the <em>static single assignment</em> (SSA) rule, the underlying tensors and tensor symbols do. Thus, through the normal execution of the <strong>dynamic graph</strong>, we have formed a full <strong>symbolic graph</strong> for later computation.</p>
 <p>Upon <em>automatic differentiation</em>, no tape is used (or, the <strong>symbolic graph</strong> serves as an advanced tape). We simply leverage the ahead of time <em>automatic differentiation</em> system implemented in <strong>symbolic graph</strong> to optimize, compile and schedule the actual computation. That means any optimization techniques we implemented on Level-2 or Level-3 APIs will be available to <strong>dynamic graph</strong> as well.</p>
-</div>
-<div class="section" id="optimizations">
-<h2>Optimizations<a class="headerlink" href="#optimizations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="optimizations">
+<h2>Optimizations<a class="headerlink" href="#optimizations" title="Permalink to this heading">¶</a></h2>
 <p>In <strong>PyTorch</strong>, there is a need to <code class="docutils literal notranslate"><span class="pre">requires_grad</span></code> such that the framework knows which variable should be discarded to save memory. If it is not done carefully, the memory usage can grow unbounded. <strong>Dynamic graph</strong> here provides <a class="reference internal" href="../../api/level-4/#_CPPv428ccv_nnc_tensor_variable_freePC23ccv_nnc_dynamic_graph_tK25ccv_nnc_tensor_variable_t" title="ccv_nnc_tensor_variable_free"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_tensor_variable_free</span></code></a> where when a tensor variable is freed, we will release its memory when it is safe. This method meant to hook up with object finalization methods in host languages (C++’s destructor, Objective-C’s <code class="docutils literal notranslate"><span class="pre">dealloc</span></code>, <code class="docutils literal notranslate"><span class="pre">deinit</span></code> in Swift, <code class="docutils literal notranslate"><span class="pre">finalize</span></code> in Java, <code class="docutils literal notranslate"><span class="pre">tp_dealloc</span></code> in Python).</p>
 <p>However, the <code class="docutils literal notranslate"><span class="pre">requires_grad</span></code> can still be useful in case you need to keep track of trainables (such as weights) yourselves. For these cases, while training, it is all good because trainables update themselves and free their previous ones once updated. But for evaluation, these trainables won’t be freed and can grow the memory unbounded (because the system assumes that you may want to compute the gradient against these trainables at later time). We provided <a class="reference internal" href="../../api/level-4/#_CPPv433ccv_nnc_dynamic_graph_set_no_gradPC23ccv_nnc_dynamic_graph_tKi" title="ccv_nnc_dynamic_graph_set_no_grad"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_dynamic_graph_set_no_grad</span></code></a> function to declare our intention.</p>
-</div>
-<div class="section" id="interoperability">
-<h2>Interoperability<a class="headerlink" href="#interoperability" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="interoperability">
+<h2>Interoperability<a class="headerlink" href="#interoperability" title="Permalink to this heading">¶</a></h2>
 <p>There are some sticky issues with interoperability between <strong>static graph</strong> (the <strong>symbolic graph</strong> we formed by hand) with <strong>dynamic graph</strong>. The way they interoperate is through <code class="docutils literal notranslate"><span class="pre">CCV_NNC_CUSTOM_FORWARD</span></code> / <code class="docutils literal notranslate"><span class="pre">CCV_NNC_CUSTOM_BACKWARD</span></code> functions. When a <strong>static graph</strong> includes a <strong>dynamic graph</strong>, its tape needs to book-keeping for the <strong>dynamic graph</strong>. When a <strong>dynamic graph</strong> includes a <strong>static graph</strong>, it also needs to create a tape at that point for the execution. All these implies significant changes for the <a class="reference internal" href="../../api/level-2/#_CPPv421ccv_nnc_tensor_tape_t" title="ccv_nnc_tensor_tape_t"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">ccv_nnc_tensor_tape_t</span></code></a> implementation to accommodate these new requirements.</p>
 <p>Ultimately, it doesn’t make much sense to have <strong>dynamic graph</strong> embedded into a <strong>static graph</strong>. If you already knew the shapes of the inputs (as it is inside another <strong>static graph</strong>), you can create ordinary <strong>static graph</strong>. There is simply no need to support that. Therefore, the only use case we need to support is for <strong>dynamic graph</strong> to embed a <strong>static graph</strong>. We support that through <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_dynamic_evaluate</span></code>. This function takes a CNNP model, and evaluate it directly against some tensor variable inputs. The CNNP model underneath uses the <strong>static graph</strong>, and that is how the interoperability works.</p>
 <p>In fact, it would be the recommended way to use small CNNP models and <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_dynamic_evaluate</span></code> them. Unlike ordinary <a class="reference internal" href="../../api/level-1/#_CPPv413ccv_nnc_cmd_t" title="ccv_nnc_cmd_t"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">ccv_nnc_cmd_t</span></code></a>, a CNNP model contains states, and that is one less thing you need to worry about.</p>
-</div>
-<div class="section" id="future-optimizations">
-<h2>Future Optimizations<a class="headerlink" href="#future-optimizations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="future-optimizations">
+<h2>Future Optimizations<a class="headerlink" href="#future-optimizations" title="Permalink to this heading">¶</a></h2>
 <p>At this point, <strong>dynamic graph</strong> looks suspiciously like just another function dispatching mechanism. Ten years ago, when I started ccv, one of the motivation is to implement a function memorization technique, at that time, it is called <em>cached image processing</em> to workaround issues that in traditional computer vision pipeline, low level feature extraction passes often shared between different components (face detector, motion tracker etc.). In <strong>symbolic graph</strong>, this is trivially implemented as <em>common sub-expression elimination</em> (CSE). CSE cannot be implemented in <strong>dynamic graph</strong> because it cannot look ahead. However, the same memorization technique can be used to avoid duplicate computations.</p>
 <p>Because <strong>symbolic graph</strong> formed from <strong>dynamic graph execution</strong> contains the proper data dependencies, memory reduction techniques such as automatic binomial checkpointing can be implemented with a change of cache eviction policy. If we implemented binomial checkpointing in <strong>symbolic graph</strong> as one optimization pass, we can also leverage that upon <em>automatic differentiation</em> in <strong>dynamic graph</strong>. The flexibility of sharing the same underlying infrastructure is very satisfying.</p>
-</div>
-<div class="section" id="some-maybes">
-<h2>Some Maybes<a class="headerlink" href="#some-maybes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="some-maybes">
+<h2>Some Maybes<a class="headerlink" href="#some-maybes" title="Permalink to this heading">¶</a></h2>
 <p>One of the major reason (or the reason) to use <strong>dynamic graph</strong> is its unparalleled debuggability. You can inspect tensors as you go in the code. However, this ability can be retained if the execution is separated from the <strong>dynamic graph</strong> forming. Your code can go a long way by forming computations and the underlying execution could be asynchronous. The synchronization happens only when you inspect these tensors to either debug, or practically, determine the control flow. This also offers limited look ahead ability to <strong>dynamic graph</strong> that enables more shared optimizations from Level-3 APIs. Implementing this is complicated. Synchronization point can easily turned into deadlock point, and the inter-play of <strong>static graph</strong> inside a <strong>dynamic graph</strong> inside a <strong>static graph</strong> could be more delicate. In a world where we modify languages to extract <strong>static graph</strong> (Swift for TensorFlow), the reason to have this kind of sophisticated <strong>dynamic graph</strong> implementation may be mooted.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -377,17 +385,16 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'a deep learning framework from ccv',
-            LANGUAGE:'None',
+            LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
 
   
 

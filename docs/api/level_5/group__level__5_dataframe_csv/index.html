@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Why to support comma-separated-values files in dataframe? &mdash; nnc, a deep learning framework from ccv</title>
@@ -26,6 +27,8 @@
 
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
     <link rel="next" title="Models, layers, and Keras" href="../group__level__5_model/" />
@@ -48,12 +51,9 @@
           
 
           
-            <a href="../../../">
+            <a href="../../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -238,12 +238,9 @@
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           
-            <a href="../../../">
+            <a href="../../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
         
@@ -299,8 +296,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="why-to-support-comma-separated-values-files-in-dataframe">
-<h1>Why to support comma-separated-values files in dataframe?<a class="headerlink" href="#why-to-support-comma-separated-values-files-in-dataframe" title="Permalink to this headline">¶</a></h1>
+  <section id="why-to-support-comma-separated-values-files-in-dataframe">
+<h1>Why to support comma-separated-values files in dataframe?<a class="headerlink" href="#why-to-support-comma-separated-values-files-in-dataframe" title="Permalink to this heading">¶</a></h1>
 <p>C can be used as a parser. It usually can be fast. But most of them can be buggy and has bugs that can either crash, be exploited, or simply incorrect. There really isn’t much motivation for me to start write a parser, even as simple as for CSV files.</p>
 <p>However, it does brought to my attention that a full-speed (defined by saturating the PCIx4 for SSD) implementation would be beneficial. I am also started to use nnc in many places that is handy to load a csv file and generate some tensors out of it.</p>
 <p>This implementation plan to use a variant of the two-pass approach documented in <a class="reference external" href="https://www.microsoft.com/en-us/research/uploads/prod/2019/04/chunker-sigmod19.pdf">https://www.microsoft.com/en-us/research/uploads/prod/2019/04/chunker-sigmod19.pdf</a> while first implemented in <a class="reference external" href="https://github.com/wiseio/paratext">https://github.com/wiseio/paratext</a>. It is differentiated from these two in these particular ways:</p>
@@ -309,8 +306,8 @@
 <li><p>The second pass will do a copy into a continuous page mirrors the original csv file, but null-terminate each column, and assign the start pointer for each.</p></li>
 </ol>
 <p>The speculative approach while interesting, for many-core system implementation, it can be challenging and the worse-case scenario is indeed worse.</p>
-<p>The implementation itself follows <a class="reference external" href="https://tools.ietf.org/html/rfc4180">https://tools.ietf.org/html/rfc4180</a>, with only customization of delimiters (so it can support table-separated-values) and quotes (so you can choose between ” and ’). Escaping only supports double-quotes for whatever quote symbol you elect.</p>
-</div>
+<p>The implementation itself follows <a class="reference external" href="https://tools.ietf.org/html/rfc4180">https://tools.ietf.org/html/rfc4180</a>, with only customization of delimiters (so it can support table-separated-values) and quotes (so you can choose between “ and ’). Escaping only supports double-quotes for whatever quote symbol you elect.</p>
+</section>
 
 
            </div>
@@ -360,17 +357,16 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
             VERSION:'a deep learning framework from ccv',
-            LANGUAGE:'None',
+            LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
 
   
 

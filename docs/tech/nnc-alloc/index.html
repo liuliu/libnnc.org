@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>The NNC Tensor Allocation Algorithm &mdash; nnc, a deep learning framework from ccv</title>
@@ -26,6 +27,8 @@
 
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="NNC Static Schedule A Graph" href="../nnc-schd/" />
@@ -48,12 +51,9 @@
           
 
           
-            <a href="../../">
+            <a href="../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -150,6 +150,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-uops/">NNC Micro Ops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#describe-micro-ops">Describe Micro Ops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#simplification">Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#loop-fusion">Loop-Fusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#variable-substitution">Variable Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#automatic-differentiation">Automatic Differentiation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API Reference</a><ul>
@@ -158,9 +167,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/level-1/">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_1/group__level__1__uops_micro_jittor/">The concept of meta-ops in Jittor is amazing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#tensors">Tensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#commands">Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#streams">Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#micro-ops">Micro Ops</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/level-2/">Level 2 API</a><ul>
@@ -227,12 +238,9 @@
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           
-            <a href="../../">
+            <a href="../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
         
@@ -286,8 +294,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="the-nnc-tensor-allocation-algorithm">
-<h1>The NNC Tensor Allocation Algorithm<a class="headerlink" href="#the-nnc-tensor-allocation-algorithm" title="Permalink to this headline">¶</a></h1>
+  <section id="the-nnc-tensor-allocation-algorithm">
+<h1>The NNC Tensor Allocation Algorithm<a class="headerlink" href="#the-nnc-tensor-allocation-algorithm" title="Permalink to this heading">¶</a></h1>
 <p>Today, most neural network computations are organized as acyclic graph with each node represent a computation with a list of tensors (or multi-dimensional arrays) associated with it. Certain modifications are added to support control structures such as <em>if</em> or <em>do…while</em> loop. Given that for most implementations, they represent the acyclic graph in symbolic form (thus, no computation has been executed and no tensor has been allocated.), an comprehensive and efficient allocation algorithm is desirable and has been shown not only improve space utilization but also the speed (due to data locality).</p>
 <p>The NNC tensor allocation algorithm is a take on the problem, it has the following properties:</p>
 <ol class="arabic simple">
@@ -295,22 +303,22 @@
 <li><p>Support loop structure, thus, if there is a while loop, this allocation algorithm will handle tensor reuse properly, without introduce any extra data transfer operation;</p></li>
 <li><p>Enable efficient memory reuse when branching.</p></li>
 </ol>
-<div class="section" id="tensor-representation">
-<h2>Tensor Representation<a class="headerlink" href="#tensor-representation" title="Permalink to this headline">¶</a></h2>
+<section id="tensor-representation">
+<h2>Tensor Representation<a class="headerlink" href="#tensor-representation" title="Permalink to this heading">¶</a></h2>
 <p>To simplify the description, we will assume tensors are represented as a continuous memory region. A extension of this algorithm allows “alias” representation for a given tensor, thus, pointing to a sub-range of the memory region that tensor represents.</p>
 <p>Each tensor is represented symbolically. Static single assignment form is assumed, thus, a tensor can be only assigned as node output once.</p>
-</div>
-<div class="section" id="loop-representation">
-<h2>Loop Representation<a class="headerlink" href="#loop-representation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="loop-representation">
+<h2>Loop Representation<a class="headerlink" href="#loop-representation" title="Permalink to this heading">¶</a></h2>
 <p>A <em>do…while</em> loop is represented as a sub-graph of existing graph. The sub-graph is represented as one node in the parent graph. All inputs for this while loop are captured as node inputs, and the outputs for this while loop are captured as node outputs. A condition is evaluated at the beginning each round of the loop, and at the end of the loop, inputs are updated with the new outputs based specifications (thus, which input is replaced by which output). Although not proved mathematically, this should enable all types of <em>do…while</em> loop construction.</p>
-</div>
-<div class="section" id="the-problem-definition">
-<h2>The Problem Definition<a class="headerlink" href="#the-problem-definition" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-problem-definition">
+<h2>The Problem Definition<a class="headerlink" href="#the-problem-definition" title="Permalink to this heading">¶</a></h2>
 <p>Before we get into details of the NNC tensor allocation algorithm, let’s get the problem definition straight. Given a graph with above tensors and loops, the problem asks to assign <code class="docutils literal notranslate"><span class="pre">n</span></code> tensors to one memory region buffer such that for each node operation, the input tensors and the output tensors have non-overlap memory regions assigned. each of the <code class="docutils literal notranslate"><span class="pre">n</span></code> tensors also have an offset and size associated to denote from where within the buffer is the tensor memory region. We want to find an arrangement so that the size of the buffer is smallest.</p>
 <p>It is easy to see this problem is NP-Complete. Therefore, the challenge is to find a good enough approximation to the optimal solution.</p>
-</div>
-<div class="section" id="the-core-algorithm">
-<h2>The Core Algorithm<a class="headerlink" href="#the-core-algorithm" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="the-core-algorithm">
+<h2>The Core Algorithm<a class="headerlink" href="#the-core-algorithm" title="Permalink to this heading">¶</a></h2>
 <p>Before stating the core algorithm, there are a few principles we want to follow, and hopefully you will find these principles make sense.</p>
 <ol class="arabic simple">
 <li><p>Deterministic and reproducible allocations;</p></li>
@@ -318,16 +326,16 @@
 <li><p>Handle ties well, and have a well-reasoned way to break the tie.</p></li>
 </ol>
 <p>With these in mind, I will first discuss the basic structure of the algorithm, then some alternatives we may have, but why not pursuit. Afterwards, I will discuss one important extension of this algorithm to support <em>do…while</em> loop construction.</p>
-</div>
-<div class="section" id="basic-structure">
-<h2>Basic Structure<a class="headerlink" href="#basic-structure" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="basic-structure">
+<h2>Basic Structure<a class="headerlink" href="#basic-structure" title="Permalink to this heading">¶</a></h2>
 <p>The algorithm consider the above problem as the so-called interference graph, which is widely known for register allocations. In this graph, a node represents a tensor. If there is an edge between two tensors, that means these two tensors has to be allocated to non-overlap memory region.</p>
 <p>The interference graph captured the non-overlap nature, however, the partial reuse of tensors is under specified with the interference graph. Thus, we have our first structure to represent the constraints, and now we need our second structure to represent the solution.</p>
 <p>The second structure is an acyclic graph with edge weights for our solution. The acyclic graph with edge weights (the allocation graph) has one source node to represent the memory region buffer, a directional edge associated itself with a weight, that represent an allocation of <code class="docutils literal notranslate"><span class="pre">x</span></code> bytes from the edge’s source node to the its destination node. There is one dummy sink node that represents the buffer when its allocation is reclaimed. In this structure, two tensors could be connected only if they don’t interfere with each other, thus, the destination tensor can reuse part of the memory region from the source tensor.</p>
 <p>Based on the second structure, an iterative construction of the solution would be to insert tensor nodes into acyclic graph with infinite reservoir of outflow from source node to the sink node until all tensor nodes are inserted. At that point, the size of the buffer would be all weights of the source node’s outgoing edges. Our algorithm now reduced to the candidate tensor selection when forming this graph structure.</p>
-</div>
-<div class="section" id="candidate-selection">
-<h2>Candidate Selection<a class="headerlink" href="#candidate-selection" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="candidate-selection">
+<h2>Candidate Selection<a class="headerlink" href="#candidate-selection" title="Permalink to this heading">¶</a></h2>
 <p>A set of candidates are maintained for the graph insertion. Each candidate is a tuple of tensors (max of 3) that doesn’t interfere with each other. The candidate selection algorithm like this:</p>
 <ol class="arabic simple">
 <li><p>Go through all tensors that hasn’t been inserted, find the tensor that has the largest size, if multiple tensors have the same size, add them all to the set of candidates;</p></li>
@@ -335,9 +343,9 @@
 <li><p>Go through the ordered set of candidates, try to find an edge on the allocation graph such that the source of the edge and the destination of the edge don’t interfere with any tensors and none of the source or the destination of the edge are the dummy source or sink nodes. If such edge is found, we find the candidate.</p></li>
 <li><p>If none of the candidate can have such edge found in the allocation graph, we select the first candidate.</p></li>
 </ol>
-</div>
-<div class="section" id="insertion">
-<h2>Insertion<a class="headerlink" href="#insertion" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="insertion">
+<h2>Insertion<a class="headerlink" href="#insertion" title="Permalink to this heading">¶</a></h2>
 <p>The selected tuple of tensors then need to be inserted into the allocation graph. The insertion is straight-forward.</p>
 <ol class="arabic simple">
 <li><p>During selection, an edge is already picked, if it is not, we make a new edge with weight as the maximum size among the tuple of tensors from dummy source to the dummy sink node.</p></li>
@@ -349,14 +357,14 @@
 <li><p>Finally, edges from the all tensors to the destination will be inserted with the remaining weights.</p></li>
 </ol>
 <p>Repeat above until all tensors are connected in the allocation graph.</p>
-</div>
-<div class="section" id="intuition">
-<h2>Intuition<a class="headerlink" href="#intuition" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="intuition">
+<h2>Intuition<a class="headerlink" href="#intuition" title="Permalink to this heading">¶</a></h2>
 <p>Go with the tensor that has most interference is a common greedy strategy in register allocation. It removes most uncertainty that otherwise needs to branch over. However, it is not the most effective one for our use case. Unlike register allocation, in tensor computation graphs, there are less cases that one tensor will span over a large chunk of computations especially in inference stage. Thus, a lot of tensors will have identical number of edges in the interference graph.</p>
 <p>For our allocation algorithm, the allocation size is first used, and the interference is only used as the tie-breaker. Our insertion in the allocation graph has the limitation that after insertion, we can never merge the allocated blocks together into a larger block. Therefore, by going with the largest size first, It is more likely for us to reach the trivial solution in the allocation graph.</p>
-</div>
-<div class="section" id="loop">
-<h2>Loop<a class="headerlink" href="#loop" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="loop">
+<h2>Loop<a class="headerlink" href="#loop" title="Permalink to this heading">¶</a></h2>
 <p>Tensor allocation with loop has to have a very specific definition of what a loop is. More broadly speaking, the types of control structure in a computation graph to support directly relevant to the allocation algorithm. The loop we specifically concerned are the ones with one conditional statement to exit the loop (traditional while-loop). For NNC tensor allocation algorithm to work, a new construct, called multi-view tensor, need to be introduced. Alternatively, the algorithm introduced here will be applicable to a specific loop that contains multiple conditional exits and phi function.</p>
 <p>If you accept that certain data transfer is required for loop to work, the loop handling for tensor allocation algorithm is trivial. <strong>A loop can be considered as a sub-computation graph</strong>, and the same allocation algorithm can be applied to the sub-computation graph. When reached the end of the graph and we need to loop over again, data can then be transferred to the parameters.</p>
 <p>For example, if you have:</p>
@@ -366,14 +374,14 @@
 </pre></div>
 </div>
 <p>The tensor allocation algorithm is trivial is we accept that we need to transfer data from <code class="docutils literal notranslate"><span class="pre">y</span></code> to <code class="docutils literal notranslate"><span class="pre">x</span></code> every time. This section however, we will discuss how to completely eliminate such data transfer with a novel and generic tensor allocation scheme.</p>
-</div>
-<div class="section" id="multi-view-tensor">
-<h2>Multi-view Tensor<a class="headerlink" href="#multi-view-tensor" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="multi-view-tensor">
+<h2>Multi-view Tensor<a class="headerlink" href="#multi-view-tensor" title="Permalink to this heading">¶</a></h2>
 <p>This is a special tensor that with nested structure. For a leaf multi-view tensor, it can point to multiple memory regions based on the loop counter. Particularly, a multi-view tensor can be configured with a repeat length. Its pointer will be updated prior to the actual computation each round the the correct memory region: <code class="docutils literal notranslate"><span class="pre">ptr</span> <span class="pre">=</span> <span class="pre">ptrs[loop_counter</span> <span class="pre">%</span> <span class="pre">repeat_length]</span></code>. There are some complications such as the support for two types of multi-view tensors. Type I will be the one described above. Type II will have a special memory region that only used when <code class="docutils literal notranslate"><span class="pre">loop_counter</span> <span class="pre">==</span> <span class="pre">0</span></code>.</p>
 <p>A multi-view tensor can not only points to memory regions, but to a set of other multi-view tensors, following the same semantics, thus, the nested structure.</p>
-</div>
-<div class="section" id="loop-with-efficient-tensor-allocation">
-<h2>Loop with Efficient Tensor Allocation<a class="headerlink" href="#loop-with-efficient-tensor-allocation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="loop-with-efficient-tensor-allocation">
+<h2>Loop with Efficient Tensor Allocation<a class="headerlink" href="#loop-with-efficient-tensor-allocation" title="Permalink to this heading">¶</a></h2>
 <p>Above are all the constructs we need to implement efficient tensor allocation algorithm (the efficient here means no data transfer required).</p>
 <p>For each parameter, we first identify whether co-allocating them to the same memory region is sufficient. In some cases, they are, thus, we can simply do that and then apply our tensor allocation algorithm to the sub-computation graph.</p>
 <p>However, in some cases (like the superficial case we made above), it is not possible. For these, we need to <em>unroll</em> the loop.</p>
@@ -392,16 +400,16 @@
 <p>It can be proved that any loop can be unrolled into a form that the parameters can be co-allocated. The exercise will be left to readers on how to use this to tackle something like <code class="docutils literal notranslate"><span class="pre">x[c]</span> <span class="pre">=</span> <span class="pre">Convolution(x[c</span> <span class="pre">-</span> <span class="pre">4],</span> <span class="pre">w,</span> <span class="pre">b)</span></code> which requires to access variable from several loops before.</p>
 <p>Once a loop can co-allocate all its parameters after unrolling, we can apply the tensor allocation algorithm on the unrolled computation graph.</p>
 <p>The allocation on the unrolled computation graph then can be used to create the multi-view tensors. Now, the repeat length on the multi-view tensors correspond to how many times we unrolled the loop. Each memory region will be pointing to corresponding tensor on the unrolled computation graph as well.</p>
-</div>
-<div class="section" id="sub-computation-graph">
-<h2>Sub-Computation Graph<a class="headerlink" href="#sub-computation-graph" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="sub-computation-graph">
+<h2>Sub-Computation Graph<a class="headerlink" href="#sub-computation-graph" title="Permalink to this heading">¶</a></h2>
 <p>Sub-computation graph’s tensor allocation generated number of buffers and each buffer size. These will be used as regular tensor in the parent computation graph. The whole allocation algorithm then becomes recursive.</p>
-</div>
-<div class="section" id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>
 <p>I believe the above algorithm is the first to address the tensor allocation problem with partial memory reuse and loop efficiency in mind. This algorithm is also presented as an extensible framework that can be considered in the future to support more control structures.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -451,17 +459,16 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'a deep learning framework from ccv',
-            LANGUAGE:'None',
+            LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
 
   
 

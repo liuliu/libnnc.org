@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Symbolic graph simplification &mdash; nnc, a deep learning framework from ccv</title>
@@ -26,6 +27,8 @@
 
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
     <link rel="next" title="Construct a “while” loop in a symbolic graph" href="../group__level__3__5__while_symbolic_while/" />
@@ -48,12 +51,9 @@
           
 
           
-            <a href="../../../">
+            <a href="../../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -238,12 +238,9 @@
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           
-            <a href="../../../">
+            <a href="../../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
         
@@ -299,13 +296,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="symbolic-graph-simplification">
-<h1>Symbolic graph simplification<a class="headerlink" href="#symbolic-graph-simplification" title="Permalink to this headline">¶</a></h1>
+  <section id="symbolic-graph-simplification">
+<h1>Symbolic graph simplification<a class="headerlink" href="#symbolic-graph-simplification" title="Permalink to this heading">¶</a></h1>
 <p>We make a distinction between graph simplifications and optimizations (autotune).</p>
 <p>Simplification: rewrite the graph and the resulting graph will have less nodes. This is done on the symbolic graph only. Passes that is “simplification” include pruning, common sub-expression eliminations, constant folding etc.</p>
 <p>Optimization (autotune): graph optimization can have more objectives. The most obvious objective is to reduce computation time. For symbolic graph, passes that reduces computation time include data layout optimizations, auto parallel etc (in normal optimization implementations, they have a cost model to guide the optimization. NNC’s implementation uses a cost database that profiles the time cost on the device to guide the optimization. We call it autotune to distinguish with the normal optimization passes because we need device profile data). There could be other objectives, for example, in many deep learning applications, reducing memory footprint can be desirable. However, as always in computer science, memory and time is a typical trade-off. Memory optimization almost always results longer computation time, and the objective is to trade between these two with a bias term (in other frameworks such as TensorFlow, the memory optimizer uses a list of “cheap ops” to bias between the time and memory footprint).</p>
 <p>For graph optimizations, it can happen on both the symbolic graph level as well as the concrete graph level. For NNC, symbolic graph is already very explicit (data layout, device allocation and data transfer between devices / nodes, even the command backend can all be specified on the symbolic graph), however, some information is unknown until it is compiled down to concrete graph (tensor addresses, tensor initialization etc.), and since graph optimizations need all the information to optimize. Keeping the flexibility to do optimization on both symbolic and concrete graph level seems reasonable.</p>
-</div>
+</section>
 
 
            </div>
@@ -355,17 +352,16 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
             VERSION:'a deep learning framework from ccv',
-            LANGUAGE:'None',
+            LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
 
   
 

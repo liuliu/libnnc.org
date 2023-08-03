@@ -1,0 +1,1241 @@
+{
+  "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift" : {
+    "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
+    "key.length" : 7380,
+    "key.offset" : 0,
+    "key.substructure" : [
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public struct GradScaler<\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 14
+          }
+        ],
+        "key.bodylength" : 7338,
+        "key.bodyoffset" : 40,
+        "key.column" : 15,
+        "key.decl_lang" : "source.lang.swift",
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>GradScaler<\/decl.name><\/decl.struct>",
+        "key.kind" : "source.lang.swift.decl.struct",
+        "key.length" : 7358,
+        "key.line" : 3,
+        "key.modulename" : "main",
+        "key.name" : "GradScaler",
+        "key.namelength" : 10,
+        "key.nameoffset" : 28,
+        "key.offset" : 21,
+        "key.parsed_declaration" : "public struct GradScaler",
+        "key.parsed_scope.end" : 190,
+        "key.parsed_scope.start" : 3,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var scale: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 43
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>scale<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 16,
+            "key.line" : 4,
+            "key.modulename" : "main",
+            "key.name" : "scale",
+            "key.namelength" : 5,
+            "key.nameoffset" : 54,
+            "key.offset" : 50,
+            "key.parsed_declaration" : "public var scale: Float",
+            "key.parsed_scope.end" : 4,
+            "key.parsed_scope.start" : 4,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF\">scale(_:streamContext:)<\/RelatedName>"
+              }
+            ],
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main10GradScalerV5scaleSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var growthFactor: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 69
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>growthFactor<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.line" : 5,
+            "key.modulename" : "main",
+            "key.name" : "growthFactor",
+            "key.namelength" : 12,
+            "key.nameoffset" : 80,
+            "key.offset" : 76,
+            "key.parsed_declaration" : "public var growthFactor: Float",
+            "key.parsed_scope.end" : 5,
+            "key.parsed_scope.start" : 5,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main10GradScalerV12growthFactorSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var backoffFactor: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 102
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>backoffFactor<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 24,
+            "key.line" : 6,
+            "key.modulename" : "main",
+            "key.name" : "backoffFactor",
+            "key.namelength" : 13,
+            "key.nameoffset" : 113,
+            "key.offset" : 109,
+            "key.parsed_declaration" : "public var backoffFactor: Float",
+            "key.parsed_scope.end" : 6,
+            "key.parsed_scope.start" : 6,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Float",
+            "key.typeusr" : "$sSfD",
+            "key.usr" : "s:4main10GradScalerV13backoffFactorSfvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public var growthInterval: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 136
+              }
+            ],
+            "key.column" : 14,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>growthInterval<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 23,
+            "key.line" : 7,
+            "key.modulename" : "main",
+            "key.name" : "growthInterval",
+            "key.namelength" : 14,
+            "key.nameoffset" : 147,
+            "key.offset" : 143,
+            "key.parsed_declaration" : "public var growthInterval: Int",
+            "key.parsed_scope.end" : 7,
+            "key.parsed_scope.start" : 7,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.public",
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:4main10GradScalerV14growthIntervalSivp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private var unscaled: <Type usr=\"s:Sb\">Bool<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 169
+              }
+            ],
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>unscaled<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 18,
+            "key.line" : 8,
+            "key.modulename" : "main",
+            "key.name" : "unscaled",
+            "key.namelength" : 8,
+            "key.nameoffset" : 181,
+            "key.offset" : 177,
+            "key.parsed_declaration" : "private var unscaled: Bool",
+            "key.parsed_scope.end" : 8,
+            "key.parsed_scope.start" : 8,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.private",
+            "key.typename" : "Bool",
+            "key.typeusr" : "$sSbD",
+            "key.usr" : "s:4main10GradScalerV8unscaled33_5CC1018E7508EEE0AF2D28DD24B8E0D9LLSbvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private var step: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 198
+              }
+            ],
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>step<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 13,
+            "key.line" : 9,
+            "key.modulename" : "main",
+            "key.name" : "step",
+            "key.namelength" : 4,
+            "key.nameoffset" : 210,
+            "key.offset" : 206,
+            "key.parsed_declaration" : "private var step: Int",
+            "key.parsed_scope.end" : 9,
+            "key.parsed_scope.start" : 9,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF\">step&lt;T&gt;(_: inout [T], streamContext: StreamContext? = nil) where T : Optimizer<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF\">step&lt;T&gt;(_: inout T, streamContext: StreamContext? = nil) where T : Optimizer<\/RelatedName>"
+              }
+            ],
+            "key.setter_accessibility" : "source.lang.swift.accessibility.private",
+            "key.typename" : "Int",
+            "key.typeusr" : "$sSiD",
+            "key.usr" : "s:4main10GradScalerV4step33_5CC1018E7508EEE0AF2D28DD24B8E0D9LLSivp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(scale: <Type usr=\"s:Sf\">Float<\/Type> = 65536, growthFactor: <Type usr=\"s:Sf\">Float<\/Type> = 2, backoffFactor: <Type usr=\"s:Sf\">Float<\/Type> = 0.5, growthInterval: <Type usr=\"s:Si\">Int<\/Type> = 2_000)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 222
+              }
+            ],
+            "key.bodylength" : 177,
+            "key.bodyoffset" : 351,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>scale<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 65536<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>growthFactor<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 2<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>backoffFactor<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type> = 0.5<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>growthInterval<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Si\">Int<\/ref.struct><\/decl.var.parameter.type> = 2_000<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 300,
+            "key.line" : 10,
+            "key.modulename" : "main",
+            "key.name" : "init(scale:growthFactor:backoffFactor:growthInterval:)",
+            "key.namelength" : 120,
+            "key.nameoffset" : 229,
+            "key.offset" : 229,
+            "key.parsed_declaration" : "public init(\n  scale: Float = 65536, growthFactor: Float = 2, backoffFactor: Float = 0.5,\n  growthInterval: Int = 2_000\n)",
+            "key.parsed_scope.end" : 20,
+            "key.parsed_scope.start" : 10,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(GradScaler.Type) -> (Float, Float, Float, Int) -> GradScaler",
+            "key.typeusr" : "$s5scale12growthFactor07backoffC00B8Interval4main10GradScalerVSf_S2fSitcD",
+            "key.usr" : "s:4main10GradScalerV5scale12growthFactor07backoffF00E8IntervalACSf_S2fSitcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public func scale&lt;T&gt;(_ loss: <Type usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/Type>, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) -&gt; <Type usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/Type> where <Type usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/Type> : <Type usr=\"s:4main24DynamicGraph_TensorGroupP\">DynamicGraph_TensorGroup<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 532
+              }
+            ],
+            "key.bodylength" : 312,
+            "key.bodyoffset" : 639,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>scale<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>loss<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main24DynamicGraph_TensorGroupP\">DynamicGraph_TensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 413,
+            "key.line" : 21,
+            "key.modulename" : "main",
+            "key.name" : "scale(_:streamContext:)",
+            "key.namelength" : 82,
+            "key.nameoffset" : 544,
+            "key.offset" : 539,
+            "key.parsed_declaration" : "public func scale<T: DynamicGraph.TensorGroup>(_ loss: T, streamContext: StreamContext? = nil)\n  -> T",
+            "key.parsed_scope.end" : 34,
+            "key.parsed_scope.start" : 21,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV5scaleSfvp\">scale<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC11TensorGroupa\">TensorGroup<\/Type><\/Declaration>",
+                "key.column" : 21,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 24,
+                    "key.offset" : 553
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>T<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.typealias usr=\"s:4main12DynamicGraphC11TensorGroupa\">TensorGroup<\/ref.typealias><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "DynamicGraph.TensorGroup"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 27,
+                "key.line" : 21,
+                "key.modulename" : "main",
+                "key.name" : "T",
+                "key.namelength" : 1,
+                "key.nameoffset" : 550,
+                "key.offset" : 550,
+                "key.parsed_declaration" : "public func scale<T: DynamicGraph.TensorGroup",
+                "key.parsed_scope.end" : 21,
+                "key.parsed_scope.start" : 21,
+                "key.typename" : "T.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var loss: <Type usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/Type><\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>loss<\/decl.name>: <decl.var.type><ref.generic_type_param usr=\"s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 15,
+                "key.line" : 24,
+                "key.modulename" : "main",
+                "key.name" : "loss",
+                "key.namelength" : 4,
+                "key.nameoffset" : 648,
+                "key.offset" : 644,
+                "key.parsed_declaration" : "var loss = loss",
+                "key.parsed_scope.end" : 24,
+                "key.parsed_scope.start" : 24,
+                "key.typename" : "T",
+                "key.typeusr" : "$sxD",
+                "key.usr" : "s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF4lossL0_xvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type><\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 22,
+                "key.line" : 25,
+                "key.modulename" : "main",
+                "key.name" : "graph",
+                "key.namelength" : 5,
+                "key.nameoffset" : 668,
+                "key.offset" : 664,
+                "key.parsed_declaration" : "let graph = loss.graph",
+                "key.parsed_scope.end" : 25,
+                "key.parsed_scope.start" : 25,
+                "key.typename" : "DynamicGraph",
+                "key.typeusr" : "$s4main12DynamicGraphCD",
+                "key.usr" : "s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF5graphL_AA0hI0Cvp"
+              }
+            ],
+            "key.typename" : "<T where T : DynamicGraph_TensorGroup> (GradScaler) -> (T, StreamContext?) -> T",
+            "key.typeusr" : "$s_13streamContextxx_4main06StreamB0CSgtcAB24DynamicGraph_TensorGroupRzluD",
+            "key.usr" : "s:4main10GradScalerV5scale_13streamContextxx_AA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private func isNaN&lt;T&gt;(_ optimizers: [<Type usr=\"s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type>], streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) -&gt; <Type usr=\"s:Sb\">Bool<\/Type> where <Type usr=\"s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type> : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 955
+              }
+            ],
+            "key.bodylength" : 2027,
+            "key.bodyoffset" : 1053,
+            "key.column" : 16,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>isNaN<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>optimizers<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 2118,
+            "key.line" : 35,
+            "key.modulename" : "main",
+            "key.name" : "isNaN(_:streamContext:)",
+            "key.namelength" : 75,
+            "key.nameoffset" : 968,
+            "key.offset" : 963,
+            "key.parsed_declaration" : "private func isNaN<T: Optimizer>(_ optimizers: [T], streamContext: StreamContext? = nil) -> Bool",
+            "key.parsed_scope.end" : 86,
+            "key.parsed_scope.start" : 35,
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+                "key.column" : 22,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 9,
+                    "key.offset" : 977
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>T<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "Optimizer"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 12,
+                "key.line" : 35,
+                "key.modulename" : "main",
+                "key.name" : "T",
+                "key.namelength" : 1,
+                "key.nameoffset" : 974,
+                "key.offset" : 974,
+                "key.parsed_declaration" : "private func isNaN<T: Optimizer",
+                "key.parsed_scope.end" : 35,
+                "key.parsed_scope.start" : 35,
+                "key.typename" : "T.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF1TL_xmfp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type><\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 31,
+                "key.line" : 37,
+                "key.modulename" : "main",
+                "key.name" : "graph",
+                "key.namelength" : 5,
+                "key.nameoffset" : 1101,
+                "key.offset" : 1097,
+                "key.parsed_declaration" : "let graph = optimizers[0].graph",
+                "key.parsed_scope.end" : 37,
+                "key.parsed_scope.start" : 37,
+                "key.typename" : "DynamicGraph",
+                "key.typeusr" : "$s4main12DynamicGraphCD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF5graphL_AA12DynamicGraphCvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let _streamContext: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type>?<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_streamContext<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct>?<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 68,
+                "key.line" : 38,
+                "key.modulename" : "main",
+                "key.name" : "_streamContext",
+                "key.namelength" : 14,
+                "key.nameoffset" : 1137,
+                "key.offset" : 1133,
+                "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
+                "key.parsed_scope.end" : 38,
+                "key.parsed_scope.start" : 38,
+                "key.typename" : "OpaquePointer?",
+                "key.typeusr" : "$ss13OpaquePointerVSgD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF01_oP0L_s13OpaquePointerVSgvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 53,
+                "key.line" : 39,
+                "key.modulename" : "main",
+                "key.name" : "parameters",
+                "key.namelength" : 10,
+                "key.nameoffset" : 1210,
+                "key.offset" : 1206,
+                "key.parsed_declaration" : "let parameters = optimizers.flatMap { $0.parameters }",
+                "key.parsed_scope.end" : 39,
+                "key.parsed_scope.start" : 39,
+                "key.typename" : "[DynamicGraph_AnyParameters]",
+                "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF10parametersL_SayAA26DynamicGraph_AnyParameters_pGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let modelParameters: [<Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>modelParameters<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 71,
+                "key.line" : 40,
+                "key.modulename" : "main",
+                "key.name" : "modelParameters",
+                "key.namelength" : 15,
+                "key.nameoffset" : 1268,
+                "key.offset" : 1264,
+                "key.parsed_declaration" : "let modelParameters = parameters.compactMap { $0 as? Model.Parameters }",
+                "key.parsed_scope.end" : 40,
+                "key.parsed_scope.start" : 40,
+                "key.typename" : "[Model.Parameters]",
+                "key.typeusr" : "$sSay4main5ModelC10ParametersCGD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF15modelParametersL_SayAA5ModelC0T0CGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let primaryModelParameters: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>primaryModelParameters<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 123,
+                "key.line" : 41,
+                "key.modulename" : "main",
+                "key.name" : "primaryModelParameters",
+                "key.namelength" : 22,
+                "key.nameoffset" : 1344,
+                "key.offset" : 1340,
+                "key.parsed_declaration" : "let primaryModelParameters = modelParameters.filter {\n  $0._io == $0.model!._parameters && $0.model!.owner == nil\n}",
+                "key.parsed_scope.end" : 41,
+                "key.parsed_scope.start" : 41,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF22primaryModelParametersL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var models: <Type usr=\"s:Sh\">Set<\/Type>&lt;<Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type>&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>models<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sh\">Set<\/ref.struct>&lt;<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 92,
+                "key.line" : 44,
+                "key.modulename" : "main",
+                "key.name" : "models",
+                "key.namelength" : 6,
+                "key.nameoffset" : 1472,
+                "key.offset" : 1468,
+                "key.parsed_declaration" : "var models = Set(modelParameters.map { HashableModel(model: $0.model!.owner ?? $0.model!) })",
+                "key.parsed_scope.end" : 44,
+                "key.parsed_scope.start" : 44,
+                "key.typename" : "Set<HashableModel>",
+                "key.typeusr" : "$sShy4main13HashableModelVGD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF6modelsL_ShyAA13HashableModelVGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var modelParametersMap: [<Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type> : [<Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>]]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>modelParametersMap<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct> : [<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class>]]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 62,
+                "key.line" : 55,
+                "key.modulename" : "main",
+                "key.name" : "modelParametersMap",
+                "key.namelength" : 18,
+                "key.nameoffset" : 1954,
+                "key.offset" : 1950,
+                "key.parsed_declaration" : "var modelParametersMap = [HashableModel: [Model.Parameters]]()",
+                "key.parsed_scope.end" : 55,
+                "key.parsed_scope.start" : 55,
+                "key.typename" : "[HashableModel : [Model.Parameters]]",
+                "key.typeusr" : "$sSDy4main13HashableModelVSayAA0C0C10ParametersCGGD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF18modelParametersMapL_SDyAA13HashableModelVSayAA0W0C0T0CGGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let tensorParameters: [<Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>tensorParameters<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 78,
+                "key.line" : 73,
+                "key.modulename" : "main",
+                "key.name" : "tensorParameters",
+                "key.namelength" : 16,
+                "key.nameoffset" : 2689,
+                "key.offset" : 2685,
+                "key.parsed_declaration" : "let tensorParameters = parameters.compactMap { $0 as? DynamicGraph.AnyTensor }",
+                "key.parsed_scope.end" : 73,
+                "key.parsed_scope.start" : 73,
+                "key.typename" : "[DynamicGraph.AnyTensor]",
+                "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF16tensorParametersL_SayAA12DynamicGraphC9AnyTensorCGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let groupParameters: [<Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;<Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type>&gt;]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>groupParameters<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;<ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class>&gt;]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 73,
+                "key.line" : 79,
+                "key.modulename" : "main",
+                "key.name" : "groupParameters",
+                "key.namelength" : 15,
+                "key.nameoffset" : 2882,
+                "key.offset" : 2878,
+                "key.parsed_declaration" : "let groupParameters = parameters.compactMap { $0 as? DynamicGraph.Group }",
+                "key.parsed_scope.end" : 79,
+                "key.parsed_scope.start" : 79,
+                "key.typename" : "[DynamicGraph.Group<DynamicGraph.AnyTensor>]",
+                "key.typeusr" : "$sSay4main12DynamicGraphC5GroupVy_AC9AnyTensorCGGD",
+                "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF15groupParametersL_SayAA12DynamicGraphC5GroupVy_AN9AnyTensorCGGvp"
+              }
+            ],
+            "key.typename" : "<T where T : Optimizer> (GradScaler) -> ([T], StreamContext?) -> Bool",
+            "key.typeusr" : "$s_13streamContextSbSayxG_4main06StreamB0CSgtcAC9OptimizerRzluD",
+            "key.usr" : "s:4main10GradScalerV5isNaN33_5CC1018E7508EEE0AF2D28DD24B8E0D9LL_13streamContextSbSayxG_AA06StreamP0CSgtAA9OptimizerRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public mutating func unscale&lt;T&gt;(_ optimizers: [<Type usr=\"s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type>], streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) where <Type usr=\"s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type> : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.mutating",
+                "key.length" : 8,
+                "key.offset" : 3091
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 3084
+              }
+            ],
+            "key.bodylength" : 2417,
+            "key.bodyoffset" : 3186,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>unscale<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>optimizers<\/decl.var.parameter.name>: <decl.var.parameter.type>[<ref.generic_type_param usr=\"s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 2504,
+            "key.line" : 87,
+            "key.modulename" : "main",
+            "key.name" : "unscale(_:streamContext:)",
+            "key.namelength" : 77,
+            "key.nameoffset" : 3105,
+            "key.offset" : 3100,
+            "key.parsed_declaration" : "public mutating func unscale<T: Optimizer>(_ optimizers: [T], streamContext: StreamContext? = nil)",
+            "key.parsed_scope.end" : 139,
+            "key.parsed_scope.start" : 87,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV7unscale_13streamContextyx_AA06StreamF0CSgtAA9OptimizerRzlF\">unscale&lt;T&gt;(_: T, streamContext: StreamContext? = nil) where T : Optimizer<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+                "key.column" : 32,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 9,
+                    "key.offset" : 3116
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>T<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "Optimizer"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 12,
+                "key.line" : 87,
+                "key.modulename" : "main",
+                "key.name" : "T",
+                "key.namelength" : 1,
+                "key.nameoffset" : 3113,
+                "key.offset" : 3113,
+                "key.parsed_declaration" : "public mutating func unscale<T: Optimizer",
+                "key.parsed_scope.end" : 87,
+                "key.parsed_scope.start" : 87,
+                "key.typename" : "T.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let graph: <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type><\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>graph<\/decl.name>: <decl.var.type><ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 31,
+                "key.line" : 90,
+                "key.modulename" : "main",
+                "key.name" : "graph",
+                "key.namelength" : 5,
+                "key.nameoffset" : 3234,
+                "key.offset" : 3230,
+                "key.parsed_declaration" : "let graph = optimizers[0].graph",
+                "key.parsed_scope.end" : 90,
+                "key.parsed_scope.start" : 90,
+                "key.typename" : "DynamicGraph",
+                "key.typeusr" : "$s4main12DynamicGraphCD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF5graphL_AA12DynamicGraphCvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let _streamContext: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type>?<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_streamContext<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct>?<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 68,
+                "key.line" : 91,
+                "key.modulename" : "main",
+                "key.name" : "_streamContext",
+                "key.namelength" : 14,
+                "key.nameoffset" : 3270,
+                "key.offset" : 3266,
+                "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
+                "key.parsed_scope.end" : 91,
+                "key.parsed_scope.start" : 91,
+                "key.typename" : "OpaquePointer?",
+                "key.typeusr" : "$ss13OpaquePointerVSgD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF01_eF0L_s13OpaquePointerVSgvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 53,
+                "key.line" : 92,
+                "key.modulename" : "main",
+                "key.name" : "parameters",
+                "key.namelength" : 10,
+                "key.nameoffset" : 3343,
+                "key.offset" : 3339,
+                "key.parsed_declaration" : "let parameters = optimizers.flatMap { $0.parameters }",
+                "key.parsed_scope.end" : 92,
+                "key.parsed_scope.start" : 92,
+                "key.typename" : "[DynamicGraph_AnyParameters]",
+                "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF10parametersL_SayAA26DynamicGraph_AnyParameters_pGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let modelParameters: [<Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>modelParameters<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 71,
+                "key.line" : 93,
+                "key.modulename" : "main",
+                "key.name" : "modelParameters",
+                "key.namelength" : 15,
+                "key.nameoffset" : 3401,
+                "key.offset" : 3397,
+                "key.parsed_declaration" : "let modelParameters = parameters.compactMap { $0 as? Model.Parameters }",
+                "key.parsed_scope.end" : 93,
+                "key.parsed_scope.start" : 93,
+                "key.typename" : "[Model.Parameters]",
+                "key.typeusr" : "$sSay4main5ModelC10ParametersCGD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF15modelParametersL_SayAA5ModelC0J0CGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let primaryModelParameters: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>primaryModelParameters<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 123,
+                "key.line" : 94,
+                "key.modulename" : "main",
+                "key.name" : "primaryModelParameters",
+                "key.namelength" : 22,
+                "key.nameoffset" : 3477,
+                "key.offset" : 3473,
+                "key.parsed_declaration" : "let primaryModelParameters = modelParameters.filter {\n  $0._io == $0.model!._parameters && $0.model!.owner == nil\n}",
+                "key.parsed_scope.end" : 94,
+                "key.parsed_scope.start" : 94,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF22primaryModelParametersL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var models: <Type usr=\"s:Sh\">Set<\/Type>&lt;<Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type>&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>models<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sh\">Set<\/ref.struct>&lt;<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct>&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 92,
+                "key.line" : 97,
+                "key.modulename" : "main",
+                "key.name" : "models",
+                "key.namelength" : 6,
+                "key.nameoffset" : 3605,
+                "key.offset" : 3601,
+                "key.parsed_declaration" : "var models = Set(modelParameters.map { HashableModel(model: $0.model!.owner ?? $0.model!) })",
+                "key.parsed_scope.end" : 97,
+                "key.parsed_scope.start" : 97,
+                "key.typename" : "Set<HashableModel>",
+                "key.typeusr" : "$sShy4main13HashableModelVGD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF6modelsL_ShyAA13HashableModelVGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var params: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>params<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 49,
+                "key.line" : 98,
+                "key.modulename" : "main",
+                "key.name" : "params",
+                "key.namelength" : 6,
+                "key.nameoffset" : 3702,
+                "key.offset" : 3698,
+                "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
+                "key.parsed_scope.end" : 98,
+                "key.parsed_scope.start" : 98,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF6paramsL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let scalmul: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>scalmul<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 69,
+                "key.line" : 101,
+                "key.modulename" : "main",
+                "key.name" : "scalmul",
+                "key.namelength" : 7,
+                "key.nameoffset" : 3855,
+                "key.offset" : 3851,
+                "key.parsed_declaration" : "let scalmul = ccv_nnc_cmd(CCV_NNC_SCALAR_MUL_FORWARD, nil, params, 0)",
+                "key.parsed_scope.end" : 101,
+                "key.parsed_scope.start" : 101,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF7scalmulL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var modelParametersMap: [<Type usr=\"s:4main13HashableModelV\">HashableModel<\/Type> : [<Type usr=\"s:4main5ModelC\">Model<\/Type>.<Type usr=\"s:4main5ModelC10ParametersC\">Parameters<\/Type>]]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>modelParametersMap<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:4main13HashableModelV\">HashableModel<\/ref.struct> : [<ref.class usr=\"s:4main5ModelC\">Model<\/ref.class>.<ref.class usr=\"s:4main5ModelC10ParametersC\">Parameters<\/ref.class>]]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 62,
+                "key.line" : 110,
+                "key.modulename" : "main",
+                "key.name" : "modelParametersMap",
+                "key.namelength" : 18,
+                "key.nameoffset" : 4322,
+                "key.offset" : 4318,
+                "key.parsed_declaration" : "var modelParametersMap = [HashableModel: [Model.Parameters]]()",
+                "key.parsed_scope.end" : 110,
+                "key.parsed_scope.start" : 110,
+                "key.typename" : "[HashableModel : [Model.Parameters]]",
+                "key.typeusr" : "$sSDy4main13HashableModelVSayAA0C0C10ParametersCGGD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF18modelParametersMapL_SDyAA13HashableModelVSayAA0M0C0J0CGGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let tensorParameters: [<Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>tensorParameters<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 78,
+                "key.line" : 126,
+                "key.modulename" : "main",
+                "key.name" : "tensorParameters",
+                "key.namelength" : 16,
+                "key.nameoffset" : 5061,
+                "key.offset" : 5057,
+                "key.parsed_declaration" : "let tensorParameters = parameters.compactMap { $0 as? DynamicGraph.AnyTensor }",
+                "key.parsed_scope.end" : 126,
+                "key.parsed_scope.start" : 126,
+                "key.typename" : "[DynamicGraph.AnyTensor]",
+                "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF16tensorParametersL_SayAA12DynamicGraphC9AnyTensorCGvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let groupParameters: [<Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/Type>&lt;<Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type>&gt;]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>groupParameters<\/decl.name>: <decl.var.type>[<ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.struct usr=\"s:4main12DynamicGraphC5GroupV\">Group<\/ref.struct>&lt;<ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class>&gt;]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 73,
+                "key.line" : 132,
+                "key.modulename" : "main",
+                "key.name" : "groupParameters",
+                "key.namelength" : 15,
+                "key.nameoffset" : 5328,
+                "key.offset" : 5324,
+                "key.parsed_declaration" : "let groupParameters = parameters.compactMap { $0 as? DynamicGraph.Group }",
+                "key.parsed_scope.end" : 132,
+                "key.parsed_scope.start" : 132,
+                "key.typename" : "[DynamicGraph.Group<DynamicGraph.AnyTensor>]",
+                "key.typeusr" : "$sSay4main12DynamicGraphC5GroupVy_AC9AnyTensorCGGD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF15groupParametersL_SayAA12DynamicGraphC5GroupVy_AM9AnyTensorCGGvp"
+              }
+            ],
+            "key.typename" : "<T where T : Optimizer> (inout GradScaler) -> ([T], StreamContext?) -> ()",
+            "key.typeusr" : "$s_13streamContextySayxG_4main06StreamB0CSgtcAC9OptimizerRzluD",
+            "key.usr" : "s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public mutating func step&lt;T&gt;(_ optimizers: inout [<Type usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type>], streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) where <Type usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type> : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.mutating",
+                "key.length" : 8,
+                "key.offset" : 5614
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 5607
+              }
+            ],
+            "key.bodylength" : 1275,
+            "key.bodyoffset" : 5718,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>optimizers<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.keyword>inout<\/syntaxtype.keyword> [<ref.generic_type_param usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 1371,
+            "key.line" : 140,
+            "key.modulename" : "main",
+            "key.name" : "step(_:streamContext:)",
+            "key.namelength" : 88,
+            "key.nameoffset" : 5628,
+            "key.offset" : 5623,
+            "key.parsed_declaration" : "public mutating func step<T: Optimizer>(\n  _ optimizers: inout [T], streamContext: StreamContext? = nil\n)",
+            "key.parsed_scope.end" : 180,
+            "key.parsed_scope.start" : 140,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV4step33_5CC1018E7508EEE0AF2D28DD24B8E0D9LLSivp\">step<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF\">step&lt;T&gt;(_: inout T, streamContext: StreamContext? = nil) where T : Optimizer<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+                "key.column" : 29,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 9,
+                    "key.offset" : 5636
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>T<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "Optimizer"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 12,
+                "key.line" : 140,
+                "key.modulename" : "main",
+                "key.name" : "T",
+                "key.namelength" : 1,
+                "key.nameoffset" : 5633,
+                "key.offset" : 5633,
+                "key.parsed_declaration" : "public mutating func step<T: Optimizer",
+                "key.parsed_scope.end" : 140,
+                "key.parsed_scope.start" : 140,
+                "key.typename" : "T.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let unscale: <Type usr=\"s:Sf\">Float<\/Type><\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>unscale<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 25,
+                "key.line" : 166,
+                "key.modulename" : "main",
+                "key.name" : "unscale",
+                "key.namelength" : 7,
+                "key.nameoffset" : 6557,
+                "key.offset" : 6553,
+                "key.parsed_declaration" : "let unscale = 1.0 \/ scale",
+                "key.parsed_scope.end" : 166,
+                "key.parsed_scope.start" : 166,
+                "key.typename" : "Float",
+                "key.typeusr" : "$sSfD",
+                "key.usr" : "s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF7unscaleL_Sfvp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var unscaledOptimizers: [<Type usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>unscaledOptimizers<\/decl.name>: <decl.var.type>[<ref.generic_type_param usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 133,
+                "key.line" : 167,
+                "key.modulename" : "main",
+                "key.name" : "unscaledOptimizers",
+                "key.namelength" : 18,
+                "key.nameoffset" : 6587,
+                "key.offset" : 6583,
+                "key.parsed_declaration" : "var unscaledOptimizers: [T] = optimizers.map {\n  var optimizer = $0\n  optimizer.scale *= unscale\n  return optimizer\n}",
+                "key.parsed_scope.end" : 167,
+                "key.parsed_scope.start" : 167,
+                "key.typename" : "[T]",
+                "key.typeusr" : "$sSayxGD",
+                "key.usr" : "s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF18unscaledOptimizersL_AFvp"
+              }
+            ],
+            "key.typename" : "<T where T : Optimizer> (inout GradScaler) -> (inout [T], StreamContext?) -> ()",
+            "key.typeusr" : "$s_13streamContextySayxGz_4main06StreamB0CSgtcAC9OptimizerRzluD",
+            "key.usr" : "s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public mutating func unscale&lt;T&gt;(_ optimizer: <Type usr=\"s:4main10GradScalerV7unscale_13streamContextyx_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type>, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) where <Type usr=\"s:4main10GradScalerV7unscale_13streamContextyx_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type> : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.mutating",
+                "key.length" : 8,
+                "key.offset" : 7004
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 6997
+              }
+            ],
+            "key.bodylength" : 58,
+            "key.bodyoffset" : 7094,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>unscale<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10GradScalerV7unscale_13streamContextyx_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>optimizer<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main10GradScalerV7unscale_13streamContextyx_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10GradScalerV7unscale_13streamContextyx_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 140,
+            "key.line" : 181,
+            "key.modulename" : "main",
+            "key.name" : "unscale(_:streamContext:)",
+            "key.namelength" : 74,
+            "key.nameoffset" : 7018,
+            "key.offset" : 7013,
+            "key.parsed_declaration" : "public mutating func unscale<T: Optimizer>(_ optimizer: T, streamContext: StreamContext? = nil)",
+            "key.parsed_scope.end" : 183,
+            "key.parsed_scope.start" : 181,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV7unscale_13streamContextySayxG_AA06StreamF0CSgtAA9OptimizerRzlF\">unscale&lt;T&gt;(_: [T], streamContext: StreamContext? = nil) where T : Optimizer<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+                "key.column" : 32,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 9,
+                    "key.offset" : 7029
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>T<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "Optimizer"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 12,
+                "key.line" : 181,
+                "key.modulename" : "main",
+                "key.name" : "T",
+                "key.namelength" : 1,
+                "key.nameoffset" : 7026,
+                "key.offset" : 7026,
+                "key.parsed_declaration" : "public mutating func unscale<T: Optimizer",
+                "key.parsed_scope.end" : 181,
+                "key.parsed_scope.start" : 181,
+                "key.typename" : "T.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main10GradScalerV7unscale_13streamContextyx_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp"
+              }
+            ],
+            "key.typename" : "<T where T : Optimizer> (inout GradScaler) -> (T, StreamContext?) -> ()",
+            "key.typeusr" : "$s_13streamContextyx_4main06StreamB0CSgtcAB9OptimizerRzluD",
+            "key.usr" : "s:4main10GradScalerV7unscale_13streamContextyx_AA06StreamF0CSgtAA9OptimizerRzlF"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public mutating func step&lt;T&gt;(_ optimizer: inout <Type usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type>, streamContext: <Type usr=\"s:4main13StreamContextC\">StreamContext<\/Type>? = nil) where <Type usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type> : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.mutating",
+                "key.length" : 8,
+                "key.offset" : 7163
+              },
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 7156
+              }
+            ],
+            "key.bodylength" : 118,
+            "key.bodyoffset" : 7258,
+            "key.column" : 24,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>mutating<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>step<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>optimizer<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.keyword>inout<\/syntaxtype.keyword> <ref.generic_type_param usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 205,
+            "key.line" : 184,
+            "key.modulename" : "main",
+            "key.name" : "step(_:streamContext:)",
+            "key.namelength" : 77,
+            "key.nameoffset" : 7177,
+            "key.offset" : 7172,
+            "key.parsed_declaration" : "public mutating func step<T: Optimizer>(_ optimizer: inout T, streamContext: StreamContext? = nil)",
+            "key.parsed_scope.end" : 189,
+            "key.parsed_scope.start" : 184,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV4step33_5CC1018E7508EEE0AF2D28DD24B8E0D9LLSivp\">step<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main10GradScalerV4step_13streamContextySayxGz_AA06StreamF0CSgtAA9OptimizerRzlF\">step&lt;T&gt;(_: inout [T], streamContext: StreamContext? = nil) where T : Optimizer<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main9OptimizerP\">Optimizer<\/Type><\/Declaration>",
+                "key.column" : 29,
+                "key.decl_lang" : "source.lang.swift",
+                "key.elements" : [
+                  {
+                    "key.kind" : "source.lang.swift.structure.elem.typeref",
+                    "key.length" : 9,
+                    "key.offset" : 7185
+                  }
+                ],
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.generic_type_param><decl.generic_type_param.name>T<\/decl.generic_type_param.name> : <decl.generic_type_param.constraint><ref.protocol usr=\"s:4main9OptimizerP\">Optimizer<\/ref.protocol><\/decl.generic_type_param.constraint><\/decl.generic_type_param>",
+                "key.inheritedtypes" : [
+                  {
+                    "key.name" : "Optimizer"
+                  }
+                ],
+                "key.kind" : "source.lang.swift.decl.generic_type_param",
+                "key.length" : 12,
+                "key.line" : 184,
+                "key.modulename" : "main",
+                "key.name" : "T",
+                "key.namelength" : 1,
+                "key.nameoffset" : 7182,
+                "key.offset" : 7182,
+                "key.parsed_declaration" : "public mutating func step<T: Optimizer",
+                "key.parsed_scope.end" : 184,
+                "key.parsed_scope.start" : 184,
+                "key.typename" : "T.Type",
+                "key.typeusr" : "$sxmD",
+                "key.usr" : "s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>var optimizers: [<Type usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/GradScaler.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>optimizers<\/decl.name>: <decl.var.type>[<ref.generic_type_param usr=\"s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF1TL_xmfp\">T<\/ref.generic_type_param>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 28,
+                "key.line" : 186,
+                "key.modulename" : "main",
+                "key.name" : "optimizers",
+                "key.namelength" : 10,
+                "key.nameoffset" : 7267,
+                "key.offset" : 7263,
+                "key.parsed_declaration" : "var optimizers = [optimizer]",
+                "key.parsed_scope.end" : 186,
+                "key.parsed_scope.start" : 186,
+                "key.typename" : "[T]",
+                "key.typeusr" : "$sSayxGD",
+                "key.usr" : "s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF10optimizersL_SayxGvp"
+              }
+            ],
+            "key.typename" : "<T where T : Optimizer> (inout GradScaler) -> (inout T, StreamContext?) -> ()",
+            "key.typeusr" : "$s_13streamContextyxz_4main06StreamB0CSgtcAB9OptimizerRzluD",
+            "key.usr" : "s:4main10GradScalerV4step_13streamContextyxz_AA06StreamF0CSgtAA9OptimizerRzlF"
+          }
+        ],
+        "key.typename" : "GradScaler.Type",
+        "key.typeusr" : "$s4main10GradScalerVmD",
+        "key.usr" : "s:4main10GradScalerV"
+      }
+    ]
+  }
+}

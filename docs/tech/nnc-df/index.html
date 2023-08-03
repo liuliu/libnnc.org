@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>NNC Dataframe &mdash; nnc, a deep learning framework from ccv</title>
@@ -26,9 +27,11 @@
 
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
-    <link rel="next" title="API Reference" href="../../api/" />
+    <link rel="next" title="NNC Micro Ops" href="../nnc-uops/" />
     <link rel="prev" title="NNC Common Neural Network Primitives" href="../nnc-cnnp/" /> 
 
   
@@ -48,12 +51,9 @@
           
 
           
-            <a href="../../">
+            <a href="../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -150,6 +150,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-uops/">NNC Micro Ops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#describe-micro-ops">Describe Micro Ops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#simplification">Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#loop-fusion">Loop-Fusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#variable-substitution">Variable Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#automatic-differentiation">Automatic Differentiation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API Reference</a><ul>
@@ -158,9 +167,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/level-1/">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_1/group__level__1__uops_micro_jittor/">The concept of meta-ops in Jittor is amazing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#tensors">Tensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#commands">Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#streams">Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#micro-ops">Micro Ops</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/level-2/">Level 2 API</a><ul>
@@ -227,12 +238,9 @@
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           
-            <a href="../../">
+            <a href="../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
         
@@ -286,38 +294,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="nnc-dataframe">
-<h1>NNC Dataframe<a class="headerlink" href="#nnc-dataframe" title="Permalink to this headline">¶</a></h1>
+  <section id="nnc-dataframe">
+<h1>NNC Dataframe<a class="headerlink" href="#nnc-dataframe" title="Permalink to this heading">¶</a></h1>
 <p>A simple dataframe API is provided to help manage data that needs to feed into the NNC graphs. Beyond that, a dataframe abstraction would work better for any machine learning framework because it handles data filtering, alignments, and batching.</p>
-<div class="section" id="operations-on-the-data">
-<h2>Operations on the Data<a class="headerlink" href="#operations-on-the-data" title="Permalink to this headline">¶</a></h2>
+<section id="operations-on-the-data">
+<h2>Operations on the Data<a class="headerlink" href="#operations-on-the-data" title="Permalink to this heading">¶</a></h2>
 <p>Data loaded into NNC’s dataframe API as rows and columns. We can iterate through rows with selected columns. Data can be shuffled. A new column can be derived from selected other columns, per the map function you specified. Multiple rows can be reduced into one row, per reduce function you specified.</p>
-</div>
-<div class="section" id="iteration">
-<h2>Iteration<a class="headerlink" href="#iteration" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="iteration">
+<h2>Iteration<a class="headerlink" href="#iteration" title="Permalink to this heading">¶</a></h2>
 <p>A iterator can be created with <a class="reference internal" href="../../api/level-5/#_CPPv427ccv_cnnp_dataframe_iter_newPC20ccv_cnnp_dataframe_tPCKiKi" title="ccv_cnnp_dataframe_iter_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_iter_new</span></code></a>. Which record to access can be controlled by <a class="reference internal" href="../../api/level-5/#_CPPv434ccv_cnnp_dataframe_iter_set_cursorPC25ccv_cnnp_dataframe_iter_tKi" title="ccv_cnnp_dataframe_iter_set_cursor"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_iter_set_cursor</span></code></a>. Reset the cursor will invalidate prefetched records. Records can be prefetched. If a record is prefetched, <a class="reference internal" href="../../api/level-5/#_CPPv428ccv_cnnp_dataframe_iter_nextPC25ccv_cnnp_dataframe_iter_tPCPvKiPC24ccv_nnc_stream_context_t" title="ccv_cnnp_dataframe_iter_next"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_iter_next</span></code></a> will simply return the record from prefetch cache.</p>
 <p>A stream context is used to coordinate data prefetch and iteration. If the stream context is provided, both prefetch and iteration are asynchronous and happens on the given stream context. A typical use case is to get record on one stream context, pass that record to a graph for computation with this stream context, and start prefetch immediately on a different stream context. When the graph computation is done, switch to the prefetch stream context to get the record and initiate another round of graph computation. Effectively, this allows us to overlap data preparation with actual computation.</p>
-</div>
-<div class="section" id="map">
-<h2>Map<a class="headerlink" href="#map" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="map">
+<h2>Map<a class="headerlink" href="#map" title="Permalink to this heading">¶</a></h2>
 <p>The data preparation pipeline can be long. Thus, dataframe API prefers <strong>pull</strong> for such processing. When a column is requested, it pulls in the data from other columns and then performs necessary transformations. It can include move data from CPU to a GPU device, applying data augmentation etc. The map function provided does the transformation.</p>
-</div>
-<div class="section" id="reduce">
-<h2>Reduce<a class="headerlink" href="#reduce" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="reduce">
+<h2>Reduce<a class="headerlink" href="#reduce" title="Permalink to this heading">¶</a></h2>
 <p>Multiple rows can be combined with a reduce function. Because reduce function generates data with different row count, a new dataframe is created (when map, only a new column within existing dataframe added). Similarly to map, when doing reduce, the data preparation pipeline performs a pull to the data. This is typically used to batch multiple records into one tensor to feed the graph.</p>
-</div>
-<div class="section" id="others">
-<h2>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="others">
+<h2>Others<a class="headerlink" href="#others" title="Permalink to this heading">¶</a></h2>
 <p>Comparing with other dataframe APIs, the implementation at this time is pretty raw. We don’t support sorting, or a more generic filtering (you can use reduce to do some filtering, but it is limited), or joining multiple dataframes. It is unclear to me how to implement these efficiently without worrying at certain point it becomes bottleneck. On the other hand, the above implementation is as efficient as you can get (because it is raw).</p>
-</div>
-<div class="section" id="use-dataframe-with-addons">
-<h2>Use Dataframe with Addons<a class="headerlink" href="#use-dataframe-with-addons" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="use-dataframe-with-addons">
+<h2>Use Dataframe with Addons<a class="headerlink" href="#use-dataframe-with-addons" title="Permalink to this heading">¶</a></h2>
 <p>The raw dataframe API (i.e. <a class="reference internal" href="../../api/level-5/#_CPPv422ccv_cnnp_dataframe_newPCK22ccv_cnnp_column_data_tKiKi" title="ccv_cnnp_dataframe_new"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_new</span></code></a>, <a class="reference internal" href="../../api/level-5/#_CPPv422ccv_cnnp_dataframe_mapPC20ccv_cnnp_dataframe_t26ccv_cnnp_column_data_map_fKi29ccv_cnnp_column_data_deinit_fPCKiKiPCv37ccv_cnnp_column_data_context_deinit_fPKc" title="ccv_cnnp_dataframe_map"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_map</span></code></a> and <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_reduce_new</span></code>) are hard to use. Unlike helper functions such as <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">CPU_TENSOR_NCHW</span></code> in <code class="docutils literal notranslate"><span class="pre">ccv_nnc_easy.h</span></code>, there is no helper functions to fill in the <a class="reference internal" href="../../api/level-5/#_CPPv422ccv_cnnp_column_data_t" title="ccv_cnnp_column_data_t"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ccv_cnnp_column_data_t</span></code></a>. This is intentional. You should interact dataframe with its addons API instead.</p>
 <p>The addons API are implemented with the raw dataframe API. It provides the ability to load data from <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ccv_array_t</span></code> (in the future, from CSV file and SQLite tables as well). Being able to iterate through a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ccv_array_t</span></code> doesn’t do much (you can do the same by iterating with for loop). The power comes from combining multiple operations on top of that. For example, if you have a <code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">ccv_array_t</span></code> of file names, you can use <a class="reference internal" href="../../api/level-5/#_CPPv429ccv_cnnp_dataframe_read_imagePC20ccv_cnnp_dataframe_tKiK5off_tPKc" title="ccv_cnnp_dataframe_read_image"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_read_image</span></code></a> to load these files as images. Certain image jitter can be applied with <a class="reference internal" href="../../api/level-5/#_CPPv438ccv_cnnp_dataframe_image_random_jitterPC20ccv_cnnp_dataframe_tKiKiK24ccv_cnnp_random_jitter_tPKc" title="ccv_cnnp_dataframe_image_random_jitter"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_image_random_jitter</span></code></a>. Finally, you can batch these images into tensors with <code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_cnnp_dataframe_batching_new</span></code>.</p>
 <p>When you iterate through the newly created dataframe, you can get the batched tensor one by one. More importantly, using dataframe also supports stream contexts. When you prefetch on one stream context, it is done asynchronously on that stream context. Rather than using a IO thread for data loader, this is NNC’s way of supporting asynchronous data loading v.s. training.</p>
 <p>Fundamentally, using dataframe with addons enables you to express computations independent of the actual execution. The actual execution (such as reading from disk, applying image random jitter or copying to GPU) only happens when you prefetch or iterate through it. This enables the powerful abstraction to load, manipulate and feed data into NNC’s training process.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -327,7 +335,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../api/" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../nnc-uops/" class="btn btn-neutral float-right" title="NNC Micro Ops" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../nnc-cnnp/" class="btn btn-neutral" title="NNC Common Neural Network Primitives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -367,17 +375,16 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'a deep learning framework from ccv',
-            LANGUAGE:'None',
+            LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
 
   
 

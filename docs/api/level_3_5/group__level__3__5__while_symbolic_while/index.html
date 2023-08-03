@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Construct a “while” loop in a symbolic graph &mdash; nnc, a deep learning framework from ccv</title>
@@ -26,6 +27,8 @@
 
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
     <link rel="next" title="Level 4 API" href="../../level-4/" />
@@ -48,12 +51,9 @@
           
 
           
-            <a href="../../../">
+            <a href="../../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -238,12 +238,9 @@
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           
-            <a href="../../../">
+            <a href="../../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
         
@@ -299,8 +296,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="construct-a-while-loop-in-a-symbolic-graph">
-<h1>Construct a “while” loop in a symbolic graph<a class="headerlink" href="#construct-a-while-loop-in-a-symbolic-graph" title="Permalink to this headline">¶</a></h1>
+  <section id="construct-a-while-loop-in-a-symbolic-graph">
+<h1>Construct a “while” loop in a symbolic graph<a class="headerlink" href="#construct-a-while-loop-in-a-symbolic-graph" title="Permalink to this heading">¶</a></h1>
 <p>(This document was written in 2016, since then, Caffe2 added support for While loop (as sub-graph), similar implementation added for ONNX as well.)</p>
 <p>In NNC, a computation graph cannot allow cycles. Thus, there is no flexible way to express loops.</p>
 <p>A little survey on this problem:</p>
@@ -331,7 +328,7 @@
 <li><p>End nodes, the set of nodes that marks the end of the while body, and after these nodes are executed, we will return to the incoming nodes. These end nodes shouldn’t have any edges pointing to inside nodes (OK if end nodes are condition true output nodes as well);</p></li>
 </ol>
 <p>Since these will become a sub-graph (which, to its owner graph, just simple “node”), it will have inputs and outputs. Besides that, the loop body needs to be parameterized to be SSA compliant (see: <a class="reference external" href="https://www.cs.cmu.edu/~fp/courses/15411-f13/lectures/06-ssa.pdf">https://www.cs.cmu.edu/~fp/courses/15411-f13/lectures/06-ssa.pdf</a>). Thus, a list of body parameters need to be provided.</p>
-</div>
+</section>
 
 
            </div>
@@ -381,17 +378,16 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
             VERSION:'a deep learning framework from ccv',
-            LANGUAGE:'None',
+            LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
 
   
 

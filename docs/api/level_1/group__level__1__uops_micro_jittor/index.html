@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>The concept of meta-ops in Jittor is amazing &mdash; nnc, a deep learning framework from ccv</title>
@@ -26,6 +27,8 @@
 
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex/" />
     <link rel="search" title="Search" href="../../../search/" />
     <link rel="next" title="Level 2 API" href="../../level-2/" />
@@ -48,12 +51,9 @@
           
 
           
-            <a href="../../../">
+            <a href="../../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -238,12 +238,9 @@
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           
-            <a href="../../../">
+            <a href="../../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
         
@@ -299,14 +296,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="the-concept-of-meta-ops-in-jittor-is-amazing">
-<h1>The concept of meta-ops in Jittor is amazing<a class="headerlink" href="#the-concept-of-meta-ops-in-jittor-is-amazing" title="Permalink to this headline">¶</a></h1>
+  <section id="the-concept-of-meta-ops-in-jittor-is-amazing">
+<h1>The concept of meta-ops in Jittor is amazing<a class="headerlink" href="#the-concept-of-meta-ops-in-jittor-is-amazing" title="Permalink to this heading">¶</a></h1>
 <p>NNC will never do JIT. Particularly, I will never do codegen and compile at runtime, especially with static shapes. The reason is pretty simple. JIT would be too much architectural dependent and with that, almost impossible for NNC to be this small embeddable library that you can carry everywhere. However, this shouldn’t prevent NNC to generate proper descriptions of each command so a JIT version can be built if there are architectural support for it. In this way, the core of NNC can be small and embeddable, but a new backend (identified by the backend attribute) can implement more sophisticated JIT mechanism.</p>
 <p>More over, I need to generate some code for reference implementations, ideally from some descriptions. This is important because with 90+ ops, having a correctly implemented command turns out to be more challenging than I expected. Especially if I want them to be compliant with the metadata describes it (what shape it accepts, what datatype works, whether it can accept tensor views, and how in-place tensors supported). Many of reference commands are not supporting all datatypes and tensor views, and this has to be rectified because these are “reference commands”, they must be.</p>
 <p>Jittor introduced to the world the idea of meta-ops. Basically, it claims every ops (or macro ops) can be break down to 3 types of micro ops (they call them meta-ops): a reindex op that can map tensor from one dimensionality to another, an element-wise op that does element-wise primitive math, and finally, a reduce op that can reduce along particular axis of a tensor with some elementary math. This feels rather limited initially, but when thinking through it, I am convinced it should be enough to describe all commands presented in NNC (this shouldn’t be a surprise actually).</p>
 <p>Thus, the plan now is to use the meta-ops idea, implementing new micro commands that can describe other commands in NNC. In this way, I can generate reference implementation from these descriptions and hopefully have better coverage than my existing CPU / GPU reference implementations.</p>
 <p>To build on-top what Jittor did, if you need to have my dynamism in the ops, it is essential to index with the provided tensor. With just reindex, binary operands and reduce, you cannot do that. Thus, on top of these 3, we added the 4th micro op (meta-op) that is “select”. This will be sufficient to implement ops such as masking.</p>
-</div>
+</section>
 
 
            </div>
@@ -356,17 +353,16 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../../',
             VERSION:'a deep learning framework from ccv',
-            LANGUAGE:'None',
+            LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/sphinx_highlight.js"></script>
 
   
 

@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>NNC Static Schedule A Graph &mdash; nnc, a deep learning framework from ccv</title>
@@ -26,6 +27,8 @@
 
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="NNC Dynamic Graph Execution" href="../nnc-dy/" />
@@ -48,12 +51,9 @@
           
 
           
-            <a href="../../">
+            <a href="../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -150,6 +150,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../nnc-df/#use-dataframe-with-addons">Use Dataframe with Addons</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../nnc-uops/">NNC Micro Ops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#describe-micro-ops">Describe Micro Ops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#parameters">Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#simplification">Simplification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#loop-fusion">Loop-Fusion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#variable-substitution">Variable Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nnc-uops/#automatic-differentiation">Automatic Differentiation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API Reference</a><ul>
@@ -158,9 +167,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/level-1/">Level 1 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level_1/group__level__1__uops_micro_jittor/">The concept of meta-ops in Jittor is amazing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#tensors">Tensors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#commands">Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#streams">Streams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/level-1/#micro-ops">Micro Ops</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../api/level-2/">Level 2 API</a><ul>
@@ -227,12 +238,9 @@
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           
-            <a href="../../">
+            <a href="../../" class="icon icon-home"> nnc
           
 
-          
-            
-            <img src="../../_static/nnc-logo.svg" class="logo" alt="Logo"/>
           
           </a>
         
@@ -286,28 +294,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="nnc-static-schedule-a-graph">
-<h1>NNC Static Schedule A Graph<a class="headerlink" href="#nnc-static-schedule-a-graph" title="Permalink to this headline">¶</a></h1>
+  <section id="nnc-static-schedule-a-graph">
+<h1>NNC Static Schedule A Graph<a class="headerlink" href="#nnc-static-schedule-a-graph" title="Permalink to this heading">¶</a></h1>
 <p>A concrete graph runs in topological order sequentially when you invoke <a class="reference internal" href="../../api/level-2/#_CPPv417ccv_nnc_graph_runPC15ccv_nnc_graph_tKiPCK20ccv_nnc_graph_exec_tKiPCK20ccv_nnc_graph_exec_tKiPC21ccv_nnc_tensor_tape_tPC24ccv_nnc_stream_context_t" title="ccv_nnc_graph_run"><code class="xref cpp cpp-func docutils literal notranslate"><span class="pre">ccv_nnc_graph_run</span></code></a>. Thus, all dependencies executed before the subsequent command got executed. This default behavior doesn’t leverage massive parallelism built in today’s CPU / GPU environment, leaves too much computation power on the table.</p>
 <p>NNC supports to static schedule a graph such that all the parallelism are utilized. That’s been said, <strong>static scheduling</strong> shouldn’t be confused with <strong>automatic parallelization</strong>. The later term suggests to turn a non-parallelizable graph into a parallelizable ones by adding additional data transfers or graph transformations. <strong>Static scheduling</strong> considers dependencies of a command, and try to schedule independent commands onto different streams.</p>
-<div class="section" id="stream">
-<h2>Stream<a class="headerlink" href="#stream" title="Permalink to this headline">¶</a></h2>
+<section id="stream">
+<h2>Stream<a class="headerlink" href="#stream" title="Permalink to this heading">¶</a></h2>
 <p>One of the core abstraction for the execution model is the <strong>stream</strong>. This models closely to <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__STREAM.html#group__CUDART__STREAM">CUDA stream</a>. Two commands scheduled on the same stream guaranteed to be executed sequentially. Different streams can collaborate with <strong>signals</strong>. The <strong>signal</strong> models closely to <a class="reference external" href="https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__EVENT.html#group__CUDART__EVENT">CUDA event</a>, with the same limitation that if a signal is not scheduled on a stream, wait on it will be a no-op.</p>
 <p>That all sounds very much like a thin wrapper around CUDA runtime. The key difference is that you can also schedule a graph onto a stream, and they will be executed serially with other graphs scheduled on the same stream.</p>
-</div>
-<div class="section" id="static-schedule">
-<h2>Static Schedule<a class="headerlink" href="#static-schedule" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="static-schedule">
+<h2>Static Schedule<a class="headerlink" href="#static-schedule" title="Permalink to this heading">¶</a></h2>
 <p>Conceptually, the <strong>static scheduling</strong> algorithm for a graph is trivial. A new stream can be spawned whenever there is a split. The new stream can be either recycled from a stream that is terminated or a newly created. However, there are some factors at play. For example, if there are repeated branch-and-merge, you can alternate streams for your execution. Consider <code class="docutils literal notranslate"><span class="pre">N1</span> <span class="pre">-&gt;</span> <span class="pre">(N2,</span> <span class="pre">N3)</span> <span class="pre">-&gt;</span> <span class="pre">N4</span></code>, you can assign <code class="docutils literal notranslate"><span class="pre">N1</span></code>, <code class="docutils literal notranslate"><span class="pre">N2</span></code> to stream 0, and <code class="docutils literal notranslate"><span class="pre">N3</span></code>, <code class="docutils literal notranslate"><span class="pre">N4</span></code> to stream 1. Alternatively, you can assign <code class="docutils literal notranslate"><span class="pre">N1</span></code>, <code class="docutils literal notranslate"><span class="pre">N2</span></code>, <code class="docutils literal notranslate"><span class="pre">N4</span></code> to stream 0 and <code class="docutils literal notranslate"><span class="pre">N3</span></code> to stream 1. Both are equivalent if stream only maintains the execution order. In NNC’s implementation however, stream also maintains execution context and workspace memory for BLAS, CuDNN etc. We prefer the second scheduling.</p>
 <p>The <strong>static scheduling</strong> algorithm implemented in NNC went through a few iterations. The current iteration first do a reverse traversal of the graph, assign each node a rank. The rank is the length of the longest chain follows the current node. When traverse the graph, if the current node hasn’t assigned stream yet, we will find a recyclable stream (a stream that is deterministically terminated before the current node), or create a new stream. From the current node, we will find its highest ranked unassigned following node, assign the new stream to it. We use this node as the new node, repeat steps until no unassigned following node can be found. If two nodes have the same rank, we break the tie by checking whether in this given stream, we already encountered the same command before (thus, sharing workspace memory and execution context is possible).</p>
 <p>As part of the static scheduling work, a node can be associated with multiple streams. This is useful for commands that need to communicate across devices because each stream can only be associated with one device.</p>
-</div>
-<div class="section" id="while-and-case-of">
-<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code><a class="headerlink" href="#while-and-case-of" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="while-and-case-of">
+<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code><a class="headerlink" href="#while-and-case-of" title="Permalink to this heading">¶</a></h2>
 <p>A concrete graph in NNC can contain branches and loops. A naive implemenation such as CUDA streams / events cannot handle these. A lightweight coroutine implementation based on <code class="docutils literal notranslate"><span class="pre">&lt;ucontext.h&gt;</span></code> enables us to implement <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">case..of</span></code> properly while still leveraging CUDA streams / events construction.</p>
 <p>For loops and branches to work, the expressions should be evaluated each loop or before branching to determine whether we continue looping or where to branch to. Some tensor reconfigurations need to happen as well for each loop or after branching. Since streams are asynchronous, it is not obvious how to do it efficiently and correctly with only CUDA streams / events.</p>
 <p>We effectively implemented some coroutine helpers such that the current task can yield while waiting for CUDA stream to finish. This is transparent and if other nodes are not blocked by the loop or branching, can still continue be scheduled until everything is blocked by a loop or branching. At that point, we will create a new thread to wait, to maintain the illusion that the interface is asynchronous. The new thread is only for scheduling, and no matter how many streams we allocate, we only have this one thread to schedule.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -357,17 +365,16 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'a deep learning framework from ccv',
-            LANGUAGE:'None',
+            LANGUAGE:'en',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/documentation_options.js"></script>
       <script type="text/javascript" src="../../_static/doctools.js"></script>
-      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/sphinx_highlight.js"></script>
 
   
 
