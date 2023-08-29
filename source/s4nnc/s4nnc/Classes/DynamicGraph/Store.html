@@ -75,6 +75,12 @@
                 <a href="../../Classes/Convolution/Format.html">– Format</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes/CustomModel.html">CustomModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/CustomModel/IOType.html">– IOType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Classes/DatatypeConversion.html">DatatypeConversion</a>
               </li>
               <li class="nav-group-task">
@@ -1673,9 +1679,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC5StoreV5write_5model5codecySS_AA5ModelCAE5CodecVtF"></a>
-                    <a name="//apple_ref/swift/Method/write(_:model:codec:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC5StoreV5write_5model5codecySS_AA5ModelCAE5CodecVtF">write(_:<wbr>model:<wbr>codec:<wbr>)</a>
+                    <a name="/s:4main12DynamicGraphC5StoreV17ModelWriterResultO"></a>
+                    <a name="//apple_ref/swift/Enum/ModelWriterResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5StoreV17ModelWriterResultO">ModelWriterResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="../../Classes/DynamicGraph/Store/ModelWriterResult.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ModelWriterResult</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC5StoreV5writeyXeXeF"></a>
+                    <a name="//apple_ref/swift/Method/write(_:model:codec:writer:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC5StoreV5writeyXeXeF">write(_:<wbr>model:<wbr>codec:<wbr>writer:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1690,7 +1723,10 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Model.html">Model</a></span><span class="p">,</span> <span class="nv">codec</span><span class="p">:</span> <span class="kt"><a href="../../Classes/DynamicGraph/Store/Codec.html">Codec</a></span> <span class="o">=</span> <span class="p">[])</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span>
+  <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Model.html">Model</a></span><span class="p">,</span> <span class="nv">codec</span><span class="p">:</span> <span class="kt"><a href="../../Classes/DynamicGraph/Store/Codec.html">Codec</a></span> <span class="o">=</span> <span class="p">[],</span>
+  <span class="nv">writer</span><span class="p">:</span> <span class="p">((</span><span class="kt">String</span><span class="p">,</span> <span class="kt">NNC</span><span class="o">.</span><span class="kt"><a href="../../Classes/DynamicGraph/AnyTensor.html">AnyTensor</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../../Classes/DynamicGraph/Store/ModelWriterResult.html">ModelWriterResult</a></span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1722,49 +1758,15 @@
                                 </div>
                               </td>
                             </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4main12DynamicGraphC5StoreV5write_5model5codecySS_AA15AnyModelBuilderCAE5CodecVtF"></a>
-                    <a name="//apple_ref/swift/Method/write(_:model:codec:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC5StoreV5write_5model5codecySS_AA15AnyModelBuilderCAE5CodecVtF">write(_:<wbr>model:<wbr>codec:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Write a model builder to the store.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">model</span><span class="p">:</span> <span class="kt"><a href="../../Classes/AnyModelBuilder.html">AnyModelBuilder</a></span><span class="p">,</span> <span class="nv">codec</span><span class="p">:</span> <span class="kt"><a href="../../Classes/DynamicGraph/Store/Codec.html">Codec</a></span> <span class="o">=</span> <span class="p">[])</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
                             <tr>
                               <td>
                                 <code>
-                                <em>key</em>
+                                <em>writer</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The key corresponding to a particular model builder.</p>
+                                  <p>You can customize your writer to writer parameter with a different name or skip entirely.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1861,7 +1863,7 @@ and could take some time to finish.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2023-08-03)</p>
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2023-08-29)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

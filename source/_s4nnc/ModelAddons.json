@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 33011,
+    "key.length" : 35564,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -14053,7 +14053,7 @@
             "key.offset" : 32006
           }
         ],
-        "key.bodylength" : 950,
+        "key.bodylength" : 998,
         "key.bodyoffset" : 32059,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
@@ -14082,7 +14082,7 @@
           }
         ],
         "key.kind" : "source.lang.swift.decl.class",
-        "key.length" : 991,
+        "key.length" : 1039,
         "key.line" : 1158,
         "key.modulename" : "main",
         "key.name" : "ScaledDotProductAttention",
@@ -14090,7 +14090,7 @@
         "key.nameoffset" : 32025,
         "key.offset" : 32019,
         "key.parsed_declaration" : "public final class ScaledDotProductAttention: Model",
-        "key.parsed_scope.end" : 1185,
+        "key.parsed_scope.end" : 1187,
         "key.parsed_scope.start" : 1158,
         "key.substructure" : [
           {
@@ -14127,7 +14127,7 @@
             "key.parsed_scope.start" : 1159,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main25ScaledDotProductAttentionC5scale8isCausal03hasE4Mask12fusedWeights6noBias9trainable4nameACSf_S5bSgSStcfc\">init(scale:isCausal:hasAttentionMask:fusedWeights:noBias:trainable:name:)<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main25ScaledDotProductAttentionC5scale8isCausal03hasE4Mask30multiHeadOutputProjectionFused6noBias9trainable4nameACSf_S5bSgSStcfc\">init(scale:isCausal:hasAttentionMask:multiHeadOutputProjectionFused:noBias:trainable:name:)<\/RelatedName>"
               },
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC__9trainable4nameACSayAC2IOCG_AHSbSgSStcfc\">init(_:_:trainable:name:)<\/RelatedName>"
@@ -14145,7 +14145,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public init(scale: <Type usr=\"s:Sf\">Float<\/Type>, isCausal: <Type usr=\"s:Sb\">Bool<\/Type> = false, hasAttentionMask: <Type usr=\"s:Sb\">Bool<\/Type> = false, fusedWeights: <Type usr=\"s:Sb\">Bool<\/Type> = false, noBias: <Type usr=\"s:Sb\">Bool<\/Type> = false, trainable: <Type usr=\"s:Sb\">Bool<\/Type>? = nil, name: <Type usr=\"s:SS\">String<\/Type> = &quot;&quot;)<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public init(scale: <Type usr=\"s:Sf\">Float<\/Type>, isCausal: <Type usr=\"s:Sb\">Bool<\/Type> = false, hasAttentionMask: <Type usr=\"s:Sb\">Bool<\/Type> = false, multiHeadOutputProjectionFused: <Type usr=\"s:Sb\">Bool<\/Type> = false, noBias: <Type usr=\"s:Sb\">Bool<\/Type> = false, trainable: <Type usr=\"s:Sb\">Bool<\/Type>? = nil, name: <Type usr=\"s:SS\">String<\/Type> = &quot;&quot;)<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -14153,22 +14153,22 @@
                 "key.offset" : 32131
               }
             ],
-            "key.bodylength" : 231,
-            "key.bodyoffset" : 32319,
+            "key.bodylength" : 257,
+            "key.bodyoffset" : 32341,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
-            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>scale<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>isCausal<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>hasAttentionMask<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>fusedWeights<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>noBias<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>trainable<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;&quot;<\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>scale<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sf\">Float<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>isCausal<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>hasAttentionMask<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>multiHeadOutputProjectionFused<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>noBias<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type> = false<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>trainable<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;&quot;<\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 413,
+            "key.length" : 461,
             "key.line" : 1163,
             "key.modulename" : "main",
-            "key.name" : "init(scale:isCausal:hasAttentionMask:fusedWeights:noBias:trainable:name:)",
-            "key.namelength" : 179,
+            "key.name" : "init(scale:isCausal:hasAttentionMask:multiHeadOutputProjectionFused:noBias:trainable:name:)",
+            "key.namelength" : 201,
             "key.nameoffset" : 32138,
             "key.offset" : 32138,
-            "key.parsed_declaration" : "public init(\n  scale: Float, isCausal: Bool = false, hasAttentionMask: Bool = false,\n  fusedWeights: Bool = false, noBias: Bool = false, trainable: Bool? = nil, name: String = \"\"\n)",
-            "key.parsed_scope.end" : 1171,
+            "key.parsed_declaration" : "public init(\n  scale: Float, isCausal: Bool = false, hasAttentionMask: Bool = false,\n  multiHeadOutputProjectionFused: Bool = false, noBias: Bool = false, trainable: Bool? = nil,\n  name: String = \"\"\n)",
+            "key.parsed_scope.end" : 1173,
             "key.parsed_scope.start" : 1163,
             "key.related_decls" : [
               {
@@ -14185,8 +14185,8 @@
 
             ],
             "key.typename" : "(ScaledDotProductAttention.Type) -> (Float, Bool, Bool, Bool, Bool, Bool?, String) -> ScaledDotProductAttention",
-            "key.typeusr" : "$s5scale8isCausal16hasAttentionMask12fusedWeights6noBias9trainable4name4main016ScaledDotProductE0CSf_S5bSgSStcD",
-            "key.usr" : "s:4main25ScaledDotProductAttentionC5scale8isCausal03hasE4Mask12fusedWeights6noBias9trainable4nameACSf_S5bSgSStcfc"
+            "key.typeusr" : "$s5scale8isCausal16hasAttentionMask30multiHeadOutputProjectionFused6noBias9trainable4name4main016ScaledDotProductE0CSf_S5bSgSStcD",
+            "key.usr" : "s:4main25ScaledDotProductAttentionC5scale8isCausal03hasE4Mask30multiHeadOutputProjectionFused6noBias9trainable4nameACSf_S5bSgSStcfc"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -14195,26 +14195,26 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 32555
+                "key.offset" : 32603
               }
             ],
             "key.bodylength" : 278,
-            "key.bodyoffset" : 32729,
+            "key.bodyoffset" : 32777,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main25ScaledDotProductAttentionC14callAsFunction7queries4keys6values13attentionMask13streamContextxx_xxxSgAA06StreamO0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>queries<\/decl.var.parameter.argument_label> <decl.var.parameter.name>q<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main25ScaledDotProductAttentionC14callAsFunction7queries4keys6values13attentionMask13streamContextxx_xxxSgAA06StreamO0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>keys<\/decl.var.parameter.argument_label> <decl.var.parameter.name>k<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main25ScaledDotProductAttentionC14callAsFunction7queries4keys6values13attentionMask13streamContextxx_xxxSgAA06StreamO0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>values<\/decl.var.parameter.argument_label> <decl.var.parameter.name>v<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main25ScaledDotProductAttentionC14callAsFunction7queries4keys6values13attentionMask13streamContextxx_xxxSgAA06StreamO0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>attentionMask<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main25ScaledDotProductAttentionC14callAsFunction7queries4keys6values13attentionMask13streamContextxx_xxxSgAA06StreamO0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.generic_type_param usr=\"s:4main25ScaledDotProductAttentionC14callAsFunction7queries4keys6values13attentionMask13streamContextxx_xxxSgAA06StreamO0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main25ScaledDotProductAttentionC14callAsFunction7queries4keys6values13attentionMask13streamContextxx_xxxSgAA06StreamO0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main24DynamicGraph_TensorGroupP\">DynamicGraph_TensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 446,
-            "key.line" : 1173,
+            "key.line" : 1175,
             "key.modulename" : "main",
             "key.name" : "callAsFunction(queries:keys:values:attentionMask:streamContext:)",
             "key.namelength" : 155,
-            "key.nameoffset" : 32567,
-            "key.offset" : 32562,
+            "key.nameoffset" : 32615,
+            "key.offset" : 32610,
             "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.TensorGroup>(\n  queries q: T, keys k: T, values v: T, attentionMask: T? = nil,\n  streamContext: StreamContext? = nil\n) -> T",
-            "key.parsed_scope.end" : 1184,
-            "key.parsed_scope.start" : 1173,
+            "key.parsed_scope.end" : 1186,
+            "key.parsed_scope.start" : 1175,
             "key.related_decls" : [
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC14callAsFunctionyAC2IOCAA0B13IOConvertible_pd_tF\">callAsFunction(_: ModelIOConvertible...) -&gt; IO<\/RelatedName>"
@@ -14238,7 +14238,7 @@
                   {
                     "key.kind" : "source.lang.swift.structure.elem.typeref",
                     "key.length" : 24,
-                    "key.offset" : 32585
+                    "key.offset" : 32633
                   }
                 ],
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
@@ -14250,15 +14250,15 @@
                 ],
                 "key.kind" : "source.lang.swift.decl.generic_type_param",
                 "key.length" : 27,
-                "key.line" : 1173,
+                "key.line" : 1175,
                 "key.modulename" : "main",
                 "key.name" : "T",
                 "key.namelength" : 1,
-                "key.nameoffset" : 32582,
-                "key.offset" : 32582,
+                "key.nameoffset" : 32630,
+                "key.offset" : 32630,
                 "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.TensorGroup",
-                "key.parsed_scope.end" : 1173,
-                "key.parsed_scope.start" : 1173,
+                "key.parsed_scope.end" : 1175,
+                "key.parsed_scope.start" : 1175,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main25ScaledDotProductAttentionC14callAsFunction7queries4keys6values13attentionMask13streamContextxx_xxxSgAA06StreamO0CSgtAA24DynamicGraph_TensorGroupRzlF1TL_xmfp"
@@ -14272,6 +14272,437 @@
         "key.typename" : "ScaledDotProductAttention.Type",
         "key.typeusr" : "$s4main25ScaledDotProductAttentionCmD",
         "key.usr" : "s:4main25ScaledDotProductAttentionC"
+      },
+      {
+        "key.accessibility" : "source.lang.swift.accessibility.public",
+        "key.annotated_decl" : "<Declaration>public final class CustomModel : <Type usr=\"s:4main5ModelC\">Model<\/Type><\/Declaration>",
+        "key.attributes" : [
+          {
+            "key.attribute" : "source.decl.attribute.final",
+            "key.length" : 5,
+            "key.offset" : 33085
+          },
+          {
+            "key.attribute" : "source.decl.attribute.public",
+            "key.length" : 6,
+            "key.offset" : 33078
+          }
+        ],
+        "key.bodylength" : 2445,
+        "key.bodyoffset" : 33117,
+        "key.column" : 20,
+        "key.decl_lang" : "source.lang.swift",
+        "key.doc.column" : 20,
+        "key.doc.comment" : "Custom model.",
+        "key.doc.declaration" : "public final class CustomModel : Model",
+        "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift\" line=\"1190\" column=\"20\"><Name>CustomModel<\/Name><USR>s:4main11CustomModelC<\/USR><Declaration>public final class CustomModel : Model<\/Declaration><CommentParts><Abstract><Para>Custom model.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 1190,
+        "key.doc.name" : "CustomModel",
+        "key.doc.type" : "Class",
+        "key.doclength" : 18,
+        "key.docoffset" : 33060,
+        "key.elements" : [
+          {
+            "key.kind" : "source.lang.swift.structure.elem.typeref",
+            "key.length" : 5,
+            "key.offset" : 33110
+          }
+        ],
+        "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>CustomModel<\/decl.name> : <ref.class usr=\"s:4main5ModelC\">Model<\/ref.class><\/decl.class>",
+        "key.inheritedtypes" : [
+          {
+            "key.name" : "Model"
+          }
+        ],
+        "key.kind" : "source.lang.swift.decl.class",
+        "key.length" : 2472,
+        "key.line" : 1190,
+        "key.modulename" : "main",
+        "key.name" : "CustomModel",
+        "key.namelength" : 11,
+        "key.nameoffset" : 33097,
+        "key.offset" : 33091,
+        "key.parsed_declaration" : "public final class CustomModel: Model",
+        "key.parsed_scope.end" : 1259,
+        "key.parsed_scope.start" : 1190,
+        "key.substructure" : [
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>required init(_ model: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.required",
+                "key.length" : 8,
+                "key.offset" : 33120
+              }
+            ],
+            "key.bodylength" : 56,
+            "key.bodyoffset" : 33159,
+            "key.column" : 12,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>required<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>model<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 87,
+            "key.line" : 1191,
+            "key.modulename" : "main",
+            "key.name" : "init(_:)",
+            "key.namelength" : 28,
+            "key.nameoffset" : 33129,
+            "key.offset" : 33129,
+            "key.overrides" : [
+              {
+                "key.usr" : "s:4main5ModelCyACs13OpaquePointerVcfc"
+              }
+            ],
+            "key.parsed_declaration" : "required init(_ model: OpaquePointer)",
+            "key.parsed_scope.end" : 1194,
+            "key.parsed_scope.start" : 1191,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main11CustomModelCyXeXecfc\">init(inputs:outputs:hint:trainable:name:shapeInference:execute:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC__9trainable4nameACSayAC2IOCG_AHSbSgSStcfc\">init(_:_:trainable:name:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC_9trainable4nameACSayACG_SbSgSStcfc\">init(_:trainable:name:)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(CustomModel.Type) -> (OpaquePointer) -> CustomModel",
+            "key.typeusr" : "$sy4main11CustomModelCs13OpaquePointerVcD",
+            "key.usr" : "s:4main11CustomModelCyACs13OpaquePointerVcfc"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public enum <Type usr=\"s:4main11CustomModelC\">CustomModel<\/Type>.IOType<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 33220
+              }
+            ],
+            "key.bodylength" : 194,
+            "key.bodyoffset" : 33240,
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+            "key.fully_annotated_decl" : "<decl.enum><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>enum<\/syntaxtype.keyword> <ref.class usr=\"s:4main11CustomModelC\">CustomModel<\/ref.class>.<decl.name>IOType<\/decl.name><\/decl.enum>",
+            "key.kind" : "source.lang.swift.decl.enum",
+            "key.length" : 208,
+            "key.line" : 1196,
+            "key.modulename" : "main",
+            "key.name" : "IOType",
+            "key.namelength" : 6,
+            "key.nameoffset" : 33232,
+            "key.offset" : 33227,
+            "key.parsed_declaration" : "public enum IOType",
+            "key.parsed_scope.end" : 1202,
+            "key.parsed_scope.start" : 1196,
+            "key.substructure" : [
+              {
+                "key.kind" : "source.lang.swift.decl.enumcase",
+                "key.length" : 18,
+                "key.offset" : 33245,
+                "key.substructure" : [
+                  {
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case inputOrOutput<\/Declaration>",
+                    "key.column" : 10,
+                    "key.decl_lang" : "source.lang.swift",
+                    "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+                    "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>inputOrOutput<\/decl.name><\/decl.enumelement>",
+                    "key.kind" : "source.lang.swift.decl.enumelement",
+                    "key.length" : 13,
+                    "key.line" : 1197,
+                    "key.modulename" : "main",
+                    "key.name" : "inputOrOutput",
+                    "key.namelength" : 13,
+                    "key.nameoffset" : 33250,
+                    "key.offset" : 33250,
+                    "key.parsed_declaration" : "case inputOrOutput",
+                    "key.parsed_scope.end" : 1197,
+                    "key.parsed_scope.start" : 1197,
+                    "key.typename" : "(CustomModel.IOType.Type) -> CustomModel.IOType",
+                    "key.typeusr" : "$sy4main11CustomModelC6IOTypeOAEmcD",
+                    "key.usr" : "s:4main11CustomModelC6IOTypeO13inputOrOutputyA2EmF"
+                  }
+                ]
+              },
+              {
+                "key.kind" : "source.lang.swift.decl.enumcase",
+                "key.length" : 13,
+                "key.offset" : 33268,
+                "key.substructure" : [
+                  {
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case noTensor<\/Declaration>",
+                    "key.column" : 10,
+                    "key.decl_lang" : "source.lang.swift",
+                    "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+                    "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>noTensor<\/decl.name><\/decl.enumelement>",
+                    "key.kind" : "source.lang.swift.decl.enumelement",
+                    "key.length" : 8,
+                    "key.line" : 1198,
+                    "key.modulename" : "main",
+                    "key.name" : "noTensor",
+                    "key.namelength" : 8,
+                    "key.nameoffset" : 33273,
+                    "key.offset" : 33273,
+                    "key.parsed_declaration" : "case noTensor",
+                    "key.parsed_scope.end" : 1198,
+                    "key.parsed_scope.start" : 1198,
+                    "key.typename" : "(CustomModel.IOType.Type) -> CustomModel.IOType",
+                    "key.typeusr" : "$sy4main11CustomModelC6IOTypeOAEmcD",
+                    "key.usr" : "s:4main11CustomModelC6IOTypeO8noTensoryA2EmF"
+                  }
+                ]
+              },
+              {
+                "key.kind" : "source.lang.swift.decl.enumcase",
+                "key.length" : 20,
+                "key.offset" : 33286,
+                "key.substructure" : [
+                  {
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case tensorNotOutput<\/Declaration>",
+                    "key.column" : 10,
+                    "key.decl_lang" : "source.lang.swift",
+                    "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+                    "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>tensorNotOutput<\/decl.name><\/decl.enumelement>",
+                    "key.kind" : "source.lang.swift.decl.enumelement",
+                    "key.length" : 15,
+                    "key.line" : 1199,
+                    "key.modulename" : "main",
+                    "key.name" : "tensorNotOutput",
+                    "key.namelength" : 15,
+                    "key.nameoffset" : 33291,
+                    "key.offset" : 33291,
+                    "key.parsed_declaration" : "case tensorNotOutput",
+                    "key.parsed_scope.end" : 1199,
+                    "key.parsed_scope.start" : 1199,
+                    "key.typename" : "(CustomModel.IOType.Type) -> CustomModel.IOType",
+                    "key.typeusr" : "$sy4main11CustomModelC6IOTypeOAEmcD",
+                    "key.usr" : "s:4main11CustomModelC6IOTypeO15tensorNotOutputyA2EmF"
+                  }
+                ]
+              },
+              {
+                "key.kind" : "source.lang.swift.decl.enumcase",
+                "key.length" : 52,
+                "key.offset" : 33311,
+                "key.substructure" : [
+                  {
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case sharedTensor(ccv_cnnp_cmd_exec_io_init_state_t)<\/Declaration>",
+                    "key.column" : 10,
+                    "key.decl_lang" : "source.lang.swift",
+                    "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+                    "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>sharedTensor<\/decl.name>(<decl.var.parameter><decl.var.parameter.type>ccv_cnnp_cmd_exec_io_init_state_t<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.enumelement>",
+                    "key.kind" : "source.lang.swift.decl.enumelement",
+                    "key.length" : 47,
+                    "key.line" : 1200,
+                    "key.modulename" : "main",
+                    "key.name" : "sharedTensor(_:)",
+                    "key.namelength" : 47,
+                    "key.nameoffset" : 33316,
+                    "key.offset" : 33316,
+                    "key.parsed_declaration" : "case sharedTensor(ccv_cnnp_cmd_exec_io_init_state_t)",
+                    "key.parsed_scope.end" : 1200,
+                    "key.parsed_scope.start" : 1200,
+                    "key.substructure" : [
+
+                    ],
+                    "key.typename" : "(CustomModel.IOType.Type) -> (<<error type>>) -> CustomModel.IOType",
+                    "key.typeusr" : "$sXeD",
+                    "key.usr" : "s:4main11CustomModelC6IOTypeO12sharedTensor33_6D5ABB206108BFFDEB3FBAF53FC9A42ELLXeF"
+                  }
+                ]
+              },
+              {
+                "key.kind" : "source.lang.swift.decl.enumcase",
+                "key.length" : 63,
+                "key.offset" : 33368,
+                "key.substructure" : [
+                  {
+                    "key.accessibility" : "source.lang.swift.accessibility.public",
+                    "key.annotated_decl" : "<Declaration>case sharedTensorAsTrainable(ccv_cnnp_cmd_exec_io_init_state_t)<\/Declaration>",
+                    "key.column" : 10,
+                    "key.decl_lang" : "source.lang.swift",
+                    "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+                    "key.fully_annotated_decl" : "<decl.enumelement><syntaxtype.keyword>case<\/syntaxtype.keyword> <decl.name>sharedTensorAsTrainable<\/decl.name>(<decl.var.parameter><decl.var.parameter.type>ccv_cnnp_cmd_exec_io_init_state_t<\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.enumelement>",
+                    "key.kind" : "source.lang.swift.decl.enumelement",
+                    "key.length" : 58,
+                    "key.line" : 1201,
+                    "key.modulename" : "main",
+                    "key.name" : "sharedTensorAsTrainable(_:)",
+                    "key.namelength" : 58,
+                    "key.nameoffset" : 33373,
+                    "key.offset" : 33373,
+                    "key.parsed_declaration" : "case sharedTensorAsTrainable(ccv_cnnp_cmd_exec_io_init_state_t)",
+                    "key.parsed_scope.end" : 1201,
+                    "key.parsed_scope.start" : 1201,
+                    "key.substructure" : [
+
+                    ],
+                    "key.typename" : "(CustomModel.IOType.Type) -> (<<error type>>) -> CustomModel.IOType",
+                    "key.typeusr" : "$sXeD",
+                    "key.usr" : "s:4main11CustomModelC6IOTypeO23sharedTensorAsTrainable33_6D5ABB206108BFFDEB3FBAF53FC9A42ELLXeF"
+                  }
+                ]
+              }
+            ],
+            "key.typename" : "CustomModel.IOType.Type",
+            "key.typeusr" : "$s4main11CustomModelC6IOTypeOmD",
+            "key.usr" : "s:4main11CustomModelC6IOTypeO"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.private",
+            "key.annotated_decl" : "<Declaration>private var isa: ccv_nnc_cmd_vtab_t<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.private",
+                "key.length" : 7,
+                "key.offset" : 33439
+              }
+            ],
+            "key.column" : 15,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>private<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>isa<\/decl.name>: <decl.var.type>ccv_nnc_cmd_vtab_t<\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 27,
+            "key.line" : 1204,
+            "key.modulename" : "main",
+            "key.name" : "isa",
+            "key.namelength" : 3,
+            "key.nameoffset" : 33451,
+            "key.offset" : 33447,
+            "key.parsed_declaration" : "private var isa: ccv_nnc_cmd_vtab_t",
+            "key.parsed_scope.end" : 1204,
+            "key.parsed_scope.start" : 1204,
+            "key.setter_accessibility" : "source.lang.swift.accessibility.private",
+            "key.typename" : "<<error type>>",
+            "key.typeusr" : "$sXeD",
+            "key.usr" : "s:4main11CustomModelC3isa33_6D5ABB206108BFFDEB3FBAF53FC9A42ELLXevp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.public",
+            "key.annotated_decl" : "<Declaration>public init(inputs: [<Type usr=\"s:4main11CustomModelC6IOTypeO\">IOType<\/Type>], outputs: [<Type usr=\"s:4main11CustomModelC6IOTypeO\">IOType<\/Type>], hint: <Type usr=\"s:4main4HintV\">Hint<\/Type>, trainable: <Type usr=\"s:Sb\">Bool<\/Type>? = nil, name: <Type usr=\"s:SS\">String<\/Type> = &quot;&quot;, shapeInference: @convention(c) (ccv_nnc_cmd_t, UnsafePointer&lt;ccv_nnc_tensor_param_t&gt;?, <Type usr=\"s:s5Int32V\">Int32<\/Type>, ccv_nnc_hint_t, UnsafeMutablePointer&lt;ccv_nnc_tensor_param_t&gt;?, <Type usr=\"s:s5Int32V\">Int32<\/Type>) -&gt; <Type usr=\"s:s4Voida\">Void<\/Type>, execute: @convention(c) (ccv_nnc_cmd_t, ccv_nnc_hint_t, <Type usr=\"s:s5Int32V\">Int32<\/Type>, UnsafePointer&lt;UnsafeMutablePointer&lt;ccv_nnc_tensor_t&gt;?&gt;?, <Type usr=\"s:s5Int32V\">Int32<\/Type>, UnsafePointer&lt;UnsafeMutablePointer&lt;ccv_nnc_tensor_t&gt;?&gt;?, <Type usr=\"s:s5Int32V\">Int32<\/Type>, <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type>?) -&gt; <Type usr=\"s:s5Int32V\">Int32<\/Type>)<\/Declaration>",
+            "key.attributes" : [
+              {
+                "key.attribute" : "source.decl.attribute.public",
+                "key.length" : 6,
+                "key.offset" : 33478
+              }
+            ],
+            "key.bodylength" : 1487,
+            "key.bodyoffset" : 34073,
+            "key.column" : 10,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.enum usr=\"s:4main11CustomModelC6IOTypeO\">IOType<\/ref.enum>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>outputs<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.enum usr=\"s:4main11CustomModelC6IOTypeO\">IOType<\/ref.enum>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>hint<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:4main4HintV\">Hint<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>trainable<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>name<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:SS\">String<\/ref.struct><\/decl.var.parameter.type> = &quot;&quot;<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>shapeInference<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@convention<\/syntaxtype.attribute.name>(c)<\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type>UnsafePointer&lt;ccv_nnc_tensor_param_t&gt;?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type>ccv_nnc_hint_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type>UnsafeMutablePointer&lt;ccv_nnc_tensor_param_t&gt;?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.typealias usr=\"s:s4Voida\">Void<\/ref.typealias><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>execute<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@convention<\/syntaxtype.attribute.name>(c)<\/syntaxtype.attribute.builtin> (<decl.var.parameter><decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type>ccv_nnc_hint_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type>UnsafePointer&lt;UnsafeMutablePointer&lt;ccv_nnc_tensor_t&gt;?&gt;?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type>UnsafePointer&lt;UnsafeMutablePointer&lt;ccv_nnc_tensor_t&gt;?&gt;?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct>?<\/decl.var.parameter.type><\/decl.var.parameter>) -&gt; <decl.function.returntype><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 2076,
+            "key.line" : 1206,
+            "key.modulename" : "main",
+            "key.name" : "init(inputs:outputs:hint:trainable:name:shapeInference:execute:)",
+            "key.namelength" : 586,
+            "key.nameoffset" : 33485,
+            "key.offset" : 33485,
+            "key.parsed_declaration" : "public init(\n  inputs: [IOType], outputs: [IOType], hint: Hint, trainable: Bool? = nil, name: String = \"\",\n  shapeInference: @convention(c) (\n    _: ccv_nnc_cmd_t, _: UnsafePointer<ccv_nnc_tensor_param_t>?, _: Int32, _: ccv_nnc_hint_t,\n    _: UnsafeMutablePointer<ccv_nnc_tensor_param_t>?, _: Int32\n  ) -> Void,\n  execute: @convention(c) (\n    _: ccv_nnc_cmd_t, _: ccv_nnc_hint_t, _: Int32,\n    _: UnsafePointer<UnsafeMutablePointer<ccv_nnc_tensor_t>?>?, _: Int32,\n    _: UnsafePointer<UnsafeMutablePointer<ccv_nnc_tensor_t>?>?, _: Int32, _: OpaquePointer?\n  ) -> Int32\n)",
+            "key.parsed_scope.end" : 1258,
+            "key.parsed_scope.start" : 1206,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main11CustomModelCyACs13OpaquePointerVcfc\">init(_:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC__9trainable4nameACSayAC2IOCG_AHSbSgSStcfc\">init(_:_:trainable:name:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC_9trainable4nameACSayACG_SbSgSStcfc\">init(_:trainable:name:)<\/RelatedName>"
+              }
+            ],
+            "key.substructure" : [
+              {
+                "key.annotated_decl" : "<Declaration>let cmd: &lt;&lt;error type&gt;&gt;<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cmd<\/decl.name>: <decl.var.type>&lt;&lt;error type&gt;&gt;<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 85,
+                "key.line" : 1221,
+                "key.modulename" : "main",
+                "key.name" : "cmd",
+                "key.namelength" : 3,
+                "key.nameoffset" : 34173,
+                "key.offset" : 34169,
+                "key.parsed_declaration" : "let cmd = ccv_nnc_cmd(UInt32(CCV_NNC_CUSTOM_FORWARD), &isa, ccv_nnc_cmd_param_t(), 0)",
+                "key.parsed_scope.end" : 1221,
+                "key.parsed_scope.start" : 1221,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main11CustomModelCyXeXecfc3cmdL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let cInputs: [ccv_cnnp_cmd_exec_io_t]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cInputs<\/decl.name>: <decl.var.type>[ccv_cnnp_cmd_exec_io_t]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 635,
+                "key.line" : 1222,
+                "key.modulename" : "main",
+                "key.name" : "cInputs",
+                "key.namelength" : 7,
+                "key.nameoffset" : 34263,
+                "key.offset" : 34259,
+                "key.parsed_declaration" : "let cInputs: [ccv_cnnp_cmd_exec_io_t] = inputs.map {\n  var io = ccv_cnnp_cmd_exec_io_t()\n  switch $0 {\n  case .inputOrOutput:\n    io.type = Int32(CCV_CNNP_IO)\n  case .noTensor:\n    io.type = Int32(CCV_CNNP_NO_TENSOR)\n  case .tensorNotOutput:\n    io.type = Int32(CCV_CNNP_TENSOR_NOT_OUTPUT)\n  case .sharedTensor(let init_state):\n    io.type = Int32(CCV_CNNP_INIT_SHARED_TENSOR)\n    io.init_state = init_state\n  case .sharedTensorAsTrainable(let init_state):\n    io.type = Int32(CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE)\n    io.init_state = init_state\n  }\n  return io\n}",
+                "key.parsed_scope.end" : 1222,
+                "key.parsed_scope.start" : 1222,
+                "key.typename" : "<<error type>>",
+                "key.typeusr" : "$sXeD",
+                "key.usr" : "s:4main11CustomModelCyXeXecfc7cInputsL_Xevp"
+              },
+              {
+                "key.annotated_decl" : "<Declaration>let cOutputs: [<Type usr=\"s:s5Int32V\">Int32<\/Type>]<\/Declaration>",
+                "key.column" : 9,
+                "key.decl_lang" : "source.lang.swift",
+                "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelAddons.swift",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>cOutputs<\/decl.name>: <decl.var.type>[<ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct>]<\/decl.var.type><\/decl.var.local>",
+                "key.kind" : "source.lang.swift.decl.var.local",
+                "key.length" : 453,
+                "key.line" : 1240,
+                "key.modulename" : "main",
+                "key.name" : "cOutputs",
+                "key.namelength" : 8,
+                "key.nameoffset" : 34903,
+                "key.offset" : 34899,
+                "key.parsed_declaration" : "let cOutputs: [Int32] = outputs.map {\n  switch $0 {\n  case .inputOrOutput:\n    return Int32(CCV_CNNP_IO)\n  case .noTensor:\n    return Int32(CCV_CNNP_NO_TENSOR)\n  case .tensorNotOutput:\n    return Int32(CCV_CNNP_TENSOR_NOT_OUTPUT)\n  case .sharedTensor(_):\n    return Int32(CCV_CNNP_INIT_SHARED_TENSOR)\n  case .sharedTensorAsTrainable(_):\n    return Int32(CCV_CNNP_INIT_SHARED_TENSOR_AS_TRAINABLE)\n  }\n}",
+                "key.parsed_scope.end" : 1240,
+                "key.parsed_scope.start" : 1240,
+                "key.typename" : "[Int32]",
+                "key.typeusr" : "$sSays5Int32VGD",
+                "key.usr" : "s:4main11CustomModelCyXeXecfc8cOutputsL_Says5Int32VGvp"
+              }
+            ],
+            "key.typename" : "(CustomModel.Type) -> ([CustomModel.IOType], [CustomModel.IOType], Hint, Bool?, String, <<error type>>, <<error type>>) -> CustomModel",
+            "key.typeusr" : "$syXeXecD",
+            "key.usr" : "s:4main11CustomModelCyXeXecfc"
+          }
+        ],
+        "key.typename" : "CustomModel.Type",
+        "key.typeusr" : "$s4main11CustomModelCmD",
+        "key.usr" : "s:4main11CustomModelC"
       }
     ]
   }
