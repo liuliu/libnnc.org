@@ -117,6 +117,9 @@
                 <a href="../Classes/DynamicGraph/Store.html">– Store</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph/OpenError.html">– OpenError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Embedding.html">Embedding</a>
               </li>
               <li class="nav-group-task">
@@ -1367,6 +1370,32 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main14AdamWOptimizerV7amsgradSbvp"></a>
+                    <a name="//apple_ref/swift/Property/amsgrad" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main14AdamWOptimizerV7amsgradSbvp">amsgrad</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">amsgrad</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main14AdamWOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp"></a>
                     <a name="//apple_ref/swift/Property/parameters" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main14AdamWOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp">parameters</a>
@@ -1393,9 +1422,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main14AdamWOptimizerV_4rate4step5betas5decay7epsilonAcA12DynamicGraphC_SfSiSf_SftS2ftcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:rate:step:betas:decay:epsilon:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main14AdamWOptimizerV_4rate4step5betas5decay7epsilonAcA12DynamicGraphC_SfSiSf_SftS2ftcfc">init(_:<wbr>rate:<wbr>step:<wbr>betas:<wbr>decay:<wbr>epsilon:<wbr>)</a>
+                    <a name="/s:4main14AdamWOptimizerV_4rate4step5betas5decay7epsilon7amsgradAcA12DynamicGraphC_SfSiSf_SftS2fSbtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:rate:step:betas:decay:epsilon:amsgrad:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main14AdamWOptimizerV_4rate4step5betas5decay7epsilon7amsgradAcA12DynamicGraphC_SfSiSf_SftS2fSbtcfc">init(_:<wbr>rate:<wbr>step:<wbr>betas:<wbr>decay:<wbr>epsilon:<wbr>amsgrad:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1411,7 +1440,7 @@
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
   <span class="n">_</span> <span class="nv">graph</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="p">,</span> <span class="nv">rate</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.001</span><span class="p">,</span> <span class="nv">step</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">betas</span><span class="p">:</span> <span class="p">(</span><span class="kt">Float</span><span class="p">,</span> <span class="kt">Float</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">),</span>
-  <span class="nv">decay</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">epsilon</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">1e-8</span>
+  <span class="nv">decay</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">epsilon</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">1e-8</span><span class="p">,</span> <span class="nv">amsgrad</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
 <span class="p">)</span></code></pre>
 
                         </div>
@@ -1450,7 +1479,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2023-08-29)</p>
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2023-12-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

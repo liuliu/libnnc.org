@@ -117,6 +117,9 @@
                 <a href="../Classes/DynamicGraph/Store.html">– Store</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/DynamicGraph/OpenError.html">– OpenError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Embedding.html">Embedding</a>
               </li>
               <li class="nav-group-task">
@@ -2170,9 +2173,36 @@ it manually helps to identify actual memory leaks.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC9openStore_5flags9procedureSbSS_AC0E0V8OpenFlagVyAHKXEtKF"></a>
+                    <a name="/s:4main12DynamicGraphC9OpenErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/OpenError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC9OpenErrorO">OpenError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="../Classes/DynamicGraph/OpenError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">OpenError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main12DynamicGraphC9openStore_5flags9procedures6ResultOyxAC9OpenErrorOGSS_AC0E0V0I4FlagVxAMKXEtKlF"></a>
                     <a name="//apple_ref/swift/Method/openStore(_:flags:procedure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC9openStore_5flags9procedureSbSS_AC0E0V8OpenFlagVyAHKXEtKF">openStore(_:<wbr>flags:<wbr>procedure:<wbr>)</a>
+                    <a class="token" href="#/s:4main12DynamicGraphC9openStore_5flags9procedures6ResultOyxAC9OpenErrorOGSS_AC0E0V0I4FlagVxAMKXEtKlF">openStore(_:<wbr>flags:<wbr>procedure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2188,10 +2218,10 @@ it manually helps to identify actual memory leaks.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">openStore</span><span class="p">(</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="n">openStore</span><span class="o">&lt;</span><span class="kt">SuccessResult</span><span class="o">&gt;</span><span class="p">(</span>
   <span class="n">_</span> <span class="nv">filePath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">flags</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph/Store.html">Store</a></span><span class="o">.</span><span class="kt">OpenFlag</span> <span class="o">=</span> <span class="o">.</span><span class="n">truncateWhenClose</span><span class="p">,</span>
-  <span class="nv">procedure</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">store</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph/Store.html">Store</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
-<span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+  <span class="nv">procedure</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">store</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph/Store.html">Store</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">SuccessResult</span>
+<span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">SuccessResult</span><span class="p">,</span> <span class="kt"><a href="../Classes/DynamicGraph/OpenError.html">OpenError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -2276,7 +2306,7 @@ it manually helps to identify actual memory leaks.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2023-08-29)</p>
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2023-12-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
