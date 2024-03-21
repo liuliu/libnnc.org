@@ -1222,6 +1222,9 @@
 <p>A high-level language that delegates most of the work to the C runtime seems to be a win in brevity and usefulness. The same training loop of a transformer model in Swift takes less than 100 lines: <a href="https://github.com/liuliu/s4nnc/blob/main/examples/imdb/main.swift#L197">https://github.com/liuliu/s4nnc/blob/main/examples/imdb/main.swift#L197</a></p>
 
 <p>Because the heavy-lifting is done in the <a href="https://libnnc.org">libnnc</a> library, the Swift portion can be light and even automatically generated. At the moment, we have about 3,000 lines of Swift code to run quite a few models on GPU, complete with data feeders, model specifications and optimizers.</p>
+<h2 id='live-documentation' class='heading'>Live Documentation</h2>
+
+<p><a href="https://liuliu.github.io/s4nnc/documentation/nnc">https://liuliu.github.io/s4nnc/documentation/nnc</a></p>
 <h2 id='runtime-api' class='heading'>Runtime API</h2>
 
 <p>Currently, s4nnc works better under Linux with CUDA 11, CuDNN and NCCL. The API for s4nnc wraps around <a href="https://libnnc.org/api/level-4/">Level-4</a> and <a href="https://libnnc.org/api/level-5/">Level-5</a> C APIs.</p>
