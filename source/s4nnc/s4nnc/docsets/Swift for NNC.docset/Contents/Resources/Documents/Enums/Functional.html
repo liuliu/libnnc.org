@@ -63,16 +63,28 @@
                 <a href="../Classes/BatchNorm.html">BatchNorm</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Chunk.html">Chunk</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/CmdParamsFactory.html">CmdParamsFactory</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Cmul.html">Cmul</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Concat.html">Concat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Contiguous.html">Contiguous</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Convolution.html">Convolution</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Convolution/Format.html">– Format</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConvolutionTranspose.html">ConvolutionTranspose</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CustomModel.html">CustomModel</a>
@@ -85,6 +97,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Dense.html">Dense</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Div.html">Div</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Dropout.html">Dropout</a>
@@ -213,10 +228,19 @@
                 <a href="../Classes/Mul.html">Mul</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Pad.html">Pad</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pad/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Parameter.html">Parameter</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Permute.html">Permute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RMSNorm.html">RMSNorm</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReLU.html">ReLU</a>
@@ -255,6 +279,9 @@
                 <a href="../Classes/Softmax.html">Softmax</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SquareRoot.html">SquareRoot</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/StreamContext.html">StreamContext</a>
               </li>
               <li class="nav-group-task">
@@ -283,6 +310,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Upsample/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Variable.html">Variable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/VecEnv.html">VecEnv</a>
@@ -993,7 +1023,16 @@
                 <a href="../Functions.html#/s:4main2zpoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.+(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zdoiyAA5ModelC2IOCAA0C13IOConvertible_p_AaG_ptF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/s:4main2zdoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1doiyAA5ModelC2IOCAA0B13IOConvertible_p_SftF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1doiyAA5ModelC2IOCSf_AA0B13IOConvertible_ptF">/(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:4main1doiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
@@ -1840,6 +1879,35 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main10FunctionalO4cmul4left5right13streamContextxx_xAA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/cmul(left:right:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main10FunctionalO4cmul4left5right13streamContextxx_xAA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzlFZ">cmul(left:<wbr>right:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Complex number multiplication</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">cmul</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="nv">left</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main10FunctionalO4copy4from2to13streamContextyx_xAA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzlFZ"></a>
                     <a name="//apple_ref/swift/Method/copy(from:to:streamContext:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main10FunctionalO4copy4from2to13streamContextyx_xAA06StreamG0CSgtAA24DynamicGraph_TensorGroupRzlFZ">copy(from:<wbr>to:<wbr>streamContext:<wbr>)</a>
@@ -2014,6 +2082,88 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4main10FunctionalO3mul4left5right6scalarAA5ModelC2IOCAA0G13IOConvertible_p_AaL_pSftFZ"></a>
+                    <a name="//apple_ref/swift/Method/mul(left:right:scalar:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main10FunctionalO3mul4left5right6scalarAA5ModelC2IOCAA0G13IOConvertible_p_AaL_pSftFZ">mul(left:<wbr>right:<wbr>scalar:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">mul</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ModelIOConvertible.html">ModelIOConvertible</a></span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ModelIOConvertible.html">ModelIOConvertible</a></span><span class="p">,</span> <span class="nv">scalar</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span>
+  <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Model.html">Model</a></span><span class="o">.</span><span class="kt">IO</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main10FunctionalO6matmul4left5right0D9Transpose0eF0AA5ModelC2IOCAA0G13IOConvertible_p_AaM_pSi_SitSi_SittFZ"></a>
+                    <a name="//apple_ref/swift/Method/matmul(left:right:leftTranspose:rightTranspose:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main10FunctionalO6matmul4left5right0D9Transpose0eF0AA5ModelC2IOCAA0G13IOConvertible_p_AaM_pSi_SitSi_SittFZ">matmul(left:<wbr>right:<wbr>leftTranspose:<wbr>rightTranspose:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">matmul</span><span class="p">(</span>
+  <span class="nv">left</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ModelIOConvertible.html">ModelIOConvertible</a></span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ModelIOConvertible.html">ModelIOConvertible</a></span><span class="p">,</span> <span class="nv">leftTranspose</span><span class="p">:</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">),</span>
+  <span class="nv">rightTranspose</span><span class="p">:</span> <span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Model.html">Model</a></span><span class="o">.</span><span class="kt">IO</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main10FunctionalO4cmul4left5rightAA5ModelC2IOCAA0F13IOConvertible_p_AaK_ptFZ"></a>
+                    <a name="//apple_ref/swift/Method/cmul(left:right:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main10FunctionalO4cmul4left5rightAA5ModelC2IOCAA0F13IOConvertible_p_AaK_ptFZ">cmul(left:<wbr>right:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">cmul</span><span class="p">(</span><span class="nv">left</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ModelIOConvertible.html">ModelIOConvertible</a></span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ModelIOConvertible.html">ModelIOConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Model.html">Model</a></span><span class="o">.</span><span class="kt">IO</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4main10FunctionalO3minyAA5ModelC2IOCAA0D13IOConvertible_p_AaI_ptFZ"></a>
                     <a name="//apple_ref/swift/Method/min(_:_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:4main10FunctionalO3minyAA5ModelC2IOCAA0D13IOConvertible_p_AaI_ptFZ">min(_:<wbr>_:<wbr>)</a>
@@ -2089,12 +2239,40 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4main10FunctionalO6concat4axis_13streamContextxSi_xdAA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlFZ"></a>
+                    <a name="//apple_ref/swift/Method/concat(axis:_:streamContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main10FunctionalO6concat4axis_13streamContextxSi_xdAA06StreamF0CSgtAA24DynamicGraph_TensorGroupRzlFZ">concat(axis:<wbr>_:<wbr>streamContext:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="n">concat</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph.html">DynamicGraph</a></span><span class="o">.</span><span class="kt">TensorGroup</span><span class="o">&gt;</span><span class="p">(</span>
+  <span class="nv">axis</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">inputs</span><span class="p">:</span> <span class="kt">T</span><span class="o">...</span><span class="p">,</span> <span class="nv">streamContext</span><span class="p">:</span> <span class="kt"><a href="../Classes/StreamContext.html">StreamContext</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2023-12-12)</p>
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2024-03-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

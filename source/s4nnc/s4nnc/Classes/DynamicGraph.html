@@ -63,16 +63,28 @@
                 <a href="../Classes/BatchNorm.html">BatchNorm</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Chunk.html">Chunk</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/CmdParamsFactory.html">CmdParamsFactory</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Cmul.html">Cmul</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Concat.html">Concat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Contiguous.html">Contiguous</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Convolution.html">Convolution</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Convolution/Format.html">– Format</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ConvolutionTranspose.html">ConvolutionTranspose</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CustomModel.html">CustomModel</a>
@@ -85,6 +97,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Dense.html">Dense</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Div.html">Div</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Dropout.html">Dropout</a>
@@ -213,10 +228,19 @@
                 <a href="../Classes/Mul.html">Mul</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Pad.html">Pad</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pad/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Parameter.html">Parameter</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Permute.html">Permute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RMSNorm.html">RMSNorm</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ReLU.html">ReLU</a>
@@ -255,6 +279,9 @@
                 <a href="../Classes/Softmax.html">Softmax</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SquareRoot.html">SquareRoot</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/StreamContext.html">StreamContext</a>
               </li>
               <li class="nav-group-task">
@@ -283,6 +310,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Upsample/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Variable.html">Variable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/VecEnv.html">VecEnv</a>
@@ -993,7 +1023,16 @@
                 <a href="../Functions.html#/s:4main2zpoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">.+(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main2zdoiyAA5ModelC2IOCAA0C13IOConvertible_p_AaG_ptF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/s:4main2zdoiyxx_xtAA24DynamicGraph_TensorGroupRzlF">./(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1doiyAA5ModelC2IOCAA0B13IOConvertible_p_SftF">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:4main1doiyAA5ModelC2IOCSf_AA0B13IOConvertible_ptF">/(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:4main1doiyxSf_xtAA24DynamicGraph_TensorGroupRzlF">/(_:_:)</a>
@@ -2200,9 +2239,9 @@ it manually helps to identify actual memory leaks.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4main12DynamicGraphC9openStore_5flags9procedures6ResultOyxAC9OpenErrorOGSS_AC0E0V0I4FlagVxAMKXEtKlF"></a>
-                    <a name="//apple_ref/swift/Method/openStore(_:flags:procedure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4main12DynamicGraphC9openStore_5flags9procedures6ResultOyxAC9OpenErrorOGSS_AC0E0V0I4FlagVxAMKXEtKlF">openStore(_:<wbr>flags:<wbr>procedure:<wbr>)</a>
+                    <a name="/s:4main12DynamicGraphC9openStore_5flags08externalE09chunkSize9procedures6ResultOyxAC9OpenErrorOGSS_AC0E0V0L4FlagVSSSgSixAOKXEtKlF"></a>
+                    <a name="//apple_ref/swift/Method/openStore(_:flags:externalStore:chunkSize:procedure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4main12DynamicGraphC9openStore_5flags08externalE09chunkSize9procedures6ResultOyxAC9OpenErrorOGSS_AC0E0V0L4FlagVSSSgSixAOKXEtKlF">openStore(_:<wbr>flags:<wbr>externalStore:<wbr>chunkSize:<wbr>procedure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2220,6 +2259,7 @@ it manually helps to identify actual memory leaks.</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="n">openStore</span><span class="o">&lt;</span><span class="kt">SuccessResult</span><span class="o">&gt;</span><span class="p">(</span>
   <span class="n">_</span> <span class="nv">filePath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">flags</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph/Store.html">Store</a></span><span class="o">.</span><span class="kt">OpenFlag</span> <span class="o">=</span> <span class="o">.</span><span class="n">truncateWhenClose</span><span class="p">,</span>
+  <span class="nv">externalStore</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">chunkSize</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">16_384</span><span class="p">,</span>
   <span class="nv">procedure</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">store</span><span class="p">:</span> <span class="kt"><a href="../Classes/DynamicGraph/Store.html">Store</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">SuccessResult</span>
 <span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">SuccessResult</span><span class="p">,</span> <span class="kt"><a href="../Classes/DynamicGraph/OpenError.html">OpenError</a></span><span class="o">&gt;</span></code></pre>
 
@@ -2250,6 +2290,30 @@ it manually helps to identify actual memory leaks.</p>
                               <td>
                                 <div>
                                   <p>The flags for the opening store. Default to truncateWhenClose.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>externalStore</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The external store for tensor data, in case we have tensors stored externally (a.k.a. outside of the SQLite database).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chunkSize</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Align each tensor to a certain chunk size.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2306,7 +2370,7 @@ it manually helps to identify actual memory leaks.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2023-12-12)</p>
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2024-03-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -305,12 +305,30 @@
 <section id="tensors">
 <h2>Tensors<a class="headerlink" href="#tensors" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp enum">
-<dt class="sig sig-object cpp" id="_CPPv4Ut3_118">
-<span id="_CPPv3Ut3_118"></span><span class="target" id="group__level__1__tensor_1ga5bea799269f02f5b3395d6b2c068b618"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut3_118" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4Ut3_119">
+<span id="_CPPv3Ut3_119"></span><span class="target" id="group__level__1__tensor_1ga15b3bbe041870ee299f7e042b0305e3c"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut3_119" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11833CCV_NNC_TENSOR_READ_METADATA_ONLYE">
-<span id="_CPPv3NUt3_11833CCV_NNC_TENSOR_READ_METADATA_ONLYE"></span><span class="target" id="group__level__1__tensor_1gga5bea799269f02f5b3395d6b2c068b618a60785ae4934eee2eb754105e5554e79e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_TENSOR_READ_METADATA_ONLY</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11833CCV_NNC_TENSOR_READ_METADATA_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11931CCV_NNC_TENSOR_MEMORY_MAP_EAGERE">
+<span id="_CPPv3NUt3_11931CCV_NNC_TENSOR_MEMORY_MAP_EAGERE"></span><span class="target" id="group__level__1__tensor_1gga15b3bbe041870ee299f7e042b0305e3ca50c817f10363d843da7c90a7d6656994"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_TENSOR_MEMORY_MAP_EAGER</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11931CCV_NNC_TENSOR_MEMORY_MAP_EAGERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Load tensor mapped directly. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11935CCV_NNC_TENSOR_MEMORY_MAP_ON_DEMANDE">
+<span id="_CPPv3NUt3_11935CCV_NNC_TENSOR_MEMORY_MAP_ON_DEMANDE"></span><span class="target" id="group__level__1__tensor_1gga15b3bbe041870ee299f7e042b0305e3ca81ff1573a8900e178ce83ff5cde99d95"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_TENSOR_MEMORY_MAP_ON_DEMAND</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11935CCV_NNC_TENSOR_MEMORY_MAP_ON_DEMANDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Defer tensor map until read on supported devices. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4Ut3_120">
+<span id="_CPPv3Ut3_120"></span><span class="target" id="group__level__1__tensor_1gae62fccd8cea8f216b24ba625d404c4ae"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut3_120" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_12033CCV_NNC_TENSOR_READ_METADATA_ONLYE">
+<span id="_CPPv3NUt3_12033CCV_NNC_TENSOR_READ_METADATA_ONLYE"></span><span class="target" id="group__level__1__tensor_1ggae62fccd8cea8f216b24ba625d404c4aea60785ae4934eee2eb754105e5554e79e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_TENSOR_READ_METADATA_ONLY</span></span></span><a class="headerlink" href="#_CPPv4NUt3_12033CCV_NNC_TENSOR_READ_METADATA_ONLYE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read tensor that data is nil, with only metadata. </p>
 </dd></dl>
 
@@ -362,7 +380,7 @@
 
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv433ccv_nnc_tensor_io_option_encode_f">
-<span id="_CPPv333ccv_nnc_tensor_io_option_encode_f"></span><span id="_CPPv233ccv_nnc_tensor_io_option_encode_f"></span><span id="ccv_nnc_tensor_io_option_encode_f"></span><span class="target" id="group__level__1__tensor_1gaa01e0cd912ff125ddcebc163b5b68ef5"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ccv_nnc_tensor_io_option_encode_f</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">data_size</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">datatype</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">dimension_count</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">encoded</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">encoded_size</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">identifier</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv433ccv_nnc_tensor_io_option_encode_f" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv333ccv_nnc_tensor_io_option_encode_f"></span><span id="_CPPv233ccv_nnc_tensor_io_option_encode_f"></span><span id="ccv_nnc_tensor_io_option_encode_f"></span><span class="target" id="group__level__1__tensor_1ga298e6c1b7b269a99359a6759b9c3237c"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">ccv_nnc_tensor_io_option_encode_f</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n"><span class="pre">data_size</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">datatype</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">dimensions</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">dimension_count</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">context</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">encoded</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">encoded_size</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">ccv_nnc_tensor_param_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">tensor_params</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">identifier</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv433ccv_nnc_tensor_io_option_encode_f" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Method to encode tensor into a give buffer. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Param data<span class="colon">:</span></dt>
@@ -389,11 +407,14 @@
 <dt class="field-even">Param encoded_size<span class="colon">:</span></dt>
 <dd class="field-even"><p>The size of the buffer. </p>
 </dd>
-<dt class="field-odd">Param identifier<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The identifier identifies this encoder (non-zero). </p>
+<dt class="field-odd">Param tensor_params<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The tensor parameters that can be modified. </p>
 </dd>
-<dt class="field-even">Return<span class="colon">:</span></dt>
-<dd class="field-even"><p>1 if it is processed, 0 otherwise. </p>
+<dt class="field-even">Param identifier<span class="colon">:</span></dt>
+<dd class="field-even"><p>The identifier identifies this encoder (non-zero). </p>
+</dd>
+<dt class="field-odd">Return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>1 if it is processed, 0 otherwise. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -414,6 +435,25 @@
 <li><p><strong>ptr</strong> – If 0, nnc will allocate the tensor ourselves. Otherwise, will use the memory region referenced by ‘ptr’. </p></li>
 <li><p><strong>params</strong> – Tensor parameters. </p></li>
 <li><p><strong>flags</strong> – Reserved flags for the allocation. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The newly created tensor. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428ccv_nnc_tensor_new_from_fileK22ccv_nnc_tensor_param_tPCKcK5off_tKi">
+<span id="_CPPv328ccv_nnc_tensor_new_from_fileK22ccv_nnc_tensor_param_tPCKcK5off_tKi"></span><span id="_CPPv228ccv_nnc_tensor_new_from_fileK22ccv_nnc_tensor_param_tPCKcK5off_tKi"></span><span id="ccv_nnc_tensor_new_from_file__ccv_nnc_tensor_param_tC.cCPC.off_tC.iC"></span><span class="target" id="group__level__1__tensor_1gac884914572c47f2aae3d98583c0b4ef9"></span><span class="sig-name descname"><span class="n"><span class="pre">ccv_nnc_tensor_new_from_file</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">ccv_nnc_tensor_param_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">params</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filename</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">off_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">offset</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428ccv_nnc_tensor_new_from_fileK22ccv_nnc_tensor_param_tPCKcK5off_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Create a new tensor with data from a file. This will create a mmap tensor if that is preferred. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>params</strong> – Tensor parameters. </p></li>
+<li><p><strong>filename</strong> – The file to load tensor content from. </p></li>
+<li><p><strong>offset</strong> – The offset to the tensor content from the file. </p></li>
+<li><p><strong>flags</strong> – Reserved flags for this loading. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -593,15 +633,14 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv419ccv_nnc_tensor_readPCvPCKcPCKcPCK26ccv_nnc_tensor_io_option_tKiPCK22ccv_nnc_tensor_param_tPCP16ccv_nnc_tensor_t">
-<span id="_CPPv319ccv_nnc_tensor_readPCvPCKcPCKcPCK26ccv_nnc_tensor_io_option_tKiPCK22ccv_nnc_tensor_param_tPCP16ccv_nnc_tensor_t"></span><span id="_CPPv219ccv_nnc_tensor_readPCvPCKcPCKcPCK26ccv_nnc_tensor_io_option_tKiPCK22ccv_nnc_tensor_param_tPCP16ccv_nnc_tensor_t"></span><span id="ccv_nnc_tensor_read__voidPC.cCPC.cCPC.ccv_nnc_tensor_io_option_tCPC.iC.ccv_nnc_tensor_param_tCPC.ccv_nnc_tensor_tPPC"></span><span class="target" id="group__level__1__tensor_1ga72558d1f7d2dd983e1395bdae0978c46"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ccv_nnc_tensor_read</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">handle</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dir</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv426ccv_nnc_tensor_io_option_t" title="ccv_nnc_tensor_io_option_t"><span class="n"><span class="pre">ccv_nnc_tensor_io_option_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">options</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">ccv_nnc_tensor_param_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tensor_params</span></span>, <span class="n"><span class="pre">ccv_nnc_tensor_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tensor_out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_tensor_readPCvPCKcPCKcPCK26ccv_nnc_tensor_io_option_tKiPCK22ccv_nnc_tensor_param_tPCP16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv419ccv_nnc_tensor_readPCvPCKcPCK26ccv_nnc_tensor_io_option_tKiPCK22ccv_nnc_tensor_param_tPCP16ccv_nnc_tensor_t">
+<span id="_CPPv319ccv_nnc_tensor_readPCvPCKcPCK26ccv_nnc_tensor_io_option_tKiPCK22ccv_nnc_tensor_param_tPCP16ccv_nnc_tensor_t"></span><span id="_CPPv219ccv_nnc_tensor_readPCvPCKcPCK26ccv_nnc_tensor_io_option_tKiPCK22ccv_nnc_tensor_param_tPCP16ccv_nnc_tensor_t"></span><span id="ccv_nnc_tensor_read__voidPC.cCPC.ccv_nnc_tensor_io_option_tCPC.iC.ccv_nnc_tensor_param_tCPC.ccv_nnc_tensor_tPPC"></span><span class="target" id="group__level__1__tensor_1ga7eb5e76425058c2b0bec00145269f0ca"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ccv_nnc_tensor_read</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">handle</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv426ccv_nnc_tensor_io_option_t" title="ccv_nnc_tensor_io_option_t"><span class="n"><span class="pre">ccv_nnc_tensor_io_option_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">options</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flags</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">ccv_nnc_tensor_param_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tensor_params</span></span>, <span class="n"><span class="pre">ccv_nnc_tensor_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tensor_out</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_tensor_readPCvPCKcPCK26ccv_nnc_tensor_io_option_tKiPCK22ccv_nnc_tensor_param_tPCP16ccv_nnc_tensor_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Read a tensor from a SQLite database with a given name. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>handle</strong> – The SQLite handle. </p></li>
 <li><p><strong>name</strong> – The name to find the tensor in the database. </p></li>
-<li><p><strong>dir</strong> – If the dir is provided, the tensor we read will be backed by a file at this path if possible (depending on underlying implementation, right now only MPS backend supported this feature). </p></li>
 <li><p><strong>options</strong> – If provided, we will use this to decode any data that identifier != 0. </p></li>
 <li><p><strong>flags</strong> – Additional flag to configure how we read tensor. </p></li>
 <li><p><strong>tensor_params</strong> – If provided, we will use this to create the tensor if tensor_out is not provided. </p></li>
@@ -610,26 +649,6 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>CCV_IO_FINAL for success, otherwise error. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv419ccv_nnc_tensor_swapPC16ccv_nnc_tensor_tPCKcPCKcPCKvK6size_t">
-<span id="_CPPv319ccv_nnc_tensor_swapPC16ccv_nnc_tensor_tPCKcPCKcPCKvK6size_t"></span><span id="_CPPv219ccv_nnc_tensor_swapPC16ccv_nnc_tensor_tPCKcPCKcPCKvK6size_t"></span><span id="ccv_nnc_tensor_swap__ccv_nnc_tensor_tPC.cCPC.cCPC.voidCPC.sC"></span><span class="target" id="group__level__1__tensor_1gac5bdc2da88b037c68e770ef406750219"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ccv_nnc_tensor_swap</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ccv_nnc_tensor_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tensor</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dir</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv419ccv_nnc_tensor_swapPC16ccv_nnc_tensor_tPCKcPCKcPCKvK6size_t" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Swap a tensor to be backed by a file instead. Currently, once swapped, there is no way to swap back. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>tensor</strong> – The tensor. </p></li>
-<li><p><strong>name</strong> – The name for the tensor when swapping to disk. </p></li>
-<li><p><strong>dir</strong> – The directory for the tensor to be swapped on a file at this path if possible (depending on underlying implementation, right now only MPS backend supported this feature). </p></li>
-<li><p><strong>data</strong> – If provided, the content of the tensor will be filled with the data pointer. </p></li>
-<li><p><strong>data_size</strong> – The size of the data content. </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>0 for success. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -773,6 +792,24 @@
 <dt class="sig sig-object cpp" id="_CPPv4NUt3_11425CCV_NNC_UPSAMPLE_BILINEARE">
 <span id="_CPPv3NUt3_11425CCV_NNC_UPSAMPLE_BILINEARE"></span><span class="target" id="group__level__1__cmd_1ggaa7df87806f64f3b241c8cde9eb57cad5ae6459c4d00a00e25d934bbee3d2f09a2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_UPSAMPLE_BILINEAR</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11425CCV_NNC_UPSAMPLE_BILINEARE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Using bilinear interpolation. </p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4Ut3_115">
+<span id="_CPPv3Ut3_115"></span><span class="target" id="group__level__1__cmd_1ga2f1398dba5e4a5616b83437528bdb28e"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut3_115" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11516CCV_NNC_PAD_ZEROE">
+<span id="_CPPv3NUt3_11516CCV_NNC_PAD_ZEROE"></span><span class="target" id="group__level__1__cmd_1gga2f1398dba5e4a5616b83437528bdb28ea8ade2357f9a8d9339463f6be3876a2cb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_PAD_ZERO</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11516CCV_NNC_PAD_ZEROE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pad 0s. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11521CCV_NNC_PAD_REPLICATEE">
+<span id="_CPPv3NUt3_11521CCV_NNC_PAD_REPLICATEE"></span><span class="target" id="group__level__1__cmd_1gga2f1398dba5e4a5616b83437528bdb28ead5cd85c859eaf06c960fb89d207b6b83"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_PAD_REPLICATE</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11521CCV_NNC_PAD_REPLICATEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Pad by replicating the edge. </p>
 </dd></dl>
 
 </dd></dl>
@@ -1199,8 +1236,10 @@
 <dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t5countE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t5countE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t5countE"></span><span id="ccv_nnc_cmd_param_t::count__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1af008fd1ef1d6c8c0173e3dafda2028c7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">count</span></span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t5countE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[convolution.count] The number of filters for convolutional layer.</p>
+<p>[convolution_transpose.count] The number of filters for convolutional layer.</p>
 <p>[bnorm.count] The number of axis selected.</p>
 <p>[lnorm.count] The number of axis selected.</p>
+<p>[rmsnorm.count] The number of axis selected.</p>
 <p>[reduce.count] The number of axis selected. </p>
 </dd></dl>
 
@@ -1208,7 +1247,21 @@
 <dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t6groupsE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t6groupsE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t6groupsE"></span><span id="ccv_nnc_cmd_param_t::groups__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a0302a689cd024a687c3333600c0c986f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">groups</span></span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t6groupsE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[convolution.groups] The number of groups for convolutional layer.</p>
+<p>[convolution_transpose.groups] The number of groups for convolutional layer.</p>
 <p>[gnorm.group] The number of groups that separates channels. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t8dilationE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t8dilationE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t8dilationE"></span><span id="ccv_nnc_cmd_param_t::dilation__iA"></span><span class="target" id="structccv__nnc__cmd__param__t_1a38ccf297ff21200a04a88316ddbe461f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dilation</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">CCV_NNC_MAX_DIM_ALLOC</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t8dilationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[convolution.dilation[]] The dilation factor for convolutional layer. Default to 1.</p>
+<p>[convolution_transpose.dilation[]] The dilation factor for convolutional layer. Default to 1. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t14output_paddingE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t14output_paddingE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t14output_paddingE"></span><span id="ccv_nnc_cmd_param_t::output_padding__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1abf05d524c38906ead39cdfd5c372e0d1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_padding</span></span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t14output_paddingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[convolution_transpose.output_padding] The output padding to resolve ambiguity when treat this as inverse of convolution. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -1291,6 +1344,7 @@
 <span id="_CPPv3N19ccv_nnc_cmd_param_t4axisE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4axisE"></span><span id="ccv_nnc_cmd_param_t::axis__iA"></span><span class="target" id="structccv__nnc__cmd__param__t_1a18856fdc04fd7f3cc94f6e4a3367a66b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">axis</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">CCV_NNC_MAX_DIM_ALLOC</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4axisE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[bnorm.axis[]] The axis selected to compute mean / variance.</p>
 <p>[lnorm.axis[]] The axis selected to compute mean / variance.</p>
+<p>[rmsnorm.axis[]] The axis selected to compute mean / variance.</p>
 <p>[reduce.axis[]] The axis selected to reduce.</p>
 <p>[transpose.axis[2]] The axis we’d like to transpose for input. </p>
 </dd></dl>
@@ -1301,6 +1355,7 @@
 <dd><p>[bnorm.epsilon] The epsilon for standard derivation.</p>
 <p>[lnorm.epsilon] The epsilon for standard derivation.</p>
 <p>[gnorm.epsilon] The epsilon for standard derivation.</p>
+<p>[rmsnorm.epsilon] The epsilon for standard derivation.</p>
 <p>[adam.epsilon] The epsilon for standard derivation.</p>
 <p>[lamb.epsilon] The epsilon for standard derivation.</p>
 <p>[rmsprop.epsilon] The epsilon for standard derivation. </p>
@@ -1312,6 +1367,12 @@
 <dd><p>[bnorm.momentum] running_mean = running_mean * momentum + mean * (1 - momentum).</p>
 <p>[sgd.momentum] For SGD, this follows <a class="reference external" href="http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf">http://www.cs.toronto.edu/%7Ehinton/absps/momentum.pdf</a>.</p>
 <p>[rmsprop.momentum] The momentum hyper-parameter. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t18elementwise_affineE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t18elementwise_affineE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t18elementwise_affineE"></span><span id="ccv_nnc_cmd_param_t::elementwise_affine__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a6d2a437a1afac34c7c6f658fab45b2f2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">elementwise_affine</span></span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t18elementwise_affineE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[lnorm.elementwise_affine] Whether it supports scale / bias. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -1464,7 +1525,8 @@
 <dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t4typeE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t4typeE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t4typeE"></span><span id="ccv_nnc_cmd_param_t::type__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1aa9a93e0ab295f95f69149d3d147d4041"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t4typeE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[upsample.type] 0 - nearest, 1 - bilinear.</p>
-<p>[histogram.type] The type, can be even, logarithmic, or bins. </p>
+<p>[histogram.type] The type, can be even, logarithmic, or bins.</p>
+<p>[pad.type] The type of pad, can be either zeros or replicating edge. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -1477,6 +1539,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t12height_scaleE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t12height_scaleE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t12height_scaleE"></span><span id="ccv_nnc_cmd_param_t::height_scale__float"></span><span class="target" id="structccv__nnc__cmd__param__t_1aa8f9b4a6dafa7c6b4616ccf8294b50da"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">height_scale</span></span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t12height_scaleE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[upsample.height_scale] scale for height parameter. It is between 1 and 2 at the moment. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t13align_cornersE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t13align_cornersE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t13align_cornersE"></span><span id="ccv_nnc_cmd_param_t::align_corners__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a82fd7306351255ca30cd4f24b2807299"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">align_corners</span></span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t13align_cornersE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[upsample.align_corners] Whether to scale to align corners. Thus, for 0…1, if false, it will align to -0.25, 0.25, 0.75, 1.25, if true, it will align to 0, 0.3333, 0.6666, 1.0 </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -1521,6 +1589,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t6upcastE">
 <span id="_CPPv3N19ccv_nnc_cmd_param_t6upcastE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t6upcastE"></span><span id="ccv_nnc_cmd_param_t::upcast__i"></span><span class="target" id="structccv__nnc__cmd__param__t_1a8895bf82843081bb5fecc76f22b86a82"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">upcast</span></span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t6upcastE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>[scaled_dot_product_attention.upcast] Whether we want to run the attention computation at higher precision (from FP16 to FP32). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N19ccv_nnc_cmd_param_t3endE">
+<span id="_CPPv3N19ccv_nnc_cmd_param_t3endE"></span><span id="_CPPv2N19ccv_nnc_cmd_param_t3endE"></span><span id="ccv_nnc_cmd_param_t::end__iA"></span><span class="target" id="structccv__nnc__cmd__param__t_1a1b79a422520797769b7d692c1b91929f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">end</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">CCV_NNC_MAX_DIM_ALLOC</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N19ccv_nnc_cmd_param_t3endE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>[pad.end] Work together with size.dim. size.dim is how much to add at the beginning and pad.end is how much to add at the end. </p>
 </dd></dl>
 
 </div>
@@ -1602,18 +1676,18 @@
 <section id="streams">
 <h2>Streams<a class="headerlink" href="#streams" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp enum">
-<dt class="sig sig-object cpp" id="_CPPv4Ut3_119">
-<span id="_CPPv3Ut3_119"></span><span class="target" id="group__level__1__stream_1ga15b3bbe041870ee299f7e042b0305e3c"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4Ut3_121">
+<span id="_CPPv3Ut3_121"></span><span class="target" id="group__level__1__stream_1gaa94c5fdcac6a4b26211b612c3edc04ff"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11922CCV_STREAM_CONTEXT_CPUE">
-<span id="_CPPv3NUt3_11922CCV_STREAM_CONTEXT_CPUE"></span><span class="target" id="group__level__1__stream_1gga15b3bbe041870ee299f7e042b0305e3cab1ad09b2d5a1d647d6ae0c3e10ee0edb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_STREAM_CONTEXT_CPU</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11922CCV_STREAM_CONTEXT_CPUE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_12122CCV_STREAM_CONTEXT_CPUE">
+<span id="_CPPv3NUt3_12122CCV_STREAM_CONTEXT_CPUE"></span><span class="target" id="group__level__1__stream_1ggaa94c5fdcac6a4b26211b612c3edc04ffab1ad09b2d5a1d647d6ae0c3e10ee0edb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_STREAM_CONTEXT_CPU</span></span></span><a class="headerlink" href="#_CPPv4NUt3_12122CCV_STREAM_CONTEXT_CPUE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A CPU based stream context (unsupported). </p>
 </dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11922CCV_STREAM_CONTEXT_GPUE">
-<span id="_CPPv3NUt3_11922CCV_STREAM_CONTEXT_GPUE"></span><span class="target" id="group__level__1__stream_1gga15b3bbe041870ee299f7e042b0305e3cae51e08d42b70d0ca16d3ef7b58c35113"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_STREAM_CONTEXT_GPU</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11922CCV_STREAM_CONTEXT_GPUE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_12122CCV_STREAM_CONTEXT_GPUE">
+<span id="_CPPv3NUt3_12122CCV_STREAM_CONTEXT_GPUE"></span><span class="target" id="group__level__1__stream_1ggaa94c5fdcac6a4b26211b612c3edc04ffae51e08d42b70d0ca16d3ef7b58c35113"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_STREAM_CONTEXT_GPU</span></span></span><a class="headerlink" href="#_CPPv4NUt3_12122CCV_STREAM_CONTEXT_GPUE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A GPU based stream context. </p>
 </dd></dl>
 
@@ -1977,68 +2051,22 @@
 <section id="micro-ops">
 <h2>Micro Ops<a class="headerlink" href="#micro-ops" title="Permalink to this heading">¶</a></h2>
 <dl class="cpp enum">
-<dt class="sig sig-object cpp" id="_CPPv4Ut3_115">
-<span id="_CPPv3Ut3_115"></span><span class="target" id="group__level__1__uops_1ga2f1398dba5e4a5616b83437528bdb28e"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut3_115" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p><em>Values:</em></p>
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11526CCV_NNC_MICRO_UNARY_OP_NEGE">
-<span id="_CPPv3NUt3_11526CCV_NNC_MICRO_UNARY_OP_NEGE"></span><span class="target" id="group__level__1__uops_1gga2f1398dba5e4a5616b83437528bdb28ea395f72bb5a61a3ae3a1e0377c5ef9948"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_UNARY_OP_NEG</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11526CCV_NNC_MICRO_UNARY_OP_NEGE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11526CCV_NNC_MICRO_UNARY_OP_LOGE">
-<span id="_CPPv3NUt3_11526CCV_NNC_MICRO_UNARY_OP_LOGE"></span><span class="target" id="group__level__1__uops_1gga2f1398dba5e4a5616b83437528bdb28eafc4a5f83cef4d83857750141f8ec2c8f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_UNARY_OP_LOG</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11526CCV_NNC_MICRO_UNARY_OP_LOGE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11526CCV_NNC_MICRO_UNARY_OP_EXPE">
-<span id="_CPPv3NUt3_11526CCV_NNC_MICRO_UNARY_OP_EXPE"></span><span class="target" id="group__level__1__uops_1gga2f1398dba5e4a5616b83437528bdb28eab3e4a7d8cb03c999de48395a1f24d99d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_UNARY_OP_EXP</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11526CCV_NNC_MICRO_UNARY_OP_EXPE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="cpp enum">
 <dt class="sig sig-object cpp" id="_CPPv4Ut3_116">
 <span id="_CPPv3Ut3_116"></span><span class="target" id="group__level__1__uops_1gaeac2de18c0ed342a690b3e2ba3c52426"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut3_116" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11628CCV_NNC_MICRO_BINARY_OP_PLUSE">
-<span id="_CPPv3NUt3_11628CCV_NNC_MICRO_BINARY_OP_PLUSE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426a8ec1df9cb7e0abb182681adb72f87255"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_PLUS</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11628CCV_NNC_MICRO_BINARY_OP_PLUSE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11626CCV_NNC_MICRO_UNARY_OP_NEGE">
+<span id="_CPPv3NUt3_11626CCV_NNC_MICRO_UNARY_OP_NEGE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426a395f72bb5a61a3ae3a1e0377c5ef9948"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_UNARY_OP_NEG</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11626CCV_NNC_MICRO_UNARY_OP_NEGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11629CCV_NNC_MICRO_BINARY_OP_MINUSE">
-<span id="_CPPv3NUt3_11629CCV_NNC_MICRO_BINARY_OP_MINUSE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426a3a13f4bf38136ab62e07a6711e57f814"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_MINUS</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11629CCV_NNC_MICRO_BINARY_OP_MINUSE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11626CCV_NNC_MICRO_UNARY_OP_LOGE">
+<span id="_CPPv3NUt3_11626CCV_NNC_MICRO_UNARY_OP_LOGE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426afc4a5f83cef4d83857750141f8ec2c8f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_UNARY_OP_LOG</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11626CCV_NNC_MICRO_UNARY_OP_LOGE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11627CCV_NNC_MICRO_BINARY_OP_MULE">
-<span id="_CPPv3NUt3_11627CCV_NNC_MICRO_BINARY_OP_MULE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426aae3ac213f4a01fde43ace12cb62ac210"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_MUL</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11627CCV_NNC_MICRO_BINARY_OP_MULE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11627CCV_NNC_MICRO_BINARY_OP_DIVE">
-<span id="_CPPv3NUt3_11627CCV_NNC_MICRO_BINARY_OP_DIVE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426a70f26f7b54c05396373369f844b32843"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_DIV</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11627CCV_NNC_MICRO_BINARY_OP_DIVE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11627CCV_NNC_MICRO_BINARY_OP_MAXE">
-<span id="_CPPv3NUt3_11627CCV_NNC_MICRO_BINARY_OP_MAXE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426a437e8199debd93094c2ff523d747e0e3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_MAX</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11627CCV_NNC_MICRO_BINARY_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11627CCV_NNC_MICRO_BINARY_OP_MINE">
-<span id="_CPPv3NUt3_11627CCV_NNC_MICRO_BINARY_OP_MINE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426a9fe800307d836ff76d2e758334bcb07f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_MIN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11627CCV_NNC_MICRO_BINARY_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11632CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE">
-<span id="_CPPv3NUt3_11632CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426a88e4cae3ca2f3b653fdad7ef9fafcbc6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_EQUAL_TO</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11632CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE" title="Permalink to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11633CCV_NNC_MICRO_BINARY_OP_LESS_THANE">
-<span id="_CPPv3NUt3_11633CCV_NNC_MICRO_BINARY_OP_LESS_THANE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426aab7992e77d79d55821d539c677dece2d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_LESS_THAN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11633CCV_NNC_MICRO_BINARY_OP_LESS_THANE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11626CCV_NNC_MICRO_UNARY_OP_EXPE">
+<span id="_CPPv3NUt3_11626CCV_NNC_MICRO_UNARY_OP_EXPE"></span><span class="target" id="group__level__1__uops_1ggaeac2de18c0ed342a690b3e2ba3c52426ab3e4a7d8cb03c999de48395a1f24d99d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_UNARY_OP_EXP</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11626CCV_NNC_MICRO_UNARY_OP_EXPE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2048,38 +2076,84 @@
 <span id="_CPPv3Ut3_117"></span><span class="target" id="group__level__1__uops_1ga0ac0b7994a7d738aa77d2c1cfe8d6d13"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut3_117" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p><em>Values:</em></p>
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11727CCV_NNC_MICRO_REDUCE_OP_MAXE">
-<span id="_CPPv3NUt3_11727CCV_NNC_MICRO_REDUCE_OP_MAXE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13adf07ce55eb69c8fc9311c65535e37e20"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_MAX</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11727CCV_NNC_MICRO_REDUCE_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11728CCV_NNC_MICRO_BINARY_OP_PLUSE">
+<span id="_CPPv3NUt3_11728CCV_NNC_MICRO_BINARY_OP_PLUSE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a8ec1df9cb7e0abb182681adb72f87255"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_PLUS</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11728CCV_NNC_MICRO_BINARY_OP_PLUSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11727CCV_NNC_MICRO_REDUCE_OP_MINE">
-<span id="_CPPv3NUt3_11727CCV_NNC_MICRO_REDUCE_OP_MINE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a69b956ed3165610ba8984ac42a91233b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_MIN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11727CCV_NNC_MICRO_REDUCE_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11729CCV_NNC_MICRO_BINARY_OP_MINUSE">
+<span id="_CPPv3NUt3_11729CCV_NNC_MICRO_BINARY_OP_MINUSE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a3a13f4bf38136ab62e07a6711e57f814"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_MINUS</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11729CCV_NNC_MICRO_BINARY_OP_MINUSE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11730CCV_NNC_MICRO_REDUCE_OP_ARGMAXE">
-<span id="_CPPv3NUt3_11730CCV_NNC_MICRO_REDUCE_OP_ARGMAXE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a65903dc8df7ad29f89c55ff015feb087"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_ARGMAX</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11730CCV_NNC_MICRO_REDUCE_OP_ARGMAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11727CCV_NNC_MICRO_BINARY_OP_MULE">
+<span id="_CPPv3NUt3_11727CCV_NNC_MICRO_BINARY_OP_MULE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13aae3ac213f4a01fde43ace12cb62ac210"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_MUL</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11727CCV_NNC_MICRO_BINARY_OP_MULE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11730CCV_NNC_MICRO_REDUCE_OP_ARGMINE">
-<span id="_CPPv3NUt3_11730CCV_NNC_MICRO_REDUCE_OP_ARGMINE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a03ea378807f89514abb47e1e8ee953a0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_ARGMIN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11730CCV_NNC_MICRO_REDUCE_OP_ARGMINE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11727CCV_NNC_MICRO_BINARY_OP_DIVE">
+<span id="_CPPv3NUt3_11727CCV_NNC_MICRO_BINARY_OP_DIVE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a70f26f7b54c05396373369f844b32843"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_DIV</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11727CCV_NNC_MICRO_BINARY_OP_DIVE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11728CCV_NNC_MICRO_REDUCE_OP_MEANE">
-<span id="_CPPv3NUt3_11728CCV_NNC_MICRO_REDUCE_OP_MEANE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a3e5d141a0a4f972252fa1ae4d0641c4d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_MEAN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11728CCV_NNC_MICRO_REDUCE_OP_MEANE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11727CCV_NNC_MICRO_BINARY_OP_MAXE">
+<span id="_CPPv3NUt3_11727CCV_NNC_MICRO_BINARY_OP_MAXE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a437e8199debd93094c2ff523d747e0e3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_MAX</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11727CCV_NNC_MICRO_BINARY_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11727CCV_NNC_MICRO_REDUCE_OP_SUME">
-<span id="_CPPv3NUt3_11727CCV_NNC_MICRO_REDUCE_OP_SUME"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a4cd1cdff9468e3b80c1fa2d66d1fabbf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_SUM</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11727CCV_NNC_MICRO_REDUCE_OP_SUME" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11727CCV_NNC_MICRO_BINARY_OP_MINE">
+<span id="_CPPv3NUt3_11727CCV_NNC_MICRO_BINARY_OP_MINE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a9fe800307d836ff76d2e758334bcb07f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_MIN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11727CCV_NNC_MICRO_BINARY_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4NUt3_11728CCV_NNC_MICRO_REDUCE_OP_PRODE">
-<span id="_CPPv3NUt3_11728CCV_NNC_MICRO_REDUCE_OP_PRODE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a4f294fe38b49d3764865ca8c4fe8bcfb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_PROD</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11728CCV_NNC_MICRO_REDUCE_OP_PRODE" title="Permalink to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11732CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE">
+<span id="_CPPv3NUt3_11732CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13a88e4cae3ca2f3b653fdad7ef9fafcbc6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_EQUAL_TO</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11732CCV_NNC_MICRO_BINARY_OP_EQUAL_TOE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11733CCV_NNC_MICRO_BINARY_OP_LESS_THANE">
+<span id="_CPPv3NUt3_11733CCV_NNC_MICRO_BINARY_OP_LESS_THANE"></span><span class="target" id="group__level__1__uops_1gga0ac0b7994a7d738aa77d2c1cfe8d6d13aab7992e77d79d55821d539c677dece2d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_BINARY_OP_LESS_THAN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11733CCV_NNC_MICRO_BINARY_OP_LESS_THANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4Ut3_118">
+<span id="_CPPv3Ut3_118"></span><span class="target" id="group__level__1__uops_1ga5bea799269f02f5b3395d6b2c068b618"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut3_118" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11827CCV_NNC_MICRO_REDUCE_OP_MAXE">
+<span id="_CPPv3NUt3_11827CCV_NNC_MICRO_REDUCE_OP_MAXE"></span><span class="target" id="group__level__1__uops_1gga5bea799269f02f5b3395d6b2c068b618adf07ce55eb69c8fc9311c65535e37e20"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_MAX</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11827CCV_NNC_MICRO_REDUCE_OP_MAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11827CCV_NNC_MICRO_REDUCE_OP_MINE">
+<span id="_CPPv3NUt3_11827CCV_NNC_MICRO_REDUCE_OP_MINE"></span><span class="target" id="group__level__1__uops_1gga5bea799269f02f5b3395d6b2c068b618a69b956ed3165610ba8984ac42a91233b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_MIN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11827CCV_NNC_MICRO_REDUCE_OP_MINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11830CCV_NNC_MICRO_REDUCE_OP_ARGMAXE">
+<span id="_CPPv3NUt3_11830CCV_NNC_MICRO_REDUCE_OP_ARGMAXE"></span><span class="target" id="group__level__1__uops_1gga5bea799269f02f5b3395d6b2c068b618a65903dc8df7ad29f89c55ff015feb087"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_ARGMAX</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11830CCV_NNC_MICRO_REDUCE_OP_ARGMAXE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11830CCV_NNC_MICRO_REDUCE_OP_ARGMINE">
+<span id="_CPPv3NUt3_11830CCV_NNC_MICRO_REDUCE_OP_ARGMINE"></span><span class="target" id="group__level__1__uops_1gga5bea799269f02f5b3395d6b2c068b618a03ea378807f89514abb47e1e8ee953a0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_ARGMIN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11830CCV_NNC_MICRO_REDUCE_OP_ARGMINE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11828CCV_NNC_MICRO_REDUCE_OP_MEANE">
+<span id="_CPPv3NUt3_11828CCV_NNC_MICRO_REDUCE_OP_MEANE"></span><span class="target" id="group__level__1__uops_1gga5bea799269f02f5b3395d6b2c068b618a3e5d141a0a4f972252fa1ae4d0641c4d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_MEAN</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11828CCV_NNC_MICRO_REDUCE_OP_MEANE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11827CCV_NNC_MICRO_REDUCE_OP_SUME">
+<span id="_CPPv3NUt3_11827CCV_NNC_MICRO_REDUCE_OP_SUME"></span><span class="target" id="group__level__1__uops_1gga5bea799269f02f5b3395d6b2c068b618a4cd1cdff9468e3b80c1fa2d66d1fabbf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_SUM</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11827CCV_NNC_MICRO_REDUCE_OP_SUME" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt3_11828CCV_NNC_MICRO_REDUCE_OP_PRODE">
+<span id="_CPPv3NUt3_11828CCV_NNC_MICRO_REDUCE_OP_PRODE"></span><span class="target" id="group__level__1__uops_1gga5bea799269f02f5b3395d6b2c068b618a4f294fe38b49d3764865ca8c4fe8bcfb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CCV_NNC_MICRO_REDUCE_OP_PROD</span></span></span><a class="headerlink" href="#_CPPv4NUt3_11828CCV_NNC_MICRO_REDUCE_OP_PRODE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd></dl>
