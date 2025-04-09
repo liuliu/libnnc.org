@@ -29,6 +29,7 @@
         "key.parsed_declaration" : "private let np = Python.import(\"numpy\")",
         "key.parsed_scope.end" : 5,
         "key.parsed_scope.start" : 5,
+        "key.reusingastcontext" : false,
         "key.typename" : "<<error type>>",
         "key.typeusr" : "$sXeD",
         "key.usr" : "s:4main2np33_E0AEB10524EED233A450789DA24E09E7LLXevp"
@@ -58,12 +59,13 @@
         "key.parsed_declaration" : "private let ctypes = Python.import(\"ctypes\")",
         "key.parsed_scope.end" : 6,
         "key.parsed_scope.start" : 6,
+        "key.reusingastcontext" : false,
         "key.typename" : "<<error type>>",
         "key.typeusr" : "$sXeD",
         "key.usr" : "s:4main6ctypes33_E0AEB10524EED233A450789DA24E09E7LLXevp"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 1979,
         "key.bodyoffset" : 183,
         "key.column" : 15,
@@ -71,15 +73,15 @@
         "key.doc.column" : 15,
         "key.doc.declaration" : "public struct Tensor<Element> : AnyTensor where Element : main.TensorNumeric",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"747\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 747,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"762\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 762,
         "key.doc.name" : "Tensor",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : AnyTensor <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 2035,
-        "key.line" : 747,
+        "key.line" : 762,
         "key.modulename" : "main",
         "key.name" : "Tensor",
         "key.namelength" : 6,
@@ -88,6 +90,7 @@
         "key.parsed_declaration" : "extension Tensor where Element: NumpyScalarCompatible",
         "key.parsed_scope.end" : 56,
         "key.parsed_scope.start" : 8,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -138,6 +141,7 @@
             "key.parsed_declaration" : "public enum NumpyScalarCompatibleError: Error",
             "key.parsed_scope.end" : 20,
             "key.parsed_scope.start" : 11,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.kind" : "source.lang.swift.decl.enumcase",
@@ -172,6 +176,7 @@
                     "key.parsed_declaration" : "case notNumpy",
                     "key.parsed_scope.end" : 13,
                     "key.parsed_scope.start" : 13,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>.NumpyScalarCompatibleError.Type) -> Tensor<Element>.NumpyScalarCompatibleError",
                     "key.typeusr" : "$sy4main6TensorV26NumpyScalarCompatibleErrorOyx_GAFmcAA0B7NumericRzluD",
                     "key.usr" : "s:4main6TensorV26NumpyScalarCompatibleErrorO03notC0yAEyx_GAGmAA0B7NumericRzlF"
@@ -211,10 +216,11 @@
                     "key.parsed_declaration" : "case noDataConversion(PythonObject, Any.Type)",
                     "key.parsed_scope.end" : 15,
                     "key.parsed_scope.start" : 15,
+                    "key.reusingastcontext" : false,
                     "key.substructure" : [
 
                     ],
-                    "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>.NumpyScalarCompatibleError.Type) -> (<<error type>>, Any.Type) -> Tensor<Element>.NumpyScalarCompatibleError",
+                    "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>.NumpyScalarCompatibleError.Type) -> (<<error type>>, any Any.Type) -> Tensor<Element>.NumpyScalarCompatibleError",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main6TensorV26NumpyScalarCompatibleErrorO16noDataConversion33_E0AEB10524EED233A450789DA24E09E7LLXeF"
                   }
@@ -253,6 +259,7 @@
                     "key.parsed_declaration" : "case noShape",
                     "key.parsed_scope.end" : 17,
                     "key.parsed_scope.start" : 17,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>.NumpyScalarCompatibleError.Type) -> Tensor<Element>.NumpyScalarCompatibleError",
                     "key.typeusr" : "$sy4main6TensorV26NumpyScalarCompatibleErrorOyx_GAFmcAA0B7NumericRzluD",
                     "key.usr" : "s:4main6TensorV26NumpyScalarCompatibleErrorO7noShapeyAEyx_GAGmAA0B7NumericRzlF"
@@ -292,6 +299,7 @@
                     "key.parsed_declaration" : "case noPointer",
                     "key.parsed_scope.end" : 19,
                     "key.parsed_scope.start" : 19,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<Element where Element : TensorNumeric> (Tensor<Element>.NumpyScalarCompatibleError.Type) -> Tensor<Element>.NumpyScalarCompatibleError",
                     "key.typeusr" : "$sy4main6TensorV26NumpyScalarCompatibleErrorOyx_GAFmcAA0B7NumericRzluD",
                     "key.usr" : "s:4main6TensorV26NumpyScalarCompatibleErrorO9noPointeryAEyx_GAGmAA0B7NumericRzlF"
@@ -373,8 +381,12 @@
               },
               {
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV12arrayLiteralACyxGxd_tcfc\">init(arrayLiteral:)<\/RelatedName>"
+              },
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6TensorV4data5usingACyxGSg10Foundation4DataV_AA12DynamicGraphC5StoreV5CodecVtcfc\">init(data:using:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let pyShape: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -393,6 +405,7 @@
                 "key.parsed_declaration" : "let pyShape = numpyArray.__array_interface__[\"shape\"]",
                 "key.parsed_scope.end" : 35,
                 "key.parsed_scope.start" : 35,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main6TensorVyXeXecfc7pyShapeL_Xevp"
@@ -414,6 +427,7 @@
                 "key.parsed_declaration" : "let contiguousNumpyArray = np.ascontiguousarray(numpyArray)",
                 "key.parsed_scope.end" : 42,
                 "key.parsed_scope.start" : 42,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main6TensorVyXeXecfc20contiguousNumpyArrayL_Xevp"
@@ -429,7 +443,7 @@
         "key.usr" : "s:4main6TensorV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 414,
         "key.bodyoffset" : 2220,
         "key.column" : 15,
@@ -437,15 +451,15 @@
         "key.doc.column" : 15,
         "key.doc.declaration" : "public struct Tensor<Element> : AnyTensor where Element : main.TensorNumeric",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"747\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 747,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"762\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 762,
         "key.doc.name" : "Tensor",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : AnyTensor <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 470,
-        "key.line" : 747,
+        "key.line" : 762,
         "key.modulename" : "main",
         "key.name" : "Tensor",
         "key.namelength" : 6,
@@ -454,6 +468,7 @@
         "key.parsed_declaration" : "extension Tensor where Element: NumpyScalarCompatible",
         "key.parsed_scope.end" : 70,
         "key.parsed_scope.start" : 58,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -492,6 +507,7 @@
             "key.parsed_declaration" : "public func makeNumpyArray() -> PythonObject",
             "key.parsed_scope.end" : 69,
             "key.parsed_scope.start" : 62,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -505,7 +521,7 @@
         "key.usr" : "s:4main6TensorV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Tensor&lt;Element&gt; : <Type usr=\"s:4main9AnyTensorP\">AnyTensor<\/Type> where <Type usr=\"s:4main6TensorV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main13TensorNumericP\">TensorNumeric<\/Type><\/Declaration>",
         "key.bodylength" : 68,
         "key.bodyoffset" : 2711,
         "key.column" : 15,
@@ -513,8 +529,8 @@
         "key.doc.column" : 15,
         "key.doc.declaration" : "public struct Tensor<Element> : AnyTensor where Element : main.TensorNumeric",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"747\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
-        "key.doc.line" : 747,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift\" line=\"762\" column=\"15\"><Name>Tensor<\/Name><USR>s:4main6TensorV<\/USR><Declaration>public struct Tensor&lt;Element&gt; : AnyTensor where Element : main.TensorNumeric<\/Declaration><CommentParts><Abstract><Para>Basic tensor type.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.line" : 762,
         "key.doc.name" : "Tensor",
         "key.doc.type" : "Class",
         "key.elements" : [
@@ -525,7 +541,7 @@
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Tensor.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : AnyTensor <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Tensor<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:4main9AnyTensorP\">AnyTensor<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main6TensorV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main13TensorNumericP\">TensorNumeric<\/ref.protocol><\/decl.generic_type_requirement><\/decl.struct>",
         "key.inheritedtypes" : [
           {
             "key.name" : "PythonConvertible"
@@ -533,7 +549,7 @@
         ],
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 143,
-        "key.line" : 747,
+        "key.line" : 762,
         "key.modulename" : "main",
         "key.name" : "Tensor",
         "key.namelength" : 6,
@@ -542,6 +558,7 @@
         "key.parsed_declaration" : "extension Tensor: PythonConvertible where Element: NumpyScalarCompatible",
         "key.parsed_scope.end" : 76,
         "key.parsed_scope.start" : 72,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -570,6 +587,7 @@
             "key.parsed_declaration" : "public var pythonObject: PythonObject",
             "key.parsed_scope.end" : 75,
             "key.parsed_scope.start" : 73,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main6TensorV12pythonObjectXevp"

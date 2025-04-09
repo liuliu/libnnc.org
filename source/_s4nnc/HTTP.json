@@ -31,6 +31,7 @@
         "key.parsed_declaration" : "public protocol HTTPRenderProvider",
         "key.parsed_scope.end" : 14,
         "key.parsed_scope.start" : 9,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -52,6 +53,7 @@
             "key.parsed_declaration" : "var renderContextCallback: ((_: inout MjrContext, _ width: Int32, _ height: Int32) -> Void)?",
             "key.parsed_scope.end" : 12,
             "key.parsed_scope.start" : 10,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -75,6 +77,7 @@
             "key.parsed_declaration" : "func sendEvent(_: GLContext.Event)",
             "key.parsed_scope.end" : 13,
             "key.parsed_scope.start" : 13,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -83,7 +86,7 @@
             "key.usr" : "s:4main18HTTPRenderProviderP9sendEventyXeXeF"
           }
         ],
-        "key.typename" : "HTTPRenderProvider.Protocol",
+        "key.typename" : "HTTPRenderProvider.Type",
         "key.typeusr" : "$s4main18HTTPRenderProvider_pmD",
         "key.usr" : "s:4main18HTTPRenderProviderP"
       },
@@ -130,6 +133,7 @@
         "key.parsed_declaration" : "protocol HTTPHandlerFrameProvider",
         "key.parsed_scope.end" : 21,
         "key.parsed_scope.start" : 18,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -149,6 +153,7 @@
             "key.parsed_declaration" : "func fetchFrame() -> Data",
             "key.parsed_scope.end" : 19,
             "key.parsed_scope.start" : 19,
+            "key.reusingastcontext" : false,
             "key.typename" : "<Self where Self : HTTPHandlerFrameProvider> (Self) -> () -> Data",
             "key.typeusr" : "$s10Foundation4DataVycD",
             "key.usr" : "s:4main24HTTPHandlerFrameProviderP05fetchC010Foundation4DataVyF"
@@ -178,6 +183,7 @@
             "key.parsed_declaration" : "mutating func register(_: EventLoopPromise<Data>)",
             "key.parsed_scope.end" : 20,
             "key.parsed_scope.start" : 20,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -186,7 +192,7 @@
             "key.usr" : "s:4main24HTTPHandlerFrameProviderP8registeryXeXeF"
           }
         ],
-        "key.typename" : "HTTPHandlerFrameProvider.Protocol",
+        "key.typename" : "HTTPHandlerFrameProvider.Type",
         "key.typeusr" : "$s4main24HTTPHandlerFrameProvider_pmD",
         "key.usr" : "s:4main24HTTPHandlerFrameProviderP"
       },
@@ -210,6 +216,7 @@
         "key.parsed_declaration" : "protocol WebSocketHandlerEventProvider",
         "key.parsed_scope.end" : 25,
         "key.parsed_scope.start" : 23,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -229,6 +236,7 @@
             "key.parsed_declaration" : "func sendEvent(_: GLContext.Event)",
             "key.parsed_scope.end" : 24,
             "key.parsed_scope.start" : 24,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -237,7 +245,7 @@
             "key.usr" : "s:4main29WebSocketHandlerEventProviderP04sendE0yXeXeF"
           }
         ],
-        "key.typename" : "WebSocketHandlerEventProvider.Protocol",
+        "key.typename" : "WebSocketHandlerEventProvider.Type",
         "key.typeusr" : "$s4main29WebSocketHandlerEventProvider_pmD",
         "key.usr" : "s:4main29WebSocketHandlerEventProviderP"
       },
@@ -268,6 +276,7 @@
         "key.parsed_declaration" : "public class HTTPRenderServer",
         "key.parsed_scope.end" : 151,
         "key.parsed_scope.start" : 27,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.private",
@@ -294,6 +303,7 @@
             "key.parsed_declaration" : "private var frame = Data()",
             "key.parsed_scope.end" : 28,
             "key.parsed_scope.start" : 28,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "Data",
             "key.typeusr" : "$s10Foundation4DataVD",
@@ -324,6 +334,7 @@
             "key.parsed_declaration" : "private var registeredPromisesForFrame = [EventLoopPromise<Data>]()",
             "key.parsed_scope.end" : 29,
             "key.parsed_scope.start" : 29,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -354,6 +365,7 @@
             "key.parsed_declaration" : "private let queue = DispatchQueue(label: \"data\", qos: .default)",
             "key.parsed_scope.end" : 30,
             "key.parsed_scope.start" : 30,
+            "key.reusingastcontext" : false,
             "key.typename" : "DispatchQueue",
             "key.typeusr" : "$s8Dispatch0A5QueueCD",
             "key.usr" : "s:4main16HTTPRenderServerC5queue33_0A461E94F9980EDDAA58B18D569C541DLL8Dispatch0L5QueueCvp"
@@ -383,8 +395,9 @@
             "key.parsed_declaration" : "private var provider: HTTPRenderProvider",
             "key.parsed_scope.end" : 31,
             "key.parsed_scope.start" : 31,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
-            "key.typename" : "HTTPRenderProvider",
+            "key.typename" : "any HTTPRenderProvider",
             "key.typeusr" : "$s4main18HTTPRenderProvider_pD",
             "key.usr" : "s:4main16HTTPRenderServerC8provider33_0A461E94F9980EDDAA58B18D569C541DLLAA0B8Provider_pvp"
           },
@@ -413,6 +426,7 @@
             "key.parsed_declaration" : "private let streamKey: String",
             "key.parsed_scope.end" : 32,
             "key.parsed_scope.start" : 32,
+            "key.reusingastcontext" : false,
             "key.typename" : "String",
             "key.typeusr" : "$sSSD",
             "key.usr" : "s:4main16HTTPRenderServerC9streamKey33_0A461E94F9980EDDAA58B18D569C541DLLSSvp"
@@ -442,6 +456,7 @@
             "key.parsed_declaration" : "private let maxWidth: Int",
             "key.parsed_scope.end" : 33,
             "key.parsed_scope.start" : 33,
+            "key.reusingastcontext" : false,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main16HTTPRenderServerC8maxWidth33_0A461E94F9980EDDAA58B18D569C541DLLSivp"
@@ -471,6 +486,7 @@
             "key.parsed_declaration" : "private let maxHeight: Int",
             "key.parsed_scope.end" : 34,
             "key.parsed_scope.start" : 34,
+            "key.reusingastcontext" : false,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main16HTTPRenderServerC9maxHeight33_0A461E94F9980EDDAA58B18D569C541DLLSivp"
@@ -500,6 +516,7 @@
             "key.parsed_declaration" : "private let canResize: Bool",
             "key.parsed_scope.end" : 35,
             "key.parsed_scope.start" : 35,
+            "key.reusingastcontext" : false,
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
             "key.usr" : "s:4main16HTTPRenderServerC9canResize33_0A461E94F9980EDDAA58B18D569C541DLLSbvp"
@@ -529,6 +546,7 @@
             "key.parsed_declaration" : "private let numberOfThreads: Int",
             "key.parsed_scope.end" : 36,
             "key.parsed_scope.start" : 36,
+            "key.reusingastcontext" : false,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main16HTTPRenderServerC15numberOfThreads33_0A461E94F9980EDDAA58B18D569C541DLLSivp"
@@ -558,6 +576,7 @@
             "key.parsed_declaration" : "private var image: UnsafeMutablePointer<ccv_dense_matrix_t>?",
             "key.parsed_scope.end" : 37,
             "key.parsed_scope.start" : 37,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -588,6 +607,7 @@
             "key.parsed_declaration" : "private var buffer: UnsafeMutablePointer<UInt8>",
             "key.parsed_scope.end" : 38,
             "key.parsed_scope.start" : 38,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "UnsafeMutablePointer<UInt8>",
             "key.typeusr" : "$sSpys5UInt8VGD",
@@ -620,6 +640,7 @@
             "key.parsed_declaration" : "public init(\n  _ provider: HTTPRenderProvider, streamKey: String? = nil, maxWidth: Int = 1920,\n  maxHeight: Int = 1080, maxFrameRate: Int = 30, canResize: Bool = true,\n  numberOfThreads: Int = System.coreCount\n)",
             "key.parsed_scope.end" : 89,
             "key.parsed_scope.start" : 40,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var lasttime: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -638,6 +659,7 @@
                 "key.parsed_declaration" : "var lasttime = GLContext.time",
                 "key.parsed_scope.end" : 59,
                 "key.parsed_scope.start" : 59,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main16HTTPRenderServerC_9streamKey8maxWidth0F6Height0F9FrameRate9canResize15numberOfThreadsAcA0B8Provider_p_SSSgS3iSbSitcfc8lasttimeL_Xevp"
@@ -666,6 +688,7 @@
                 "key.parsed_declaration" : "self.provider.renderContextCallback = { [weak self",
                 "key.parsed_scope.end" : 60,
                 "key.parsed_scope.start" : 60,
+                "key.reusingastcontext" : false,
                 "key.secondary_symbols" : [
                   {
                     "key.annotated_decl" : "<Declaration>let `self`: <Type usr=\"s:4main16HTTPRenderServerC\">HTTPRenderServer<\/Type><\/Declaration>",
@@ -688,10 +711,10 @@
                 ],
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main16HTTPRenderServerC_9streamKey8maxWidth0F6Height0F9FrameRate9canResize15numberOfThreadsAcA0B8Provider_p_SSSgS3iSbSitcfc4selfL_Xevp"
+                "key.usr" : "s:4main16HTTPRenderServerC_9streamKey8maxWidth0F6Height0F9FrameRate9canResize15numberOfThreadsAcA0B8Provider_p_SSSgS3iSbSitcfc4selfL0_Xevp"
               }
             ],
-            "key.typename" : "(HTTPRenderServer.Type) -> (HTTPRenderProvider, String?, Int, Int, Int, Bool, Int) -> HTTPRenderServer",
+            "key.typename" : "(HTTPRenderServer.Type) -> (any HTTPRenderProvider, String?, Int, Int, Int, Bool, Int) -> HTTPRenderServer",
             "key.typeusr" : "$s_9streamKey8maxWidth0C6Height0C9FrameRate9canResize15numberOfThreads4main16HTTPRenderServerCAG0N8Provider_p_SSSgS3iSbSitcD",
             "key.usr" : "s:4main16HTTPRenderServerC_9streamKey8maxWidth0F6Height0F9FrameRate9canResize15numberOfThreadsAcA0B8Provider_p_SSSgS3iSbSitcfc"
           },
@@ -720,6 +743,7 @@
             "key.parsed_declaration" : "private var group: EventLoopGroup? = nil",
             "key.parsed_scope.end" : 91,
             "key.parsed_scope.start" : 91,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -745,6 +769,7 @@
             "key.parsed_declaration" : "deinit",
             "key.parsed_scope.end" : 97,
             "key.parsed_scope.start" : 93,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -777,6 +802,7 @@
             "key.parsed_declaration" : "private var port: Int = 0",
             "key.parsed_scope.end" : 99,
             "key.parsed_scope.start" : 99,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
@@ -809,6 +835,7 @@
             "key.parsed_declaration" : "public func bind(host: String, port: Int) -> EventLoopFuture<Channel>",
             "key.parsed_scope.end" : 137,
             "key.parsed_scope.start" : 101,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let group: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -832,6 +859,7 @@
                     "key.annotated_decl" : "<RelatedName usr=\"c:@S@group\">group<\/RelatedName>"
                   }
                 ],
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main16HTTPRenderServerC4bindyXeXeF5groupL_Xevp"
@@ -853,6 +881,7 @@
                 "key.parsed_declaration" : "let upgrader = NIOWebSocketServerUpgrader(\n  shouldUpgrade: { (channel: Channel, head: HTTPRequestHead) in\n    channel.eventLoop.makeSucceededFuture(HTTPHeaders())\n  },\n  upgradePipelineHandler: { (channel: Channel, _: HTTPRequestHead) in\n    channel.pipeline.addHandler(\n      WebSocketHandler(\n        self, maxWidth: self.maxWidth, maxHeight: self.maxHeight, canResize: self.canResize))\n  })",
                 "key.parsed_scope.end" : 105,
                 "key.parsed_scope.start" : 105,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main16HTTPRenderServerC4bindyXeXeF8upgraderL_Xevp"
@@ -874,6 +903,7 @@
                 "key.parsed_declaration" : "let socketBootstrap = ServerBootstrap(group: group)\n  \/\/ Specify backlog and enable SO_REUSEADDR for the server itself\n  .serverChannelOption(ChannelOptions.backlog, value: 256)\n  .serverChannelOption(ChannelOptions.socketOption(.so_reuseaddr), value: 1)\n\n  \/\/ Set the handlers that are applied to the accepted Channels\n  .childChannelInitializer { channel in\n    let httpHandler = HTTPHandler(self, streamKey: self.streamKey, canResize: self.canResize)\n    let config: NIOHTTPServerUpgradeConfiguration = (\n      upgraders: [upgrader],\n      completionHandler: { _ in\n        channel.pipeline.removeHandler(httpHandler, promise: nil)\n      }\n    )\n    return channel.pipeline.configureHTTPServerPipeline(withServerUpgrade: config).flatMap {\n      channel.pipeline.addHandler(httpHandler)\n    }\n  }\n  \/\/ Enable SO_REUSEADDR for the accepted Channels\n  .childChannelOption(ChannelOptions.socketOption(.so_reuseaddr), value: 1)\n  .childChannelOption(ChannelOptions.maxMessagesPerRead, value: 1)\n  .childChannelOption(ChannelOptions.allowRemoteHalfClosure, value: true)",
                 "key.parsed_scope.end" : 114,
                 "key.parsed_scope.start" : 114,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main16HTTPRenderServerC4bindyXeXeF15socketBootstrapL_Xevp"
@@ -910,6 +940,7 @@
             "key.parsed_declaration" : "public var html: String",
             "key.parsed_scope.end" : 150,
             "key.parsed_scope.start" : 139,
+            "key.reusingastcontext" : false,
             "key.typename" : "String",
             "key.typeusr" : "$sSSD",
             "key.usr" : "s:4main16HTTPRenderServerC4htmlSSvp"
@@ -950,6 +981,7 @@
         "key.parsed_declaration" : "extension HTTPRenderServer: HTTPHandlerFrameProvider",
         "key.parsed_scope.end" : 166,
         "key.parsed_scope.start" : 153,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>func register(_ promise: EventLoopPromise&lt;Data&gt;)<\/Declaration>",
@@ -970,6 +1002,7 @@
             "key.parsed_declaration" : "func register(_ promise: EventLoopPromise<Data>)",
             "key.parsed_scope.end" : 158,
             "key.parsed_scope.start" : 154,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -996,6 +1029,7 @@
             "key.parsed_declaration" : "func fetchFrame() -> Data",
             "key.parsed_scope.end" : 165,
             "key.parsed_scope.start" : 159,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var data: <Type usr=\"s:10Foundation4DataV\">Data<\/Type>?<\/Declaration>",
@@ -1014,6 +1048,7 @@
                 "key.parsed_declaration" : "var data: Data? = nil",
                 "key.parsed_scope.end" : 160,
                 "key.parsed_scope.start" : 160,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Data?",
                 "key.typeusr" : "$s10Foundation4DataVSgD",
                 "key.usr" : "s:4main16HTTPRenderServerC10fetchFrame10Foundation4DataVyF4dataL_AGSgvp"
@@ -1059,6 +1094,7 @@
         "key.parsed_declaration" : "extension HTTPRenderServer: WebSocketHandlerEventProvider",
         "key.parsed_scope.end" : 172,
         "key.parsed_scope.start" : 168,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>func sendEvent(_ event: GLContext.Event)<\/Declaration>",
@@ -1079,6 +1115,7 @@
             "key.parsed_declaration" : "func sendEvent(_ event: GLContext.Event)",
             "key.parsed_scope.end" : 171,
             "key.parsed_scope.start" : 169,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -1118,6 +1155,7 @@
         "key.parsed_declaration" : "private func httpResponseHead(\n  request: HTTPRequestHead, status: HTTPResponseStatus, headers: HTTPHeaders = HTTPHeaders()\n) -> HTTPResponseHead",
         "key.parsed_scope.end" : 180,
         "key.parsed_scope.start" : 174,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>var head: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -1136,6 +1174,7 @@
             "key.parsed_declaration" : "var head = HTTPResponseHead(version: request.version, status: status, headers: headers)",
             "key.parsed_scope.end" : 177,
             "key.parsed_scope.start" : 177,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main16httpResponseHead33_0A461E94F9980EDDAA58B18D569C541DLLyXeXeF4headL_Xevp"
@@ -1164,6 +1203,7 @@
         "key.parsed_declaration" : "extension HTTPRenderServer",
         "key.parsed_scope.end" : 697,
         "key.parsed_scope.start" : 182,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.private",
@@ -1204,6 +1244,7 @@
             "key.parsed_declaration" : "private struct JSEvent: Decodable",
             "key.parsed_scope.end" : 197,
             "key.parsed_scope.start" : 184,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -1223,6 +1264,7 @@
                 "key.parsed_declaration" : "var keyCode: Int32?",
                 "key.parsed_scope.end" : 185,
                 "key.parsed_scope.start" : 185,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Int32?",
                 "key.typeusr" : "$ss5Int32VSgD",
@@ -1246,6 +1288,7 @@
                 "key.parsed_declaration" : "var ctrlKey: Bool?",
                 "key.parsed_scope.end" : 186,
                 "key.parsed_scope.start" : 186,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Bool?",
                 "key.typeusr" : "$sSbSgD",
@@ -1269,6 +1312,7 @@
                 "key.parsed_declaration" : "var altKey: Bool?",
                 "key.parsed_scope.end" : 187,
                 "key.parsed_scope.start" : 187,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Bool?",
                 "key.typeusr" : "$sSbSgD",
@@ -1292,6 +1336,7 @@
                 "key.parsed_declaration" : "var shiftKey: Bool?",
                 "key.parsed_scope.end" : 188,
                 "key.parsed_scope.start" : 188,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Bool?",
                 "key.typeusr" : "$sSbSgD",
@@ -1315,6 +1360,7 @@
                 "key.parsed_declaration" : "var mouseState: String?",
                 "key.parsed_scope.end" : 189,
                 "key.parsed_scope.start" : 189,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "String?",
                 "key.typeusr" : "$sSSSgD",
@@ -1338,6 +1384,7 @@
                 "key.parsed_declaration" : "var buttons: Int32?",
                 "key.parsed_scope.end" : 190,
                 "key.parsed_scope.start" : 190,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Int32?",
                 "key.typeusr" : "$ss5Int32VSgD",
@@ -1361,6 +1408,7 @@
                 "key.parsed_declaration" : "var offsetX: Float?",
                 "key.parsed_scope.end" : 191,
                 "key.parsed_scope.start" : 191,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Float?",
                 "key.typeusr" : "$sSfSgD",
@@ -1384,6 +1432,7 @@
                 "key.parsed_declaration" : "var offsetY: Float?",
                 "key.parsed_scope.end" : 192,
                 "key.parsed_scope.start" : 192,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Float?",
                 "key.typeusr" : "$sSfSgD",
@@ -1407,6 +1456,7 @@
                 "key.parsed_declaration" : "var deltaX: Float?",
                 "key.parsed_scope.end" : 193,
                 "key.parsed_scope.start" : 193,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Float?",
                 "key.typeusr" : "$sSfSgD",
@@ -1430,6 +1480,7 @@
                 "key.parsed_declaration" : "var deltaY: Float?",
                 "key.parsed_scope.end" : 194,
                 "key.parsed_scope.start" : 194,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Float?",
                 "key.typeusr" : "$sSfSgD",
@@ -1453,6 +1504,7 @@
                 "key.parsed_declaration" : "var width: Int32?",
                 "key.parsed_scope.end" : 195,
                 "key.parsed_scope.start" : 195,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Int32?",
                 "key.typeusr" : "$ss5Int32VSgD",
@@ -1476,6 +1528,7 @@
                 "key.parsed_declaration" : "var height: Int32?",
                 "key.parsed_scope.end" : 196,
                 "key.parsed_scope.start" : 196,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "Int32?",
                 "key.typeusr" : "$ss5Int32VSgD",
@@ -1538,6 +1591,7 @@
             "key.parsed_declaration" : "private final class HTTPHandler: ChannelInboundHandler, RemovableChannelHandler",
             "key.parsed_scope.end" : 556,
             "key.parsed_scope.start" : 199,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1564,6 +1618,7 @@
                 "key.parsed_declaration" : "public typealias InboundIn = HTTPServerRequestPart",
                 "key.parsed_scope.end" : 200,
                 "key.parsed_scope.start" : 200,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC9InboundIna"
@@ -1593,6 +1648,7 @@
                 "key.parsed_declaration" : "public typealias OutboundOut = HTTPServerResponsePart",
                 "key.parsed_scope.end" : 201,
                 "key.parsed_scope.start" : 201,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC11OutboundOuta"
@@ -1624,6 +1680,7 @@
                 "key.parsed_declaration" : "private enum State",
                 "key.parsed_scope.end" : 222,
                 "key.parsed_scope.start" : 203,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
                   {
                     "key.kind" : "source.lang.swift.decl.enumcase",
@@ -1648,6 +1705,7 @@
                         "key.parsed_declaration" : "case idle",
                         "key.parsed_scope.end" : 204,
                         "key.parsed_scope.start" : 204,
+                        "key.reusingastcontext" : false,
                         "key.typename" : "(HTTPRenderServer.HTTPHandler.State.Type) -> HTTPRenderServer.HTTPHandler.State",
                         "key.typeusr" : "$sy4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC5StateOAHmcD",
                         "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC5StateO4idleyA2HmF"
@@ -1677,6 +1735,7 @@
                         "key.parsed_declaration" : "case waitingForRequestBody",
                         "key.parsed_scope.end" : 205,
                         "key.parsed_scope.start" : 205,
+                        "key.reusingastcontext" : false,
                         "key.typename" : "(HTTPRenderServer.HTTPHandler.State.Type) -> HTTPRenderServer.HTTPHandler.State",
                         "key.typeusr" : "$sy4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC5StateOAHmcD",
                         "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC5StateO21waitingForRequestBodyyA2HmF"
@@ -1706,6 +1765,7 @@
                         "key.parsed_declaration" : "case sendingResponse",
                         "key.parsed_scope.end" : 206,
                         "key.parsed_scope.start" : 206,
+                        "key.reusingastcontext" : false,
                         "key.typename" : "(HTTPRenderServer.HTTPHandler.State.Type) -> HTTPRenderServer.HTTPHandler.State",
                         "key.typeusr" : "$sy4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC5StateOAHmcD",
                         "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC5StateO15sendingResponseyA2HmF"
@@ -1739,6 +1799,7 @@
                     "key.parsed_declaration" : "mutating func requestReceived()",
                     "key.parsed_scope.end" : 211,
                     "key.parsed_scope.start" : 208,
+                    "key.reusingastcontext" : false,
                     "key.substructure" : [
 
                     ],
@@ -1773,6 +1834,7 @@
                     "key.parsed_declaration" : "mutating func requestComplete()",
                     "key.parsed_scope.end" : 216,
                     "key.parsed_scope.start" : 213,
+                    "key.reusingastcontext" : false,
                     "key.substructure" : [
 
                     ],
@@ -1807,6 +1869,7 @@
                     "key.parsed_declaration" : "mutating func responseComplete()",
                     "key.parsed_scope.end" : 221,
                     "key.parsed_scope.start" : 218,
+                    "key.reusingastcontext" : false,
                     "key.substructure" : [
 
                     ],
@@ -1844,6 +1907,7 @@
                 "key.parsed_declaration" : "private var buffer: ByteBuffer! = nil",
                 "key.parsed_scope.end" : 224,
                 "key.parsed_scope.start" : 224,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.private",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -1874,6 +1938,7 @@
                 "key.parsed_declaration" : "private var state = State.idle",
                 "key.parsed_scope.end" : 225,
                 "key.parsed_scope.start" : 225,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.private",
                 "key.typename" : "HTTPRenderServer.HTTPHandler.State",
                 "key.typeusr" : "$s4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC5StateOD",
@@ -1904,6 +1969,7 @@
                 "key.parsed_declaration" : "private var continuousCount: Int = 0",
                 "key.parsed_scope.end" : 226,
                 "key.parsed_scope.start" : 226,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.private",
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
@@ -1934,6 +2000,7 @@
                 "key.parsed_declaration" : "private var handler: ((ChannelHandlerContext, HTTPServerRequestPart) -> Void)?",
                 "key.parsed_scope.end" : 228,
                 "key.parsed_scope.start" : 228,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.private",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -1966,6 +2033,7 @@
                 "key.parsed_declaration" : "private var indexPageResponse: String",
                 "key.parsed_scope.end" : 233,
                 "key.parsed_scope.start" : 229,
+                "key.reusingastcontext" : false,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC17indexPageResponseSSvp"
@@ -1997,6 +2065,7 @@
                 "key.parsed_declaration" : "private var jsResponse: String",
                 "key.parsed_scope.end" : 409,
                 "key.parsed_scope.start" : 234,
+                "key.reusingastcontext" : false,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC10jsResponseSSvp"
@@ -2018,6 +2087,7 @@
                 "key.parsed_declaration" : "let firstPart = \"\"\"\n  (function () {\n    var mjpeg = document.getElementById(\"\\(self.streamKey)-motion-jpeg-img\");\n    var src = new URL(mjpeg.src)\n    var wsconnection = new WebSocket(\"ws:\/\/\" + src.host + \"\/\\(self.streamKey).ws\");\n    var commonKeyCodes = {\n      \"Space\": 32,\n      \"Quote\": 39, \/* ' *\/\n      \"Comma\": 44, \/* , *\/\n      \"Minus\": 45, \/* - *\/\n      \"Period\": 46, \/* . *\/\n      \"Slash\": 47, \/* \/ *\/\n      \"Digit0\": 48,\n      \"Digit1\": 49,\n      \"Digit2\": 50,\n      \"Digit3\": 51,\n      \"Digit4\": 52,\n      \"Digit5\": 53,\n      \"Digit6\": 54,\n      \"Digit7\": 55,\n      \"Digit8\": 56,\n      \"Digit9\": 57,\n      \"Semicolon\": 59, \/* ; *\/\n      \"Equal\": 61, \/* = *\/\n      \"KeyA\": 65,\n      \"KeyB\": 66,\n      \"KeyC\": 67,\n      \"KeyD\": 68,\n      \"KeyE\": 69,\n      \"KeyF\": 70,\n      \"KeyG\": 71,\n      \"KeyH\": 72,\n      \"KeyI\": 73,\n      \"KeyJ\": 74,\n      \"KeyK\": 75,\n      \"KeyL\": 76,\n      \"KeyM\": 77,\n      \"KeyN\": 78,\n      \"KeyO\": 79,\n      \"KeyP\": 80,\n      \"KeyQ\": 81,\n      \"KeyR\": 82,\n      \"KeyS\": 83,\n      \"KeyT\": 84,\n      \"KeyU\": 85,\n      \"KeyV\": 86,\n      \"KeyW\": 87,\n      \"KeyX\": 88,\n      \"KeyY\": 89,\n      \"KeyZ\": 90,\n      \"BracketLeft\": 91, \/* [ *\/\n      \"Backslash\": 92, \/* \\\\ *\/\n      \"BracketRight\": 93, \/* ] *\/\n      \"Backquote\": 96, \/* ` *\/\n      \"Escape\": 256,\n      \"Enter\": 257,\n      \"Tab\": 258,\n      \"Backspace\": 259,\n      \"Insert\": 260,\n      \"Delete\": 261,\n      \"ArrowRight\": 262,\n      \"ArrowLeft\": 263,\n      \"ArrowDown\": 264,\n      \"ArrowUp\": 265,\n      \"PageUp\": 266,\n      \"PageDown\": 267,\n      \"Home\": 268,\n      \"End\": 269,\n      \"CapsLock\": 280,\n      \"ScrollLock\": 281,\n      \"NumLock\": 282,\n      \"PrintScreen\": 283,\n      \"Pause\": 284,\n      \"F1\": 290,\n      \"F2\": 291,\n      \"F3\": 292,\n      \"F4\": 293,\n      \"F5\": 294,\n      \"F6\": 295,\n      \"F7\": 296,\n      \"F8\": 297,\n      \"F9\": 298,\n      \"F10\": 299,\n      \"F11\": 300,\n      \"F12\": 301,\n      \"F13\": 302,\n      \"F14\": 303,\n      \"F15\": 304,\n      \"F16\": 305,\n      \"F17\": 306,\n      \"F18\": 307,\n      \"F19\": 308,\n      \"F20\": 309,\n      \"F21\": 310,\n      \"F22\": 311,\n      \"F23\": 312,\n      \"F24\": 313,\n      \"F25\": 314,\n      \"Numpad0\": 320,\n      \"Numpad1\": 321,\n      \"Numpad2\": 322,\n      \"Numpad3\": 323,\n      \"Numpad4\": 324,\n      \"Numpad5\": 325,\n      \"Numpad6\": 326,\n      \"Numpad7\": 327,\n      \"Numpad8\": 328,\n      \"Numpad9\": 329,\n      \"NumpadDecimal\": 330,\n      \"NumpadDivide\": 331,\n      \"NumpadMultiply\": 332,\n      \"NumpadSubstract\": 333,\n      \"NumpadAdd\": 334,\n      \"NumpadEnter\": 335,\n      \"NumpadEqual\": 336,\n      \"ShiftLeft\": 340,\n      \"ControlLeft\": 341,\n      \"AltLeft\": 342,\n      \"ShiftRight\": 344,\n      \"ControlRight\": 345,\n      \"AltRight\": 346\n    };\n    function onKeydown(e) {\n      e.preventDefault();\n      wsconnection.send(JSON.stringify({\"keyCode\": commonKeyCodes[e.code], \"ctrlKey\": e.ctrlKey, \"altKey\": e.altKey, \"shiftKey\": e.shiftKey}));\n    }\n    mjpeg.addEventListener(\"mouseenter\", function (e) {\n      e.preventDefault();\n      wsconnection.send(JSON.stringify({\"mouseState\": \"move\", \"buttons\": e.buttons, \"offsetX\": e.offsetX, \"offsetY\": e.offsetY, \"ctrlKey\": e.ctrlKey, \"altKey\": e.altKey, \"shiftKey\": e.shiftKey}));\n      window.addEventListener(\"keydown\", onKeydown);\n    });\n    mjpeg.addEventListener(\"mouseleave\", function (e) {\n      window.removeEventListener(\"keydown\", onKeydown);\n    });\n    mjpeg.addEventListener(\"mousemove\", function (e) {\n      e.preventDefault();\n      wsconnection.send(JSON.stringify({\"mouseState\": \"move\", \"buttons\": e.buttons, \"offsetX\": e.offsetX, \"offsetY\": e.offsetY, \"ctrlKey\": e.ctrlKey, \"altKey\": e.altKey, \"shiftKey\": e.shiftKey}));\n    });\n    mjpeg.addEventListener(\"mousedown\", function (e) {\n      e.preventDefault();\n      wsconnection.send(JSON.stringify({\"mouseState\": \"press\", \"buttons\": e.buttons, \"offsetX\": e.offsetX, \"offsetY\": e.offsetY, \"ctrlKey\": e.ctrlKey, \"altKey\": e.altKey, \"shiftKey\": e.shiftKey}));\n    });\n    mjpeg.addEventListener(\"mouseup\", function (e) {\n      e.preventDefault();\n      wsconnection.send(JSON.stringify({\"mouseState\": \"release\", \"buttons\": e.buttons, \"offsetX\": e.offsetX, \"offsetY\": e.offsetY, \"ctrlKey\": e.ctrlKey, \"altKey\": e.altKey, \"shiftKey\": e.shiftKey}));\n    });\n    mjpeg.addEventListener(\"wheel\", function (e) {\n      e.preventDefault();\n      wsconnection.send(JSON.stringify({\"deltaX\": e.deltaX \/ 16, \"deltaY\": -e.deltaY \/ 16}));\n    });\n    mjpeg.addEventListener(\"contextmenu\", function (e) {\n      e.preventDefault();\n      e.stopPropagation();\n    });\n    mjpeg.addEventListener(\"dragstart\", function (e) {\n      e.preventDefault();\n    });\n    mjpeg.addEventListener(\"drop\", function (e) {\n      e.preventDefault();\n    });\n  \"\"\"",
                 "key.parsed_scope.end" : 235,
                 "key.parsed_scope.start" : 235,
+                "key.reusingastcontext" : false,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC10jsResponseSSvg9firstPartL_SSvp"
@@ -2047,8 +2117,9 @@
                 "key.parsed_declaration" : "private var frameProvider: HTTPHandlerFrameProvider",
                 "key.parsed_scope.end" : 411,
                 "key.parsed_scope.start" : 411,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.private",
-                "key.typename" : "HTTPHandlerFrameProvider",
+                "key.typename" : "any HTTPHandlerFrameProvider",
                 "key.typeusr" : "$s4main24HTTPHandlerFrameProvider_pD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC13frameProviderAA0d5FrameM0_pvp"
               },
@@ -2077,6 +2148,7 @@
                 "key.parsed_declaration" : "private let streamKey: String",
                 "key.parsed_scope.end" : 412,
                 "key.parsed_scope.start" : 412,
+                "key.reusingastcontext" : false,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC9streamKeySSvp"
@@ -2106,6 +2178,7 @@
                 "key.parsed_declaration" : "private let canResize: Bool",
                 "key.parsed_scope.end" : 413,
                 "key.parsed_scope.start" : 413,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Bool",
                 "key.typeusr" : "$sSbD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC9canResizeSbvp"
@@ -2137,10 +2210,11 @@
                 "key.parsed_declaration" : "public init(_ frameProvider: HTTPHandlerFrameProvider, streamKey: String, canResize: Bool)",
                 "key.parsed_scope.end" : 419,
                 "key.parsed_scope.start" : 415,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
-                "key.typename" : "(HTTPRenderServer.HTTPHandler.Type) -> (HTTPHandlerFrameProvider, String, Bool) -> HTTPRenderServer.HTTPHandler",
+                "key.typename" : "(HTTPRenderServer.HTTPHandler.Type) -> (any HTTPHandlerFrameProvider, String, Bool) -> HTTPRenderServer.HTTPHandler",
                 "key.typeusr" : "$s_9streamKey9canResize4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLCAC0H13FrameProvider_p_SSSbtcD",
                 "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC_9streamKey9canResizeAfA0D13FrameProvider_p_SSSbtcfc"
               },
@@ -2164,6 +2238,7 @@
                 "key.parsed_declaration" : "func handleContinuousWrites(\n  context: ChannelHandlerContext, request: HTTPServerRequestPart\n)",
                 "key.parsed_scope.end" : 454,
                 "key.parsed_scope.start" : 421,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2191,6 +2266,7 @@
                 "key.parsed_declaration" : "func mjpgHandler(request reqHead: HTTPRequestHead) -> (\n  (ChannelHandlerContext, HTTPServerRequestPart) -> Void\n)?",
                 "key.parsed_scope.end" : 462,
                 "key.parsed_scope.start" : 456,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2225,6 +2301,7 @@
                 "key.parsed_declaration" : "private func completeResponse(\n  _ context: ChannelHandlerContext, trailers: HTTPHeaders?, promise: EventLoopPromise<Void>?\n)",
                 "key.parsed_scope.end" : 472,
                 "key.parsed_scope.start" : 464,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
                   {
                     "key.annotated_decl" : "<Declaration>let promise: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -2243,6 +2320,7 @@
                     "key.parsed_declaration" : "let promise = promise ?? context.eventLoop.makePromise()",
                     "key.parsed_scope.end" : 468,
                     "key.parsed_scope.start" : 468,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC16completeResponseyXeXeF7promiseL0_Xevp"
@@ -2272,6 +2350,7 @@
                 "key.parsed_declaration" : "func channelRead(context: ChannelHandlerContext, data: NIOAny)",
                 "key.parsed_scope.end" : 525,
                 "key.parsed_scope.start" : 474,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
                   {
                     "key.annotated_decl" : "<Declaration>let reqPart: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -2290,6 +2369,7 @@
                     "key.parsed_declaration" : "let reqPart = self.unwrapInboundIn(data)",
                     "key.parsed_scope.end" : 475,
                     "key.parsed_scope.start" : 475,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main16HTTPRenderServerC11HTTPHandler33_0A461E94F9980EDDAA58B18D569C541DLLC11channelReadyXeXeF7reqPartL_Xevp"
@@ -2319,6 +2399,7 @@
                 "key.parsed_declaration" : "func channelReadComplete(context: ChannelHandlerContext)",
                 "key.parsed_scope.end" : 529,
                 "key.parsed_scope.start" : 527,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2346,6 +2427,7 @@
                 "key.parsed_declaration" : "func handlerAdded(context: ChannelHandlerContext)",
                 "key.parsed_scope.end" : 533,
                 "key.parsed_scope.start" : 531,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2373,6 +2455,7 @@
                 "key.parsed_declaration" : "func handlerRemoved(context: ChannelHandlerContext)",
                 "key.parsed_scope.end" : 537,
                 "key.parsed_scope.start" : 535,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2400,6 +2483,7 @@
                 "key.parsed_declaration" : "func userInboundEventTriggered(context: ChannelHandlerContext, event: Any)",
                 "key.parsed_scope.end" : 555,
                 "key.parsed_scope.start" : 539,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2456,6 +2540,7 @@
             "key.parsed_declaration" : "private final class WebSocketHandler: ChannelInboundHandler",
             "key.parsed_scope.end" : 696,
             "key.parsed_scope.start" : 558,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -2475,6 +2560,7 @@
                 "key.parsed_declaration" : "typealias InboundIn = WebSocketFrame",
                 "key.parsed_scope.end" : 559,
                 "key.parsed_scope.start" : 559,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC9InboundIna"
@@ -2497,6 +2583,7 @@
                 "key.parsed_declaration" : "typealias OutboundOut = WebSocketFrame",
                 "key.parsed_scope.end" : 560,
                 "key.parsed_scope.start" : 560,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC11OutboundOuta"
@@ -2526,6 +2613,7 @@
                 "key.parsed_declaration" : "private var awaitingClose: Bool = false",
                 "key.parsed_scope.end" : 562,
                 "key.parsed_scope.start" : 562,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.private",
                 "key.typename" : "Bool",
                 "key.typeusr" : "$sSbD",
@@ -2556,6 +2644,7 @@
                 "key.parsed_declaration" : "private let decoder = JSONDecoder()",
                 "key.parsed_scope.end" : 563,
                 "key.parsed_scope.start" : 563,
+                "key.reusingastcontext" : false,
                 "key.typename" : "JSONDecoder",
                 "key.typeusr" : "$s10Foundation11JSONDecoderCD",
                 "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC7decoder10Foundation11JSONDecoderCvp"
@@ -2585,7 +2674,8 @@
                 "key.parsed_declaration" : "private let eventProvider: WebSocketHandlerEventProvider",
                 "key.parsed_scope.end" : 565,
                 "key.parsed_scope.start" : 565,
-                "key.typename" : "WebSocketHandlerEventProvider",
+                "key.reusingastcontext" : false,
+                "key.typename" : "any WebSocketHandlerEventProvider",
                 "key.typeusr" : "$s4main29WebSocketHandlerEventProvider_pD",
                 "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC13eventProviderAA0def5EventO0_pvp"
               },
@@ -2614,6 +2704,7 @@
                 "key.parsed_declaration" : "private let maxWidth: Int",
                 "key.parsed_scope.end" : 566,
                 "key.parsed_scope.start" : 566,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC8maxWidthSivp"
@@ -2643,6 +2734,7 @@
                 "key.parsed_declaration" : "private let maxHeight: Int",
                 "key.parsed_scope.end" : 567,
                 "key.parsed_scope.start" : 567,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC9maxHeightSivp"
@@ -2672,6 +2764,7 @@
                 "key.parsed_declaration" : "private let canResize: Bool",
                 "key.parsed_scope.end" : 568,
                 "key.parsed_scope.start" : 568,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Bool",
                 "key.typeusr" : "$sSbD",
                 "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC9canResizeSbvp"
@@ -2703,10 +2796,11 @@
                 "key.parsed_declaration" : "public init(\n  _ eventProvider: WebSocketHandlerEventProvider, maxWidth: Int, maxHeight: Int, canResize: Bool\n)",
                 "key.parsed_scope.end" : 577,
                 "key.parsed_scope.start" : 570,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
-                "key.typename" : "(HTTPRenderServer.WebSocketHandler.Type) -> (WebSocketHandlerEventProvider, Int, Int, Bool) -> HTTPRenderServer.WebSocketHandler",
+                "key.typename" : "(HTTPRenderServer.WebSocketHandler.Type) -> (any WebSocketHandlerEventProvider, Int, Int, Bool) -> HTTPRenderServer.WebSocketHandler",
                 "key.typeusr" : "$s_8maxWidth0A6Height9canResize4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLCAD0ijK13EventProvider_p_S2iSbtcD",
                 "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC_8maxWidth0N6Height9canResizeAfA0deF13EventProvider_p_S2iSbtcfc"
               },
@@ -2737,6 +2831,7 @@
                 "key.parsed_declaration" : "public func handlerAdded(context: ChannelHandlerContext)",
                 "key.parsed_scope.end" : 580,
                 "key.parsed_scope.start" : 579,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2771,6 +2866,7 @@
                 "key.parsed_declaration" : "public func channelRead(context: ChannelHandlerContext, data: NIOAny)",
                 "key.parsed_scope.end" : 648,
                 "key.parsed_scope.start" : 582,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
                   {
                     "key.annotated_decl" : "<Declaration>let frame: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -2789,6 +2885,7 @@
                     "key.parsed_declaration" : "let frame = self.unwrapInboundIn(data)",
                     "key.parsed_scope.end" : 583,
                     "key.parsed_scope.start" : 583,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC11channelReadyXeXeF5frameL_Xevp"
@@ -2825,6 +2922,7 @@
                 "key.parsed_declaration" : "public func channelReadComplete(context: ChannelHandlerContext)",
                 "key.parsed_scope.end" : 652,
                 "key.parsed_scope.start" : 650,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2859,6 +2957,7 @@
                 "key.parsed_declaration" : "private func receivedClose(context: ChannelHandlerContext, frame: WebSocketFrame)",
                 "key.parsed_scope.end" : 671,
                 "key.parsed_scope.start" : 654,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -2893,6 +2992,7 @@
                 "key.parsed_declaration" : "private func pong(context: ChannelHandlerContext, frame: WebSocketFrame)",
                 "key.parsed_scope.end" : 683,
                 "key.parsed_scope.start" : 673,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
                   {
                     "key.annotated_decl" : "<Declaration>var frameData: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -2911,6 +3011,7 @@
                     "key.parsed_declaration" : "var frameData = frame.data",
                     "key.parsed_scope.end" : 674,
                     "key.parsed_scope.start" : 674,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC4pongyXeXeF9frameDataL_Xevp"
@@ -2932,6 +3033,7 @@
                     "key.parsed_declaration" : "let maskingKey = frame.maskKey",
                     "key.parsed_scope.end" : 675,
                     "key.parsed_scope.start" : 675,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC4pongyXeXeF10maskingKeyL_Xevp"
@@ -2953,6 +3055,7 @@
                     "key.parsed_declaration" : "let responseFrame = WebSocketFrame(fin: true, opcode: .pong, data: frameData)",
                     "key.parsed_scope.end" : 681,
                     "key.parsed_scope.start" : 681,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC4pongyXeXeF13responseFrameL_Xevp"
@@ -2989,6 +3092,7 @@
                 "key.parsed_declaration" : "private func closeOnError(context: ChannelHandlerContext)",
                 "key.parsed_scope.end" : 695,
                 "key.parsed_scope.start" : 685,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
                   {
                     "key.annotated_decl" : "<Declaration>var data: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -3007,6 +3111,7 @@
                     "key.parsed_declaration" : "var data = context.channel.allocator.buffer(capacity: 2)",
                     "key.parsed_scope.end" : 688,
                     "key.parsed_scope.start" : 688,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC12closeOnErroryXeXeF4dataL_Xevp"
@@ -3028,6 +3133,7 @@
                     "key.parsed_declaration" : "let frame = WebSocketFrame(fin: true, opcode: .connectionClose, data: data)",
                     "key.parsed_scope.end" : 690,
                     "key.parsed_scope.start" : 690,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main16HTTPRenderServerC16WebSocketHandler33_0A461E94F9980EDDAA58B18D569C541DLLC12closeOnErroryXeXeF5frameL_Xevp"

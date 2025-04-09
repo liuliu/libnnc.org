@@ -61,6 +61,7 @@
         "key.parsed_declaration" : "public struct SGDOptimizer: Optimizer, OptimizerAddons",
         "key.parsed_scope.end" : 57,
         "key.parsed_scope.start" : 4,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -92,6 +93,7 @@
             "key.parsed_declaration" : "public let graph: DynamicGraph",
             "key.parsed_scope.end" : 5,
             "key.parsed_scope.start" : 5,
+            "key.reusingastcontext" : false,
             "key.typename" : "DynamicGraph",
             "key.typeusr" : "$s4main12DynamicGraphCD",
             "key.usr" : "s:4main12SGDOptimizerV5graphAA12DynamicGraphCvp"
@@ -121,6 +123,7 @@
             "key.parsed_declaration" : "public var nesterov: Bool",
             "key.parsed_scope.end" : 6,
             "key.parsed_scope.start" : 6,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
@@ -151,6 +154,7 @@
             "key.parsed_declaration" : "public var rate: Float",
             "key.parsed_scope.end" : 7,
             "key.parsed_scope.start" : 7,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -186,6 +190,7 @@
             "key.parsed_declaration" : "public var scale: Float",
             "key.parsed_scope.end" : 8,
             "key.parsed_scope.start" : 8,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -216,6 +221,7 @@
             "key.parsed_declaration" : "public var decay: Float",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -246,6 +252,7 @@
             "key.parsed_declaration" : "public var momentum: Float",
             "key.parsed_scope.end" : 10,
             "key.parsed_scope.start" : 10,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -276,6 +283,7 @@
             "key.parsed_declaration" : "public var dampening: Float",
             "key.parsed_scope.end" : 11,
             "key.parsed_scope.start" : 11,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -283,7 +291,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var parameters: [any <Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -296,7 +304,7 @@
             "key.column" : 14,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[any <ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 437,
             "key.line" : 12,
@@ -313,18 +321,19 @@
             "key.parsed_declaration" : "public var parameters = [DynamicGraph_AnyParameters]()",
             "key.parsed_scope.end" : 25,
             "key.parsed_scope.start" : 12,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
-            "key.typename" : "[DynamicGraph_AnyParameters]",
+            "key.typename" : "[any DynamicGraph_AnyParameters]",
             "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
             "key.usr" : "s:4main12SGDOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>var savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var savedAux: [any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 35,
             "key.line" : 27,
@@ -336,8 +345,9 @@
             "key.parsed_declaration" : "var savedAux = [DynamicGraph_Any]()",
             "key.parsed_scope.end" : 27,
             "key.parsed_scope.start" : 27,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
-            "key.typename" : "[DynamicGraph_Any]",
+            "key.typename" : "[any DynamicGraph_Any]",
             "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
             "key.usr" : "s:4main12SGDOptimizerV8savedAuxSayAA16DynamicGraph_Any_pGvp"
           },
@@ -361,6 +371,7 @@
             "key.parsed_declaration" : "var minimizer: ccv_nnc_cmd_t",
             "key.parsed_scope.end" : 37,
             "key.parsed_scope.start" : 28,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main12SGDOptimizerV9minimizerXevp"
@@ -382,6 +393,7 @@
             "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
             "key.parsed_scope.end" : 29,
             "key.parsed_scope.start" : 29,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main12SGDOptimizerV9minimizerXevg6paramsL_Xevp"
@@ -413,6 +425,7 @@
             "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, nesterov: Bool, rate: Float, scale: Float, decay: Float, momentum: Float,\n  dampening: Float\n)",
             "key.parsed_scope.end" : 50,
             "key.parsed_scope.start" : 39,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -474,6 +487,7 @@
             "key.parsed_declaration" : "public func step(streamContext: StreamContext?)",
             "key.parsed_scope.end" : 56,
             "key.parsed_scope.start" : 52,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -551,6 +565,7 @@
         "key.parsed_declaration" : "public struct AdamOptimizer: Optimizer, OptimizerAddons, OptimizerTrackSteps",
         "key.parsed_scope.end" : 118,
         "key.parsed_scope.start" : 60,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -582,6 +597,7 @@
             "key.parsed_declaration" : "public let graph: DynamicGraph",
             "key.parsed_scope.end" : 61,
             "key.parsed_scope.start" : 61,
+            "key.reusingastcontext" : false,
             "key.typename" : "DynamicGraph",
             "key.typeusr" : "$s4main12DynamicGraphCD",
             "key.usr" : "s:4main13AdamOptimizerV5graphAA12DynamicGraphCvp"
@@ -621,6 +637,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main13AdamOptimizerV4step13streamContextyAA06StreamF0CSg_tF\">step(streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
@@ -651,6 +668,7 @@
             "key.parsed_declaration" : "public var rate: Float",
             "key.parsed_scope.end" : 63,
             "key.parsed_scope.start" : 63,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -681,6 +699,7 @@
             "key.parsed_declaration" : "public var betas: (Float, Float)",
             "key.parsed_scope.end" : 64,
             "key.parsed_scope.start" : 64,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "(Float, Float)",
             "key.typeusr" : "$sSf_SftD",
@@ -711,6 +730,7 @@
             "key.parsed_declaration" : "public var decay: Float",
             "key.parsed_scope.end" : 65,
             "key.parsed_scope.start" : 65,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -741,6 +761,7 @@
             "key.parsed_declaration" : "public var epsilon: Float",
             "key.parsed_scope.end" : 66,
             "key.parsed_scope.start" : 66,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -776,6 +797,7 @@
             "key.parsed_declaration" : "public var scale: Float",
             "key.parsed_scope.end" : 67,
             "key.parsed_scope.start" : 67,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -806,6 +828,7 @@
             "key.parsed_declaration" : "public var amsgrad: Bool",
             "key.parsed_scope.end" : 68,
             "key.parsed_scope.start" : 68,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
@@ -813,7 +836,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var parameters: [any <Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -826,7 +849,7 @@
             "key.column" : 14,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[any <ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 437,
             "key.line" : 69,
@@ -843,18 +866,19 @@
             "key.parsed_declaration" : "public var parameters = [DynamicGraph_AnyParameters]()",
             "key.parsed_scope.end" : 82,
             "key.parsed_scope.start" : 69,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
-            "key.typename" : "[DynamicGraph_AnyParameters]",
+            "key.typename" : "[any DynamicGraph_AnyParameters]",
             "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
             "key.usr" : "s:4main13AdamOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>var savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var savedAux: [any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 35,
             "key.line" : 84,
@@ -866,8 +890,9 @@
             "key.parsed_declaration" : "var savedAux = [DynamicGraph_Any]()",
             "key.parsed_scope.end" : 84,
             "key.parsed_scope.start" : 84,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
-            "key.typename" : "[DynamicGraph_Any]",
+            "key.typename" : "[any DynamicGraph_Any]",
             "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
             "key.usr" : "s:4main13AdamOptimizerV8savedAuxSayAA16DynamicGraph_Any_pGvp"
           },
@@ -891,6 +916,7 @@
             "key.parsed_declaration" : "var minimizer: ccv_nnc_cmd_t",
             "key.parsed_scope.end" : 96,
             "key.parsed_scope.start" : 85,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13AdamOptimizerV9minimizerXevp"
@@ -912,6 +938,7 @@
             "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
             "key.parsed_scope.end" : 86,
             "key.parsed_scope.start" : 86,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13AdamOptimizerV9minimizerXevg6paramsL_Xevp"
@@ -943,6 +970,7 @@
             "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, rate: Float = 0.001, step: Int = 1, betas: (Float, Float) = (0.9, 0.999),\n  decay: Float = 0, epsilon: Float = 1e-8, amsgrad: Bool = false\n)",
             "key.parsed_scope.end" : 110,
             "key.parsed_scope.start" : 98,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -1014,6 +1042,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main13AdamOptimizerV4stepSivp\">step<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -1091,6 +1120,7 @@
         "key.parsed_declaration" : "public struct LAMBOptimizer: Optimizer, OptimizerAddons, OptimizerTrackSteps",
         "key.parsed_scope.end" : 176,
         "key.parsed_scope.start" : 121,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1122,6 +1152,7 @@
             "key.parsed_declaration" : "public let graph: DynamicGraph",
             "key.parsed_scope.end" : 122,
             "key.parsed_scope.start" : 122,
+            "key.reusingastcontext" : false,
             "key.typename" : "DynamicGraph",
             "key.typeusr" : "$s4main12DynamicGraphCD",
             "key.usr" : "s:4main13LAMBOptimizerV5graphAA12DynamicGraphCvp"
@@ -1161,6 +1192,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main13LAMBOptimizerV4step13streamContextyAA06StreamE0CSg_tF\">step(streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
@@ -1191,6 +1223,7 @@
             "key.parsed_declaration" : "public var rate: Float",
             "key.parsed_scope.end" : 124,
             "key.parsed_scope.start" : 124,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -1221,6 +1254,7 @@
             "key.parsed_declaration" : "public var betas: (Float, Float)",
             "key.parsed_scope.end" : 125,
             "key.parsed_scope.start" : 125,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "(Float, Float)",
             "key.typeusr" : "$sSf_SftD",
@@ -1251,6 +1285,7 @@
             "key.parsed_declaration" : "public var decay: Float",
             "key.parsed_scope.end" : 126,
             "key.parsed_scope.start" : 126,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -1281,6 +1316,7 @@
             "key.parsed_declaration" : "public var epsilon: Float",
             "key.parsed_scope.end" : 127,
             "key.parsed_scope.start" : 127,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -1316,6 +1352,7 @@
             "key.parsed_declaration" : "public var scale: Float",
             "key.parsed_scope.end" : 128,
             "key.parsed_scope.start" : 128,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -1323,7 +1360,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var parameters: [any <Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1336,7 +1373,7 @@
             "key.column" : 14,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[any <ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 437,
             "key.line" : 129,
@@ -1353,18 +1390,19 @@
             "key.parsed_declaration" : "public var parameters = [DynamicGraph_AnyParameters]()",
             "key.parsed_scope.end" : 142,
             "key.parsed_scope.start" : 129,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
-            "key.typename" : "[DynamicGraph_AnyParameters]",
+            "key.typename" : "[any DynamicGraph_AnyParameters]",
             "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
             "key.usr" : "s:4main13LAMBOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>var savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var savedAux: [any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 35,
             "key.line" : 144,
@@ -1376,8 +1414,9 @@
             "key.parsed_declaration" : "var savedAux = [DynamicGraph_Any]()",
             "key.parsed_scope.end" : 144,
             "key.parsed_scope.start" : 144,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
-            "key.typename" : "[DynamicGraph_Any]",
+            "key.typename" : "[any DynamicGraph_Any]",
             "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
             "key.usr" : "s:4main13LAMBOptimizerV8savedAuxSayAA16DynamicGraph_Any_pGvp"
           },
@@ -1401,6 +1440,7 @@
             "key.parsed_declaration" : "var minimizer: ccv_nnc_cmd_t",
             "key.parsed_scope.end" : 155,
             "key.parsed_scope.start" : 145,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13LAMBOptimizerV9minimizerXevp"
@@ -1422,6 +1462,7 @@
             "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
             "key.parsed_scope.end" : 146,
             "key.parsed_scope.start" : 146,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13LAMBOptimizerV9minimizerXevg6paramsL_Xevp"
@@ -1453,6 +1494,7 @@
             "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, rate: Float = 0.001, step: Int = 1, betas: (Float, Float) = (0.9, 0.999),\n  decay: Float = 0, epsilon: Float = 1e-6\n)",
             "key.parsed_scope.end" : 168,
             "key.parsed_scope.start" : 157,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -1524,6 +1566,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main13LAMBOptimizerV4stepSivp\">step<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -1601,6 +1644,7 @@
         "key.parsed_declaration" : "public struct AdamWOptimizer: Optimizer, OptimizerAddons, OptimizerTrackSteps",
         "key.parsed_scope.end" : 237,
         "key.parsed_scope.start" : 179,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1632,6 +1676,7 @@
             "key.parsed_declaration" : "public let graph: DynamicGraph",
             "key.parsed_scope.end" : 180,
             "key.parsed_scope.start" : 180,
+            "key.reusingastcontext" : false,
             "key.typename" : "DynamicGraph",
             "key.typeusr" : "$s4main12DynamicGraphCD",
             "key.usr" : "s:4main14AdamWOptimizerV5graphAA12DynamicGraphCvp"
@@ -1671,6 +1716,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main14AdamWOptimizerV4step13streamContextyAA06StreamF0CSg_tF\">step(streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
@@ -1701,6 +1747,7 @@
             "key.parsed_declaration" : "public var rate: Float",
             "key.parsed_scope.end" : 182,
             "key.parsed_scope.start" : 182,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -1731,6 +1778,7 @@
             "key.parsed_declaration" : "public var betas: (Float, Float)",
             "key.parsed_scope.end" : 183,
             "key.parsed_scope.start" : 183,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "(Float, Float)",
             "key.typeusr" : "$sSf_SftD",
@@ -1761,6 +1809,7 @@
             "key.parsed_declaration" : "public var decay: Float",
             "key.parsed_scope.end" : 184,
             "key.parsed_scope.start" : 184,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -1791,6 +1840,7 @@
             "key.parsed_declaration" : "public var epsilon: Float",
             "key.parsed_scope.end" : 185,
             "key.parsed_scope.start" : 185,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -1826,6 +1876,7 @@
             "key.parsed_declaration" : "public var scale: Float",
             "key.parsed_scope.end" : 186,
             "key.parsed_scope.start" : 186,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -1856,6 +1907,7 @@
             "key.parsed_declaration" : "public var amsgrad: Bool",
             "key.parsed_scope.end" : 187,
             "key.parsed_scope.start" : 187,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Bool",
             "key.typeusr" : "$sSbD",
@@ -1863,7 +1915,7 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public var parameters: [<Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public var parameters: [any <Type usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/Type>] { get set }<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -1876,7 +1928,7 @@
             "key.column" : 14,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>parameters<\/decl.name>: <decl.var.type>[any <ref.protocol usr=\"s:4main26DynamicGraph_AnyParametersP\">DynamicGraph_AnyParameters<\/ref.protocol>]<\/decl.var.type> { <syntaxtype.keyword>get<\/syntaxtype.keyword> <syntaxtype.keyword>set<\/syntaxtype.keyword> }<\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 437,
             "key.line" : 188,
@@ -1893,18 +1945,19 @@
             "key.parsed_declaration" : "public var parameters = [DynamicGraph_AnyParameters]()",
             "key.parsed_scope.end" : 201,
             "key.parsed_scope.start" : 188,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
-            "key.typename" : "[DynamicGraph_AnyParameters]",
+            "key.typename" : "[any DynamicGraph_AnyParameters]",
             "key.typeusr" : "$sSay4main26DynamicGraph_AnyParameters_pGD",
             "key.usr" : "s:4main14AdamWOptimizerV10parametersSayAA26DynamicGraph_AnyParameters_pGvp"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
-            "key.annotated_decl" : "<Declaration>var savedAux: [<Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>var savedAux: [any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type>]<\/Declaration>",
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/OptimizerAddons.swift",
-            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>var<\/syntaxtype.keyword> <decl.name>savedAux<\/decl.name>: <decl.var.type>[any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 35,
             "key.line" : 203,
@@ -1916,8 +1969,9 @@
             "key.parsed_declaration" : "var savedAux = [DynamicGraph_Any]()",
             "key.parsed_scope.end" : 203,
             "key.parsed_scope.start" : 203,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
-            "key.typename" : "[DynamicGraph_Any]",
+            "key.typename" : "[any DynamicGraph_Any]",
             "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
             "key.usr" : "s:4main14AdamWOptimizerV8savedAuxSayAA16DynamicGraph_Any_pGvp"
           },
@@ -1941,6 +1995,7 @@
             "key.parsed_declaration" : "var minimizer: ccv_nnc_cmd_t",
             "key.parsed_scope.end" : 215,
             "key.parsed_scope.start" : 204,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main14AdamWOptimizerV9minimizerXevp"
@@ -1962,6 +2017,7 @@
             "key.parsed_declaration" : "var params = CmdParamsFactory.factory.newParams()",
             "key.parsed_scope.end" : 205,
             "key.parsed_scope.start" : 205,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main14AdamWOptimizerV9minimizerXevg6paramsL_Xevp"
@@ -1993,6 +2049,7 @@
             "key.parsed_declaration" : "public init(\n  _ graph: DynamicGraph, rate: Float = 0.001, step: Int = 1, betas: (Float, Float) = (0.9, 0.999),\n  decay: Float = 0, epsilon: Float = 1e-8, amsgrad: Bool = false\n)",
             "key.parsed_scope.end" : 229,
             "key.parsed_scope.start" : 217,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -2064,6 +2121,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main14AdamWOptimizerV4stepSivp\">step<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],

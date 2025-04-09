@@ -30,6 +30,7 @@
         "key.parsed_declaration" : "extension DynamicGraph.AnyTensor",
         "key.parsed_scope.end" : 56,
         "key.parsed_scope.start" : 3,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -91,6 +92,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyAE_AA06StreamI0CSgtF\">backward(to: DynamicGraph.AnyTensor, streamContext: StreamContext? = nil)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>S : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
@@ -121,6 +123,7 @@
                 "key.parsed_declaration" : "public func backward<S: Sequence",
                 "key.parsed_scope.end" : 11,
                 "key.parsed_scope.start" : 11,
+                "key.reusingastcontext" : false,
                 "key.typename" : "S.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF1SL_xmfp"
@@ -142,6 +145,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 13,
                 "key.parsed_scope.start" : 13,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF6_graphL_s13OpaquePointerVvp"
@@ -163,6 +167,7 @@
                 "key.parsed_declaration" : "var gradients = graph.gradients(for: [self])",
                 "key.parsed_scope.end" : 14,
                 "key.parsed_scope.start" : 14,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[DynamicGraph.AnyTensor]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF9gradientsL_SayAEGvp"
@@ -184,6 +189,7 @@
                 "key.parsed_declaration" : "var gradientsSet = Set(gradients.map { ObjectIdentifier($0) })",
                 "key.parsed_scope.end" : 15,
                 "key.parsed_scope.start" : 15,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Set<ObjectIdentifier>",
                 "key.typeusr" : "$sShySOGD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF12gradientsSetL_ShySOGvp"
@@ -205,6 +211,7 @@
                 "key.parsed_declaration" : "let _inputs: [ccv_nnc_tensor_variable_t?] = gradients.map { $0._tensor }",
                 "key.parsed_scope.end" : 22,
                 "key.parsed_scope.start" : 22,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF7_inputsL_Xevp"
@@ -226,6 +233,7 @@
                 "key.parsed_declaration" : "let inputSize = Int32(_inputs.count)",
                 "key.parsed_scope.end" : 23,
                 "key.parsed_scope.start" : 23,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF9inputSizeL_Xevp"
@@ -247,6 +255,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: _inputs.count)",
                 "key.parsed_scope.end" : 24,
                 "key.parsed_scope.start" : 24,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF8_outputsL_Xevp"
@@ -268,6 +277,7 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 33,
                 "key.parsed_scope.start" : 33,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF01_hI0L_s13OpaquePointerVSgvp"
@@ -289,6 +299,7 @@
                 "key.parsed_declaration" : "var f: ccv_nnc_tensor_variable_t? = self._tensor",
                 "key.parsed_scope.end" : 34,
                 "key.parsed_scope.start" : 34,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF1fL_Xevp"
@@ -310,6 +321,7 @@
                 "key.parsed_declaration" : "var g: ccv_nnc_tensor_variable_t? = self.grad?._tensor",
                 "key.parsed_scope.end" : 35,
                 "key.parsed_scope.start" : 35,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF1gL_Xevp"
@@ -379,6 +391,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC9AnyTensorC8backward2to13streamContextyx_AA06StreamI0CSgtSTRzAE7ElementRczlF\">backward&lt;S&gt;(to: S, streamContext: StreamContext? = nil) where S : Sequence, S.Element : DynamicGraph.AnyTensor<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -392,7 +405,7 @@
         "key.usr" : "s:4main12DynamicGraphC9AnyTensorC"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection where <Type usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type> where <Type usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
         "key.bodylength" : 2077,
         "key.bodyoffset" : 2115,
         "key.column" : 17,
@@ -405,7 +418,7 @@
         "key.doc.name" : "Group",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : RandomAccessCollection <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 2108,
         "key.line" : 30,
@@ -417,6 +430,7 @@
         "key.parsed_declaration" : "extension DynamicGraph.Group",
         "key.parsed_scope.end" : 110,
         "key.parsed_scope.start" : 58,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -478,6 +492,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtAA0bc4_AnyD0Rd__lF\">backward&lt;Group&gt;(to: Group, streamContext: StreamContext? = nil) where Group : DynamicGraph_AnyGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>S : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
@@ -508,6 +523,7 @@
                 "key.parsed_declaration" : "public func backward<S: Sequence",
                 "key.parsed_scope.end" : 66,
                 "key.parsed_scope.start" : 66,
+                "key.reusingastcontext" : false,
                 "key.typename" : "S.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF1SL_qd__mfp"
@@ -529,6 +545,7 @@
                 "key.parsed_declaration" : "let graph = underlyingArray[0].graph",
                 "key.parsed_scope.end" : 69,
                 "key.parsed_scope.start" : 69,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF5graphL_ACvp"
@@ -550,6 +567,7 @@
                 "key.parsed_declaration" : "var gradients = graph.gradients(for: underlyingArray)",
                 "key.parsed_scope.end" : 70,
                 "key.parsed_scope.start" : 70,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[DynamicGraph.AnyTensor]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF9gradientsL_SayAC0J6TensorCGvp"
@@ -571,6 +589,7 @@
                 "key.parsed_declaration" : "var gradientsSet = Set(gradients.map { ObjectIdentifier($0) })",
                 "key.parsed_scope.end" : 71,
                 "key.parsed_scope.start" : 71,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Set<ObjectIdentifier>",
                 "key.typeusr" : "$sShySOGD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF12gradientsSetL_ShySOGvp"
@@ -592,6 +611,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 78,
                 "key.parsed_scope.start" : 78,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF6_graphL_s13OpaquePointerVvp"
@@ -613,6 +633,7 @@
                 "key.parsed_declaration" : "let _inputs: [ccv_nnc_tensor_variable_t?] = gradients.map { $0._tensor }",
                 "key.parsed_scope.end" : 79,
                 "key.parsed_scope.start" : 79,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF7_inputsL_Xevp"
@@ -634,6 +655,7 @@
                 "key.parsed_declaration" : "let inputSize = Int32(_inputs.count)",
                 "key.parsed_scope.end" : 80,
                 "key.parsed_scope.start" : 80,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF9inputSizeL_Xevp"
@@ -655,6 +677,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: _inputs.count)",
                 "key.parsed_scope.end" : 81,
                 "key.parsed_scope.start" : 81,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF8_outputsL_Xevp"
@@ -676,6 +699,7 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 90,
                 "key.parsed_scope.start" : 90,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF01_gH0L_s13OpaquePointerVSgvp"
@@ -697,6 +721,7 @@
                 "key.parsed_declaration" : "let f: [ccv_nnc_tensor_variable_t?] = self.underlyingArray.map { $0._tensor }",
                 "key.parsed_scope.end" : 91,
                 "key.parsed_scope.start" : 91,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF1fL_Xevp"
@@ -718,6 +743,7 @@
                 "key.parsed_declaration" : "let g: [ccv_nnc_tensor_variable_t?] = self.underlyingArray.map { $0.grad?._tensor }",
                 "key.parsed_scope.end" : 92,
                 "key.parsed_scope.start" : 92,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF1gL_Xevp"
@@ -787,6 +813,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtSTRd__AA0bc4_AnyD07ElementRpd__lF\">backward&lt;S&gt;(to: S, streamContext: StreamContext? = nil) where S : Sequence, S.Element : DynamicGraph_AnyGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>Group : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/Type><\/Declaration>",
@@ -817,6 +844,7 @@
                 "key.parsed_declaration" : "public func backward<Group: DynamicGraph.AnyGroup",
                 "key.parsed_scope.end" : 105,
                 "key.parsed_scope.start" : 105,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Group.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8backward2to13streamContextyqd___AA06StreamH0CSgtAA0bc4_AnyD0Rd__lFADL_qd__mfp"
@@ -957,6 +985,7 @@
         "key.parsed_declaration" : "extension Collection where Element: DynamicGraph.AnyTensor",
         "key.parsed_scope.end" : 165,
         "key.parsed_scope.start" : 112,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1024,6 +1053,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtAaBRd__lF\">backward&lt;Group&gt;(to: Group, streamContext: StreamContext? = nil) where Group : DynamicGraph_AnyGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>S : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
@@ -1054,6 +1084,7 @@
                 "key.parsed_declaration" : "public func backward<S: Sequence",
                 "key.parsed_scope.end" : 120,
                 "key.parsed_scope.start" : 120,
+                "key.reusingastcontext" : false,
                 "key.typename" : "S.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF1SL_qd__mfp"
@@ -1075,6 +1106,7 @@
                 "key.parsed_declaration" : "let graph = self.first!.graph",
                 "key.parsed_scope.end" : 123,
                 "key.parsed_scope.start" : 123,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF5graphL_ACvp"
@@ -1096,6 +1128,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 127,
                 "key.parsed_scope.start" : 127,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF6_graphL_s13OpaquePointerVvp"
@@ -1117,6 +1150,7 @@
                 "key.parsed_declaration" : "var gradients = graph.gradients(for: self)",
                 "key.parsed_scope.end" : 128,
                 "key.parsed_scope.start" : 128,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[DynamicGraph.AnyTensor]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF9gradientsL_SayAEGvp"
@@ -1138,6 +1172,7 @@
                 "key.parsed_declaration" : "var gradientsSet = Set(gradients.map { ObjectIdentifier($0) })",
                 "key.parsed_scope.end" : 129,
                 "key.parsed_scope.start" : 129,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Set<ObjectIdentifier>",
                 "key.typeusr" : "$sShySOGD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF12gradientsSetL_ShySOGvp"
@@ -1159,6 +1194,7 @@
                 "key.parsed_declaration" : "let _inputs: [ccv_nnc_tensor_variable_t?] = gradients.map { $0._tensor }",
                 "key.parsed_scope.end" : 136,
                 "key.parsed_scope.start" : 136,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF7_inputsL_Xevp"
@@ -1180,6 +1216,7 @@
                 "key.parsed_declaration" : "let inputSize = Int32(_inputs.count)",
                 "key.parsed_scope.end" : 137,
                 "key.parsed_scope.start" : 137,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF9inputSizeL_Xevp"
@@ -1201,6 +1238,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: _inputs.count)",
                 "key.parsed_scope.end" : 138,
                 "key.parsed_scope.start" : 138,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF8_outputsL_Xevp"
@@ -1222,6 +1260,7 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 147,
                 "key.parsed_scope.start" : 147,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF01_iJ0L_s13OpaquePointerVSgvp"
@@ -1243,9 +1282,10 @@
                 "key.parsed_declaration" : "let f: [ccv_nnc_tensor_variable_t?] = self.map { $0._tensor }",
                 "key.parsed_scope.end" : 148,
                 "key.parsed_scope.start" : 148,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF1fL_Xevp"
+                "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF1fL0_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let g: [ccv_nnc_tensor_variable_t?]<\/Declaration>",
@@ -1264,6 +1304,7 @@
                 "key.parsed_declaration" : "let g: [ccv_nnc_tensor_variable_t?] = self.map { $0.grad?._tensor }",
                 "key.parsed_scope.end" : 149,
                 "key.parsed_scope.start" : 149,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AeFRcd__lF1gL_Xevp"
@@ -1339,6 +1380,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtAaBRd__lF\">backward&lt;Group&gt;(to: Group, streamContext: StreamContext? = nil) where Group : DynamicGraph_AnyGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -1347,7 +1389,7 @@
             "key.usr" : "s:Sl4mainAA12DynamicGraphC9AnyTensorC7ElementRczrlE8backward2to13streamContextyAE_AA06StreamJ0CSgtF"
           }
         ],
-        "key.typename" : "Collection.Protocol",
+        "key.typename" : "Collection.Type",
         "key.typeusr" : "$sSl_pmD",
         "key.usr" : "s:Sl"
       },
@@ -1477,6 +1519,7 @@
         "key.parsed_declaration" : "extension Collection where Element: DynamicGraph.AnyGroup",
         "key.parsed_scope.end" : 224,
         "key.parsed_scope.start" : 167,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1544,6 +1587,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtAaBRd__lF\">backward&lt;Group&gt;(to: Group, streamContext: StreamContext? = nil) where Group : DynamicGraph_AnyGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>S : <Type usr=\"s:ST\">Sequence<\/Type><\/Declaration>",
@@ -1574,6 +1618,7 @@
                 "key.parsed_declaration" : "public func backward<S: Sequence",
                 "key.parsed_scope.end" : 175,
                 "key.parsed_scope.start" : 175,
+                "key.reusingastcontext" : false,
                 "key.typename" : "S.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF1SL_qd__mfp"
@@ -1595,6 +1640,7 @@
                 "key.parsed_declaration" : "let graph = self.first!.untyped[0].graph",
                 "key.parsed_scope.end" : 178,
                 "key.parsed_scope.start" : 178,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF5graphL_AA0bC0Cvp"
@@ -1616,6 +1662,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 184,
                 "key.parsed_scope.start" : 184,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF6_graphL_s13OpaquePointerVvp"
@@ -1637,6 +1684,7 @@
                 "key.parsed_declaration" : "var gradients = graph.gradients(for: self.flatMap { $0.untyped })",
                 "key.parsed_scope.end" : 185,
                 "key.parsed_scope.start" : 185,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[DynamicGraph.AnyTensor]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF9gradientsL_SayAA0bC0C0D6TensorCGvp"
@@ -1658,6 +1706,7 @@
                 "key.parsed_declaration" : "var gradientsSet = Set(gradients.map { ObjectIdentifier($0) })",
                 "key.parsed_scope.end" : 186,
                 "key.parsed_scope.start" : 186,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Set<ObjectIdentifier>",
                 "key.typeusr" : "$sShySOGD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF12gradientsSetL_ShySOGvp"
@@ -1679,6 +1728,7 @@
                 "key.parsed_declaration" : "let _inputs: [ccv_nnc_tensor_variable_t?] = gradients.map { $0._tensor }",
                 "key.parsed_scope.end" : 193,
                 "key.parsed_scope.start" : 193,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF7_inputsL_Xevp"
@@ -1700,6 +1750,7 @@
                 "key.parsed_declaration" : "let inputSize = Int32(_inputs.count)",
                 "key.parsed_scope.end" : 194,
                 "key.parsed_scope.start" : 194,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF9inputSizeL_Xevp"
@@ -1721,6 +1772,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: _inputs.count)",
                 "key.parsed_scope.end" : 195,
                 "key.parsed_scope.start" : 195,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF8_outputsL_Xevp"
@@ -1742,6 +1794,7 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 204,
                 "key.parsed_scope.start" : 204,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF01_iJ0L_s13OpaquePointerVSgvp"
@@ -1763,9 +1816,10 @@
                 "key.parsed_declaration" : "let f: [ccv_nnc_tensor_variable_t?] = self.flatMap { $0.untyped.map { $0._tensor } }",
                 "key.parsed_scope.end" : 205,
                 "key.parsed_scope.start" : 205,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF1fL_Xevp"
+                "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF1fL0_Xevp"
               },
               {
                 "key.annotated_decl" : "<Declaration>let g: [ccv_nnc_tensor_variable_t?]<\/Declaration>",
@@ -1784,6 +1838,7 @@
                 "key.parsed_declaration" : "let g: [ccv_nnc_tensor_variable_t?] = self.flatMap { $0.untyped.map { $0.grad?._tensor } }",
                 "key.parsed_scope.end" : 206,
                 "key.parsed_scope.start" : 206,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF1gL_Xevp"
@@ -1859,6 +1914,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtSTRd__AabCRpd__lF\">backward&lt;S&gt;(to: S, streamContext: StreamContext? = nil) where S : Sequence, S.Element : DynamicGraph_AnyGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>Group : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC8AnyGroupa\">AnyGroup<\/Type><\/Declaration>",
@@ -1889,6 +1945,7 @@
                 "key.parsed_declaration" : "public func backward<Group: DynamicGraph.AnyGroup",
                 "key.parsed_scope.end" : 219,
                 "key.parsed_scope.start" : 219,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Group.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtAaBRd__lF0E0L_qd__mfp"
@@ -1899,7 +1956,7 @@
             "key.usr" : "s:Sl4mainAA21DynamicGraph_AnyGroup7ElementRpzrlE8backward2to13streamContextyqd___AA06StreamJ0CSgtAaBRd__lF"
           }
         ],
-        "key.typename" : "Collection.Protocol",
+        "key.typename" : "Collection.Type",
         "key.typeusr" : "$sSl_pmD",
         "key.usr" : "s:Sl"
       }

@@ -36,6 +36,7 @@
         "key.parsed_declaration" : "public final class VecEnv<EnvType: Env, Element: TensorNumeric>\nwhere EnvType.ActType == Tensor<Element>, EnvType.ObsType == Tensor<Element>",
         "key.parsed_scope.end" : 19,
         "key.parsed_scope.start" : 4,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>EnvType : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
@@ -66,6 +67,7 @@
             "key.parsed_declaration" : "public final class VecEnv<EnvType: Env",
             "key.parsed_scope.end" : 4,
             "key.parsed_scope.start" : 4,
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.Type",
             "key.typeusr" : "$sxmD",
             "key.usr" : "s:4main6VecEnvC0C4Typexmfp"
@@ -99,6 +101,7 @@
             "key.parsed_declaration" : "public final class VecEnv<EnvType: Env, Element: TensorNumeric",
             "key.parsed_scope.end" : 4,
             "key.parsed_scope.start" : 4,
+            "key.reusingastcontext" : false,
             "key.typename" : "Element.Type",
             "key.typeusr" : "$sq_mD",
             "key.usr" : "s:4main6VecEnvC7Elementq_mfp"
@@ -128,6 +131,7 @@
             "key.parsed_declaration" : "private var envs = [EnvType]()",
             "key.parsed_scope.end" : 6,
             "key.parsed_scope.start" : 6,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "[EnvType]",
             "key.typeusr" : "$sSayxGD",
@@ -158,6 +162,7 @@
             "key.parsed_declaration" : "private var terminated = [Bool]()",
             "key.parsed_scope.end" : 7,
             "key.parsed_scope.start" : 7,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "[Bool]",
             "key.typeusr" : "$sSaySbGD",
@@ -188,6 +193,7 @@
             "key.parsed_declaration" : "private var obs = [EnvType.ObsType]()",
             "key.parsed_scope.end" : 8,
             "key.parsed_scope.start" : 8,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -218,6 +224,7 @@
             "key.parsed_declaration" : "private var rewards = [EnvType.RewardType]()",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "[EnvType.RewardType]",
             "key.typeusr" : "$sSay10RewardTypeQzGD",
@@ -255,6 +262,7 @@
             "key.parsed_declaration" : "public init(count: Int, _ closure: (_: Int) throws -> EnvType) rethrows",
             "key.parsed_scope.end" : 18,
             "key.parsed_scope.start" : 10,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -298,10 +306,11 @@
         "key.parsed_declaration" : "extension VecEnv: Env where EnvType.TerminatedType == Bool",
         "key.parsed_scope.end" : 95,
         "key.parsed_scope.start" : 21,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias ActType = <Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias ActType = <Type usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -312,7 +321,7 @@
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ActType<\/decl.name> = <ref.generic_type_param usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/ref.associatedtype><\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ActType<\/decl.name> = <ref.generic_type_param usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ActTypeQa\">ActType<\/ref.associatedtype><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
             "key.line" : 22,
@@ -326,16 +335,17 @@
             "key.parsed_scope.start" : 22,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ActE0a\">ActType<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlEADa\">ActType<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.ActType.Type",
             "key.typeusr" : "$s7ActTypeQzmD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ActE0a"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlEADa"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias ObsType = <Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type><\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias ObsType = <Type usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type><\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -346,7 +356,7 @@
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ObsType<\/decl.name> = <ref.generic_type_param usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype><\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>ObsType<\/decl.name> = <ref.generic_type_param usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype><\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 35,
             "key.line" : 23,
@@ -360,16 +370,17 @@
             "key.parsed_scope.start" : 23,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ObsE0a\">ObsType<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlEAFa\">ObsType<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.ObsType.Type",
             "key.typeusr" : "$s7ObsTypeQzmD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE03ObsE0a"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlEAFa"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
-            "key.annotated_decl" : "<Declaration>public typealias RewardType = [<Type usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/Type>]<\/Declaration>",
+            "key.annotated_decl" : "<Declaration>public typealias RewardType = [<Type usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE0cE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/Type>]<\/Declaration>",
             "key.attributes" : [
               {
                 "key.attribute" : "source.decl.attribute.public",
@@ -380,7 +391,7 @@
             "key.column" : 20,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/VecEnv.swift",
-            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>RewardType<\/decl.name> = [<ref.generic_type_param usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/ref.associatedtype>]<\/decl.typealias>",
+            "key.fully_annotated_decl" : "<decl.typealias><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>typealias<\/syntaxtype.keyword> <decl.name>RewardType<\/decl.name> = [<ref.generic_type_param usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE0cE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/ref.associatedtype>]<\/decl.typealias>",
             "key.kind" : "source.lang.swift.decl.typealias",
             "key.length" : 43,
             "key.line" : 24,
@@ -394,12 +405,13 @@
             "key.parsed_scope.start" : 24,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlE06RewardE0a\">RewardType<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE06RewardE0a\">RewardType<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.typename" : "[EnvType.RewardType].Type",
             "key.typeusr" : "$sSay10RewardTypeQzGmD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE06RewardE0a"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE06RewardE0a"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -428,12 +440,13 @@
             "key.parsed_scope.start" : 25,
             "key.related_decls" : [
               {
-                "key.annotated_decl" : "<RelatedName usr=\"s:4main6VecEnvCAASb14TerminatedTypeRtzrlEADa\">TerminatedType<\/RelatedName>"
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlEAHa\">TerminatedType<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.typename" : "[Bool].Type",
             "key.typeusr" : "$sSaySbGmD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlEADa"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlEAHa"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -462,6 +475,7 @@
             "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, TerminatedType, [String: Any])",
             "key.parsed_scope.end" : 52,
             "key.parsed_scope.start" : 26,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var obs: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -480,14 +494,15 @@
                 "key.parsed_declaration" : "var obs = Tensor<Element>(\n  self.obs[0].kind, format: self.obs[0].format,\n  shape: [envs.count, self.obs[0].shape[0]])",
                 "key.parsed_scope.end" : 45,
                 "key.parsed_scope.start" : 45,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE4stepyXeXeF3obsL0_Xevp"
+                "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE4stepyXeXeF3obsL0_Xevp"
               }
             ],
             "key.typename" : "<EnvType, Element where EnvType : Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>, EnvType.TerminatedType == Bool> (VecEnv<EnvType, Element>) -> (<<error type>>) -> <<error type>>",
             "key.typeusr" : "$syXeXecD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE4stepyXeXeF"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE4stepyXeXeF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -516,6 +531,7 @@
             "key.parsed_declaration" : "public func reset(seed: Int?) -> (ObsType, [String: Any])",
             "key.parsed_scope.end" : 90,
             "key.parsed_scope.start" : 54,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var obs: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -534,14 +550,15 @@
                 "key.parsed_declaration" : "var obs = Tensor<Element>(\n  self.obs[0].kind, format: self.obs[0].format,\n  shape: [envs.count, self.obs[0].shape[0]])",
                 "key.parsed_scope.end" : 82,
                 "key.parsed_scope.start" : 82,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
-                "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE5resetyXeXeF3obsL1_Xevp"
+                "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE5resetyXeXeF3obsL1_Xevp"
               }
             ],
             "key.typename" : "<EnvType, Element where EnvType : Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>, EnvType.TerminatedType == Bool> (VecEnv<EnvType, Element>) -> (Int?) -> <<error type>>",
             "key.typeusr" : "$syXeXecD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE5resetyXeXeF"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE5resetyXeXeF"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -570,9 +587,10 @@
             "key.parsed_declaration" : "public static var rewardThreshold: Float",
             "key.parsed_scope.end" : 92,
             "key.parsed_scope.start" : 92,
+            "key.reusingastcontext" : false,
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE15rewardThresholdSfvpZ"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE15rewardThresholdSfvpZ"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -601,9 +619,10 @@
             "key.parsed_declaration" : "public static var actionSpace: [ClosedRange<Float>]",
             "key.parsed_scope.end" : 93,
             "key.parsed_scope.start" : 93,
+            "key.reusingastcontext" : false,
             "key.typename" : "[ClosedRange<Float>]",
             "key.typeusr" : "$sSaySNySfGGD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE11actionSpaceSaySNySfGGvpZ"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE11actionSpaceSaySNySfGGvpZ"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -632,9 +651,10 @@
             "key.parsed_declaration" : "public static var stateSize: Int",
             "key.parsed_scope.end" : 94,
             "key.parsed_scope.start" : 94,
+            "key.reusingastcontext" : false,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
-            "key.usr" : "s:4main6VecEnvCAASb14TerminatedTypeRtzrlE9stateSizeSivpZ"
+            "key.usr" : "s:4main6VecEnvCAAXe7ActTypeRtzXe03ObsE0RtzSb010TerminatedE0RtzrlE9stateSizeSivpZ"
           }
         ],
         "key.typename" : "VecEnv<EnvType, Element>.Type",

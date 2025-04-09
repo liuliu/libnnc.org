@@ -53,6 +53,7 @@
         "key.parsed_declaration" : "public protocol DynamicGraph_AnyTensorGroup: DynamicGraph_Any",
         "key.parsed_scope.end" : 21,
         "key.parsed_scope.start" : 7,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -72,6 +73,7 @@
             "key.parsed_declaration" : "associatedtype AnyTensor: DynamicGraph_Any",
             "key.parsed_scope.end" : 8,
             "key.parsed_scope.start" : 8,
+            "key.reusingastcontext" : false,
             "key.typename" : "Self.AnyTensor.Type",
             "key.typeusr" : "$s9AnyTensorQzmD",
             "key.usr" : "s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa"
@@ -99,10 +101,11 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main27DynamicGraph_AnyTensorGroupP4execyXeXeFZ\">exec(cmd:hint:inputs:outputs:streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Self where Self : DynamicGraph_AnyTensorGroup> (Self.Type) -> (<<error type>>, <<error type>>, [DynamicGraph_Any?], Int32, StreamContext?) -> [Self.AnyTensor]",
+            "key.typename" : "<Self where Self : DynamicGraph_AnyTensorGroup> (Self.Type) -> (<<error type>>, <<error type>>, [(any DynamicGraph_Any)?], Int32, StreamContext?) -> [Self.AnyTensor]",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main27DynamicGraph_AnyTensorGroupP4execyXeXeFZ"
           },
@@ -129,10 +132,11 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main27DynamicGraph_AnyTensorGroupP4execyXeXeFZ\">exec(cmd:hint:inputs:outputSize:streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Self where Self : DynamicGraph_AnyTensorGroup> (Self.Type) -> (<<error type>>, <<error type>>, [DynamicGraph_Any?], [DynamicGraph_Any], StreamContext?) -> ()",
+            "key.typename" : "<Self where Self : DynamicGraph_AnyTensorGroup> (Self.Type) -> (<<error type>>, <<error type>>, [(any DynamicGraph_Any)?], [any DynamicGraph_Any], StreamContext?) -> ()",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main27DynamicGraph_AnyTensorGroupP4execyXeXeFZ"
           },
@@ -154,15 +158,16 @@
             "key.parsed_declaration" : "static func evaluate(\n  model: OpaquePointer, testing: Bool, dataParallel: inout Int?, inputs: [DynamicGraph_Any?],\n  outputSize: Int32, streamContext: StreamContext?\n) -> [AnyTensor]",
             "key.parsed_scope.end" : 17,
             "key.parsed_scope.start" : 17,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
-            "key.typename" : "<Self where Self : DynamicGraph_AnyTensorGroup> (Self.Type) -> (OpaquePointer, Bool, inout Int?, [DynamicGraph_Any?], Int32, StreamContext?) -> [Self.AnyTensor]",
+            "key.typename" : "<Self where Self : DynamicGraph_AnyTensorGroup> (Self.Type) -> (OpaquePointer, Bool, inout Int?, [(any DynamicGraph_Any)?], Int32, StreamContext?) -> [Self.AnyTensor]",
             "key.typeusr" : "$s5model7testing12dataParallel6inputs10outputSize13streamContextSay9AnyTensorQzGs13OpaquePointerV_SbSiSgzSay4main013DynamicGraph_J0_pSgGs5Int32VAM06StreamI0CSgtcD",
             "key.usr" : "s:4main27DynamicGraph_AnyTensorGroupP8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSay0dE0QzGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamP0CSgtFZ"
           }
         ],
-        "key.typename" : "DynamicGraph_AnyTensorGroup.Protocol",
+        "key.typename" : "DynamicGraph_AnyTensorGroup.Type",
         "key.typeusr" : "$s4main27DynamicGraph_AnyTensorGroup_pmD",
         "key.usr" : "s:4main27DynamicGraph_AnyTensorGroupP"
       },
@@ -192,6 +197,7 @@
         "key.parsed_declaration" : "extension DynamicGraph",
         "key.parsed_scope.end" : 25,
         "key.parsed_scope.start" : 23,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -218,7 +224,8 @@
             "key.parsed_declaration" : "public typealias AnyTensorGroup = DynamicGraph_AnyTensorGroup",
             "key.parsed_scope.end" : 24,
             "key.parsed_scope.start" : 24,
-            "key.typename" : "DynamicGraph_AnyTensorGroup.Protocol",
+            "key.reusingastcontext" : false,
+            "key.typename" : "DynamicGraph_AnyTensorGroup.Type",
             "key.typeusr" : "$s4main27DynamicGraph_AnyTensorGroup_pmD",
             "key.usr" : "s:4main12DynamicGraphC14AnyTensorGroupa"
           }
@@ -265,6 +272,7 @@
         "key.parsed_declaration" : "extension DynamicGraph.AnyTensor: DynamicGraph_Any",
         "key.parsed_scope.end" : 29,
         "key.parsed_scope.start" : 27,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -298,6 +306,7 @@
             "key.parsed_declaration" : "public var untyped: [DynamicGraph.AnyTensor]",
             "key.parsed_scope.end" : 28,
             "key.parsed_scope.start" : 28,
+            "key.reusingastcontext" : false,
             "key.typename" : "[DynamicGraph.AnyTensor]",
             "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
             "key.usr" : "s:4main12DynamicGraphC9AnyTensorC7untypedSayAEGvp"
@@ -345,6 +354,7 @@
         "key.parsed_declaration" : "extension DynamicGraph.AnyTensor: DynamicGraph.AnyTensorGroup",
         "key.parsed_scope.end" : 148,
         "key.parsed_scope.start" : 31,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -371,6 +381,7 @@
             "key.parsed_declaration" : "public typealias AnyTensor = DynamicGraph.AnyTensor",
             "key.parsed_scope.end" : 33,
             "key.parsed_scope.start" : 33,
+            "key.reusingastcontext" : false,
             "key.typename" : "DynamicGraph.AnyTensor.Type",
             "key.typeusr" : "$s4main12DynamicGraphC9AnyTensorCmD",
             "key.usr" : "s:4main12DynamicGraphC9AnyTensorCADa"
@@ -407,13 +418,14 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ\">exec(cmd:hint:inputs:outputs:streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
-                "key.annotated_decl" : "<Declaration>let firstTensor: <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
+                "key.annotated_decl" : "<Declaration>let firstTensor: any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
                 "key.column" : 9,
                 "key.decl_lang" : "source.lang.swift",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type>any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 54,
                 "key.line" : 40,
@@ -425,7 +437,8 @@
                 "key.parsed_declaration" : "let firstTensor = inputs.first(where: { $0 != nil })!!",
                 "key.parsed_scope.end" : 40,
                 "key.parsed_scope.start" : 40,
-                "key.typename" : "DynamicGraph_Any",
+                "key.reusingastcontext" : false,
+                "key.typename" : "any DynamicGraph_Any",
                 "key.typeusr" : "$s4main16DynamicGraph_Any_pD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ05firstE0L_AA0bc1_D0_pvp"
               },
@@ -446,6 +459,7 @@
                 "key.parsed_declaration" : "let graph = firstTensor.graph",
                 "key.parsed_scope.end" : 41,
                 "key.parsed_scope.start" : 41,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ5graphL_ACvp"
@@ -467,6 +481,7 @@
                 "key.parsed_declaration" : "let _inputs: [ccv_nnc_tensor_variable_t?] = inputs.map { $0?.untyped[0]._tensor }",
                 "key.parsed_scope.end" : 46,
                 "key.parsed_scope.start" : 46,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ7_inputsL_Xevp"
@@ -488,6 +503,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: Int(outputSize))",
                 "key.parsed_scope.end" : 47,
                 "key.parsed_scope.start" : 47,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ8_outputsL_Xevp"
@@ -509,6 +525,7 @@
                 "key.parsed_declaration" : "var outputsCanBeConstants = true",
                 "key.parsed_scope.end" : 50,
                 "key.parsed_scope.start" : 50,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Bool",
                 "key.typeusr" : "$sSbD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ21outputsCanBeConstantsL_Sbvp"
@@ -530,6 +547,7 @@
                 "key.parsed_declaration" : "let outputs: [DynamicGraph.AnyTensor]",
                 "key.parsed_scope.end" : 58,
                 "key.parsed_scope.start" : 58,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[DynamicGraph.AnyTensor]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ7outputsL_SayAEGvp"
@@ -551,6 +569,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 67,
                 "key.parsed_scope.start" : 67,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ6_graphL_s13OpaquePointerVvp"
@@ -572,12 +591,13 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 68,
                 "key.parsed_scope.start" : 68,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ14_streamContextL_s13OpaquePointerVSgvp"
               }
             ],
-            "key.typename" : "(DynamicGraph.AnyTensor.Type) -> (<<error type>>, <<error type>>, [DynamicGraph_Any?], Int32, StreamContext?) -> [DynamicGraph.AnyTensor]",
+            "key.typename" : "(DynamicGraph.AnyTensor.Type) -> (<<error type>>, <<error type>>, [(any DynamicGraph_Any)?], Int32, StreamContext?) -> [DynamicGraph.AnyTensor]",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ"
           },
@@ -613,13 +633,14 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ\">exec(cmd:hint:inputs:outputSize:streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
-                "key.annotated_decl" : "<Declaration>let firstTensor: <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
+                "key.annotated_decl" : "<Declaration>let firstTensor: any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
                 "key.column" : 9,
                 "key.decl_lang" : "source.lang.swift",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type>any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 54,
                 "key.line" : 81,
@@ -631,7 +652,8 @@
                 "key.parsed_declaration" : "let firstTensor = inputs.first(where: { $0 != nil })!!",
                 "key.parsed_scope.end" : 81,
                 "key.parsed_scope.start" : 81,
-                "key.typename" : "DynamicGraph_Any",
+                "key.reusingastcontext" : false,
+                "key.typename" : "any DynamicGraph_Any",
                 "key.typeusr" : "$s4main16DynamicGraph_Any_pD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ05firstE0L_AA0bc1_D0_pvp"
               },
@@ -652,6 +674,7 @@
                 "key.parsed_declaration" : "let graph = firstTensor.graph",
                 "key.parsed_scope.end" : 82,
                 "key.parsed_scope.start" : 82,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ5graphL_ACvp"
@@ -673,6 +696,7 @@
                 "key.parsed_declaration" : "let _inputs: [ccv_nnc_tensor_variable_t?] = inputs.map { $0?.untyped[0]._tensor }",
                 "key.parsed_scope.end" : 87,
                 "key.parsed_scope.start" : 87,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ7_inputsL_Xevp"
@@ -694,6 +718,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: outputs.count)",
                 "key.parsed_scope.end" : 88,
                 "key.parsed_scope.start" : 88,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ8_outputsL_Xevp"
@@ -715,6 +740,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 93,
                 "key.parsed_scope.start" : 93,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ6_graphL_s13OpaquePointerVvp"
@@ -736,12 +762,13 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 94,
                 "key.parsed_scope.start" : 94,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ14_streamContextL_s13OpaquePointerVSgvp"
               }
             ],
-            "key.typename" : "(DynamicGraph.AnyTensor.Type) -> (<<error type>>, <<error type>>, [DynamicGraph_Any?], [DynamicGraph_Any], StreamContext?) -> ()",
+            "key.typename" : "(DynamicGraph.AnyTensor.Type) -> (<<error type>>, <<error type>>, [(any DynamicGraph_Any)?], [any DynamicGraph_Any], StreamContext?) -> ()",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main12DynamicGraphC9AnyTensorC4execyXeXeFZ"
           },
@@ -772,13 +799,14 @@
             "key.parsed_declaration" : "public static func evaluate(\n  model: OpaquePointer, testing: Bool, dataParallel: inout Int?, inputs: [DynamicGraph_Any?],\n  outputSize: Int32, streamContext: StreamContext?\n) -> [AnyTensor]",
             "key.parsed_scope.end" : 146,
             "key.parsed_scope.start" : 101,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
-                "key.annotated_decl" : "<Declaration>let firstTensor: <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
+                "key.annotated_decl" : "<Declaration>let firstTensor: any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
                 "key.column" : 9,
                 "key.decl_lang" : "source.lang.swift",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type>any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 54,
                 "key.line" : 106,
@@ -790,7 +818,8 @@
                 "key.parsed_declaration" : "let firstTensor = inputs.first(where: { $0 != nil })!!",
                 "key.parsed_scope.end" : 106,
                 "key.parsed_scope.start" : 106,
-                "key.typename" : "DynamicGraph_Any",
+                "key.reusingastcontext" : false,
+                "key.typename" : "any DynamicGraph_Any",
                 "key.typeusr" : "$s4main16DynamicGraph_Any_pD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ05firstE0L_AaQ_pvp"
               },
@@ -811,6 +840,7 @@
                 "key.parsed_declaration" : "let graph = firstTensor.graph",
                 "key.parsed_scope.end" : 107,
                 "key.parsed_scope.start" : 107,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ5graphL_ACvp"
@@ -832,6 +862,7 @@
                 "key.parsed_declaration" : "let _inputs: [ccv_nnc_tensor_variable_t?] = inputs.map { $0?.untyped[0]._tensor }",
                 "key.parsed_scope.end" : 113,
                 "key.parsed_scope.start" : 113,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ01_K0L_Xevp"
@@ -853,6 +884,7 @@
                 "key.parsed_declaration" : "var outputsCanBeConstants = true",
                 "key.parsed_scope.end" : 115,
                 "key.parsed_scope.start" : 115,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Bool",
                 "key.typeusr" : "$sSbD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ21outputsCanBeConstantsL_Sbvp"
@@ -874,6 +906,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: Int(outputSize))",
                 "key.parsed_scope.end" : 123,
                 "key.parsed_scope.start" : 123,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ8_outputsL_Xevp"
@@ -895,6 +928,7 @@
                 "key.parsed_declaration" : "let outputs: [DynamicGraph.AnyTensor]",
                 "key.parsed_scope.end" : 125,
                 "key.parsed_scope.start" : 125,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[DynamicGraph.AnyTensor]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC9AnyTensorCGD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ7outputsL_AMvp"
@@ -916,6 +950,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 135,
                 "key.parsed_scope.start" : 135,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ6_graphL_AOvp"
@@ -937,6 +972,7 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 136,
                 "key.parsed_scope.start" : 136,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ01_nO0L_AOSgvp"
@@ -958,6 +994,7 @@
                 "key.parsed_declaration" : "let params = CmdParamsFactory.factory.newParams()",
                 "key.parsed_scope.end" : 141,
                 "key.parsed_scope.start" : 141,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ6paramsL_Xevp"
@@ -979,12 +1016,13 @@
                 "key.parsed_declaration" : "let noop = ccv_nnc_cmd(CCV_NNC_NOOP, nil, params, 0)",
                 "key.parsed_scope.end" : 142,
                 "key.parsed_scope.start" : 142,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ4noopL_Xevp"
               }
             ],
-            "key.typename" : "(DynamicGraph.AnyTensor.Type) -> (OpaquePointer, Bool, inout Int?, [DynamicGraph_Any?], Int32, StreamContext?) -> [DynamicGraph.AnyTensor]",
+            "key.typename" : "(DynamicGraph.AnyTensor.Type) -> (OpaquePointer, Bool, inout Int?, [(any DynamicGraph_Any)?], Int32, StreamContext?) -> [DynamicGraph.AnyTensor]",
             "key.typeusr" : "$s5model7testing12dataParallel6inputs10outputSize13streamContextSay4main12DynamicGraphC9AnyTensorCGs13OpaquePointerV_SbSiSgzSayAG0kl1_M0_pSgGs5Int32VAG06StreamI0CSgtcD",
             "key.usr" : "s:4main12DynamicGraphC9AnyTensorC8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEGs13OpaquePointerV_SbSiSgzSayAA0bc1_D0_pSgGs5Int32VAA06StreamO0CSgtFZ"
           }
@@ -994,7 +1032,7 @@
         "key.usr" : "s:4main12DynamicGraphC9AnyTensorC"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection where <Type usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type> where <Type usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
         "key.bodylength" : 1,
         "key.bodyoffset" : 5796,
         "key.column" : 17,
@@ -1014,7 +1052,7 @@
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : RandomAccessCollection <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
         "key.inheritedtypes" : [
           {
             "key.name" : "DynamicGraph_Any"
@@ -1031,12 +1069,13 @@
         "key.parsed_declaration" : "extension DynamicGraph.Group: DynamicGraph_Any where Element: DynamicGraph.AnyTensor",
         "key.parsed_scope.end" : 151,
         "key.parsed_scope.start" : 150,
+        "key.reusingastcontext" : false,
         "key.typename" : "DynamicGraph.Group<Element>.Type",
         "key.typeusr" : "$s4main12DynamicGraphC5GroupVy_xGmD",
         "key.usr" : "s:4main12DynamicGraphC5GroupV"
       },
       {
-        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : RandomAccessCollection where <Type usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public struct Group&lt;Element&gt; : <Type usr=\"s:Sk\">RandomAccessCollection<\/Type> where <Type usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/Type> : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/Type><\/Declaration>",
         "key.bodylength" : 5988,
         "key.bodyoffset" : 5897,
         "key.column" : 17,
@@ -1056,7 +1095,7 @@
           }
         ],
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Group.swift",
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : RandomAccessCollection <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Group<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\"><decl.generic_type_param.name>Element<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12DynamicGraphC5GroupV7Elementxmfp\">Element<\/ref.generic_type_param> : <ref.class usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/ref.class>.<ref.class usr=\"s:4main12DynamicGraphC9AnyTensorC\">AnyTensor<\/ref.class><\/decl.generic_type_requirement><\/decl.struct>",
         "key.inheritedtypes" : [
           {
             "key.name" : "DynamicGraph.AnyTensorGroup"
@@ -1073,6 +1112,7 @@
         "key.parsed_declaration" : "extension DynamicGraph.Group: DynamicGraph.AnyTensorGroup where Element: DynamicGraph.AnyTensor",
         "key.parsed_scope.end" : 303,
         "key.parsed_scope.start" : 153,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1099,6 +1139,7 @@
             "key.parsed_declaration" : "public typealias AnyTensor = DynamicGraph.Group<DynamicGraph.AnyTensor>",
             "key.parsed_scope.end" : 155,
             "key.parsed_scope.start" : 155,
+            "key.reusingastcontext" : false,
             "key.typename" : "DynamicGraph.Group<DynamicGraph.AnyTensor>.Type",
             "key.typeusr" : "$s4main12DynamicGraphC5GroupVy_AC9AnyTensorCGmD",
             "key.usr" : "s:4main12DynamicGraphC5GroupV9AnyTensora"
@@ -1135,13 +1176,14 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV4execyXeXeFZ\">exec(cmd:hint:inputs:outputs:streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
-                "key.annotated_decl" : "<Declaration>let firstTensor: <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
+                "key.annotated_decl" : "<Declaration>let firstTensor: any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
                 "key.column" : 9,
                 "key.decl_lang" : "source.lang.swift",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type>any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 54,
                 "key.line" : 162,
@@ -1153,7 +1195,8 @@
                 "key.parsed_declaration" : "let firstTensor = inputs.first(where: { $0 != nil })!!",
                 "key.parsed_scope.end" : 162,
                 "key.parsed_scope.start" : 162,
-                "key.typename" : "DynamicGraph_Any",
+                "key.reusingastcontext" : false,
+                "key.typename" : "any DynamicGraph_Any",
                 "key.typeusr" : "$s4main16DynamicGraph_Any_pD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ11firstTensorL_AA0bC4_Any_pvp"
               },
@@ -1174,6 +1217,7 @@
                 "key.parsed_declaration" : "let graph = firstTensor.graph",
                 "key.parsed_scope.end" : 163,
                 "key.parsed_scope.start" : 163,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ5graphL_ACvp"
@@ -1195,6 +1239,7 @@
                 "key.parsed_declaration" : "let parallel = firstTensor.untyped.count",
                 "key.parsed_scope.end" : 164,
                 "key.parsed_scope.start" : 164,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ8parallelL_Sivp"
@@ -1216,6 +1261,7 @@
                 "key.parsed_declaration" : "let inputSize = inputs.count",
                 "key.parsed_scope.end" : 165,
                 "key.parsed_scope.start" : 165,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ9inputSizeL_Sivp"
@@ -1237,6 +1283,7 @@
                 "key.parsed_declaration" : "var _inputs = [ccv_nnc_tensor_variable_t?](repeating: nil, count: parallel * inputSize)",
                 "key.parsed_scope.end" : 166,
                 "key.parsed_scope.start" : 166,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ7_inputsL_Xevp"
@@ -1258,6 +1305,7 @@
                 "key.parsed_declaration" : "var outputsCanBeConstants = true",
                 "key.parsed_scope.end" : 167,
                 "key.parsed_scope.start" : 167,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Bool",
                 "key.typeusr" : "$sSbD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ21outputsCanBeConstantsL_Sbvp"
@@ -1279,6 +1327,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: Int(outputSize) * parallel)",
                 "key.parsed_scope.end" : 179,
                 "key.parsed_scope.start" : 179,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ8_outputsL_Xevp"
@@ -1300,6 +1349,7 @@
                 "key.parsed_declaration" : "let outputs: [DynamicGraph.Group<DynamicGraph.AnyTensor>]",
                 "key.parsed_scope.end" : 181,
                 "key.parsed_scope.start" : 181,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[DynamicGraph.Group<DynamicGraph.AnyTensor>]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC5GroupVy_AC9AnyTensorCGGD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ7outputsL_SayAEy_AC9AnyTensorCGGvp"
@@ -1321,6 +1371,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 196,
                 "key.parsed_scope.start" : 196,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ6_graphL_s13OpaquePointerVvp"
@@ -1342,12 +1393,13 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 197,
                 "key.parsed_scope.start" : 197,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ14_streamContextL_s13OpaquePointerVSgvp"
               }
             ],
-            "key.typename" : "<Element where Element : DynamicGraph.AnyTensor> (DynamicGraph.Group<Element>.Type) -> (<<error type>>, <<error type>>, [DynamicGraph_Any?], Int32, StreamContext?) -> [DynamicGraph.Group<DynamicGraph.AnyTensor>]",
+            "key.typename" : "<Element where Element : DynamicGraph.AnyTensor> (DynamicGraph.Group<Element>.Type) -> (<<error type>>, <<error type>>, [(any DynamicGraph_Any)?], Int32, StreamContext?) -> [DynamicGraph.Group<DynamicGraph.AnyTensor>]",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ"
           },
@@ -1383,13 +1435,14 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12DynamicGraphC5GroupV4execyXeXeFZ\">exec(cmd:hint:inputs:outputSize:streamContext:)<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
-                "key.annotated_decl" : "<Declaration>let firstTensor: <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
+                "key.annotated_decl" : "<Declaration>let firstTensor: any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
                 "key.column" : 9,
                 "key.decl_lang" : "source.lang.swift",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type>any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 54,
                 "key.line" : 211,
@@ -1401,7 +1454,8 @@
                 "key.parsed_declaration" : "let firstTensor = inputs.first(where: { $0 != nil })!!",
                 "key.parsed_scope.end" : 211,
                 "key.parsed_scope.start" : 211,
-                "key.typename" : "DynamicGraph_Any",
+                "key.reusingastcontext" : false,
+                "key.typename" : "any DynamicGraph_Any",
                 "key.typeusr" : "$s4main16DynamicGraph_Any_pD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ11firstTensorL_AA0bC4_Any_pvp"
               },
@@ -1422,6 +1476,7 @@
                 "key.parsed_declaration" : "let graph = firstTensor.graph",
                 "key.parsed_scope.end" : 212,
                 "key.parsed_scope.start" : 212,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ5graphL_ACvp"
@@ -1443,6 +1498,7 @@
                 "key.parsed_declaration" : "let parallel = firstTensor.untyped.count",
                 "key.parsed_scope.end" : 213,
                 "key.parsed_scope.start" : 213,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ8parallelL_Sivp"
@@ -1464,6 +1520,7 @@
                 "key.parsed_declaration" : "let inputSize = inputs.count",
                 "key.parsed_scope.end" : 214,
                 "key.parsed_scope.start" : 214,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ9inputSizeL_Sivp"
@@ -1485,6 +1542,7 @@
                 "key.parsed_declaration" : "var _inputs = [ccv_nnc_tensor_variable_t?](repeating: nil, count: parallel * inputSize)",
                 "key.parsed_scope.end" : 215,
                 "key.parsed_scope.start" : 215,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ7_inputsL_Xevp"
@@ -1506,6 +1564,7 @@
                 "key.parsed_declaration" : "let outputSize = outputs.count",
                 "key.parsed_scope.end" : 224,
                 "key.parsed_scope.start" : 224,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ10outputSizeL_Sivp"
@@ -1527,6 +1586,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: outputSize * parallel)",
                 "key.parsed_scope.end" : 225,
                 "key.parsed_scope.start" : 225,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ8_outputsL_Xevp"
@@ -1548,6 +1608,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 234,
                 "key.parsed_scope.start" : 234,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ6_graphL_s13OpaquePointerVvp"
@@ -1569,12 +1630,13 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 235,
                 "key.parsed_scope.start" : 235,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ14_streamContextL_s13OpaquePointerVSgvp"
               }
             ],
-            "key.typename" : "<Element where Element : DynamicGraph.AnyTensor> (DynamicGraph.Group<Element>.Type) -> (<<error type>>, <<error type>>, [DynamicGraph_Any?], [DynamicGraph_Any], StreamContext?) -> ()",
+            "key.typename" : "<Element where Element : DynamicGraph.AnyTensor> (DynamicGraph.Group<Element>.Type) -> (<<error type>>, <<error type>>, [(any DynamicGraph_Any)?], [any DynamicGraph_Any], StreamContext?) -> ()",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main12DynamicGraphC5GroupV4execyXeXeFZ"
           },
@@ -1605,13 +1667,14 @@
             "key.parsed_declaration" : "public static func evaluate(\n  model: OpaquePointer, testing: Bool, dataParallel: inout Int?, inputs: [DynamicGraph_Any?],\n  outputSize: Int32, streamContext: StreamContext?\n) -> [AnyTensor]",
             "key.parsed_scope.end" : 301,
             "key.parsed_scope.start" : 242,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
-                "key.annotated_decl" : "<Declaration>let firstTensor: <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
+                "key.annotated_decl" : "<Declaration>let firstTensor: any <Type usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/Type><\/Declaration>",
                 "key.column" : 9,
                 "key.decl_lang" : "source.lang.swift",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>firstTensor<\/decl.name>: <decl.var.type>any <ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 54,
                 "key.line" : 248,
@@ -1623,7 +1686,8 @@
                 "key.parsed_declaration" : "let firstTensor = inputs.first(where: { $0 != nil })!!",
                 "key.parsed_scope.end" : 248,
                 "key.parsed_scope.start" : 248,
-                "key.typename" : "DynamicGraph_Any",
+                "key.reusingastcontext" : false,
+                "key.typename" : "any DynamicGraph_Any",
                 "key.typeusr" : "$s4main16DynamicGraph_Any_pD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ05firstP0L_AaT_pvp"
               },
@@ -1644,6 +1708,7 @@
                 "key.parsed_declaration" : "let graph = firstTensor.graph",
                 "key.parsed_scope.end" : 249,
                 "key.parsed_scope.start" : 249,
+                "key.reusingastcontext" : false,
                 "key.typename" : "DynamicGraph",
                 "key.typeusr" : "$s4main12DynamicGraphCD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ5graphL_ACvp"
@@ -1665,6 +1730,7 @@
                 "key.parsed_declaration" : "let parallel = firstTensor.untyped.count",
                 "key.parsed_scope.end" : 251,
                 "key.parsed_scope.start" : 251,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ8parallelL_Sivp"
@@ -1686,6 +1752,7 @@
                 "key.parsed_declaration" : "let inputSize = inputs.count",
                 "key.parsed_scope.end" : 252,
                 "key.parsed_scope.start" : 252,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ05inputL0L_Sivp"
@@ -1707,6 +1774,7 @@
                 "key.parsed_declaration" : "var _inputs = [ccv_nnc_tensor_variable_t?](repeating: nil, count: parallel * inputSize)",
                 "key.parsed_scope.end" : 253,
                 "key.parsed_scope.start" : 253,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ01_J0L_Xevp"
@@ -1728,6 +1796,7 @@
                 "key.parsed_declaration" : "var outputsCanBeConstants = true",
                 "key.parsed_scope.end" : 254,
                 "key.parsed_scope.start" : 254,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Bool",
                 "key.typeusr" : "$sSbD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ21outputsCanBeConstantsL_Sbvp"
@@ -1749,6 +1818,7 @@
                 "key.parsed_declaration" : "let _outputs = UnsafeMutablePointer<ccv_nnc_tensor_variable_t?>.allocate(\n  capacity: Int(outputSize) * parallel)",
                 "key.parsed_scope.end" : 273,
                 "key.parsed_scope.start" : 273,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ8_outputsL_Xevp"
@@ -1770,6 +1840,7 @@
                 "key.parsed_declaration" : "let outputs: [DynamicGraph.Group<DynamicGraph.AnyTensor>]",
                 "key.parsed_scope.end" : 275,
                 "key.parsed_scope.start" : 275,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[DynamicGraph.Group<DynamicGraph.AnyTensor>]",
                 "key.typeusr" : "$sSay4main12DynamicGraphC5GroupVy_AC9AnyTensorCGGD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ7outputsL_APvp"
@@ -1791,6 +1862,7 @@
                 "key.parsed_declaration" : "let _graph = graph.cGraph",
                 "key.parsed_scope.end" : 290,
                 "key.parsed_scope.start" : 290,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer",
                 "key.typeusr" : "$ss13OpaquePointerVD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ6_graphL_ARvp"
@@ -1812,6 +1884,7 @@
                 "key.parsed_declaration" : "let _streamContext = (streamContext ?? graph.streamContext)?._stream",
                 "key.parsed_scope.end" : 291,
                 "key.parsed_scope.start" : 291,
+                "key.reusingastcontext" : false,
                 "key.typename" : "OpaquePointer?",
                 "key.typeusr" : "$ss13OpaquePointerVSgD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ01_mN0L_ARSgvp"
@@ -1833,6 +1906,7 @@
                 "key.parsed_declaration" : "let params = CmdParamsFactory.factory.newParams()",
                 "key.parsed_scope.end" : 296,
                 "key.parsed_scope.start" : 296,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ6paramsL_Xevp"
@@ -1854,12 +1928,13 @@
                 "key.parsed_declaration" : "let noop = ccv_nnc_cmd(CCV_NNC_NOOP, nil, params, 0)",
                 "key.parsed_scope.end" : 297,
                 "key.parsed_scope.start" : 297,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ4noopL_Xevp"
               }
             ],
-            "key.typename" : "<Element where Element : DynamicGraph.AnyTensor> (DynamicGraph.Group<Element>.Type) -> (OpaquePointer, Bool, inout Int?, [DynamicGraph_Any?], Int32, StreamContext?) -> [DynamicGraph.Group<DynamicGraph.AnyTensor>]",
+            "key.typename" : "<Element where Element : DynamicGraph.AnyTensor> (DynamicGraph.Group<Element>.Type) -> (OpaquePointer, Bool, inout Int?, [(any DynamicGraph_Any)?], Int32, StreamContext?) -> [DynamicGraph.Group<DynamicGraph.AnyTensor>]",
             "key.typeusr" : "$s5model7testing12dataParallel6inputs10outputSize13streamContextSay4main12DynamicGraphC5GroupVy_AI9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAG0kl1_N0_pSgGs5Int32VAG06StreamI0CSgtcD",
             "key.usr" : "s:4main12DynamicGraphC5GroupV8evaluate5model7testing12dataParallel6inputs10outputSize13streamContextSayAEy_AC9AnyTensorCGGs13OpaquePointerV_SbSiSgzSayAA0bc1_O0_pSgGs5Int32VAA06StreamN0CSgtFZ"
           }
@@ -1895,6 +1970,7 @@
         "key.parsed_declaration" : "public enum Functional",
         "key.parsed_scope.end" : 356,
         "key.parsed_scope.start" : 305,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -1940,6 +2016,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main10FunctionalO4execyXeXeFZ\">exec&lt;T&gt;(cmd: ccv_nnc_cmd_t, hint: ccv_nnc_hint_t, inputs: T?, _: DynamicGraph_Any?..., outputs: [DynamicGraph_Any], streamContext: StreamContext? = nil) where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -1970,12 +2047,13 @@
                 "key.parsed_declaration" : "internal static func exec<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 306,
                 "key.parsed_scope.start" : 306,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main10FunctionalO4execyXeXeFZ1TL_xmfp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (T.Type, <<error type>>, <<error type>>, [DynamicGraph_Any?], Int32, StreamContext?) -> [T.AnyTensor]",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (T.Type, <<error type>>, <<error type>>, [(any DynamicGraph_Any)?], Int32, StreamContext?) -> [T.AnyTensor]",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main10FunctionalO4execyXeXeFZ"
           },
@@ -2016,6 +2094,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main10FunctionalO4execyXeXeFZ\">exec&lt;T&gt;(cmd: ccv_nnc_cmd_t, hint: ccv_nnc_hint_t, inputs: T?, _: DynamicGraph_Any?..., outputs: [DynamicGraph_Any], streamContext: StreamContext? = nil) where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2046,6 +2125,7 @@
                 "key.parsed_declaration" : "static func exec<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 314,
                 "key.parsed_scope.start" : 314,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main10FunctionalO4execyXeXeFZ1TL_xmfp"
@@ -2067,12 +2147,13 @@
                 "key.parsed_declaration" : "let tensorInputs: [DynamicGraph_Any?] = [firstInput as DynamicGraph_Any?] + restInputs",
                 "key.parsed_scope.end" : 318,
                 "key.parsed_scope.start" : 318,
-                "key.typename" : "[DynamicGraph_Any?]",
+                "key.reusingastcontext" : false,
+                "key.typename" : "[(any DynamicGraph_Any)?]",
                 "key.typeusr" : "$sSay4main16DynamicGraph_Any_pSgGD",
                 "key.usr" : "s:4main10FunctionalO4execyXeXeFZ12tensorInputsL_SayAA16DynamicGraph_Any_pSgGvp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (<<error type>>, <<error type>>, T?, [DynamicGraph_Any?], Int32, StreamContext?) -> [T.AnyTensor]",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (<<error type>>, <<error type>>, T?, [(any DynamicGraph_Any)?], Int32, StreamContext?) -> [T.AnyTensor]",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main10FunctionalO4execyXeXeFZ"
           },
@@ -2084,7 +2165,7 @@
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>exec<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>cmd<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>hint<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_hint_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>?<\/decl.var.parameter.type>...<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>outputSize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.static>",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>exec<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>cmd<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>hint<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_hint_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>?...<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>outputSize<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 370,
             "key.line" : 323,
@@ -2113,6 +2194,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main10FunctionalO4execyXeXeFZ\">exec&lt;T&gt;(cmd: ccv_nnc_cmd_t, hint: ccv_nnc_hint_t, inputs: T?, _: DynamicGraph_Any?..., outputs: [DynamicGraph_Any], streamContext: StreamContext? = nil) where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2143,12 +2225,13 @@
                 "key.parsed_declaration" : "static func exec<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 323,
                 "key.parsed_scope.start" : 323,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main10FunctionalO4execyXeXeFZ1TL_xmfp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (<<error type>>, <<error type>>, T?, DynamicGraph_Any?..., Int32, StreamContext?) -> [T.AnyTensor]",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (<<error type>>, <<error type>>, T?, (any DynamicGraph_Any)?..., Int32, StreamContext?) -> [T.AnyTensor]",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main10FunctionalO4execyXeXeFZ"
           },
@@ -2196,6 +2279,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main10FunctionalO4execyXeXeFZ\">exec&lt;T&gt;(cmd: ccv_nnc_cmd_t, hint: ccv_nnc_hint_t, inputs: T?, _: DynamicGraph_Any?..., outputs: [DynamicGraph_Any], streamContext: StreamContext? = nil) where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2226,12 +2310,13 @@
                 "key.parsed_declaration" : "internal static func exec<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 331,
                 "key.parsed_scope.start" : 331,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main10FunctionalO4execyXeXeFZ1TL_xmfp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (T.Type, <<error type>>, <<error type>>, [DynamicGraph_Any?], [DynamicGraph_Any], StreamContext?) -> ()",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (T.Type, <<error type>>, <<error type>>, [(any DynamicGraph_Any)?], [any DynamicGraph_Any], StreamContext?) -> ()",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main10FunctionalO4execyXeXeFZ"
           },
@@ -2272,6 +2357,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main10FunctionalO4execyXeXeFZ\">exec&lt;T&gt;(cmd: ccv_nnc_cmd_t, hint: ccv_nnc_hint_t, inputs: T?, _: DynamicGraph_Any?..., outputs: [DynamicGraph_Any], streamContext: StreamContext? = nil) where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2302,6 +2388,7 @@
                 "key.parsed_declaration" : "static func exec<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 337,
                 "key.parsed_scope.start" : 337,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main10FunctionalO4execyXeXeFZ1TL_xmfp"
@@ -2323,12 +2410,13 @@
                 "key.parsed_declaration" : "let tensorInputs: [DynamicGraph_Any?] = [firstInput as DynamicGraph_Any?] + restInputs",
                 "key.parsed_scope.end" : 342,
                 "key.parsed_scope.start" : 342,
-                "key.typename" : "[DynamicGraph_Any?]",
+                "key.reusingastcontext" : false,
+                "key.typename" : "[(any DynamicGraph_Any)?]",
                 "key.typeusr" : "$sSay4main16DynamicGraph_Any_pSgGD",
                 "key.usr" : "s:4main10FunctionalO4execyXeXeFZ12tensorInputsL_SayAA16DynamicGraph_Any_pSgGvp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (<<error type>>, <<error type>>, T?, [DynamicGraph_Any?], [DynamicGraph_Any], StreamContext?) -> ()",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (<<error type>>, <<error type>>, T?, [(any DynamicGraph_Any)?], [any DynamicGraph_Any], StreamContext?) -> ()",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main10FunctionalO4execyXeXeFZ"
           },
@@ -2340,7 +2428,7 @@
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>exec<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>cmd<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>hint<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_hint_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>?<\/decl.var.parameter.type>...<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>outputs<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.static>",
+            "key.fully_annotated_decl" : "<decl.function.method.static><syntaxtype.keyword>static<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>exec<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>cmd<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_cmd_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>hint<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>ccv_nnc_hint_t<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param>?<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>?...<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>outputs<\/decl.var.parameter.argument_label>: <decl.var.parameter.type>[<ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>]<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main10FunctionalO4execyXeXeFZ1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.static>",
             "key.kind" : "source.lang.swift.decl.function.method.static",
             "key.length" : 361,
             "key.line" : 347,
@@ -2369,6 +2457,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main10FunctionalO4execyXeXeFZ\">exec&lt;T&gt;(cmd: ccv_nnc_cmd_t, hint: ccv_nnc_hint_t, inputs: T?, _: [DynamicGraph_Any?], outputs: [DynamicGraph_Any], streamContext: StreamContext? = nil) where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2399,12 +2488,13 @@
                 "key.parsed_declaration" : "static func exec<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 347,
                 "key.parsed_scope.start" : 347,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main10FunctionalO4execyXeXeFZ1TL_xmfp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (<<error type>>, <<error type>>, T?, DynamicGraph_Any?..., [DynamicGraph_Any], StreamContext?) -> ()",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Functional.Type) -> (<<error type>>, <<error type>>, T?, (any DynamicGraph_Any)?..., [any DynamicGraph_Any], StreamContext?) -> ()",
             "key.typeusr" : "$syXeXecD",
             "key.usr" : "s:4main10FunctionalO4execyXeXeFZ"
           }
@@ -2414,20 +2504,20 @@
         "key.usr" : "s:4main10FunctionalO"
       },
       {
-        "key.annotated_decl" : "<Declaration>public class Model<\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public class Model : <Type usr=\"s:4main8AnyModelP\">AnyModel<\/Type><\/Declaration>",
         "key.bodylength" : 1031,
         "key.bodyoffset" : 14274,
         "key.column" : 14,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 14,
-        "key.doc.declaration" : "public class Model",
+        "key.doc.declaration" : "public class Model : AnyModel",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"9\" column=\"14\"><Name>Model<\/Name><USR>s:4main5ModelC<\/USR><Declaration>public class Model<\/Declaration><CommentParts><Abstract><Para>A model is a base class for stateful operations on a dynamic graph. It can be use to construct computations statically, thus, more efficient.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift\" line=\"9\" column=\"14\"><Name>Model<\/Name><USR>s:4main5ModelC<\/USR><Declaration>public class Model : AnyModel<\/Declaration><CommentParts><Abstract><Para>A model is a base class for stateful operations on a dynamic graph. It can be use to construct computations statically, thus, more efficient.<\/Para><\/Abstract><\/CommentParts><\/Class>",
         "key.doc.line" : 9,
         "key.doc.name" : "Model",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Model.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Model<\/decl.name><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>Model<\/decl.name> : <ref.protocol usr=\"s:4main8AnyModelP\">AnyModel<\/ref.protocol><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1049,
         "key.line" : 9,
@@ -2439,6 +2529,7 @@
         "key.parsed_declaration" : "extension Model",
         "key.parsed_scope.end" : 380,
         "key.parsed_scope.start" : 358,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.fileprivate",
@@ -2481,6 +2572,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF\">callAsFunction&lt;T&gt;(inputs: T, _: DynamicGraph_Any..., streamContext: StreamContext? = nil) -&gt; [T.AnyTensor] where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2511,6 +2603,7 @@
                 "key.parsed_declaration" : "fileprivate func callAsFunction<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 359,
                 "key.parsed_scope.start" : 359,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main5ModelC14callAsFunction33_B57F5E7F46DBE561D0942A3D3DE4363FLL__13streamContextSay9AnyTensorQzGxm_SayAA013DynamicGraph_Q0_pGAA06StreamP0CSgtAA0st1_qR5GroupRzlF1TL_xmfp"
@@ -2532,12 +2625,13 @@
                 "key.parsed_declaration" : "let outputSize = ccv_cnnp_model_output_size(cModel)",
                 "key.parsed_scope.end" : 362,
                 "key.parsed_scope.start" : 362,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main5ModelC14callAsFunction33_B57F5E7F46DBE561D0942A3D3DE4363FLL__13streamContextSay9AnyTensorQzGxm_SayAA013DynamicGraph_Q0_pGAA06StreamP0CSgtAA0st1_qR5GroupRzlF10outputSizeL_Xevp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Model) -> (T.Type, [DynamicGraph_Any], StreamContext?) -> [T.AnyTensor]",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Model) -> (T.Type, [any DynamicGraph_Any], StreamContext?) -> [T.AnyTensor]",
             "key.typeusr" : "$s__13streamContextSay9AnyTensorQzGxm_Say4main013DynamicGraph_C0_pGAE06StreamB0CSgtcAE0fg1_cD5GroupRzluD",
             "key.usr" : "s:4main5ModelC14callAsFunction33_B57F5E7F46DBE561D0942A3D3DE4363FLL__13streamContextSay9AnyTensorQzGxm_SayAA013DynamicGraph_Q0_pGAA06StreamP0CSgtAA0st1_qR5GroupRzlF"
           },
@@ -2582,6 +2676,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF\">callAsFunction&lt;T&gt;(inputs: T, _: DynamicGraph_Any..., streamContext: StreamContext? = nil) -&gt; [T.AnyTensor] where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2612,6 +2707,7 @@
                 "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 368,
                 "key.parsed_scope.start" : 368,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_SayAA013DynamicGraph_I0_pGAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp"
@@ -2633,12 +2729,13 @@
                 "key.parsed_declaration" : "let tensorInputs: [DynamicGraph_Any] = [firstInput as DynamicGraph_Any] + restInputs",
                 "key.parsed_scope.end" : 371,
                 "key.parsed_scope.start" : 371,
-                "key.typename" : "[DynamicGraph_Any]",
+                "key.reusingastcontext" : false,
+                "key.typename" : "[any DynamicGraph_Any]",
                 "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
                 "key.usr" : "s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_SayAA013DynamicGraph_I0_pGAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF12tensorInputsL_AKvp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Model) -> (T, [DynamicGraph_Any], StreamContext?) -> [T.AnyTensor]",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Model) -> (T, [any DynamicGraph_Any], StreamContext?) -> [T.AnyTensor]",
             "key.typeusr" : "$s6inputs_13streamContextSay9AnyTensorQzGx_Say4main013DynamicGraph_D0_pGAF06StreamC0CSgtcAF0gh1_dE5GroupRzluD",
             "key.usr" : "s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_SayAA013DynamicGraph_I0_pGAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF"
           },
@@ -2657,7 +2754,7 @@
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.parameter.type>...<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp\">T<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>...<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp\">T<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp\">T<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 247,
             "key.line" : 375,
@@ -2683,6 +2780,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_SayAA013DynamicGraph_I0_pGAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF\">callAsFunction&lt;T&gt;(inputs: T, _: [DynamicGraph_Any], streamContext: StreamContext? = nil) -&gt; [T.AnyTensor] where T : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2713,12 +2811,13 @@
                 "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 375,
                 "key.parsed_scope.start" : 375,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF1TL_xmfp"
               }
             ],
-            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Model) -> (T, DynamicGraph_Any..., StreamContext?) -> [T.AnyTensor]",
+            "key.typename" : "<T where T : DynamicGraph_AnyTensorGroup> (Model) -> (T, any DynamicGraph_Any..., StreamContext?) -> [T.AnyTensor]",
             "key.typeusr" : "$s6inputs_13streamContextSay9AnyTensorQzGx_4main013DynamicGraph_D0_pdAF06StreamC0CSgtcAF0gh1_dE5GroupRzluD",
             "key.usr" : "s:4main5ModelC14callAsFunction6inputs_13streamContextSay9AnyTensorQzGx_AA013DynamicGraph_I0_pdAA06StreamH0CSgtAA0kl1_iJ5GroupRzlF"
           }
@@ -2728,20 +2827,20 @@
         "key.usr" : "s:4main5ModelC"
       },
       {
-        "key.annotated_decl" : "<Declaration>public class AnyModelBuilder<\/Declaration>",
+        "key.annotated_decl" : "<Declaration>public class AnyModelBuilder : <Type usr=\"s:4main8AnyModelP\">AnyModel<\/Type><\/Declaration>",
         "key.bodylength" : 580,
         "key.bodyoffset" : 15335,
         "key.column" : 14,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.column" : 14,
-        "key.doc.declaration" : "public class AnyModelBuilder",
+        "key.doc.declaration" : "public class AnyModelBuilder : AnyModel",
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"4\" column=\"14\"><Name>AnyModelBuilder<\/Name><USR>s:4main15AnyModelBuilderC<\/USR><Declaration>public class AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A type-erased model builder.<\/Para><\/Abstract><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"4\" column=\"14\"><Name>AnyModelBuilder<\/Name><USR>s:4main15AnyModelBuilderC<\/USR><Declaration>public class AnyModelBuilder : AnyModel<\/Declaration><CommentParts><Abstract><Para>A type-erased model builder.<\/Para><\/Abstract><\/CommentParts><\/Class>",
         "key.doc.line" : 4,
         "key.doc.name" : "AnyModelBuilder",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
-        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>AnyModelBuilder<\/decl.name><\/decl.class>",
+        "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>AnyModelBuilder<\/decl.name> : <ref.protocol usr=\"s:4main8AnyModelP\">AnyModel<\/ref.protocol><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 608,
         "key.line" : 4,
@@ -2753,6 +2852,7 @@
         "key.parsed_declaration" : "extension AnyModelBuilder",
         "key.parsed_scope.end" : 398,
         "key.parsed_scope.start" : 382,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.fileprivate",
@@ -2781,6 +2881,7 @@
             "key.parsed_declaration" : "fileprivate func apply<U: DynamicGraph.AnyTensorGroup>(\n  ofType: U.Type, _ t: Any, _ inputs: [DynamicGraph_Any], streamContext: StreamContext? = nil\n) -> [U.AnyTensor]",
             "key.parsed_scope.end" : 397,
             "key.parsed_scope.start" : 383,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>U : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2811,6 +2912,7 @@
                 "key.parsed_declaration" : "fileprivate func apply<U: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 383,
                 "key.parsed_scope.start" : 383,
+                "key.reusingastcontext" : false,
                 "key.typename" : "U.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main15AnyModelBuilderC5apply33_B57F5E7F46DBE561D0942A3D3DE4363FLL6ofType__13streamContextSay0B6TensorQzGxm_ypSayAA013DynamicGraph_B0_pGAA06StreamR0CSgtAA0tu1_bS5GroupRzlF1UL_xmfp"
@@ -2832,6 +2934,7 @@
                 "key.parsed_declaration" : "let outputSize = self.outputSize",
                 "key.parsed_scope.end" : 389,
                 "key.parsed_scope.start" : 389,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main15AnyModelBuilderC5apply33_B57F5E7F46DBE561D0942A3D3DE4363FLL6ofType__13streamContextSay0B6TensorQzGxm_ypSayAA013DynamicGraph_B0_pGAA06StreamR0CSgtAA0tu1_bS5GroupRzlF10outputSizeL_Sivp"
@@ -2853,12 +2956,13 @@
                 "key.parsed_declaration" : "let outputs = U.evaluate(\n  model: model!.cModel, testing: testing, dataParallel: &model!.dataParallel, inputs: inputs,\n  outputSize: Int32(outputSize), streamContext: streamContext)",
                 "key.parsed_scope.end" : 391,
                 "key.parsed_scope.start" : 391,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[U.AnyTensor]",
                 "key.typeusr" : "$sSay9AnyTensorQzGD",
                 "key.usr" : "s:4main15AnyModelBuilderC5apply33_B57F5E7F46DBE561D0942A3D3DE4363FLL6ofType__13streamContextSay0B6TensorQzGxm_ypSayAA013DynamicGraph_B0_pGAA06StreamR0CSgtAA0tu1_bS5GroupRzlF7outputsL_AJvp"
               }
             ],
-            "key.typename" : "<U where U : DynamicGraph_AnyTensorGroup> (AnyModelBuilder) -> (U.Type, Any, [DynamicGraph_Any], StreamContext?) -> [U.AnyTensor]",
+            "key.typename" : "<U where U : DynamicGraph_AnyTensorGroup> (AnyModelBuilder) -> (U.Type, Any, [any DynamicGraph_Any], StreamContext?) -> [U.AnyTensor]",
             "key.typeusr" : "$s6ofType__13streamContextSay9AnyTensorQzGxm_ypSay4main013DynamicGraph_E0_pGAF06StreamD0CSgtcAF0hi1_eF5GroupRzluD",
             "key.usr" : "s:4main15AnyModelBuilderC5apply33_B57F5E7F46DBE561D0942A3D3DE4363FLL6ofType__13streamContextSay0B6TensorQzGxm_ypSayAA013DynamicGraph_B0_pGAA06StreamR0CSgtAA0tu1_bS5GroupRzlF"
           }
@@ -2881,15 +2985,15 @@
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"212\" column=\"20\"><Name>ModelBuilder<\/Name><USR>s:4main12ModelBuilderC<\/USR><Declaration>public final class ModelBuilder&lt;T&gt; : AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A model builder is a more generic type of model. A model can be quite static, thus, you have to be quite careful to have a model work with dynamic inputs. You cannot use reshape, or anything that can generate fixed tensor outputs from a fixed inputs.<\/Para><\/Abstract><Discussion><Para>A model builder on the other hand doesn’t have that restriction. When input changes, it simply calls the given builder closure to construct a new model. In such way, you can continue to use reshape etc to assume fixed inputs and outputs, it will just work for dynamic inputs. The newly built model will carry over stateful components (parameters) from the old models, thus, it doesn’t reset your training. This also means you need to make sure parameter shape won’t change when input changes, otherwise we will fatal.<\/Para><\/Discussion><\/CommentParts><\/Class>",
-        "key.doc.line" : 212,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"259\" column=\"20\"><Name>ModelBuilder<\/Name><USR>s:4main12ModelBuilderC<\/USR><Declaration>public final class ModelBuilder&lt;T&gt; : AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A model builder is a more generic type of model. A model can be quite static, thus, you have to be quite careful to have a model work with dynamic inputs. You cannot use reshape, or anything that can generate fixed tensor outputs from a fixed inputs.<\/Para><\/Abstract><Discussion><Para>A model builder on the other hand doesn’t have that restriction. When input changes, it simply calls the given builder closure to construct a new model. In such way, you can continue to use reshape etc to assume fixed inputs and outputs, it will just work for dynamic inputs. The newly built model will carry over stateful components (parameters) from the old models, thus, it doesn’t reset your training. This also means you need to make sure parameter shape won’t change when input changes, otherwise we will fatal.<\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 259,
         "key.doc.name" : "ModelBuilder",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>ModelBuilder<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12ModelBuilderC1Txmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.class usr=\"s:4main15AnyModelBuilderC\">AnyModelBuilder<\/ref.class><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 759,
-        "key.line" : 212,
+        "key.line" : 259,
         "key.modulename" : "main",
         "key.name" : "ModelBuilder",
         "key.namelength" : 12,
@@ -2898,6 +3002,7 @@
         "key.parsed_declaration" : "extension ModelBuilder",
         "key.parsed_scope.end" : 415,
         "key.parsed_scope.start" : 400,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -2937,6 +3042,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF\">callAsFunction&lt;U&gt;(inputs: U, _: DynamicGraph_Any..., streamContext: StreamContext? = nil) -&gt; [U.AnyTensor] where U : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>U : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -2967,6 +3073,7 @@
                 "key.parsed_declaration" : "public func callAsFunction<U: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 401,
                 "key.parsed_scope.start" : 401,
+                "key.reusingastcontext" : false,
                 "key.typename" : "U.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__SayAA013DynamicGraph_J0_pGAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp"
@@ -2988,12 +3095,13 @@
                 "key.parsed_declaration" : "let tensorInputs: [DynamicGraph_Any] = [firstInput as DynamicGraph_Any] + restInputs",
                 "key.parsed_scope.end" : 405,
                 "key.parsed_scope.start" : 405,
-                "key.typename" : "[DynamicGraph_Any]",
+                "key.reusingastcontext" : false,
+                "key.typename" : "[any DynamicGraph_Any]",
                 "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
                 "key.usr" : "s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__SayAA013DynamicGraph_J0_pGAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF12tensorInputsL_AKvp"
               }
             ],
-            "key.typename" : "<T, U where U : DynamicGraph_AnyTensorGroup> (ModelBuilder<T>) -> (T, U, [DynamicGraph_Any], StreamContext?) -> [U.AnyTensor]",
+            "key.typename" : "<T, U where U : DynamicGraph_AnyTensorGroup> (ModelBuilder<T>) -> (T, U, [any DynamicGraph_Any], StreamContext?) -> [U.AnyTensor]",
             "key.typeusr" : "$s_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__Say4main013DynamicGraph_D0_pGAF06StreamC0CSgtcAF0gh1_dE5GroupRd__luD",
             "key.usr" : "s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__SayAA013DynamicGraph_J0_pGAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF"
           },
@@ -3012,7 +3120,7 @@
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>t<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12ModelBuilderC1Txmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.parameter.type>...<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>t<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12ModelBuilderC1Txmfp\">T<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>...<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 357,
             "key.line" : 408,
@@ -3035,6 +3143,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF\">callAsFunction&lt;U&gt;(inputs: U, _: DynamicGraph_Any..., streamContext: StreamContext? = nil) -&gt; [U.AnyTensor] where U : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>U : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -3065,6 +3174,7 @@
                 "key.parsed_declaration" : "public func callAsFunction<U: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 408,
                 "key.parsed_scope.start" : 408,
+                "key.reusingastcontext" : false,
                 "key.typename" : "U.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp"
@@ -3086,12 +3196,13 @@
                 "key.parsed_declaration" : "let tensorInputs: [DynamicGraph_Any] = [firstInput as DynamicGraph_Any] + restInputs",
                 "key.parsed_scope.end" : 412,
                 "key.parsed_scope.start" : 412,
-                "key.typename" : "[DynamicGraph_Any]",
+                "key.reusingastcontext" : false,
+                "key.typename" : "[any DynamicGraph_Any]",
                 "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
                 "key.usr" : "s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF12tensorInputsL_SayAaJ_pGvp"
               }
             ],
-            "key.typename" : "<T, U where U : DynamicGraph_AnyTensorGroup> (ModelBuilder<T>) -> (T, U, DynamicGraph_Any..., StreamContext?) -> [U.AnyTensor]",
+            "key.typename" : "<T, U where U : DynamicGraph_AnyTensorGroup> (ModelBuilder<T>) -> (T, U, any DynamicGraph_Any..., StreamContext?) -> [U.AnyTensor]",
             "key.typeusr" : "$s_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__4main013DynamicGraph_D0_pdAF06StreamC0CSgtcAF0gh1_dE5GroupRd__luD",
             "key.usr" : "s:4main12ModelBuilderC14callAsFunction_6inputs_13streamContextSay9AnyTensorQyd__Gx_qd__AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF"
           }
@@ -3114,15 +3225,15 @@
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"212\" column=\"20\"><Name>ModelBuilder<\/Name><USR>s:4main12ModelBuilderC<\/USR><Declaration>public final class ModelBuilder&lt;T&gt; : AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A model builder is a more generic type of model. A model can be quite static, thus, you have to be quite careful to have a model work with dynamic inputs. You cannot use reshape, or anything that can generate fixed tensor outputs from a fixed inputs.<\/Para><\/Abstract><Discussion><Para>A model builder on the other hand doesn’t have that restriction. When input changes, it simply calls the given builder closure to construct a new model. In such way, you can continue to use reshape etc to assume fixed inputs and outputs, it will just work for dynamic inputs. The newly built model will carry over stateful components (parameters) from the old models, thus, it doesn’t reset your training. This also means you need to make sure parameter shape won’t change when input changes, otherwise we will fatal.<\/Para><\/Discussion><\/CommentParts><\/Class>",
-        "key.doc.line" : 212,
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift\" line=\"259\" column=\"20\"><Name>ModelBuilder<\/Name><USR>s:4main12ModelBuilderC<\/USR><Declaration>public final class ModelBuilder&lt;T&gt; : AnyModelBuilder<\/Declaration><CommentParts><Abstract><Para>A model builder is a more generic type of model. A model can be quite static, thus, you have to be quite careful to have a model work with dynamic inputs. You cannot use reshape, or anything that can generate fixed tensor outputs from a fixed inputs.<\/Para><\/Abstract><Discussion><Para>A model builder on the other hand doesn’t have that restriction. When input changes, it simply calls the given builder closure to construct a new model. In such way, you can continue to use reshape etc to assume fixed inputs and outputs, it will just work for dynamic inputs. The newly built model will carry over stateful components (parameters) from the old models, thus, it doesn’t reset your training. This also means you need to make sure parameter shape won’t change when input changes, otherwise we will fatal.<\/Para><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.line" : 259,
         "key.doc.name" : "ModelBuilder",
         "key.doc.type" : "Class",
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/ModelBuilder.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>ModelBuilder<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12ModelBuilderC1Txmfp\"><decl.generic_type_param.name>T<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt; : <ref.class usr=\"s:4main15AnyModelBuilderC\">AnyModelBuilder<\/ref.class><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 761,
-        "key.line" : 212,
+        "key.line" : 259,
         "key.modulename" : "main",
         "key.name" : "ModelBuilder",
         "key.namelength" : 12,
@@ -3131,6 +3242,7 @@
         "key.parsed_declaration" : "extension ModelBuilder where T == Void",
         "key.parsed_scope.end" : 430,
         "key.parsed_scope.start" : 417,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -3170,6 +3282,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF\">callAsFunction&lt;U&gt;(inputs: U, _: DynamicGraph_Any..., streamContext: StreamContext? = nil) -&gt; [U.AnyTensor] where U : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>U : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -3200,6 +3313,7 @@
                 "key.parsed_declaration" : "public func callAsFunction<U: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 418,
                 "key.parsed_scope.start" : 418,
+                "key.reusingastcontext" : false,
                 "key.typename" : "U.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___SayAA013DynamicGraph_J0_pGAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp"
@@ -3221,12 +3335,13 @@
                 "key.parsed_declaration" : "let tensorInputs: [DynamicGraph_Any] = [firstInput as DynamicGraph_Any] + restInputs",
                 "key.parsed_scope.end" : 421,
                 "key.parsed_scope.start" : 421,
-                "key.typename" : "[DynamicGraph_Any]",
+                "key.reusingastcontext" : false,
+                "key.typename" : "[any DynamicGraph_Any]",
                 "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
                 "key.usr" : "s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___SayAA013DynamicGraph_J0_pGAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF12tensorInputsL_AKvp"
               }
             ],
-            "key.typename" : "<T, U where T == (), U : DynamicGraph_AnyTensorGroup> (ModelBuilder<T>) -> (U, [DynamicGraph_Any], StreamContext?) -> [U.AnyTensor]",
+            "key.typename" : "<T, U where T == (), U : DynamicGraph_AnyTensorGroup> (ModelBuilder<T>) -> (U, [any DynamicGraph_Any], StreamContext?) -> [U.AnyTensor]",
             "key.typeusr" : "$s6inputs_13streamContextSay9AnyTensorQyd__Gqd___Say4main013DynamicGraph_D0_pGAF06StreamC0CSgtcAF0gh1_dE5GroupRd__luD",
             "key.usr" : "s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___SayAA013DynamicGraph_J0_pGAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF"
           },
@@ -3245,7 +3360,7 @@
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/Functional.swift",
-            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol><\/decl.var.parameter.type>...<\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
+            "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>callAsFunction<\/decl.name>&lt;<decl.generic_type_param usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\"><decl.generic_type_param.name>U<\/decl.generic_type_param.name><\/decl.generic_type_param>&gt;(<decl.var.parameter><decl.var.parameter.argument_label>inputs<\/decl.var.parameter.argument_label> <decl.var.parameter.name>firstInput<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.generic_type_param usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>restInputs<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.protocol usr=\"s:4main16DynamicGraph_AnyP\">DynamicGraph_Any<\/ref.protocol>...<\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>streamContext<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.class usr=\"s:4main13StreamContextC\">StreamContext<\/ref.class>?<\/decl.var.parameter.type> = nil<\/decl.var.parameter>) -&gt; <decl.function.returntype>[<ref.generic_type_param usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main27DynamicGraph_AnyTensorGroupP0dE0Qa\">AnyTensor<\/ref.associatedtype>]<\/decl.function.returntype> <syntaxtype.keyword>where<\/syntaxtype.keyword> <decl.generic_type_requirement><ref.generic_type_param usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp\">U<\/ref.generic_type_param> : <ref.protocol usr=\"s:4main27DynamicGraph_AnyTensorGroupP\">DynamicGraph_AnyTensorGroup<\/ref.protocol><\/decl.generic_type_requirement><\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 350,
             "key.line" : 424,
@@ -3268,6 +3383,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___SayAA013DynamicGraph_J0_pGAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF\">callAsFunction&lt;U&gt;(inputs: U, _: [DynamicGraph_Any], streamContext: StreamContext? = nil) -&gt; [U.AnyTensor] where U : DynamicGraph_AnyTensorGroup<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>U : <Type usr=\"s:4main12DynamicGraphC\">DynamicGraph<\/Type>.<Type usr=\"s:4main12DynamicGraphC14AnyTensorGroupa\">AnyTensorGroup<\/Type><\/Declaration>",
@@ -3298,6 +3414,7 @@
                 "key.parsed_declaration" : "public func callAsFunction<U: DynamicGraph.AnyTensorGroup",
                 "key.parsed_scope.end" : 424,
                 "key.parsed_scope.start" : 424,
+                "key.reusingastcontext" : false,
                 "key.typename" : "U.Type",
                 "key.typeusr" : "$sqd__mD",
                 "key.usr" : "s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF1UL_qd__mfp"
@@ -3319,12 +3436,13 @@
                 "key.parsed_declaration" : "let tensorInputs: [DynamicGraph_Any] = [firstInput as DynamicGraph_Any] + restInputs",
                 "key.parsed_scope.end" : 427,
                 "key.parsed_scope.start" : 427,
-                "key.typename" : "[DynamicGraph_Any]",
+                "key.reusingastcontext" : false,
+                "key.typename" : "[any DynamicGraph_Any]",
                 "key.typeusr" : "$sSay4main16DynamicGraph_Any_pGD",
                 "key.usr" : "s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF12tensorInputsL_SayAaJ_pGvp"
               }
             ],
-            "key.typename" : "<T, U where T == (), U : DynamicGraph_AnyTensorGroup> (ModelBuilder<T>) -> (U, DynamicGraph_Any..., StreamContext?) -> [U.AnyTensor]",
+            "key.typename" : "<T, U where T == (), U : DynamicGraph_AnyTensorGroup> (ModelBuilder<T>) -> (U, any DynamicGraph_Any..., StreamContext?) -> [U.AnyTensor]",
             "key.typeusr" : "$s6inputs_13streamContextSay9AnyTensorQyd__Gqd___4main013DynamicGraph_D0_pdAF06StreamC0CSgtcAF0gh1_dE5GroupRd__luD",
             "key.usr" : "s:4main12ModelBuilderCAAytRszlE14callAsFunction6inputs_13streamContextSay9AnyTensorQyd__Gqd___AA013DynamicGraph_J0_pdAA06StreamI0CSgtAA0lm1_jK5GroupRd__lF"
           }

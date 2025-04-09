@@ -1,7 +1,7 @@
 {
   "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift" : {
     "key.diagnostic_stage" : "source.diagnostic.stage.swift.parse",
-    "key.length" : 1771,
+    "key.length" : 1956,
     "key.offset" : 0,
     "key.substructure" : [
       {
@@ -19,7 +19,7 @@
             "key.offset" : 89
           }
         ],
-        "key.bodylength" : 1646,
+        "key.bodylength" : 1831,
         "key.bodyoffset" : 123,
         "key.column" : 20,
         "key.decl_lang" : "source.lang.swift",
@@ -36,7 +36,7 @@
         "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
         "key.fully_annotated_decl" : "<decl.class><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>final<\/syntaxtype.keyword> <syntaxtype.keyword>class<\/syntaxtype.keyword> <decl.name>StreamContext<\/decl.name><\/decl.class>",
         "key.kind" : "source.lang.swift.decl.class",
-        "key.length" : 1668,
+        "key.length" : 1853,
         "key.line" : 4,
         "key.modulename" : "main",
         "key.name" : "StreamContext",
@@ -44,8 +44,9 @@
         "key.nameoffset" : 108,
         "key.offset" : 102,
         "key.parsed_declaration" : "public final class StreamContext",
-        "key.parsed_scope.end" : 74,
+        "key.parsed_scope.end" : 82,
         "key.parsed_scope.start" : 4,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -74,6 +75,7 @@
             "key.parsed_declaration" : "public enum Concurrency",
             "key.parsed_scope.end" : 24,
             "key.parsed_scope.start" : 5,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.kind" : "source.lang.swift.decl.enumcase",
@@ -98,6 +100,7 @@
                     "key.parsed_declaration" : "case noLimit",
                     "key.parsed_scope.end" : 6,
                     "key.parsed_scope.start" : 6,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "(StreamContext.Concurrency.Type) -> StreamContext.Concurrency",
                     "key.typeusr" : "$sy4main13StreamContextC11ConcurrencyOAEmcD",
                     "key.usr" : "s:4main13StreamContextC11ConcurrencyO7noLimityA2EmF"
@@ -127,6 +130,7 @@
                     "key.parsed_declaration" : "case limit(Int)",
                     "key.parsed_scope.end" : 7,
                     "key.parsed_scope.start" : 7,
+                    "key.reusingastcontext" : false,
                     "key.substructure" : [
 
                     ],
@@ -156,6 +160,7 @@
                 "key.parsed_declaration" : "init(rawValue: Int)",
                 "key.parsed_scope.end" : 15,
                 "key.parsed_scope.start" : 8,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -183,6 +188,7 @@
                 "key.parsed_declaration" : "var rawValue: Int",
                 "key.parsed_scope.end" : 23,
                 "key.parsed_scope.start" : 16,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main13StreamContextC11ConcurrencyO8rawValueSivp"
@@ -194,6 +200,29 @@
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>let selfOwned: <Type usr=\"s:Sb\">Bool<\/Type><\/Declaration>",
+            "key.column" : 7,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
+            "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>selfOwned<\/decl.name>: <decl.var.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
+            "key.kind" : "source.lang.swift.decl.var.instance",
+            "key.length" : 19,
+            "key.line" : 26,
+            "key.modulename" : "main",
+            "key.name" : "selfOwned",
+            "key.namelength" : 9,
+            "key.nameoffset" : 496,
+            "key.offset" : 492,
+            "key.parsed_declaration" : "let selfOwned: Bool",
+            "key.parsed_scope.end" : 26,
+            "key.parsed_scope.start" : 26,
+            "key.reusingastcontext" : false,
+            "key.typename" : "Bool",
+            "key.typeusr" : "$sSbD",
+            "key.usr" : "s:4main13StreamContextC9selfOwnedSbvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
             "key.annotated_decl" : "<Declaration>let _stream: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type><\/Declaration>",
             "key.column" : 7,
             "key.decl_lang" : "source.lang.swift",
@@ -201,18 +230,52 @@
             "key.fully_annotated_decl" : "<decl.var.instance><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>_stream<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct><\/decl.var.type><\/decl.var.instance>",
             "key.kind" : "source.lang.swift.decl.var.instance",
             "key.length" : 26,
-            "key.line" : 26,
+            "key.line" : 27,
             "key.modulename" : "main",
             "key.name" : "_stream",
             "key.namelength" : 7,
-            "key.nameoffset" : 496,
-            "key.offset" : 492,
+            "key.nameoffset" : 518,
+            "key.offset" : 514,
             "key.parsed_declaration" : "let _stream: OpaquePointer",
-            "key.parsed_scope.end" : 26,
-            "key.parsed_scope.start" : 26,
+            "key.parsed_scope.end" : 27,
+            "key.parsed_scope.start" : 27,
+            "key.reusingastcontext" : false,
             "key.typename" : "OpaquePointer",
             "key.typeusr" : "$ss13OpaquePointerVD",
             "key.usr" : "s:4main13StreamContextC7_streams13OpaquePointerVvp"
+          },
+          {
+            "key.accessibility" : "source.lang.swift.accessibility.internal",
+            "key.annotated_decl" : "<Declaration>init(stream: <Type usr=\"s:s13OpaquePointerV\">OpaquePointer<\/Type>, selfOwned: <Type usr=\"s:Sb\">Bool<\/Type>)<\/Declaration>",
+            "key.bodylength" : 55,
+            "key.bodyoffset" : 590,
+            "key.column" : 3,
+            "key.decl_lang" : "source.lang.swift",
+            "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
+            "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>stream<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:s13OpaquePointerV\">OpaquePointer<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>, <decl.var.parameter><decl.var.parameter.argument_label>selfOwned<\/decl.var.parameter.argument_label>: <decl.var.parameter.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
+            "key.kind" : "source.lang.swift.decl.function.method.instance",
+            "key.length" : 102,
+            "key.line" : 29,
+            "key.modulename" : "main",
+            "key.name" : "init(stream:selfOwned:)",
+            "key.namelength" : 44,
+            "key.nameoffset" : 544,
+            "key.offset" : 544,
+            "key.parsed_declaration" : "init(stream: OpaquePointer, selfOwned: Bool)",
+            "key.parsed_scope.end" : 32,
+            "key.parsed_scope.start" : 29,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main13StreamContextCyAcA10DeviceKindOcfc\">init(_:)<\/RelatedName>"
+              }
+            ],
+            "key.reusingastcontext" : false,
+            "key.substructure" : [
+
+            ],
+            "key.typename" : "(StreamContext.Type) -> (OpaquePointer, Bool) -> StreamContext",
+            "key.typeusr" : "$s6stream9selfOwned4main13StreamContextCs13OpaquePointerV_SbtcD",
+            "key.usr" : "s:4main13StreamContextC6stream9selfOwnedACs13OpaquePointerV_Sbtcfc"
           },
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -221,19 +284,19 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 642
+                "key.offset" : 770
               }
             ],
-            "key.bodylength" : 241,
-            "key.bodyoffset" : 675,
+            "key.bodylength" : 262,
+            "key.bodyoffset" : 803,
             "key.column" : 10,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 10,
             "key.doc.comment" : " Create a new stream context.\n\n - Parameter kind: Whether this stream context is on CPU or GPU.",
             "key.doc.declaration" : "public init(_ kind: DeviceKind)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift\" line=\"33\" column=\"10\"><Name>init(_:)<\/Name><USR>s:4main13StreamContextCyAcA10DeviceKindOcfc<\/USR><Declaration>public init(_ kind: DeviceKind)<\/Declaration><CommentParts><Abstract><Para>Create a new stream context.<\/Para><\/Abstract><Parameters><Parameter><Name>kind<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether this stream context is on CPU or GPU.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
-            "key.doc.line" : 33,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift\" line=\"39\" column=\"10\"><Name>init(_:)<\/Name><USR>s:4main13StreamContextCyAcA10DeviceKindOcfc<\/USR><Declaration>public init(_ kind: DeviceKind)<\/Declaration><CommentParts><Abstract><Para>Create a new stream context.<\/Para><\/Abstract><Parameters><Parameter><Name>kind<\/Name><Direction isExplicit=\"0\">in<\/Direction><Discussion><Para>Whether this stream context is on CPU or GPU.<\/Para><\/Discussion><\/Parameter><\/Parameters><\/CommentParts><\/Function>",
+            "key.doc.line" : 39,
             "key.doc.name" : "init(_:)",
             "key.doc.parameters" : [
               {
@@ -247,20 +310,26 @@
             ],
             "key.doc.type" : "Function",
             "key.doclength" : 117,
-            "key.docoffset" : 522,
+            "key.docoffset" : 650,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
             "key.fully_annotated_decl" : "<decl.function.constructor><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>init<\/syntaxtype.keyword>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>kind<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.enum usr=\"s:4main10DeviceKindO\">DeviceKind<\/ref.enum><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.constructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 268,
-            "key.line" : 33,
+            "key.length" : 289,
+            "key.line" : 39,
             "key.modulename" : "main",
             "key.name" : "init(_:)",
             "key.namelength" : 24,
-            "key.nameoffset" : 649,
-            "key.offset" : 649,
+            "key.nameoffset" : 777,
+            "key.offset" : 777,
             "key.parsed_declaration" : "public init(_ kind: DeviceKind)",
-            "key.parsed_scope.end" : 42,
-            "key.parsed_scope.start" : 33,
+            "key.parsed_scope.end" : 49,
+            "key.parsed_scope.start" : 39,
+            "key.related_decls" : [
+              {
+                "key.annotated_decl" : "<RelatedName usr=\"s:4main13StreamContextC6stream9selfOwnedACs13OpaquePointerV_Sbtcfc\">init(stream:selfOwned:)<\/RelatedName>"
+              }
+            ],
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let type: <Type usr=\"s:s5Int32V\">Int32<\/Type><\/Declaration>",
@@ -270,20 +339,21 @@
                 "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>type<\/decl.name>: <decl.var.type><ref.struct usr=\"s:s5Int32V\">Int32<\/ref.struct><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 15,
-                "key.line" : 34,
+                "key.line" : 40,
                 "key.modulename" : "main",
                 "key.name" : "type",
                 "key.namelength" : 4,
-                "key.nameoffset" : 684,
-                "key.offset" : 680,
+                "key.nameoffset" : 812,
+                "key.offset" : 808,
                 "key.parsed_declaration" : "let type: Int32",
-                "key.parsed_scope.end" : 34,
-                "key.parsed_scope.start" : 34,
+                "key.parsed_scope.end" : 40,
+                "key.parsed_scope.start" : 40,
                 "key.related_decls" : [
                   {
                     "key.annotated_decl" : "<RelatedName usr=\"s:s4type2ofq_x_tr0_lF\">type(of:)<\/RelatedName>"
                   }
                 ],
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int32",
                 "key.typeusr" : "$ss5Int32VD",
                 "key.usr" : "s:4main13StreamContextCyAcA10DeviceKindOcfc4typeL_s5Int32Vvp"
@@ -300,36 +370,37 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 998
+                "key.offset" : 1147
               }
             ],
             "key.bodylength" : 44,
-            "key.bodyoffset" : 1020,
+            "key.bodyoffset" : 1169,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : "Wait until all executions on this stream context to finish.",
             "key.doc.declaration" : "public func joined()",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift\" line=\"47\" column=\"15\"><Name>joined()<\/Name><USR>s:4main13StreamContextC6joinedyyF<\/USR><Declaration>public func joined()<\/Declaration><CommentParts><Abstract><Para>Wait until all executions on this stream context to finish.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 47,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift\" line=\"54\" column=\"15\"><Name>joined()<\/Name><USR>s:4main13StreamContextC6joinedyyF<\/USR><Declaration>public func joined()<\/Declaration><CommentParts><Abstract><Para>Wait until all executions on this stream context to finish.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 54,
             "key.doc.name" : "joined()",
             "key.doc.type" : "Function",
             "key.doclength" : 74,
-            "key.docoffset" : 921,
+            "key.docoffset" : 1070,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>joined<\/decl.name>()<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 60,
-            "key.line" : 47,
+            "key.line" : 54,
             "key.modulename" : "main",
             "key.name" : "joined()",
             "key.namelength" : 8,
-            "key.nameoffset" : 1010,
-            "key.offset" : 1005,
+            "key.nameoffset" : 1159,
+            "key.offset" : 1154,
             "key.parsed_declaration" : "public func joined()",
-            "key.parsed_scope.end" : 49,
-            "key.parsed_scope.start" : 47,
+            "key.parsed_scope.end" : 56,
+            "key.parsed_scope.start" : 54,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -344,36 +415,37 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1188
+                "key.offset" : 1337
               }
             ],
             "key.bodylength" : 263,
-            "key.bodyoffset" : 1240,
+            "key.bodyoffset" : 1389,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : "Dispatch a block to be executed when all previous executions prior to\nthis method call are done.",
             "key.doc.declaration" : "public func async(_ closure: @escaping () -> Void)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift\" line=\"55\" column=\"15\"><Name>async(_:)<\/Name><USR>s:4main13StreamContextC5asyncyyyycF<\/USR><Declaration>public func async(_ closure: @escaping () -&gt; Void)<\/Declaration><CommentParts><Abstract><Para>Dispatch a block to be executed when all previous executions prior to this method call are done.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 55,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift\" line=\"62\" column=\"15\"><Name>async(_:)<\/Name><USR>s:4main13StreamContextC5asyncyyyycF<\/USR><Declaration>public func async(_ closure: @escaping () -&gt; Void)<\/Declaration><CommentParts><Abstract><Para>Dispatch a block to be executed when all previous executions prior to this method call are done.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 62,
             "key.doc.name" : "async(_:)",
             "key.doc.type" : "Function",
             "key.doclength" : 116,
-            "key.docoffset" : 1069,
+            "key.docoffset" : 1218,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>async<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>closure<\/decl.var.parameter.name>: <decl.var.parameter.type><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@escaping<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> () -&gt; <decl.function.returntype><ref.typealias usr=\"s:s4Voida\">Void<\/ref.typealias><\/decl.function.returntype><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 309,
-            "key.line" : 55,
+            "key.line" : 62,
             "key.modulename" : "main",
             "key.name" : "async(_:)",
             "key.namelength" : 38,
-            "key.nameoffset" : 1200,
-            "key.offset" : 1195,
+            "key.nameoffset" : 1349,
+            "key.offset" : 1344,
             "key.parsed_declaration" : "public func async(_ closure: @escaping () -> Void)",
-            "key.parsed_scope.end" : 62,
-            "key.parsed_scope.start" : 55,
+            "key.parsed_scope.end" : 69,
+            "key.parsed_scope.start" : 62,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -388,36 +460,37 @@
               {
                 "key.attribute" : "source.decl.attribute.public",
                 "key.length" : 6,
-                "key.offset" : 1619
+                "key.offset" : 1768
               }
             ],
             "key.bodylength" : 54,
-            "key.bodyoffset" : 1656,
+            "key.bodyoffset" : 1805,
             "key.column" : 15,
             "key.decl_lang" : "source.lang.swift",
             "key.doc.column" : 15,
             "key.doc.comment" : "Set seed for this particular stream context. If not set, it inherits from the global context.",
             "key.doc.declaration" : "public func setSeed(_ seed: UInt32)",
             "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
-            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift\" line=\"67\" column=\"15\"><Name>setSeed(_:)<\/Name><USR>s:4main13StreamContextC7setSeedyys6UInt32VF<\/USR><Declaration>public func setSeed(_ seed: UInt32)<\/Declaration><CommentParts><Abstract><Para>Set seed for this particular stream context. If not set, it inherits from the global context.<\/Para><\/Abstract><\/CommentParts><\/Function>",
-            "key.doc.line" : 67,
+            "key.doc.full_as_xml" : "<Function file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift\" line=\"74\" column=\"15\"><Name>setSeed(_:)<\/Name><USR>s:4main13StreamContextC7setSeedyys6UInt32VF<\/USR><Declaration>public func setSeed(_ seed: UInt32)<\/Declaration><CommentParts><Abstract><Para>Set seed for this particular stream context. If not set, it inherits from the global context.<\/Para><\/Abstract><\/CommentParts><\/Function>",
+            "key.doc.line" : 74,
             "key.doc.name" : "setSeed(_:)",
             "key.doc.type" : "Function",
             "key.doclength" : 108,
-            "key.docoffset" : 1508,
+            "key.docoffset" : 1657,
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
             "key.fully_annotated_decl" : "<decl.function.method.instance><syntaxtype.keyword>public<\/syntaxtype.keyword> <syntaxtype.keyword>func<\/syntaxtype.keyword> <decl.name>setSeed<\/decl.name>(<decl.var.parameter><decl.var.parameter.argument_label>_<\/decl.var.parameter.argument_label> <decl.var.parameter.name>seed<\/decl.var.parameter.name>: <decl.var.parameter.type><ref.struct usr=\"s:s6UInt32V\">UInt32<\/ref.struct><\/decl.var.parameter.type><\/decl.var.parameter>)<\/decl.function.method.instance>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
             "key.length" : 85,
-            "key.line" : 67,
+            "key.line" : 74,
             "key.modulename" : "main",
             "key.name" : "setSeed(_:)",
             "key.namelength" : 23,
-            "key.nameoffset" : 1631,
-            "key.offset" : 1626,
+            "key.nameoffset" : 1780,
+            "key.offset" : 1775,
             "key.parsed_declaration" : "public func setSeed(_ seed: UInt32)",
-            "key.parsed_scope.end" : 69,
-            "key.parsed_scope.start" : 67,
+            "key.parsed_scope.end" : 76,
+            "key.parsed_scope.start" : 74,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -428,23 +501,24 @@
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
             "key.annotated_decl" : "<Declaration>deinit<\/Declaration>",
-            "key.bodylength" : 44,
-            "key.bodyoffset" : 1723,
+            "key.bodylength" : 80,
+            "key.bodyoffset" : 1872,
             "key.column" : 3,
             "key.decl_lang" : "source.lang.swift",
             "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/nnc\/StreamContext.swift",
             "key.fully_annotated_decl" : "<decl.function.destructor><syntaxtype.keyword>deinit<\/syntaxtype.keyword><\/decl.function.destructor>",
             "key.kind" : "source.lang.swift.decl.function.method.instance",
-            "key.length" : 53,
-            "key.line" : 71,
+            "key.length" : 89,
+            "key.line" : 78,
             "key.modulename" : "main",
             "key.name" : "deinit",
             "key.namelength" : 6,
-            "key.nameoffset" : 1715,
-            "key.offset" : 1715,
+            "key.nameoffset" : 1864,
+            "key.offset" : 1864,
             "key.parsed_declaration" : "deinit",
-            "key.parsed_scope.end" : 73,
-            "key.parsed_scope.start" : 71,
+            "key.parsed_scope.end" : 81,
+            "key.parsed_scope.start" : 78,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],

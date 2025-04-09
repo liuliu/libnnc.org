@@ -36,6 +36,7 @@
         "key.parsed_declaration" : "public final class TimeLimit<EnvType: Env>",
         "key.parsed_scope.end" : 12,
         "key.parsed_scope.start" : 3,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>EnvType : <Type usr=\"s:4main3EnvP\">Env<\/Type><\/Declaration>",
@@ -66,6 +67,7 @@
             "key.parsed_declaration" : "public final class TimeLimit<EnvType: Env",
             "key.parsed_scope.end" : 3,
             "key.parsed_scope.start" : 3,
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.Type",
             "key.typeusr" : "$sxmD",
             "key.usr" : "s:4main9TimeLimitC7EnvTypexmfp"
@@ -95,6 +97,7 @@
             "key.parsed_declaration" : "private var env: EnvType",
             "key.parsed_scope.end" : 4,
             "key.parsed_scope.start" : 4,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "EnvType",
             "key.typeusr" : "$sxD",
@@ -125,6 +128,7 @@
             "key.parsed_declaration" : "private let maxEpisodeSteps: Int",
             "key.parsed_scope.end" : 5,
             "key.parsed_scope.start" : 5,
+            "key.reusingastcontext" : false,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main9TimeLimitC15maxEpisodeSteps33_638C9818F957BA15E9CBCD34CE8E2651LLSivp"
@@ -154,6 +158,7 @@
             "key.parsed_declaration" : "private var elapsedSteps: Int",
             "key.parsed_scope.end" : 6,
             "key.parsed_scope.start" : 6,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
@@ -186,6 +191,7 @@
             "key.parsed_declaration" : "public init(env: EnvType, maxEpisodeSteps: Int)",
             "key.parsed_scope.end" : 11,
             "key.parsed_scope.start" : 7,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -229,6 +235,7 @@
         "key.parsed_declaration" : "extension TimeLimit: Env where EnvType.TerminatedType == Bool",
         "key.parsed_scope.end" : 42,
         "key.parsed_scope.start" : 14,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -260,6 +267,7 @@
             "key.parsed_declaration" : "public typealias ActType = EnvType.ActType",
             "key.parsed_scope.end" : 15,
             "key.parsed_scope.start" : 15,
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.ActType.Type",
             "key.typeusr" : "$s7ActTypeQzmD",
             "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ActE0a"
@@ -294,6 +302,7 @@
             "key.parsed_declaration" : "public typealias ObsType = EnvType.ObsType",
             "key.parsed_scope.end" : 16,
             "key.parsed_scope.start" : 16,
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.ObsType.Type",
             "key.typeusr" : "$s7ObsTypeQzmD",
             "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03ObsE0a"
@@ -328,6 +337,7 @@
             "key.parsed_declaration" : "public typealias RewardType = EnvType.RewardType",
             "key.parsed_scope.end" : 17,
             "key.parsed_scope.start" : 17,
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.RewardType.Type",
             "key.typeusr" : "$s10RewardTypeQzmD",
             "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE06RewardE0a"
@@ -362,6 +372,7 @@
             "key.parsed_declaration" : "public typealias TerminatedType = EnvType.TerminatedType",
             "key.parsed_scope.end" : 18,
             "key.parsed_scope.start" : 18,
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.TerminatedType.Type",
             "key.typeusr" : "$s14TerminatedTypeQzmD",
             "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlEADa"
@@ -398,13 +409,14 @@
             "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, TerminatedType, [String: Any])",
             "key.parsed_scope.end" : 32,
             "key.parsed_scope.start" : 20,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
-                "key.annotated_decl" : "<Declaration>let result: (<Type usr=\"s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03EnvE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type>, <Type usr=\"s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03EnvE0xmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/Type>, <Type usr=\"s:Sb\">Bool<\/Type>, [<Type usr=\"s:SS\">String<\/Type> : Any])<\/Declaration>",
+                "key.annotated_decl" : "<Declaration>let result: (<Type usr=\"s:4main9TimeLimitC7EnvTypexmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/Type>, <Type usr=\"s:4main9TimeLimitC7EnvTypexmfp\">EnvType<\/Type>.<Type usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/Type>, <Type usr=\"s:Sb\">Bool<\/Type>, [<Type usr=\"s:SS\">String<\/Type> : Any])<\/Declaration>",
                 "key.column" : 9,
                 "key.decl_lang" : "source.lang.swift",
                 "key.filepath" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/TimeLimit.swift",
-                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>result<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03EnvE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE03EnvE0xmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/ref.associatedtype><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
+                "key.fully_annotated_decl" : "<decl.var.local><syntaxtype.keyword>let<\/syntaxtype.keyword> <decl.name>result<\/decl.name>: <decl.var.type><tuple>(<tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9TimeLimitC7EnvTypexmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP7ObsTypeQa\">ObsType<\/ref.associatedtype><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.generic_type_param usr=\"s:4main9TimeLimitC7EnvTypexmfp\">EnvType<\/ref.generic_type_param>.<ref.associatedtype usr=\"s:4main3EnvP10RewardTypeQa\">RewardType<\/ref.associatedtype><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type><ref.struct usr=\"s:Sb\">Bool<\/ref.struct><\/tuple.element.type><\/tuple.element>, <tuple.element><tuple.element.type>[<ref.struct usr=\"s:SS\">String<\/ref.struct> : <syntaxtype.keyword>Any<\/syntaxtype.keyword>]<\/tuple.element.type><\/tuple.element>)<\/tuple><\/decl.var.type><\/decl.var.local>",
                 "key.kind" : "source.lang.swift.decl.var.local",
                 "key.length" : 37,
                 "key.line" : 21,
@@ -416,6 +428,7 @@
                 "key.parsed_declaration" : "let result = env.step(action: action)",
                 "key.parsed_scope.end" : 21,
                 "key.parsed_scope.start" : 21,
+                "key.reusingastcontext" : false,
                 "key.typename" : "(EnvType.ObsType, EnvType.RewardType, Bool, [String : Any])",
                 "key.typeusr" : "$s7ObsTypeQz_06RewardB0QzSbSDySSypGtD",
                 "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE4step6action03ObsE0Qz_06RewardE0QzSbSDySSypGt03ActE0Qz_tF6resultL_AI_AKSbALtvp"
@@ -437,6 +450,7 @@
                 "key.parsed_declaration" : "var (_, _, terminated, info) = result",
                 "key.parsed_scope.end" : 22,
                 "key.parsed_scope.start" : 22,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Bool",
                 "key.typeusr" : "$sSbD",
                 "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE4step6action03ObsE0Qz_06RewardE0QzSbSDySSypGt03ActE0Qz_tF10terminatedL_Sbvp"
@@ -458,6 +472,7 @@
                 "key.parsed_declaration" : "var (_, _, terminated, info) = result",
                 "key.parsed_scope.end" : 22,
                 "key.parsed_scope.start" : 22,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[String : Any]",
                 "key.typeusr" : "$sSDySSypGD",
                 "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE4step6action03ObsE0Qz_06RewardE0QzSbSDySSypGt03ActE0Qz_tF4infoL_ALvp"
@@ -499,6 +514,7 @@
             "key.parsed_declaration" : "public func reset(seed: Int?) -> (ObsType, [String: Any])",
             "key.parsed_scope.end" : 37,
             "key.parsed_scope.start" : 34,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -538,6 +554,7 @@
             "key.parsed_declaration" : "public static var rewardThreshold: Float",
             "key.parsed_scope.end" : 39,
             "key.parsed_scope.start" : 39,
+            "key.reusingastcontext" : false,
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
             "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE15rewardThresholdSfvpZ"
@@ -574,6 +591,7 @@
             "key.parsed_declaration" : "public static var actionSpace: [ClosedRange<Float>]",
             "key.parsed_scope.end" : 40,
             "key.parsed_scope.start" : 40,
+            "key.reusingastcontext" : false,
             "key.typename" : "[ClosedRange<Float>]",
             "key.typeusr" : "$sSaySNySfGGD",
             "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE11actionSpaceSaySNySfGGvpZ"
@@ -610,6 +628,7 @@
             "key.parsed_declaration" : "public static var stateSize: Int",
             "key.parsed_scope.end" : 41,
             "key.parsed_scope.start" : 41,
+            "key.reusingastcontext" : false,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main9TimeLimitCAASb14TerminatedTypeRtzrlE9stateSizeSivpZ"
@@ -650,6 +669,7 @@
         "key.parsed_declaration" : "extension TimeLimit: MuJoCoEnv where EnvType: MuJoCoEnv",
         "key.parsed_scope.end" : 50,
         "key.parsed_scope.start" : 44,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -678,6 +698,7 @@
             "key.parsed_declaration" : "public var model: MjModel",
             "key.parsed_scope.end" : 45,
             "key.parsed_scope.start" : 45,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main9TimeLimitCA2A9MuJoCoEnvRzrlE5modelXevp"
@@ -709,6 +730,7 @@
             "key.parsed_declaration" : "public var data: MjData",
             "key.parsed_scope.end" : 49,
             "key.parsed_scope.start" : 46,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",

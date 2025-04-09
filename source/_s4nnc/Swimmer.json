@@ -28,7 +28,7 @@
         "key.doc.declaration" : "public final class Swimmer : MuJoCoEnv",
         "key.doc.discussion" : [
           {
-            "Para" : "This environment corresponds to the Swimmer environment described in Rémi Coulom’s PhD thesis . The environment aims to increase the number of independent state and control variables as compared to the classic control environments. The swimmers consist of three or more segments (‘’) and one less articulation joints (‘’) - one rotor joint connecting exactly two links to form a linear chain. The swimmer is suspended in a two dimensional pool and always starts in the same position (subject to some deviation drawn from an uniform distribution), and the goal is to move as fast as possible towards the right by applying torque on the rotors and using the fluids friction."
+            "Para" : "This environment corresponds to the Swimmer environment described in Rémi Coulom’s PhD thesis . The environment aims to increase the number of independent state and control variables as compared to the classic control environments. The swimmers consist of three or more segments (’’) and one less articulation joints (’’) - one rotor joint connecting exactly two links to form a linear chain. The swimmer is suspended in a two dimensional pool and always starts in the same position (subject to some deviation drawn from an uniform distribution), and the goal is to move as fast as possible towards the right by applying torque on the rotors and using the fluids friction."
           },
           {
             "Para" : "The problem parameters are: Problem parameters:"
@@ -77,7 +77,7 @@
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Swimmer.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Swimmer.swift\" line=\"94\" column=\"20\"><Name>Swimmer<\/Name><USR>s:4main7SwimmerC<\/USR><Declaration>public final class Swimmer : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment corresponds to the Swimmer environment described in Rémi Coulom’s PhD thesis <Link href=\"https:\/\/tel.archives-ouvertes.fr\/tel-00003985\/document\">“Reinforcement Learning Using Neural Networks, with Applications to Motor Control”<\/Link>. The environment aims to increase the number of independent state and control variables as compared to the classic control environments. The swimmers consist of three or more segments (‘<emphasis><bold>links<\/bold><\/emphasis>’) and one less articulation joints (‘<emphasis><bold>rotors<\/bold><\/emphasis>’) - one rotor joint connecting exactly two links to form a linear chain. The swimmer is suspended in a two dimensional pool and always starts in the same position (subject to some deviation drawn from an uniform distribution), and the goal is to move as fast as possible towards the right by applying torque on the rotors and using the fluids friction.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Notes<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The problem parameters are: Problem parameters:<\/Para><List-Bullet><Item><Para><emphasis>n<\/emphasis>: number of body parts<\/Para><\/Item><Item><Para><emphasis>m<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis>: mass of part <emphasis>i<\/emphasis> (<emphasis>i<\/emphasis> ∈ {1…n})<\/Para><\/Item><Item><Para><emphasis>l<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis>: length of part <emphasis>i<\/emphasis> (<emphasis>i<\/emphasis> ∈ {1…n})<\/Para><\/Item><Item><Para><emphasis>k<\/emphasis>: viscous-friction coefficient While the default environment has <emphasis>n<\/emphasis> = 3, <emphasis>l<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis> = 0.1, and <emphasis>k<\/emphasis> = 0.1. It is possible to pass a custom MuJoCo XML file during construction to increase the number of links, or to tweak any of the parameters.<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (2,), float32)<\/codeVoice>. An action represents the torques applied between <emphasis>links<\/emphasis> | Num | Action                             | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | |—–|————————————|———––|———––|–––––––––––––––––|—––|–––––––| | 0   | Torque applied on the first rotor  | -1          | 1           | motor1_rot                       | hinge | torque (N m) | | 1   | Torque applied on the second rotor | -1          | 1           | motor2_rot                       | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>By default, observations consists of:<\/Para><List-Bullet><Item><Para>θ<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML>: angle of part <emphasis>i<\/emphasis> with respect to the <emphasis>x<\/emphasis> axis<\/Para><\/Item><Item><Para>θ<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML>’: its derivative with respect to time (angular velocity) In the default case, observations do not include the x- and y-coordinates of the front tip. These may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. Then, the observation space will have 10 dimensions where the first two dimensions represent the x- and y-coordinates of the front tip. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x- and y-coordinates will be returned in <codeVoice>info<\/codeVoice> with keys <codeVoice>&quot;x_position&quot;<\/codeVoice> and <codeVoice>&quot;y_position&quot;<\/codeVoice>, respectively. By default, the observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(8,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | angle of the front tip               | -Inf | Inf | free_body_rot                    | hinge | angle (rad)              | | 1   | angle of the first rotor             | -Inf | Inf | motor1_rot                       | hinge | angle (rad)              | | 2   | angle of the second rotor            | -Inf | Inf | motor2_rot                       | hinge | angle (rad)              | | 3   | velocity of the tip along the x-axis | -Inf | Inf | slider1                          | slide | velocity (m\/s)           | | 4   | velocity of the tip along the y-axis | -Inf | Inf | slider2                          | slide | velocity (m\/s)           | | 5   | angular velocity of front tip        | -Inf | Inf | free_body_rot                    | hinge | angular velocity (rad\/s) | | 6   | angular velocity of first rotor      | -Inf | Inf | motor1_rot                       | hinge | angular velocity (rad\/s) | | 7   | angular velocity of second rotor     | -Inf | Inf | motor2_rot                             | hinge | angular velocity (rad\/s) |<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of two parts:<\/Para><List-Bullet><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of moving forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (x-coordinate before action - x-coordinate after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependent on the frame_skip parameter (default is 4), where the frametime is 0.01 - making the default <emphasis>dt = 4 * 0.01 = 0.04<\/emphasis>. This reward would be positive if the swimmer swims right as desired.<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A cost for penalising the swimmer if it takes actions that are too large. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(action<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> where <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice><\/emphasis> is a parameter set for the control and has a default value of 1e-4 The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>forward_reward - ctrl_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0,0,0,0,0,0,0,0) with a Uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] is added to the initial state for stochasticity.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The episode truncates when the episode length is greater than 1000.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[gym.make('Swimmer-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Swimmer-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default         | Description                                                                                                                                                               | | –––––––––––––––––––––– | ——— | ————— | ———————————————————————————————————————————————————————–– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;swimmer.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                                    | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>           | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                                  | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>1e-4<\/codeVoice>          | Weight for <emphasis>ctrl_cost<\/emphasis> term (see section on reward)                                                                                                                       | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>          | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Swimmer.swift\" line=\"94\" column=\"20\"><Name>Swimmer<\/Name><USR>s:4main7SwimmerC<\/USR><Declaration>public final class Swimmer : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment corresponds to the Swimmer environment described in Rémi Coulom’s PhD thesis <Link href=\"https:\/\/tel.archives-ouvertes.fr\/tel-00003985\/document\">“Reinforcement Learning Using Neural Networks, with Applications to Motor Control”<\/Link>. The environment aims to increase the number of independent state and control variables as compared to the classic control environments. The swimmers consist of three or more segments (’<emphasis><bold>links<\/bold><\/emphasis>’) and one less articulation joints (’<emphasis><bold>rotors<\/bold><\/emphasis>’) - one rotor joint connecting exactly two links to form a linear chain. The swimmer is suspended in a two dimensional pool and always starts in the same position (subject to some deviation drawn from an uniform distribution), and the goal is to move as fast as possible towards the right by applying torque on the rotors and using the fluids friction.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Notes<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The problem parameters are: Problem parameters:<\/Para><List-Bullet><Item><Para><emphasis>n<\/emphasis>: number of body parts<\/Para><\/Item><Item><Para><emphasis>m<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis>: mass of part <emphasis>i<\/emphasis> (<emphasis>i<\/emphasis> ∈ {1…n})<\/Para><\/Item><Item><Para><emphasis>l<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis>: length of part <emphasis>i<\/emphasis> (<emphasis>i<\/emphasis> ∈ {1…n})<\/Para><\/Item><Item><Para><emphasis>k<\/emphasis>: viscous-friction coefficient While the default environment has <emphasis>n<\/emphasis> = 3, <emphasis>l<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis> = 0.1, and <emphasis>k<\/emphasis> = 0.1. It is possible to pass a custom MuJoCo XML file during construction to increase the number of links, or to tweak any of the parameters.<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (2,), float32)<\/codeVoice>. An action represents the torques applied between <emphasis>links<\/emphasis> | Num | Action                             | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | |—–|————————————|———––|———––|–––––––––––––––––|—––|–––––––| | 0   | Torque applied on the first rotor  | -1          | 1           | motor1_rot                       | hinge | torque (N m) | | 1   | Torque applied on the second rotor | -1          | 1           | motor2_rot                       | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>By default, observations consists of:<\/Para><List-Bullet><Item><Para>θ<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML>: angle of part <emphasis>i<\/emphasis> with respect to the <emphasis>x<\/emphasis> axis<\/Para><\/Item><Item><Para>θ<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML>’: its derivative with respect to time (angular velocity) In the default case, observations do not include the x- and y-coordinates of the front tip. These may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. Then, the observation space will have 10 dimensions where the first two dimensions represent the x- and y-coordinates of the front tip. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x- and y-coordinates will be returned in <codeVoice>info<\/codeVoice> with keys <codeVoice>&quot;x_position&quot;<\/codeVoice> and <codeVoice>&quot;y_position&quot;<\/codeVoice>, respectively. By default, the observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(8,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | angle of the front tip               | -Inf | Inf | free_body_rot                    | hinge | angle (rad)              | | 1   | angle of the first rotor             | -Inf | Inf | motor1_rot                       | hinge | angle (rad)              | | 2   | angle of the second rotor            | -Inf | Inf | motor2_rot                       | hinge | angle (rad)              | | 3   | velocity of the tip along the x-axis | -Inf | Inf | slider1                          | slide | velocity (m\/s)           | | 4   | velocity of the tip along the y-axis | -Inf | Inf | slider2                          | slide | velocity (m\/s)           | | 5   | angular velocity of front tip        | -Inf | Inf | free_body_rot                    | hinge | angular velocity (rad\/s) | | 6   | angular velocity of first rotor      | -Inf | Inf | motor1_rot                       | hinge | angular velocity (rad\/s) | | 7   | angular velocity of second rotor     | -Inf | Inf | motor2_rot                             | hinge | angular velocity (rad\/s) |<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of two parts:<\/Para><List-Bullet><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of moving forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (x-coordinate before action - x-coordinate after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependent on the frame_skip parameter (default is 4), where the frametime is 0.01 - making the default <emphasis>dt = 4 * 0.01 = 0.04<\/emphasis>. This reward would be positive if the swimmer swims right as desired.<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A cost for penalising the swimmer if it takes actions that are too large. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(action<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> where <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice><\/emphasis> is a parameter set for the control and has a default value of 1e-4 The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>forward_reward - ctrl_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0,0,0,0,0,0,0,0) with a Uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] is added to the initial state for stochasticity.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The episode truncates when the episode length is greater than 1000.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[gym.make('Swimmer-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Swimmer-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default         | Description                                                                                                                                                               | | –––––––––––––––––––––– | ——— | ————— | ———————————————————————————————————————————————————————–– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;swimmer.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                                    | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>           | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                                  | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>1e-4<\/codeVoice>          | Weight for <emphasis>ctrl_cost<\/emphasis> term (see section on reward)                                                                                                                       | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>          | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
         "key.doc.line" : 94,
         "key.doc.name" : "Swimmer",
         "key.doc.type" : "Class",
@@ -108,6 +108,7 @@
         "key.parsed_declaration" : "public final class Swimmer: MuJoCoEnv",
         "key.parsed_scope.end" : 121,
         "key.parsed_scope.start" : 94,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -134,6 +135,7 @@
             "key.parsed_declaration" : "public let model: MjModel",
             "key.parsed_scope.end" : 95,
             "key.parsed_scope.start" : 95,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main7SwimmerC5modelXevp"
@@ -163,6 +165,7 @@
             "key.parsed_declaration" : "public var data: MjData",
             "key.parsed_scope.end" : 96,
             "key.parsed_scope.start" : 96,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -193,6 +196,7 @@
             "key.parsed_declaration" : "private let initData: MjData",
             "key.parsed_scope.end" : 98,
             "key.parsed_scope.start" : 98,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main7SwimmerC8initData33_7B5A124BC1AE680412312ADA5D6A9719LLXevp"
@@ -222,6 +226,7 @@
             "key.parsed_declaration" : "private let forwardRewardWeight: Double",
             "key.parsed_scope.end" : 99,
             "key.parsed_scope.start" : 99,
+            "key.reusingastcontext" : false,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main7SwimmerC19forwardRewardWeight33_7B5A124BC1AE680412312ADA5D6A9719LLSdvp"
@@ -251,6 +256,7 @@
             "key.parsed_declaration" : "private let ctrlCostWeight: Double",
             "key.parsed_scope.end" : 100,
             "key.parsed_scope.start" : 100,
+            "key.reusingastcontext" : false,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main7SwimmerC14ctrlCostWeight33_7B5A124BC1AE680412312ADA5D6A9719LLSdvp"
@@ -280,6 +286,7 @@
             "key.parsed_declaration" : "private let resetNoiseScale: Double",
             "key.parsed_scope.end" : 101,
             "key.parsed_scope.start" : 101,
+            "key.reusingastcontext" : false,
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
             "key.usr" : "s:4main7SwimmerC15resetNoiseScale33_7B5A124BC1AE680412312ADA5D6A9719LLSdvp"
@@ -309,6 +316,7 @@
             "key.parsed_declaration" : "private var sfmt: SFMT",
             "key.parsed_scope.end" : 103,
             "key.parsed_scope.start" : 103,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "SFMT",
             "key.typeusr" : "$s4main4SFMTVD",
@@ -341,6 +349,7 @@
             "key.parsed_declaration" : "public init(\n  forwardRewardWeight: Double = 1.0, ctrlCostWeight: Double = 1e-4, resetNoiseScale: Double = 0.1\n) throws",
             "key.parsed_scope.end" : 120,
             "key.parsed_scope.start" : 105,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var g: <Type usr=\"s:s27SystemRandomNumberGeneratorV\">SystemRandomNumberGenerator<\/Type><\/Declaration>",
@@ -359,6 +368,7 @@
                 "key.parsed_declaration" : "var g = SystemRandomNumberGenerator()",
                 "key.parsed_scope.end" : 115,
                 "key.parsed_scope.start" : 115,
+                "key.reusingastcontext" : false,
                 "key.typename" : "SystemRandomNumberGenerator",
                 "key.typeusr" : "$ss27SystemRandomNumberGeneratorVD",
                 "key.usr" : "s:4main7SwimmerC19forwardRewardWeight08ctrlCostE015resetNoiseScaleACSd_S2dtKcfc1gL_s27SystemRandomNumberGeneratorVvp"
@@ -383,7 +393,7 @@
         "key.doc.declaration" : "public final class Swimmer : MuJoCoEnv",
         "key.doc.discussion" : [
           {
-            "Para" : "This environment corresponds to the Swimmer environment described in Rémi Coulom’s PhD thesis . The environment aims to increase the number of independent state and control variables as compared to the classic control environments. The swimmers consist of three or more segments (‘’) and one less articulation joints (‘’) - one rotor joint connecting exactly two links to form a linear chain. The swimmer is suspended in a two dimensional pool and always starts in the same position (subject to some deviation drawn from an uniform distribution), and the goal is to move as fast as possible towards the right by applying torque on the rotors and using the fluids friction."
+            "Para" : "This environment corresponds to the Swimmer environment described in Rémi Coulom’s PhD thesis . The environment aims to increase the number of independent state and control variables as compared to the classic control environments. The swimmers consist of three or more segments (’’) and one less articulation joints (’’) - one rotor joint connecting exactly two links to form a linear chain. The swimmer is suspended in a two dimensional pool and always starts in the same position (subject to some deviation drawn from an uniform distribution), and the goal is to move as fast as possible towards the right by applying torque on the rotors and using the fluids friction."
           },
           {
             "Para" : "The problem parameters are: Problem parameters:"
@@ -432,7 +442,7 @@
           }
         ],
         "key.doc.file" : "\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Swimmer.swift",
-        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Swimmer.swift\" line=\"94\" column=\"20\"><Name>Swimmer<\/Name><USR>s:4main7SwimmerC<\/USR><Declaration>public final class Swimmer : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment corresponds to the Swimmer environment described in Rémi Coulom’s PhD thesis <Link href=\"https:\/\/tel.archives-ouvertes.fr\/tel-00003985\/document\">“Reinforcement Learning Using Neural Networks, with Applications to Motor Control”<\/Link>. The environment aims to increase the number of independent state and control variables as compared to the classic control environments. The swimmers consist of three or more segments (‘<emphasis><bold>links<\/bold><\/emphasis>’) and one less articulation joints (‘<emphasis><bold>rotors<\/bold><\/emphasis>’) - one rotor joint connecting exactly two links to form a linear chain. The swimmer is suspended in a two dimensional pool and always starts in the same position (subject to some deviation drawn from an uniform distribution), and the goal is to move as fast as possible towards the right by applying torque on the rotors and using the fluids friction.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Notes<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The problem parameters are: Problem parameters:<\/Para><List-Bullet><Item><Para><emphasis>n<\/emphasis>: number of body parts<\/Para><\/Item><Item><Para><emphasis>m<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis>: mass of part <emphasis>i<\/emphasis> (<emphasis>i<\/emphasis> ∈ {1…n})<\/Para><\/Item><Item><Para><emphasis>l<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis>: length of part <emphasis>i<\/emphasis> (<emphasis>i<\/emphasis> ∈ {1…n})<\/Para><\/Item><Item><Para><emphasis>k<\/emphasis>: viscous-friction coefficient While the default environment has <emphasis>n<\/emphasis> = 3, <emphasis>l<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis> = 0.1, and <emphasis>k<\/emphasis> = 0.1. It is possible to pass a custom MuJoCo XML file during construction to increase the number of links, or to tweak any of the parameters.<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (2,), float32)<\/codeVoice>. An action represents the torques applied between <emphasis>links<\/emphasis> | Num | Action                             | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | |—–|————————————|———––|———––|–––––––––––––––––|—––|–––––––| | 0   | Torque applied on the first rotor  | -1          | 1           | motor1_rot                       | hinge | torque (N m) | | 1   | Torque applied on the second rotor | -1          | 1           | motor2_rot                       | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>By default, observations consists of:<\/Para><List-Bullet><Item><Para>θ<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML>: angle of part <emphasis>i<\/emphasis> with respect to the <emphasis>x<\/emphasis> axis<\/Para><\/Item><Item><Para>θ<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML>’: its derivative with respect to time (angular velocity) In the default case, observations do not include the x- and y-coordinates of the front tip. These may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. Then, the observation space will have 10 dimensions where the first two dimensions represent the x- and y-coordinates of the front tip. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x- and y-coordinates will be returned in <codeVoice>info<\/codeVoice> with keys <codeVoice>&quot;x_position&quot;<\/codeVoice> and <codeVoice>&quot;y_position&quot;<\/codeVoice>, respectively. By default, the observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(8,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | angle of the front tip               | -Inf | Inf | free_body_rot                    | hinge | angle (rad)              | | 1   | angle of the first rotor             | -Inf | Inf | motor1_rot                       | hinge | angle (rad)              | | 2   | angle of the second rotor            | -Inf | Inf | motor2_rot                       | hinge | angle (rad)              | | 3   | velocity of the tip along the x-axis | -Inf | Inf | slider1                          | slide | velocity (m\/s)           | | 4   | velocity of the tip along the y-axis | -Inf | Inf | slider2                          | slide | velocity (m\/s)           | | 5   | angular velocity of front tip        | -Inf | Inf | free_body_rot                    | hinge | angular velocity (rad\/s) | | 6   | angular velocity of first rotor      | -Inf | Inf | motor1_rot                       | hinge | angular velocity (rad\/s) | | 7   | angular velocity of second rotor     | -Inf | Inf | motor2_rot                             | hinge | angular velocity (rad\/s) |<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of two parts:<\/Para><List-Bullet><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of moving forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (x-coordinate before action - x-coordinate after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependent on the frame_skip parameter (default is 4), where the frametime is 0.01 - making the default <emphasis>dt = 4 * 0.01 = 0.04<\/emphasis>. This reward would be positive if the swimmer swims right as desired.<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A cost for penalising the swimmer if it takes actions that are too large. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(action<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> where <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice><\/emphasis> is a parameter set for the control and has a default value of 1e-4 The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>forward_reward - ctrl_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0,0,0,0,0,0,0,0) with a Uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] is added to the initial state for stochasticity.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The episode truncates when the episode length is greater than 1000.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[gym.make('Swimmer-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Swimmer-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default         | Description                                                                                                                                                               | | –––––––––––––––––––––– | ——— | ————— | ———————————————————————————————————————————————————————–– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;swimmer.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                                    | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>           | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                                  | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>1e-4<\/codeVoice>          | Weight for <emphasis>ctrl_cost<\/emphasis> term (see section on reward)                                                                                                                       | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>          | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
+        "key.doc.full_as_xml" : "<Class file=\"\/home\/liu\/Dropbox\/workspace\/s4nnc\/gym\/envs\/Swimmer.swift\" line=\"94\" column=\"20\"><Name>Swimmer<\/Name><USR>s:4main7SwimmerC<\/USR><Declaration>public final class Swimmer : MuJoCoEnv<\/Declaration><CommentParts><Discussion><rawHTML><![CDATA[<h3>]]><\/rawHTML>Description<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>This environment corresponds to the Swimmer environment described in Rémi Coulom’s PhD thesis <Link href=\"https:\/\/tel.archives-ouvertes.fr\/tel-00003985\/document\">“Reinforcement Learning Using Neural Networks, with Applications to Motor Control”<\/Link>. The environment aims to increase the number of independent state and control variables as compared to the classic control environments. The swimmers consist of three or more segments (’<emphasis><bold>links<\/bold><\/emphasis>’) and one less articulation joints (’<emphasis><bold>rotors<\/bold><\/emphasis>’) - one rotor joint connecting exactly two links to form a linear chain. The swimmer is suspended in a two dimensional pool and always starts in the same position (subject to some deviation drawn from an uniform distribution), and the goal is to move as fast as possible towards the right by applying torque on the rotors and using the fluids friction.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Notes<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The problem parameters are: Problem parameters:<\/Para><List-Bullet><Item><Para><emphasis>n<\/emphasis>: number of body parts<\/Para><\/Item><Item><Para><emphasis>m<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis>: mass of part <emphasis>i<\/emphasis> (<emphasis>i<\/emphasis> ∈ {1…n})<\/Para><\/Item><Item><Para><emphasis>l<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis>: length of part <emphasis>i<\/emphasis> (<emphasis>i<\/emphasis> ∈ {1…n})<\/Para><\/Item><Item><Para><emphasis>k<\/emphasis>: viscous-friction coefficient While the default environment has <emphasis>n<\/emphasis> = 3, <emphasis>l<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML><\/emphasis> = 0.1, and <emphasis>k<\/emphasis> = 0.1. It is possible to pass a custom MuJoCo XML file during construction to increase the number of links, or to tweak any of the parameters.<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Action Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The action space is a <codeVoice>Box(-1, 1, (2,), float32)<\/codeVoice>. An action represents the torques applied between <emphasis>links<\/emphasis> | Num | Action                             | Control Min | Control Max | Name (in corresponding XML file) | Joint | Unit         | |—–|————————————|———––|———––|–––––––––––––––––|—––|–––––––| | 0   | Torque applied on the first rotor  | -1          | 1           | motor1_rot                       | hinge | torque (N m) | | 1   | Torque applied on the second rotor | -1          | 1           | motor2_rot                       | hinge | torque (N m) |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Observation Space<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>By default, observations consists of:<\/Para><List-Bullet><Item><Para>θ<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML>: angle of part <emphasis>i<\/emphasis> with respect to the <emphasis>x<\/emphasis> axis<\/Para><\/Item><Item><Para>θ<rawHTML><![CDATA[<sub>]]><\/rawHTML>i<rawHTML><![CDATA[<\/sub>]]><\/rawHTML>’: its derivative with respect to time (angular velocity) In the default case, observations do not include the x- and y-coordinates of the front tip. These may be included by passing <codeVoice>exclude_current_positions_from_observation=False<\/codeVoice> during construction. Then, the observation space will have 10 dimensions where the first two dimensions represent the x- and y-coordinates of the front tip. Regardless of whether <codeVoice>exclude_current_positions_from_observation<\/codeVoice> was set to true or false, the x- and y-coordinates will be returned in <codeVoice>info<\/codeVoice> with keys <codeVoice>&quot;x_position&quot;<\/codeVoice> and <codeVoice>&quot;y_position&quot;<\/codeVoice>, respectively. By default, the observation is a <codeVoice>ndarray<\/codeVoice> with shape <codeVoice>(8,)<\/codeVoice> where the elements correspond to the following: | Num | Observation                          | Min  | Max | Name (in corresponding XML file) | Joint | Unit                     | | — | ———————————— | –– | — | –––––––––––––––– | —– | ———————— | | 0   | angle of the front tip               | -Inf | Inf | free_body_rot                    | hinge | angle (rad)              | | 1   | angle of the first rotor             | -Inf | Inf | motor1_rot                       | hinge | angle (rad)              | | 2   | angle of the second rotor            | -Inf | Inf | motor2_rot                       | hinge | angle (rad)              | | 3   | velocity of the tip along the x-axis | -Inf | Inf | slider1                          | slide | velocity (m\/s)           | | 4   | velocity of the tip along the y-axis | -Inf | Inf | slider2                          | slide | velocity (m\/s)           | | 5   | angular velocity of front tip        | -Inf | Inf | free_body_rot                    | hinge | angular velocity (rad\/s) | | 6   | angular velocity of first rotor      | -Inf | Inf | motor1_rot                       | hinge | angular velocity (rad\/s) | | 7   | angular velocity of second rotor     | -Inf | Inf | motor2_rot                             | hinge | angular velocity (rad\/s) |<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Rewards<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The reward consists of two parts:<\/Para><List-Bullet><Item><Para><emphasis>forward_reward<\/emphasis>: A reward of moving forward which is measured as <emphasis><codeVoice>forward_reward_weight<\/codeVoice> * (x-coordinate before action - x-coordinate after action)\/dt<\/emphasis>. <emphasis>dt<\/emphasis> is the time between actions and is dependent on the frame_skip parameter (default is 4), where the frametime is 0.01 - making the default <emphasis>dt = 4 * 0.01 = 0.04<\/emphasis>. This reward would be positive if the swimmer swims right as desired.<\/Para><\/Item><Item><Para><emphasis>ctrl_cost<\/emphasis>: A cost for penalising the swimmer if it takes actions that are too large. It is measured as <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice> * sum(action<rawHTML><![CDATA[<sup>]]><\/rawHTML>2<rawHTML><![CDATA[<\/sup>]]><\/rawHTML>)<\/emphasis> where <emphasis><codeVoice>ctrl_cost_weight<\/codeVoice><\/emphasis> is a parameter set for the control and has a default value of 1e-4 The total reward returned is <emphasis><bold>reward<\/bold><\/emphasis> <emphasis>=<\/emphasis> <emphasis>forward_reward - ctrl_cost<\/emphasis> and <codeVoice>info<\/codeVoice> will also contain the individual reward terms<\/Para><\/Item><\/List-Bullet><rawHTML><![CDATA[<h3>]]><\/rawHTML>Starting State<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>All observations start in state (0,0,0,0,0,0,0,0) with a Uniform noise in the range of [-<codeVoice>reset_noise_scale<\/codeVoice>, <codeVoice>reset_noise_scale<\/codeVoice>] is added to the initial state for stochasticity.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Episode End<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>The episode truncates when the episode length is greater than 1000.<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Arguments<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><Para>No additional arguments are currently supported in v2 and lower.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[gym.make('Swimmer-v4')]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>v3 and v4 take gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc.<\/Para><CodeListing language=\"swift\"><zCodeLineNumbered><![CDATA[env = gym.make('Swimmer-v4', ctrl_cost_weight=0.1, ....)]]><\/zCodeLineNumbered><zCodeLineNumbered><\/zCodeLineNumbered><\/CodeListing><Para>| Parameter                                    | Type      | Default         | Description                                                                                                                                                               | | –––––––––––––––––––––– | ——— | ————— | ———————————————————————————————————————————————————————–– | | <codeVoice>xml_file<\/codeVoice>                                   | <bold>str<\/bold>   | <codeVoice>&quot;swimmer.xml&quot;<\/codeVoice> | Path to a MuJoCo model                                                                                                                                                    | | <codeVoice>forward_reward_weight<\/codeVoice>                      | <bold>float<\/bold> | <codeVoice>1.0<\/codeVoice>           | Weight for <emphasis>forward_reward<\/emphasis> term (see section on reward)                                                                                                                  | | <codeVoice>ctrl_cost_weight<\/codeVoice>                           | <bold>float<\/bold> | <codeVoice>1e-4<\/codeVoice>          | Weight for <emphasis>ctrl_cost<\/emphasis> term (see section on reward)                                                                                                                       | | <codeVoice>reset_noise_scale<\/codeVoice>                          | <bold>float<\/bold> | <codeVoice>0.1<\/codeVoice>           | Scale of random perturbations of initial position and velocity (see section on Starting State)                                                                            | | <codeVoice>exclude_current_positions_from_observation<\/codeVoice> | <bold>bool<\/bold>  | <codeVoice>True<\/codeVoice>          | Whether or not to omit the x- and y-coordinates from observations. Excluding the position can serve as an inductive bias to induce position-agnostic behavior in policies |<\/Para><rawHTML><![CDATA[<h3>]]><\/rawHTML>Version History<rawHTML><![CDATA[<\/h3>]]><\/rawHTML><List-Bullet><Item><Para>v4: all mujoco environments now use the mujoco bindings in mujoco&gt;=2.1.3<\/Para><\/Item><Item><Para>v3: support for gym.make kwargs such as xml_file, ctrl_cost_weight, reset_noise_scale etc. rgb rendering comes from tracking camera (so agent does not run away from screen)<\/Para><\/Item><Item><Para>v2: All continuous control environments now use mujoco_py &gt;= 1.50<\/Para><\/Item><Item><Para>v1: max_time_steps raised to 1000 for robot based tasks. Added reward_threshold to environments.<\/Para><\/Item><Item><Para>v0: Initial versions release (1.0.0)<\/Para><\/Item><\/List-Bullet><\/Discussion><\/CommentParts><\/Class>",
         "key.doc.line" : 94,
         "key.doc.name" : "Swimmer",
         "key.doc.type" : "Class",
@@ -461,6 +471,7 @@
         "key.parsed_declaration" : "extension Swimmer: Env",
         "key.parsed_scope.end" : 199,
         "key.parsed_scope.start" : 123,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -492,6 +503,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main7SwimmerC7ActTypea\">ActType<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main7SwimmerC7ActTypea"
@@ -526,6 +538,7 @@
                 "key.annotated_decl" : "<RelatedName usr=\"s:4main7SwimmerC7ObsTypea\">ObsType<\/RelatedName>"
               }
             ],
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main7SwimmerC7ObsTypea"
@@ -555,6 +568,7 @@
             "key.parsed_declaration" : "public typealias RewardType = Float",
             "key.parsed_scope.end" : 126,
             "key.parsed_scope.start" : 126,
+            "key.reusingastcontext" : false,
             "key.typename" : "Float.Type",
             "key.typeusr" : "$sSfmD",
             "key.usr" : "s:4main7SwimmerC10RewardTypea"
@@ -584,6 +598,7 @@
             "key.parsed_declaration" : "public typealias TerminatedType = Bool",
             "key.parsed_scope.end" : 127,
             "key.parsed_scope.start" : 127,
+            "key.reusingastcontext" : false,
             "key.typename" : "Bool.Type",
             "key.typeusr" : "$sSbmD",
             "key.usr" : "s:4main7SwimmerC14TerminatedTypea"
@@ -615,6 +630,7 @@
             "key.parsed_declaration" : "private func observations() -> Tensor<Float64>",
             "key.parsed_scope.end" : 136,
             "key.parsed_scope.start" : 129,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let qpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -633,6 +649,7 @@
                 "key.parsed_declaration" : "let qpos = data.qpos",
                 "key.parsed_scope.end" : 130,
                 "key.parsed_scope.start" : 130,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC12observations33_7B5A124BC1AE680412312ADA5D6A9719LLyXeXeF4qposL_Xevp"
@@ -654,6 +671,7 @@
                 "key.parsed_declaration" : "let qvel = data.qvel",
                 "key.parsed_scope.end" : 131,
                 "key.parsed_scope.start" : 131,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC12observations33_7B5A124BC1AE680412312ADA5D6A9719LLyXeXeF4qvelL_Xevp"
@@ -675,6 +693,7 @@
                 "key.parsed_declaration" : "var tensor = Tensor<Float64>(.CPU, .C(8))",
                 "key.parsed_scope.end" : 132,
                 "key.parsed_scope.start" : 132,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC12observations33_7B5A124BC1AE680412312ADA5D6A9719LLyXeXeF6tensorL_Xevp"
@@ -711,6 +730,7 @@
             "key.parsed_declaration" : "public func step(action: ActType) -> (ObsType, RewardType, TerminatedType, [String: Any])",
             "key.parsed_scope.end" : 174,
             "key.parsed_scope.start" : 138,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let qpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -729,6 +749,7 @@
                 "key.parsed_declaration" : "let qpos = data.qpos",
                 "key.parsed_scope.end" : 139,
                 "key.parsed_scope.start" : 139,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF4qposL_Xevp"
@@ -750,6 +771,7 @@
                 "key.parsed_declaration" : "let xyPositionBefore = (qpos[0], qpos[1])",
                 "key.parsed_scope.end" : 140,
                 "key.parsed_scope.start" : 140,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF16xyPositionBeforeL_Xevp"
@@ -771,6 +793,7 @@
                 "key.parsed_declaration" : "let xyPositionAfter = (qpos[0], qpos[1])",
                 "key.parsed_scope.end" : 149,
                 "key.parsed_scope.start" : 149,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF15xyPositionAfterL_Xevp"
@@ -792,6 +815,7 @@
                 "key.parsed_declaration" : "let dt = model.opt.timestep * 4",
                 "key.parsed_scope.end" : 150,
                 "key.parsed_scope.start" : 150,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF2dtL_Xevp"
@@ -813,6 +837,7 @@
                 "key.parsed_declaration" : "let xyVelocity = (\n  (xyPositionAfter.0 - xyPositionBefore.0) \/ dt, (xyPositionAfter.1 - xyPositionBefore.1) \/ dt\n)",
                 "key.parsed_scope.end" : 151,
                 "key.parsed_scope.start" : 151,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF10xyVelocityL_Xevp"
@@ -834,6 +859,7 @@
                 "key.parsed_declaration" : "let forwardReward = forwardRewardWeight * xyVelocity.0",
                 "key.parsed_scope.end" : 154,
                 "key.parsed_scope.start" : 154,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF13forwardRewardL_Xevp"
@@ -855,6 +881,7 @@
                 "key.parsed_declaration" : "var ctrlCost: Double = 0",
                 "key.parsed_scope.end" : 155,
                 "key.parsed_scope.start" : 155,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF8ctrlCostL_Sdvp"
@@ -876,6 +903,7 @@
                 "key.parsed_declaration" : "let obs = observations()",
                 "key.parsed_scope.end" : 160,
                 "key.parsed_scope.start" : 160,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF3obsL_Xevp"
@@ -897,6 +925,7 @@
                 "key.parsed_declaration" : "let reward = Float(forwardReward - ctrlCost)",
                 "key.parsed_scope.end" : 161,
                 "key.parsed_scope.start" : 161,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF6rewardL_Xevp"
@@ -918,6 +947,7 @@
                 "key.parsed_declaration" : "let info: [String: Any] = [\n  \"reward_forward\": forwardReward,\n  \"reward_ctrl\": -ctrlCost,\n  \"x_position\": xyPositionAfter.0,\n  \"y_position\": xyPositionAfter.1,\n  \"distance_from_origin\":\n    (xyPositionAfter.0 * xyPositionAfter.0 + xyPositionAfter.1 * xyPositionAfter.1)\n    .squareRoot(),\n  \"x_velocity\": xyVelocity.0,\n  \"y_velocity\": xyVelocity.1,\n]",
                 "key.parsed_scope.end" : 162,
                 "key.parsed_scope.start" : 162,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[String : Any]",
                 "key.typeusr" : "$sSDySSypGD",
                 "key.usr" : "s:4main7SwimmerC4stepyXeXeF4infoL_SDySSypGvp"
@@ -954,6 +984,7 @@
             "key.parsed_declaration" : "public func reset(seed: Int?) -> (ObsType, [String: Any])",
             "key.parsed_scope.end" : 194,
             "key.parsed_scope.start" : 176,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let initQpos: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -972,6 +1003,7 @@
                 "key.parsed_declaration" : "let initQpos = initData.qpos",
                 "key.parsed_scope.end" : 177,
                 "key.parsed_scope.start" : 177,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC5resetyXeXeF8initQposL_Xevp"
@@ -993,6 +1025,7 @@
                 "key.parsed_declaration" : "let initQvel = initData.qvel",
                 "key.parsed_scope.end" : 178,
                 "key.parsed_scope.start" : 178,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC5resetyXeXeF8initQvelL_Xevp"
@@ -1014,6 +1047,7 @@
                 "key.parsed_declaration" : "var qpos = data.qpos",
                 "key.parsed_scope.end" : 179,
                 "key.parsed_scope.start" : 179,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC5resetyXeXeF4qposL_Xevp"
@@ -1035,6 +1069,7 @@
                 "key.parsed_declaration" : "var qvel = data.qvel",
                 "key.parsed_scope.end" : 180,
                 "key.parsed_scope.start" : 180,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC5resetyXeXeF4qvelL_Xevp"
@@ -1056,6 +1091,7 @@
                 "key.parsed_declaration" : "let obs = observations()",
                 "key.parsed_scope.end" : 192,
                 "key.parsed_scope.start" : 192,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main7SwimmerC5resetyXeXeF3obsL_Xevp"
@@ -1092,6 +1128,7 @@
             "key.parsed_declaration" : "public static var rewardThreshold: Float",
             "key.parsed_scope.end" : 196,
             "key.parsed_scope.start" : 196,
+            "key.reusingastcontext" : false,
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
             "key.usr" : "s:4main7SwimmerC15rewardThresholdSfvpZ"
@@ -1123,6 +1160,7 @@
             "key.parsed_declaration" : "public static var actionSpace: [ClosedRange<Float>]",
             "key.parsed_scope.end" : 197,
             "key.parsed_scope.start" : 197,
+            "key.reusingastcontext" : false,
             "key.typename" : "[ClosedRange<Float>]",
             "key.typeusr" : "$sSaySNySfGGD",
             "key.usr" : "s:4main7SwimmerC11actionSpaceSaySNySfGGvpZ"
@@ -1154,6 +1192,7 @@
             "key.parsed_declaration" : "public static var stateSize: Int",
             "key.parsed_scope.end" : 198,
             "key.parsed_scope.start" : 198,
+            "key.reusingastcontext" : false,
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
             "key.usr" : "s:4main7SwimmerC9stateSizeSivpZ"

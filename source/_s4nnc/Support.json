@@ -34,6 +34,7 @@
         "key.parsed_declaration" : "func toByteArr<T: BinaryInteger>(endian: T, count: Int) -> [UInt8]",
         "key.parsed_scope.end" : 13,
         "key.parsed_scope.start" : 5,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:Sz\">BinaryInteger<\/Type><\/Declaration>",
@@ -64,6 +65,7 @@
             "key.parsed_declaration" : "func toByteArr<T: BinaryInteger",
             "key.parsed_scope.end" : 5,
             "key.parsed_scope.start" : 5,
+            "key.reusingastcontext" : false,
             "key.typename" : "T.Type",
             "key.typeusr" : "$sxmD",
             "key.usr" : "s:4main9toByteArr6endian5countSays5UInt8VGx_SitSzRzlF1TL_xmfp"
@@ -85,6 +87,7 @@
             "key.parsed_declaration" : "var _endian = endian",
             "key.parsed_scope.end" : 6,
             "key.parsed_scope.start" : 6,
+            "key.reusingastcontext" : false,
             "key.typename" : "T",
             "key.typeusr" : "$sxD",
             "key.usr" : "s:4main9toByteArr6endian5countSays5UInt8VGx_SitSzRzlF01_E0L_xvp"
@@ -106,6 +109,7 @@
             "key.parsed_declaration" : "let bytePtr = withUnsafePointer(to: &_endian) {\n  $0.withMemoryRebound(to: UInt8.self, capacity: count) {\n    UnsafeBufferPointer(start: $0, count: count)\n  }\n}",
             "key.parsed_scope.end" : 7,
             "key.parsed_scope.start" : 7,
+            "key.reusingastcontext" : false,
             "key.typename" : "UnsafeBufferPointer<UInt8>",
             "key.typeusr" : "$sSRys5UInt8VGD",
             "key.usr" : "s:4main9toByteArr6endian5countSays5UInt8VGx_SitSzRzlF7bytePtrL_SRyAFGvp"
@@ -137,6 +141,7 @@
         "key.parsed_declaration" : "extension UInt64",
         "key.parsed_scope.end" : 23,
         "key.parsed_scope.start" : 15,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>var littleEndianBuffer: [<Type usr=\"s:s5UInt8V\">UInt8<\/Type>] { get }<\/Declaration>",
@@ -157,6 +162,7 @@
             "key.parsed_declaration" : "var littleEndianBuffer: [UInt8]",
             "key.parsed_scope.end" : 18,
             "key.parsed_scope.start" : 16,
+            "key.reusingastcontext" : false,
             "key.typename" : "[UInt8]",
             "key.typeusr" : "$sSays5UInt8VGD",
             "key.usr" : "s:s6UInt64V4mainE18littleEndianBufferSays5UInt8VGvp"
@@ -180,6 +186,7 @@
             "key.parsed_declaration" : "var bigEndianBuffer: [UInt8]",
             "key.parsed_scope.end" : 22,
             "key.parsed_scope.start" : 20,
+            "key.reusingastcontext" : false,
             "key.typename" : "[UInt8]",
             "key.typeusr" : "$sSays5UInt8VGD",
             "key.usr" : "s:s6UInt64V4mainE15bigEndianBufferSays5UInt8VGvp"
@@ -211,6 +218,7 @@
         "key.parsed_declaration" : "extension UInt32",
         "key.parsed_scope.end" : 33,
         "key.parsed_scope.start" : 25,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>var littleEndianBuffer: [<Type usr=\"s:s5UInt8V\">UInt8<\/Type>] { get }<\/Declaration>",
@@ -231,6 +239,7 @@
             "key.parsed_declaration" : "var littleEndianBuffer: [UInt8]",
             "key.parsed_scope.end" : 28,
             "key.parsed_scope.start" : 26,
+            "key.reusingastcontext" : false,
             "key.typename" : "[UInt8]",
             "key.typeusr" : "$sSays5UInt8VGD",
             "key.usr" : "s:s6UInt32V4mainE18littleEndianBufferSays5UInt8VGvp"
@@ -254,6 +263,7 @@
             "key.parsed_declaration" : "var bigEndianBuffer: [UInt8]",
             "key.parsed_scope.end" : 32,
             "key.parsed_scope.start" : 30,
+            "key.reusingastcontext" : false,
             "key.typename" : "[UInt8]",
             "key.typeusr" : "$sSays5UInt8VGD",
             "key.usr" : "s:s6UInt32V4mainE15bigEndianBufferSays5UInt8VGvp"
@@ -264,14 +274,14 @@
         "key.usr" : "s:s6UInt32V"
       },
       {
-        "key.annotated_decl" : "<Declaration>@frozen struct Data : <Type usr=\"s:10Foundation20ReferenceConvertibleP\">ReferenceConvertible<\/Type>, <Type usr=\"s:SQ\">Equatable<\/Type>, <Type usr=\"s:SH\">Hashable<\/Type>, <Type usr=\"s:Sk\">RandomAccessCollection<\/Type>, <Type usr=\"s:SM\">MutableCollection<\/Type>, <Type usr=\"s:Sm\">RangeReplaceableCollection<\/Type>, <Type usr=\"s:10Foundation19MutableDataProtocolP\">MutableDataProtocol<\/Type>, <Type usr=\"s:10Foundation15ContiguousBytesP\">ContiguousBytes<\/Type><\/Declaration>",
+        "key.annotated_decl" : "<Declaration>@frozen struct Data : <Type usr=\"s:10Foundation20ReferenceConvertibleP\">ReferenceConvertible<\/Type>, <Type usr=\"s:SQ\">Equatable<\/Type>, <Type usr=\"s:SH\">Hashable<\/Type>, <Type usr=\"s:Sk\">RandomAccessCollection<\/Type>, <Type usr=\"s:SM\">MutableCollection<\/Type>, <Type usr=\"s:Sm\">RangeReplaceableCollection<\/Type>, <Type usr=\"s:10Foundation19MutableDataProtocolP\">MutableDataProtocol<\/Type>, <Type usr=\"s:10Foundation15ContiguousBytesP\">ContiguousBytes<\/Type>, @unchecked <Type usr=\"s:s8SendableP\">Sendable<\/Type><\/Declaration>",
         "key.bodylength" : 1010,
         "key.bodyoffset" : 996,
         "key.decl_lang" : "source.lang.swift",
         "key.doc.comment" : "This is taken from https:\/\/github.com\/tensorflow\/swift-models\/blob\/master\/Checkpoints\/CheckpointReader.swift#L299\nNeed to take to a common place later.",
         "key.doclength" : 160,
         "key.docoffset" : 820,
-        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@frozen<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Data<\/decl.name> : <ref.protocol usr=\"s:10Foundation20ReferenceConvertibleP\">ReferenceConvertible<\/ref.protocol>, <ref.protocol usr=\"s:SQ\">Equatable<\/ref.protocol>, <ref.protocol usr=\"s:SH\">Hashable<\/ref.protocol>, <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol>, <ref.protocol usr=\"s:SM\">MutableCollection<\/ref.protocol>, <ref.protocol usr=\"s:Sm\">RangeReplaceableCollection<\/ref.protocol>, <ref.protocol usr=\"s:10Foundation19MutableDataProtocolP\">MutableDataProtocol<\/ref.protocol>, <ref.protocol usr=\"s:10Foundation15ContiguousBytesP\">ContiguousBytes<\/ref.protocol><\/decl.struct>",
+        "key.fully_annotated_decl" : "<decl.struct><syntaxtype.attribute.builtin><syntaxtype.attribute.name>@frozen<\/syntaxtype.attribute.name><\/syntaxtype.attribute.builtin> <syntaxtype.keyword>struct<\/syntaxtype.keyword> <decl.name>Data<\/decl.name> : <ref.protocol usr=\"s:10Foundation20ReferenceConvertibleP\">ReferenceConvertible<\/ref.protocol>, <ref.protocol usr=\"s:SQ\">Equatable<\/ref.protocol>, <ref.protocol usr=\"s:SH\">Hashable<\/ref.protocol>, <ref.protocol usr=\"s:Sk\">RandomAccessCollection<\/ref.protocol>, <ref.protocol usr=\"s:SM\">MutableCollection<\/ref.protocol>, <ref.protocol usr=\"s:Sm\">RangeReplaceableCollection<\/ref.protocol>, <ref.protocol usr=\"s:10Foundation19MutableDataProtocolP\">MutableDataProtocol<\/ref.protocol>, <ref.protocol usr=\"s:10Foundation15ContiguousBytesP\">ContiguousBytes<\/ref.protocol>, @unchecked <ref.protocol usr=\"s:s8SendableP\">Sendable<\/ref.protocol><\/decl.struct>",
         "key.is_system" : true,
         "key.kind" : "source.lang.swift.decl.extension",
         "key.length" : 1027,
@@ -283,6 +293,7 @@
         "key.parsed_declaration" : "extension Data",
         "key.parsed_scope.end" : 73,
         "key.parsed_scope.start" : 37,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>static var crc32CLookupTable: [<Type usr=\"s:s6UInt32V\">UInt32<\/Type>]<\/Declaration>",
@@ -301,6 +312,7 @@
             "key.parsed_declaration" : "static var crc32CLookupTable: [UInt32] = {\n  (0...255).map { index -> UInt32 in\n    var lookupValue = UInt32(index)\n    for _ in 0..<8 {\n      lookupValue =\n        (lookupValue % 2 == 0)\n        ? (lookupValue >> 1) : (0x82F6_3B78 ^ (lookupValue >> 1))\n    }\n    return lookupValue\n  }\n}()",
             "key.parsed_scope.end" : 38,
             "key.parsed_scope.start" : 38,
+            "key.reusingastcontext" : false,
             "key.typename" : "[UInt32]",
             "key.typeusr" : "$sSays6UInt32VGD",
             "key.usr" : "s:10Foundation4DataV4mainE17crc32CLookupTableSays6UInt32VGvpZ"
@@ -324,6 +336,7 @@
             "key.parsed_declaration" : "func crc32C() -> UInt32",
             "key.parsed_scope.end" : 65,
             "key.parsed_scope.start" : 50,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var crc32: <Type usr=\"s:s6UInt32V\">UInt32<\/Type><\/Declaration>",
@@ -342,6 +355,7 @@
                 "key.parsed_declaration" : "var crc32: UInt32 = 0xFFFF_FFFF",
                 "key.parsed_scope.end" : 51,
                 "key.parsed_scope.start" : 51,
+                "key.reusingastcontext" : false,
                 "key.typename" : "UInt32",
                 "key.typeusr" : "$ss6UInt32VD",
                 "key.usr" : "s:10Foundation4DataV4mainE6crc32Cs6UInt32VyF0D0L_AGvp"
@@ -370,6 +384,7 @@
             "key.parsed_declaration" : "func maskedCRC32C() -> UInt32",
             "key.parsed_scope.end" : 72,
             "key.parsed_scope.start" : 68,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let crc32: <Type usr=\"s:s6UInt32V\">UInt32<\/Type><\/Declaration>",
@@ -388,6 +403,7 @@
                 "key.parsed_declaration" : "let crc32 = self.crc32C()",
                 "key.parsed_scope.end" : 69,
                 "key.parsed_scope.start" : 69,
+                "key.reusingastcontext" : false,
                 "key.typename" : "UInt32",
                 "key.typeusr" : "$ss6UInt32VD",
                 "key.usr" : "s:10Foundation4DataV4mainE12maskedCRC32Cs6UInt32VyF5crc32L_AGvp"
@@ -409,6 +425,7 @@
                 "key.parsed_declaration" : "let maskDelta: UInt32 = 0xA282_EAD8",
                 "key.parsed_scope.end" : 70,
                 "key.parsed_scope.start" : 70,
+                "key.reusingastcontext" : false,
                 "key.typename" : "UInt32",
                 "key.typeusr" : "$ss6UInt32VD",
                 "key.usr" : "s:10Foundation4DataV4mainE12maskedCRC32Cs6UInt32VyF9maskDeltaL_AGvp"

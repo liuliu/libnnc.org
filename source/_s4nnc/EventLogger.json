@@ -34,6 +34,7 @@
         "key.parsed_declaration" : "struct EventLogger",
         "key.parsed_scope.end" : 45,
         "key.parsed_scope.start" : 5,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.private",
@@ -70,6 +71,7 @@
             "key.parsed_declaration" : "private let fd: FileDescriptor",
             "key.parsed_scope.end" : 7,
             "key.parsed_scope.start" : 7,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main11EventLoggerV2fd33_EEC76C61B2BBD1F6CD1225E968307C64LLXevp"
@@ -104,6 +106,7 @@
             "key.parsed_declaration" : "init(logDirectory: String) throws",
             "key.parsed_scope.end" : 28,
             "key.parsed_scope.start" : 11,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let timestamp: <Type usr=\"s:10Foundation12TimeIntervala\">TimeInterval<\/Type><\/Declaration>",
@@ -122,6 +125,7 @@
                 "key.parsed_declaration" : "let timestamp = Date().timeIntervalSince1970",
                 "key.parsed_scope.end" : 16,
                 "key.parsed_scope.start" : 16,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main11EventLoggerV12logDirectoryACSS_tKcfc9timestampL_Sdvp"
@@ -143,6 +147,12 @@
                 "key.parsed_declaration" : "let filePath = URL(fileURLWithPath: logDirectory, isDirectory: true).appendingPathComponent(\n  \"events.out.tfevents.\" + String(timestamp).split(separator: \".\")[0]\n).path",
                 "key.parsed_scope.end" : 17,
                 "key.parsed_scope.start" : 17,
+                "key.related_decls" : [
+                  {
+                    "key.annotated_decl" : "<RelatedName usr=\"s:s8filePathxycs26ExpressibleByStringLiteralRzlufm\">filePath()<\/RelatedName>"
+                  }
+                ],
+                "key.reusingastcontext" : false,
                 "key.typename" : "String",
                 "key.typeusr" : "$sSSD",
                 "key.usr" : "s:4main11EventLoggerV12logDirectoryACSS_tKcfc8filePathL_SSvp"
@@ -164,6 +174,7 @@
                 "key.parsed_declaration" : "var initialEvent = Tensorboard_Event()",
                 "key.parsed_scope.end" : 24,
                 "key.parsed_scope.start" : 24,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Tensorboard_Event",
                 "key.typeusr" : "$s4main17Tensorboard_EventVD",
                 "key.usr" : "s:4main11EventLoggerV12logDirectoryACSS_tKcfc07initialB0L_AA012Tensorboard_B0Vvp"
@@ -193,6 +204,7 @@
             "key.parsed_declaration" : "func close() throws",
             "key.parsed_scope.end" : 32,
             "key.parsed_scope.start" : 30,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -230,6 +242,7 @@
             "key.parsed_declaration" : "func add(_ event: Tensorboard_Event) throws",
             "key.parsed_scope.end" : 44,
             "key.parsed_scope.start" : 35,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let data: <Type usr=\"s:10Foundation4DataV\">Data<\/Type><\/Declaration>",
@@ -248,6 +261,7 @@
                 "key.parsed_declaration" : "let data: Data = try event.serializedData()",
                 "key.parsed_scope.end" : 36,
                 "key.parsed_scope.start" : 36,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Data",
                 "key.typeusr" : "$s10Foundation4DataVD",
                 "key.usr" : "s:4main11EventLoggerV3addyyAA012Tensorboard_B0VKF4dataL_10Foundation4DataVvp"
@@ -269,6 +283,7 @@
                 "key.parsed_declaration" : "var header: Data = Data()",
                 "key.parsed_scope.end" : 37,
                 "key.parsed_scope.start" : 37,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Data",
                 "key.typeusr" : "$s10Foundation4DataVD",
                 "key.usr" : "s:4main11EventLoggerV3addyyAA012Tensorboard_B0VKF6headerL_10Foundation4DataVvp"
@@ -290,6 +305,7 @@
                 "key.parsed_declaration" : "var payload = header",
                 "key.parsed_scope.end" : 39,
                 "key.parsed_scope.start" : 39,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Data",
                 "key.typeusr" : "$s10Foundation4DataVD",
                 "key.usr" : "s:4main11EventLoggerV3addyyAA012Tensorboard_B0VKF7payloadL_10Foundation4DataVvp"

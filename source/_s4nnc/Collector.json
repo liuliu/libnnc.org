@@ -46,6 +46,7 @@
         "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, StateType, EnvType: Env, EnvElement: TensorNumeric>\nwhere EnvType.ObsType == Tensor<EnvElement>, EnvType.ActType == Tensor<EnvElement>",
         "key.parsed_scope.end" : 27,
         "key.parsed_scope.start" : 9,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>Element : TensorNumeric<\/Declaration>",
@@ -76,6 +77,7 @@
             "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
+            "key.reusingastcontext" : false,
             "key.typename" : "Element.Type",
             "key.typeusr" : "$sxmD",
             "key.usr" : "s:4main9CollectorV7Elementxmfp"
@@ -97,6 +99,7 @@
             "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, StateType",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
+            "key.reusingastcontext" : false,
             "key.typename" : "StateType.Type",
             "key.typeusr" : "$sq_mD",
             "key.usr" : "s:4main9CollectorV9StateTypeq_mfp"
@@ -130,6 +133,7 @@
             "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, StateType, EnvType: Env",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvType.Type",
             "key.typeusr" : "$sq0_mD",
             "key.usr" : "s:4main9CollectorV7EnvTypeq0_mfp"
@@ -163,6 +167,7 @@
             "key.parsed_declaration" : "public struct Collector<Element: TensorNumeric, StateType, EnvType: Env, EnvElement: TensorNumeric",
             "key.parsed_scope.end" : 9,
             "key.parsed_scope.start" : 9,
+            "key.reusingastcontext" : false,
             "key.typename" : "EnvElement.Type",
             "key.typeusr" : "$sq1_mD",
             "key.usr" : "s:4main9CollectorV10EnvElementq1_mfp"
@@ -192,6 +197,7 @@
             "key.parsed_declaration" : "public typealias ObsType = Tensor<Element>",
             "key.parsed_scope.end" : 11,
             "key.parsed_scope.start" : 11,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main9CollectorV7ObsTypea"
@@ -221,6 +227,7 @@
             "key.parsed_declaration" : "public typealias ActType = Tensor<Element>",
             "key.parsed_scope.end" : 12,
             "key.parsed_scope.start" : 12,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main9CollectorV7ActTypea"
@@ -243,6 +250,7 @@
             "key.parsed_declaration" : "var envs: [EnvType]",
             "key.parsed_scope.end" : 13,
             "key.parsed_scope.start" : 13,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
             "key.typename" : "[EnvType]",
             "key.typeusr" : "$sSayq0_GD",
@@ -266,6 +274,7 @@
             "key.parsed_declaration" : "var batch: [CollectedData<Element, StateType>]",
             "key.parsed_scope.end" : 14,
             "key.parsed_scope.start" : 14,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
             "key.typename" : "[CollectedData<Element, StateType>]",
             "key.typeusr" : "$sSay4main13CollectedDataVyxq_GGD",
@@ -289,6 +298,7 @@
             "key.parsed_declaration" : "var finalizedBatch: [CollectedData<Element, StateType>]",
             "key.parsed_scope.end" : 15,
             "key.parsed_scope.start" : 15,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
             "key.typename" : "[CollectedData<Element, StateType>]",
             "key.typeusr" : "$sSay4main13CollectedDataVyxq_GGD",
@@ -312,6 +322,7 @@
             "key.parsed_declaration" : "let policy: (_: ObsType) -> (ActType, StateType)",
             "key.parsed_scope.end" : 16,
             "key.parsed_scope.start" : 16,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main9CollectorV6policyXevp"
@@ -343,6 +354,7 @@
             "key.parsed_declaration" : "public init(envs: [EnvType], policy: @escaping (_: ObsType) -> (ActType, StateType))",
             "key.parsed_scope.end" : 26,
             "key.parsed_scope.start" : 17,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -382,6 +394,7 @@
         "key.parsed_declaration" : "public struct CollectedData<Element: TensorNumeric, StateType>",
         "key.parsed_scope.end" : 61,
         "key.parsed_scope.start" : 29,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.annotated_decl" : "<Declaration>Element : TensorNumeric<\/Declaration>",
@@ -412,6 +425,7 @@
             "key.parsed_declaration" : "public struct CollectedData<Element: TensorNumeric",
             "key.parsed_scope.end" : 29,
             "key.parsed_scope.start" : 29,
+            "key.reusingastcontext" : false,
             "key.typename" : "Element.Type",
             "key.typeusr" : "$sxmD",
             "key.usr" : "s:4main13CollectedDataV7Elementxmfp"
@@ -433,6 +447,7 @@
             "key.parsed_declaration" : "public struct CollectedData<Element: TensorNumeric, StateType",
             "key.parsed_scope.end" : 29,
             "key.parsed_scope.start" : 29,
+            "key.reusingastcontext" : false,
             "key.typename" : "StateType.Type",
             "key.typeusr" : "$sq_mD",
             "key.usr" : "s:4main13CollectedDataV9StateTypeq_mfp"
@@ -464,6 +479,7 @@
             "key.parsed_declaration" : "public enum EnvState",
             "key.parsed_scope.end" : 34,
             "key.parsed_scope.start" : 30,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.kind" : "source.lang.swift.decl.enumcase",
@@ -488,6 +504,7 @@
                     "key.parsed_declaration" : "case ready",
                     "key.parsed_scope.end" : 31,
                     "key.parsed_scope.start" : 31,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<Element, StateType> (CollectedData<Element, StateType>.EnvState.Type) -> CollectedData<Element, StateType>.EnvState",
                     "key.typeusr" : "$sy4main13CollectedDataV8EnvStateOyxq__GAFmcr0_luD",
                     "key.usr" : "s:4main13CollectedDataV8EnvStateO5readyyAEyxq__GAGmr0_lF"
@@ -517,6 +534,7 @@
                     "key.parsed_declaration" : "case terminated",
                     "key.parsed_scope.end" : 32,
                     "key.parsed_scope.start" : 32,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<Element, StateType> (CollectedData<Element, StateType>.EnvState.Type) -> CollectedData<Element, StateType>.EnvState",
                     "key.typeusr" : "$sy4main13CollectedDataV8EnvStateOyxq__GAFmcr0_luD",
                     "key.usr" : "s:4main13CollectedDataV8EnvStateO10terminatedyAEyxq__GAGmr0_lF"
@@ -546,6 +564,7 @@
                     "key.parsed_declaration" : "case truncated",
                     "key.parsed_scope.end" : 33,
                     "key.parsed_scope.start" : 33,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<Element, StateType> (CollectedData<Element, StateType>.EnvState.Type) -> CollectedData<Element, StateType>.EnvState",
                     "key.typeusr" : "$sy4main13CollectedDataV8EnvStateOyxq__GAFmcr0_luD",
                     "key.usr" : "s:4main13CollectedDataV8EnvStateO9truncatedyAEyxq__GAGmr0_lF"
@@ -582,6 +601,7 @@
             "key.parsed_declaration" : "public typealias ObsType = Tensor<Element>",
             "key.parsed_scope.end" : 35,
             "key.parsed_scope.start" : 35,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13CollectedDataV7ObsTypea"
@@ -611,6 +631,7 @@
             "key.parsed_declaration" : "public typealias ActType = Tensor<Element>",
             "key.parsed_scope.end" : 36,
             "key.parsed_scope.start" : 36,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main13CollectedDataV7ActTypea"
@@ -640,6 +661,7 @@
             "key.parsed_declaration" : "public var lastObservation: ObsType",
             "key.parsed_scope.end" : 37,
             "key.parsed_scope.start" : 37,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
@@ -670,6 +692,7 @@
             "key.parsed_declaration" : "public var rewards: [Float]",
             "key.parsed_scope.end" : 38,
             "key.parsed_scope.start" : 38,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "[Float]",
             "key.typeusr" : "$sSaySfGD",
@@ -700,6 +723,7 @@
             "key.parsed_declaration" : "public var states: [StateType]",
             "key.parsed_scope.end" : 39,
             "key.parsed_scope.start" : 39,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "[StateType]",
             "key.typeusr" : "$sSayq_GD",
@@ -730,6 +754,7 @@
             "key.parsed_declaration" : "public var episodeReward: Float",
             "key.parsed_scope.end" : 40,
             "key.parsed_scope.start" : 40,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Float",
             "key.typeusr" : "$sSfD",
@@ -760,6 +785,7 @@
             "key.parsed_declaration" : "public var episodeLength: Int",
             "key.parsed_scope.end" : 41,
             "key.parsed_scope.start" : 41,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
@@ -790,6 +816,7 @@
             "key.parsed_declaration" : "public var envState: EnvState",
             "key.parsed_scope.end" : 42,
             "key.parsed_scope.start" : 42,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.public",
             "key.typename" : "CollectedData<Element, StateType>.EnvState",
             "key.typeusr" : "$s4main13CollectedDataV8EnvStateOyxq__GD",
@@ -822,6 +849,7 @@
             "key.parsed_declaration" : "public init(lastObservation: ObsType)",
             "key.parsed_scope.end" : 50,
             "key.parsed_scope.start" : 43,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -856,6 +884,7 @@
             "key.parsed_declaration" : "mutating func reset(keepLastN: Int = 0)",
             "key.parsed_scope.end" : 60,
             "key.parsed_scope.start" : 51,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -899,6 +928,7 @@
         "key.parsed_declaration" : "extension Collector",
         "key.parsed_scope.end" : 101,
         "key.parsed_scope.start" : 63,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -927,6 +957,7 @@
             "key.parsed_declaration" : "public struct Statistics",
             "key.parsed_scope.end" : 78,
             "key.parsed_scope.start" : 64,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -953,6 +984,7 @@
                 "key.parsed_declaration" : "public var episodeCount: Int",
                 "key.parsed_scope.end" : 65,
                 "key.parsed_scope.start" : 65,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
@@ -983,6 +1015,7 @@
                 "key.parsed_declaration" : "public var stepCount: Int",
                 "key.parsed_scope.end" : 66,
                 "key.parsed_scope.start" : 66,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
@@ -1013,6 +1046,7 @@
                 "key.parsed_declaration" : "public var episodeReward: NumericalStatistics",
                 "key.parsed_scope.end" : 67,
                 "key.parsed_scope.start" : 67,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "NumericalStatistics",
                 "key.typeusr" : "$s4main19NumericalStatisticsVD",
@@ -1043,6 +1077,7 @@
                 "key.parsed_declaration" : "public var episodeLength: NumericalStatistics",
                 "key.parsed_scope.end" : 68,
                 "key.parsed_scope.start" : 68,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "NumericalStatistics",
                 "key.typeusr" : "$s4main19NumericalStatisticsVD",
@@ -1068,6 +1103,7 @@
                 "key.parsed_declaration" : "init(\n  episodeCount: Int, stepCount: Int, episodeReward: NumericalStatistics,\n  episodeLength: NumericalStatistics\n)",
                 "key.parsed_scope.end" : 77,
                 "key.parsed_scope.start" : 69,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -1112,6 +1148,7 @@
             "key.parsed_declaration" : "public mutating func resetData(keepLastN: Int = 0)",
             "key.parsed_scope.end" : 85,
             "key.parsed_scope.start" : 80,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -1151,6 +1188,7 @@
             "key.parsed_declaration" : "public mutating func reset()",
             "key.parsed_scope.end" : 96,
             "key.parsed_scope.start" : 87,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -1185,6 +1223,7 @@
             "key.parsed_declaration" : "public var data: [CollectedData<Element, StateType>]",
             "key.parsed_scope.end" : 100,
             "key.parsed_scope.start" : 98,
+            "key.reusingastcontext" : false,
             "key.typename" : "[CollectedData<Element, StateType>]",
             "key.typeusr" : "$sSay4main13CollectedDataVyxq_GGD",
             "key.usr" : "s:4main9CollectorV4dataSayAA13CollectedDataVyxq_GGvp"
@@ -1225,6 +1264,7 @@
         "key.parsed_declaration" : "extension Collector where EnvType.TerminatedType == Bool, EnvType.RewardType == Float",
         "key.parsed_scope.end" : 144,
         "key.parsed_scope.start" : 103,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1258,6 +1298,7 @@
             "key.parsed_declaration" : "public mutating func collect(nStep: Int) -> Statistics",
             "key.parsed_scope.end" : 143,
             "key.parsed_scope.start" : 104,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var episodeCount: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
@@ -1276,9 +1317,10 @@
                 "key.parsed_declaration" : "var episodeCount = 0",
                 "key.parsed_scope.end" : 105,
                 "key.parsed_scope.start" : 105,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
-                "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF12episodeCountL_Sivp"
+                "key.usr" : "s:4main9CollectorVAAXe7ActTypeRt0_Xe03ObsD0Rt0_Sf06RewardD0Rt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF12episodeCountL_Sivp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var stepCount: <Type usr=\"s:Si\">Int<\/Type><\/Declaration>",
@@ -1297,9 +1339,10 @@
                 "key.parsed_declaration" : "var stepCount = 0",
                 "key.parsed_scope.end" : 106,
                 "key.parsed_scope.start" : 106,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
-                "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF9stepCountL_Sivp"
+                "key.usr" : "s:4main9CollectorVAAXe7ActTypeRt0_Xe03ObsD0Rt0_Sf06RewardD0Rt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF9stepCountL_Sivp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var episodeRewards: [<Type usr=\"s:Sf\">Float<\/Type>]<\/Declaration>",
@@ -1318,9 +1361,10 @@
                 "key.parsed_declaration" : "var episodeRewards = [Float]()",
                 "key.parsed_scope.end" : 107,
                 "key.parsed_scope.start" : 107,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[Float]",
                 "key.typeusr" : "$sSaySfGD",
-                "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeRewardsL_SaySfGvp"
+                "key.usr" : "s:4main9CollectorVAAXe7ActTypeRt0_Xe03ObsD0Rt0_Sf06RewardD0Rt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeRewardsL_SaySfGvp"
               },
               {
                 "key.annotated_decl" : "<Declaration>var episodeLengths: [<Type usr=\"s:Sf\">Float<\/Type>]<\/Declaration>",
@@ -1339,14 +1383,15 @@
                 "key.parsed_declaration" : "var episodeLengths = [Float]()",
                 "key.parsed_scope.end" : 108,
                 "key.parsed_scope.start" : 108,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[Float]",
                 "key.typeusr" : "$sSaySfGD",
-                "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeLengthsL_SaySfGvp"
+                "key.usr" : "s:4main9CollectorVAAXe7ActTypeRt0_Xe03ObsD0Rt0_Sf06RewardD0Rt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF14episodeLengthsL_SaySfGvp"
               }
             ],
             "key.typename" : "<Element, StateType, EnvType, EnvElement where EnvType : Env, EnvType.ActType == <<error type>>, EnvType.ObsType == <<error type>>, EnvType.RewardType == Float, EnvType.TerminatedType == Bool> (inout Collector<Element, StateType, EnvType, EnvElement>) -> (Int) -> Collector<Element, StateType, EnvType, EnvElement>.Statistics",
             "key.typeusr" : "$s5nStep4main9CollectorV10StatisticsVyxq_q0_q1__GSi_tcD",
-            "key.usr" : "s:4main9CollectorVAASf10RewardTypeRt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF"
+            "key.usr" : "s:4main9CollectorVAAXe7ActTypeRt0_Xe03ObsD0Rt0_Sf06RewardD0Rt0_Sb010TerminatedD0Rt0_rlE7collect5nStepAC10StatisticsVyxq_q0_q1__GSi_tF"
           }
         ],
         "key.typename" : "Collector<Element, StateType, EnvType, EnvElement>.Type",

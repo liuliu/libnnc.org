@@ -31,6 +31,7 @@
         "key.parsed_declaration" : "public struct PPO",
         "key.parsed_scope.end" : 46,
         "key.parsed_scope.start" : 4,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -52,6 +53,7 @@
             "key.parsed_declaration" : "static func computeEpisodicGAEReturns(\n  values: [Float], rewards: [Float], rewStd: Float, gamma: Float = 0.99, gaeGamma: Float = 0.95\n) -> (\n  advantages: [Float], returns: [Float]\n)",
             "key.parsed_scope.end" : 23,
             "key.parsed_scope.start" : 6,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let delta: [<Type usr=\"s:Sf\">Float<\/Type>]<\/Declaration>",
@@ -70,6 +72,7 @@
                 "key.parsed_declaration" : "let delta: [Float] = rewards.enumerated().map { (i: Int, rew: Float) -> Float in\n  rew + (values[i + 1] * gamma - values[i]) * rewStd\n}",
                 "key.parsed_scope.end" : 11,
                 "key.parsed_scope.start" : 11,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[Float]",
                 "key.typeusr" : "$sSaySfGD",
                 "key.usr" : "s:4main3PPOV25computeEpisodicGAEReturns6values7rewards6rewStd5gamma8gaeGammaSaySfG10advantages_AJ7returnstAJ_AJS3ftFZ5deltaL_AJvp"
@@ -91,6 +94,7 @@
                 "key.parsed_declaration" : "var gae: Float = 0",
                 "key.parsed_scope.end" : 14,
                 "key.parsed_scope.start" : 14,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Float",
                 "key.typeusr" : "$sSfD",
                 "key.usr" : "s:4main3PPOV25computeEpisodicGAEReturns6values7rewards6rewStd5gamma8gaeGammaSaySfG10advantages_AJ7returnstAJ_AJS3ftFZ0K0L_Sfvp"
@@ -112,6 +116,7 @@
                 "key.parsed_declaration" : "let advantages: [Float] = delta.reversed().map({ (delta: Float) -> Float in\n  gae = delta + gamma * gaeGamma * gae\n  return gae\n}).reversed()",
                 "key.parsed_scope.end" : 15,
                 "key.parsed_scope.start" : 15,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[Float]",
                 "key.typeusr" : "$sSaySfGD",
                 "key.usr" : "s:4main3PPOV25computeEpisodicGAEReturns6values7rewards6rewStd5gamma8gaeGammaSaySfG10advantages_AJ7returnstAJ_AJS3ftFZAKL_AJvp"
@@ -133,6 +138,7 @@
                 "key.parsed_declaration" : "let unnormalizedReturns = advantages.enumerated().map { i, adv in\n  values[i] * rewStd + adv\n}",
                 "key.parsed_scope.end" : 19,
                 "key.parsed_scope.start" : 19,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[Float]",
                 "key.typeusr" : "$sSaySfGD",
                 "key.usr" : "s:4main3PPOV25computeEpisodicGAEReturns6values7rewards6rewStd5gamma8gaeGammaSaySfG10advantages_AJ7returnstAJ_AJS3ftFZ19unnormalizedReturnsL_AJvp"
@@ -169,6 +175,7 @@
             "key.parsed_declaration" : "public struct ContinuousState",
             "key.parsed_scope.end" : 34,
             "key.parsed_scope.start" : 25,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -195,6 +202,7 @@
                 "key.parsed_declaration" : "public var centroid: Tensor<Float>",
                 "key.parsed_scope.end" : 26,
                 "key.parsed_scope.start" : 26,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -225,6 +233,7 @@
                 "key.parsed_declaration" : "public var action: Tensor<Float>",
                 "key.parsed_scope.end" : 27,
                 "key.parsed_scope.start" : 27,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -255,6 +264,7 @@
                 "key.parsed_declaration" : "public var observation: Tensor<Float>",
                 "key.parsed_scope.end" : 28,
                 "key.parsed_scope.start" : 28,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -287,6 +297,7 @@
                 "key.parsed_declaration" : "public init(centroid: Tensor<Float>, action: Tensor<Float>, observation: Tensor<Float>)",
                 "key.parsed_scope.end" : 33,
                 "key.parsed_scope.start" : 29,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -324,6 +335,7 @@
             "key.parsed_declaration" : "private var rewMean: Double = 0",
             "key.parsed_scope.end" : 36,
             "key.parsed_scope.start" : 36,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
@@ -354,6 +366,7 @@
             "key.parsed_declaration" : "private var rewVar: Double = 1",
             "key.parsed_scope.end" : 37,
             "key.parsed_scope.start" : 37,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "Double",
             "key.typeusr" : "$sSdD",
@@ -384,6 +397,7 @@
             "key.parsed_declaration" : "private var rewTotal: Int = 0",
             "key.parsed_scope.end" : 38,
             "key.parsed_scope.start" : 38,
+            "key.reusingastcontext" : false,
             "key.setter_accessibility" : "source.lang.swift.accessibility.private",
             "key.typename" : "Int",
             "key.typeusr" : "$sSiD",
@@ -414,6 +428,7 @@
             "key.parsed_declaration" : "private let graph: DynamicGraph",
             "key.parsed_scope.end" : 39,
             "key.parsed_scope.start" : 39,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main3PPOV5graph33_43AE1C8EB84AF586BC77D4871F17B9E0LLXevp"
@@ -443,6 +458,7 @@
             "key.parsed_declaration" : "private let critic: (_: Tensor<Float>) -> Tensor<Float>",
             "key.parsed_scope.end" : 40,
             "key.parsed_scope.start" : 40,
+            "key.reusingastcontext" : false,
             "key.typename" : "<<error type>>",
             "key.typeusr" : "$sXeD",
             "key.usr" : "s:4main3PPOV6critic33_43AE1C8EB84AF586BC77D4871F17B9E0LLXevp"
@@ -474,6 +490,7 @@
             "key.parsed_declaration" : "public init(graph: DynamicGraph, critic: @escaping (_: Tensor<Float>) -> Tensor<Float>)",
             "key.parsed_scope.end" : 45,
             "key.parsed_scope.start" : 42,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
 
             ],
@@ -505,6 +522,7 @@
         "key.parsed_declaration" : "extension PPO",
         "key.parsed_scope.end" : 61,
         "key.parsed_scope.start" : 48,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -533,6 +551,7 @@
             "key.parsed_declaration" : "public struct Statistics",
             "key.parsed_scope.end" : 54,
             "key.parsed_scope.start" : 49,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -559,6 +578,7 @@
                 "key.parsed_declaration" : "public var rewardsNormalization: NumericalStatistics",
                 "key.parsed_scope.end" : 50,
                 "key.parsed_scope.start" : 50,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "NumericalStatistics",
                 "key.typeusr" : "$s4main19NumericalStatisticsVD",
@@ -584,6 +604,7 @@
                 "key.parsed_declaration" : "init(rewardsNormalization: NumericalStatistics)",
                 "key.parsed_scope.end" : 53,
                 "key.parsed_scope.start" : 51,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -623,6 +644,7 @@
             "key.parsed_declaration" : "public var statistics: Statistics",
             "key.parsed_scope.end" : 60,
             "key.parsed_scope.start" : 56,
+            "key.reusingastcontext" : false,
             "key.typename" : "PPO.Statistics",
             "key.typeusr" : "$s4main3PPOV10StatisticsVD",
             "key.usr" : "s:4main3PPOV10statisticsAC10StatisticsVvp"
@@ -651,6 +673,7 @@
         "key.parsed_declaration" : "extension PPO",
         "key.parsed_scope.end" : 203,
         "key.parsed_scope.start" : 63,
+        "key.reusingastcontext" : false,
         "key.substructure" : [
           {
             "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -679,6 +702,7 @@
             "key.parsed_declaration" : "public func distributions(\n  scale: Tensor<Float>, from batch: [CollectedData<Float, ContinuousState>]\n) -> [[Tensor<Float>]]",
             "key.parsed_scope.end" : 82,
             "key.parsed_scope.start" : 64,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>let scaleVar: &lt;&lt;error type&gt;&gt;<\/Declaration>",
@@ -697,6 +721,7 @@
                 "key.parsed_declaration" : "let scaleVar = graph.constant(scale)",
                 "key.parsed_scope.end" : 67,
                 "key.parsed_scope.start" : 67,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main3PPOV13distributionsyXeXeF8scaleVarL_Xevp"
@@ -718,6 +743,7 @@
                 "key.parsed_declaration" : "let expScale = Functional.exp(scaleVar)",
                 "key.parsed_scope.end" : 68,
                 "key.parsed_scope.start" : 68,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main3PPOV13distributionsyXeXeF8expScaleL_Xevp"
@@ -739,6 +765,7 @@
                 "key.parsed_declaration" : "let var2 = 1 \/ (2 * (expScale .* expScale))",
                 "key.parsed_scope.end" : 69,
                 "key.parsed_scope.start" : 69,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main3PPOV13distributionsyXeXeF4var2L_Xevp"
@@ -760,6 +787,7 @@
                 "key.parsed_declaration" : "var resultDistributions = [[Tensor<Float>]]()",
                 "key.parsed_scope.end" : 70,
                 "key.parsed_scope.start" : 70,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main3PPOV13distributionsyXeXeF19resultDistributionsL_Xevp"
@@ -801,6 +829,7 @@
             "key.parsed_declaration" : "public mutating func computeReturns(from batch: [CollectedData<Float, ContinuousState>])\n  -> (returns: [[Float]], advantages: [[Float]])",
             "key.parsed_scope.end" : 140,
             "key.parsed_scope.start" : 84,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>var resultReturns: [[<Type usr=\"s:Sf\">Float<\/Type>]]<\/Declaration>",
@@ -819,6 +848,7 @@
                 "key.parsed_declaration" : "var resultReturns = [[Float]]()",
                 "key.parsed_scope.end" : 87,
                 "key.parsed_scope.start" : 87,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[[Float]]",
                 "key.typeusr" : "$sSaySaySfGGD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF06resultD0L_AGvp"
@@ -840,6 +870,7 @@
                 "key.parsed_declaration" : "var resultAdvatanges = [[Float]]()",
                 "key.parsed_scope.end" : 88,
                 "key.parsed_scope.start" : 88,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[[Float]]",
                 "key.typeusr" : "$sSaySaySfGGD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF16resultAdvatangesL_AGvp"
@@ -861,6 +892,7 @@
                 "key.parsed_declaration" : "var resultUnnormalizedReturns = [[Float]]()",
                 "key.parsed_scope.end" : 89,
                 "key.parsed_scope.start" : 89,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[[Float]]",
                 "key.typeusr" : "$sSaySaySfGGD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF018resultUnnormalizedD0L_AGvp"
@@ -882,6 +914,7 @@
                 "key.parsed_declaration" : "var batchMean: Double = 0",
                 "key.parsed_scope.end" : 90,
                 "key.parsed_scope.start" : 90,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF9batchMeanL_Sdvp"
@@ -903,6 +936,7 @@
                 "key.parsed_declaration" : "var batchCount: Int = 0",
                 "key.parsed_scope.end" : 91,
                 "key.parsed_scope.start" : 91,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF10batchCountL_Sivp"
@@ -924,6 +958,7 @@
                 "key.parsed_declaration" : "var batchVar: Double = 0",
                 "key.parsed_scope.end" : 124,
                 "key.parsed_scope.start" : 124,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF8batchVarL_Sdvp"
@@ -945,6 +980,7 @@
                 "key.parsed_declaration" : "let delta = batchMean - rewMean",
                 "key.parsed_scope.end" : 131,
                 "key.parsed_scope.start" : 131,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF5deltaL_Sdvp"
@@ -966,6 +1002,7 @@
                 "key.parsed_declaration" : "let totalCount = batchCount + rewTotal",
                 "key.parsed_scope.end" : 132,
                 "key.parsed_scope.start" : 132,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Int",
                 "key.typeusr" : "$sSiD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF10totalCountL_Sivp"
@@ -987,6 +1024,7 @@
                 "key.parsed_declaration" : "let mA = rewVar * Double(rewTotal)",
                 "key.parsed_scope.end" : 134,
                 "key.parsed_scope.start" : 134,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF2mAL_Sdvp"
@@ -1008,6 +1046,7 @@
                 "key.parsed_declaration" : "let mB = batchVar * Double(batchCount)",
                 "key.parsed_scope.end" : 135,
                 "key.parsed_scope.start" : 135,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF2mBL_Sdvp"
@@ -1029,6 +1068,7 @@
                 "key.parsed_declaration" : "let m2 = mA + mB + delta * delta * Double(rewTotal) * Double(batchCount) \/ Double(totalCount)",
                 "key.parsed_scope.end" : 136,
                 "key.parsed_scope.start" : 136,
+                "key.reusingastcontext" : false,
                 "key.typename" : "Double",
                 "key.typeusr" : "$sSdD",
                 "key.usr" : "s:4main3PPOV14computeReturns4fromSaySaySfGG7returns_AG10advantagestSayAA13CollectedDataVySfAC15ContinuousStateVGG_tF2m2L_Sdvp"
@@ -1065,6 +1105,7 @@
             "key.parsed_declaration" : "private struct Sample",
             "key.parsed_scope.end" : 148,
             "key.parsed_scope.start" : 142,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.internal",
@@ -1084,6 +1125,7 @@
                 "key.parsed_declaration" : "var observation: Tensor<Float32>",
                 "key.parsed_scope.end" : 143,
                 "key.parsed_scope.start" : 143,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -1107,6 +1149,7 @@
                 "key.parsed_declaration" : "var action: Tensor<Float32>",
                 "key.parsed_scope.end" : 144,
                 "key.parsed_scope.start" : 144,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -1130,6 +1173,7 @@
                 "key.parsed_declaration" : "var advantage: Tensor<Float32>",
                 "key.parsed_scope.end" : 145,
                 "key.parsed_scope.start" : 145,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -1153,6 +1197,7 @@
                 "key.parsed_declaration" : "var `return`: Tensor<Float32>",
                 "key.parsed_scope.end" : 146,
                 "key.parsed_scope.start" : 146,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -1176,6 +1221,7 @@
                 "key.parsed_declaration" : "var oldDistribution: Tensor<Float32>",
                 "key.parsed_scope.end" : 147,
                 "key.parsed_scope.start" : 147,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.internal",
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
@@ -1213,6 +1259,7 @@
             "key.parsed_declaration" : "public static func samples<T: RandomNumberGenerator>(\n  from collectedData: [CollectedData<Float, ContinuousState>], episodeCount: Int,\n  using generator: inout T, returns: [[Float]], advantages: [[Float]],\n  oldDistributions: [[Tensor<Float>]]\n) -> DataFrame",
             "key.parsed_scope.end" : 178,
             "key.parsed_scope.start" : 150,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.annotated_decl" : "<Declaration>T : <Type usr=\"s:SG\">RandomNumberGenerator<\/Type><\/Declaration>",
@@ -1243,6 +1290,7 @@
                 "key.parsed_declaration" : "public static func samples<T: RandomNumberGenerator",
                 "key.parsed_scope.end" : 150,
                 "key.parsed_scope.start" : 150,
+                "key.reusingastcontext" : false,
                 "key.typename" : "T.Type",
                 "key.typeusr" : "$sxmD",
                 "key.usr" : "s:4main3PPOV7samplesyXeXeFZ1TL_xmfp"
@@ -1264,6 +1312,7 @@
                 "key.parsed_declaration" : "var samples = [Sample]()",
                 "key.parsed_scope.end" : 155,
                 "key.parsed_scope.start" : 155,
+                "key.reusingastcontext" : false,
                 "key.typename" : "[PPO.Sample]",
                 "key.typeusr" : "$sSay4main3PPOV6Sample33_43AE1C8EB84AF586BC77D4871F17B9E0LLVGD",
                 "key.usr" : "s:4main3PPOV7samplesyXeXeFZADL_SayAC6Sample33_43AE1C8EB84AF586BC77D4871F17B9E0LLVGvp"
@@ -1285,6 +1334,7 @@
                 "key.parsed_declaration" : "let batch = (0..<collectedData.count).randomSample(count: episodeCount, using: &generator)",
                 "key.parsed_scope.end" : 156,
                 "key.parsed_scope.start" : 156,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main3PPOV7samplesyXeXeFZ5batchL_Xevp"
@@ -1306,6 +1356,7 @@
                 "key.parsed_declaration" : "var df = DataFrame(from: samples, name: \"data\")",
                 "key.parsed_scope.end" : 171,
                 "key.parsed_scope.start" : 171,
+                "key.reusingastcontext" : false,
                 "key.typename" : "<<error type>>",
                 "key.typeusr" : "$sXeD",
                 "key.usr" : "s:4main3PPOV7samplesyXeXeFZ2dfL_Xevp"
@@ -1342,6 +1393,7 @@
             "key.parsed_declaration" : "public struct ClipLoss",
             "key.parsed_scope.end" : 201,
             "key.parsed_scope.start" : 180,
+            "key.reusingastcontext" : false,
             "key.substructure" : [
               {
                 "key.accessibility" : "source.lang.swift.accessibility.public",
@@ -1368,6 +1420,7 @@
                 "key.parsed_declaration" : "public var epsilon: Float",
                 "key.parsed_scope.end" : 181,
                 "key.parsed_scope.start" : 181,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "Float",
                 "key.typeusr" : "$sSfD",
@@ -1398,6 +1451,7 @@
                 "key.parsed_declaration" : "public var entropyCoefficient: Float",
                 "key.parsed_scope.end" : 182,
                 "key.parsed_scope.start" : 182,
+                "key.reusingastcontext" : false,
                 "key.setter_accessibility" : "source.lang.swift.accessibility.public",
                 "key.typename" : "Float",
                 "key.typeusr" : "$sSfD",
@@ -1430,6 +1484,7 @@
                 "key.parsed_declaration" : "public init(epsilon: Float, entropyCoefficient: Float)",
                 "key.parsed_scope.end" : 186,
                 "key.parsed_scope.start" : 183,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
 
                 ],
@@ -1464,6 +1519,7 @@
                 "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.TensorGroup>(\n  _ mu: T, oldAction: T, oldDistribution: T, advantages: T, scale: T\n) -> T",
                 "key.parsed_scope.end" : 200,
                 "key.parsed_scope.start" : 187,
+                "key.reusingastcontext" : false,
                 "key.substructure" : [
                   {
                     "key.annotated_decl" : "<Declaration>T : DynamicGraph.TensorGroup<\/Declaration>",
@@ -1494,6 +1550,7 @@
                     "key.parsed_declaration" : "public func callAsFunction<T: DynamicGraph.TensorGroup",
                     "key.parsed_scope.end" : 187,
                     "key.parsed_scope.start" : 187,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "T.Type",
                     "key.typeusr" : "$sxmD",
                     "key.usr" : "s:4main3PPOV8ClipLossV14callAsFunction_9oldAction0H12Distribution10advantages5scalexx_xxxxtlF1TL_xmfp"
@@ -1515,6 +1572,7 @@
                     "key.parsed_declaration" : "let expScale = Functional.exp(scale)",
                     "key.parsed_scope.end" : 190,
                     "key.parsed_scope.start" : 190,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main3PPOV8ClipLossV14callAsFunction_9oldAction0H12Distribution10advantages5scalexx_xxxxtlF8expScaleL_Xevp"
@@ -1536,6 +1594,7 @@
                     "key.parsed_declaration" : "let var2 = 1 \/ (2 * (expScale .* expScale))",
                     "key.parsed_scope.end" : 191,
                     "key.parsed_scope.start" : 191,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main3PPOV8ClipLossV14callAsFunction_9oldAction0H12Distribution10advantages5scalexx_xxxxtlF4var2L_Xevp"
@@ -1557,6 +1616,7 @@
                     "key.parsed_declaration" : "let dist = ((mu - oldAction) .* (mu - oldAction) .* var2 + scale)",
                     "key.parsed_scope.end" : 192,
                     "key.parsed_scope.start" : 192,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main3PPOV8ClipLossV14callAsFunction_9oldAction0H12Distribution10advantages5scalexx_xxxxtlF4distL_Xevp"
@@ -1578,6 +1638,7 @@
                     "key.parsed_declaration" : "let ratio = Functional.exp(oldDistribution - dist)",
                     "key.parsed_scope.end" : 193,
                     "key.parsed_scope.start" : 193,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main3PPOV8ClipLossV14callAsFunction_9oldAction0H12Distribution10advantages5scalexx_xxxxtlF5ratioL_Xevp"
@@ -1599,6 +1660,7 @@
                     "key.parsed_declaration" : "let surr1 = advantages .* ratio",
                     "key.parsed_scope.end" : 194,
                     "key.parsed_scope.start" : 194,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main3PPOV8ClipLossV14callAsFunction_9oldAction0H12Distribution10advantages5scalexx_xxxxtlF5surr1L_Xevp"
@@ -1620,6 +1682,7 @@
                     "key.parsed_declaration" : "let surr2 = advantages .* ratio.clamped((1.0 - epsilon)...(1.0 + epsilon))",
                     "key.parsed_scope.end" : 195,
                     "key.parsed_scope.start" : 195,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main3PPOV8ClipLossV14callAsFunction_9oldAction0H12Distribution10advantages5scalexx_xxxxtlF5surr2L_Xevp"
@@ -1641,6 +1704,7 @@
                     "key.parsed_declaration" : "let clipLoss =\n  entropyCoefficient * scale.reduced(.mean, axis: [0])\n  + Functional.min(surr1, surr2).reduced(.mean, axis: [1])",
                     "key.parsed_scope.end" : 196,
                     "key.parsed_scope.start" : 196,
+                    "key.reusingastcontext" : false,
                     "key.typename" : "<<error type>>",
                     "key.typeusr" : "$sXeD",
                     "key.usr" : "s:4main3PPOV8ClipLossV14callAsFunction_9oldAction0H12Distribution10advantages5scalexx_xxxxtlF04clipD0L_Xevp"
